@@ -71,6 +71,39 @@
 					}
 				},
 				{
+					"mode": "button",
+					"path": "/user/hand/left/input/b",
+					"inputs":
+					{
+						"touch":
+						{
+							"output": "/actions/main/in/NextRenderType"
+						}
+					}
+				},
+				{
+					"mode": "button",
+					"path": "/user/hand/left/input/b",
+					"inputs":
+					{
+						"click":
+						{
+							"output": "/actions/main/in/PrevRenderType"
+						}
+					}
+				},
+				{
+					"mode": "button",
+					"path": "/user/hand/left/input/a",
+					"inputs":
+					{
+						"click":
+						{
+							"output": "/actions/main/in/SLTrigger"
+						}
+					}
+				},
+				{
 					"mode": "dpad",
 					"path": "/user/hand/left/input/thumbstick",
 					"parameters":

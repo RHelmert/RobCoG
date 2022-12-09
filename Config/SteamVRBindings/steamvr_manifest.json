@@ -172,6 +172,14 @@
 			"type": "boolean"
 		},
 		{
+			"name": "/actions/main/in/NextRenderType",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/PrevRenderType",
+			"type": "boolean"
+		},
+		{
 			"name": "/actions/main/in/SLTrigger",
 			"type": "boolean"
 		},
@@ -478,6 +486,8 @@
 			"/actions/main/in/LeftPrevGraspAnim": "LeftPrevGraspAnim",
 			"/actions/main/in/RightNextGraspAnim": "RightNextGraspAnim",
 			"/actions/main/in/RightPrevGraspAnim": "RightPrevGraspAnim",
+			"/actions/main/in/NextRenderType": "NextRenderType",
+			"/actions/main/in/PrevRenderType": "PrevRenderType",
 			"/actions/main/in/SLTrigger": "SLTrigger",
 			"/actions/main/in/LeftGraspHelper": "LeftGraspHelper",
 			"/actions/main/in/RightGraspHelper": "RightGraspHelper",
