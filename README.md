@@ -10,7 +10,7 @@ In the VRPawn called VRPawnWManusHands different display and interaction options
 ![](Documentation/RH/VRPawnOptions.jpg)
 
 A more indepth description about the features is given in
-[VRPawn]((Documentation/RH/VRPawn.md)
+[VRPawn](Documentation/RH/VRPawn.md)
 
 
 ### UE Version: **4.27**
