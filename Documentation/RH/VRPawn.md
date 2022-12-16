@@ -1,6 +1,6 @@
 The Manus VRPawn has some new configuration options displayed in
 
-![](Documentation/RH/VRPawnOptions.jpg)
+![](VRPawnOptions.jpg)
 
 The different checkboxes do the following:
 GloveType defines which controller should be displayed and used. 
