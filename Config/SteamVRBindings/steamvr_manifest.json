@@ -172,14 +172,6 @@
 			"type": "boolean"
 		},
 		{
-			"name": "/actions/main/in/NextRenderType",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/PrevRenderType",
-			"type": "boolean"
-		},
-		{
 			"name": "/actions/main/in/SLTrigger",
 			"type": "boolean"
 		},
@@ -224,6 +216,10 @@
 			"type": "boolean"
 		},
 		{
+			"name": "/actions/main/in/RightPointAt",
+			"type": "boolean"
+		},
+		{
 			"name": "/actions/main/in/LeftGrasp axis",
 			"type": "vector1"
 		},
@@ -238,6 +234,10 @@
 		{
 			"name": "/actions/main/in/GrapAxisLeft axis",
 			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d",
+			"type": "vector2"
 		}
 	],
 	"action_sets": [
@@ -486,8 +486,6 @@
 			"/actions/main/in/LeftPrevGraspAnim": "LeftPrevGraspAnim",
 			"/actions/main/in/RightNextGraspAnim": "RightNextGraspAnim",
 			"/actions/main/in/RightPrevGraspAnim": "RightPrevGraspAnim",
-			"/actions/main/in/NextRenderType": "NextRenderType",
-			"/actions/main/in/PrevRenderType": "PrevRenderType",
 			"/actions/main/in/SLTrigger": "SLTrigger",
 			"/actions/main/in/LeftGraspHelper": "LeftGraspHelper",
 			"/actions/main/in/RightGraspHelper": "RightGraspHelper",
@@ -499,10 +497,12 @@
 			"/actions/main/in/RightTriggerTouched": "RightTriggerTouched",
 			"/actions/main/in/LeftFaceButtonTouched": "LeftFaceButtonTouched",
 			"/actions/main/in/RightFaceButtonTouched": "RightFaceButtonTouched",
+			"/actions/main/in/RightPointAt": "RightPointAt",
 			"/actions/main/in/LeftGrasp axis": "LeftGrasp",
 			"/actions/main/in/RightGrasp axis": "RightGrasp",
 			"/actions/main/in/GrapAxisRight axis": "GrapAxisRight",
 			"/actions/main/in/GrapAxisLeft axis": "GrapAxisLeft",
+			"/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d": "ThumbsUp",
 			"/actions/main": "Main Game Actions"
 		}
 	]

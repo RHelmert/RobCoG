@@ -71,39 +71,6 @@
 					}
 				},
 				{
-					"mode": "button",
-					"path": "/user/hand/left/input/b",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/NextRenderType"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/left/input/b",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/PrevRenderType"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/left/input/a",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/SLTrigger"
-						}
-					}
-				},
-				{
 					"mode": "dpad",
 					"path": "/user/hand/left/input/thumbstick",
 					"parameters":
@@ -145,11 +112,11 @@
 					}
 				},
 				{
-					"mode": "grab",
-					"path": "/user/hand/right/input/grip",
+					"mode": "trigger",
+					"path": "/user/hand/right/input/trigger",
 					"inputs":
 					{
-						"grab":
+						"click":
 						{
 							"output": "/actions/main/in/GrabRight"
 						}
@@ -266,6 +233,17 @@
 					}
 				},
 				{
+					"mode": "button",
+					"path": "/user/hand/right/input/b",
+					"inputs":
+					{
+						"click":
+						{
+							"output": "/actions/main/in/RightPointAt"
+						}
+					}
+				},
+				{
 					"mode": "trigger",
 					"path": "/user/hand/left/input/trigger",
 					"inputs":
@@ -306,6 +284,17 @@
 						"force":
 						{
 							"output": "/actions/main/in/GrapAxisLeft axis"
+						}
+					}
+				},
+				{
+					"mode": "joystick",
+					"path": "/user/hand/right/input/thumbstick",
+					"inputs":
+					{
+						"position":
+						{
+							"output": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d"
 						}
 					}
 				}
