@@ -1,6 +1,17 @@
 
 [![](Documentation/Img/RobCoG.png)](http://robcog.org/)
-### Stable Masterbranch for new features please take a look into the dev branch.
+### Forkbranch for experimenting with new controls
+The new Classes are located in
+Content/ManusRH
+
+Here is also a scene to experiment with.
+In the VRPawn called VRPawnWManusHands different display and interaction options can be chosen.
+
+![](Documentation/RH/VRPawnOptions.jpg)
+
+
+
+
 ### UE Version: **4.27**
 
 ### Environments
