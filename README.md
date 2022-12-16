@@ -12,6 +12,8 @@ In the VRPawn called VRPawnWManusHands different display and interaction options
 A more indepth description about the features is given in
 [VRPawn](Documentation/RH/VRPawn.md)
 
+TODO: Add previous logging features to the new Hands
+
 
 ### UE Version: **4.27**
 
