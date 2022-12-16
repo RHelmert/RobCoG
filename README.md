@@ -12,6 +12,8 @@ In the VRPawn called VRPawnWManusHands different display and interaction options
 A more indepth description about the features is given in
 [VRPawn](Documentation/RH/VRPawn.md)
 
+Currently the scenes Content/MMM/MMM_IAIKitchen_VR_RH and Content/MMM/MMM_IAIKitchen_VR  are WIP
+
 TODO: Add previous logging features to the new Hands
 
 
