@@ -15,6 +15,10 @@
 			"Name": "USemLog",
 			"Enabled": true,
 			"MarketplaceURL": "http://robcog.org/"
+		},
+		{
+			"Name": "Manus",
+			"Enabled": true
 		}
 	]
 }
