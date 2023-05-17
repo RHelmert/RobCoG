@@ -4,17 +4,9 @@
 The new Classes are located in
 Content/ManusRH
 
-Here is also a scene to experiment with.
-In the VRPawn called VRPawnWManusHands different display and interaction options can be chosen.
-
-![](Documentation/RH/VRPawnOptions.jpg)
-
 A more indepth description about the features is given in
 [VRPawn](Documentation/RH/VRPawn.md)
 
-Currently the scenes Content/MMM/MMM_IAIKitchen_VR_RH and Content/MMM/MMM_IAIKitchen_VR  are WIP
-
-TODO: Add previous logging features to the new Hands
 
 
 ### UE Version: **4.27**
