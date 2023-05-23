@@ -30,30 +30,22 @@
 					}
 				},
 				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/thumbstick",
-					"parameters":
-					{
-						"sub_mode": "touch"
-					},
+					"mode": "button",
+					"path": "/user/hand/left/input/a",
 					"inputs":
 					{
-						"east":
+						"click":
 						{
 							"output": "/actions/main/in/LeftNextGraspAnim"
 						}
 					}
 				},
 				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/thumbstick",
-					"parameters":
-					{
-						"sub_mode": "touch"
-					},
+					"mode": "button",
+					"path": "/user/hand/left/input/b",
 					"inputs":
 					{
-						"west":
+						"click":
 						{
 							"output": "/actions/main/in/LeftPrevGraspAnim"
 						}
@@ -66,169 +58,7 @@
 					{
 						"click":
 						{
-							"output": "/actions/main/in/RightNextGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/thumbstick",
-					"parameters":
-					{
-						"sub_mode": "touch"
-					},
-					"inputs":
-					{
-						"north":
-						{
-							"output": "/actions/main/in/LeftGraspHelper"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/right/input/thumbstick",
-					"parameters":
-					{
-						"sub_mode": "touch"
-					},
-					"inputs":
-					{
-						"north":
-						{
-							"output": "/actions/main/in/RightGraspHelper"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/left/input/trigger",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/GrabLeft"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/right/input/trigger",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/GrabRight"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/left/input/trigger",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/TriggerLeft"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/right/input/trigger",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/TriggerRight"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/left/input/trigger",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/LeftTriggerTouched"
-						}
-					}
-				},
-				{
-					"mode": "trigger",
-					"path": "/user/hand/right/input/trigger",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/RightTriggerTouched"
-						}
-					}
-				},
-				{
-					"mode": "trackpad",
-					"path": "/user/hand/left/input/trackpad",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/LeftFaceButtonTouched"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/left/input/b",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/LeftFaceButtonTouched"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/left/input/a",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/LeftFaceButtonTouched"
-						}
-					}
-				},
-				{
-					"mode": "trackpad",
-					"path": "/user/hand/right/input/trackpad",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/RightFaceButtonTouched"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/right/input/b",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/RightFaceButtonTouched"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/right/input/a",
-					"inputs":
-					{
-						"touch":
-						{
-							"output": "/actions/main/in/RightFaceButtonTouched"
+							"output": "/actions/main/in/RightPointAt"
 						}
 					}
 				},
@@ -244,35 +74,24 @@
 					}
 				},
 				{
-					"mode": "trigger",
-					"path": "/user/hand/left/input/trigger",
+					"mode": "button",
+					"path": "/user/hand/left/input/a",
 					"inputs":
 					{
-						"pull":
+						"click":
 						{
-							"output": "/actions/main/in/LeftGrasp axis"
+							"output": "/actions/main/in/LeftPointAt"
 						}
 					}
 				},
 				{
-					"mode": "trigger",
-					"path": "/user/hand/right/input/trigger",
+					"mode": "button",
+					"path": "/user/hand/left/input/b",
 					"inputs":
 					{
-						"pull":
+						"click":
 						{
-							"output": "/actions/main/in/RightGrasp axis"
-						}
-					}
-				},
-				{
-					"mode": "force_sensor",
-					"path": "/user/hand/right/input/grip",
-					"inputs":
-					{
-						"force":
-						{
-							"output": "/actions/main/in/GrapAxisRight axis"
+							"output": "/actions/main/in/LeftPointAt"
 						}
 					}
 				},
@@ -283,7 +102,18 @@
 					{
 						"force":
 						{
-							"output": "/actions/main/in/GrapAxisLeft axis"
+							"output": "/actions/main/in/LeftGrasp axis"
+						}
+					}
+				},
+				{
+					"mode": "force_sensor",
+					"path": "/user/hand/right/input/grip",
+					"inputs":
+					{
+						"force":
+						{
+							"output": "/actions/main/in/RightGrasp axis"
 						}
 					}
 				},
@@ -295,6 +125,39 @@
 						"position":
 						{
 							"output": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d"
+						}
+					}
+				},
+				{
+					"mode": "joystick",
+					"path": "/user/hand/left/input/thumbstick",
+					"inputs":
+					{
+						"position":
+						{
+							"output": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d"
+						}
+					}
+				},
+				{
+					"mode": "force_sensor",
+					"path": "/user/hand/left/input/grip",
+					"inputs":
+					{
+						"force":
+						{
+							"output": "/actions/main/in/LeftGrabAnimAxis axis"
+						}
+					}
+				},
+				{
+					"mode": "force_sensor",
+					"path": "/user/hand/right/input/grip",
+					"inputs":
+					{
+						"force":
+						{
+							"output": "/actions/main/in/RightGrabAnimAxis axis"
 						}
 					}
 				}

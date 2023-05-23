@@ -148,7 +148,7 @@
 					{
 						"click":
 						{
-							"output": "/actions/main/in/GrabLeft"
+							"output": "/actions/main/in/LeftFixateAnimation"
 						}
 					}
 				},
@@ -159,18 +159,7 @@
 					{
 						"click":
 						{
-							"output": "/actions/main/in/GrabRight"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/right/input/grip",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/RightPointAt"
+							"output": "/actions/main/in/RightFixateAnimation"
 						}
 					}
 				},
@@ -204,6 +193,39 @@
 						"position":
 						{
 							"output": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d"
+						}
+					}
+				},
+				{
+					"mode": "trackpad",
+					"path": "/user/hand/left/input/trackpad",
+					"inputs":
+					{
+						"position":
+						{
+							"output": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d"
+						}
+					}
+				},
+				{
+					"mode": "trigger",
+					"path": "/user/hand/left/input/trigger",
+					"inputs":
+					{
+						"pull":
+						{
+							"output": "/actions/main/in/LeftGrabAnimAxis axis"
+						}
+					}
+				},
+				{
+					"mode": "trigger",
+					"path": "/user/hand/right/input/trigger",
+					"inputs":
+					{
+						"pull":
+						{
+							"output": "/actions/main/in/RightGrabAnimAxis axis"
 						}
 					}
 				}

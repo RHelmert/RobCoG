@@ -184,39 +184,19 @@
 			"type": "boolean"
 		},
 		{
-			"name": "/actions/main/in/GrabLeft",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/GrabRight",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/TriggerLeft",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/TriggerRight",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/LeftTriggerTouched",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/RightTriggerTouched",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/LeftFaceButtonTouched",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/RightFaceButtonTouched",
-			"type": "boolean"
-		},
-		{
 			"name": "/actions/main/in/RightPointAt",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/LeftPointAt",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/LeftFixateAnimation",
+			"type": "boolean"
+		},
+		{
+			"name": "/actions/main/in/RightFixateAnimation",
 			"type": "boolean"
 		},
 		{
@@ -228,16 +208,20 @@
 			"type": "vector1"
 		},
 		{
-			"name": "/actions/main/in/GrapAxisRight axis",
-			"type": "vector1"
-		},
-		{
-			"name": "/actions/main/in/GrapAxisLeft axis",
-			"type": "vector1"
-		},
-		{
 			"name": "/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d",
 			"type": "vector2"
+		},
+		{
+			"name": "/actions/main/in/LeftGrabAnimAxis axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/RightGrabAnimAxis axis",
+			"type": "vector1"
+		},
+		{
+			"name": "/actions/main/in/TestMapping axis",
+			"type": "vector1"
 		}
 	],
 	"action_sets": [
@@ -489,20 +473,16 @@
 			"/actions/main/in/SLTrigger": "SLTrigger",
 			"/actions/main/in/LeftGraspHelper": "LeftGraspHelper",
 			"/actions/main/in/RightGraspHelper": "RightGraspHelper",
-			"/actions/main/in/GrabLeft": "GrabLeft",
-			"/actions/main/in/GrabRight": "GrabRight",
-			"/actions/main/in/TriggerLeft": "TriggerLeft",
-			"/actions/main/in/TriggerRight": "TriggerRight",
-			"/actions/main/in/LeftTriggerTouched": "LeftTriggerTouched",
-			"/actions/main/in/RightTriggerTouched": "RightTriggerTouched",
-			"/actions/main/in/LeftFaceButtonTouched": "LeftFaceButtonTouched",
-			"/actions/main/in/RightFaceButtonTouched": "RightFaceButtonTouched",
 			"/actions/main/in/RightPointAt": "RightPointAt",
+			"/actions/main/in/LeftPointAt": "LeftPointAt",
+			"/actions/main/in/LeftFixateAnimation": "LeftFixateAnimation",
+			"/actions/main/in/RightFixateAnimation": "RightFixateAnimation",
 			"/actions/main/in/LeftGrasp axis": "LeftGrasp",
 			"/actions/main/in/RightGrasp axis": "RightGrasp",
-			"/actions/main/in/GrapAxisRight axis": "GrapAxisRight",
-			"/actions/main/in/GrapAxisLeft axis": "GrapAxisLeft",
 			"/actions/main/in/ThumbsUp_X,ThumbsUp_Y X Y_axis2d": "ThumbsUp",
+			"/actions/main/in/LeftGrabAnimAxis axis": "LeftGrabAnimAxis",
+			"/actions/main/in/RightGrabAnimAxis axis": "RightGrabAnimAxis",
+			"/actions/main/in/TestMapping axis": "TestMapping",
 			"/actions/main": "Main Game Actions"
 		}
 	]
