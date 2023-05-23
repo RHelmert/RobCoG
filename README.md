@@ -4,7 +4,7 @@
 The new Classes are located in the plugin UVRHands in the ToSynch folder at the moment(because the Plugins are normally synced differently).
 
 A more indepth description about the features is given in
-[VRPawn](Documentation/RH/VRPawn.md)
+[VRPawn](Documentation/UVRHands/README.md)
 
 
 
