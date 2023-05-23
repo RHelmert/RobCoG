@@ -1,0 +1,44 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.9.0",
+	"FriendlyName": "Live Link Manus Core Plugin",
+	"Description": "Live stream Manus data into Unreal.",
+	"Category": "Animation",
+	"CreatedBy": "Manus",
+	"CreatedByURL": "http://www.manus-vr.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "Manus",
+			"Type": "Runtime",
+			"LoadingPhase": "PostDefault",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "ManusEditor",
+			"Type": "UncookedOnly",
+			"LoadingPhase": "PostDefault",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "SteamVR",
+			"Enabled": true
+		},
+		{
+			"Name": "LiveLink",
+			"Enabled": true
+		}
+	]
+}
