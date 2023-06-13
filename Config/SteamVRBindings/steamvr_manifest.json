@@ -156,34 +156,6 @@
 			"type": "boolean"
 		},
 		{
-			"name": "/actions/main/in/LeftNextGraspAnim",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/LeftPrevGraspAnim",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/RightNextGraspAnim",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/RightPrevGraspAnim",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/SLTrigger",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/LeftGraspHelper",
-			"type": "boolean"
-		},
-		{
-			"name": "/actions/main/in/RightGraspHelper",
-			"type": "boolean"
-		},
-		{
 			"name": "/actions/main/in/RightPointAt",
 			"type": "boolean"
 		},
@@ -192,7 +164,7 @@
 			"type": "boolean"
 		},
 		{
-			"name": "/actions/main/in/LeftFixateAnimation",
+			"name": "/actions/main/in/None",
 			"type": "boolean"
 		},
 		{
@@ -466,16 +438,9 @@
 			"/actions/main/in/open_console": "Open Console",
 			"/actions/main/in/LeftFixate": "LeftFixate",
 			"/actions/main/in/RightFixate": "RightFixate",
-			"/actions/main/in/LeftNextGraspAnim": "LeftNextGraspAnim",
-			"/actions/main/in/LeftPrevGraspAnim": "LeftPrevGraspAnim",
-			"/actions/main/in/RightNextGraspAnim": "RightNextGraspAnim",
-			"/actions/main/in/RightPrevGraspAnim": "RightPrevGraspAnim",
-			"/actions/main/in/SLTrigger": "SLTrigger",
-			"/actions/main/in/LeftGraspHelper": "LeftGraspHelper",
-			"/actions/main/in/RightGraspHelper": "RightGraspHelper",
 			"/actions/main/in/RightPointAt": "RightPointAt",
 			"/actions/main/in/LeftPointAt": "LeftPointAt",
-			"/actions/main/in/LeftFixateAnimation": "LeftFixateAnimation",
+			"/actions/main/in/None": "None",
 			"/actions/main/in/RightFixateAnimation": "RightFixateAnimation",
 			"/actions/main/in/LeftGrasp axis": "LeftGrasp",
 			"/actions/main/in/RightGrasp axis": "RightGrasp",

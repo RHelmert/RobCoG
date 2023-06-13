@@ -31,28 +31,6 @@
 				},
 				{
 					"mode": "button",
-					"path": "/user/hand/left/input/a",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/LeftNextGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "button",
-					"path": "/user/hand/left/input/b",
-					"inputs":
-					{
-						"click":
-						{
-							"output": "/actions/main/in/LeftPrevGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "button",
 					"path": "/user/hand/right/input/a",
 					"inputs":
 					{
