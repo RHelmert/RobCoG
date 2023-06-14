@@ -58,7 +58,7 @@
 					{
 						"click":
 						{
-							"output": "/actions/main/in/None"
+							"output": "/actions/main/in/LeftFixateAnimation"
 						}
 					}
 				},
