@@ -1,0 +1,2 @@
+Copying UVRHands to PLugin is optional, since it is synced normally via the plugin folder.
+Nevertheless here is always the last stable version (hopefully :))
