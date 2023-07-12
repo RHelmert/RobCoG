@@ -27,6 +27,8 @@ public class UVRHands : ModuleRules
 			{
 				"Core",
 				"Manus",
+                "RHI",
+                "RenderCore",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
