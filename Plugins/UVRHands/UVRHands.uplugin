@@ -20,12 +20,5 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
-	],
-	"Plugins": [
-		{
-			"Name": "Manus",
-			"Enabled": true,
-			"Optional": true
-		}
 	]
 }

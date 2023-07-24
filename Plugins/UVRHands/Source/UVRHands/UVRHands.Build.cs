@@ -26,7 +26,6 @@ public class UVRHands : ModuleRules
 			new string[]
 			{
 				"Core",
-				"Manus",
                 "RHI",
                 "RenderCore",
 				// ... add other public dependencies that you statically link with here ...
