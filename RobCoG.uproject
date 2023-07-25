@@ -18,7 +18,7 @@
 		},
 		{
 			"Name": "Manus",
-			"Enabled": false
+			"Enabled": true
 		}
 	]
 }
