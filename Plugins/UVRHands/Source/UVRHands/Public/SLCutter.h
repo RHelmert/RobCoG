@@ -14,7 +14,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCuttingSucceeded, float, input);
 //DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCuttingStarted, float, input);
 //DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCuttingAborted, float, input);
 
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(Reserve);
+//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FReserve);
 
 
 /**
