@@ -7,10 +7,26 @@ ASLCleaner::ASLCleaner()
 {
 }
 
+void ASLCleaner::BeginPlay()
+{
+	Super::BeginPlay();
+}
+
 void ASLCleaner::CleaningStarted()
 {
+	CleaningStartedEvent.Broadcast();
 }
 
 void ASLCleaner::CleaningStopped()
 {
+	CleaningStoppedEvent.Broadcast();
 }
+
+void ASLCleaner::CleaningFinished() 
+{
+	CleaningFinishedEvent.Broadcast();
+}
+
+
+
+

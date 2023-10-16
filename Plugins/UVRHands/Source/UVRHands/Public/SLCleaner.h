@@ -9,7 +9,9 @@
 
 
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FReserve);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCleaningFinished);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCleaningStarted);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCleaningStopped);
 
 
 
@@ -25,8 +27,14 @@ public:
 	ASLCleaner();
 
 	//Let the Event be Assignable (connect Listeners), and be Callable by blueprints
-	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "Test")
-		FReserve CleaningStartedEvent;
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "USemLog_C++Event")
+		FCleaningStarted CleaningStartedEvent;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "USemLog_C++Event")
+		FCleaningStopped CleaningStoppedEvent;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable, Category = "USemLog_C++Event")
+		FCleaningFinished CleaningFinishedEvent;
 
 
 
@@ -36,5 +44,10 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void CleaningStopped();
 
+	UFUNCTION(BlueprintCallable)
+		void CleaningFinished();
 
+protected:
+	// Called when the game starts
+	virtual void BeginPlay() override;
 };
