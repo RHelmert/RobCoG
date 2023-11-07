@@ -32,6 +32,28 @@ void UVertexPaintableComponent::BeginPlay()
         StaticMeshComponent->MarkRenderStateDirty();
         StaticMeshComponent->CachePaintedDataIfNecessary();
     }
+   
+    //count all paintable vertices:
+    FStaticMeshLODResources& LODModel = StaticMeshComponent->GetStaticMesh()->GetRenderData()->LODResources[0];
+    VertexCount = LODModel.GetNumVertices();
+    for (auto i = 0; i < VertexCount; i++)
+    {
+        const FStaticMeshVertexBuffer& VertexBuffer = LODModel.VertexBuffers.StaticMeshVertexBuffer;
+        if (i >= 0 && i < static_cast<signed int>(VertexBuffer.GetNumVertices()))
+        {
+            // Get the vertex normal
+            FVector VertexNormal = VertexBuffer.VertexTangentZ(i);
+            //Count all paintable vertices within an error margin
+            FVector up(0.0f, 1.0f, 0.0f);
+            if (VertexNormal.Equals(up, 0.1f)) {
+                PaintableVertexCount++;
+                
+            }
+        }
+        
+    }
+    UE_LOG(LogTemp, Warning, TEXT("Full paintable Vertext count for cleanable: %d"), PaintableVertexCount);
+
 }
 void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float PaintLerpProgress)
 {
@@ -41,7 +63,8 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
 
     FStaticMeshLODResources& LODModel = StaticMeshComponent->GetStaticMesh()->GetRenderData()->LODResources[0];
     auto LocalToWorld = StaticMeshComponent->GetComponentToWorld().ToMatrixWithScale();
-    for (auto i = 0; i < LODModel.GetNumVertices(); i++)
+    
+    for (auto i = 0; i < VertexCount; i++)
     {
         auto LocalVertexPosition = LODModel.VertexBuffers.PositionVertexBuffer.VertexPosition(i);
         auto WorldVertexPosition = LocalToWorld.TransformPosition(FVector4(LocalVertexPosition.X, LocalVertexPosition.Y, LocalVertexPosition.Z, 1.0f));
@@ -57,12 +80,14 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
                 // Get the vertex buffer for the LOD model
                 
                 const FStaticMeshVertexBuffer& VertexBuffer = LODModel.VertexBuffers.StaticMeshVertexBuffer;
-                if (i >= 0 && i < static_cast<signed int>(VertexBuffer.GetNumVertices()))
+                if (i >= 0 && i < VertexCount)
                 {
                     // Get the vertex normal
                     FVector VertexNormal = VertexBuffer.VertexTangentZ(i);
+
+                    //Only consider normals similar to the up vector within an error margin
                     FVector up(0.0f, 1.0f, 0.0f);
-                    if (VertexNormal.Equals(up)){
+                    if (VertexNormal.Equals(up,0.1f)){
                         VertexProgression++;
                         UE_LOG(LogTemp, Warning, TEXT("Progression count: %d"), VertexProgression);
                     }

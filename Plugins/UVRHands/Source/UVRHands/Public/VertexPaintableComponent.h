@@ -38,8 +38,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float BrushSize = 150.0f;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(BlueprintReadOnly)
 	int VertexProgression;
+
+	UPROPERTY(BlueprintReadOnly)
+	int PaintableVertexCount;
+
+	int VertexCount;
 
 	// Sets default values for this component's properties
 	UVertexPaintableComponent();
