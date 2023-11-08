@@ -89,7 +89,7 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
                     FVector up(0.0f, 1.0f, 0.0f);
                     if (VertexNormal.Equals(up,0.1f)){
                         VertexProgression++;
-                        UE_LOG(LogTemp, Warning, TEXT("Progression count: %d"), VertexProgression);
+                        //UE_LOG(LogTemp, Warning, TEXT("Progression count: %d"), VertexProgression);
                     }
                 }
             }
