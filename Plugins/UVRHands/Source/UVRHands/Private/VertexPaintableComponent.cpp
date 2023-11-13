@@ -34,11 +34,14 @@ void UVertexPaintableComponent::BeginPlay()
     }
    
     //count all paintable vertices:
+    FStaticMeshComponentLODInfo* InstanceMeshLODInfo = &StaticMeshComponent->LODData[0];
     FStaticMeshLODResources& LODModel = StaticMeshComponent->GetStaticMesh()->GetRenderData()->LODResources[0];
     VertexCount = LODModel.GetNumVertices();
     for (auto i = 0; i < VertexCount; i++)
     {
         const FStaticMeshVertexBuffer& VertexBuffer = LODModel.VertexBuffers.StaticMeshVertexBuffer;
+        
+        //this should always be true (should it?)
         if (i >= 0 && i < static_cast<signed int>(VertexBuffer.GetNumVertices()))
         {
             // Get the vertex normal
@@ -47,8 +50,11 @@ void UVertexPaintableComponent::BeginPlay()
             FVector up(0.0f, 1.0f, 0.0f);
             if (VertexNormal.Equals(up, 0.1f)) {
                 PaintableVertexCount++;
+                //FLinearColor test = FLinearColor(InstanceMeshLODInfo->OverrideVertexColors->VertexColor(i));
+                //BaseColors.Add();
                 
             }
+            ChangedVertices.Add(i, FLinearColor(InstanceMeshLODInfo->OverrideVertexColors->VertexColor(i)));
         }
         
     }
@@ -66,10 +72,11 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
     
     for (auto i = 0; i < VertexCount; i++)
     {
-        auto LocalVertexPosition = LODModel.VertexBuffers.PositionVertexBuffer.VertexPosition(i);
-        auto WorldVertexPosition = LocalToWorld.TransformPosition(FVector4(LocalVertexPosition.X, LocalVertexPosition.Y, LocalVertexPosition.Z, 1.0f));
-        auto Distance = FVector::DistSquared(WorldVertexPosition, HitLocation);
+        FVector LocalVertexPosition = LODModel.VertexBuffers.PositionVertexBuffer.VertexPosition(i);
+        FVector WorldVertexPosition = LocalToWorld.TransformPosition(FVector4(LocalVertexPosition.X, LocalVertexPosition.Y, LocalVertexPosition.Z, 1.0f));
+        float Distance = FVector::DistSquared(WorldVertexPosition, HitLocation);
         
+        //Color all vertices inside the brush area
         if (Distance <= BrushSize)
         {
             FLinearColor from = FLinearColor(InstanceMeshLODInfo->OverrideVertexColors->VertexColor(i));
@@ -80,7 +87,7 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
                 // Get the vertex buffer for the LOD model
                 
                 const FStaticMeshVertexBuffer& VertexBuffer = LODModel.VertexBuffers.StaticMeshVertexBuffer;
-                if (i >= 0 && i < VertexCount)
+                if (i >= 0 && i < static_cast<signed int>(VertexBuffer.GetNumVertices()))
                 {
                     // Get the vertex normal
                     FVector VertexNormal = VertexBuffer.VertexTangentZ(i);
@@ -94,6 +101,9 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
                 }
             }
 
+            
+            //currentColor has a reference to VertexColor(i) which means that any thanges made to 
+            //currentColor is also made to VertexColor(i)
             FColor& currentColor = InstanceMeshLODInfo->OverrideVertexColors->VertexColor(i);
             currentColor = FLinearColor::LerpUsingHSV(from, to, PaintLerpProgress).ToFColor(false);
         }
@@ -105,6 +115,36 @@ void UVertexPaintableComponent::PaintVertexAtLocation(FVector HitLocation, float
     StaticMeshComponent->CachePaintedDataIfNecessary();
 #endif
 }
+
+void UVertexPaintableComponent::ResetAll()
+{
+    FStaticMeshLODResources& LODModel = StaticMeshComponent->GetStaticMesh()->GetRenderData()->LODResources[0];
+    FStaticMeshComponentLODInfo* InstanceMeshLODInfo = &StaticMeshComponent->LODData[0];
+
+
+
+    for (const auto& Pair : ChangedVertices)
+    {
+        int Key = Pair.Key;
+        FLinearColor Value = Pair.Value;
+
+        FColor& currentColor = InstanceMeshLODInfo->OverrideVertexColors->VertexColor(Key);
+        currentColor = Value.ToFColor(false);
+
+        // Do something with Key and Value
+        // ...
+    }
+
+
+    // Notify the render thread about the buffer change
+    BeginUpdateResourceRHI(InstanceMeshLODInfo->OverrideVertexColors);
+    StaticMeshComponent->MarkRenderStateDirty();
+#if WITH_EDITORONLY_DATA
+    StaticMeshComponent->CachePaintedDataIfNecessary();
+#endif
+}
+
+
 int32 UVertexPaintableComponent::GetNearestVertIndex(FVector Position, FStaticMeshLODResources& LODModel)
 {
     auto ShortestDistance = 0;
@@ -159,14 +199,6 @@ void UVertexPaintableComponent::InitialiseInstancedOverrideVertexColorBuffer(FSt
     {
         // If it doesn't, set all overridden vert colours to black
         InstanceMeshLODInfo->OverrideVertexColors->InitFromSingleColor(TargetBaseColor, LODModel.GetNumVertices());
-    }
-    for (auto i = 0; i < LODModel.GetNumVertices(); i++)
-    {
-        if (InstanceMeshLODInfo->OverrideVertexColors->VertexColor(i) != TargetBaseColor)
-        {
-            // TODO: add vertex idx to the dirt list
-            // TODO: save amount of dirt vertexes, to keep track of % cleaned/dirt
-        }
     }
     BeginInitResource(InstanceMeshLODInfo->OverrideVertexColors);
 }

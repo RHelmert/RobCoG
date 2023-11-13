@@ -46,11 +46,17 @@ public:
 
 	int VertexCount;
 
+	TArray<FLinearColor> BaseColors;
+	TMap<int, FLinearColor> ChangedVertices;
+
 	// Sets default values for this component's properties
 	UVertexPaintableComponent();
 
 	UFUNCTION(BlueprintCallable, Category = VertexPainting)
 		void PaintVertexAtLocation(FVector HitLocation, float PaintLerpProgress = 1.0f);
+
+	UFUNCTION(BlueprintCallable, Category = VertexPainting)
+		void ResetAll();
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = VertexPainting)
 		FColor TargetBaseColor = FColor::White;
