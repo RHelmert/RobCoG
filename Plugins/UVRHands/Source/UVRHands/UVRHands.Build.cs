@@ -18,6 +18,7 @@ public class UVRHands : ModuleRules
 
 		PrivateIncludePaths.AddRange(
 			new string[] {
+                //,
 				// ... add other private include paths required here ...
 			}
 			);
@@ -30,18 +31,19 @@ public class UVRHands : ModuleRules
 				"Manus",
 				"RHI",
 				"RenderCore",
+                "Blutility",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
 
-
-		PrivateDependencyModuleNames.AddRange(
+        PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
 				"CoreUObject",
 				"Engine",
 				"Slate",
 				"SlateCore",
+                "PythonScriptPlugin",
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
