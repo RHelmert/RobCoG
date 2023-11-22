@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "PythonCallbackContainer.h"
+#include "zmq.hpp"
 #include "CppFunctionLibrary.generated.h"
+
 
 
 DECLARE_MULTICAST_DELEGATE(FTaskCompletedEvent);
@@ -25,6 +27,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static void InitPython(FString filename);
 
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static void StartZmQServer();
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static void StartZmQClient();
+
 	static void TaskCompletedCallback();
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
@@ -32,6 +40,8 @@ public:
 
 private:
 	static void PythonCall(FString command);
+
+	static FString ConvertMessageToString(const zmq::message_t& zmqMessage);
 
 	static TArray<UPythonCallbackContainer*> callbacklist;
 	

@@ -32,6 +32,7 @@ public class UVRHands : ModuleRules
 				"RHI",
 				"RenderCore",
                 "Blutility",
+                "ZeroMQ",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
