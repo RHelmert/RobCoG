@@ -25,6 +25,14 @@
 		{
 			"Name": "Manus",
 			"Enabled": true
+		},
+		{
+			"Name": "ZeroMQ",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
 		}
 	]
 }

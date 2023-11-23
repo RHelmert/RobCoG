@@ -1,4 +1,5 @@
 // Copyright 2017-2021, Institute for Artificial Intelligence - University of Bremen
+// @Author: Robin Helmert (rhelmert2@gmail.com)
 
 
 #include "CppFunctionLibrary.h"
@@ -103,7 +104,20 @@ void UCppFunctionLibrary::StartZmQServer()
 		// initialize the zmq context with a single IO thread
 		zmq::context_t context{ 1 };
 		zmq::socket_t socket{ context, zmq::socket_type::rep };
-		socket.bind("tcp://*:5555");
+		
+		try
+		{
+			socket.bind("tcp://*:5555");
+		}
+		catch (const zmq::error_t& e)
+		{
+			int errorCode = e.num();
+			FString emessage = e.what();
+			UE_LOG(LogTemp, Error, TEXT("Server: Socket binding error: %d : %s"), errorCode, *emessage);
+			return;
+
+		}
+
 		int i = 0;
 		while (i < 30) {
 			UE_LOG(LogTemp, Log, TEXT("Server: iteration %d"), i);
