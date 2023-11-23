@@ -33,6 +33,7 @@ SL
 *.la
 *.a
 *.lib
+!Plugins/UnrealZeroMQ/**
 
 # Executables
 *.exe
