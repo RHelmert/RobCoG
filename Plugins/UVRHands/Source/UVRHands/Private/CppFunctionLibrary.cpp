@@ -114,7 +114,7 @@ void UCppFunctionLibrary::StartZmQServer()
 			int errorCode = e.num();
 			FString emessage = e.what();
 			UE_LOG(LogTemp, Error, TEXT("Server: Socket binding error: %d : %s"), errorCode, *emessage);
-			return;
+			return 0;
 
 		}
 

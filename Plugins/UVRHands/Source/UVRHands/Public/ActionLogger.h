@@ -54,7 +54,7 @@ public:
 	//Write to File
 	UFUNCTION(BlueprintCallable, Category = "Logging")
 		bool WriteLogToFile(
-			FString FileName);
+			FString NameOfFile);
 
 	//GetItems
 	UFUNCTION(BlueprintCallable, Category = "Logging")

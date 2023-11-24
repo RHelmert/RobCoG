@@ -74,14 +74,14 @@ void UActionLogger::ReplaceArray(TArray<float> newTimes, TArray<FString> newMess
 }
 
 bool UActionLogger::WriteLogToFile(
-	FString FileName
+	FString NameOfFile
 )
 {
 	FString ProjectDirectory = FPaths::ProjectDir();
 	//get complete file path
 	UE_LOG(LogTemp, Warning, TEXT("FilePaths: ProjectDirectory: %s"), *ProjectDirectory);
 	ProjectDirectory += "TimeLogging/";
-	ProjectDirectory += FileName;
+	ProjectDirectory += NameOfFile;
 	ProjectDirectory += ".log";
 
 	FString LogText;
