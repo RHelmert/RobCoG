@@ -283,28 +283,34 @@ TSharedRef<SWidget> FManusEditorModule::FillToolbarComboButton(TSharedPtr<class 
     // local host if any
     if (m_LocalIndex != -1) 
     {
-        MenuBuilder.BeginSection("Local Host", LOCTEXT("LocalHostMenuSectionName", "Local host"));
-        {
-
-            FSlateIcon t_Icon = FSlateIcon(FManusEditorStyle::GetStyleSetName(), "ToolbarIcon.dot");
-            if ((CoreSdk::IsInitialized() == EManusRet::Success) &&
-                (CoreSdk::CheckConnection() == EManusRet::Success) &&
-                (m_CurrentHostSelected.Compare(m_HostValues[m_LocalIndex]) == 0))
+        //Edit so it does not crash when the .dll. or .lib file is not present and the SDK could not be loaded in result
+        if (m_HostValues.Num() != 0) {
+            MenuBuilder.BeginSection("Local Host", LOCTEXT("LocalHostMenuSectionName", "Local host"));
             {
-                t_Icon = FSlateIcon(FManusEditorStyle::GetStyleSetName(), "ToolbarIcon.connected");
+
+                FSlateIcon t_Icon = FSlateIcon(FManusEditorStyle::GetStyleSetName(), "ToolbarIcon.dot");
+                if ((CoreSdk::IsInitialized() == EManusRet::Success) &&
+                    (CoreSdk::CheckConnection() == EManusRet::Success) &&
+                    (m_CurrentHostSelected.Compare(m_HostValues[m_LocalIndex]) == 0))
+                {
+                    t_Icon = FSlateIcon(FManusEditorStyle::GetStyleSetName(), "ToolbarIcon.connected");
+                }
+
+                MenuBuilder.AddMenuEntry(
+                    FText::FromString(m_CleanedHostValues[m_LocalIndex / 2]),
+                    LOCTEXT("SetColorTooltip", "Set the manus host to this address."),
+                    t_Icon,
+                    FUIAction(FExecuteAction::CreateLambda([=]
+                        {
+                            SwitchHost(m_HostValues[m_LocalIndex]);
+                        }))
+                );
             }
-
-            MenuBuilder.AddMenuEntry(
-                FText::FromString(m_CleanedHostValues[m_LocalIndex/2]),
-                LOCTEXT("SetColorTooltip", "Set the manus host to this address."),
-                t_Icon,
-                FUIAction(FExecuteAction::CreateLambda([=]
-            {
-                SwitchHost(m_HostValues[m_LocalIndex]);
-             }))
-            );
+            MenuBuilder.EndSection();
         }
-        MenuBuilder.EndSection();
+        else {
+            UE_LOG(LogTemp, Error, TEXT("%s::%d Cannot open Menu. Please check if Manus SDK is loaded"), *FString(__FUNCTION__), __LINE__);
+        }
     }
 
     // remote host (usually multiple)
