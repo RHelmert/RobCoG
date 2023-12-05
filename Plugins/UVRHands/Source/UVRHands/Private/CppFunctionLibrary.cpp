@@ -3,10 +3,16 @@
 
 
 #include "CppFunctionLibrary.h"
-#include "../Plugins/Experimental/PythonScriptPlugin/Source/PythonScriptPlugin/Public/IPythonScriptPlugin.h"
+#include "IPythonScriptPlugin.h"
 #include "Runtime/Core/Public/Features/IModularFeatures.h"
 #include "zmq.hpp"
 #include <string>
+#include <future>
+#include "Serialization/JsonSerializer.h"
+#include <JsonUtilities/Public/JsonObjectConverter.h>
+
+
+
 
 
 
@@ -20,7 +26,7 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 
 	// Run the Python function call (NOTE: It has to loaded prior via init using the same filename)
 	
-
+	//PyImport_Import("python");
 	//Old version without parameterized input
 	//FString myString = "hello.waitFunc()";
 	
@@ -48,6 +54,14 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 		int32 funcresult = Result.Get();
 		UE_LOG(LogTemp, Warning, TEXT("Return is Ready : %d"), funcresult);
 	}
+
+
+}
+
+void UCppFunctionLibrary::StartPythonAlternate(FString filename, FString funcName)
+{
+
+
 
 
 }
@@ -230,6 +244,102 @@ void UCppFunctionLibrary::TaskCompletedCallback()
 	UE_LOG(LogTemp, Warning, TEXT("Python Completed"));
 }
 
+void UCppFunctionLibrary::Test()
+{
+	//create the struct
+	FMethodJson st;
+	st.method_name = "method";
+	st.method_kwargs.Add("in1","value1");
+	st.method_kwargs.Add("in2","value2");
+	st.method_args.Add("hello");
+	st.method_args.Add("hi");
+	UE_LOG(LogTemp, Warning, TEXT("Struct made: %s"),*st.ToString());
+
+
+	//												struct -->json obj --> struct
+	//Struct to JsonObject
+	TSharedPtr<FJsonObject> jsonObj = StructToJsonObj(st);
+	//Json Object to Struct
+	FMethodJson revJson = JsonObjToStruct(jsonObj);
+	UE_LOG(LogTemp, Warning, TEXT("Struct made: %s"), *revJson.ToString());
+
+
+	//------------Alternate  with String            struct ->json obj --> string --> json obj --> struct
+	//Struct to JsonObject
+	jsonObj = StructToJsonObj(st);
+
+	//JsonObject to String
+	bool succ;
+	FString outInfo;
+	FString jsonString = JsonObjectToString(jsonObj, succ, outInfo);
+	UE_LOG(LogTemp, Warning, TEXT("Json made: %s"), *jsonString);
+
+	//and back ...
+	//Json String to JsonObject
+	TSharedPtr<FJsonObject> newJsonObj = JsonStringToJsonObj(jsonString, succ, outInfo);
+
+	//Json Object Back to Struct
+	FMethodJson revJson2 = JsonObjToStruct(newJsonObj);
+	UE_LOG(LogTemp, Warning, TEXT("Struct made: %s"), *revJson2.ToString());
+
+}
+
+
+FString UCppFunctionLibrary::StructToJsonString(FMethodJson obj)
+{
+	TSharedPtr<FJsonObject> jsonOnj = UCppFunctionLibrary::StructToJsonObj(obj);
+	bool success;
+	FString message;
+	return UCppFunctionLibrary::JsonObjectToString(jsonOnj, success, message);
+}
+
+//other structs also possible
+TSharedPtr<FJsonObject> UCppFunctionLibrary::StructToJsonObj(FMethodJson obj) {
+	FString json = "";
+	TSharedPtr<FJsonObject> JsonObject = FJsonObjectConverter::UStructToJsonObject(obj);
+	return JsonObject;
+}
+
+
+//Converts the Json Object to struct defined in the header
+FMethodJson UCppFunctionLibrary::JsonObjToStruct(TSharedPtr<FJsonObject> obj)
+{
+	FMethodJson methodStruct;
+	if (!FJsonObjectConverter::JsonObjectToUStruct<FMethodJson>(obj.ToSharedRef(), &methodStruct)) {
+		return FMethodJson();
+	}
+	return methodStruct;
+}
+
+//Converts a JsonObject to String
+FString UCppFunctionLibrary::JsonObjectToString(TSharedPtr<FJsonObject> JsonObject, bool& success, FString& OutInfoMessage)
+{
+	FString JsonString;
+	if (!FJsonSerializer::Serialize(JsonObject.ToSharedRef(), TJsonWriterFactory<>::Create(&JsonString, 0))) {
+		success = false;
+		OutInfoMessage = "Object could not be converted to string";
+		return "";
+	}
+	OutInfoMessage = "Object was successfully converted to string";
+	success = true;
+	return JsonString;
+}
+
+//Creates a Json Object from a String
+TSharedPtr<FJsonObject> UCppFunctionLibrary::JsonStringToJsonObj(FString Json, bool& success, FString& OutInfoMessage)
+{
+	TSharedPtr<FJsonObject> JsonObject;
+	if (!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Json), JsonObject)) {
+		success = false;
+		OutInfoMessage = "String could not be converted to json";
+		return nullptr;
+	}
+	success = true;
+	OutInfoMessage = "String was successfully converted to json";
+	return JsonObject;
+}
+
+
 
 //Gets an CallbackObjectContainer such that BP can listen to it
 UPythonCallbackContainer* UCppFunctionLibrary::GetBlueprintCallbackObject()
@@ -244,7 +354,10 @@ UPythonCallbackContainer* UCppFunctionLibrary::GetBlueprintCallbackObject()
 //a direct python call given an explicit correctly formatted command
 void UCppFunctionLibrary::PythonCall(FString command)
 {
-	IPythonScriptPlugin::Get()->ExecPythonCommand(*command);
+	FPythonCommandEx PythonCommand;
+	PythonCommand.Command = command;
+	UE_LOG(LogTemp, Warning, TEXT("Starting PythongCommand:"));
+	IPythonScriptPlugin::Get()->ExecPythonCommandEx(PythonCommand);
 
 
 }
@@ -273,7 +386,4 @@ FString UCppFunctionLibrary::ConvertMessageToString(const zmq::message_t& zmqMes
 
 	return result;
 }
-
-
-
 
