@@ -58,17 +58,8 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 
 }
 
-void UCppFunctionLibrary::StartPythonAlternate(FString filename, FString funcName)
-{
-
-
-
-
-}
-
 void UCppFunctionLibrary::InitPython(FString filename)
 {
-
 
 	if (!OnTaskCompletedEvent.IsBound()) {
 		OnTaskCompletedEvent.AddStatic(&UCppFunctionLibrary::TaskCompletedCallback);
@@ -107,7 +98,7 @@ void UCppFunctionLibrary::InitPython(FString filename)
 
 void UCppFunctionLibrary::StartZmQServer()
 {
-	//lets try zeromq
+	//1.Create a function with content
 	TUniqueFunction<int32()> ZMQTask = []() -> int32 {
 		//UCppFunctionLibrary::PythonCall(st);
 		int major, minor, patch;
@@ -119,6 +110,7 @@ void UCppFunctionLibrary::StartZmQServer()
 		zmq::context_t context{ 1 };
 		zmq::socket_t socket{ context, zmq::socket_type::rep };
 		
+		//bind the socket
 		try
 		{
 			socket.bind("tcp://*:5555");
@@ -132,29 +124,26 @@ void UCppFunctionLibrary::StartZmQServer()
 
 		}
 
+		//server loop
 		int i = 0;
-		while (i < 30) {
-			UE_LOG(LogTemp, Log, TEXT("Server: iteration %d"), i);
-			zmq::message_t request;
-
-			// receive a request from client
+		while (true) {
+			UE_LOG(LogTemp, Log, TEXT("Server: iteration %d waiting for message"), i);
 			
-			//std::cout << "Received " << request.to_string() << std::endl;
-
+			
+			zmq::message_t request;
 			try
 			{
+				//this blocks the thread
 				socket.recv(&request, 0);
 				// Message received successfully
 				FString rMessage = ConvertMessageToString(request);
-				//https://forums.unrealengine.com/t/convert-std-string-to-fstring/5065/9
 				UE_LOG(LogTemp, Log, TEXT("Server: received message: %s"), *rMessage);
-
 
 
 				FString response = "Message received";
 				const char* stringValue = TCHAR_TO_ANSI(*response);;
 				zmq::message_t yourMessage(stringValue, strlen(stringValue));
-				UE_LOG(LogTemp, Log, TEXT("Server: sending response"));
+				UE_LOG(LogTemp, Log, TEXT("Server: sending response..."));
 				socket.send(yourMessage);
 
 			}
@@ -163,22 +152,22 @@ void UCppFunctionLibrary::StartZmQServer()
 				int errorCode = e.num();
 				FString emessage = e.what();
 				UE_LOG(LogTemp, Error, TEXT("Server: ZeroMQ error code %d and type %s"), errorCode, *emessage);
-				//send the message
 			}
-
 			i++;
 		}
-
+		//will never reach
 		return 1;
 	};
+
+	//2. Execute The function async
 	auto zmqResult = Async(EAsyncExecution::Thread, MoveTemp(ZMQTask));
 }
 
 void UCppFunctionLibrary::StartZmQClient()
 {
-
+	//1.Create a function with content
 	TUniqueFunction<int32()> ZMQCTask = []() -> int32 {
-		//UCppFunctionLibrary::PythonCall(st);
+		
 		int major, minor, patch;
 		zmq::version(&major, &minor, &patch);
 		UE_LOG(LogTemp, Log, TEXT("Client: ZeroMQ version: v%d.%d.%d"), major, minor, patch);
@@ -188,37 +177,41 @@ void UCppFunctionLibrary::StartZmQClient()
 		// initialize the zmq context with a single IO thread
 		zmq::context_t context{ 1 };
 
-		UE_LOG(LogTemp, Log, TEXT("Client:Connecting to socket"));
 		// construct a REQ (request) socket and connect to interface
+		UE_LOG(LogTemp, Log, TEXT("Client:Connecting to socket"));
 		zmq::socket_t socket{ context, zmq::socket_type::req };
 		socket.connect("tcp://localhost:5555");
 
+		//sending test messages
 		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 3"));
-		FPlatformProcess::Sleep(3);
+		FPlatformProcess::Sleep(2);
 		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 1"));
 		FPlatformProcess::Sleep(1);
-		//for (auto request_num = 0; request_num < 10; ++request_num)
-		//{
-			//Create a message and do some string magic
+
+
+		//Create a message and do some string magic
 		FString message = "This is the message from the client "; //+ request_num;
 		const char* stringValue = TCHAR_TO_UTF8(*message);;
 		zmq::message_t yourMessage(stringValue, strlen(stringValue));
 
-		
+		//lets send the message
 		try
 		{
+			//send message
 			UE_LOG(LogTemp, Log, TEXT("Client:Sending"));
 			socket.send(yourMessage);
-			// Message sent successfully
+			
 
-			//now wait for reply
+			//sending successful now wait for reply
 			zmq::message_t reply{};
 			socket.recv(&reply, 0);
 
+			//Ok, we got the replay, lets print it
 			FString re = ConvertMessageToString(reply);
 			UE_LOG(LogTemp, Log, TEXT("Client: received answer: %s"), *re);
 
-			// also possible but maybe slower and between each word there is a 20 e.g the answer "Hi this is the server" becomes "Hi 20 this 20 is 20 the 20 server"
+			
+			//This is also possible but maybe slower and between each word there is a 20 e.g the answer "Hi this is the server" becomes "Hi 20 this 20 is 20 the 20 server"
 			//FString r = reply.str().c_str();
 			//UE_LOG(LogTemp, Log, TEXT("Client received answer: %s"), *r);
 		}
@@ -227,13 +220,12 @@ void UCppFunctionLibrary::StartZmQClient()
 			int errorCode = e.num();
 			FString emessage = e.what();
 			UE_LOG(LogTemp, Error, TEXT("Client: Sending message: ZeroMQ error code %d and description %s"), errorCode, *emessage);
-			//send the message
 		}
 
-		
-	//}
+	// will never reach
 		return 1;
 	};
+	//2. Execute The function async
 	auto zmqClientResult = Async(EAsyncExecution::Thread, MoveTemp(ZMQCTask));
 }
 
@@ -241,9 +233,12 @@ void UCppFunctionLibrary::StartZmQClient()
 //Callback when task is completed
 void UCppFunctionLibrary::TaskCompletedCallback()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Python Completed"));
+	UE_LOG(LogTemp, Warning, TEXT("Python Task Completed"));
 }
 
+
+
+//Testfunction for making JSons and working with them
 void UCppFunctionLibrary::Test()
 {
 	//create the struct
@@ -285,6 +280,7 @@ void UCppFunctionLibrary::Test()
 }
 
 
+//FMethodJson(struct) ---> JsonString. Necessary for BPs since they can not work wit TSharedPtr
 FString UCppFunctionLibrary::StructToJsonString(FMethodJson obj)
 {
 	TSharedPtr<FJsonObject> jsonOnj = UCppFunctionLibrary::StructToJsonObj(obj);
@@ -293,7 +289,17 @@ FString UCppFunctionLibrary::StructToJsonString(FMethodJson obj)
 	return UCppFunctionLibrary::JsonObjectToString(jsonOnj, success, message);
 }
 
-//other structs also possible
+//JsonString to FMethodJson. Necessary for BPs since they can not work wit TSharedPtr
+FMethodJson UCppFunctionLibrary::JsonStringToStruct(FString jsonString)
+{
+	bool success;
+	FString message;
+	TSharedPtr<FJsonObject> jsonObj = UCppFunctionLibrary::JsonStringToJsonObj(jsonString, success, message);
+	return UCppFunctionLibrary::JsonObjToStruct(jsonObj);
+
+}
+
+//struct --->JsonObj
 TSharedPtr<FJsonObject> UCppFunctionLibrary::StructToJsonObj(FMethodJson obj) {
 	FString json = "";
 	TSharedPtr<FJsonObject> JsonObject = FJsonObjectConverter::UStructToJsonObject(obj);
@@ -301,7 +307,7 @@ TSharedPtr<FJsonObject> UCppFunctionLibrary::StructToJsonObj(FMethodJson obj) {
 }
 
 
-//Converts the Json Object to struct defined in the header
+//JsonObj--->FMethodJson(struct)
 FMethodJson UCppFunctionLibrary::JsonObjToStruct(TSharedPtr<FJsonObject> obj)
 {
 	FMethodJson methodStruct;
@@ -325,7 +331,7 @@ FString UCppFunctionLibrary::JsonObjectToString(TSharedPtr<FJsonObject> JsonObje
 	return JsonString;
 }
 
-//Creates a Json Object from a String
+//Creates string ---> JsonObject
 TSharedPtr<FJsonObject> UCppFunctionLibrary::JsonStringToJsonObj(FString Json, bool& success, FString& OutInfoMessage)
 {
 	TSharedPtr<FJsonObject> JsonObject;
@@ -362,7 +368,7 @@ void UCppFunctionLibrary::PythonCall(FString command)
 
 }
 
-
+//Convert a message to string
 FString UCppFunctionLibrary::ConvertMessageToString(const zmq::message_t& zmqMessage)
 {
 	// Get the size of the message

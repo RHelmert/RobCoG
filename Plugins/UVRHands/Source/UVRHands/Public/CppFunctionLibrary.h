@@ -73,9 +73,6 @@ public:
 	static void StartPython(FString filename, FString funcName);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static void StartPythonAlternate(FString filename, FString funcName);
-
-	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static void InitPython(FString filename);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
@@ -92,6 +89,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static FString StructToJsonString(FMethodJson obj);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static FMethodJson JsonStringToStruct(FString jsonString);
 
 	static TSharedPtr<FJsonObject> StructToJsonObj(FMethodJson obj);
 	static FMethodJson JsonObjToStruct(TSharedPtr<FJsonObject> obj);
