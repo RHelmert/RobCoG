@@ -15,6 +15,8 @@ class UVRHANDS_API UPythonCallbackContainer : public UObject
 	GENERATED_BODY()
 
 public:
+	UPythonCallbackContainer(){};
+
 	UPROPERTY(BlueprintAssignable)
 	FTaskCompletedEventBP OnTaskCompletedEvent;
 	

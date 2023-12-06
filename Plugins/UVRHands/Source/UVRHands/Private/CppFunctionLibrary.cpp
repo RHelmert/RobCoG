@@ -13,11 +13,13 @@
 
 
 
-
-
-
 FTaskCompletedEvent UCppFunctionLibrary::OnTaskCompletedEvent;
-TArray<UPythonCallbackContainer*> UCppFunctionLibrary::callbacklist;
+UPythonCallbackContainer* UCppFunctionLibrary::pythonCallback;
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::serverCallback;
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::clientCallback;
+ZmqServer* UCppFunctionLibrary::server;
+ZmqClient* UCppFunctionLibrary::client;
+
 
 
 
@@ -25,11 +27,6 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 {
 
 	// Run the Python function call (NOTE: It has to loaded prior via init using the same filename)
-	
-	//PyImport_Import("python");
-	//Old version without parameterized input
-	//FString myString = "hello.waitFunc()";
-	
 
 	//remove ".py" 
 	if (filename.EndsWith(".py")) {
@@ -41,9 +38,7 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 	//Task to run asynchronosly
 	TUniqueFunction<int32()> RTask = [st = file_func]() -> int32 {
 		UCppFunctionLibrary::PythonCall(st);
-		if (callbacklist.Num() != 0) {
-			callbacklist[0]->OnTaskCompletedEvent.Broadcast();
-		}
+		pythonCallback->OnTaskCompletedEvent.Broadcast();
 		OnTaskCompletedEvent.Broadcast();
 		return 1; 
 	};
@@ -61,9 +56,15 @@ void UCppFunctionLibrary::StartPython(FString filename, FString funcName)
 void UCppFunctionLibrary::InitPython(FString filename)
 {
 
+	//Init events
 	if (!OnTaskCompletedEvent.IsBound()) {
 		OnTaskCompletedEvent.AddStatic(&UCppFunctionLibrary::TaskCompletedCallback);
 	}
+	if (pythonCallback == nullptr) {
+		pythonCallback = (NewObject<UPythonCallbackContainer>());
+	}
+
+
 
 	//filename is expected to be like abc.py but we do not need the ".py"
 	if (filename.EndsWith(".py")) {
@@ -96,144 +97,58 @@ void UCppFunctionLibrary::InitPython(FString filename)
 	UE_LOG(LogTemp, Warning, TEXT("Line after Task \n%s"), *myString);
 }
 
-void UCppFunctionLibrary::StartZmQServer()
+bool  UCppFunctionLibrary::StartZmQServer()
 {
-	//1.Create a function with content
-	TUniqueFunction<int32()> ZMQTask = []() -> int32 {
-		//UCppFunctionLibrary::PythonCall(st);
-		int major, minor, patch;
-		zmq::version(&major, &minor, &patch);
-		UE_LOG(LogTemp, Log, TEXT("Server:ZeroMQ version: v%d.%d.%d"), major, minor, patch);
-		UE_LOG(LogTemp, Log, TEXT("Server:ZeroMQ started"));
-
-		// initialize the zmq context with a single IO thread
-		zmq::context_t context{ 1 };
-		zmq::socket_t socket{ context, zmq::socket_type::rep };
-		
-		//bind the socket
-		try
-		{
-			socket.bind("tcp://*:5555");
-		}
-		catch (const zmq::error_t& e)
-		{
-			int errorCode = e.num();
-			FString emessage = e.what();
-			UE_LOG(LogTemp, Error, TEXT("Server: Socket binding error: %d : %s"), errorCode, *emessage);
-			return 0;
-
-		}
-
-		//server loop
-		int i = 0;
-		while (true) {
-			UE_LOG(LogTemp, Log, TEXT("Server: iteration %d waiting for message"), i);
-			
-			
-			zmq::message_t request;
-			try
-			{
-				//this blocks the thread
-				socket.recv(&request, 0);
-				// Message received successfully
-				FString rMessage = ConvertMessageToString(request);
-				UE_LOG(LogTemp, Log, TEXT("Server: received message: %s"), *rMessage);
-
-
-				FString response = "Message received";
-				const char* stringValue = TCHAR_TO_ANSI(*response);;
-				zmq::message_t yourMessage(stringValue, strlen(stringValue));
-				UE_LOG(LogTemp, Log, TEXT("Server: sending response..."));
-				socket.send(yourMessage);
-
-			}
-			catch (const zmq::error_t& e)
-			{
-				int errorCode = e.num();
-				FString emessage = e.what();
-				UE_LOG(LogTemp, Error, TEXT("Server: ZeroMQ error code %d and type %s"), errorCode, *emessage);
-			}
-			i++;
-		}
-		//will never reach
-		return 1;
-	};
-
-	//2. Execute The function async
-	auto zmqResult = Async(EAsyncExecution::Thread, MoveTemp(ZMQTask));
+	if (server != nullptr) {
+		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqServer is already running...."), *FString(__func__), __LINE__);
+		return false;
+	}
+	// Creates and starts a new zmq server with the callback object on which the events are called
+	UCppFunctionLibrary::GetBlueprintZmqServerCallbackObject();
+	server = new ZmqServer(serverCallback);
+	return true;
+	
 }
 
-void UCppFunctionLibrary::StartZmQClient()
+bool UCppFunctionLibrary::StartZmQClient()
+{
+	if (client != nullptr) {
+		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqClient is already running...."), *FString(__func__), __LINE__);
+		return false;
+	}
+	// Creates and starts a new zmq server with the callback object on which the events are called
+	UCppFunctionLibrary::GetBlueprintZmqClientCallbackObject();
+	client = new ZmqClient(clientCallback);
+	return true;
+}
+
+void UCppFunctionLibrary::SendZmqMessageOverClient(FString Message)
+{
+	if (client == nullptr) {
+		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqClient is not running...."), *FString(__func__), __LINE__);
+		return;
+	}
+	client->EnqueueMessage(Message);
+
+}
+
+void UCppFunctionLibrary::StartAsyncCalculations()
 {
 	//1.Create a function with content
-	TUniqueFunction<int32()> ZMQCTask = []() -> int32 {
-		
-		int major, minor, patch;
-		zmq::version(&major, &minor, &patch);
-		UE_LOG(LogTemp, Log, TEXT("Client: ZeroMQ version: v%d.%d.%d"), major, minor, patch);
-		UE_LOG(LogTemp, Log, TEXT("Client: ZeroMQ started"));
-
-
-		// initialize the zmq context with a single IO thread
-		zmq::context_t context{ 1 };
-
-		// construct a REQ (request) socket and connect to interface
-		UE_LOG(LogTemp, Log, TEXT("Client:Connecting to socket"));
-		zmq::socket_t socket{ context, zmq::socket_type::req };
-		socket.connect("tcp://localhost:5555");
-
-		//sending test messages
-		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 3"));
-		FPlatformProcess::Sleep(2);
-		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 1"));
-		FPlatformProcess::Sleep(1);
-
-
-		//Create a message and do some string magic
-		FString message = "This is the message from the client "; //+ request_num;
-		const char* stringValue = TCHAR_TO_UTF8(*message);;
-		zmq::message_t yourMessage(stringValue, strlen(stringValue));
-
-		//lets send the message
-		try
-		{
-			//send message
-			UE_LOG(LogTemp, Log, TEXT("Client:Sending"));
-			socket.send(yourMessage);
-			
-
-			//sending successful now wait for reply
-			zmq::message_t reply{};
-			socket.recv(&reply, 0);
-
-			//Ok, we got the replay, lets print it
-			FString re = ConvertMessageToString(reply);
-			UE_LOG(LogTemp, Log, TEXT("Client: received answer: %s"), *re);
-
-			
-			//This is also possible but maybe slower and between each word there is a 20 e.g the answer "Hi this is the server" becomes "Hi 20 this 20 is 20 the 20 server"
-			//FString r = reply.str().c_str();
-			//UE_LOG(LogTemp, Log, TEXT("Client received answer: %s"), *r);
-		}
-		catch (const zmq::error_t& e)
-		{
-			int errorCode = e.num();
-			FString emessage = e.what();
-			UE_LOG(LogTemp, Error, TEXT("Client: Sending message: ZeroMQ error code %d and description %s"), errorCode, *emessage);
-		}
-
-	// will never reach
-		return 1;
+	TUniqueFunction<int32()> AsyncTask = []() -> int32 {
+		//Do Calculations
+			return 1;
 	};
-	//2. Execute The function async
-	auto zmqClientResult = Async(EAsyncExecution::Thread, MoveTemp(ZMQCTask));
+
+	//2. Execute The function async // Result is a TFuture<int32>
+	auto Result = Async(EAsyncExecution::Thread, MoveTemp(AsyncTask));
 }
 
 
 //Callback when task is completed
 void UCppFunctionLibrary::TaskCompletedCallback()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Python Task Completed"));
+	UE_LOG(LogTemp, Warning, TEXT("%s::%d Python Task Completed"), *FString(__func__), __LINE__);
 }
 
 
@@ -348,12 +263,28 @@ TSharedPtr<FJsonObject> UCppFunctionLibrary::JsonStringToJsonObj(FString Json, b
 
 
 //Gets an CallbackObjectContainer such that BP can listen to it
-UPythonCallbackContainer* UCppFunctionLibrary::GetBlueprintCallbackObject()
+UPythonCallbackContainer* UCppFunctionLibrary::GetBlueprintPythonCallbackObject()
 {
-	if (callbacklist.Num() == 0) {
-		callbacklist.Add(NewObject<UPythonCallbackContainer>());
+	if (pythonCallback == nullptr) {
+		pythonCallback = (NewObject<UPythonCallbackContainer>());
 	}
-	return callbacklist[0];
+	return pythonCallback;
+}
+
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::GetBlueprintZmqServerCallbackObject()
+{
+	if (serverCallback == nullptr) {
+		serverCallback = (NewObject<UMessageReceivedCallbackContainer>());
+	}
+	return serverCallback;
+}
+
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::GetBlueprintZmqClientCallbackObject()
+{
+	if (clientCallback == nullptr) {
+		clientCallback = (NewObject<UMessageReceivedCallbackContainer>());
+	}
+	return clientCallback;
 }
 
 
@@ -368,28 +299,5 @@ void UCppFunctionLibrary::PythonCall(FString command)
 
 }
 
-//Convert a message to string
-FString UCppFunctionLibrary::ConvertMessageToString(const zmq::message_t& zmqMessage)
-{
-	// Get the size of the message
-	size_t size = zmqMessage.size();
 
-	// If the message is empty, return an empty FString
-	if (size == 0)
-	{
-		return FString();
-	}
-
-	// Get the data pointer
-	const unsigned char* msgData = static_cast<const unsigned char*>(zmqMessage.data());
-
-	// Convert the data to an FString
-	FString result;
-	for (size_t i = 0; i < size; ++i)
-	{
-		result.AppendChar((msgData[i]));
-	}
-
-	return result;
-}
 

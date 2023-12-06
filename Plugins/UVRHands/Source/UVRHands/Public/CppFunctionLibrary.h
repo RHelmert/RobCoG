@@ -5,8 +5,13 @@
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "PythonCallbackContainer.h"
+#include "MessageReceivedCallbackContainer.h"
 #include "zmq.hpp"
+#include <ZmqClient.h>
+#include <ZmqServer.h>
 #include "CppFunctionLibrary.generated.h"
+
+
 
 
 
@@ -76,10 +81,18 @@ public:
 	static void InitPython(FString filename);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static void StartZmQServer();
+	static bool StartZmQServer();
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static void StartZmQClient();
+	static bool StartZmQClient();
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static void SendZmqMessageOverClient(FString Message);
+
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static void StartAsyncCalculations();
+
 
 	static void TaskCompletedCallback();
 
@@ -99,16 +112,22 @@ public:
 	static FString JsonObjectToString(TSharedPtr<FJsonObject> JsonObject, bool& success, FString& OutInfoMessage);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static UPythonCallbackContainer* GetBlueprintCallbackObject();
+	static UPythonCallbackContainer* GetBlueprintPythonCallbackObject();
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static UMessageReceivedCallbackContainer* GetBlueprintZmqServerCallbackObject();
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static UMessageReceivedCallbackContainer* GetBlueprintZmqClientCallbackObject();
 
 private:
 	static void PythonCall(FString command);
-
-	static FString ConvertMessageToString(const zmq::message_t& zmqMessage);
-
-	static TArray<UPythonCallbackContainer*> callbacklist;
+	static UPythonCallbackContainer* pythonCallback;
+	static UMessageReceivedCallbackContainer* serverCallback;
+	static UMessageReceivedCallbackContainer* clientCallback;
 	
 public:
+	static ZmqClient* client;
+	static ZmqServer* server;
 	static FTaskCompletedEvent OnTaskCompletedEvent;
 
 	
