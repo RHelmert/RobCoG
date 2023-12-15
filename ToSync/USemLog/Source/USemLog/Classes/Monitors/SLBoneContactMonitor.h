@@ -226,6 +226,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
 	FName BoneName;
 
+	// Optional name of the socket it should attach to if wanted
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FName SocketName = NAME_None;
+
 	// Snap to the position of the bone when attached
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
 	bool bSnapToBone;

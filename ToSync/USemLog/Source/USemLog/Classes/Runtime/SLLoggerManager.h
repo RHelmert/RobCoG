@@ -6,11 +6,16 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Info.h"
 #include "Runtime/SLLoggerStructs.h"
+#include "Knowrob/SLKRRestClient.h"
+#include "Actors/SLRestModuleAgentClass.h"
+#include "Speech/SLSpeechRestClient.h"
 #include "SLLoggerManager.generated.h"
+
 
 // Forward declarations
 class ASLWorldStateLogger;
 class ASLSymbolicLogger;
+class ASLRestModuleAgentClass;
 
 UCLASS(ClassGroup = (SL), DisplayName = "SL Logger Manager")
 class USEMLOG_API ASLLoggerManager : public AInfo
@@ -87,6 +92,21 @@ public:
 	// Get semantic map id
 	FString GetSemanticMapId() const { return LocationParams.SemanticMapId; };
 
+	// Get KnowRobIpAddress
+	FString GetKnowRobIpAddress() const { return LocationParams.KnowRobIpAddress; };
+
+	// Get KnowRobServerPort
+	FString GetKnowRobServerPort() const { return LocationParams.KnowRobServerPort; };
+
+	// Get GamePlayerName
+	FString GetGamePlayerName() const { return LocationParams.GamePlayerName; };
+
+	// Get GamePlayerGender
+	FString GetGamePlayerGender() const { return LocationParams.GamePlayerGender; };
+
+	// Get GamePlayerGge
+	int GetGamePlayerAge() const { return LocationParams.GamePlayerAge; };
+
 	// Get TaskId
 	FString GetTaskId() const { return LocationParams.TaskId; };
 
@@ -95,6 +115,9 @@ public:
 
 	// Check if the manager is running independently
 	bool IsRunningIndependently() const { return bUseIndependently; };
+
+	void AudioStart();
+	void AudioStop();
 
 protected:
 	// Setup user input bindings
@@ -139,6 +162,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger", meta = (editcondition = "bUseIndependently"))
 	FSLLoggerStartParams StartParams;
 
+	// Call init and start once the world is started, or execute externally
+	bool bCreateNEEM = true;
+
 
 	/* World state logger */
 	// True if the world state should be logged
@@ -166,6 +192,9 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Semantic Logger|Symbolic Logger", meta = (editcondition = "bLogActionsAndEvents"))
 	ASLSymbolicLogger* SymbolicLogger;
 
+	UPROPERTY(VisibleAnywhere, Category = "Semantic Logger|Symbolic Logger", meta = (editcondition = "bLogActionsAndEvents"))
+	ASLRestModuleAgentClass* SLRestModuleAgentClass;
+
 	// World state logger parameters used for logging
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Symbolic Logger", meta = (editcondition = "bLogActionsAndEvents"))
 	FSLSymbolicLoggerParams SymbolicLoggerParams;
@@ -177,4 +206,20 @@ private:
 	// Editor button hack to write the task owl file
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Edit")
 	bool bWriteTaskButton = false;
+
+	bool isEpisodeCreated = false;
+
+	bool isEpisodeFinished = false;
+
+	FSLKRRestClient fSLKRRestClient;
+
+	FSLSpeechRestClient fSLSpeechRestClient;
+
+	FString EpisodeIriResponse;
+
+	FString ActionIriResponse;
+
+	// Take IP Address from one of the logger manager settings, it should be the PC IP where KnowRob is running
+	//FString KnowRobServerIPAddress; // = GetKnowRobIpAddress();
+	//FString KnowRobServerPort; // = GetKnowRobServerPort();
 };

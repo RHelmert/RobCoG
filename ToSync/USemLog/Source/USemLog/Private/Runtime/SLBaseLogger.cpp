@@ -47,7 +47,6 @@ ASLBaseLogger::~ASLBaseLogger()
 void ASLBaseLogger::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-	UE_LOG(LogTemp, Log, TEXT("%s::%d"), *FString(__FUNCTION__), __LINE__);
 	if (bUseIndependently)
 	{
 		InitImpl();
@@ -58,7 +57,7 @@ void ASLBaseLogger::PostInitializeComponents()
 void ASLBaseLogger::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Log, TEXT("%s::%d "), *FString(__FUNCTION__), __LINE__);
+	//UE_LOG(LogTemp, Log, TEXT("%s::%d "), *FString(__FUNCTION__), __LINE__);
 	if (bUseIndependently)
 	{
 		if (StartParameters.StartTime == ESLLoggerStartTime::AtBeginPlay)

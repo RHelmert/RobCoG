@@ -99,13 +99,13 @@ bool USLBoneIndividual::ApplyMaskMaterials(bool bIncludeChildren /*= false*/)
 
 	if (!bIsMaskMaterialOn)
 	{
-		SkeletalMeshComponent->SetMaterial(MaterialIndex, VisualMaskDynamicMaterial);
-
+		//SkeletalMeshComponent->SetMaterial(MaterialIndex, VisualMaskDynamicMaterial);
+		/*
 		// Apply for poseable mesh clone if there is one
 		if (UPoseableMeshComponent* PMC = GetPoseableMeshComponent())
 		{
 			PMC->SetMaterial(MaterialIndex, VisualMaskDynamicMaterial);
-		}
+		}*/
 
 		bIsMaskMaterialOn = true;
 		return true;
@@ -222,13 +222,13 @@ FString USLBoneIndividual::CalcDefaultClassValue()
 	{
 		if (SkI->HasValidSkeletalDataAsset() || SkI->SetSkeletalDataAsset())
 		{
-			if (FString* BoneClassValue = SkI->SkeletalDataAsset->BoneIndexClass.Find(BoneIndex))
+			/*if (FString* BoneClassValue = SkI->SkeletalDataAsset->BoneIndexClass.Find(BoneIndex))
 			{
 				if (!BoneClassValue->IsEmpty())
 				{
 					return *BoneClassValue;
 				}
-			}
+			}*/
 		}
 	}
 	return GetTypeName();

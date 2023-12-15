@@ -21,4 +21,9 @@ FString FSLDummyEvent::Context() const
 {
 	return FString("DummyEvent");
 }
+
+FString FSLDummyEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	return TEXT("Succeed!");
+}
 /* End ISLEvent interface */

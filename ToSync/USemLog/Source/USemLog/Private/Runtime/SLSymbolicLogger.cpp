@@ -22,12 +22,17 @@
 #include "Events/SLReachAndPreGraspEventHandler.h"
 #include "Events/SLPickAndPlaceEventsHandler.h"
 #include "Events/SLContainerEventHandler.h"
+#include <Events/SLCuttingEventHandler.h>
+#include <Events/SLCleaningEventHandler.h>
 
 #include "Monitors/SLContactMonitorInterface.h"
 #include "Monitors/SLManipulatorMonitor.h"
 #include "Monitors/SLReachAndPreGraspMonitor.h"
 #include "Monitors/SLPickAndPlaceMonitor.h"
 #include "Monitors/SLContainerMonitor.h"
+
+#include "Actors/SLCutterAgentClass.h"
+#include "Actors/SLCleanerAgent.h"
 
 #include "Owl/SLOwlExperimentStatics.h"
 
@@ -44,6 +49,7 @@
 #if WITH_EDITOR
 #include "Components/BillboardComponent.h"
 #endif // WITH_EDITOR
+
 
 // Sets default values
 ASLSymbolicLogger::ASLSymbolicLogger()
@@ -114,6 +120,11 @@ void ASLSymbolicLogger::BeginPlay()
 				*FString(__func__), __LINE__, *GetName());
 		}
 	}
+
+	// TODO: use it when we shift NEEM logging with button pressed. 
+	// get system time when game starts
+	/*FDateTime timeUtc = FDateTime::UtcNow();
+	GameStartUnixTime = timeUtc.ToUnixTimestamp() + timeUtc.GetSecond();*/
 }
 
 // Called when actor removed from game or game ended
@@ -209,6 +220,9 @@ void ASLSymbolicLogger::InitImpl()
 		InitReachAndPreGraspMonitors();
 		InitManipulatorContactAndGraspMonitors();
 		InitPickAndPlaceMonitors();
+
+		InitCuttingAgents();
+		InitCleaningAgents();
 		//InitManipulatorGraspFixationMonitors();
 		/*InitManipulatorContainerMonitors();
 		InitSlicingMonitors();*/
@@ -253,6 +267,16 @@ void ASLSymbolicLogger::InitImpl()
 				UE_LOG(LogTemp, Error, TEXT("%s::%d Pick-and-Place monitors only work if grasp events are enabled.."),
 					*FString(__FUNCTION__), __LINE__);
 			}
+		}
+
+		if (LoggerParameters.EventsSelection.bCutting) 
+		{
+			InitCuttingAgents();
+		}
+
+		if (LoggerParameters.EventsSelection.bCleaning)
+		{
+			InitCleaningAgents();
 		}
 
 		//if (LoggerParameters.EventsSelection.bSlicing)
@@ -410,6 +434,10 @@ void ASLSymbolicLogger::FinishImpl(bool bForced)
 		{
 			Ev->AddToOwlDoc(ExperimentDoc.Get());
 			SubActionIds.Add(Ev->Id);
+
+			// Make rest call to knowrob sending Event as sub Action
+			Ev->RESTCallToKnowRob(fSLKRRestClient);
+			
 		}
 
 		// Add stored unique timepoints to doc
@@ -574,9 +602,11 @@ bool ASLSymbolicLogger::IsValidAndLoaded(AActor* Actor)
 		UE_LOG(LogTemp, Error, TEXT("%s::%d Actor not valid.."), *FString(__func__), __LINE__);
 		return false;
 	}
+
+	//The following is deprecated. World belonging is checked during Iterator creation
 	if (!GetWorld()->ContainsActor(Actor))
 	{
-		//UE_LOG(LogTemp, Error, TEXT("%s::%d %s is not from this world.."), *FString(__func__), __LINE__, *Actor->GetName());
+		UE_LOG(LogTemp, Error, TEXT("%s::%d %s is not from this world.."), *FString(__func__), __LINE__, *Actor->GetName());
 		return false;
 	}
 	if (UActorComponent* ActComp = Actor->GetComponentByClass(USLIndividualComponent::StaticClass()))
@@ -599,6 +629,13 @@ void ASLSymbolicLogger::InitContactMonitors()
 	// Init all contact trigger handlers
 	for (TObjectIterator<UShapeComponent> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
+
 		//if (Itr->GetClass()->ImplementsInterface(USLContactMonitorInterface::StaticClass()))
 		if (ISLContactMonitorInterface* ContactMonitor = Cast<ISLContactMonitorInterface>(*Itr))
 		{
@@ -634,6 +671,13 @@ void ASLSymbolicLogger::InitManipulatorContactAndGraspMonitors()
 	// Init all grasp Monitors
 	for (TObjectIterator<USLManipulatorMonitor> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
+
 		if (IsValidAndLoaded(Itr->GetOwner()))
 		{
 			Itr->Init(LoggerParameters.EventsSelection.bGrasp, LoggerParameters.EventsSelection.bManipulatorContact);
@@ -689,6 +733,13 @@ void ASLSymbolicLogger::InitManipulatorGraspFixationMonitors()
 	// Init fixation grasp Monitors
 	for (TObjectIterator<UMCGraspFixation> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
+
 		if (IsValidAndLoaded(Itr->GetOwner()))
 		{
 			// Create a grasp event handler 
@@ -714,6 +765,13 @@ void ASLSymbolicLogger::InitReachAndPreGraspMonitors()
 {
 	for (TObjectIterator<USLReachAndPreGraspMonitor> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
+
 		if (IsValidAndLoaded(Itr->GetOwner()))
 		{
 			Itr->Init();
@@ -747,6 +805,13 @@ void ASLSymbolicLogger::InitManipulatorContainerMonitors()
 {
 	//for (TObjectIterator<USLContainerMonitor> Itr; Itr; ++Itr)
 	//{
+	// //Skip all objects that do not belong to the current world
+	// //TObjectIterator finds also objects and classes of other worlds
+	//if (Itr->GetWorld() != GetWorld())
+	//{
+	//	continue;
+	//}
+	// 
 	//	if (IsValidAndLoaded(Itr->GetOwner()))
 	//	{
 	//		if (Itr->Init())
@@ -774,6 +839,13 @@ void ASLSymbolicLogger::InitPickAndPlaceMonitors()
 {
 	for (TObjectIterator<USLPickAndPlaceMonitor> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
+
 		if (IsValidAndLoaded(Itr->GetOwner()))
 		{
 			Itr->Init();
@@ -802,12 +874,90 @@ void ASLSymbolicLogger::InitPickAndPlaceMonitors()
 	}
 }
 
+void ASLSymbolicLogger::InitCuttingAgents()
+{
+	
+	for (TActorIterator<ASLCutterAgentClass> Itr(GetWorld()); Itr; ++Itr) //Reserve if the other not works
+	//for (TObjectIterator<ASLCutterAgentClass> Itr; Itr; ++Itr)
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Found a CutterObject"));
+		if (IsValidAndLoaded(*Itr))
+		{
+			Itr->Init();
+			if (Itr->IsInit())
+			{
+				CuttingAgents.Emplace(*Itr);
+				TSharedPtr<SLCuttingEventHandler> EvHandler = MakeShareable(new SLCuttingEventHandler());
+				EvHandler->Init(*Itr);
+				EvHandler->EpisodeId = LocationParameters.EpisodeId;
+				if (EvHandler->IsInit())
+				{
+					EventHandlers.Add(EvHandler);
+				}
+				else
+				{
+					UE_LOG(LogTemp, Error, TEXT("%s::%d %s::%s's handler could not be init.."),
+						*FString(__func__), __LINE__, *Itr->GetName(), *Itr->GetName());
+				}
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("%s::%d %s::%s's monitor could not be init.."),
+					*FString(__func__), __LINE__, *Itr->GetName(), *Itr->GetName());
+			}
+		}
+	}
+}
+
+void ASLSymbolicLogger::InitCleaningAgents()
+{
+
+	for (TActorIterator<ASLCleanerAgent> Itr(GetWorld()); Itr; ++Itr) //Reserve if the other not works
+		//for (TObjectIterator<ASLCutterAgentClass> Itr; Itr; ++Itr)
+	{
+		//UE_LOG(LogTemp, Error, TEXT("Found a CutterObject"));
+		if (IsValidAndLoaded(*Itr))
+		{
+			Itr->Init();
+			if (Itr->IsInit())
+			{
+				CleaningAgents.Emplace(*Itr);
+				TSharedPtr<SLCleaningEventHandler> EvHandler = MakeShareable(new SLCleaningEventHandler());
+				EvHandler->Init(*Itr);
+				EvHandler->EpisodeId = LocationParameters.EpisodeId;
+				if (EvHandler->IsInit())
+				{
+					EventHandlers.Add(EvHandler);
+				}
+				else
+				{
+					UE_LOG(LogTemp, Error, TEXT("%s::%d %s::%s's handler could not be init.."),
+						*FString(__func__), __LINE__, *Itr->GetName(), *Itr->GetName());
+				}
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("%s::%d %s::%s's monitor could not be init.."),
+					*FString(__func__), __LINE__, *Itr->GetName(), *Itr->GetName());
+			}
+		}
+	}
+}
+
+
+
 // Iterate and init the slicing monitors
 void ASLSymbolicLogger::InitSlicingMonitors()
 {
 #if SL_WITH_SLICING
 	for (TObjectIterator<USlicingBladeComponent> Itr; Itr; ++Itr)
 	{
+		//Skip all objects that do not belong to the current world
+		//TObjectIterator finds also objects and classes of other worlds
+		if (Itr->GetWorld() != GetWorld())
+		{
+			continue;
+		}
 		// Make sure the object is in the world
 		if (IsValidAndLoaded(Itr->GetOwner()))
 		{
@@ -830,6 +980,8 @@ void ASLSymbolicLogger::InitSlicingMonitors()
 #endif // SL_WITH_SLICING
 }
 
+
+
 // Publish data through ROS
 void ASLSymbolicLogger::InitROSPublisher()
 {
@@ -838,5 +990,10 @@ void ASLSymbolicLogger::InitROSPublisher()
 	ROSPrologClient->Init(WriterParams.ServerIp, WriterParams.ServerPort);
 	FSLEntitiesManager::GetInstance()->SetPrologClient(ROSPrologClient);
 #endif // SL_WITH_ROSBRIDGE
+}
+
+void ASLSymbolicLogger::SetSLKRRestClient(FSLKRRestClient* InFSLKRRestClient)
+{
+	fSLKRRestClient = InFSLKRRestClient;
 }
 

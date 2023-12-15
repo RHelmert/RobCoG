@@ -5,11 +5,12 @@
 
 #include "CoreMinimal.h"
 
+#include "Individuals\SLIndividualManager.h"
 // Forward declarations
 class USLIndividualComponent;
 class USLBaseIndividual;
 class USLSkeletalDataAsset;
-class ASLIndividualManager;
+//class ASLIndividualManager;
 
 //// Individual types flags
 //enum class ESLIndividualFlags : uint32
@@ -134,7 +135,7 @@ public:
 	static bool ConvertIndividualObject(class USLBaseIndividual*& OutIndividualObject, TSubclassOf<class USLBaseIndividual> ConvertToClass);
 
 	// Generate a new bson oid as string, empty string if fails
-	static FString NewOIdAsString();
+	//static FString NewOIdAsString();
 
 	// Find the skeletal data asset for the individual
 	static USLSkeletalDataAsset* FindSkeletalDataAsset(AActor* Owner);

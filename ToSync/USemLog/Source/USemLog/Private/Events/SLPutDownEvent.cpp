@@ -68,4 +68,25 @@ FString FSLPutDownEvent::ToString() const
 	return FString::Printf(TEXT("Individual:[%s] Manipulator:[%s] PairId:%lld"),
 		*Individual->GetInfo(), *Manipulator->GetInfo(), PairId);
 }
+
+FString FSLPutDownEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	// Call REST method to create sub actions on KnowRob side.
+	// somaClassName:somaIndividualName is sent at the moment for objects participated
+	FString ObjectsPartcipated = TEXT("[")
+		+ Individual->GetClassValue() + TEXT(":") + Individual->GetParentActor()->GetActorLabel()
+		+ TEXT(",")
+		+ Manipulator->GetClassValue() + TEXT(":") + Manipulator->GetParentActor()->GetActorLabel()
+		+ TEXT("]");
+
+
+	FString SubActionType = TEXT("soma:'PutDown'");
+	FString TaskType = TEXT("soma:'PuttingDown'");
+
+	FString AdditionalEventInfo = TEXT("");
+	InFSLKRRestClient->SendCreateSubActionRequest(SubActionType, TaskType,
+		ObjectsPartcipated, AdditionalEventInfo, double(StartTime), double(EndTime));
+
+	return TEXT("Succeed!");
+}
 /* End ISLEvent interface */

@@ -82,6 +82,7 @@ public:
 	bool IsConnected() const { return bIsConnected; };
 
 	// Get the semantic individual object
+	UFUNCTION(BlueprintCallable, Category = "Semantic Logger")
 	USLBaseIndividual* GetIndividualObject() const { return HasValidIndividual() ? IndividualObj : nullptr; };
 
 	// Return const version of the children array

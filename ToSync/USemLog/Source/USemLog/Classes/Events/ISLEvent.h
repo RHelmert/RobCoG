@@ -4,6 +4,7 @@
 #pragma once
 
 #include "Owl/SLOwlDoc.h"
+#include "Knowrob/SLKRRestClient.h"
 
 /**
 * Abstract class ensuring every event can be represented as an Owl Node;
@@ -57,4 +58,7 @@ public:
 
 	// Type name
 	virtual FString TypeName() const = 0;
+
+	// Create REST call to KnowRob
+	virtual FString RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const = 0;
 };
