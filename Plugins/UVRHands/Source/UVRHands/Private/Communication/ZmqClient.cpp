@@ -31,11 +31,14 @@ uint32 ZmqClient::Run()
 	zmq::context_t context{ 1 };
 
 	// construct a REQ (request) socket and connect to interface
-	FString ServerAddress = "tcp://localhost:5555";
+	//FString ServerAddress = "tcp://192.168.56.101:5555";
+	FString ServerAddress = ("tcp://" + ServerAdress);
 	UE_LOG(LogTemp, Log, TEXT("Client:Connecting to Server socket: %s"),*ServerAddress);
 	zmq::socket_t socket{ context, zmq::socket_type::req };
 	socket.connect(TCHAR_TO_UTF8 (*ServerAddress));
-
+	
+	//UE_LOG(LogTemp, Log, TEXT("Connected: Waiting for message"));
+	//Connection completed. Sending Inspect to Server.
 
 	while (!bShutdown) {
 		//Sleep as long as the queue is empty
@@ -44,21 +47,24 @@ uint32 ZmqClient::Run()
 			return wait;
 			});
 
+		//Create a message and do some string magic
+		FString message = "";
+		queue.Dequeue(message);
+		if (message == "STOP") {
+			continue;
+		}
+
+		const char* stringValue = TCHAR_TO_UTF8(*message);
+		zmq::message_t yourMessage(stringValue, strlen(stringValue));
 
 		//sending test messages
-		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 3"));
+		/*UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 3"));
 		FPlatformProcess::Sleep(1);
 		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 2"));
 		FPlatformProcess::Sleep(1);
 		UE_LOG(LogTemp, Log, TEXT("Client:Trying to send a message in 1"));
-		FPlatformProcess::Sleep(1);
+		FPlatformProcess::Sleep(1);*/
 
-
-		//Create a message and do some string magic
-		FString message = "";
-		queue.Dequeue(message);
-		const char* stringValue = TCHAR_TO_UTF8(*message);
-		zmq::message_t yourMessage(stringValue, strlen(stringValue));
 
 		//lets send the message
 		try
@@ -124,11 +130,15 @@ FString ZmqClient::ConvertMessageToString(const zmq::message_t& zmqMessage)
 void ZmqClient::Exit()
 {
 	/* Post-Run code, threaded */
+	UE_LOG(LogTemp, Warning, TEXT("%s::%d Client successfully shut down."), *FString(__func__), __LINE__);
 }
 
 void ZmqClient::Stop()
 {
 	bShutdown = true;
+	//Enqueue a command so the thread unblocks but then immediately exits
+	queue.Enqueue("STOP");
+
 }
 
 bool ZmqClient::EnqueueMessage(FString Message)

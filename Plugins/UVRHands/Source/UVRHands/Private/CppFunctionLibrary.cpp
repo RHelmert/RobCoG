@@ -15,10 +15,10 @@
 
 FTaskCompletedEvent UCppFunctionLibrary::OnTaskCompletedEvent;
 UPythonCallbackContainer* UCppFunctionLibrary::pythonCallback;
-UMessageReceivedCallbackContainer* UCppFunctionLibrary::serverCallback;
-UMessageReceivedCallbackContainer* UCppFunctionLibrary::clientCallback;
-ZmqServer* UCppFunctionLibrary::server;
-ZmqClient* UCppFunctionLibrary::client;
+TMap<FString,UMessageReceivedCallbackContainer*> UCppFunctionLibrary::serverCallbacks;
+TMap<FString, UMessageReceivedCallbackContainer*> UCppFunctionLibrary::clientCallbacks;
+TMap<FString,ZmqServer*> UCppFunctionLibrary::servers;
+TMap<FString,ZmqClient*> UCppFunctionLibrary::clients;
 
 
 
@@ -97,39 +97,70 @@ void UCppFunctionLibrary::InitPython(FString filename)
 	UE_LOG(LogTemp, Warning, TEXT("Line after Task \n%s"), *myString);
 }
 
-bool  UCppFunctionLibrary::StartZmQServer()
+bool  UCppFunctionLibrary::StartZmQServer(FString Port)
 {
-	if (server != nullptr) {
+
+	if (servers.Contains(Port)) {
 		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqServer is already running...."), *FString(__func__), __LINE__);
 		return false;
 	}
+
 	// Creates and starts a new zmq server with the callback object on which the events are called
-	UCppFunctionLibrary::GetBlueprintZmqServerCallbackObject();
-	server = new ZmqServer(serverCallback);
+	UCppFunctionLibrary::CreateOrGetBlueprintZmqServerCallbackObject(Port);
+	servers.Add(Port, new ZmqServer(serverCallbacks.FindChecked(Port)));
 	return true;
 	
 }
 
-bool UCppFunctionLibrary::StartZmQClient()
+void UCppFunctionLibrary::StopZmQServer(FString Port)
 {
-	if (client != nullptr) {
+	UE_LOG(LogTemp, Error, TEXT("%s::%d Currently Not Implemented since it was never neccessary"), *FString(__func__), __LINE__);
+}
+
+bool UCppFunctionLibrary::StartZmQClient(FString Ip_Port)
+{
+
+	if (clients.Contains(Ip_Port)) {
 		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqClient is already running...."), *FString(__func__), __LINE__);
 		return false;
 	}
 	// Creates and starts a new zmq server with the callback object on which the events are called
-	UCppFunctionLibrary::GetBlueprintZmqClientCallbackObject();
-	client = new ZmqClient(clientCallback);
+	UCppFunctionLibrary::CreateOrGetBlueprintZmqClientCallbackObject(Ip_Port);
+	clients.Add(Ip_Port, new ZmqClient(clientCallbacks.FindChecked(Ip_Port),Ip_Port));
 	return true;
 }
 
-void UCppFunctionLibrary::SendZmqMessageOverClient(FString Message)
+bool UCppFunctionLibrary::StopZmQClient(FString Ip_Port)
 {
-	if (client == nullptr) {
+	if (clients.Contains(Ip_Port)) {
+		clients.FindChecked(Ip_Port)->Stop();
+		clients.Remove(Ip_Port);
+		clientCallbacks.Remove(Ip_Port);
+		return true;
+	}
+	return false;
+}
+
+
+
+void UCppFunctionLibrary::SendZmqMessageOverClient(FString Ip_Port,FString Message)
+{
+	if (!clients.Contains(Ip_Port)) {
 		UE_LOG(LogTemp, Error, TEXT("%s::%d ZmqClient is not running...."), *FString(__func__), __LINE__);
 		return;
 	}
-	client->EnqueueMessage(Message);
+	clients.FindChecked(Ip_Port)->EnqueueMessage(Message);
 
+}
+
+int UCppFunctionLibrary::GetNumberClients()
+{
+	return clients.Num();
+}
+
+int UCppFunctionLibrary::GetNumberServers()
+{
+	return servers.Num();
 }
 
 void UCppFunctionLibrary::StartAsyncCalculations()
@@ -143,6 +174,8 @@ void UCppFunctionLibrary::StartAsyncCalculations()
 	//2. Execute The function async // Result is a TFuture<int32>
 	auto Result = Async(EAsyncExecution::Thread, MoveTemp(AsyncTask));
 }
+
+
 
 
 //Callback when task is completed
@@ -214,6 +247,18 @@ FMethodJson UCppFunctionLibrary::JsonStringToStruct(FString jsonString)
 
 }
 
+FString UCppFunctionLibrary::FMethodJsonToFancyString(FMethodJson struc)
+{
+	return struc.ToString();
+}
+
+TArray<FMethodJson> UCppFunctionLibrary::JsonToArrayOfStructs(FString jsonString,bool &bOut)
+{
+	TArray<FMethodJson> methodArray;
+	bOut = FJsonObjectConverter::JsonArrayStringToUStruct<FMethodJson>(jsonString, &methodArray);
+	return methodArray;
+}
+
 //struct --->JsonObj
 TSharedPtr<FJsonObject> UCppFunctionLibrary::StructToJsonObj(FMethodJson obj) {
 	FString json = "";
@@ -231,6 +276,8 @@ FMethodJson UCppFunctionLibrary::JsonObjToStruct(TSharedPtr<FJsonObject> obj)
 	}
 	return methodStruct;
 }
+
+
 
 //Converts a JsonObject to String
 FString UCppFunctionLibrary::JsonObjectToString(TSharedPtr<FJsonObject> JsonObject, bool& success, FString& OutInfoMessage)
@@ -271,20 +318,22 @@ UPythonCallbackContainer* UCppFunctionLibrary::GetBlueprintPythonCallbackObject(
 	return pythonCallback;
 }
 
-UMessageReceivedCallbackContainer* UCppFunctionLibrary::GetBlueprintZmqServerCallbackObject()
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::CreateOrGetBlueprintZmqServerCallbackObject(FString Port)
 {
-	if (serverCallback == nullptr) {
-		serverCallback = (NewObject<UMessageReceivedCallbackContainer>());
+	if (!serverCallbacks.Contains(Port)) {
+		serverCallbacks.Add(Port, NewObject<UMessageReceivedCallbackContainer>());
 	}
-	return serverCallback;
+	return serverCallbacks.FindChecked(Port);
 }
 
-UMessageReceivedCallbackContainer* UCppFunctionLibrary::GetBlueprintZmqClientCallbackObject()
+UMessageReceivedCallbackContainer* UCppFunctionLibrary::CreateOrGetBlueprintZmqClientCallbackObject(FString Ip_Port)
 {
-	if (clientCallback == nullptr) {
-		clientCallback = (NewObject<UMessageReceivedCallbackContainer>());
+
+	if (!clientCallbacks.Contains(Ip_Port)) {
+		clientCallbacks.Add(Ip_Port, NewObject<UMessageReceivedCallbackContainer>());
 	}
-	return clientCallback;
+
+	return clientCallbacks.FindChecked(Ip_Port);
 }
 
 

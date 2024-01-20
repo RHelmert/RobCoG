@@ -58,8 +58,12 @@ uint32 ZmqServer::Run()
 			UE_LOG(LogTemp, Log, TEXT("Server: received message: %s"), *rMessage);
 
 			//Tell the Events in the eventContainer that a message was received
-			EventContainer->OnMessageReceivedEvent.Broadcast(rMessage);
-			EventContainer->OnMessageReceivedEventBP.Broadcast(rMessage);
+			if (EventContainer->OnMessageReceivedEvent.IsBound()) {
+				EventContainer->OnMessageReceivedEvent.Broadcast(rMessage);
+			}
+			if (EventContainer->OnMessageReceivedEventBP.IsBound()) {
+				EventContainer->OnMessageReceivedEventBP.Broadcast(rMessage);
+			}
 
 			FString response = "Message received";
 			const char* stringValue = TCHAR_TO_ANSI(*response);;

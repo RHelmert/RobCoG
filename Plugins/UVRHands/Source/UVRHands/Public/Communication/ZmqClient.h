@@ -8,9 +8,10 @@
 
 class UVRHANDS_API ZmqClient : public FRunnable {
 public:
-	ZmqClient(UMessageReceivedCallbackContainer* cont){
+	ZmqClient(UMessageReceivedCallbackContainer* cont,FString Ip_Port){
 		Thread = FRunnableThread::Create(this, TEXT("ZmqClient"));
 		EventContainer = cont;
+		ServerAdress = Ip_Port;
 	};
 	~ZmqClient();
 
@@ -30,6 +31,7 @@ public:
 
 	// if true the client will shutdown next iteration
 	bool bShutdown = false;
+	FString ServerAdress;
 
 	//Queue to send Messages
 	TQueue<FString> queue;

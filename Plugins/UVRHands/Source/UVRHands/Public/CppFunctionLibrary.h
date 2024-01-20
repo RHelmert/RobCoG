@@ -24,17 +24,20 @@ public:
 	//"method_name" , "method_args" und "method_kwargs"
 	UPROPERTY(BlueprintReadWrite)
 		FString method_name;
-	UPROPERTY(BlueprintReadWrite)
+		UPROPERTY(BlueprintReadWrite)
+		FString method_docstring;
+		UPROPERTY(BlueprintReadWrite)
 		TArray<FString> method_args;
 	
 		//TArray<FString> method_kwargs;
-	UPROPERTY(BlueprintReadWrite)
+		UPROPERTY(BlueprintReadWrite)
 		TMap<FString, FString> method_kwargs;
 
 	FMethodJson() {};
 
-	FMethodJson(FString name, TArray<FString> args, TMap<FString, FString> kwargs) {
+	FMethodJson(FString name,FString docstring, TArray<FString> args, TMap<FString, FString> kwargs) {
 		method_name = name;
+		method_docstring = docstring;
 		method_args = args;
 		method_kwargs = kwargs;
 	}
@@ -45,15 +48,18 @@ public:
 		str.Append("Name: ");
 		str.Append(*method_name);
 		str.Append("\n");
+		str.Append("Doc: ");
+		str.Append(*method_docstring);
+		str.Append("\n");
 
-		str.Append(" args: ");
+		str.Append("args: ");
 		for (FString s : method_args){
 			str.Append(*s);
 			str.Append(", ");
 		}
 		str.Append("\n");
 
-		str.Append(" kwargs: ");
+		str.Append("kwargs: ");
 		for (TPair<FString,FString> s : method_kwargs) {
 			str.Append(*s.Key);
 			str.Append(": ");
@@ -81,13 +87,26 @@ public:
 	static void InitPython(FString filename);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static bool StartZmQServer();
+	static bool StartZmQServer(FString Port);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static bool StartZmQClient();
+	static void StopZmQServer(FString Port);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static void SendZmqMessageOverClient(FString Message);
+	static bool StartZmQClient(FString Ip_Port);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static bool StopZmQClient(FString Ip_Port);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static void SendZmqMessageOverClient(FString Ip_Port,FString Message);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static int GetNumberClients();
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static int GetNumberServers();
+
 
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
@@ -105,6 +124,10 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static FMethodJson JsonStringToStruct(FString jsonString);
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static FString FMethodJsonToFancyString(FMethodJson struc);
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static TArray<FMethodJson> JsonToArrayOfStructs(FString jsonString, bool& bOut);
 
 	static TSharedPtr<FJsonObject> StructToJsonObj(FMethodJson obj);
 	static FMethodJson JsonObjToStruct(TSharedPtr<FJsonObject> obj);
@@ -115,20 +138,21 @@ public:
 	static UPythonCallbackContainer* GetBlueprintPythonCallbackObject();
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static UMessageReceivedCallbackContainer* GetBlueprintZmqServerCallbackObject();
+	static UMessageReceivedCallbackContainer* CreateOrGetBlueprintZmqServerCallbackObject(FString Port);
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
-	static UMessageReceivedCallbackContainer* GetBlueprintZmqClientCallbackObject();
+	static UMessageReceivedCallbackContainer* CreateOrGetBlueprintZmqClientCallbackObject(FString Ip_Port);
 
 private:
 	static void PythonCall(FString command);
 	static UPythonCallbackContainer* pythonCallback;
-	static UMessageReceivedCallbackContainer* serverCallback;
-	static UMessageReceivedCallbackContainer* clientCallback;
+	static TMap<FString, UMessageReceivedCallbackContainer*> clientCallbacks;
+	static TMap<FString, UMessageReceivedCallbackContainer*> serverCallbacks;
 	
 public:
-	static ZmqClient* client;
-	static ZmqServer* server;
+	static TMap<FString, ZmqClient*> clients;
+	static TMap<FString, ZmqServer*> servers;
 	static FTaskCompletedEvent OnTaskCompletedEvent;
+	
 
 	
 };
