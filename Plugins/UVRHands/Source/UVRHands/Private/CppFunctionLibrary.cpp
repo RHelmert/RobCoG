@@ -10,6 +10,7 @@
 #include <future>
 #include "Serialization/JsonSerializer.h"
 #include <JsonUtilities/Public/JsonObjectConverter.h>
+#include <DefaultValueHelper.h>
 
 
 
@@ -194,8 +195,8 @@ void UCppFunctionLibrary::Test()
 	st.method_name = "method";
 	st.method_kwargs.Add("in1","value1");
 	st.method_kwargs.Add("in2","value2");
-	st.method_args.Add("hello");
-	st.method_args.Add("hi");
+	st.kwargs_type.Add("in1", "int");
+	st.kwargs_type.Add("in2", "string");
 	UE_LOG(LogTemp, Warning, TEXT("Struct made: %s"),*st.ToString());
 
 
@@ -231,11 +232,50 @@ void UCppFunctionLibrary::Test()
 //FMethodJson(struct) ---> JsonString. Necessary for BPs since they can not work wit TSharedPtr
 FString UCppFunctionLibrary::StructToJsonString(FMethodJson obj)
 {
-	TSharedPtr<FJsonObject> jsonOnj = UCppFunctionLibrary::StructToJsonObj(obj);
+	TSharedPtr<FJsonObject> jsonObj = UCppFunctionLibrary::StructToJsonObj(obj);
 	bool success;
 	FString message;
-	return UCppFunctionLibrary::JsonObjectToString(jsonOnj, success, message);
+	return UCppFunctionLibrary::JsonObjectToString(jsonObj, success, message);
 }
+
+
+FString UCppFunctionLibrary::StructToTypedJsonString(FMethodJson obj)
+{
+	TSharedPtr<FJsonObject> jsonObj = UCppFunctionLibrary::StructToJsonObj(obj);
+	FJsonObject* jobj = jsonObj.Get();
+	TArray<TSharedPtr<FJsonValue>> kwargmap = jobj->GetArrayField("method_kwargs");
+
+	//Iterate over all parameters
+	for (const auto& pair : obj.kwargs_type) {
+		const FString& Key = pair.Key;
+		const FString& Type = pair.Value;
+
+		//Replace Strings that can be represented as a number with the number
+		if (Type == "int" || Type == "float") {
+			float NumericValue;
+			FDefaultValueHelper::ParseFloat(*obj.method_kwargs.Find(Key), NumericValue);
+			jobj->GetObjectField("method_kwargs")->SetNumberField(Key, NumericValue);
+			continue;
+		}
+
+		//Replace bool Strings with the actual bool value
+
+		if (Type.ToLower().Equals("bool")) {
+			jobj->GetObjectField("method_kwargs")->SetBoolField(Key, obj.method_kwargs.Find(Key)->ToBool());
+			continue;
+		}
+		
+		
+	}
+
+	//Remove Kwarg types from the message 
+	jobj->RemoveField("kwargs_type");
+	bool success;
+	FString message;
+	return UCppFunctionLibrary::JsonObjectToString(jsonObj, success, message);
+
+}
+	
 
 //JsonString to FMethodJson. Necessary for BPs since they can not work wit TSharedPtr
 FMethodJson UCppFunctionLibrary::JsonStringToStruct(FString jsonString)

@@ -26,20 +26,22 @@ public:
 		FString method_name;
 		UPROPERTY(BlueprintReadWrite)
 		FString method_docstring;
-		UPROPERTY(BlueprintReadWrite)
-		TArray<FString> method_args;
 	
 		//TArray<FString> method_kwargs;
 		UPROPERTY(BlueprintReadWrite)
 		TMap<FString, FString> method_kwargs;
 
+		UPROPERTY(BlueprintReadWrite)
+		TMap<FString, FString> kwargs_type;
+
 	FMethodJson() {};
 
-	FMethodJson(FString name,FString docstring, TArray<FString> args, TMap<FString, FString> kwargs) {
+	FMethodJson(FString name,FString docstring, TMap<FString, FString> kwargs, TMap<FString, FString> types) {
 		method_name = name;
 		method_docstring = docstring;
-		method_args = args;
 		method_kwargs = kwargs;
+		kwargs_type = types;
+
 	}
 
 public:
@@ -50,13 +52,6 @@ public:
 		str.Append("\n");
 		str.Append("Doc: ");
 		str.Append(*method_docstring);
-		str.Append("\n");
-
-		str.Append("args: ");
-		for (FString s : method_args){
-			str.Append(*s);
-			str.Append(", ");
-		}
 		str.Append("\n");
 
 		str.Append("kwargs: ");
@@ -121,6 +116,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static FString StructToJsonString(FMethodJson obj);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static FString StructToTypedJsonString(FMethodJson obj);
 
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static FMethodJson JsonStringToStruct(FString jsonString);
