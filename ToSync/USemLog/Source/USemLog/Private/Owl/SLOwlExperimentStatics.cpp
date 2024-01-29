@@ -81,6 +81,7 @@ TSharedPtr<FSLOwlExperiment> FSLOwlExperimentStatics::CreateDefaultExperiment(
 	Experiment->AddClassDefinition("knowrob", "ReachingForSomething");
 	Experiment->AddClassDefinition("knowrob", "SlidingSituation");
 	Experiment->AddClassDefinition("knowrob", "TransportingSituation");
+	Experiment->AddClassDefinition("knowrob", "PouringSituation");
 
 
 	// Add individuals comment
@@ -222,6 +223,17 @@ FSLOwlNode FSLOwlExperimentStatics::CreateInContactProperty(const FString& InDoc
 
 	return FSLOwlNode(KbPrefix, FSLOwlAttribute(
 		RdfResource, FSLOwlAttributeValue(InDocPrefix, InObjId)));
+}
+
+// Create poured particles property
+FSLOwlNode FSLOwlExperimentStatics::CreatePouredParticlesProperty(const FString& InDocPrefix, const int InObjId)
+{
+	const FSLOwlPrefixName RdfResource("rdf", "resource");
+	const FSLOwlPrefixName KbPrefix("knowrob", "pouredParticles");
+
+	const FString Id = "particles_" + FString::SanitizeFloat(InObjId);
+	return FSLOwlNode(KbPrefix, FSLOwlAttribute(
+		RdfResource, FSLOwlAttributeValue(InDocPrefix, Id)));
 }
 
 // Create isSupported property

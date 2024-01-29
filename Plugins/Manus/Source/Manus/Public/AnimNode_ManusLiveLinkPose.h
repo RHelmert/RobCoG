@@ -2,11 +2,16 @@
 
 #pragma once
 
+// Set up a Doxygen group.
+/** @addtogroup FAnimNode_ManusLiveLinkPose
+ *  @{
+ */
+
 #include "AnimNode_LiveLinkPose.h"
 #include "ManusBlueprintTypes.h"
 #include "AnimNode_ManusLiveLinkPose.generated.h"
 
-
+/// @brief
 USTRUCT(BlueprintInternalUseOnly)
 struct MANUS_API FAnimNode_ManusLiveLinkPose : public FAnimNode_LiveLinkPose
 {
@@ -22,27 +27,16 @@ public:
 
 
 public:
-	/** The index of the User as displayed in the Manus Dashboard (first User is index 0). When available, the Manus Dashboard User index from the Manus component will be used instead.	*/
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ManusLiveLink", meta = (UIMin = 0))
-	int ManusDashboardUserIndex;
 
-	/** The Manus skeleton to use. When available, the Manus skeleton from the Manus component will be used instead. */
+    /// @brief The %Manus skeleton to use. When available, the %Manus skeleton from the %Manus component will be used instead. 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "ManusLiveLink")
-	class UManusSkeleton* ManusSkeleton;
+	class UManusSkeleton* ManusSkeleton = NULL;
 
-	/** Motion capture type. When available, the motion capture type from the Manus component will be used instead. */
-	UPROPERTY(EditAnywhere, Category = "ManusLiveLink", meta = (NeverAsPin))
-	EManusMotionCaptureType MotionCaptureType;
-
-	/** Tracking device delta transform. */
+    /// @brief Tracking device delta transform. 
 	UPROPERTY(EditAnywhere, Category = "ManusLiveLink", meta = (NeverAsPin))
 	FTransform TrackingDeviceDeltaTransform[(int)EManusHandType::Max];
-
-	/** List of bones with their remapped names. */
-	UPROPERTY(Transient)
-	FBoneReference BoneMap[(int)EManusBoneName::Max];
-
-	/** Map bone names to their enum counterparts. */
-	UPROPERTY(Transient)
-	TMap<FName, EManusBoneName> BoneNameToEnum;
 };
+
+
+// Close the Doxygen group.
+/** @} */

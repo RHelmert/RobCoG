@@ -1,5 +1,5 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 using UnrealBuildTool;
 using System.IO;
@@ -23,11 +23,9 @@ public class ManusEditor : ModuleRules
 
 	public ManusEditor(ReadOnlyTargetRules Target) : base(Target)
     {
-#if UE_4_24_OR_LATER
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-#endif
         PrivatePCHHeaderFile = "Private/ManusEditorPrivatePCH.h";
-
+        CppStandard = CppStandardVersion.Cpp17;
         PublicIncludePaths.AddRange(
 			new string[]
 			{
@@ -54,7 +52,8 @@ public class ManusEditor : ModuleRules
 				"SlateCore",
 				"LevelEditor",
 				"PropertyEditor",
-				"Manus"
+                "Sockets",
+                "Manus"
 			} );
 
 		PrivateDependencyModuleNames.AddRange(

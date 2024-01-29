@@ -1,26 +1,35 @@
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #pragma once
+
+// Set up a Doxygen group.
+/** @addtogroup ManusTools
+ *  @{
+ */
 
 #include "ManusBlueprintTypes.h"
 #include "Animation/AnimTypes.h"
 #include "BoneContainer.h"
 #include "ManusSkeleton.h"
+#include "ManusSdkTypes.h"
 
+/// @brief some support tools
 struct MANUS_API ManusTools
 {
-	static int64 GenerateManusIdFromManusLiveLinkUser(int ManusLiveLinkUserIndex);
+	/// @brief Create a NodeSetup
+	/// @param p_Id 
+	/// @param p_ParentId 
+	/// @param p_Transform 
+	/// @param p_Name 
+	/// @return 
+	static NodeSetup CreateNodeSetup(uint32_t p_Id, uint32_t p_ParentId, FTransform p_Transform, FName p_Name);
 
-#if WITH_EDITORONLY_DATA
-	static void AutomaticSkeletonBoneNameMapping(class USkeleton* Skeleton, BoneName_t* BoneMap);
-	static EBoneAxis AutomaticSkeletonStretchAxisDetection(class USkeleton* Skeleton);
-	static float AutomaticSkeletonHeightDetection(class USkeleton* Skeleton);
-	static void AutomaticFingersRotationAxesDetection(class UManusSkeleton* ManusSkeleton, EManusHandType HandType, EManusAxisOption& OutStretchAxis, EManusAxisOption& OutSpreadAxis);
-#endif // WITH_EDITORONLY_DATA
-
-	static bool CalculateManusInternalOrientations(int ManusLiveLinkUserIndex, TMap<int, FQuat>& OutOrientations, TMap<int, FQuat>& OutDeltaOrientations);
-	static bool CalculateManusInternalOrientation(EManusBoneName Bone, class USkeleton* Skeleton, const BoneName_t* BoneMap, FQuat& OutOrientation, FQuat& OutDeltaOrientation);
-	static FVector CalculateManusInternalForward(TArray<TTuple<FTransform, FTransform>> Directions);
-	static FQuat LookRotation(FVector LookAtDirection, FVector UpDirection);
-	static FQuat AngleAxis(float Angle, EManusAxisOption Axis);
+    /// @brief converts unreal fstring to a UTF8 byte array in a char array.
+    /// @param p_OutputArray 
+    /// @param p_InputString 
+    /// @param p_MaxSize 
+    static void ConvertFStringToUTF8Array(char* p_OutputArray, FString p_InputString, int p_MaxSize);
 };
+
+// Close the Doxygen group.
+/** @} */

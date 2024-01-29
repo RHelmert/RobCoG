@@ -56,4 +56,7 @@ public:
 	// Get the event type name
 	virtual FString TypeName() const override { return FString(TEXT("Contact")); };
 	/* End IEvent interface */
+
+	// Create REST call to KnowRob
+	virtual FString RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const override;
 };

@@ -2,6 +2,11 @@
 
 #pragma once
 
+// Set up a Doxygen group.
+/** @addtogroup UManusLiveLinkSourceFactory_Local
+ *  @{
+ */
+
 #include "LiveLinkSourceFactory.h"
 #include "ManusLiveLinkSource.h"
 #include "ManusLiveLinkSourceFactory_Replicated.generated.h"
@@ -12,16 +17,20 @@ class UManusLiveLinkSourceFactory_Replicated : public ULiveLinkSourceFactory
 	GENERATED_BODY()
 
 public:
+	/// @brief returns "Manus Replicated Source"
 	virtual FText GetSourceDisplayName() const override;
+	/// @brief 
+	/// @return "Manus Replicated Source"
 	virtual FText GetSourceTooltip() const override;
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
+	/// @brief get menu type
+	/// @return 
 	virtual EMenuType GetMenuType() const override;
+	/// @brief 
+	/// @param ConnectionString 
+	/// @return replicated livelinksource
 	virtual TSharedPtr<ILiveLinkSource> CreateSource(const FString& ConnectionString) const override;
-#else
-	virtual TSharedPtr<SWidget> CreateSourceCreationPanel() override;
-	virtual TSharedPtr<ILiveLinkSource> OnSourceCreationPanelClosed(bool bMakeSource) override;
 
-	TSharedPtr<SLiveLinkManusSourceEditor> ActiveSourceEditor;
-#endif
 };
+
+// Close the Doxygen group.
+/** @} */

@@ -1,4 +1,4 @@
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #include "ManusLiveLinkSource.h"
 #include "Manus.h"
@@ -11,145 +11,348 @@
 #include "ManusTools.h"
 #include "ManusConvert.h"
 #include "ManusSkeleton.h"
+#include "ManusTypeInitializers.h"
+
+
 #if WITH_EDITOR
 #include "ManusEditorUserSettings.h"
+#include <Runtime/Slate/Public/Widgets/Notifications/SNotificationList.h>
+#include <Runtime/Slate/Public/Framework/Notifications/NotificationManager.h> 
 #endif // WITH_EDITOR
+
+//C:\Program Files\Epic Games\UE_5.2\Engine\Source\Runtime\CoreUObject\Public\UObject\UObjectIterator.h
+#include <Runtime/CoreUObject/Public/UObject/UObjectIterator.h> 
 
 #include "LiveLinkClient.h"
 #include "LiveLinkSourceFactory.h"
 #include "ILiveLinkClient.h"
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 #include "Roles/LiveLinkAnimationRole.h"
 #include "Roles/LiveLinkAnimationTypes.h"
-#else
-#include "LiveLinkTypes.h"
-#endif
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/PlayerState.h"
 #include "Features/IModularFeatures.h"
+#include <regex>
 
 DECLARE_CYCLE_STAT(TEXT("Manus Update Glove Assignments"), STAT_Manus_UpdateGloveAssignments, STATGROUP_Manus);
 DECLARE_CYCLE_STAT(TEXT("Manus Update Live Link"), STAT_Manus_UpdateLiveLink, STATGROUP_Manus);
-DECLARE_CYCLE_STAT(TEXT("Manus Update Polygon Live Link"), STAT_Manus_UpdatePolygonLiveLink, STATGROUP_Manus);
+DECLARE_CYCLE_STAT(TEXT("Manus Update Skeletons Live Link"), STAT_Manus_UpdateSkeletonsLiveLink, STATGROUP_Manus);
 DECLARE_CYCLE_STAT(TEXT("Manus Update Glove Live Link"), STAT_Manus_UpdateGloveLiveLink, STATGROUP_Manus);
-DECLARE_CYCLE_STAT(TEXT("Manus Gesture Detection"), STAT_Manus_GestureDetection, STATGROUP_Manus);
 
 #define LOCTEXT_NAMESPACE "FManusModule"
 
 FManusLiveLinkSource::FManusLiveLinkSource(EManusLiveLinkSourceType InSourceType)
-: SourceType(InSourceType)
+: m_SourceType(InSourceType)
 {
 }
 
 void FManusLiveLinkSource::Init()
 {
 	// Init Manus replicated Live Link source
-	FLiveLinkClient* Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
-	if (Client)
+	FLiveLinkClient* t_Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
+	if (t_Client)
 	{
-		Client->AddSource(FManusModule::Get().GetLiveLinkSource(SourceType));
-	}
-
-	// Init Polygon
-	if (SourceType == EManusLiveLinkSourceType::Local)
-	{
-		InitPolygonForAllManusLiveLinkUsers(true);
+		t_Client->AddSource(FManusModule::Get().GetLiveLinkSource(m_SourceType));
 	}
 }
 
 void FManusLiveLinkSource::Destroy()
 {
-	if (LiveLinkClient)
+	// pre clean skeletons in case of temp skeletons.
+	TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+	for (size_t i = 0; i < t_ManusLiveLinkUsers.Num(); i++)
 	{
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 24
-		LiveLinkClient->RemoveSource(LiveLinkSourceGuid);
-#else
-		LiveLinkClient->RemoveSource(FManusModule::Get().GetLiveLinkSource(SourceType));
-#endif
+		UManusSkeleton* t_ManusSkeleton = t_ManusLiveLinkUsers[i].ManusSkeleton;
+		if (t_ManusSkeleton)
+		{
+			t_ManusSkeleton->SetTemporarySkeletonIndex(UINT32_MAX);
+		}
 	}
+
+	if (m_LiveLinkClient)
+	{
+		m_LiveLinkClient->RemoveSource(liveLinkSourceGuid);
+	}
+
+	// todo more cleanup?
 }
 
-void FManusLiveLinkSource::Tick(float DeltaTime)
+bool FManusLiveLinkSource::TickConnection()
 {
-	if (SourceType == EManusLiveLinkSourceType::Local)
-	{
-		// Take care of restarting Core connection when needed
-		EManusRet CoreSdkStatus = CoreSdk::CheckConnection();
-		if (CoreSdkStatus != EManusRet::Success)
-		{
-			// Only log the time out one time
-			if (!bIsConnectionWithCoreTimingOut)
-			{
-				UE_LOG(LogManus, Warning, TEXT("Connection with Manus Core timed out. Please make sure that Manus Core is up and running."));
-			}
+    // Take care of restarting Core connection when needed
+    EManusRet t_ReturnCode = CoreSdk::CheckConnection();
 
-			// Connection with Core is timing out
-			bIsConnectionWithCoreTimingOut = true;
-		}
-		else if (bIsConnectionWithCoreTimingOut)
-		{
-			// Connection with Core is back
-			bIsConnectionWithCoreTimingOut = false;
-			UE_LOG(LogManus, Log, TEXT("Connection with Manus Core restored."));
+    if (t_ReturnCode != EManusRet::Success)
+    {
+        FString t_ManusIP = FManusModule::Get().GetManusCoreIP();
+        if (t_ManusIP.IsEmpty() ) return false; // no manus core ip set just yet. so lets ignore.
 
-			// Reinitialize Polygon
-			InitPolygonForAllManusLiveLinkUsers(true);
-		}
+        // Only log the time out one time
+        if (!m_bIsConnectionWithCoreTimingOut)
+        {
+            UE_LOG(LogManus, Warning, TEXT("Connection with Manus Core timed out. Please make sure that Manus Core is up and running."));
 
+            // prepare for reconnect just in case.
+            t_ReturnCode = CoreSdk::ShutDown();
+            if (t_ReturnCode != EManusRet::Success) return false;
+            t_ReturnCode = CoreSdk::Initialize();
+            if (t_ReturnCode != EManusRet::Success) return false;
+        }
+
+        // Connection with Core is timing out
+        m_bIsConnectionWithCoreTimingOut = true;
+        m_bIsSkeletonsInitialized = false;
+
+        // check if local or remote
+        // since we cannot put a sleep in here but don't want to spam the system to death with reconnects
+        // we keep a counter and when it triggers we check again. Not perfect, but not the worst either.
+        if (m_ReconnectCounter <= 0)
+        {
+
+            m_ReconnectCounter = RECONNECT_RETRY_COUNT_MAX;
+            if ((t_ManusIP.Compare("LocalHost") == 0) ||
+                (t_ManusIP.Compare("127.0.0.1") == 0))
+            {
+                t_ReturnCode = CoreSdk::ConnectLocally();
+            }
+            else
+            {
+                t_ReturnCode = CoreSdk::ConnectRemotely(t_ManusIP);
+            }
+
+            if (t_ReturnCode != EManusRet::Success) return false;
+        }
+        else
+        {
+            m_ReconnectCounter--;
+            return false;
+        }
+    }
+    else if (m_bIsConnectionWithCoreTimingOut)
+    {
+        // Connection with Core is back
+        m_bIsConnectionWithCoreTimingOut = false;
+        UE_LOG(LogManus, Log, TEXT("Connection with Manus Core restored."));
+
+        // Reinitialize Skeletons
+        TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+        InitSkeletons(true, t_ManusLiveLinkUsers);
+    }
+    return true;
+}
+
+void FManusLiveLinkSource::TickUpdateSkeletons()
+{
+    TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+
+    // update any temporary skeleton updates
+    uint32_t t_TempSkeletonIndex = UINT32_MAX;
+    CoreSdk::GetLastModifiedSkeletonIndex(t_TempSkeletonIndex);
+    if (t_TempSkeletonIndex != UINT32_MAX)
+    {
+        bool t_Found = false;
+        if (t_ManusLiveLinkUsers.Num() != 0) // it is very likely to be a normally generated skeleton
+        {
+            // ok find the correct manusskeleton			
+            for (size_t i = 0; i < t_ManusLiveLinkUsers.Num(); i++)
+            {
+                UManusSkeleton* t_ManusSkeleton = t_ManusLiveLinkUsers[i].ManusSkeleton;
+                if (t_ManusSkeleton->GetTemporarySkeletonIndex() == t_TempSkeletonIndex)
+                {
+                    // and let it update
+                    t_ManusSkeleton->RetrieveTemporarySkeleton();
+
+                    // and indicate that it should be rebuilt.
+                    t_ManusLiveLinkUsers[i].SkeletonsInitializationRetryCountdown = 1; // enable it to be reloaded.			
+                    HotReloadNotification();
+                    t_Found = true;
+                    break;
+                }
+            }
+        }
+
+        if (t_Found == false) // in case it was not a regular livelinkuser skeleton.
+        {
+            // this can happen when using a built plugin (in visual studio a livelinkuser can be generated automatically, hiding this problem)
+            // what we need to do is find the default skeleton and update that one.
+
+            // it also normally only happens in the editor. 
+            UManusSkeleton* t_Skeleton = NULL;
+
+            for (TObjectIterator< UManusSkeleton > t_ClassIt; t_ClassIt; ++t_ClassIt)
+            {
+                t_Skeleton = *t_ClassIt;
+                if (t_Skeleton != NULL)
+                {
+                    if (t_Skeleton->GetTemporarySkeletonIndex() == t_TempSkeletonIndex)
+                    {
+                        // and let it update
+                        t_Skeleton->RetrieveTemporarySkeleton();
+
+                        UE_LOG(LogManus, Log, TEXT("Updated skeleton that was not yet assigned to livelink user."));
+                        HotReloadNotification();
+                        break;
+                    }
+                }
+            }
+            // if still nothing found we got a very strange update in for our session. we ignore it for now.
+        }
+    }
+}
+
+void FManusLiveLinkSource::HotReloadNotification()
+{
 #if WITH_EDITOR
-		// Tick skeleton previews
-		TickAllHandPreviews(DeltaTime);
-#endif // WITH_EDITOR
+    FNotificationInfo Info(LOCTEXT("HotReloadFinished", "Hot reload of Manus Skeleton complete!"));
+    Info.FadeInDuration = 0.1f;
+    Info.FadeOutDuration = 0.5f;
+    Info.ExpireDuration = 5.0f;
+    Info.bUseThrobber = false;
+    Info.bUseSuccessFailIcons = true;
+    Info.bUseLargeFont = true;
+    Info.bFireAndForget = false;
+    Info.bAllowThrottleWhenFrameRateIsLow = false;
+    auto NotificationItem = FSlateNotificationManager::Get().AddNotification(Info);
+    NotificationItem->SetCompletionState(SNotificationItem::CS_Success);
+    NotificationItem->ExpireAndFadeout();
+#endif
+}
+
+void FManusLiveLinkSource::Tick(float p_DeltaTime)
+{
+	if (m_SourceType == EManusLiveLinkSourceType::Local)
+	{
+        if (!TickConnection()) return; //continue of true, abort if false.
 
 		// Update Manus Live Link Users
-		TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-
-		// Update the Manus Dashboard Users Glove assignments
-		UpdateManusDashboardUsersGloveAssignments(DeltaTime);
+		TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
 
 		// Reset replicated data
-		ReplicatedFrameDataArray.Reset();
+		m_ReplicatedFrameDataArray.Reset();
+
+        TickUpdateSkeletons();
+
+		InitSkeletons(false, t_ManusLiveLinkUsers);
 
 		// Update Live Link for each Manus Live Link User
-		for (int i = 0; i < ManusLiveLinkUsers.Num(); i++)
+		for (int i = 0; i < t_ManusLiveLinkUsers.Num(); i++)
 		{
-			UpdateLiveLink(DeltaTime, i);
+            if (FManusModule::Get().ManusLiveLinkUsers.IsValidIndex(i))
+            {
+                UpdateLiveLink(p_DeltaTime, i);
+            }
 		}
-		bNewLiveLinkClient = false;
+		m_bNewLiveLinkClient = false;
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 		// Remove potential ghost Live Link subjects left there after removing Manus Live Link Users
-		int ManusLiveLinkUserIndexToRemove = ManusLiveLinkUsers.Num();
-		while (LiveLinkClient && LiveLinkClient->IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove)))
-		{
-			FLiveLinkSubjectName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove);
-			FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSourceGuid, LiveLinkSubjectName);
-			LiveLinkClient->RemoveSubject_AnyThread(LiveLinkSubjectKey);
-			ManusLiveLinkUserIndexToRemove++;
-		}
-#else
-		int ManusLiveLinkUserIndexToRemove = ManusLiveLinkUsers.Num();
-		while (LiveLinkClient && IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove)))
-		{
-			FName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove);
-			LiveLinkClient->ClearSubject(LiveLinkSubjectName);
-			ManusLiveLinkUserIndexToRemove++;
-		}
-#endif
+		int t_ManusLiveLinkUserIndexToRemove = t_ManusLiveLinkUsers.Num();
 
-		// Make sure Polygon is initialized properly for each user
-		if (CoreSdkStatus == EManusRet::Success)
+        // TODO is this valid code? whut ?
+		while (m_LiveLinkClient && m_LiveLinkClient->IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndexToRemove)))
 		{
-			for (int i = 0; i < ManusLiveLinkUsers.Num(); i++)
+			FLiveLinkSubjectName t_LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndexToRemove);
+			FLiveLinkSubjectKey t_LiveLinkSubjectKey = FLiveLinkSubjectKey(liveLinkSourceGuid, t_LiveLinkSubjectName);
+			m_LiveLinkClient->RemoveSubject_AnyThread(t_LiveLinkSubjectKey);
+			t_ManusLiveLinkUserIndexToRemove++;
+		}
+	}
+    else // if (m_SourceType == EManusLiveLinkSourceType::Replicated)
+    {
+        if (FManusModule::Get().IsClient() == false) return;
+        //UE_LOG(LogManus, Warning, TEXT("Replicated stuff on client."));
+        TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+        // update the replicated ones
+      
+        for (int i = 0; i < t_ManusLiveLinkUsers.Num(); i++)
+        {
+            if (FManusModule::Get().ManusLiveLinkUsers.IsValidIndex(i))
+            {
+                FManusLiveLinkUser& t_ManusLiveLinkUser = t_ManusLiveLinkUsers[i];
+                // do we need to (re)init
+                if (t_ManusLiveLinkUser.SkeletonsInitializationRetryCountdown > 0)
+                {
+                    UManusSkeleton* t_ManusSkeleton = t_ManusLiveLinkUser.ManusSkeleton;
+
+                    if (t_ManusLiveLinkUser.LiveLinkFrame == NULL)
+                    {
+                        t_ManusLiveLinkUser.LiveLinkFrame = new FLiveLinkFrameDataStruct();
+                        t_ManusLiveLinkUser.LiveLinkFrame->InitializeWith(FLiveLinkAnimationFrameData::StaticStruct(), nullptr);
+                    }
+
+                    if (t_ManusSkeleton &&
+                        t_ManusSkeleton->GetSkeleton())// do we even have a skeleton?
+                    {
+                        m_bIsSkeletonsInitialized = true;
+                        t_ManusLiveLinkUser.SkeletonsInitializationRetryCountdown = 0; // ok we're done 
+                    }
+
+                        
+                    // recreate livelink if needed
+                    t_ManusLiveLinkUser.bShouldUpdateLiveLinkData = false;
+
+                    // Update live link for this Live Link user if some objects are using it
+                    if (!t_ManusLiveLinkUser.bShouldUpdateLiveLinkData)
+                    {
+                        t_ManusLiveLinkUser.bShouldUpdateLiveLinkData |= FManusModule::Get().IsAnyObjectUsingManusLiveLinkUser(i);
+                    }
+
+                    // Update Live Link only when necessary
+                    if (m_LiveLinkClient && t_ManusLiveLinkUser.bShouldUpdateLiveLinkData)
+                    {
+                        FLiveLinkSubjectName t_LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(i);
+                        FLiveLinkSubjectKey t_LiveLinkSubjectKey = FLiveLinkSubjectKey(liveLinkSourceGuid, t_LiveLinkSubjectName);
+
+                        // Reinit subject when the Live Link client changes
+                        if (m_bNewLiveLinkClient ||
+                            !m_LiveLinkClient->IsSubjectEnabled(t_LiveLinkSubjectName))
+                        {
+                            RecreateLiveLinkSubject(t_LiveLinkSubjectKey, i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void FManusLiveLinkSource::InitSkeletons(bool p_ResetRetry, TArray<FManusLiveLinkUser>& p_ManusLiveLinkUsers)
+{
+    //UE_LOG(LogManus, Warning, TEXT("Starting InitSkeletons."));
+	int32 t_NumberOfUsers = 0;
+	EManusRet t_Ret = CoreSdk::GetNumberOfAvailableUsers(t_NumberOfUsers);
+	if (t_Ret != EManusRet::Success)
+	{
+		UE_LOG(LogManus, Error, TEXT("Failed to get user count."));
+		return;
+	}
+	if (t_NumberOfUsers == 0) return; // this is normal during startup as no landscape data has yet been processed
+
+	// TODO make this more flexible based on the target type,  we may skip this part entirely and just get it via the skeleton.
+	TArray<int64> t_IdsOfAvailableUsers;
+	t_IdsOfAvailableUsers.Reserve(t_NumberOfUsers);
+	t_Ret = CoreSdk::GetIdsOfUsers(t_IdsOfAvailableUsers);
+	if (t_Ret != EManusRet::Success)
+	{
+		UE_LOG(LogManus, Error, TEXT("Failed to get users."));
+		return;
+	}
+
+	// we can overwrite old skeletons, so set flag to allowit.
+	if (p_ResetRetry || !m_bIsSkeletonsInitialized)
+	{
+		for (int i = 0; i < p_ManusLiveLinkUsers.Num(); i++)
+		{
+			p_ManusLiveLinkUsers[i].SkeletonsInitializationRetryCountdown = 1; // enable it to be reloaded.
+		}
+	}
+	// now init and connect the skeletons.
+	for (int i = 0; i < p_ManusLiveLinkUsers.Num(); i++)
+	{
+		if (p_ManusLiveLinkUsers[i].SkeletonsInitializationRetryCountdown > 0)
+		{
+			p_ManusLiveLinkUsers[i].SkeletonsInitializationRetryCountdown--;
+			if (p_ManusLiveLinkUsers[i].SkeletonsInitializationRetryCountdown <= 0)
 			{
-				if (ManusLiveLinkUsers[i].PolygonInitializationRetryCountdown > 0)
-				{
-					ManusLiveLinkUsers[i].PolygonInitializationRetryCountdown--;
-					if (ManusLiveLinkUsers[i].PolygonInitializationRetryCountdown <= 0)
-					{
-						InitPolygonForManusLiveLinkUser(i, false);
-					}
-				}
+				InitSkeletonsForManusLiveLinkUser(i, t_IdsOfAvailableUsers[0], p_ResetRetry); // todo the users must be setup better. for now we just use 1 user.				
 			}
 		}
 	}
@@ -162,43 +365,34 @@ TStatId FManusLiveLinkSource::GetStatId() const
 
 void FManusLiveLinkSource::ReceiveClient(ILiveLinkClient* InClient, FGuid InSourceGuid)
 {
-	LiveLinkClient = InClient;
-	LiveLinkSourceGuid = InSourceGuid;
-	bNewLiveLinkClient = true;
+	m_LiveLinkClient = InClient;
+	liveLinkSourceGuid = InSourceGuid;
+	m_bNewLiveLinkClient = true;
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-	if (ULiveLinkSourceSettings* Settings = static_cast<FLiveLinkClient*>(InClient)->GetSourceSettings(LiveLinkSourceGuid))
+	if (ULiveLinkSourceSettings* Settings = static_cast<FLiveLinkClient*>(InClient)->GetSourceSettings(liveLinkSourceGuid))
 	{
 		Settings->ConnectionString = FString();
 	}
 
-	if (SourceType == EManusLiveLinkSourceType::Local)
+	if (m_SourceType == EManusLiveLinkSourceType::Local)
 	{
 		SetBufferOffset(GetDefault<UManusSettings>()->TrackingSmoothing);
 	}
-	else if (SourceType == EManusLiveLinkSourceType::Replicated)
+	else if (m_SourceType == EManusLiveLinkSourceType::Replicated)
 	{
 		SetBufferOffset(GetDefault<UManusSettings>()->DefaultReplicationOffsetTime);
 	}
-#endif
 }
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 bool FManusLiveLinkSource::IsSourceStillValid() const
-#else
-bool FManusLiveLinkSource::IsSourceStillValid()
-#endif
 {
-	return LiveLinkClient != nullptr;
+	return m_LiveLinkClient != nullptr;
 }
 
 bool FManusLiveLinkSource::RequestSourceShutdown()
 {
-#if ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION < 23
-	FManusModule::Get().OnLiveLinkSourceRemoved(LiveLinkSourceGuid);
-#endif
-	LiveLinkClient = nullptr;
-	LiveLinkSourceGuid.Invalidate();
+	m_LiveLinkClient = nullptr;
+	liveLinkSourceGuid.Invalidate();
 	return true;
 }
 
@@ -214,1098 +408,459 @@ FText FManusLiveLinkSource::GetSourceStatus() const
 
 FText FManusLiveLinkSource::GetSourceType() const
 {
-	FText SourceTypeName;
-	switch (SourceType)
+	FText t_SourceTypeName;
+	switch (m_SourceType)
 	{
-	case EManusLiveLinkSourceType::Local:		SourceTypeName = FText::FromString("Manus");				break;
-	case EManusLiveLinkSourceType::Replicated:	SourceTypeName = FText::FromString("Manus Replicated");		break;
+		case EManusLiveLinkSourceType::Local:		t_SourceTypeName = FText::FromString("Manus");					break;
+		case EManusLiveLinkSourceType::Replicated:	t_SourceTypeName = FText::FromString("Manus Replicated");		break;
 	}
-	return SourceTypeName;
+	return t_SourceTypeName;
 }
 
-void FManusLiveLinkSource::SetBufferOffset(float Offset)
+void FManusLiveLinkSource::SetBufferOffset(float p_Offset)
 {
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-	FLiveLinkClient* Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
-	if (Client)
+	FLiveLinkClient* t_Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
+	if (t_Client)
 	{
-		if (ULiveLinkSourceSettings* Settings = Client->GetSourceSettings(LiveLinkSourceGuid))
+		if (ULiveLinkSourceSettings* Settings = t_Client->GetSourceSettings(liveLinkSourceGuid))
 		{
-			Settings->BufferSettings.EngineTimeOffset = Offset;
-			Settings->BufferSettings.MaxNumberOfFrameToBuffered = FMath::Max(10, (int)(Offset * 90));
+			Settings->BufferSettings.EngineTimeOffset = p_Offset;
+			Settings->BufferSettings.MaxNumberOfFrameToBuffered = FMath::Max(10, (int)(p_Offset * 90));
 		}
 	}
-#endif
 }
 
-FName FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(const UManusComponent* ManusComponent)
+FName FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(const UManusComponent* p_ManusComponent)
 {
-	if (ManusComponent)
+	if (p_ManusComponent)
 	{
-		int ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(ManusComponent->ManusDashboardUserIndex, ManusComponent->ManusSkeleton);
-		if (ManusLiveLinkUserIndex != INDEX_NONE)
+        int t_ManusLiveLinkUserIndex = INDEX_NONE;
+        if (p_ManusComponent->ManusSkeleton != NULL)
+        {
+            t_ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(p_ManusComponent->ManusSkeleton->TargetUserIndexData.userIndex, p_ManusComponent->ManusSkeleton);
+        }
+		if (t_ManusLiveLinkUserIndex != INDEX_NONE)
 		{
-			if (ManusComponent->IsLocallyOwned())
+			if (p_ManusComponent->IsLocallyOwned())
 			{
-				return GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex);
+				return GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndex);
 			}
 			else
 			{
-				return GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex, ManusComponent->ManusReplicatorId);
+				return GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndex, p_ManusComponent->ManusReplicatorId);
 			}
 		}
 	}
 	return GetManusLiveLinkUserLiveLinkSubjectName(INDEX_NONE);
 }
 
-FName FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(int ManusLiveLinkUserIndex, int32 ReplicatorId)
+FName FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(int p_ManusLiveLinkUserIndex, int32 p_ReplicatorId)
 {
-	if (ManusLiveLinkUserIndex < 0 || ManusLiveLinkUserIndex > 99)
+	if (p_ManusLiveLinkUserIndex < 0 || p_ManusLiveLinkUserIndex > 99)
 	{
 		UE_LOG(LogManus, Warning, TEXT("The Manus Live Link User index is incorrect. The Manus Live Link User Live Link subject name will be set to None."));
 		return FName(TEXT("None"));
 	}
 
-	bool IsReplicated = (ReplicatorId != 0);
+	bool t_IsReplicated = (p_ReplicatorId != 0);
 
-	FString Name = IsReplicated ? "ManusReplicatedUser_" : "ManusLiveLinkUser_";
-	if (IsReplicated)
+	FString t_Name = t_IsReplicated ? "ManusReplicatedUser_" : "ManusLiveLinkUser_";
+	if (t_IsReplicated)
 	{
-		Name += FString::FromInt(ReplicatorId);
-		Name += "_";
+		t_Name += FString::FromInt(p_ReplicatorId);
+		t_Name += "_";
 	}
-	if (ManusLiveLinkUserIndex < 10)
+	if (p_ManusLiveLinkUserIndex < 10)
 	{
-		Name += "0";
+		t_Name += "0";
 	}
-	Name += FString::FromInt(ManusLiveLinkUserIndex);
+	t_Name += FString::FromInt(p_ManusLiveLinkUserIndex);
 
-	return FName(*Name);
+	return FName(*t_Name);
 }
 
-void FManusLiveLinkSource::ReplicateLiveLink(class AManusReplicator* Replicator)
+void FManusLiveLinkSource::ReplicateLiveLink(class AManusReplicator* p_Replicator)
 {
-	if (!Replicator->IsPendingKill())
+#if ENGINE_MAJOR_VERSION == 5 
+	if (IsValid(p_Replicator)) // (!p_Replicator->IsPendingKill()) // ispendingkill is beyond deprecated and will block future compiling.
+#else
+	if (!p_Replicator->IsPendingKill()) 
+#endif
 	{
 		// For each Manus Live Link User
-		for (int i = 0; i < Replicator->ReplicatedData.ReplicatedFrameDataArray.Num(); i++)
+		for (int i = 0; i < p_Replicator->ReplicatedData.ReplicatedFrameDataArray.Num(); i++)
 		{
-			int ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(Replicator->ReplicatedData.ReplicatedFrameDataArray[i].ManusDashboardUserIndex, Replicator->ReplicatedData.ReplicatedFrameDataArray[i].ManusSkeleton);
+			int t_ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(p_Replicator->ReplicatedData.ReplicatedFrameDataArray[i].ManusDashboardUserIndex, p_Replicator->ReplicatedData.ReplicatedFrameDataArray[i].ManusSkeleton);
 
 			// Create or recreate subject (if needed)
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-			FLiveLinkSubjectName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex, Replicator->ReplicatorId);
-			FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSourceGuid, LiveLinkSubjectName);
-			if (!LiveLinkClient->IsSubjectEnabled(LiveLinkSubjectName))
+			FLiveLinkSubjectName t_LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndex, p_Replicator->ReplicatorId);
+			FLiveLinkSubjectKey t_LiveLinkSubjectKey = FLiveLinkSubjectKey(liveLinkSourceGuid, t_LiveLinkSubjectName);
+			if (!m_LiveLinkClient->IsSubjectEnabled(t_LiveLinkSubjectName))
 			{
-				RecreateLiveLinkSubject(LiveLinkSubjectKey);
+				RecreateLiveLinkSubject(t_LiveLinkSubjectKey, t_ManusLiveLinkUserIndex);
 			}
 
 			// Update Frame
-			FLiveLinkAnimationFrameData* LiveLinkFramePtr = LiveLinkFrame.Cast<FLiveLinkAnimationFrameData>();
-			LiveLinkFramePtr->WorldTime = FPlatformTime::Seconds();
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
-			LiveLinkFramePtr->MetaData.SceneTime = FApp::GetCurrentFrameTime().Get(FQualifiedFrameTime());
-#else
-			LiveLinkFramePtr->MetaData.SceneTime = FQualifiedFrameTime(FApp::GetTimecode(), FApp::GetTimecodeFrameRate());
-#endif
+			FManusLiveLinkUser& t_LiveLinkUser = FManusModule::Get().GetManusLiveLinkUser(t_ManusLiveLinkUserIndex);
+
+			FLiveLinkAnimationFrameData* t_LiveLinkFramePtr = t_LiveLinkUser.LiveLinkFrame->Cast<FLiveLinkAnimationFrameData>();
+			t_LiveLinkFramePtr->WorldTime = FPlatformTime::Seconds();
+			t_LiveLinkFramePtr->MetaData.SceneTime = FApp::GetCurrentFrameTime().Get(FQualifiedFrameTime());
 
 			// Update the transforms from the replicated data
-			AManusReplicator::DecompressReplicatedFrameData(*LiveLinkFramePtr, Replicator->ReplicatedData.ReplicatedFrameDataArray[i]);
+			AManusReplicator::DecompressReplicatedFrameData(*t_LiveLinkFramePtr, p_Replicator->ReplicatedData.ReplicatedFrameDataArray[i]);
 
 			// Copy the data locally and share it with the LiveLink client
-			FLiveLinkFrameDataStruct NewLiveLinkFrame;
-			NewLiveLinkFrame.InitializeWith(LiveLinkFrame);
-			LiveLinkClient->PushSubjectFrameData_AnyThread(LiveLinkSubjectKey, MoveTemp(NewLiveLinkFrame));
-
-#else
-
-			FName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex, Replicator->ReplicatorId);
-			FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSubjectName, LiveLinkSourceGuid);
-			if (!IsSubjectEnabled(LiveLinkSubjectName))
-			{
-				RecreateLiveLinkSubject(LiveLinkSubjectKey);
-			}
-
-			// Update Frame
-			LiveLinkFrame.WorldTime = FPlatformTime::Seconds();
-			LiveLinkFrame.MetaData.SceneTime = FQualifiedFrameTime(FApp::GetTimecode(), FApp::GetTimecodeFrameRate());
-
-			// Update the transforms from the replicated data
-			AManusReplicator::DecompressReplicatedFrameData(LiveLinkFrame, Replicator->ReplicatedData.ReplicatedFrameDataArray[i]);
-
-			// Copy the data locally and share it with the LiveLink client
-			FLiveLinkFrameData NewLiveLinkFrame;
-			NewLiveLinkFrame.CurveElements = LiveLinkFrame.CurveElements;
-			NewLiveLinkFrame.MetaData = LiveLinkFrame.MetaData;
-			NewLiveLinkFrame.Transforms = LiveLinkFrame.Transforms;
-			NewLiveLinkFrame.WorldTime = LiveLinkFrame.WorldTime;
-			LiveLinkClient->PushSubjectData(LiveLinkSourceGuid, LiveLinkSubjectName, NewLiveLinkFrame);
-#endif
+			FLiveLinkFrameDataStruct t_NewLiveLinkFrame;
+			t_NewLiveLinkFrame.InitializeWith(*t_LiveLinkUser.LiveLinkFrame);
+			m_LiveLinkClient->PushSubjectFrameData_AnyThread(t_LiveLinkSubjectKey, MoveTemp(t_NewLiveLinkFrame));
 		}
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 		// Update replicated data buffer offset according to current ping
-		const UManusSettings* ManusSettings = GetDefault<UManusSettings>();
-		if (ManusSettings && ManusSettings->bUpdateReplicationOffsetTimeUsingPing)
+		const UManusSettings* t_ManusSettings = GetDefault<UManusSettings>();
+		if (t_ManusSettings && t_ManusSettings->bUpdateReplicationOffsetTimeUsingPing)
 		{
-			FLiveLinkClient* Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
-			if (Client)
+			FLiveLinkClient* t_Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
+			if (t_Client)
 			{
-				if (ULiveLinkSourceSettings* Settings = Client->GetSourceSettings(LiveLinkSourceGuid))
+				if (ULiveLinkSourceSettings* Settings = t_Client->GetSourceSettings(liveLinkSourceGuid))
 				{
-					if (APlayerController* PlayerController = Replicator->GetWorld()->GetFirstPlayerController())
+					if (APlayerController* t_PlayerController = p_Replicator->GetWorld()->GetFirstPlayerController())
 					{
-						if (APlayerState* PlayerState = PlayerController->PlayerState)
+						if (APlayerState* PlayerState = t_PlayerController->PlayerState)
 						{
-							float DesiredOffset = PlayerState->ExactPing * 0.001f * ManusSettings->ReplicationOffsetTimePingMultiplier + ManusSettings->ReplicationOffsetTimePingExtraTime;
-							SetBufferOffset(Settings->BufferSettings.EngineTimeOffset * 0.995f + DesiredOffset * 0.005f);
+							float t_DesiredOffset = PlayerState->ExactPing * 0.001f * t_ManusSettings->ReplicationOffsetTimePingMultiplier + t_ManusSettings->ReplicationOffsetTimePingExtraTime;
+							SetBufferOffset(Settings->BufferSettings.EngineTimeOffset * 0.995f + t_DesiredOffset * 0.005f);
 						}
 					}
 				}
 			}
 		}
-#endif
 	}
 }
 
-void FManusLiveLinkSource::StopReplicatingLiveLink(class AManusReplicator* Replicator)
+void FManusLiveLinkSource::StopReplicatingLiveLink(class AManusReplicator* p_Replicator)
 {
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-	int ManusLiveLinkUserIndexToRemove = 0;
-	while (LiveLinkClient && LiveLinkClient->IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove, Replicator->ReplicatorId)))
+	int t_ManusLiveLinkUserIndexToRemove = 0;
+	while (m_LiveLinkClient && m_LiveLinkClient->IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndexToRemove, p_Replicator->ReplicatorId)))
 	{
-		FLiveLinkSubjectName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove, Replicator->ReplicatorId);
-		FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSourceGuid, LiveLinkSubjectName);
-		LiveLinkClient->RemoveSubject_AnyThread(LiveLinkSubjectKey);
-		ManusLiveLinkUserIndexToRemove++;
-	}
-#else
-	int ManusLiveLinkUserIndexToRemove = 0;
-	while (LiveLinkClient && IsSubjectEnabled(FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove, Replicator->ReplicatorId)))
-	{
-		FName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndexToRemove);
-		LiveLinkClient->ClearSubject(LiveLinkSubjectName);
-		ManusLiveLinkUserIndexToRemove++;
-	}
-#endif
-}
-
-void FManusLiveLinkSource::UpdateManusDashboardUsersGloveAssignments(float DeltaTime)
-{
-	SCOPE_CYCLE_COUNTER(STAT_Manus_UpdateGloveAssignments);
-
-	if (ManusDashboardUserGloveAssignmentUpdateQueue.Num() == 0)
-	{
-		// No queued update - Update timer
-		ManusDashboardUserGloveAssignmentUpdateTimer = FMath::Max(0.0f, ManusDashboardUserGloveAssignmentUpdateTimer - DeltaTime);
-		
-		// When it's time to update
-		if (ManusDashboardUserGloveAssignmentUpdateTimer <= 0.0f)
-		{
-			// Update the cache with the indices of the Manus Dashboard Users we are currently using
-			const TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-
-			// Remove Manus Dashboard User indices we don't use anymore
-			for (auto Itr = ManusDashboardUserGloveAssignmentCache.CreateIterator(); Itr; ++Itr)
-			{
-				bool bIsStillInUse = false;
-				for (int i = 0; i < ManusLiveLinkUsers.Num() && !bIsStillInUse; i++)
-				{
-					if (Itr->Key == ManusLiveLinkUsers[i].ManusDashboardUserIndex)
-					{
-						bIsStillInUse = true;
-					}
-				}
-				if (!bIsStillInUse)
-				{
-					Itr.RemoveCurrent();
-				}
-			}
-
-			// Add new Manus Dashboard User indices
-			for (int i = 0; i < ManusLiveLinkUsers.Num(); i++)
-			{
-				ManusDashboardUserGloveAssignmentCache.FindOrAdd(ManusLiveLinkUsers[i].ManusDashboardUserIndex);
-			}
-
-			// Queue the Manus Dashboard User indices to update
-			ManusDashboardUserGloveAssignmentUpdateQueue.Reset();
-			for (auto Itr = ManusDashboardUserGloveAssignmentCache.CreateIterator(); Itr; ++Itr)
-			{
-				ManusDashboardUserGloveAssignmentUpdateQueue.Add(Itr->Key); // Left Glove
-				ManusDashboardUserGloveAssignmentUpdateQueue.Add(Itr->Key + 0.5f); // Right Glove
-			}
-		}
-	}
-	else
-	{
-		// Do only one update at a time
-		float ManusDashboardUserAssignmentToUpdate = ManusDashboardUserGloveAssignmentUpdateQueue.Pop(false);
-		int ManusDashboardUserIndex = (int)ManusDashboardUserAssignmentToUpdate;
-		EManusHandType HandType = (ManusDashboardUserAssignmentToUpdate - ManusDashboardUserIndex > 0.0f) ? EManusHandType::Left : EManusHandType::Right;
-		FManusGloveAssignment* AssignmentPtr = ManusDashboardUserGloveAssignmentCache.Find(ManusDashboardUserIndex);
-		if (AssignmentPtr)
-		{
-			CoreSdk::GetGloveIdOfUser_UsingUserIndex(ManusDashboardUserIndex, HandType, AssignmentPtr->GloveIds[(int)HandType]);
-		}
-	}
-
-	// Reset update timer
-	if (ManusDashboardUserGloveAssignmentUpdateQueue.Num() == 0 && ManusDashboardUserGloveAssignmentUpdateTimer <= 0.0f)
-	{
-		ManusDashboardUserGloveAssignmentUpdateTimer = GetDefault<UManusSettings>()->ManusDashboardUserGloveAssignmentUpdateFrequency;
+		FLiveLinkSubjectName t_LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(t_ManusLiveLinkUserIndexToRemove, p_Replicator->ReplicatorId);
+		FLiveLinkSubjectKey t_LiveLinkSubjectKey = FLiveLinkSubjectKey(liveLinkSourceGuid, t_LiveLinkSubjectName);
+		m_LiveLinkClient->RemoveSubject_AnyThread(t_LiveLinkSubjectKey);
+		t_ManusLiveLinkUserIndexToRemove++;
 	}
 }
 
-int64 FManusLiveLinkSource::GetCachedGloveAssignment(int ManusDashboardUserIndex, EManusHandType HandType)
-{
-	FManusGloveAssignment* AssignmentPtr = ManusDashboardUserGloveAssignmentCache.Find(ManusDashboardUserIndex);
-	if (AssignmentPtr)
-	{
-		return AssignmentPtr->GloveIds[(int)HandType];
-	}
-	return 0;
-}
-
-void FManusLiveLinkSource::UpdateLiveLink(float DeltaTime, int ManusLiveLinkUserIndex)
+void FManusLiveLinkSource::UpdateLiveLink(float p_DeltaTime, int p_ManusLiveLinkUserIndex)
 {
 	SCOPE_CYCLE_COUNTER(STAT_Manus_UpdateLiveLink);
 
 	check(IsInGameThread());
 
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	ManusLiveLinkUsers[ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData = false;
+    //UE_LOG(LogManus, Warning, TEXT("updating livelink."));
 
-#if WITH_EDITORONLY_DATA
-	// Update live link for this Live Link user during preview
-	ManusLiveLinkUsers[ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData |= ManusLiveLinkUsers[ManusLiveLinkUserIndex].bIsHandPreviewOnGoing;
-#endif // WITH_EDITORONLY_DATA
+	TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+	t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData = false;
 
 	// Update live link for this Live Link user if some objects are using it
-	if (!ManusLiveLinkUsers[ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData)
+	if (!t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData)
 	{
-		ManusLiveLinkUsers[ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData |= FManusModule::Get().IsAnyObjectUsingManusLiveLinkUser(ManusLiveLinkUserIndex);
+		t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData |= FManusModule::Get().IsAnyObjectUsingManusLiveLinkUser(p_ManusLiveLinkUserIndex);
 	}
 
 	// Update Live Link only when necessary
-	if (LiveLinkClient && ManusLiveLinkUsers[ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData)
+	if (m_LiveLinkClient && t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].bShouldUpdateLiveLinkData)
 	{
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-		FLiveLinkSubjectName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex);
-		FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSourceGuid, LiveLinkSubjectName);
+		FLiveLinkSubjectName t_LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(p_ManusLiveLinkUserIndex);
+		FLiveLinkSubjectKey t_LiveLinkSubjectKey = FLiveLinkSubjectKey(liveLinkSourceGuid, t_LiveLinkSubjectName);
 
 		// Reinit subject when the Live Link client changes
-		if (bNewLiveLinkClient || !LiveLinkClient->IsSubjectEnabled(LiveLinkSubjectName))
+		if (m_bNewLiveLinkClient || 
+			!m_LiveLinkClient->IsSubjectEnabled(t_LiveLinkSubjectName) )
 		{
-			RecreateLiveLinkSubject(LiveLinkSubjectKey);
+            //UE_LOG(LogManus, Warning, TEXT("updating livelink. A"));
+			RecreateLiveLinkSubject(t_LiveLinkSubjectKey, p_ManusLiveLinkUserIndex);
 		}
-#else
-		FName LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex);
-		FLiveLinkSubjectKey LiveLinkSubjectKey = FLiveLinkSubjectKey(LiveLinkSubjectName, LiveLinkSourceGuid);
-
-		// Reinit subject when the Live Link client changes
-		if (bNewLiveLinkClient || !IsSubjectEnabled(LiveLinkSubjectName))
-		{
-			RecreateLiveLinkSubject(LiveLinkSubjectKey);
-		}
-#endif
 
 		// Update Frame
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-		FLiveLinkAnimationFrameData* LiveLinkFramePtr = LiveLinkFrame.Cast<FLiveLinkAnimationFrameData>();
-#endif
+		if (t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame == NULL) return;
+		FLiveLinkAnimationFrameData* t_LiveLinkFramePtr = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame->Cast<FLiveLinkAnimationFrameData>();
+		if (!t_LiveLinkFramePtr) return;
+
+        //UE_LOG(LogManus, Warning, TEXT("updating livelink. B"));
 
 		// Update the transforms for each subject from tracking data
-		int64 LastUpdateTime = 0, LastUpdateTimeAll = 0;
-		bool ForceUpdate = false, ForceUpdateAll = false;
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-		UpdateGloveLiveLinkTransforms(DeltaTime, ManusLiveLinkUserIndex, EManusHandType::Left, LiveLinkFramePtr->Transforms, LastUpdateTime, ForceUpdate);
-#else
-		UpdateGloveLiveLinkTransforms(DeltaTime, ManusLiveLinkUserIndex, EManusHandType::Left, LiveLinkFrame.Transforms, LastUpdateTime, ForceUpdate);
-#endif
-		LastUpdateTimeAll = FMath::Max(LastUpdateTimeAll, LastUpdateTime);
-		ForceUpdateAll |= ForceUpdate;
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-		UpdateGloveLiveLinkTransforms(DeltaTime, ManusLiveLinkUserIndex, EManusHandType::Right, LiveLinkFramePtr->Transforms, LastUpdateTime, ForceUpdate);
-#else
-		UpdateGloveLiveLinkTransforms(DeltaTime, ManusLiveLinkUserIndex, EManusHandType::Right, LiveLinkFrame.Transforms, LastUpdateTime, ForceUpdate);
-#endif
-		LastUpdateTimeAll = FMath::Max(LastUpdateTimeAll, LastUpdateTime);
-		ForceUpdateAll |= ForceUpdate;
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-		UpdatePolygonLiveLinkTransforms(ManusLiveLinkUserIndex, LiveLinkFramePtr->Transforms, LastUpdateTime);
-#else
-		UpdatePolygonLiveLinkTransforms(ManusLiveLinkUserIndex, LiveLinkFrame.Transforms, LastUpdateTime);
-#endif
-		LastUpdateTimeAll = FMath::Max(LastUpdateTimeAll, LastUpdateTime);
-
-		if (LastUpdateTimeAll > ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDataLastUpdateTime || ForceUpdateAll)
+        uint64 LastUpdateTime = 0;
+		
+		UManusSkeleton* t_ManusSkeleton = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusSkeleton;
+		if (t_ManusSkeleton->ManusSkeletonId == 0)  
 		{
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDataLastUpdateTime = LastUpdateTimeAll;
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-			// Frame time
-			LiveLinkFramePtr->WorldTime = FPlatformTime::Seconds();
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
-			LiveLinkFramePtr->MetaData.SceneTime = FApp::GetCurrentFrameTime().Get(FQualifiedFrameTime());
-#else
-			LiveLinkFramePtr->MetaData.SceneTime = FQualifiedFrameTime(FApp::GetTimecode(), FApp::GetTimecodeFrameRate());
-#endif
-
-			// Copy the data locally and share it with the LiveLink client
-			FLiveLinkFrameDataStruct NewLiveLinkFrame;
-			NewLiveLinkFrame.InitializeWith(LiveLinkFrame);
-			LiveLinkClient->PushSubjectFrameData_AnyThread(LiveLinkSubjectKey, MoveTemp(NewLiveLinkFrame));
-
-			// Copy the transforms locally to replicate them (if necessary)
-			if (FManusModule::Get().IsAnyReplicatingObjectUsingManusLiveLinkUser(ManusLiveLinkUserIndex))
-			{
-				int ReplicatedFrameDataArrayIndex = ReplicatedFrameDataArray.AddDefaulted();
-				ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex].ManusDashboardUserIndex = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDashboardUserIndex;
-				ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex].ManusSkeleton = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton;
-
-
-				AManusReplicator::CompressReplicatedFrameData(*LiveLinkFramePtr, ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex]);
-			}
-#else
-			// Frame time
-			LiveLinkFrame.WorldTime = FPlatformTime::Seconds();
-			LiveLinkFrame.MetaData.SceneTime = FQualifiedFrameTime(FApp::GetTimecode(), FApp::GetTimecodeFrameRate());
-
-			// Copy the data locally and share it with the LiveLink client
-			FLiveLinkFrameData NewLiveLinkFrame;
-			NewLiveLinkFrame.CurveElements = LiveLinkFrame.CurveElements;
-			NewLiveLinkFrame.MetaData = LiveLinkFrame.MetaData;
-			NewLiveLinkFrame.Transforms = LiveLinkFrame.Transforms;
-			NewLiveLinkFrame.WorldTime = LiveLinkFrame.WorldTime;
-			LiveLinkClient->PushSubjectData(LiveLinkSourceGuid, LiveLinkSubjectName, NewLiveLinkFrame);
-
-			// Copy the transforms locally to replicate them (if necessary)
-			if (FManusModule::Get().IsAnyReplicatingObjectUsingManusLiveLinkUser(ManusLiveLinkUserIndex))
-			{
-				int ReplicatedFrameDataArrayIndex = ReplicatedFrameDataArray.AddDefaulted();
-				ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex].ManusDashboardUserIndex = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDashboardUserIndex;
-				ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex].ManusSkeleton = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton;
-				AManusReplicator::CompressReplicatedFrameData(LiveLinkFrame, ReplicatedFrameDataArray[ReplicatedFrameDataArrayIndex]);
-			}
-#endif
+			return; // nothing to do here. so don't bother.
 		}
-	}
-}
 
-void FManusLiveLinkSource::RecreateLiveLinkSubject(FLiveLinkSubjectKey& LiveLinkSubjectKey)
-{
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-	LiveLinkClient->RemoveSubject_AnyThread(LiveLinkSubjectKey);
-
-	// Skeleton data
-	FLiveLinkStaticDataStruct SkeletalData(FLiveLinkSkeletonStaticData::StaticStruct());
-	FLiveLinkSkeletonStaticData* SkeletonDataPtr = SkeletalData.Cast<FLiveLinkSkeletonStaticData>();
-	SetupLiveLinkData(*SkeletonDataPtr);
-
-	// Frame
-	LiveLinkFrame.InitializeWith(FLiveLinkAnimationFrameData::StaticStruct(), nullptr);
-	FLiveLinkAnimationFrameData* LiveLinkFramePtr = LiveLinkFrame.Cast<FLiveLinkAnimationFrameData>();
-	for (int i = 0; i < SkeletonDataPtr->BoneNames.Num(); ++i)
-	{
-		LiveLinkFramePtr->Transforms.Add(FTransform::Identity);
-	}
-
-	LiveLinkClient->PushSubjectStaticData_AnyThread(LiveLinkSubjectKey, ULiveLinkAnimationRole::StaticClass(), MoveTemp(SkeletalData));
-#else
-	LiveLinkClient->ClearSubject(LiveLinkSubjectKey.SubjectName);
-	LiveLinkClient->ClearSubjectsFrames(LiveLinkSubjectKey.SubjectName);
-
-	// Skeleton data
-	FLiveLinkRefSkeleton SkeletonData;
-	SetupLiveLinkData(SkeletonData);
-
-	// Frame
-	LiveLinkFrame.Transforms.Reset();
-	for (int i = 0; i < SkeletonData.GetBoneNames().Num(); ++i)
-	{
-		LiveLinkFrame.Transforms.Add(FTransform::Identity);
-	}
-
-	LiveLinkClient->PushSubjectSkeleton(LiveLinkSourceGuid, LiveLinkSubjectKey.SubjectName, SkeletonData);
-#endif
-}
-
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
-#define MANUSLIVELINKBONEDEFINER_ENUM(bone, parent) StaticData.BoneNames.Add(FName(*ManusBoneNameEnumPtr->GetNameStringByIndex((int)bone))); StaticData.BoneParents.Add(parent); SkeletonBoneParents.Add(parent);
-void FManusLiveLinkSource::SetupLiveLinkData(FLiveLinkSkeletonStaticData& StaticData)
-{
-#else
-#define MANUSLIVELINKBONEDEFINER_ENUM(bone, parent) BoneNames.Add(FName(*ManusBoneNameEnumPtr->GetNameStringByIndex((int)bone))); BoneParents.Add(parent); SkeletonBoneParents.Add(parent);
-void FManusLiveLinkSource::SetupLiveLinkData(FLiveLinkRefSkeleton& StaticData)
-{
-	TArray<FName> BoneNames;
-	TArray<int32> BoneParents;
-#endif
-
-	const UEnum* ManusBoneNameEnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("EManusBoneName"), true);
-
-	// Setup skeleton bone hierarchy (only one can be the root = -1 parent)
-	// Define the bones in their order in EManusBoneName
-
-	// Polygon data
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Root, -1); // 0
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Hips, 0); // 1
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Spine, 1); // 2
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Chest, 2); // 3
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::UpperChest, 3); // 4
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Neck, 4); // 5
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::Head, 5); // 6
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftUpperLeg, 1); // 7
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftLowerLeg, 7); // 8
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftFoot, 8); // 9
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftToes, 9); // 10
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftToesEnd, 10); // 11
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightUpperLeg, 1); // 12
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightLowerLeg, 12); // 13
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightFoot, 13); // 14
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightToes, 14); // 15
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightToesEnd, 15); // 16
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftShoulder, 4); // 17
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftUpperArm, 17); // 18
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftLowerArm, 18); // 19
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHand, 19); // 20
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightShoulder, 4); // 21
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightUpperArm, 21); // 22
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightLowerArm, 22); // 23
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHand, 23); // 24
-
-	// Left Manus Glove data
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandTracker, 19); // 25 - Attach the fingers to the "LeftHand" bone, not the "LeftHandTracker"
-	
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandThumb1, 20); // 26
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandThumb2, 26); // 27
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandThumb3, 27); // 28
-	
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandIndex1, 20); // 29
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandIndex2, 29); // 30
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandIndex3, 30); // 31
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandMiddle1, 20); // 32
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandMiddle2, 32); // 33
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandMiddle3, 33); // 34
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandRing1, 20); // 35
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandRing2, 35); // 36
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandRing3, 36); // 37
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandPinky1, 20); // 38
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandPinky2, 38); // 39
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::LeftHandPinky3, 39); // 40
-
-	// Right Manus Glove data
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandTracker, 23); // 41 - Attach the fingers to the "RightHand" bone, not the "RightHandTracker"
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandThumb1, 24); // 42
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandThumb2, 42); // 43
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandThumb3, 43); // 44
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandIndex1, 24); // 45
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandIndex2, 45); // 46
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandIndex3, 46); // 47
-	
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandMiddle1, 24); // 48
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandMiddle2, 48); // 49
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandMiddle3, 49); // 50
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandRing1, 24); // 51
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandRing2, 51); // 52
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandRing3, 52); // 53
-
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandPinky1, 24); // 54
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandPinky2, 54); // 55
-	MANUSLIVELINKBONEDEFINER_ENUM(EManusBoneName::RightHandPinky3, 55); // 56
-
-#if ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION < 23
-	StaticData.SetBoneNames(BoneNames);
-	StaticData.SetBoneParents(BoneParents);
-#endif
-}
-#undef MANUSLIVELINKBONEDEFINER_ENUM
-
-void FManusLiveLinkSource::UpdatePolygonLiveLinkTransforms(int ManusLiveLinkUserIndex, TArray<FTransform>& OutTransforms, int64& LastUpdateTime)
-{
-	SCOPE_CYCLE_COUNTER(STAT_Manus_UpdatePolygonLiveLink);
-
-	LastUpdateTime = 0;
-
-	UManusSkeleton* ManusSkeleton;
-	int64 PolygonSkeletonId = 0;
-	EBoneAxis PolygonSkeletonStretchAxis = EBoneAxis::BA_X;
-	const TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
-	{
-		ManusSkeleton = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton;
-		if (ManusSkeleton && ManusSkeleton->bIsUsedForFullBodyTracking)
+		if (!UpdateSkeletonsLiveLinkTransforms(p_ManusLiveLinkUserIndex, t_LiveLinkFramePtr->Transforms, LastUpdateTime))
 		{
-			PolygonSkeletonId = ManusTools::GenerateManusIdFromManusLiveLinkUser(ManusLiveLinkUserIndex);
-			PolygonSkeletonStretchAxis = ManusSkeleton->FullBodyStretchAxis;
+			return; // there was no data.
+		}		
+        
+		// UE_LOG(LogManus, Warning, TEXT("updating livelink. C"));
+		t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusDataLastUpdateTime = LastUpdateTime;
+
+		// Frame time
+		t_LiveLinkFramePtr->WorldTime = FPlatformTime::Seconds();
+		t_LiveLinkFramePtr->MetaData.SceneTime = FApp::GetCurrentFrameTime().Get(FQualifiedFrameTime());
+
+		// Copy the data locally and share it with the LiveLink client
+		FLiveLinkFrameDataStruct NewLiveLinkFrame;
+		NewLiveLinkFrame.InitializeWith(*t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame);
+		m_LiveLinkClient->PushSubjectFrameData_AnyThread(t_LiveLinkSubjectKey, MoveTemp(NewLiveLinkFrame));
+            
+        // Copy the transforms locally to replicate them (if necessary)
+        if (FManusModule::Get().IsAnyReplicatingObjectUsingManusLiveLinkUser(p_ManusLiveLinkUserIndex))
+        {
+            int t_ReplicatedFrameDataArrayIndex = m_ReplicatedFrameDataArray.AddDefaulted();
+            m_ReplicatedFrameDataArray[t_ReplicatedFrameDataArrayIndex].ManusDashboardUserIndex = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusDashboardUserIndex;
+            m_ReplicatedFrameDataArray[t_ReplicatedFrameDataArrayIndex].ManusSkeleton = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusSkeleton;
+
+            AManusReplicator::CompressReplicatedFrameData(*t_LiveLinkFramePtr, m_ReplicatedFrameDataArray[t_ReplicatedFrameDataArrayIndex]);
+        }
+	}
+}
+
+void FManusLiveLinkSource::RecreateLiveLinkSubject(FLiveLinkSubjectKey& p_LiveLinkSubjectKey, int p_ManusLiveLinkUserIndex)
+{
+	m_LiveLinkClient->RemoveSubject_AnyThread(p_LiveLinkSubjectKey);
+
+	
+	TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+	UManusSkeleton* ManusSkeleton = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusSkeleton;
+
+	if ((ManusSkeleton != NULL) &&
+		(ManusSkeleton->GetSkeleton()!=NULL))
+	{
+		// Skeleton data
+		FLiveLinkStaticDataStruct SkeletalData(FLiveLinkSkeletonStaticData::StaticStruct());
+		FLiveLinkSkeletonStaticData* SkeletonDataPtr = SkeletalData.Cast<FLiveLinkSkeletonStaticData>();
+
+		// Frame
+		t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = new FLiveLinkFrameDataStruct(); // todo cleanup too.
+		t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame->InitializeWith(FLiveLinkAnimationFrameData::StaticStruct(), nullptr);
+
+		FLiveLinkAnimationFrameData* t_LiveLinkFramePtr = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame->Cast<FLiveLinkAnimationFrameData>();
+
+		const TArray<FMeshBoneInfo>& t_BoneInfo = ManusSkeleton->GetRawRefBoneInfo();
+		SkeletonDataPtr->BoneNames.Reset();
+		SkeletonDataPtr->BoneParents.Reset();
+		t_LiveLinkFramePtr->Transforms.Reset();
+
+		for (int i = 0; i < t_BoneInfo.Num(); i++)
+		{
+			SkeletonDataPtr->BoneNames.Add(FName(t_BoneInfo[i].Name)); // the actual string content is not used, but the strings must be allocated or unreal flips.
+			SkeletonDataPtr->BoneParents.Add(i);
+
+			t_LiveLinkFramePtr->Transforms.Add(FTransform::Identity);
 		}
+		m_LiveLinkClient->PushSubjectStaticData_AnyThread(p_LiveLinkSubjectKey, ULiveLinkAnimationRole::StaticClass(), MoveTemp(SkeletalData));
 	}
-	
-	if (PolygonSkeletonId > 0)
+}
+
+bool FManusLiveLinkSource::UpdateSkeletonsLiveLinkTransforms(int p_ManusLiveLinkUserIndex, TArray<FTransform>& p_OutTransforms, uint64& p_LastUpdateTime)
+{
+	SCOPE_CYCLE_COUNTER(STAT_Manus_UpdateSkeletonsLiveLink);
+    if (p_OutTransforms.Num() == 0) return false;
+    //UE_LOG(LogManus, Warning, TEXT("UpdateSkeletonsLiveLinkTransforms."));
+
+	p_LastUpdateTime = 0;
+
+	UManusSkeleton* t_ManusSkeleton = nullptr;
+	uint32_t SkeletonId = 0;
+	EBoneAxis SkeletonStretchAxis = EBoneAxis::BA_X;
+	const TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+	if (t_ManusLiveLinkUsers.IsValidIndex(p_ManusLiveLinkUserIndex))
 	{
-		FManusPolygonSkeleton PolygonSkeletonData;
-		if (UManusBlueprintLibrary::GetPolygonSkeletonData(PolygonSkeletonId, PolygonSkeletonData) == EManusRet::Success)
+		t_ManusSkeleton = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusSkeleton;
+				
+		SkeletonId = t_ManusSkeleton->ManusSkeletonId;
+	}
+
+	if (SkeletonId > 0 && t_ManusSkeleton && t_ManusSkeleton->SkeletalMesh)
+	{
+        const TArray<FMeshBoneInfo>& t_BoneInfo = t_ManusSkeleton->GetRawRefBoneInfo();
+
+		FManusMetaSkeleton t_SkeletonData;
+		if (UManusBlueprintLibrary::GetSkeletonData(SkeletonId, t_SkeletonData) == EManusRet::Success) 
 		{
-			LastUpdateTime = PolygonSkeletonData.LastUpdateTime;
-
-			TMap<int, FQuat> PolygonSkeletonManusInternalDeltaOrientations;
-			if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
-			{
-				PolygonSkeletonManusInternalDeltaOrientations = ManusSkeleton->ManusInternalDeltaOrientations;
-			}
-
-			FVector RootScale = FVector::OneVector;
+			p_LastUpdateTime = (uint64)t_SkeletonData.LastUpdateTime; // this is where we will get a int64 to uin64 issue. but unreal blueprints are bad.
+		
 			TArray<FVector> LocalScales;
-
-			for (int BoneIndex = 0; BoneIndex < PolygonSkeletonData.Bones.Num(); BoneIndex++)
+           
+			for (int BoneIndex = 0; BoneIndex < (int)t_SkeletonData.Bones.Num(); BoneIndex++)
 			{
-				LocalScales.Add(FVector::OneVector);
-
-				if (PolygonSkeletonData.Bones[BoneIndex].Validity)
+                for (size_t i = 0; i < t_BoneInfo.Num(); i++)
 				{
-					OutTransforms[BoneIndex] = PolygonSkeletonData.Bones[BoneIndex].Transform;
+					if (t_ManusSkeleton->NodesSetupMap[t_BoneInfo[i].Name].Id == t_SkeletonData.Bones[BoneIndex].BoneId) // there are moments where these lists are not identical. so we got to check it. but most of the time they do match....(so far metahumans surprised us)
+                    {
+						LocalScales.Add(FVector::OneVector);
+                        
+						p_OutTransforms[i] = t_SkeletonData.Bones[BoneIndex].Transform;
+                        
+						FQuat t_Orientation = p_OutTransforms[i].GetRotation();
+						t_Orientation.Normalize();
+						p_OutTransforms[i].SetRotation(t_Orientation);
+                        
+                        //t_Keys.RemoveAt(i,1,false); // makes the list smaller to look through, but do not resize yet, as thats unnecessary mem reallocation
+						// the above commented line can actually be slower, due to the move actions. so.... skipping for now.
 
-					// Rotation
-					if (FQuat* ManusInternalDeltaOrientation = PolygonSkeletonManusInternalDeltaOrientations.Find(BoneIndex))
-					{
-						FQuat Orientation = OutTransforms[BoneIndex].GetRotation() * (ManusConvert::ConvertUnityToUnrealQuat(*ManusInternalDeltaOrientation)).Inverse();
-						Orientation.Normalize();
-						OutTransforms[BoneIndex].SetRotation(Orientation);
+						break;
 					}
-
-					// Scale
-					if (BoneIndex == (int)EManusBoneName::Root)
-					{
-						RootScale = PolygonSkeletonData.Bones[BoneIndex].Transform.GetScale3D();
-						OutTransforms[BoneIndex].SetScale3D(RootScale);
-						LocalScales[BoneIndex] = RootScale;
-					}
-					else
-					{
-						// Scale: Stretch scale
-						float StretchScale = PolygonSkeletonData.Bones[BoneIndex].Transform.GetScale3D().X;
-						if (BoneIndex == (int)EManusBoneName::Head
-							|| BoneIndex == (int)EManusBoneName::LeftHand
-							|| BoneIndex == (int)EManusBoneName::RightHand
-							|| BoneIndex == (int)EManusBoneName::LeftFoot
-							|| BoneIndex == (int)EManusBoneName::RightFoot)
-						{
-							StretchScale = 1.0f;
-						}
-
-						// Scale: Bone parent anti-scale (so that only the bone itself scales, not its children bones)
-						float ParentStretchScale = 1.0f;
-						float StretchAntiScale = 1.0f;
-						int ParentBoneIndex = SkeletonBoneParents[BoneIndex];
-						if (PolygonSkeletonData.Bones.IsValidIndex(ParentBoneIndex) && PolygonSkeletonData.Bones[ParentBoneIndex].Validity && ParentBoneIndex != (int)EManusBoneName::Root)
-						{
-							ParentStretchScale = PolygonSkeletonData.Bones[ParentBoneIndex].Transform.GetScale3D().X;
-							StretchAntiScale = 1.0f / ParentStretchScale;
-						}
-
-						// Scale: Ref bone
-						FVector RefScale = FVector::OneVector;
-						FVector* RefScalePtr = ManusSkeleton->InitialScales.Find(BoneIndex);
-						if (RefScalePtr)
-						{
-							RefScale = *RefScalePtr;
-						}
-
-						// Scale: Final scale
-						float FinalStretchScale = StretchScale * StretchAntiScale;
-						switch (PolygonSkeletonStretchAxis)
-						{
-						case EBoneAxis::BA_X: RefScale.X *= FinalStretchScale; break; // Use Manus coordinate system X -> Z
-						case EBoneAxis::BA_Y: RefScale.Y *= FinalStretchScale; break; // Use Manus coordinate system Y -> X
-						case EBoneAxis::BA_Z: RefScale.Z *= FinalStretchScale; break; // Use Manus coordinate system Z -> Y
-						}
-						LocalScales[BoneIndex] = RefScale;
-
-						// Convert scale to component space
-						while (PolygonSkeletonData.Bones.IsValidIndex(ParentBoneIndex))
-						{
-							if (PolygonSkeletonData.Bones[ParentBoneIndex].Validity)
-							{
-								RefScale *= LocalScales[ParentBoneIndex];
-							}
-							ParentBoneIndex = SkeletonBoneParents[ParentBoneIndex];
-						}
-						OutTransforms[BoneIndex].SetScale3D(RefScale);
-
-						// Convert back to Unreal unit / coordinate system
-						OutTransforms[BoneIndex] = OutTransforms[BoneIndex];
-					}
-				}
-				else
-				{
-					OutTransforms[BoneIndex].SetScale3D(FVector::ZeroVector);
 				}
 			}
+
+			return true;
 		}
 		else
 		{
-			// Zero the scale to let the anim node know that there was no valid data
-			for (int BoneIndex = 0; BoneIndex < BODY_LIVE_LINK_BONE_NUM; BoneIndex++)
+            //UE_LOG(LogManus, Warning, TEXT("UpdateSkeletonsLiveLinkTransforms we dont got skeleton data. %u"), SkeletonId);
+            // Zero the scale to let the anim node know that there was no valid data
+			for (int BoneIndex = 0; BoneIndex < (int)t_BoneInfo.Num(); BoneIndex++)
 			{
-				OutTransforms[BoneIndex].SetScale3D(FVector::ZeroVector);
+				p_OutTransforms[BoneIndex].SetScale3D(FVector::ZeroVector);
 			}
+			return false;
 		}
 	}
+	return false;
 }
 
-void FManusLiveLinkSource::UpdateGloveLiveLinkTransforms(float DeltaTime, int ManusLiveLinkUserIndex, EManusHandType HandType, TArray<FTransform>& OutTransforms, int64& LastUpdateTime, bool& ForceUpdate)
+void FManusLiveLinkSource::InitSkeletonsForManusLiveLinkUser(int p_ManusLiveLinkUserIndex, uint32_t p_ManusUserId, bool ClearTempValues)
 {
-	SCOPE_CYCLE_COUNTER(STAT_Manus_UpdateGloveLiveLink);
+    UE_LOG(LogManus, Warning, TEXT("InitSkeletonsForManusLiveLinkUser."));
 
-	LastUpdateTime = 0;
-	ForceUpdate = false;
-
-	// Retrieve the Manus Skeleton
-	UManusSkeleton* ManusSkeleton = NULL;
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
+	TArray<FManusLiveLinkUser>& t_ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
+	if (t_ManusLiveLinkUsers.IsValidIndex(p_ManusLiveLinkUserIndex))
 	{
-		ManusSkeleton = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton;
-	}
+		UManusSkeleton* t_ManusSkeleton = t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].ManusSkeleton;
 
-	// Animation variables
-	bool bWasHandAnimated = false;
-	const int FirstGloveBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHandThumb1 : (int)EManusBoneName::RightHandThumb1);
-
-#if WITH_EDITORONLY_DATA
-	// Preview hand gesture pose if needed
-	if (ManusSkeleton && ManusLiveLinkUsers[ManusLiveLinkUserIndex].bIsHandPreviewOnGoing)
-	{
-		// Fingers tracking: Send stretch and spread values
-		for (int Finger = 0; Finger < (int)EManusFingerName::Max; Finger++) // Thumb -> Pinky
+		if (t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame == NULL)
 		{
-			// Spread preview
-			FQuat SpreadQuaternion = FQuat::Identity;
-			if (ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.PreviewType == EManusHandPreviewType::Spread)
+			t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = new FLiveLinkFrameDataStruct();
+            t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame->InitializeWith(FLiveLinkAnimationFrameData::StaticStruct(), nullptr);
+		}
+
+		if (t_ManusSkeleton && 
+			t_ManusSkeleton->GetSkeleton())// do we even have a skeleton?
+		{
+			if (FManusModule::Get().GetGlovesUsingTrackers())
 			{
-				float SpreadValue = ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.GetManusHandPreviewValue(
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds->FingerSpreadExtent.GetLowerBoundValue(),
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds->FingerSpreadExtent.GetUpperBoundValue(),
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewLoopProgress
-				);
-				float LowerBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].FingerSpreadExtent.GetLowerBoundValue();
-				float UpperBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].FingerSpreadExtent.GetUpperBoundValue();
-				float SpreadAngle = LowerBoundValue + (SpreadValue * (UpperBoundValue - LowerBoundValue));
-				SpreadQuaternion = ManusTools::AngleAxis(SpreadAngle, (Finger == (int)EManusFingerName::Thumb) ? ManusSkeleton->HandsAnimationSetup[(int)HandType].ThumbSpreadRotationAxis : ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersSpreadRotationAxis);
+				t_ManusSkeleton->SkeletonType = EManusSkeletonType::Both;
 			}
+            m_bIsSkeletonsInitialized = true;
+            t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].SkeletonsInitializationRetryCountdown = 0; // ok we're trying to init it once. 
 
-			// Go through all the joints of all the fingers
-			for (int Joint = 0; Joint < (int)EManusPhalangeName::Max; Joint++) // Proximal Joints -> Distal Joints
+			// first check if its a hand or a mannequin , anything else we don't support . 
+			if (t_ManusSkeleton->SkeletalMesh )
 			{
-				// Stretch preview
-				FQuat StretchQuaternion = FQuat::Identity;
-				if (ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.PreviewType == EManusHandPreviewType::Stretch)
-				{
-					float StretchValue = ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.GetManusHandPreviewValue(
-						ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds->JointsStretchExtents[Joint].GetLowerBoundValue(),
-						ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds->JointsStretchExtents[Joint].GetUpperBoundValue(),
-						ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewLoopProgress
-					);
-					float LowerBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].JointsStretchExtents[Joint].GetLowerBoundValue();
-					float UpperBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].JointsStretchExtents[Joint].GetUpperBoundValue();
-					float StretchAngle = LowerBoundValue + (StretchValue * (UpperBoundValue - LowerBoundValue));
-					StretchQuaternion = ManusTools::AngleAxis(StretchAngle, (Finger == (int)EManusFingerName::Thumb) ? ManusSkeleton->HandsAnimationSetup[(int)HandType].ThumbStretchRotationAxis : ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersStretchRotationAxis);
+				if (t_ManusSkeleton->SkeletonType == EManusSkeletonType::Invalid)
+				{ 
+					// cleanup
+					delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+					t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+					UE_LOG(LogManus, Log, TEXT("skeleton %s did not have a skeleton type defined."), *t_ManusSkeleton->GetSkeleton()->GetName());
+					return; // not a hand or a body. so do not process it.											
 				}
-
-				// Set the rotation
-				int TransformIndex = FirstGloveBoneIndex + Finger * (int)EManusPhalangeName::Max + Joint;
-				OutTransforms[TransformIndex].SetRotation(Joint == 0 ? SpreadQuaternion * StretchQuaternion : StretchQuaternion);
-				OutTransforms[TransformIndex].SetScale3D(FVector::OneVector);
 			}
-		}
 
-		// Reset hand bones
-		const int HandBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHand : (int)EManusBoneName::RightHand);
-		const int HandTrackerBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHandTracker : (int)EManusBoneName::RightHandTracker);
-		OutTransforms[HandBoneIndex].SetScale3D(FVector::ZeroVector);
-		OutTransforms[HandTrackerBoneIndex].SetScale3D(FVector::ZeroVector);
+			UE_LOG(LogManus, Log, TEXT("Initializing Manus Skeletons for skeleton %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
 
-		ForceUpdate = true;
-		bWasHandAnimated = true;
-	}
-#endif // WITH_EDITORONLY_DATA
-	
-	// Get Manus Dashboard User index
-	int ManusDashboardUserIndex = INDEX_NONE;
-	if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
-	{
-		ManusDashboardUserIndex = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDashboardUserIndex;
-	}
-
-	// We need a valid Manus Dashboard User index for the rest
-	if (ManusDashboardUserIndex != INDEX_NONE)
-	{
-		// If we haven't animated the hand yet by another way, use actual Manus glove data to animate the hand
-		if (!bWasHandAnimated)
-		{
-			// Get Glove from the Manus Live Link User index
-			int64 GloveId = (HandType == EManusHandType::Left ? ManusLiveLinkUsers[ManusLiveLinkUserIndex].GetLeftGloveId() : ManusLiveLinkUsers[ManusLiveLinkUserIndex].GetRightGloveId());
-
-			// Glove data
-			FManusGlove GloveData;
-			if (ManusSkeleton && GloveId > 0 && UManusBlueprintLibrary::GetGloveData(GloveId, GloveData) == EManusRet::Success)
+			// todo this is still a placeholder and we need to make it more robust. but for most cases this is fine.
+			if (t_ManusSkeleton->TargetType == EManusSkeletonTargetType::UserData && t_ManusSkeleton->TargetUserData.userID == 0)
 			{
-				LastUpdateTime = GloveData.LastUpdateTime;
-
-				// Fingers tracking: Send stretch and spread values
-				for (int Finger = 0; Finger < GloveData.Fingers.Num(); Finger++) // Thumb -> Pinky
-				{
-					// Turn the spread raw value into a quaternion
-					float LowerBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].FingerSpreadExtent.GetLowerBoundValue();
-					float UpperBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].FingerSpreadExtent.GetUpperBoundValue();
-					float SpreadAngle = LowerBoundValue + (GloveData.Fingers[Finger].Spread * (UpperBoundValue - LowerBoundValue));
-					EManusAxisOption SpreadAxis = (Finger == (int)EManusFingerName::Thumb) ? ManusSkeleton->HandsAnimationSetup[(int)HandType].ThumbSpreadRotationAxis : ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersSpreadRotationAxis;
-					if (HandType == EManusHandType::Right && Finger != (int)EManusFingerName::Thumb)
-					{
-						// Spread values sent by Core are not mirrored, so let's mirror the rotation here
-						SpreadAxis = (EManusAxisOption)(((int)SpreadAxis + 3) % (int)EManusFingerName::Max);
-					}
-					FQuat SpreadQuaternion = ManusTools::AngleAxis(SpreadAngle, SpreadAxis);
-
-					// Go through all the joints of all the fingers
-					for (int Joint = 0; Joint < GloveData.Fingers[Finger].Joints.Num(); Joint++) // Proximal Joints -> Distal Joints
-					{
-						// Turn the stretch value into a quaternion
-						LowerBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].JointsStretchExtents[Joint].GetLowerBoundValue();
-						UpperBoundValue = ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersRotationsExtents[Finger].JointsStretchExtents[Joint].GetUpperBoundValue();
-						float StretchAngle = LowerBoundValue + (GloveData.Fingers[Finger].Joints[Joint].Stretch * (UpperBoundValue - LowerBoundValue));
-						FQuat StretchQuaternion = ManusTools::AngleAxis(StretchAngle, (Finger == (int)EManusFingerName::Thumb) ? ManusSkeleton->HandsAnimationSetup[(int)HandType].ThumbStretchRotationAxis : ManusSkeleton->HandsAnimationSetup[(int)HandType].FingersStretchRotationAxis);
-
-						// Set the rotation
-						int TransformIndex = FirstGloveBoneIndex + Finger * (int)EManusPhalangeName::Max + Joint;
-						OutTransforms[TransformIndex].SetRotation(Joint == 0 ? SpreadQuaternion * StretchQuaternion : StretchQuaternion);
-						OutTransforms[TransformIndex].SetScale3D(FVector::OneVector);
-					}
-				}
-
-				// Gesture detection
-				DetectGesture(DeltaTime, ManusLiveLinkUserIndex, HandType, GloveData);
-
-				// Hand orientation from Glove IMU
-				const int HandBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHand : (int)EManusBoneName::RightHand);
-				OutTransforms[HandBoneIndex].SetRotation(GloveData.WristImuOrientation * ManusSkeleton->TrackingDeviceToManusGloveTransform);
-				OutTransforms[HandBoneIndex].SetScale3D(FVector::OneVector);
-
-				// Hand position and orientation from Tracker data
-				bool HasValidTrackingData = false;
-				FTransform TrackerTransform;
-				switch (GetDefault<UManusSettings>()->HandTrackingMethod)
-				{
-				case EManusHandTrackingMethod::ManusCore:
-				{
-					FManusTracker TrackerData;
-					if (UManusBlueprintLibrary::GetTrackerData(ManusDashboardUserIndex, HandType, TrackerData) == EManusRet::Success)
-					{
-						HasValidTrackingData = true;
-						TrackerTransform = TrackerData.Transform;
-					}
-					break;
-				}
-
-				case EManusHandTrackingMethod::Unreal:
-				{
-					FManusTracker TrackerData;
-					if (UManusBlueprintLibrary::GetTrackerData(ManusDashboardUserIndex, HandType, TrackerData) == EManusRet::Success)
-					{
-						FVector TrackingDevicePosition;
-						FRotator TrackingDeviceRotation;
-						if (FManusModule::Get().GetTrackingManager()->GetTrackingDevicePositionAndRotation(FName(*TrackerData.TrackerId), TrackingDevicePosition, TrackingDeviceRotation))
-						{
-							HasValidTrackingData = true;
-							TrackerTransform.SetLocation(TrackingDevicePosition);
-							TrackerTransform.SetRotation(TrackingDeviceRotation.Quaternion());
-							TrackerTransform.SetScale3D(FVector::OneVector);
-						}
-					}
-				}
-				}
-				const int HandTrackerBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHandTracker : (int)EManusBoneName::RightHandTracker);
-				if (HasValidTrackingData)
-				{
-					// Offset hand bone according to accomodate with the actual Tracking Device position / rotation according to the glove type
-					if (GloveData.WristTrackerTransforms.IsValidIndex(ManusDashboardUserIndex) && !GloveData.WristTrackerTransforms[ManusDashboardUserIndex].GetScale3D().IsZero())
-						TrackerTransform = GloveData.WristTrackerTransforms[ManusDashboardUserIndex] * TrackerTransform;
-
-					OutTransforms[HandTrackerBoneIndex] = FTransform(ManusSkeleton->TrackingDeviceToManusGloveTransform, FVector::ZeroVector, FVector::OneVector) * TrackerTransform /*GetDefault<UManusSettings>()->TrackingDeviceToManusGloveTransform[(int)GloveData.GloveInfo.GloveType] **/;
-				}
-				else
-				{
-					OutTransforms[HandTrackerBoneIndex].SetScale3D(FVector::ZeroVector);
-				}
-
-				bWasHandAnimated = true;
+				t_ManusSkeleton->TargetUserData.userID = p_ManusUserId; 
 			}
-		}
-	}
 
-	// Zero the scales to let the anim node know that there was no valid data
-	if (!bWasHandAnimated)
-	{
-		const int HandBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHand : (int)EManusBoneName::RightHand);
-		const int HandTrackerBoneIndex = (HandType == EManusHandType::Left ? (int)EManusBoneName::LeftHandTracker : (int)EManusBoneName::RightHandTracker);
-		OutTransforms[HandBoneIndex].SetScale3D(FVector::ZeroVector);
-		OutTransforms[HandTrackerBoneIndex].SetScale3D(FVector::ZeroVector);
-
-		for (int Finger = 0; Finger < (int)EManusFingerName::Max; Finger++) // Thumb -> Pinky
-		{
-			for (int Joint = 0; Joint < (int)EManusPhalangeName::Max; Joint++) // Proximal Joints -> Distal Joints
+			uint32_t  t_SkeletonSetupIndex = 0;
+			
+			if (t_ManusSkeleton->SetupSkeleton(t_SkeletonSetupIndex) != EManusRet::Success)
 			{
-				int TransformIndex = FirstGloveBoneIndex + Finger * (int)EManusPhalangeName::Max + Joint;
-				OutTransforms[TransformIndex].SetScale3D(FVector::ZeroVector);
+				UE_LOG(LogManus, Error, TEXT("Failed to Create Skeleton Setup. %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
+				// cleanup
+				delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+				t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+				return;
 			}
-		}
-	}
-}
 
-#if WITH_EDITOR
-void FManusLiveLinkSource::PreviewGesture(int GestureIndex)
-{
-	const UManusSettings* ManusSettings = GetDefault<UManusSettings>();
-	if (ManusSettings->HandGestureDescriptors.IsValidIndex(GestureIndex) && ManusSettings->HandGesturePreviewSettings.PreviewMode != EManusSkeletonPreviewMode::NoPreview && ManusSettings->HandGesturePreviewSettings.PreviewDuration > 0.0f)
-	{
-		// Preview bounds
-		FFingerRotationsExtents PreviewBounds[(int)EManusFingerName::Max];
-		for (int Finger = 0; Finger < (int)EManusFingerName::Max; Finger++) // Thumb -> Pinky
-		{
-			// Don't preview spread
-			PreviewBounds[Finger].FingerSpreadExtent = FFloatRange(FFloatRangeBound::Inclusive(0.0f), FFloatRangeBound::Inclusive(0.0f));
-
-			const FFingerGestureDescriptor& FingerGestureDescriptor = ManusSettings->HandGestureDescriptors[GestureIndex].FingerGestureDescriptors[Finger];
-			for (int Joint = 0; Joint < (int)EManusPhalangeName::Max; Joint++) // Proximal Joints -> Distal Joints
+			if (t_ManusSkeleton->NodesSetupMap.Num() > 0) // check if we already have nodes.
 			{
-				// Preview gesture stretch bounds
-				PreviewBounds[Finger].JointsStretchExtents[Joint] = FingerGestureDescriptor.FlexSensorRanges[FMath::Min(Joint, (int)EManusFingerFlexSensorType::Max - 1)];
-			}
-		}
-
-		// Start preview on all the concerned Manus Live Link Users
-		TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-		for (int ManusLiveLinkUserIndex = 0; ManusLiveLinkUserIndex < ManusLiveLinkUsers.Num(); ManusLiveLinkUserIndex++)
-		{
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings = ManusSettings->HandGesturePreviewSettings;
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewGestureIndex = GestureIndex;
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer = ManusSettings->HandGesturePreviewSettings.PreviewDuration;
-			FMemory::Memcpy(ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds, PreviewBounds);
-		}
-
-		UE_LOG(LogManus, Log, TEXT("Started previewing Manus hand gesture \"%s\"."), *ManusSettings->HandGestureDescriptors[GestureIndex].GestureName.ToString());
-	}
-}
-
-void FManusLiveLinkSource::PreviewSkeletonFingerRotationExtents(UManusSkeleton* ManusSkeleton)
-{
-	if (ManusSkeleton)
-	{
-		// Preview bounds
-		FFingerRotationsExtents HandGestureFingersRotationsBounds[(int)EManusFingerName::Max];
-		for (int Finger = 0; Finger < (int)EManusFingerName::Max; Finger++) // Thumb -> Pinky
-		{
-			// Don't preview spread
-			HandGestureFingersRotationsBounds[Finger].FingerSpreadExtent = FFloatRange(FFloatRangeBound::Inclusive(-1.0f), FFloatRangeBound::Inclusive(1.0f));
-
-			for (int Joint = 0; Joint < (int)EManusPhalangeName::Max; Joint++) // Proximal Joints -> Distal Joints
-			{
-				// Preview stretch bounds
-				HandGestureFingersRotationsBounds[Finger].JointsStretchExtents[Joint] = FFloatRange(FFloatRangeBound::Inclusive(0.0f), FFloatRangeBound::Inclusive(1.0f));
-			}
-		}
-
-		// Start preview on all the concerned Manus Live Link Users
-		TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-		for (int ManusLiveLinkUserIndex = 0; ManusLiveLinkUserIndex < ManusLiveLinkUsers.Num(); ManusLiveLinkUserIndex++)
-		{
-			if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex) && ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton == ManusSkeleton)
-			{
-				FManusHandPreviewSettings PreviewSettings = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton->FingersRotationsExtentsPreviewSettings;
-				if (PreviewSettings.PreviewMode != EManusSkeletonPreviewMode::NoPreview && PreviewSettings.PreviewDuration > 0.0f)
+				if (t_ManusSkeleton->LoadExistingNodes(t_SkeletonSetupIndex) != true)
 				{
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings = PreviewSettings;
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewGestureIndex = INDEX_NONE;
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer = PreviewSettings.PreviewDuration;
-					FMemory::Memcpy(ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewBounds, HandGestureFingersRotationsBounds);
-				}
-			}
-		}
-
-		UE_LOG(LogManus, Log, TEXT("Started previewing Manus fingers rotations extents."));
-	}
-}
-
-void FManusLiveLinkSource::TickAllHandPreviews(float DeltaTime)
-{
-	const UManusSettings* ManusSettings = GetDefault<UManusSettings>();
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	for (int ManusLiveLinkUserIndex = 0; ManusLiveLinkUserIndex < ManusLiveLinkUsers.Num(); ManusLiveLinkUserIndex++)
-	{
-		if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
-		{
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].bIsHandPreviewOnGoing = (ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer > 0.0f);
-			if (ManusLiveLinkUsers[ManusLiveLinkUserIndex].bIsHandPreviewOnGoing)
-			{
-				ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer -= FMath::Max(0.0f, DeltaTime);
-
-				const float LoopDuration = ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.PreviewDuration / FMath::Max(1, ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.PreviewAnimationLoops);
-				const float LoopTimer = FMath::Fmod(ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewSettings.PreviewDuration - ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer, LoopDuration);
-				const float LoopProgress = LoopTimer / LoopDuration;
-				if (LoopProgress <= 0.5f)
-				{
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewLoopProgress = LoopProgress * 2.0f;
-				}
-				else
-				{
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewLoopProgress = 1.0f - ((LoopProgress - 0.5f) * 2.0f);
-				}
-
-				if (ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewTimer == 0.0f)
-				{
-					if (ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewGestureIndex != INDEX_NONE)
-					{
-						UE_LOG(LogManus, Log, TEXT("Finished previewing Manus hand gesture \"%s\"."), *ManusSettings->HandGestureDescriptors[ManusLiveLinkUsers[ManusLiveLinkUserIndex].OnGoingHandPreviewGestureIndex].GestureName.ToString());
-					}
-					else
-					{
-						UE_LOG(LogManus, Log, TEXT("Finished previewing Manus fingers rotations extents."));
-					}
-				}
-			}
-		}
-	}
-}
-#endif // WITH_EDITOR
-
-void FManusLiveLinkSource::DetectGesture(float DeltaTime, int ManusLiveLinkUserIndex, EManusHandType HandType, FManusGlove& GloveData)
-{
-	SCOPE_CYCLE_COUNTER(STAT_Manus_GestureDetection);
-
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	const TArray<FHandGestureDescriptor>& HandGestureDescriptors = GetDefault<UManusSettings>()->HandGestureDescriptors;
-	ManusLiveLinkUsers[ManusLiveLinkUserIndex].HandGestureDetectionData[(int)HandType].ManusLiveLinkUserDetectedHandGestureTimers.SetNum(HandGestureDescriptors.Num());
-	for (int GestureIndex = 0; GestureIndex < HandGestureDescriptors.Num(); GestureIndex++)
-	{
-		const FHandGestureDescriptor& HandGestureDescriptor = HandGestureDescriptors[GestureIndex];
-
-		bool GestureDetected = true;
-
-		for (int Finger = 0; Finger < (int)EManusFingerName::Max && GestureDetected; Finger++)
-		{
-			const FFingerGestureDescriptor& FingerGestureDescriptor = HandGestureDescriptor.FingerGestureDescriptors[Finger];
-			if (!FingerGestureDescriptor.FlexSensorRanges[(int)EManusFingerFlexSensorType::First].Contains(GloveData.RawData.Fingers[Finger].McpFlexSensor)
-			||	!FingerGestureDescriptor.FlexSensorRanges[(int)EManusFingerFlexSensorType::Second].Contains(GloveData.RawData.Fingers[Finger].PipFlexSensor)
-			) {
-				GestureDetected = false;
-			}
-		}
-
-		if (GestureDetected)
-		{
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].HandGestureDetectionData[(int)HandType].ManusLiveLinkUserDetectedHandGestureTimers[GestureIndex] += DeltaTime;
-		}
-		else
-		{
-			ManusLiveLinkUsers[ManusLiveLinkUserIndex].HandGestureDetectionData[(int)HandType].ManusLiveLinkUserDetectedHandGestureTimers[GestureIndex] = 0.0f;
-		}
-	}
-}
-
-void FManusLiveLinkSource::InitPolygonForAllManusLiveLinkUsers(bool ResetRetry)
-{
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	for (int i = 0; i < ManusLiveLinkUsers.Num(); i++)
-	{
-		InitPolygonForManusLiveLinkUser(i, ResetRetry);
-	}
-}
-
-void FManusLiveLinkSource::InitPolygonForManusLiveLinkUser(int ManusLiveLinkUserIndex, bool ResetRetry)
-{
-	TArray<FManusLiveLinkUser>& ManusLiveLinkUsers = FManusModule::Get().ManusLiveLinkUsers;
-	if (ManusLiveLinkUsers.IsValidIndex(ManusLiveLinkUserIndex))
-	{
-		UManusSkeleton* ManusSkeleton = ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusSkeleton;
-		if (ManusSkeleton && ManusSkeleton->bIsUsedForFullBodyTracking && ManusSkeleton->GetSkeleton())
-		{
-			UE_LOG(LogManus, Log, TEXT("Initializing Manus Polygon for skeleton %s."), *ManusSkeleton->GetSkeleton()->GetName());
-
-			const BoneName_t* ManusLiveLinkUserPolygonSkeletonBoneNameMap = ManusSkeleton->BoneMap;
-
-			// Bone map and scales
-			TArray<FTransform> ManusLiveLinkUserPolygonSkeletonRefBoneTransforms = ManusSkeleton->GetSkeleton()->GetReferenceSkeleton().GetRefBonePose();
-			for (int i = 0; i < (int)EManusBoneName::Max; i++)
-			{
-				FName MappedBoneName = GET_BONE_NAME(ManusLiveLinkUserPolygonSkeletonBoneNameMap[i]);
-				int32 BoneIndex = ManusSkeleton->GetSkeleton()->GetReferenceSkeleton().FindBoneIndex(MappedBoneName);
-				if (BoneIndex != INDEX_NONE)
-				{
-					ManusSkeleton->BoneIndexMap.Add(i, BoneIndex);
-					ManusSkeleton->InitialScales.Add(i, ManusLiveLinkUserPolygonSkeletonRefBoneTransforms[BoneIndex].GetScale3D());
-				}
-			}
-
-			// Calculate Manus Core internal transforms
-			if (ManusTools::CalculateManusInternalOrientations(
-				ManusLiveLinkUserIndex, 
-				ManusSkeleton->ManusInternalOrientations,
-				ManusSkeleton->ManusInternalDeltaOrientations)
-			) {
-				// Start Polygon for this Manus Live Link User
-				EManusRet ReturnCode = CoreSdk::AddOrUpdatePolygonSkeleton(
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].ManusDashboardUserIndex,
-					ManusTools::GenerateManusIdFromManusLiveLinkUser(ManusLiveLinkUserIndex),
-					ManusSkeleton
-				);
-				if (ReturnCode != EManusRet::Success)
-				{
-					if (ResetRetry)
-					{
-						ManusLiveLinkUsers[ManusLiveLinkUserIndex].PolygonInitializationRetryNumber = 0;
-					}
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].PolygonInitializationRetryNumber++;
-					ManusLiveLinkUsers[ManusLiveLinkUserIndex].PolygonInitializationRetryCountdown = FMath::Pow(10, FMath::Min(3, ManusLiveLinkUsers[ManusLiveLinkUserIndex].PolygonInitializationRetryNumber));
-
-					UE_LOG(LogManus, Warning, TEXT("Manus Polygon initialization failed for Skeleton %s. Next attempt in %d frames."), *ManusSkeleton->GetName(), ManusLiveLinkUsers[ManusLiveLinkUserIndex].PolygonInitializationRetryCountdown);
+					UE_LOG(LogManus, Error, TEXT("Failed to Add Node To Skeleton Setup. %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
+					// cleanup
+					delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+					t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+					t_ManusSkeleton->ClearSetupSkeleton(t_SkeletonSetupIndex);
+					return;
 				}
 			}
 			else
 			{
-				UE_LOG(LogManus, Warning, TEXT("Manus Polygon initialization failed for Skeleton %s."), *ManusSkeleton->GetName());
+				if (t_ManusSkeleton->LoadNewNodes(t_SkeletonSetupIndex) != true)
+				{
+					UE_LOG(LogManus, Error, TEXT("Failed to Add Node To Skeleton Setup. %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
+					// cleanup
+					delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+					t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+					t_ManusSkeleton->ClearSetupSkeleton(t_SkeletonSetupIndex);
+					return;
+				}
 			}
-		}
-	}
-}
 
-#if ENGINE_MAJOR_VERSION == 4 && ENGINE_MINOR_VERSION < 23
-bool FManusLiveLinkSource::IsSubjectEnabled(FName LiveLinkSubjectName)
-{
-	if (LiveLinkClient)
-	{
-		TArray<FName> SubjectNames;
-		LiveLinkClient->GetSubjectNames(SubjectNames);
-		return SubjectNames.Contains(LiveLinkSubjectName);
+			if (t_ManusSkeleton->NodesSetupMap.Num() == 0)
+			{
+				UE_LOG(LogManus, Error, TEXT("Failed to Create Skeleton Setup. %s has no nodes."), *t_ManusSkeleton->GetSkeleton()->GetName());
+				// cleanup
+				delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+				t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+				t_ManusSkeleton->ClearSetupSkeleton(t_SkeletonSetupIndex);
+				return; // if the asset is malformed or such and we don't have nodes. welp its game over for this asset.
+			}
+
+			if (t_ManusSkeleton->ChainsIndexMap.Num() != 0) 
+			{ 
+				// load the existing chains up
+				t_ManusSkeleton->LoadChains(t_SkeletonSetupIndex, FManusModule::Get().GetGlovesUsingTrackers());
+			}
+			else // we no longer autoallocate. our assets come pre loaded with chains now. so if there is nothing. it is bad.
+			{
+				UE_LOG(LogManus, Error, TEXT("Failed to Create Skeleton Setup. %s has no chains."), *t_ManusSkeleton->GetSkeleton()->GetName());
+				// cleanup
+				delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+				t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+				t_ManusSkeleton->ClearSetupSkeleton(t_SkeletonSetupIndex);
+				return; // if the asset is malformed or such and we don't have chains. welp its game over for this asset.
+			}
+						
+			// and load the skeleton.
+			uint32_t t_ID = 0;
+			if (t_ManusSkeleton->LoadSkeleton(t_SkeletonSetupIndex, t_ID) != true || t_ID == 0)
+			{
+				UE_LOG(LogManus, Error, TEXT("Failed to load Skeleton Setup. %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
+				delete t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame;
+				t_ManusLiveLinkUsers[p_ManusLiveLinkUserIndex].LiveLinkFrame = NULL;
+				t_ManusSkeleton->ClearSetupSkeleton(t_SkeletonSetupIndex);
+				return;
+			}
+            UE_LOG(LogManus, Warning, TEXT("successfully initialized skeleton. %s."), *t_ManusSkeleton->GetSkeleton()->GetName());
+			t_ManusSkeleton->ManusSkeletonId = t_ID;
+		}
+        else
+        {
+            UE_LOG(LogManus, Warning, TEXT("InitSkeletonsForManusLiveLinkUser failed. No mesh found."));
+        }
 	}
-	return false;
+    else
+    {
+        UE_LOG(LogManus, Warning, TEXT("InitSkeletonsForManusLiveLinkUser failed. No valid LiveLinkUser found."));
+    }
 }
-#endif
 
 #undef LOCTEXT_NAMESPACE

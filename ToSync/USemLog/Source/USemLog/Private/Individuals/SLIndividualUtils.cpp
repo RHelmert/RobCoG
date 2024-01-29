@@ -30,11 +30,14 @@
 
 #include "Gaze/SLGazeTargetActor.h"
 #include "Gaze/SLGazeOriginActor.h"
+#include "Actors/SLPouringParticleAgentClass.h"
+#include "Actors/SLCutterAgentClass.h"
+#include "Actors/SLCuttieAgentClass.h"
+#include "Actors/SLStaticMeshAgentClass.h"
 
 #if WITH_EDITOR
 #include "Kismet2/ComponentEditorUtils.h" // GenerateValidVariableName
 #endif // WITH_EDITOR
-
 
 /* Individuals */
 // Get the semantic individual manager from the world or create a new one if none are available
@@ -599,6 +602,22 @@ USLBaseIndividual* FSLIndividualUtils::CreateIndividualObject(UObject* Outer, AA
 	{
 		return NewObject<USLBaseIndividual>(Outer, USLSkyIndividual::StaticClass());
 	}
+	else if (Owner->IsA(ASLPouringParticleAgentClass::StaticClass()))
+	{
+		return NewObject<USLParticleIndividual>(Outer, USLParticleIndividual::StaticClass());
+	}
+	else if (Owner->IsA(ASLCutterAgentClass::StaticClass()))
+	{
+		return NewObject<USLCutterIndividual>(Outer, USLCutterIndividual::StaticClass());
+	}
+	else if (Owner->IsA(ASLCuttieAgentClass::StaticClass()))
+	{
+		return NewObject<USLCuttieIndividual>(Outer, USLCuttieIndividual::StaticClass());
+	}
+	else if (Owner->IsA(ASLStaticMeshAgentClass::StaticClass()) || Owner->IsA(ASLStaticMeshAgentClass::StaticClass()))
+	{
+		return NewObject<USLCustomStaticMeshComponentIndividual>(Outer, USLCustomStaticMeshComponentIndividual::StaticClass());
+	}
 	//else if (Owner->IsA(AAtmosphericFog::StaticClass()) || Owner->GetName().Contains("SkySphere"))
 	//{
 	//	return NewObject<USLBaseIndividual>(Outer, USLSkyIndividual::StaticClass());
@@ -650,19 +669,19 @@ bool FSLIndividualUtils::ConvertIndividualObject(USLBaseIndividual*& IndividualO
 }
 
 // Generate a new bson oid as string, empty string if fails
-FString FSLIndividualUtils::NewOIdAsString()
-{
-#if SL_WITH_LIBMONGO_C
-	bson_oid_t new_oid;
-	bson_oid_init(&new_oid, NULL);
-	char oid_str[25];
-	bson_oid_to_string(&new_oid, oid_str);
-	return FString(UTF8_TO_TCHAR(oid_str));
-#else
-	return FString();
-#endif // #if PLATFORM_WINDOWS
-	return FString();
-}
+//FString FSLIndividualUtils::NewOIdAsString()
+//{
+//#if SL_WITH_LIBMONGO_C
+//	bson_oid_t new_oid;
+//	bson_oid_init(&new_oid, NULL);
+//	char oid_str[25];
+//	bson_oid_to_string(&new_oid, oid_str);
+//	return FString(UTF8_TO_TCHAR(oid_str));
+//#else
+//	return FString();
+//#endif // #if PLATFORM_WINDOWS
+//	return FString();
+//}
 
 // Find the skeletal data asset for the individual
 USLSkeletalDataAsset* FSLIndividualUtils::FindSkeletalDataAsset(AActor* Owner)
@@ -785,6 +804,10 @@ bool FSLIndividualUtils::CanHaveIndividualComponent(AActor* Actor)
 		|| Actor->IsA(ALight::StaticClass())
 		|| Actor->IsA(ASkyLight::StaticClass())
 		|| Actor->IsA(ASLVirtualCameraView::StaticClass())
+		|| Actor->IsA(ASLPouringParticleAgentClass::StaticClass())
+		|| Actor->IsA(ASLCutterAgentClass::StaticClass())
+		|| Actor->IsA(ASLCuttieAgentClass::StaticClass())
+		|| Actor->IsA(ASLStaticMeshAgentClass::StaticClass())
 		|| Actor->GetName().Contains("SkySphere");
 }
 

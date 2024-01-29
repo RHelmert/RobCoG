@@ -118,12 +118,17 @@ bool USLBoneContactMonitor::AttachToBone()
 			{
 				FAttachmentTransformRules AttachmentRule = bSnapToBone ? FAttachmentTransformRules::SnapToTargetIncludingScale
 					: FAttachmentTransformRules::KeepRelativeTransform;
-
-				if (AttachToComponent(SkelComp, AttachmentRule, BoneName))
-				{
-					//UE_LOG(LogTemp, Warning, TEXT("%s::%d Attached component %s to the bone %s"),
-					//	*FString(__func__), __LINE__, *GetName(), *BoneName.ToString());
-					return true;
+				if (SocketName == NAME_None) {
+					if (AttachToComponent(SkelComp, AttachmentRule, BoneName))
+					{
+						return true;
+					} 
+				}
+				else {
+					if (AttachToComponent(SkelComp, AttachmentRule, SocketName))
+					{
+						return true;
+					}
 				}
 			}
 			else
@@ -142,13 +147,20 @@ bool USLBoneContactMonitor::AttachToBone()
 			{
 				FAttachmentTransformRules AttachmentRule = bSnapToBone ? FAttachmentTransformRules::SnapToTargetIncludingScale
 					: FAttachmentTransformRules::KeepRelativeTransform;
+				if (SocketName == NAME_None) {
 
-				if (AttachToComponent(SMC, AttachmentRule, BoneName))
-				{
-					//UE_LOG(LogTemp, Warning, TEXT("%s::%d Attached component %s to the bone %s"),
-					//	*FString(__func__), __LINE__, *GetName(), *BoneName.ToString());
-					return true;
+					if (AttachToComponent(SMC, AttachmentRule, BoneName))
+					{
+						return true;
+					}
 				}
+				else {
+					if (AttachToComponent(SMC, AttachmentRule, SocketName))
+					{
+						return true;
+					}
+				}
+
 			}
 			else
 			{

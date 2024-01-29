@@ -3,7 +3,7 @@
 	"Version": 1,
 	"VersionName": "1.0",
 	"FriendlyName": "UVRHands",
-	"Description": "A Plugin to provide new hands with better responsibility than the old ones. ",
+	"Description": "A Plugin to provide new hands with better stability and movements than the old ones. ",
 	"Category": "Other",
 	"CreatedBy": "Robin H",
 	"CreatedByURL": "",
@@ -24,8 +24,15 @@
 	"Plugins": [
 		{
 			"Name": "Manus",
-			"Enabled": true,
-			"Optional": true
+			"Enabled": true
+		},
+		{
+			"Name": "ZeroMQ",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
 		}
 	]
 }

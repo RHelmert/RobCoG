@@ -42,6 +42,10 @@
     {
       "Name": "UProtobuf",
       "Enabled": true
+    },
+    {
+      "Name": "UVRHands",
+      "Enabled": true
     }
   ]
 }

@@ -69,6 +69,9 @@ public class USemLog : ModuleRules
 				"Landscape",
 				"WebSockets",
 				"CinematicCamera",
+				"HTTP",
+				"Json", 
+				"JsonUtilities",
 				//"Landscape", "AIModule",	// whitelisted actors when setting the world to visual only
 				//"UConversions",				// SL_WITH_ROS_CONVERSIONS
 				"UMCGrasp",					// SL_WITH_MC_GRASP

@@ -17,6 +17,8 @@ class USLIndividualComponent;
 /** Notiy the begin/end of a supported by event */
 DECLARE_MULTICAST_DELEGATE_FourParams(FSLBeginSupportedBySignature, USLBaseIndividual* /*Supported*/, USLBaseIndividual* /*Supporting*/, float /*Time*/, const uint64 /*PairId*/);
 DECLARE_MULTICAST_DELEGATE_ThreeParams(FSLEndSupportedBySignature, const uint64 /*PairId1*/, const uint64 /*PairId2*/, float /*Time*/);
+DECLARE_MULTICAST_DELEGATE_OneParam(FSLBeginPouring, const FSLContactResult&);
+DECLARE_MULTICAST_DELEGATE_ThreeParams(FSLEndPouring, USLBaseIndividual* /*Self*/, USLBaseIndividual* /*Other*/, float /*Time*/);
 
 /**
  * Structure holding the OverlapEnd event data,
@@ -149,6 +151,10 @@ public:
 	// Called when a supported by event begins / ends
 	FSLBeginSupportedBySignature OnBeginSLSupportedBy;
 	FSLEndSupportedBySignature OnEndSLSupportedBy;
+
+	// Called when a pouring event begins / ends
+	FSLBeginPouring OnPouringBegin;
+	FSLEndPouring OnPouringEnds;
 	
 protected:
 	// True if initialized

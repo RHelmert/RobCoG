@@ -1,5 +1,5 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #include "AnimNode_ManusLiveLinkPose.h"
 #include "Manus.h"
@@ -22,27 +22,12 @@ DECLARE_CYCLE_STAT(TEXT("Manus Anim Node Pre Update"), STAT_Manus_AnimNodePreUpd
 FAnimNode_ManusLiveLinkPose::FAnimNode_ManusLiveLinkPose()
 {
 	// Default values
-	ManusDashboardUserIndex = 0;
-	MotionCaptureType = EManusMotionCaptureType::LeftHand;
-
+	
 	// Init Live Link subject name
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 	LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(0);
-#else
-	SubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(0);
-#endif
 
 	// Init retarget asset
 	RetargetAsset = UManusLiveLinkRemapAsset::StaticClass();
-
-	// Init bone map
-	const UEnum* EnumPtr = FindObject<UEnum>(ANY_PACKAGE, TEXT("EManusBoneName"), true);
-	check(EnumPtr != nullptr);
-	for (int i = 0; i < (int)EManusBoneName::Max; i++)
-	{
-		FName BoneName = FName(*EnumPtr->GetNameStringByIndex(i));
-		BoneNameToEnum.Add(BoneName, (EManusBoneName)i);
-	}
 
 	// Init tracking device delta transforms
 	for (int i = 0; i < (int)EManusHandType::Max; i++)
@@ -69,7 +54,23 @@ void FAnimNode_ManusLiveLinkPose::PreUpdate(const UAnimInstance* InAnimInstance)
 
 		// Determine whether we should animate
 		ManusLiveLinkRemapAsset->bShouldAnimate = false;
-		int ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(ManusComponent ? ManusComponent->ManusDashboardUserIndex : ManusDashboardUserIndex, ManusComponent ? ManusComponent->ManusSkeleton : ManusSkeleton);
+
+        int ManusLiveLinkUserIndex = INDEX_NONE;
+        if ((ManusComponent != NULL) &&
+            (ManusComponent->ManusSkeleton != NULL))
+        {
+            ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(ManusComponent->ManusSkeleton->TargetUserIndexData.userIndex , ManusComponent->ManusSkeleton );
+        }
+        else
+        {
+            if (ManusSkeleton == NULL)
+            {
+                UE_LOG(LogManus, Warning, TEXT("No ManusSkeleton Assigned. please assign a skeleton first to the manus livelink pose!"));
+                return;
+            }
+            ManusLiveLinkUserIndex = FManusModule::Get().GetManusLiveLinkUserIndex(ManusSkeleton->TargetUserIndexData.userIndex , ManusSkeleton);
+        }
+
 		if (ManusLiveLinkUserIndex != INDEX_NONE)
 		{
 			ManusLiveLinkRemapAsset->bShouldAnimate = FManusModule::Get().GetManusLiveLinkUser(ManusLiveLinkUserIndex).bShouldUpdateLiveLinkData;
@@ -80,58 +81,25 @@ void FAnimNode_ManusLiveLinkPose::PreUpdate(const UAnimInstance* InAnimInstance)
 				if (ManusComponent)
 				{
 					// Update Live Link subject name from the Manus component Manus Live Link User index
-#if ENGINE_MAJOR_VERSION == 5 ||  ENGINE_MINOR_VERSION >= 23
 					LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusComponent);
-#else
-					SubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusComponent);
-#endif
-
-					// Update Manus motion capture type from the Manus component Manus motion capture type 
-					ManusLiveLinkRemapAsset->MotionCaptureType = ManusComponent->MotionCaptureType;
-
-					// Update hand mirroring
-					ManusLiveLinkRemapAsset->bMirrorHandBone = ManusComponent->bMirrorHandBone;
 
 					// Update Skeletal Mesh scale (with mirroring compensation)
 					ManusLiveLinkRemapAsset->SkeletalMeshScale = ManusComponent->GetComponentScale();
-					if (ManusComponent->bMirrorHandBone)
-					{
-						ManusLiveLinkRemapAsset->SkeletalMeshScale = ManusLiveLinkRemapAsset->SkeletalMeshScale.GetAbs();
-					}
-
+               
 					// Update Skeletal Mesh local transform in Actor space (with mirroring compensation)
 					FTransform SkeletalMeshTransform = ManusComponent->GetComponentTransform();
-					SkeletalMeshTransform = SkeletalMeshTransform.GetRelativeTransform(ManusComponent->GetOwner()->GetTransform());
-					if (ManusComponent->bMirrorHandBone)
-					{
-						SkeletalMeshTransform.SetScale3D(SkeletalMeshTransform.GetScale3D().GetAbs());
-						SkeletalMeshTransform.SetLocation(SkeletalMeshTransform.GetLocation() * FVector(1, -1, 1));
-						SkeletalMeshTransform.SetRotation(SkeletalMeshTransform.GetRotation().Inverse());
-					}
+					SkeletalMeshTransform = ManusComponent->GetOwner()->GetTransform();
+                  
 					ManusLiveLinkRemapAsset->SkeletalMeshActorSpaceTransform = SkeletalMeshTransform;
-
-					// Update bone name map
-					FMemory::Memcpy(BoneMap, ManusComponent->ManusSkeleton->BoneMap);
 				}
 				else
 				{
 					// Update Live Link subject name
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 					LiveLinkSubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex);
-#else
-					SubjectName = FManusLiveLinkSource::GetManusLiveLinkUserLiveLinkSubjectName(ManusLiveLinkUserIndex);
-#endif
-
-					// Update Manus motion capture type
-					ManusLiveLinkRemapAsset->MotionCaptureType = MotionCaptureType;
 
 					// Default values
-					ManusLiveLinkRemapAsset->bMirrorHandBone = false;
 					ManusLiveLinkRemapAsset->SkeletalMeshScale = FVector::OneVector;
 					ManusLiveLinkRemapAsset->SkeletalMeshActorSpaceTransform.SetIdentity();
-
-					// Update bone name map
-					FMemory::Memcpy(BoneMap, ManusSkeleton->BoneMap);
 				}
 			}
 		}

@@ -17,11 +17,7 @@
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Layout/SBox.h"
 #include "Modules/ModuleManager.h"
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 24
 #include "Subsystems/AssetEditorSubsystem.h"
-#else
-#include "Toolkits/AssetEditorManager.h"
-#endif
 #include "ISettingsModule.h"
 
 #define LOCTEXT_NAMESPACE "ManusAnimGraphNodeDetailCustomization"
@@ -54,30 +50,14 @@ void FManusAnimGraphNodeDetailCustomization::CustomizeDetails(IDetailLayoutBuild
 			// If type mismatches, multi selection doesn't work, just return
 			return;
 		}
-		if (ShouldHideTrackingDeviceDeltaTransform && CurrentNode->Node.MotionCaptureType != EManusMotionCaptureType::FullBody)
+        if (ShouldHideTrackingDeviceDeltaTransform && CurrentNode->Node.ManusSkeleton->SkeletonType != EManusSkeletonType::Body)
 		{
 			ShouldHideTrackingDeviceDeltaTransform = false;
 		}
 	}
-
-	// Hide TrackingDeviceDeltaTransform when MotionCaptureType is Full Body
-	EManusMotionCaptureType MotionCaptureTypeVal = EManusMotionCaptureType::LeftHand;
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
-	TSharedPtr<IPropertyHandle> MotionCaptureTypePropertyHandle = DetailBuilder->GetProperty(GET_MEMBER_NAME_CHECKED(FAnimNode_ManusLiveLinkPose, MotionCaptureType), FAnimNode_ManusLiveLinkPose::StaticStruct());
-#else
-	TSharedPtr<IPropertyHandle> MotionCaptureTypePropertyHandle = DetailBuilder->GetProperty(GET_MEMBER_NAME_CHECKED(FAnimNode_ManusLiveLinkPose, MotionCaptureType), (UClass*)(FAnimNode_ManusLiveLinkPose::StaticStruct()));
-#endif
-	if (MotionCaptureTypePropertyHandle)
-	{
-		MotionCaptureTypePropertyHandle->SetOnPropertyValueChanged(FSimpleDelegate::CreateSP(this, &FManusAnimGraphNodeDetailCustomization::ForceRefresh));
-	}
-
-	// Look for inner properties
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
+    
+    // Look for inner properties
 	FStructProperty* NodeProperty = AnimGraphNode->GetFNodeProperty();
-#else
-	UStructProperty* NodeProperty = AnimGraphNode->GetFNodeProperty();
-#endif
 	if (NodeProperty)
 	{
 		TSharedRef<IPropertyHandle> NodePropertyHandle = DetailBuilder->GetProperty(NodeProperty->GetFName(), AnimGraphNode->GetClass());
@@ -92,11 +72,7 @@ void FManusAnimGraphNodeDetailCustomization::CustomizeDetails(IDetailLayoutBuild
 				TSharedPtr<IPropertyHandle> TargetPropertyHandle = NodePropertyHandle->GetChildHandle(ChildHandleIndex);
 				if (TargetPropertyHandle.IsValid())
 				{
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
 					FProperty* TargetProperty = TargetPropertyHandle->GetProperty();
-#else
-					UProperty* TargetProperty = TargetPropertyHandle->GetProperty();
-#endif
 
 					if (TargetPropertyHandle->GetDefaultCategoryName() == FName(TEXT("ManusLiveLink")))
 					{

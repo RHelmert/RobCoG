@@ -74,7 +74,6 @@ struct FSLContactEndEvent
 DECLARE_MULTICAST_DELEGATE_FourParams(FSLBeginManipulatorGraspSignature, USLBaseIndividual* /*Self*/, USLBaseIndividual* /*Other*/, float /*Time*/, const FString& /*Type*/);
 DECLARE_MULTICAST_DELEGATE_ThreeParams(FSLEndManipulatorGraspSignature, USLBaseIndividual* /*Self*/, USLBaseIndividual* /*Other*/, float /*Time*/);
 
-
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FSLBeginManipulatorGraspSignatureBP, USLBaseIndividual*,individualOne, USLBaseIndividual*,individualTwo, float,f, const FString&,s);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FSLEndManipulatorGraspSignatureBP, USLBaseIndividual*, individualOne, USLBaseIndividual*, individualTwo, float,f);
 
@@ -114,6 +113,24 @@ public:
 	//Change the AxisOverwrite value
 	UFUNCTION(BlueprintCallable, Category = "Semantic Logger")
 	void setAxisOverwriteValue(float axisOverwrite);
+
+	//Overwrite the axis input. Enabling to let the grab react to other events or values. Compares against InputAxisOverwriteValue then. 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Semantic Logger")
+	bool bOverwriteInputAxisInput;
+
+	//Overwrite On OverlapEnd. Enabling it will cause items to be released when the Input axis value (overwritten or not) falls below the threshold.
+	//This ignores the case when the collision ends
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Semantic Logger")
+	bool bOverwriteCollisonEndDetection;
+
+	//Get the axis Threshhold
+	UFUNCTION(BlueprintCallable, Category = "Semantic Logger")
+	float GetInputAxisTriggerThresholdValue() {return InputAxisTriggerThresholdValue;}
+
+	//Get the grasped Individual Litst
+	UFUNCTION(BlueprintCallable, Category = "Semantic Logger")
+	void RemoveGraspedIndividuals() { GraspedIndividuals.Empty(5); }
+
 
 protected:
 #if WITH_EDITOR
@@ -171,7 +188,9 @@ private:
 	// A grasp has started
 	void GraspStarted(USLBaseIndividual* OtherIndividual);
 	
-	// A grasp has ended
+
+	// A grasp has ended (Bueprint callable to manually end grasp. This to prefent hitbox jittering)
+	UFUNCTION(BlueprintCallable, Category = "Semantic Logger")
 	void GraspEnded(USLBaseIndividual* OtherIndividual);
 
 	// Delayed call of sending the finished event to check for possible concatenation of jittering events of the same type
@@ -212,14 +231,14 @@ private:
 	
 public:
 	// Event called when grasp begins/ends
-			FSLBeginManipulatorGraspSignature OnBeginManipulatorGrasp;
-			FSLEndManipulatorGraspSignature OnEndManipulatorGrasp;
+	FSLBeginManipulatorGraspSignature OnBeginManipulatorGrasp;
+	FSLEndManipulatorGraspSignature OnEndManipulatorGrasp;
 	
 	// Additional Events called which are accessible from Blueprint
-		UPROPERTY(BlueprintAssignable, Category = "Grasp")
-			FSLBeginManipulatorGraspSignatureBP OnBeginManipulatorGraspBP;
-		UPROPERTY(BlueprintAssignable, Category = "Grasp")
-			FSLEndManipulatorGraspSignatureBP OnEndManipulatorGraspBP;
+	UPROPERTY(BlueprintAssignable, Category = "Grasp")
+		FSLBeginManipulatorGraspSignatureBP OnBeginManipulatorGraspBP;
+	UPROPERTY(BlueprintAssignable, Category = "Grasp")
+		FSLEndManipulatorGraspSignatureBP OnEndManipulatorGraspBP;
 
 	// Event called when a semantic overlap/contact begins/ends
 	FSLBeginContactSignature OnBeginManipulatorContact;
@@ -271,11 +290,9 @@ private:
 	ESLGraspHandType HandType;
 #endif // WITH_EDITORONLY_DATA
 	
-	//Overwrite the axis input. Enabling to let the grab react to other events or values. Compares against InputAxisOverwriteValue then. 
-	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
-	bool bOverwriteInputAxisInput;
+	
 
-	// Read the input directly, avoid biding to various controllers
+	// Input axis to listen for grasp events
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger", meta = (editcondition = "!bOverwriteInputAxisInput"))
 	FName InputAxisName;
 
@@ -328,6 +345,9 @@ private:
 
 	// Individuals currently grasped
 	TSet<USLBaseIndividual*> GraspedIndividuals;
+
+	// Individuals currently grasped
+	//USLBaseIndividual* GraspedIndividual;
 
 	// Individuals in contact with group A
 	TMap<USLBaseIndividual*, int32> GroupANumGraspContacts;

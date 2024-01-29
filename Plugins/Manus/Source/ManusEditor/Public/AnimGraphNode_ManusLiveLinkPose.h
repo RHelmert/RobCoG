@@ -23,19 +23,12 @@ protected:
 	virtual FString GetNodeCategory() const override;
 	// End of UEdGraphNode interface
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
 	virtual void PreEditChange(FProperty* PropertyAboutToChange) override;
-#else
-	virtual void PreEditChange(UProperty* PropertyAboutToChange) override;
-#endif
+
 	virtual void PostEditChangeProperty(struct FPropertyChangedEvent& PropertyChangedEvent) override;
 
 public:
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
 	FStructProperty* GetFNodeProperty() const;
-#else
-	UStructProperty* GetFNodeProperty() const;
-#endif
 
 public:
 	UPROPERTY(EditAnywhere, Category = Settings)

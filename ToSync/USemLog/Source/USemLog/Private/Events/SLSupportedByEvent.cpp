@@ -68,4 +68,25 @@ FString FSLSupportedByEvent::ToString() const
 	return FString::Printf(TEXT("SupportedIndividual:[%s] SupportingIndividual:[%s] PairId:%lld"),
 		*SupportedIndividual->GetInfo(), *SupportingIndividual->GetInfo(), PairId);
 }
+
+FString FSLSupportedByEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	// Call REST method to create sub actions on KnowRob side.
+	// somaClassName:somaIndividualName is sent at the moment for objects participated
+	FString ObjectsPartcipated = TEXT("[")
+		+ SupportedIndividual->GetClassValue() + TEXT(":") + SupportedIndividual->GetParentActor()->GetActorLabel()
+		+ TEXT(",")
+		+ SupportingIndividual->GetClassValue() + TEXT(":") + SupportingIndividual->GetParentActor()->GetActorLabel()
+		+ TEXT("]");
+
+
+	FString SubActionType = TEXT("soma:'Support'");
+	FString TaskType = TEXT("soma:'Supporting'");
+
+	FString AdditionalEventInfo = TEXT("");
+	InFSLKRRestClient->SendCreateSubActionRequest(SubActionType, TaskType,
+		ObjectsPartcipated, AdditionalEventInfo, double(StartTime), double(EndTime));
+
+	return TEXT("Succeed!");
+}
 /* End ISLEvent interface */

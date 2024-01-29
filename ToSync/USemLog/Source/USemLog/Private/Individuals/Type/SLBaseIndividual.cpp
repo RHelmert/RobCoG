@@ -199,15 +199,25 @@ bool USLBaseIndividual::UpdateCachedPose(float Tolerance, FTransform* OutPose)
 {
 	if (IsInit())
 	{
-		const FTransform CurrPose = ParentActor->GetTransform();
-		if(!CachedPose.Equals(CurrPose, Tolerance))
-		{
-			CachedPose = CurrPose;
-			if (OutPose != nullptr)
+		if (ParentActor) {
+			const FTransform CurrPose = ParentActor->GetTransform();
+			if (!CachedPose.Equals(CurrPose, Tolerance))
 			{
-				*OutPose = CachedPose;
+				CachedPose = CurrPose;
+				if (OutPose != nullptr)
+				{
+					*OutPose = CachedPose;
+				}
+				return true;
 			}
-			return true;
+			else
+			{
+				if (OutPose != nullptr)
+				{
+					*OutPose = CachedPose;
+				}
+				return false;
+			}
 		}
 		else
 		{
@@ -217,6 +227,7 @@ bool USLBaseIndividual::UpdateCachedPose(float Tolerance, FTransform* OutPose)
 			}
 			return false;
 		}
+		
 	}
 	else
 	{

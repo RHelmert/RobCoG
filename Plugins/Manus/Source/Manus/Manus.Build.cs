@@ -1,5 +1,5 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 // (Un)comment this to control if SteamVR is used for tracking in the plugin.
 // The SteamVR plugin should also be disabled in the Unreal Editor settings for this to work.
@@ -28,11 +28,9 @@ public class Manus : ModuleRules
 
 	public Manus(ReadOnlyTargetRules Target) : base(Target)
 	{
-#if UE_4_24_OR_LATER
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-#endif
         PrivatePCHHeaderFile = "Private/ManusPrivatePCH.h";
-
+        CppStandard = CppStandardVersion.Cpp17;
         bEnableExceptions = true;
 
 		PublicIncludePaths.AddRange(
@@ -62,15 +60,17 @@ public class Manus : ModuleRules
 				"HeadMountedDisplay",
 #if USE_STEAMVR
 				"SteamVR",
-#if !UE_4_24_OR_LATER
-				"SteamVRController",
-#endif
 #endif
 				"OpenVR",
 				"Sockets",
 				"Networking",
                 "LiveLink",
 				"LiveLinkInterface",
+// the following #if UE_5_0_OR_LATER statement seems to fail, but it only fails in visual studio. since everything is compiled in nmake, it is configured correctly and will work as intended
+// tnx epic for HORRIBLE documentation and clarification on this.
+#if UE_5_0_OR_LATER
+				"LiveLinkAnimationCore"
+#endif
 			});
 
 #if USE_STEAMVR
@@ -101,11 +101,8 @@ public class Manus : ModuleRules
 			string ManusDirectory = Path.Combine(BaseDirectory, "ThirdParty", "Manus", "Lib", "Win64");
 
 			// Add the libraries. 
-			RuntimeDependencies.Add(Path.Combine(ManusDirectory, "CoreSdkWrapper.dll"));
+			RuntimeDependencies.Add(Path.Combine(ManusDirectory, "ManusSDK.dll"));
 
-#if UE_VERSION_BELOW_4_24
-			PublicLibraryPaths.Add(ManusDirectory); 
-#endif
 		}
 
 		return isLibrarySupported;

@@ -118,7 +118,7 @@ void USLIndividualInfoComponent::OnComponentCreated()
 void USLIndividualInfoComponent::BeginPlay()
 {
 	Super::BeginPlay();	
-	UE_LOG(LogTemp, Warning, TEXT("%s::%d::%s::%.4fs"), *FString(__FUNCTION__), __LINE__, *GetFullName(), FPlatformTime::Seconds());
+	UE_LOG(LogTemp, Warning, TEXT("%s::%d: Started :%s::%.4fs"), *FString(__FUNCTION__), __LINE__, *GetFullName(), FPlatformTime::Seconds());
 }
 
 // Called every frame

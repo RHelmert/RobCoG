@@ -1,4 +1,4 @@
-﻿// Copyright 2015-2020 Manus
+﻿// Copyright 2015-2022 Manus
 
 #include "ManusLiveLinkSourceFactory_Replicated.h"
 #include "Manus.h"
@@ -18,7 +18,6 @@ FText UManusLiveLinkSourceFactory_Replicated::GetSourceTooltip() const
 	return FText::FromString("Manus Replicated Source");
 }
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 UManusLiveLinkSourceFactory_Replicated::EMenuType UManusLiveLinkSourceFactory_Replicated::GetMenuType() const
 {
 	if (IModularFeatures::Get().IsModularFeatureAvailable(ILiveLinkClient::ModularFeatureName))
@@ -37,28 +36,5 @@ TSharedPtr<ILiveLinkSource> UManusLiveLinkSourceFactory_Replicated::CreateSource
 {
 	return FManusModule::Get().GetLiveLinkSource(EManusLiveLinkSourceType::Replicated);
 }
-#else
-TSharedPtr<SWidget> UManusLiveLinkSourceFactory_Replicated::CreateSourceCreationPanel()
-{
-	if (!ActiveSourceEditor.IsValid())
-	{
-		SAssignNew(ActiveSourceEditor, SLiveLinkManusSourceEditor);
-	}
-	return ActiveSourceEditor;
-}
-
-TSharedPtr<ILiveLinkSource> UManusLiveLinkSourceFactory_Replicated::OnSourceCreationPanelClosed(bool bCreateSource)
-{
-	TSharedPtr<ILiveLinkSource> NewSource = nullptr;
-
-	if (bCreateSource && ActiveSourceEditor.IsValid())
-	{
-		NewSource = FManusModule::Get().GetLiveLinkSource(EManusLiveLinkSourceType::Replicated);
-	}
-	ActiveSourceEditor = nullptr;
-
-	return NewSource;
-}
-#endif
 
 #undef LOCTEXT_NAMESPACE

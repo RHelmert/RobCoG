@@ -1,6 +1,11 @@
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #pragma once
+
+// Set up a Doxygen group.
+/** @addtogroup ManusBlueprintLibrary
+ *  @{
+ */
 
 #include "ManusBlueprintTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
@@ -13,192 +18,209 @@ class MANUS_API UManusBlueprintLibrary : public UBlueprintFunctionLibrary
 
 public:
 
-	/* Acticate / deactivate Manus tracking.
-	 * @param  bNewIsActive		Whether Manus tracking should be active or not.
-	 */
+	/// @brief Acticate / deactivate Manus tracking.
+	/// @param  bNewIsActive		Whether Manus tracking should be active or not.
 	UFUNCTION(BlueprintCallable, Category = Manus)
 	static void SetManusActive(bool bNewIsActive);
 
-	/**
-	 * Returns the glove ID of the given Manus Dashboard User.
-	 * @param  ManusDashboardUserIndex	The index of the Manus Dashboard User to get the glove ID from.
-	 * @param  HandType					The hand type of the glove to get the glove ID from.
-	 * @param  GloveId					Output: The glove ID of the given Manus Dashboard User (0 if the ID is invalid).
-	 * @return If glove ID was successfully retrieved.
-	 */
+	/// @brief Get all manus user ID's and store a copy of the ID's in p_Users
+    /// @param  p_Users					
 	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetManusDashboardUserGloveId(int ManusDashboardUserIndex, EManusHandType HandType, int64& GloveId);
+	static EManusRet GetManusUsers(TArray<int64>& p_Users);
 
-	/**
-	 * Convert the given Manus ID to a string.
-	 * @param  GloveId The Manus ID that should be converted.
-	 * @return The string containing the converted Manus ID.
-	 */
+	/// @brief Get All tracker ID's and store a copy of the ID's in p_TrackersIds
+    /// @param  p_TrackersIds					
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet GetTrackerIds(TArray<FString>& p_TrackersIds);
+
+	/// @brief assign a tracker based on its ID to a user based on its ID.
+    /// @param  p_TrackerId					
+    /// @param  p_ManusUserId					
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet AssignTrackerToManusUser(FString& p_TrackerId, int64 p_ManusUserId);
+
+    /// @brief Convert the given Manus ID to an FString.
+	/// @param  GloveId The Manus ID that should be converted.
+	/// @return The FString containing the converted Manus ID.
 	UFUNCTION(BlueprintPure, Category = Manus)
 	static FString ConvertManusIdToString(int64 ManusId);
 
-	/**
-	 * Check if the Manus glove with the given ID is available.
-	 * @param  GloveId     The ID of the glove to do the check for.
-	 * @param  IsAvailable Output: if glove data is available.
-	 * @return If the check was successfully done.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet IsGloveDataAvailable(int64 GloveId, bool &IsAvailable);
-
-	/**
-	 * Get the latest glove data that was received from Manus for the Manus glove with the given ID.
-	 * @param  GloveId   The ID of the glove that glove data should be retrieved for.
-	 * @param  GloveData Output: the latest glove data for the glove.
-	 * @return If glove data was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetGloveData(int64 GloveId, FManusGlove &GloveData);
-
-	/**
-	 * Get the latest glove finger data that was received for the Manus glove with the given ID.
-	 * @param  GloveId  The ID of the glove that finger data should be retrieved for.
-	 * @param  Finger	The finger we want the processed data for.
-	 * @param  FingerData Output: the latest finger data for the glove.
-	 * @return If finger data was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetFingerData(int64 GloveId, EManusFingerName Finger, FManusFingerData& FingerData);
-
-	/**
-	 * Get the latest hand orientation based on the glove IMUs (inertial measurement units).
-	 * @param  GloveId  The ID of the glove.
-	 * @param  Orientation Output: the orientation of the hand determined by the glove IMUs (inertial measurement units).
-	 * @return If the orientation was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetHandOrientation(int64 GloveId, FRotator& Orientation);
-
-	/**
-	 * Retrieves an array containing the glove IDs of all available gloves.
-	 * These IDs can be used for functions ending in _UsingId, which will only have an effect on the specified glove.
-	 * @param  GloveIds  The array of glove IDs.
-	 * @return If the function succeeded in getting the glove IDs.
-	 */
+    /// @brief Retrieves an array containing the glove IDs of all available gloves.
+	/// These IDs can be used for functions ending in _UsingId, which will only have an effect on the specified glove.
+	/// @param  GloveIds  The array of glove IDs.
+    /// @return If the function succeeded in getting the glove IDs.
 	UFUNCTION(BlueprintPure, Category = Manus)
 	static EManusRet GetIdsOfAvailableGloves(TArray<int64> &GloveIds);
 
-	/**
-	 * Get the glove ID of the first available Manus glove with the given hand type.
-	 * @param  HandType  The hand type of the glove to look for.
-	 * @param  GloveId   Output: the ID of the glove that was found.
-	 * @return If the function succeeded in finding a glove ID.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetIdOfFirstAvailableGlove(EManusHandType HandType, int64 &GloveId);
-
-	/**
-	 * Get the ID of the dongle that the Manus glove with the given ID is paired to.
-	 * @param  GloveId  The glove ID of the Manus glove that the paired dongle ID should be retrieved for.
-	 * @param  DongleId Output: the ID of the dongle the first connected device with the given hand type is paired to.
-	 * @return If the device ID of the dongle was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetIdOfDongleGloveIsConnectedTo(int64 GloveId, int64 &DongleId);
-
-	/**
-	 * Get the hand type of the glove with the given glove ID.
-	 * @param GloveId         The glove ID of the glove to get the hand type of.
-	 * @param HandTypeOfGlove The hand type that the glove with the given glove ID has.
-	 * return If the hand type of the glove was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetHandTypeOfGlove(int64 GloveId, EManusHandType &HandTypeOfGlove);
-
-	/**
-	 * Get the battery level of the Manus glove with the given ID, in percent.
-	 * @param  GloveId           The glove ID of the glove that the battery level should be retrieved for.
-	 * @param  BatteryPercentage Output: the batterly level of the glove, in precent.
-	 * @return If the battery level was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetBatteryPercentage(int64 GloveId, int32 &BatteryPercentage);
-
-	/**
-	 * Get the transmission strength of the Manus glove with the given ID, in dB.
-	 * @param  GloveId                  The glove ID of the glove that the transmission strength should be retrieved for.
-	 * @param  TransmissionStrengthInDb Output: the transmission strength of the glove, in decibel.
-	 * @return If the transmission strength was successfully retrieved.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetTransmissionStrength(int64 GloveId, int32 &TransmissionStrengthInDb);
-
-	/**
-	 * Tell a Manus glove to vibrate. The glove with the given ID will be used.
-	 * @param  GloveId      The ID of the target glove.
-	 * @param  Power        The strength of the vibration, between 0.0 and 1.0.
-	 * @param  Milliseconds The number of milliseconds the glove should rumble for.
-	 * @return If the glove was succesfully told to vibrate.
-	 */
+    /// @brief set the first haptic dongle id in p_DongleId. 
+    /// This may get deprecated soon.
+    /// @param  DongleId 
 	UFUNCTION(BlueprintCallable, Category = Manus)
-	static EManusRet VibrateGlove(int64 GloveId, float Power = 0.6f, int32 Milliseconds = 300);
+	static EManusRet GetFirstHapticDongle(int64& DongleId);
 
-	/**
-	 * Tell a Manus glove to vibrate its fingers. The first available glove of the given hand type will be used.
-	 * @param  HandType		The hand type of the glove to look for.
-	 * @param  ThumbPower   The strength of the vibration for the thumb, between 0.0 and 1.0.
-	 * @param  IndexPower   The strength of the vibration for the index, between 0.0 and 1.0.
-	 * @param  MiddlePower  The strength of the vibration for the middle finger, between 0.0 and 1.0.
-	 * @param  RingPower    The strength of the vibration for the ring finger, between 0.0 and 1.0.
-	 * @param  PinkyPower   The strength of the vibration for the pinky finger, between 0.0 and 1.0.
-	 * @return If the glove was succesfully told to vibrate.
-	 */
+    /// @brief Tell a Manus glove to vibrate its fingers. The first available glove of the given hand type will be used.
+	/// @param  p_DongleId	The haptics dongle id of the glove to look for.
+	/// @param  HandType		The hand type of the glove to look for.
+	/// @param  ThumbPower   The strength of the vibration for the thumb, between 0.0 and 1.0.
+	/// @param  IndexPower   The strength of the vibration for the index, between 0.0 and 1.0.
+    /// @param  MiddlePower  The strength of the vibration for the middle finger, between 0.0 and 1.0.
+	/// @param  RingPower    The strength of the vibration for the ring finger, between 0.0 and 1.0.
+	/// @param  PinkyPower   The strength of the vibration for the pinky finger, between 0.0 and 1.0.
+    /// @return If the glove was succesfully told to vibrate.
 	UFUNCTION(BlueprintCallable, Category = Manus)
-	static EManusRet VibrateFingers(EManusHandType HandType, float ThumbPower = 1.0f, float IndexPower = 1.0f, float MiddlePower = 1.0f, float RingPower = 1.0f, float PinkyPower = 1.0f);
-	
-	/**
-	 * Returns the Polygon skeleton ID of the given Manus Live Link User.
-	 * @param  ManusLiveLinkUserIndex   The index of the Manus Live Link User.
-	 * @return The ID of the Polygon skeleton of the given Manus Live Link User.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	int64 GetManusLiveLinkUserPolygonSkeletonId(int ManusLiveLinkUserIndex);
+	static EManusRet VibrateFingers(int64 p_DongleId,EManusHandType HandType, float ThumbPower = 1.0f, float IndexPower = 1.0f, float MiddlePower = 1.0f, float RingPower = 1.0f, float PinkyPower = 1.0f);
 
-	/**
-	 * Get the Polygon skeleton ID of the first available Polygon skeleton.
-	 * @param  PolygonSkeletonId   Output: the ID of the Polygon skeleton that was found.
-	 * @return If the function succeeded in finding a Polygon skeleton ID.
-	 */
-	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetFirstPolygonSkeletonId(int64& PolygonSkeletonId);
+    /// @brief Tell a Manus glove associated to the given skeleton id to vibrate its fingers.
+	/// @param  p_SkeletonId	The skeleton id associated to the glove to look for.
+    /// @param  HandType		The hand type of the glove to look for.
+	/// @param  ThumbPower   The strength of the vibration for the thumb, between 0.0 and 1.0.
+	/// @param  IndexPower   The strength of the vibration for the index, between 0.0 and 1.0.
+	/// @param  MiddlePower  The strength of the vibration for the middle finger, between 0.0 and 1.0.
+	/// @param  RingPower    The strength of the vibration for the ring finger, between 0.0 and 1.0.
+	/// @param  PinkyPower   The strength of the vibration for the pinky finger, between 0.0 and 1.0.
+	/// @return If the glove was succesfully told to vibrate.
+	UFUNCTION(BlueprintCallable, Category = Manus)
+	static EManusRet VibrateFingersForSkeleton(int64 p_SkeletonId, EManusHandType HandType, float ThumbPower = 1.0f, float IndexPower = 1.0f, float MiddlePower = 1.0f, float RingPower = 1.0f, float PinkyPower = 1.0f);
 
-	/**
-	 * Retrieves an array containing the Polygon skeleton IDs of all Polygon skeletons.
-	 * These IDs can be used to retrieve data of a specific Polygon skeleton.
-	 * @param  PolygonSkeletonIds  The array of Polygon skeleton IDs.
-	 * @return If the function succeeded in getting the Polygon skeleton IDs.
-	 */
+    /// @brief Get the latest skeleton data that was received from Manus for the skeleton with the given ID.
+	/// @param  SkeletonId				The ID of the skeleton to get the data from.
+	/// @param  Skeleton		Output		The latest skeleton data for the connected skeleton.
+    /// @return If the skeleton data were successfuly retrieved.
 	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetIdsOfPolygonSkeletons(TArray<int64>& PolygonSkeletonIds);
+	static EManusRet GetSkeletonData(int64 SkeletonId, FManusMetaSkeleton& Skeleton);
 
-	/**
-	 * Get the latest Polygon skeleton data that was received from Manus for the Polygon skeleton with the given ID.
-	 * @param  PolygonSkeletonId				The ID of the Polygon skeleton to get the data from.
-	 * @param  PolygonSkeleton		Output		The latest Polygon skeleton data for the first connected Polygon skeleton.
-	 * @return If the Polygon skeleton data were successfuly retrieved.
-	 */
+    /// @brief create a skeleton structure and receive the skeleton index for later reference.
+    /// @param  p_Skeleton				The Skeleton Setup data
+	/// @param  p_SkeletonSetupIndex		Output		The index of the skeleton 
+	/// @return If the skeleton was successfuly created.
 	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetPolygonSkeletonData(int64 PolygonSkeletonId, FManusPolygonSkeleton& PolygonSkeleton);
+	static EManusRet CreateSkeletonSetup(const FManusSkeletonSetup& p_Skeleton, int64& p_SkeletonSetupIndex);
 
-	/**
-	 * Get the latest Tracker data that was received from Manus Core for the Tracker assigned to the given User Index for the hand of the given type.
-	 * @param  ManusLiveLinkUserIndex	The index of the Manus Live Link User.
-	 * @param  HandTypeOfTracker		The hand type of the glove.
-	 * @param  Tracker			Output	The latest Tracker data.
-	 * @return If the Tracker data were successfuly retrieved.
-	 */
+    /// @brief add a node to the skeleton structure 
+	/// @param  p_SkeletonSetupIndex		The Skeleton index
+	/// @param  p_Node					The node data
+	/// @return If the node was successfuly added.
 	UFUNCTION(BlueprintPure, Category = Manus)
-	static EManusRet GetTrackerData(int ManusLiveLinkUserIndex, EManusHandType HandTypeOfTracker, FManusTracker& Tracker);
+	static EManusRet AddNodeToSkeletonSetup(int64 p_SkeletonSetupIndex, const FManusNodeSetup& p_Node);
 
-	/* Returns the Player join request URL.
-	 * @param  Controller	The Player Controller from which we want the join request URL.
-	 * @return The Player join request URL.
-	 */
+    /// @brief add a chain to the skeleton structure
+	/// @param  p_SkeletonSetupIndex		The Skeleton index
+	/// @param  p_Chain					The node data
+	/// @return If the node was successfuly added.
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet AddChainToSkeletonSetup(int64 p_SkeletonSetupIndex, const FManusChainSetup& p_Chain);
+
+    /// @brief load the created skeleton into %Manus Core (important or nothing gets animated)
+	/// @param  p_SkeletonIndex						The temporary skeleton index as defined in the SDK
+	/// @param  p_SkeletonId				output		the skeleton id as generated by %Manus Core
+    /// @return If the skeleton was succesfully loaded.
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet LoadSkeleton(int64 p_SkeletonIndex, int64& p_SkeletonId);
+
+    /// @brief unload the created skeleton from %Manus Core 
+	/// @param  p_SkeletonId						The Skeleton id
+    /// @return If the skeleton was succesfully loaded.
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet UnloadSkeleton(int64 p_SkeletonId);
+
+
+    /// @brief Get the latest Tracker data that was received from %Manus Core for the Tracker assigned to the given User Index for the hand of the given type.
+	/// @param  ManusLiveLinkUserIndex	The index of the Manus Live Link User.
+	/// @param  HandTypeOfTracker		The hand type of the glove.
+	/// @param  Tracker			Output	The latest Tracker data.
+    /// @return If the Tracker data were successfuly retrieved.
+	UFUNCTION(BlueprintPure, Category = Manus)
+	static EManusRet GetHandTrackerData(int p_ManusLiveLinkUserIndex, EManusHandType p_HandTypeOfTracker, FManusTracker& p_Tracker);
+
+    /// @brief Returns the Player join request URL.
+	/// @param  Controller	The Player Controller from which we want the join request URL.
+	/// @return The Player join request URL.
 	UFUNCTION(BlueprintCallable, Category = Manus)
 	static FString GetPlayerJoinRequestURL(APlayerController* Controller);
+
+    /// @brief gets ergonomics data
+	/// @param  p_Data	The ergonomics data.
+	/// @param  p_GloveId	The glove id of the ergonomics data we want.
+	/// @returns success state
+	UFUNCTION(BlueprintCallable, Category = Manus)
+	static EManusRet GetErgonomics(FManusErgonomicsData& p_Data, int64 p_GloveId);
+
+    /// @brief get glove id of user using user index and hand type.
+    /// @param UserIndex 
+    /// @param p_HandTypeOfGlove 
+    /// @param p_GloveId 
+    /// @return returncode for success state
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static EManusRet GetGloveIdOfUser_UsingUserIndex(int32 UserIndex, EManusHandType p_HandTypeOfGlove, int64& p_GloveId);
+    /// @brief get glove id of user using user id and handtype
+    /// @param UserId 
+    /// @param p_HandTypeOfGlove 
+    /// @param p_GloveId 
+    /// @return returncode for success state
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static EManusRet GetGloveIdOfUser_UsingUserId(int32 UserId, EManusHandType p_HandTypeOfGlove, int64& p_GloveId);
+
+
+    /// @brief set if this session is as a Client or not
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static void SetAsClient(bool p_IsClient);
+
+    /// @brief set the %Manus Core host address to connect to
+	/// @param  p_ManusIP The new %Manus Core host address to connect to.
+	UFUNCTION(BlueprintCallable, Category = Manus)
+	static void SetManusCoreIP(FString p_ManusIP);
+
+    /// @brief get all the %Manus Core hosts that can be connected to
+    /// @returns TArray of all available %Manus Core host addresses.
+	UFUNCTION(BlueprintCallable, Category = Manus)
+	static TArray<FString> GetManusCoreIPs();
+
+    /// @brief for demo purposes only. set that the gloves use trackers.
+	/// @param  p_UseTrackers 
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static void SetGlovesUsingTrackers(bool p_UseTrackers);
+
+    /// @brief get current registered gestures
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static void GetGestures(TArray<FGestureLandscapeData>& p_Gestures);
+
+
+	/// @brief get current registered gestures
+	UFUNCTION(BlueprintCallable, Category = Manus)
+	static void GetGestureNameAndId(FGestureLandscapeData p_Gesture, FString& name, int64& id);
+
+    /// @brief get gesture id for a given gesture name in the given list of gestures.
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static int64 GetGestureId(FString p_Name, TArray<FGestureLandscapeData> p_Gestures);
+
+
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static bool GetGloveRotationForSkeletonNode(int64 p_SkeletonId, int p_NodeId, FQuat& p_Rotation);
+
+    /// @brief check if a gesture has reached the treshold value for a glove
+    /// @param p_GestureId 
+    /// @param p_Treshold  a value between 0 and 1.0 
+    /// @param p_GloveId 
+    /// @return if a gesture detection goes above the treshold check it will return true
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static bool IsGesturePastTreshold(int64 p_GestureId, float p_Treshold, int64 p_GloveId);
+
+    /// @brief get teh glove id for the skeleton id
+    /// @param p_SkeletonId 
+    /// @param p_Left        determines if we want left or right glove 
+    /// @return 
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static int64 GetGloveIdForSkeleton(int64 p_SkeletonId,bool p_Left);
+
+    /// @brief check if a certain skeleton has haptics available
+    /// @param p_SkeletonId 
+    /// @param p_Left 
+    /// @return 
+    UFUNCTION(BlueprintCallable, Category = Manus)
+    static bool DoesSkeletonHaveHaptics(int64 p_SkeletonId, bool p_Left);
+
 };
+
+// Close the Doxygen group.
+/** @} */
+

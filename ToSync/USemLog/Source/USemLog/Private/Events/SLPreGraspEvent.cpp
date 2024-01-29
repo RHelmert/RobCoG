@@ -68,4 +68,24 @@ FString FSLPreGraspEvent::ToString() const
 	return FString::Printf(TEXT("Individual:[%s] Manipulator:[%s] PairId:%lld"),
 		*Manipulator->GetInfo(), *Individual->GetInfo(), PairId);
 }
+
+FString FSLPreGraspEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	// Call REST method to create sub actions on KnowRob side.
+	// somaClassName:somaIndividualName is sent at the moment for objects participated
+	FString ObjectsPartcipated = TEXT("[")
+		+ Individual->GetClassValue() + TEXT(":") + Individual->GetParentActor()->GetActorLabel()
+		+ TEXT(",")
+		+ Manipulator->GetClassValue() + TEXT(":") + Manipulator->GetParentActor()->GetActorLabel()
+		+ TEXT("]");
+
+	FString SubActionType = TEXT("soma:'PreGrasp'");
+	FString TaskType = TEXT("soma:'PreGrasping'");
+
+	FString AdditionalEventInfo = TEXT("");
+	InFSLKRRestClient->SendCreateSubActionRequest(SubActionType, TaskType,
+		ObjectsPartcipated, AdditionalEventInfo, double(StartTime), double(EndTime));
+
+	return TEXT("Succeed!");
+}
 /* End ISLEvent interface */

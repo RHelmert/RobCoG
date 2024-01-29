@@ -1,0 +1,15 @@
+#pragma once
+/*! \mainpage %Manus Unreal Plugin Documentation
+*
+* \section intro_sec Introduction
+*
+
+Welcome to the documentation for the %Manus Core Unreal Plugin! We've designed it to allow you to get data off the %Manus Gloves and Skeletons as quickly and easily as possible.
+
+For details on how to install the plugin and setup the connection with %Manus Core to your model, check out the accompanying "Unreal plugin getting started document.odt" file. you can find it in the ".\Plugins\Manus\Source\Manus" sub directory.
+
+\section support_sec Support
+
+If you have questions please get in touch with us at support@manus-meta.com.
+*/#pragma once
+#pragma once

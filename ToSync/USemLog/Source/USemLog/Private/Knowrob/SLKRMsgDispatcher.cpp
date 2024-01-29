@@ -258,6 +258,7 @@ void SLKRMsgDispatcher::StartLogging(sl_pb::StartLoggingParams params)
 	LocationParameters.bUseCustomTaskId = true;
 	LocationParameters.TaskId = TaskId;
 	LocationParameters.bUseCustomEpisodeId = true;
+	LocationParameters.bUseCustomKnowRobIpAddress = true;
 	LocationParameters.EpisodeId = EpisodeId;
 	LocationParameters.bOverwrite = true;
 	DBServerParameters.Ip = MongoServerIP;

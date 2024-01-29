@@ -1,5 +1,5 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #include "Manus.h"
 #include "CoreSdk.h"
@@ -17,6 +17,8 @@
 #include "Features/IModularFeatures.h"
 #include "Misc/MessageDialog.h"
 
+#include "Runtime/Core/Public/Misc/Paths.h"
+
 #if WITH_EDITOR
 #include "Editor.h"
 #endif
@@ -30,14 +32,12 @@ void FManusModule::StartupModule()
 {
 	IModuleInterface::StartupModule();
 
-#if ENGINE_MAJOR_VERSION == 5 ||  ENGINE_MINOR_VERSION >= 23
 	// Register Live Link events
 	FLiveLinkClient* Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
 	if (Client)
 	{
 		Client->OnLiveLinkSourceRemoved().AddRaw(this, &FManusModule::OnLiveLinkSourceRemoved);
 	}
-#endif
 
 	// Register game mode events
 	FGameModeEvents::GameModePostLoginEvent.AddRaw(this, &FManusModule::OnGameModePostLogin);
@@ -78,6 +78,7 @@ void FManusModule::StartupModule()
 	{
 		SetActive(GetDefault<UManusSettings>()->bUseManusInGame);
 	}
+    m_IsClient = false;
 }
 
 // Shut the module down.
@@ -85,14 +86,12 @@ void FManusModule::ShutdownModule()
 {
 	SetActive(false);
 
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 23
 	// Unregister Live Link events
 	FLiveLinkClient* Client = &IModularFeatures::Get().GetModularFeature<FLiveLinkClient>(FLiveLinkClient::ModularFeatureName);
 	if (Client)
 	{
 		Client->OnLiveLinkSourceRemoved().RemoveAll(this);
 	}
-#endif
 
 	// Unregister game mode events
 	FGameModeEvents::GameModePostLoginEvent.RemoveAll(this);
@@ -108,6 +107,77 @@ void FManusModule::ShutdownModule()
 
 }
 
+//Check whether connected to Manus Core Host
+bool FManusModule::IsConnected()
+{
+	EManusRet t_Ret = EManusRet::Error;
+	t_Ret = CoreSdk::CheckConnection();
+	
+	if( t_Ret == EManusRet::NotConnected )
+	{
+		return false;
+	}
+	else if( t_Ret == EManusRet::Success )
+	{
+		return true;
+	}
+
+	return false;
+}
+
+FString FManusModule::GetManusCoreIP()
+{
+	return m_ManusIP;
+}
+
+void FManusModule::SetAsClient(bool p_IsClient)
+{
+    m_IsClient = p_IsClient;
+}
+
+bool FManusModule::IsClient()
+{
+    return m_IsClient;
+}
+
+bool FManusModule::SetManusCoreIP(FString p_ManusIP )
+{
+	m_ManusIP = p_ManusIP;
+	// NOW we can actually try to connect to manus core
+
+	if (bIsActive)
+	{
+		EManusRet t_Ret = EManusRet::Error;
+        if (p_ManusIP.IsEmpty()) return false; // no connection.
+
+		// check if local or remote
+		if ((p_ManusIP.Compare("LocalHost") == 0) ||
+			(p_ManusIP.Compare("127.0.0.1") == 0))
+		{
+			t_Ret = CoreSdk::ConnectLocally();
+		}
+		else
+		{
+			t_Ret = CoreSdk::ConnectRemotely(p_ManusIP);
+		}
+		if (t_Ret == EManusRet::Success)
+		{
+			// Init Live Link local source
+			GetLiveLinkSource(EManusLiveLinkSourceType::Local);
+			return true;
+		}
+	}
+	return false;
+}
+
+void FManusModule::GetRemoteHosts(TArray<FString>& p_Hosts)
+{
+	m_Hosts.Reset();
+	CoreSdk::FindRemoteHosts(m_Hosts);
+
+	p_Hosts.Insert(m_Hosts,0);
+}
+
 void FManusModule::SetActive(bool bNewIsActive)
 {
 	if (bIsActive != bNewIsActive)
@@ -115,33 +185,23 @@ void FManusModule::SetActive(bool bNewIsActive)
 		bIsActive = bNewIsActive;
 		if (bIsActive)
 		{
-			UE_LOG(LogManus, Log, TEXT("Manus tracking activated."));
+			UE_LOG(LogManus, Log, TEXT("Manus SDK activated."));
 
 			// Init Core SDK
 			CoreSdk::Initialize();
-			CoreSdk::ConnectLocally();
-
-			// Init Live Link sources
-			GetLiveLinkSource(EManusLiveLinkSourceType::Replicated);
-			GetLiveLinkSource(EManusLiveLinkSourceType::Local);
 		}
 		else
 		{
-			UE_LOG(LogManus, Log, TEXT("Manus tracking deactivated."));
+			UE_LOG(LogManus, Log, TEXT("Manus SDK deactivated."));
 
 			// Shut Core SDK down
 			CoreSdk::ShutDown();
-
+			m_ManusIP = "";
 			// Invalidate Live Link sources
 			if (LiveLinkSources[(int)EManusLiveLinkSourceType::Local])
 			{
 				LiveLinkSources[(int)EManusLiveLinkSourceType::Local]->Destroy();
 				LiveLinkSources[(int)EManusLiveLinkSourceType::Local].Reset();
-			}
-			if (LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated])
-			{
-				LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated]->Destroy();
-				LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated].Reset();
 			}
 		}
 	}
@@ -149,15 +209,14 @@ void FManusModule::SetActive(bool bNewIsActive)
 
 void FManusModule::OnGameModePostLogin(AGameModeBase* GameMode, APlayerController* NewPlayer)
 {
+    GetLiveLinkSource(EManusLiveLinkSourceType::Replicated); // we always need the replicants!
+    
 	// Spawn Manus replicator
 	FActorSpawnParameters ActorSpawnParameters;
 	ActorSpawnParameters.Owner = NewPlayer;
 	AManusReplicator* Replicator = GameMode->GetWorld()->SpawnActor<AManusReplicator>(ActorSpawnParameters);
-#if ENGINE_MAJOR_VERSION == 5 || ENGINE_MINOR_VERSION >= 25
+
 	Replicator->ReplicatorId = NewPlayer->PlayerState->GetPlayerId();
-#else
-	Replicator->ReplicatorId = NewPlayer->PlayerState->PlayerId;
-#endif
 	Replicators.Add(NewPlayer, Replicator);
 }
 
@@ -170,6 +229,12 @@ void FManusModule::OnGameModeLogout(AGameModeBase* GameMode, AController* Exitin
 		(*Replicator)->Destroy();
 		Replicators.Remove(Exiting);
 	}
+
+    if (LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated])
+    {
+        LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated]->Destroy();
+        LiveLinkSources[(int)EManusLiveLinkSourceType::Replicated].Reset();
+    }
 }
 
 int FManusModule::GetManusLiveLinkUserIndex(int ManusDashboardUserIndex, class UManusSkeleton* ManusSkeleton)
@@ -198,9 +263,9 @@ void FManusModule::AddObjectUsingManusLiveLinkUser(int ManusDashboardUserIndex, 
 		if (Index == INDEX_NONE)
 		{
 			Index = ManusLiveLinkUsers.AddDefaulted();
-			ManusLiveLinkUsers[Index].ManusDashboardUserIndex = ManusDashboardUserIndex;
+			ManusLiveLinkUsers[Index].ManusDashboardUserIndex = ManusDashboardUserIndex; // todo get a manus user ID in here instead of an index.
 			ManusLiveLinkUsers[Index].ManusSkeleton = ManusSkeleton;
-			ManusLiveLinkUsers[Index].PolygonInitializationRetryCountdown = 1;
+			ManusLiveLinkUsers[Index].SkeletonsInitializationRetryCountdown = 1;
 		}
 		ManusLiveLinkUsers[Index].ObjectsUsingUser.AddUnique(Object);
 	}
@@ -326,5 +391,15 @@ void FManusModule::HandleEndPIE(const bool InIsSimulating)
 }
 
 #endif	// WITH_EDITOR
+
+void FManusModule::SetGlovesUsingTrackers(bool p_UseTrackers)
+{
+    m_UseTrackersForGloves = p_UseTrackers;
+}
+
+bool FManusModule::GetGlovesUsingTrackers()
+{
+    return m_UseTrackersForGloves;
+}
 
 #undef LOCTEXT_NAMESPACE

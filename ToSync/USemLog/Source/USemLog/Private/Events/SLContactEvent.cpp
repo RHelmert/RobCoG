@@ -76,4 +76,29 @@ FString FSLContactEvent::ToString() const
 	return FString::Printf(TEXT("Individual1:[%s] Individual2:[%s] PairId:%lld"),
 		*Individual1->GetInfo(), *Individual2->GetInfo(), PairId);
 }
+
+FString FSLContactEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	// Call REST method to create sub actions on KnowRob side...
+	// TODO: send here the roles of each objects that participated in to the event and 
+	// log on KnowRob side proper roles as well as type of objects, 
+	// somaClassName:somaIndividualName is sent at the moment for objects participated
+	FString ObjectsPartcipated = TEXT("[") 
+		+ Individual1->GetClassValue() + TEXT(":") + Individual1->GetParentActor()->GetActorLabel() 
+		+ TEXT(",") +
+		Individual2->GetClassValue() + TEXT(":") + Individual2->GetParentActor()->GetActorLabel() 
+		+ TEXT("]");
+
+
+	FString SubActionType = TEXT("soma:'Contact'");
+	// TODO: create new concept called Touching in SOMA task branch
+	FString TaskType = TEXT("soma:'InContact'");
+
+	 
+	/*InFSLKRRestClient->SendCreateSubActionRequest(SubActionType, TaskType,
+		ObjectsPartcipated, AdditionalEventInfo, double(StartTime), double(EndTime));*/
+
+	return TEXT("Succeed!");
+}
+
 /* End ISLEvent interface */

@@ -10,12 +10,12 @@
 
 
 // Set parent
-void FSLContainerEventHandler::Init(UObject* InParent)
+void FSLContainerEventHandler::Init(UObject* InAgentToObserve)
 {
 	if (!bIsInit)
 	{
 		// Check if parent is of right type
-		Parent = Cast<USLContainerMonitor>(InParent);
+		Parent = Cast<USLContainerMonitor>(InAgentToObserve);
 		if (Parent)
 		{
 			// Mark as initialized

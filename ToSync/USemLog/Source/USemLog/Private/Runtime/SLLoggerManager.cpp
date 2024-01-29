@@ -34,6 +34,7 @@ ASLLoggerManager::ASLLoggerManager()
 	bUseIndependently = false;
 	bLogWorldState = false;
 	bLogActionsAndEvents = false;
+	
 
 #if WITH_EDITORONLY_DATA
 	// Make manager sprite smaller (used to easily find the actor in the world)
@@ -111,7 +112,20 @@ void ASLLoggerManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
 	Super::EndPlay(EndPlayReason);
 	if (!bIsFinished)
 	{
+		// Finish rest of the methods
 		Finish();
+
+		//Stop Speech Recording when Game is Ended
+		ASLLoggerManager::AudioStop();
+
+		// first finish the NEEM Episode so that unnecessary tf messages do not get logged.
+		if (isEpisodeCreated && !isEpisodeFinished) {
+			const TCHAR* Status = EHttpRequestStatus::ToString(fSLKRRestClient.SendFinishEpisodeRequest());
+
+			//const TCHAR* Status = EHttpRequestStatus::ToString(fSLSpeechRestClient.SendStopAudioRequest());
+			UE_LOG(LogTemp, Display, TEXT("Episode finish request response status: %s"), Status);
+		}
+
 	}
 }
 
@@ -147,67 +161,125 @@ void ASLLoggerManager::Init()
 {
 	if (bIsInit)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) is already initialized.."), *FString(__FUNCTION__), __LINE__, *GetName());
+		UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) is already initialized.."), *FString(__FUNCTION__), __LINE__, *GetName());
 		return;
 	}
 
+	bool worldStateInited;
 	if (bLogWorldState)
 	{
 		if (!SetWorldStateLogger())
 		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) could not set the world state logger, aborting init.."),
+			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) could not set the world state logger, aborting init of WorldSateLogger"),
 				*FString(__FUNCTION__), __LINE__, *GetName());
-			return;
+			//return;
 		}
 		else if(WorldStateLogger->IsRunningIndependently())
 		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) world state logger (%s) is running independently, aborting init.."),
+			UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) world state logger (%s) is running independently, aborting init of WorldSateLogger"),
 				*FString(__FUNCTION__), __LINE__, *GetName(), *WorldStateLogger->GetName());
-			return;
+			//return;
 		}
-
-		WorldStateLogger->Init(WorldStateLoggerParams, LocationParams, DBServerParams);
-		if (!WorldStateLogger->IsInit())
-		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) world state logger (%s) could not be init, aborting init.."),
-				*FString(__FUNCTION__), __LINE__, *GetName(), *WorldStateLogger->GetName());
-			return;
+		else {
+			WorldStateLogger->Init(WorldStateLoggerParams, LocationParams, DBServerParams);
+			if (!WorldStateLogger->IsInit())
+			{
+				UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) world state logger (%s) could not be init, aborting init of WorldSateLogger"),
+					*FString(__FUNCTION__), __LINE__, *GetName(), *WorldStateLogger->GetName());
+				//return;
+			}
+			else {
+				worldStateInited = true;
+			}
 		}
 	}
 
+	bool symbolicInited;
 	if (bLogActionsAndEvents)
 	{
 		if (!SetSymbolicLogger())
 		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) could not set the symbolic logger, aborting init.."),
+			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) could not set the symbolic logger, aborting init of SymbolicLogger"),
 				*FString(__FUNCTION__), __LINE__, *GetName());
-			return;
+			//return;
 		}
 		else if (SymbolicLogger->IsRunningIndependently())
 		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) symbolic logger (%s) is running independently, aborting init.."),
+			UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) symbolic logger (%s) is running independently, aborting init of SymbolicLogger"),
 				*FString(__FUNCTION__), __LINE__, *GetName(), *SymbolicLogger->GetName());
-			return;
+			//return;
 		}
-
-		SymbolicLogger->Init(SymbolicLoggerParams, LocationParams);
-		if (!SymbolicLogger->IsInit())
-		{
-			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) symbolic logger (%s) could not be init, aborting init.."),
-				*FString(__FUNCTION__), __LINE__, *GetName(), *SymbolicLogger->GetName());
-			return;
+		else {
+			SymbolicLogger->Init(SymbolicLoggerParams, LocationParams);
+			if (!SymbolicLogger->IsInit())
+			{
+				UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) symbolic logger (%s) could not be init, aborting init of SymbolicLogger"),
+					*FString(__FUNCTION__), __LINE__, *GetName(), *SymbolicLogger->GetName());
+				//return;
+			}
+			else {
+				symbolicInited = true;
+			}
 		}
 	}
 
+	// initialize fSLKRRestClient with URL parameters
+	fSLKRRestClient.Init(*GetKnowRobIpAddress(), *GetKnowRobServerPort(), "", *GetGamePlayerName());
+
 
 	bIsInit = true;
-	UE_LOG(LogTemp, Log, TEXT("%s::%d Logger manager (%s) succesfully initialized at %f.."),
+	UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) succesfully initialized at %f.."),
 		*FString(__FUNCTION__), __LINE__, *GetName(), GetWorld()->GetTimeSeconds());
+	
+	if (!worldStateInited) {
+		UE_LOG(LogTemp, Error, TEXT("%s::%d However the WorldStateLogger could not be initialized."),
+			*FString(__FUNCTION__), __LINE__);
+	}
+	if (!symbolicInited) {
+		UE_LOG(LogTemp, Error, TEXT("%s::%d However the SymbolicLogger could not be initialized."),
+			*FString(__FUNCTION__), __LINE__);
+	}
+
 }
 
 // Start logging
 void ASLLoggerManager::Start()
 {
+	if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
+	{
+		if (UInputComponent* IC = PC->InputComponent)
+		{
+			IC->BindAction(StartParams.UserInputAudioStartActionName, IE_Pressed, this, &ASLLoggerManager::AudioStart);
+			IC->BindAction(StartParams.UserInputAudioStopActionName, IE_Pressed, this, &ASLLoggerManager::AudioStop);
+			//IC->BindAction(StartParams.UserInputAudioActionName, IE_Pressed, this, &ASLLoggerManager::UserInputToggleCallback);
+
+			
+
+		}
+	}
+
+	// TODO: remoev this code when in VR mode. call the NEEM rest API to create a new NEEM Episode
+	if (bCreateNEEM) {
+		// call create an episode once per game, check if it is already created 
+		if (!isEpisodeCreated) {
+			UE_LOG(LogTemp, Warning, TEXT("NEEM RECORDING STARTED!!!"));
+			fSLKRRestClient.SendCreateEpisodeRequest();
+
+			// get system time when game starts
+			//FDateTime timeUtc = FDateTime::UtcNow();
+			//int64 unixStart = timeUtc.ToUnixTimestamp() + timeUtc.GetSecond();
+			//UE_LOG(LogTemp, Display, TEXT("time found: %lld"), unixStart); // log time
+			// the Unix time stamp should be in seconds hence further divide this time by 1000
+			//fSLKRRestClient.SetGameStartUnixTime(unixStart);
+
+			EpisodeIriResponse = fSLKRRestClient.getEpisodeIri();
+			ActionIriResponse = fSLKRRestClient.getActionIri();
+
+			isEpisodeCreated = true;
+		}
+
+	}
+
 	if (bIsStarted)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) is already started.."), *FString(__FUNCTION__), __LINE__, *GetName());
@@ -239,6 +311,10 @@ void ASLLoggerManager::Start()
 	if (bLogActionsAndEvents)
 	{
 		SymbolicLogger->Start();
+		
+		// set the SLKRRestClient with all appropreate parameters to connect with KnowRob
+		SymbolicLogger->SetSLKRRestClient(&fSLKRRestClient);
+
 		if (!SymbolicLogger->IsStarted())
 		{
 			UE_LOG(LogTemp, Error, TEXT("%s::%d Logger manager (%s) symbolic logger (%s) could not be started, aborting start.."),
@@ -248,8 +324,55 @@ void ASLLoggerManager::Start()
 	}
 
 	bIsStarted = true;
-	UE_LOG(LogTemp, Log, TEXT("%s::%d Logger manager (%s) succesfully started at %f.."),
+	UE_LOG(LogTemp, Warning, TEXT("%s::%d Logger manager (%s) succesfully started at %f.."),
 		*FString(__FUNCTION__), __LINE__, *GetName(), GetWorld()->GetTimeSeconds());
+}
+
+void ASLLoggerManager::AudioStart()
+{
+
+	// call the NEEM rest API to create a new NEEM Episode
+	if (bCreateNEEM) {
+		// call create an episode once per game, check if it is already created 
+		if (!isEpisodeCreated) {
+			UE_LOG(LogTemp, Warning, TEXT("NEEM RECORDING STARTED!!!"));
+			fSLKRRestClient.SendCreateEpisodeRequest();
+
+			// get system time when game starts
+			//FDateTime timeUtc = FDateTime::UtcNow();
+			//int64 unixStart = timeUtc.ToUnixTimestamp() + timeUtc.GetSecond();
+			//UE_LOG(LogTemp, Display, TEXT("time found: %lld"), unixStart); // log time
+			// the Unix time stamp should be in seconds hence further divide this time by 1000
+			//fSLKRRestClient.SetGameStartUnixTime(unixStart);
+
+			EpisodeIriResponse = fSLKRRestClient.getEpisodeIri();
+			ActionIriResponse = fSLKRRestClient.getActionIri();
+
+			isEpisodeCreated = true;
+		}
+
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Audio RECORDING"));
+	fSLSpeechRestClient.SendRecordAudioRequest();
+}
+
+void ASLLoggerManager::AudioStop()
+{
+
+	// first finish the NEEM Episode so that unnecessary tf messages do not get logged.
+	if (isEpisodeCreated && !isEpisodeFinished) {
+		const TCHAR* Status = EHttpRequestStatus::ToString(fSLKRRestClient.SendFinishEpisodeRequest());
+		isEpisodeFinished = true;
+
+		//const TCHAR* Status = EHttpRequestStatus::ToString(fSLSpeechRestClient.SendStopAudioRequest());
+		UE_LOG(LogTemp, Display, TEXT("Episode finish request response status: %s"), Status);
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Audio STOPPED RECORDING"));
+	const TCHAR* Status = EHttpRequestStatus::ToString(fSLSpeechRestClient.SendStopAudioRequest());
+	//TMap<FString, TArray<TMap<FString, FString>>> Transcription = fSLSpeechRestClient.Total;
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Transcription FOUND: %s"), *(fSLSpeechRestClient.Message)));
+	UE_LOG(LogTemp, Display, TEXT("Audio Stop request response status: %s"), Status);
 }
 
 // Finish logging
@@ -274,7 +397,7 @@ void ASLLoggerManager::Finish(bool bForced)
 
 	if (bLogActionsAndEvents)
 	{
-		SymbolicLogger->Finish();
+		SymbolicLogger->Finish(true);
 	}
 
 	bIsStarted = false;
@@ -351,6 +474,7 @@ bool ASLLoggerManager::SetSymbolicLogger()
 {
 	if (SymbolicLogger && SymbolicLogger->IsValidLowLevel() && !SymbolicLogger->IsPendingKillOrUnreachable())
 	{
+		SymbolicLogger->SetSLKRRestClient(&fSLKRRestClient);
 		return true;
 	}
 
@@ -359,6 +483,7 @@ bool ASLLoggerManager::SetSymbolicLogger()
 		if ((*Iter)->IsValidLowLevel() && !(*Iter)->IsPendingKillOrUnreachable())
 		{
 			SymbolicLogger = *Iter;
+			SymbolicLogger->SetSLKRRestClient(&fSLKRRestClient);
 			return true;
 		}
 	}
@@ -370,6 +495,8 @@ bool ASLLoggerManager::SetSymbolicLogger()
 #if WITH_EDITOR
 	SymbolicLogger->SetActorLabel(TEXT("SL_SymbolicLogger"));
 #endif // WITH_EDITOR
+
+	SymbolicLogger->SetSLKRRestClient(&fSLKRRestClient);
 	return true;
 }
 

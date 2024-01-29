@@ -178,4 +178,24 @@ FString FSLSlicingEvent::ToString() const
 			*PerformedBy->GetInfo(), *DeviceUsed->GetInfo(), *ObjectActedOn->GetInfo(), PairId);
 	}
 }
+
+FString FSLSlicingEvent::RESTCallToKnowRob(FSLKRRestClient* InFSLKRRestClient) const
+{
+	// Call REST method to create sub actions on KnowRob side.
+	// somaClassName:somaIndividualName is sent at the moment for objects participated
+	FString ObjectsPartcipated = TEXT("[") 
+		+ PerformedBy->GetClassValue() + TEXT(":") + PerformedBy->GetParentActor()->GetActorLabel() + TEXT(",")
+		+ ObjectActedOn->GetClassValue() + TEXT(":") + ObjectActedOn->GetParentActor()->GetActorLabel() + TEXT(",")
+		+ DeviceUsed->GetClassValue() + TEXT(":") + DeviceUsed->GetParentActor()->GetName() 
+		+ TEXT("]");
+
+	FString SubActionType = TEXT("soma:'Slice'");
+	FString TaskType = TEXT("soma:'Slicing'");
+
+	FString AdditionalEventInfo = TEXT("");
+	InFSLKRRestClient->SendCreateSubActionRequest(SubActionType, TaskType,
+		ObjectsPartcipated, AdditionalEventInfo, double(StartTime), double(EndTime));
+
+	return TEXT("Succeed!");
+}
 /* End ISLEvent interface */

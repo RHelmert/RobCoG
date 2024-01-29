@@ -30,73 +30,13 @@
 					}
 				},
 				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"east":
-						{
-							"output": "/actions/main/in/LeftNextGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"west":
-						{
-							"output": "/actions/main/in/LeftPrevGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/right/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"east":
-						{
-							"output": "/actions/main/in/RightNextGraspAnim"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/right/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"west":
-						{
-							"output": "/actions/main/in/RightPrevGraspAnim"
-						}
-					}
-				},
-				{
 					"mode": "button",
 					"path": "/user/hand/right/input/grip",
 					"inputs":
 					{
 						"click":
 						{
-							"output": "/actions/main/in/SLTrigger"
+							"output": "/actions/main/in/RightPointAt"
 						}
 					}
 				},
@@ -107,37 +47,7 @@
 					{
 						"click":
 						{
-							"output": "/actions/main/in/SLTrigger"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/left/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"north":
-						{
-							"output": "/actions/main/in/LeftGraspHelper"
-						}
-					}
-				},
-				{
-					"mode": "dpad",
-					"path": "/user/hand/right/input/trackpad",
-					"parameters":
-					{
-						"sub_mode": "click"
-					},
-					"inputs":
-					{
-						"north":
-						{
-							"output": "/actions/main/in/RightGraspHelper"
+							"output": "/actions/main/in/LeftPointAt"
 						}
 					}
 				},

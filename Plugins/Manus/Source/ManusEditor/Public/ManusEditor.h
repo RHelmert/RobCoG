@@ -1,5 +1,5 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
-// Copyright 2015-2020 Manus
+// Copyright 2015-2022 Manus
 
 #pragma once
 
@@ -8,6 +8,8 @@
 #include "Features/IModularFeature.h"
 #include "Textures/SlateIcon.h"
 #include "Runtime/Launch/Resources/Version.h"
+
+#include "Runtime/SlateCore/Public/Widgets/SWidget.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(LogManusEditor, All, All);
 
@@ -34,10 +36,19 @@ private:
 	void RegisterAssets();
 	void UnregisterAssets();
 
-	static FText GetToolbarButtonTooltip();
-	static FSlateIcon GetToolbarButtonIcon();
-	void OnToolbarButtonClicked();
 
 private:
+	static FSlateIcon GetToolbarHostsButtonIcon();
+	void OnToggleConnectClicked();
+    void SwitchHost(FString p_NewHost);
+	void OnToolbarRefreshHostsButtonClicked();
+	TSharedRef<SWidget> FillToolbarComboButton(TSharedPtr<class FUICommandList> Commands);
+	
 	class FManusSkeletonAssetActions* ManusSkeletonAssetActions;
+	TSharedPtr<class FUICommandList> PluginCommands;
+	TArray<FString> m_HostValues;
+    TArray<FString> m_CleanedHostValues;
+	FString m_CurrentHostSelected;
+
+    int m_LocalIndex;
 };

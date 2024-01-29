@@ -40,6 +40,30 @@ struct FSLLoggerLocationParams
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger", meta = (editcondition = "bUseCustomEpisodeId"))
 	FString EpisodeId = TEXT("DefaultEpisodeId");
 
+	// Set to true in order to edit the episode id
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	bool bUseCustomKnowRobIpAddress = false;
+
+	// Unique id of the KnowRobIpAddress
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger", meta = (editcondition = "bUseCustomKnowRobIpAddress"))
+	FString KnowRobIpAddress = TEXT("http://192.168.101.245");
+
+	// Unique id of the KnowRobServerPort
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FString KnowRobServerPort = TEXT("8000");
+	
+	// Unique id of the user
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FString GamePlayerName = TEXT("JohnDoe");
+
+	// Gender of the user
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FString GamePlayerGender = TEXT("Male");
+
+	// Age of the user
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	int GamePlayerAge = 30;
+
 	// Overwrite any exiting data
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
 	bool bOverwrite = false;
@@ -92,6 +116,12 @@ struct FSLLoggerStartParams
 	// Action name for starting from user input (if ESLLoggerStartTime::FromUserInput is selected)
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger", meta = (editcondition = "StartTime==ESLLoggerStartTime::FromUserInput"))
 	FName UserInputActionName = TEXT("SLTrigger");
+
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FName UserInputAudioStartActionName = TEXT("SLAudioStartTrigger");
+
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger")
+	FName UserInputAudioStopActionName = TEXT("SLAudioStopTrigger");
 };
 
 /* Holds the data needed to setup the world state logger */
@@ -156,6 +186,18 @@ struct FLSymbolicEventsSelection
 	/* PickAndPlace - Slide - PickUp - Transport - PutDown */
 	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Events", meta = (editcondition = "!bSelectAll"))
 	bool bPickAndPlace = true;
+
+	/* Pouring */
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Events", meta = (editcondition = "!bSelectAll"))
+	bool bPouring = true;
+
+	/* Cutting */
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Events", meta = (editcondition = "!bSelectAll"))
+	bool bCutting = true;
+
+	/* Cleaning */
+	UPROPERTY(EditAnywhere, Category = "Semantic Logger|Events", meta = (editcondition = "!bSelectAll"))
+	bool bCleaning = true;
 
 	///* Container */
 	//UPROPERTY(EditAnywhere, Category = "Semantic Logger|Events", meta = (editcondition = "!bSelectAll"))
