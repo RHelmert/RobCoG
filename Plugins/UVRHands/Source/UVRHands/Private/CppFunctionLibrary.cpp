@@ -243,7 +243,11 @@ FString UCppFunctionLibrary::StructToTypedJsonString(FMethodJson obj)
 {
 	TSharedPtr<FJsonObject> jsonObj = UCppFunctionLibrary::StructToJsonObj(obj);
 	FJsonObject* jobj = jsonObj.Get();
-	TArray<TSharedPtr<FJsonValue>> kwargmap = jobj->GetArrayField("method_kwargs");
+	/*const TArray<TSharedPtr<FJsonValue>> *kwargmap;
+	if (jobj->TryGetArrayField("method_kwargs", kwargmap)) {*/
+		//TArray<TSharedPtr<FJsonValue>> kwargmap = jobj->GetArrayField("method_kwargs");
+
+	
 
 	//Iterate over all parameters
 	for (const auto& pair : obj.kwargs_type) {
@@ -264,10 +268,10 @@ FString UCppFunctionLibrary::StructToTypedJsonString(FMethodJson obj)
 			jobj->GetObjectField("method_kwargs")->SetBoolField(Key, obj.method_kwargs.Find(Key)->ToBool());
 			continue;
 		}
-		
-		
-	}
 
+
+	}
+	
 	//Remove Kwarg types from the message 
 	jobj->RemoveField("kwargs_type");
 	bool success;
@@ -298,6 +302,46 @@ TArray<FMethodJson> UCppFunctionLibrary::JsonToArrayOfStructs(FString jsonString
 	bOut = FJsonObjectConverter::JsonArrayStringToUStruct<FMethodJson>(jsonString, &methodArray);
 	return methodArray;
 }
+
+bool UCppFunctionLibrary::JsonStringToInspectibleMap(FString jsonString, TMap<FString, FMethodJsonArray>& outMap, FString& outString)
+{
+	//UE_LOG(LogTemp, Warning, TEXT("JsonString: %s"), *jsonString);
+	//TMap<FString, TArray<FMethodJson>> outMethodMap;
+	bool bStringReturn;
+	outMap.Empty();
+	FString returnMessage;
+	TSharedPtr<FJsonObject> jsonObj = JsonStringToJsonObj(jsonString, bStringReturn, returnMessage);
+	//UE_LOG(LogTemp, Warning, TEXT("JsonObject valid?: %s"), jsonObj.IsValid() ? TEXT("TRUE") : TEXT("FALSE"));
+
+	bStringReturn = false;
+	for (auto pair : jsonObj.Get()->Values) {
+			
+		const TArray< TSharedPtr<FJsonValue>>* jsonvalues;
+		if (pair.Value->TryGetString(outString)){
+			UE_LOG(LogTemp, Warning, TEXT("GotString: %s"), *outString);
+			bStringReturn = true;
+		}
+		else if(pair.Value->TryGetArray(jsonvalues)) {
+			TArray<FMethodJson> methods;
+			//UE_LOG(LogTemp, Warning, TEXT("GotARRAY: %s"));
+			FJsonObjectConverter::JsonArrayToUStruct<FMethodJson>(*jsonvalues, &methods);
+			outMap.Add(pair.Key, methods);
+				
+		}
+		else {
+			const TSharedPtr<FJsonObject>* obj;
+			if (pair.Value->TryGetObject(obj)) {
+				for (auto keyval : obj->Get()->Values) {
+					outString.Append(keyval.Key + " : "+ keyval.Value.Get()->AsString()+ ";\n ");
+				}
+			}
+		}
+	}
+	return bStringReturn;
+}
+
+
+
 
 //struct --->JsonObj
 TSharedPtr<FJsonObject> UCppFunctionLibrary::StructToJsonObj(FMethodJson obj) {
@@ -384,7 +428,6 @@ void UCppFunctionLibrary::PythonCall(FString command)
 	PythonCommand.Command = command;
 	UE_LOG(LogTemp, Warning, TEXT("Starting PythongCommand:"));
 	IPythonScriptPlugin::Get()->ExecPythonCommandEx(PythonCommand);
-
 
 }
 

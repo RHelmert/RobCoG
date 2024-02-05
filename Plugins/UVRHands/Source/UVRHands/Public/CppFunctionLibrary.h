@@ -13,8 +13,6 @@
 
 
 
-
-
 USTRUCT(BlueprintType)
 struct FMethodJson {
 	GENERATED_USTRUCT_BODY()
@@ -23,16 +21,16 @@ public:
 
 	//"method_name" , "method_args" und "method_kwargs"
 	UPROPERTY(BlueprintReadWrite)
-		FString method_name;
-		UPROPERTY(BlueprintReadWrite)
-		FString method_docstring;
+	FString method_name;
+	UPROPERTY(BlueprintReadWrite)
+	FString method_docstring;
 	
-		//TArray<FString> method_kwargs;
-		UPROPERTY(BlueprintReadWrite)
-		TMap<FString, FString> method_kwargs;
+	//TArray<FString> method_kwargs;
+	UPROPERTY(BlueprintReadWrite)
+	TMap<FString, FString> method_kwargs;
 
-		UPROPERTY(BlueprintReadWrite)
-		TMap<FString, FString> kwargs_type;
+	UPROPERTY(BlueprintReadWrite)
+	TMap<FString, FString> kwargs_type;
 
 	FMethodJson() {};
 
@@ -43,6 +41,12 @@ public:
 		kwargs_type = types;
 
 	}
+
+	FMethodJson(FString name, TMap<FString, FString> kwargs) {
+		method_name = name;
+		method_kwargs = kwargs;
+	}
+
 
 public:
 	FString ToString() {
@@ -65,6 +69,22 @@ public:
 	}
 	
 };
+
+USTRUCT(BlueprintType)
+struct FMethodJsonArray {
+	GENERATED_USTRUCT_BODY()
+public:
+	//"method_name" , "method_args" und "method_kwargs"
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FMethodJson> methods;
+
+	FMethodJsonArray() {}
+	FMethodJsonArray(TArray<FMethodJson> mArray) {
+		methods = mArray;
+	}
+};
+
+
 
 DECLARE_MULTICAST_DELEGATE(FTaskCompletedEvent);
 
@@ -126,6 +146,9 @@ public:
 	static FString FMethodJsonToFancyString(FMethodJson struc);
 	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
 	static TArray<FMethodJson> JsonToArrayOfStructs(FString jsonString, bool& bOut);
+
+	UFUNCTION(BlueprintCallable, Category = "BPLibrary")
+	static bool JsonStringToInspectibleMap(FString jsonString, TMap<FString,FMethodJsonArray> &outMap, FString& outString);
 
 	static TSharedPtr<FJsonObject> StructToJsonObj(FMethodJson obj);
 	static FMethodJson JsonObjToStruct(TSharedPtr<FJsonObject> obj);
