@@ -317,9 +317,14 @@ bool UCppFunctionLibrary::JsonStringToInspectibleMap(FString jsonString, TMap<FS
 	for (auto pair : jsonObj.Get()->Values) {
 			
 		const TArray< TSharedPtr<FJsonValue>>* jsonvalues;
-		if (pair.Value->TryGetString(outString)){
-			UE_LOG(LogTemp, Warning, TEXT("GotString: %s"), *outString);
+		FString outValue;
+		
+		if (pair.Value->TryGetString(outValue)){
+			FString outKey = pair.Key;
+			//UE_LOG(LogTemp, Warning, TEXT("GotString: %s"), *outValue);
+			outString = outKey.Append(": ").Append(outValue);
 			bStringReturn = true;
+
 		}
 		else if(pair.Value->TryGetArray(jsonvalues)) {
 			TArray<FMethodJson> methods;
@@ -333,6 +338,7 @@ bool UCppFunctionLibrary::JsonStringToInspectibleMap(FString jsonString, TMap<FS
 			if (pair.Value->TryGetObject(obj)) {
 				for (auto keyval : obj->Get()->Values) {
 					outString.Append(keyval.Key + " : "+ keyval.Value.Get()->AsString()+ ";\n ");
+					bStringReturn = true;
 				}
 			}
 		}
