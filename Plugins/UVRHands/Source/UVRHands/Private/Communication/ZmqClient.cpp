@@ -83,6 +83,7 @@ uint32 ZmqClient::Run()
 			UE_LOG(LogTemp, Log, TEXT("Client: received answer: \"%s\""), *rMessage);
 
 			//Tell the Events in the eventContainer that a message was received
+			//if(EventContainer->OnMessageReceivedEvent)
 			if (EventContainer->OnMessageReceivedEvent.IsBound()) {
 				EventContainer->OnMessageReceivedEvent.Broadcast(rMessage);
 			}
