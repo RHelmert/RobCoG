@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="room" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find iai_kitchen_defs)/defs/util_defs.xml"/>
+  <xacro:include filename="$(find iai_kitchen_defs)/room/lab_macros.xml"/>
+
+  <link name="room_link">
+    <xacro:sphere_inertia radius="0.001" mass="1"/>
+  </link>
+
+
+  <xacro:wall name="boden_kitchen" parent="room" xyz="-2.65 -3.7 1.0005" sxyz="5.3 6.8 0.5" material="Ias/LightBrown2"/>
+  <xacro:wall name="boden_shop" parent="room" xyz="1.95 -4 1.0005" sxyz="3.9 6 0.5" material="Ias/LightBrown"/>
+  <!--xacro:wall name="boden_mech" xyz="1.95 2 1.0005" sxyz="3.9 6 0.5" material="Ground/Red"/>
+  <xacro:wall name="boden_bio" xyz="-2.65 2.35 1.0005" sxyz="5.3 5.3 0.5" material="Ground/Green"/-->
+ 
+ 
+</robot>

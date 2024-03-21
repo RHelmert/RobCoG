@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot name="dm_shelves" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find iai_refills_lab)/urdf/dm_shelf_macros.urdf.xacro"/>
+
+  <link name="room_link"/>
+
+  <xacro:shelf_1 parent="room_link" name="shelf_1">
+    <origin xyz="4.3223 -0.2415761 0.08515" rpy="0 0 -1.5756"/>
+  </xacro:shelf_1>
+
+  <xacro:shelf_2 parent="room_link" name="shelf_2">
+    <origin xyz="1.75 -1.45 0.08515" rpy="0 0 3.09652"/>
+  </xacro:shelf_2>
+</robot>
