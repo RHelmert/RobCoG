@@ -151,5 +151,10 @@ bool ZmqClient::EnqueueMessage(FString Message)
 	return queue.Enqueue(Message);
 }
 
+void ZmqClient::ReplaceContainer(UMessageReceivedCallbackContainer* newEventContainer)
+{
+	EventContainer = newEventContainer;
+}
+
 
 

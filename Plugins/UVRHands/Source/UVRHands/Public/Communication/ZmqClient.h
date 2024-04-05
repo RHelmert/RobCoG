@@ -36,4 +36,6 @@ public:
 	//Queue to send Messages
 	TQueue<FString> queue;
 
+	void ReplaceContainer(UMessageReceivedCallbackContainer* newEventContainer);
+
 };

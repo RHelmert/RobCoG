@@ -422,7 +422,14 @@ UMessageReceivedCallbackContainer* UCppFunctionLibrary::CreateOrGetBlueprintZmqC
 	if (!clientCallbacks.Contains(Ip_Port)) {
 		clientCallbacks.Add(Ip_Port, NewObject<UMessageReceivedCallbackContainer>());
 	}
-
+	else {
+		clientCallbacks.FindAndRemoveChecked(Ip_Port);
+		clientCallbacks.Add(Ip_Port, NewObject<UMessageReceivedCallbackContainer>());
+	}
+	// replace client callback container because it may be outdated and thus can crash unreal
+	if (clients.Contains(Ip_Port)){
+		clients.FindChecked(Ip_Port)->ReplaceContainer(clientCallbacks.FindChecked(Ip_Port));
+	}
 	return clientCallbacks.FindChecked(Ip_Port);
 }
 
