@@ -52,8 +52,34 @@ def find_files_by_keyword(base_pattern, keyword):
     Returns a list of file paths that contain the keyword in their filenames.
     """
     # Create a pattern to match any files that include the keyword
-    keyword_pattern = f"{base_pattern}/IntroductionTest/*{keyword}*.log"
+    keyword_pattern = f"{base_pattern}*{keyword}*.log"
     return glob.glob(keyword_pattern)
+
+def process_files_Pointing(files,pathToKeep,start_keyword, final_search_keyword, output_file_path):
+    """
+    Process the list of files, checking each line for the search_keyword and writing results to a CSV file.
+    """
+    pattern = re.compile(r"Target[1-6]?")
+    
+    with open(output_file_path, 'w', newline='') as outfile:
+        writer = csv.writer(outfile)
+        writer.writerow(['File', 'Target 1', 'Target 2', 'Target 3', 'Target 4', 'Target 5', 'Target 6','Mean_Distance_To_Center'])
+        count = 0
+        for file_path in files:
+            timestamp1 = 0
+            timestamp2 = 0
+            count +=1
+            with open(file_path, 'r') as infile:
+                for line_number, line in enumerate(infile, start=1):
+                    if  start_keyword in line:
+                        timestamp1 = extract_timestamp(line)
+                    contains_keyword = final_search_keyword in line
+                    if contains_keyword:
+                        timestamp2 = extract_timestamp(line)
+                        executionTime = calculate_time_difference(timestamp1,timestamp2)
+                        timestamp1 = timestamp2
+                        writer.writerow([f"File {count} {file_path[-pathToKeep:]}", line_number, executionTime])
+                    print(f"Processed line {line_number} in {file_path}")
 
 
 #Adds to the ouput file IF the final_seach_keyword is in the file. Also calculates timing till then and file as well as line number
@@ -75,14 +101,24 @@ def process_files(files,pathToKeep,start_keyword, final_search_keyword, output_f
                         timestamp1 = extract_timestamp(line)
                     contains_keyword = final_search_keyword in line
                     if contains_keyword:
-                        executionTime = calculate_time_difference(timestamp1,extract_timestamp(line))
+                        timestamp2 = extract_timestamp(line)
+                        executionTime = calculate_time_difference(timestamp1,timestamp2)
+                        timestamp1 = timestamp2
                         writer.writerow([f"File {count} {file_path[-pathToKeep:]}", line_number, executionTime])
                     print(f"Processed line {line_number} in {file_path}")
 
 
 def checkintro():
-    files = find_files_by_keyword(base_pattern, 'Introduction')
+    files = find_files_by_keyword(f"{base_pattern}/IntroductionTest/", 'Introduction')
     process_files(files,41,'Button pressed successfully', 'Tutorial Completed', 'results_with_Introduction.csv')
+    
+def checkpointandrate():
+    
+    pattern = re.compile(r"Target[1-6]?")
+    
+    files = find_files_by_keyword(f"{base_pattern}/PointingRatingSceneTest/", 'Pointing_Rating')
+    process_files_Pointing(files,45,'Rating Task Started', 'Completed Task', 'results_with_PointAndRate.csv')
+
 
 # Base pattern for the files (directory path)
 base_pattern = 'C:/Users/Robin H/source/repos/ResultEvaluator/ResultEvaluator'
@@ -101,5 +137,6 @@ output_file_path = 'results_with_Introduction.csv'
 #process_files(files, search_keyword, output_file_path)
 
 checkintro()
+checkpointandrate()
 
 print(f"Files processed. Results are saved in '{output_file_path}'")

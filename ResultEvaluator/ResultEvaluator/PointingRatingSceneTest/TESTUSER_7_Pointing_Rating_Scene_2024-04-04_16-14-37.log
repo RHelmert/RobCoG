@@ -1,0 +1,50 @@
+[0.0]: [Visual]Rating Task Display Shown
+[21.513674]: [Task]Rating Task Started
+[25.746853]: [Rating]Made a Rating with the value: 10
+[25.746853]: [Task]Completed Good rating
+[28.762791]: [Rating]Made a Rating with the value: 5
+[41.496147]: [Rating]Made a Rating with the value: 2
+[43.102646]: [Rating]Made a Rating with the value: 0
+[43.102646]: [Task]Completed bad rating
+[47.068924]: [Rating]Made a Rating with the value: 4
+[47.068924]: [Task]Completed average rating
+[47.068924]: [Task]Completed Task
+[52.793861]: [Task]Moving To Next Task
+[52.793861]: [Visual]Pointing Task Display Shown
+[62.168129]: [Visual]Spawn pointing targets
+[62.168129]: [Pointing]Start Pressed
+[69.350571]: [Rating]Made a Rating with the value: 10
+[69.350571]: [Pointing]Target: 0 hit.
+[69.350571]: [Pointing]Pointed at: Target   ;HMD distance to the object: 265.276276cm. Pointed distance to the object:4.811294 cm
+[91.464745]: [Rating]Made a Rating with the value: 10
+[91.464745]: [Pointing]Target: 1 hit.
+[91.464745]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 488.169495cm. Pointed distance to the object:3.55829 cm
+[101.713913]: [Rating]Made a Rating with the value: 10
+[101.713913]: [Pointing]Target: 2 hit.
+[101.713913]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 323.052246cm. Pointed distance to the object:3.558201 cm
+[129.902252]: [Rating]Made a Rating with the value: 9
+[129.902252]: [Pointing]Target: 3 hit.
+[129.902252]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 444.292755cm. Pointed distance to the object:3.488651 cm
+[129.935852]: [Rating]Made a Rating with the value: 9
+[129.935852]: [Pointing]Target: 4 hit.
+[129.935852]: [Pointing]Pointed at:    ;HMD distance to the object: 444.330597cm. Pointed distance to the object:231.569839 cm
+[130.384567]: [Rating]Made a Rating with the value: 9
+[130.384567]: [Pointing]Target: 4 hit.
+[130.384567]: [Pointing]Pointed at:    ;HMD distance to the object: 444.952271cm. Pointed distance to the object:231.569839 cm
+[140.659103]: [Rating]Made a Rating with the value: 9
+[140.659103]: [Pointing]Target: 4 hit.
+[140.659103]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 569.252502cm. Pointed distance to the object:3.472834 cm
+[140.976013]: [Rating]Made a Rating with the value: 9
+[140.976013]: [Pointing]Target: 5 hit.
+[140.976013]: [Pointing]Pointed at:    ;HMD distance to the object: 569.637268cm. Pointed distance to the object:224.564529 cm
+[141.001465]: [Rating]Made a Rating with the value: 9
+[141.001465]: [Pointing]Target: 5 hit.
+[141.001465]: [Pointing]Pointed at:    ;HMD distance to the object: 569.672791cm. Pointed distance to the object:224.564529 cm
+[154.858017]: [Rating]Made a Rating with the value: 9
+[154.858017]: [Pointing]Target: 5 hit.
+[154.858017]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 591.396362cm. Pointed distance to the object:3.501491 cm
+[154.858017]: [Pointing]All Targets Successfully hit
+[154.858017]: [Task]Completed Task
+[155.341324]: [Rating]Made a Rating with the value: 9
+[155.341324]: [Pointing]Target: 0 hit.
+[155.341324]: [Pointing]Pointed at:    ;HMD distance to the object: 591.109924cm. Pointed distance to the object:776.992493 cm
