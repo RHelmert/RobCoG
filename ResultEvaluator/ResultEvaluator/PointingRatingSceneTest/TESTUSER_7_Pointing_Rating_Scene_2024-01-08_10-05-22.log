@@ -1,0 +1,36 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Visual]Rating Task Display Shown
+[7.925395]: [Task]Rating Task Started
+[9.433859]: [Rating]Made a Rating with the value: 10
+[9.433859]: [Task]Completed Good rating
+[9.814692]: [Rating]Made a Rating with the value: 0
+[9.814692]: [Task]Completed bad rating
+[10.181026]: [Rating]Made a Rating with the value: 5
+[10.181026]: [Task]Completed average rating
+[10.181026]: [Task]Completed Task
+[11.602985]: [Task]Moving To Next Task
+[11.602985]: [Visual]Pointing Task Display Shown
+[14.636273]: [Visual]Spawn pointing targets
+[14.636273]: [Pointing]Start Pressed
+[46.992485]: [Rating]Made a Rating with the value: 10
+[46.992485]: [Pointing]Target: 0 hit.
+[46.992485]: [Pointing]Pointed at: Target   ;HMD distance to the object: 283.941284cm. Pointed distance to the object:4.749154 cm
+[48.479744]: [Rating]Made a Rating with the value: 10
+[48.479744]: [Pointing]Target: 1 hit.
+[48.479744]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 494.39447cm. Pointed distance to the object:11.347972 cm
+[50.003071]: [Rating]Made a Rating with the value: 8
+[50.736305]: [Rating]Made a Rating with the value: 10
+[50.736305]: [Pointing]Target: 2 hit.
+[50.736305]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 347.409058cm. Pointed distance to the object:16.370525 cm
+[52.301628]: [Rating]Made a Rating with the value: 10
+[52.301628]: [Pointing]Target: 3 hit.
+[52.301628]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 476.576294cm. Pointed distance to the object:17.63954 cm
+[53.613941]: [Rating]Made a Rating with the value: 8
+[54.202076]: [Rating]Made a Rating with the value: 10
+[54.202076]: [Pointing]Target: 4 hit.
+[54.202076]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 594.812927cm. Pointed distance to the object:11.997836 cm
+[56.091053]: [Rating]Made a Rating with the value: 10
+[56.091053]: [Pointing]Target: 5 hit.
+[56.091053]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 602.539673cm. Pointed distance to the object:6.198597 cm
+[56.091053]: [Pointing]All Targets Successfully hit
+[56.091053]: [Task]Completed Task

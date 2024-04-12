@@ -1,0 +1,14 @@
+[0.0]: [Visual]Rating Task Display Shown
+[9.495173]: [Task]Rating Task Started
+[21.305908]: [Rating]Made a Rating with the value: 10
+[21.305908]: [Task]Completed Good rating
+[21.716961]: [Rating]Made a Rating with the value: 5
+[26.191832]: [Rating]Made a Rating with the value: 1
+[26.191832]: [Task]Completed bad rating
+[27.937483]: [Rating]Made a Rating with the value: 5
+[27.937483]: [Task]Completed average rating
+[27.937483]: [Task]Completed Task
+[53.527157]: [Task]Moving To Next Task
+[53.527157]: [Visual]Pointing Task Display Shown
+[56.968464]: [Visual]Spawn pointing targets
+[56.968464]: [Pointing]Start Pressed

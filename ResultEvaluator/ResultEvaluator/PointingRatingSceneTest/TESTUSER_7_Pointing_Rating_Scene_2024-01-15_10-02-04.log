@@ -1,0 +1,34 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Visual]Rating Task Display Shown
+[3.840651]: [Task]Rating Task Started
+[4.740337]: [Rating]Made a Rating with the value: 10
+[4.740337]: [Task]Completed Good rating
+[5.264228]: [Rating]Made a Rating with the value: 0
+[5.264228]: [Task]Completed bad rating
+[5.640808]: [Rating]Made a Rating with the value: 5
+[5.640808]: [Task]Completed average rating
+[5.640808]: [Task]Completed Task
+[6.485882]: [Task]Moving To Next Task
+[6.485882]: [Visual]Pointing Task Display Shown
+[9.329261]: [Visual]Spawn pointing targets
+[9.329261]: [Pointing]Start Pressed
+[11.12959]: [Rating]Made a Rating with the value: 10
+[11.12959]: [Pointing]Target: 0 hit.
+[11.12959]: [Pointing]Pointed at: Target   ;HMD distance to the object: 256.208099cm. Pointed distance to the object:9.803896 cm
+[13.062732]: [Rating]Made a Rating with the value: 10
+[13.062732]: [Pointing]Target: 1 hit.
+[13.062732]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 485.73941cm. Pointed distance to the object:13.483595 cm
+[14.396851]: [Rating]Made a Rating with the value: 10
+[14.396851]: [Pointing]Target: 2 hit.
+[14.396851]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 312.223083cm. Pointed distance to the object:8.893093 cm
+[15.563192]: [Rating]Made a Rating with the value: 10
+[15.563192]: [Pointing]Target: 3 hit.
+[15.563192]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 454.143402cm. Pointed distance to the object:7.398404 cm
+[16.562695]: [Rating]Made a Rating with the value: 10
+[16.562695]: [Pointing]Target: 4 hit.
+[16.562695]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 565.297363cm. Pointed distance to the object:7.025825 cm
+[17.496002]: [Rating]Made a Rating with the value: 10
+[17.496002]: [Pointing]Target: 5 hit.
+[17.496002]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 588.730408cm. Pointed distance to the object:15.977972 cm
+[17.496002]: [Pointing]All Targets Successfully hit
+[17.496002]: [Task]Completed Task

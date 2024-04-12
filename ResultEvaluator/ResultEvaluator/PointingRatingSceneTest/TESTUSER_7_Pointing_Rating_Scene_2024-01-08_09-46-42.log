@@ -1,0 +1,41 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Task]Pointing Task Display Shown
+[0.0]: [Visual]Rating Task Display Shown
+[11.370687]: [Task]Rating Task Started
+[13.414836]: [Rating]Made a Rating with the value: 9
+[13.414836]: [Task]Completed Good rating
+[15.481813]: [Rating]Made a Rating with the value: 4
+[17.026196]: [Rating]Made a Rating with the value: 0
+[17.026196]: [Task]Completed bad rating
+[18.937302]: [Rating]Made a Rating with the value: 4
+[18.937302]: [Task]Completed average rating
+[18.937302]: [Task]Completed Task
+[21.959515]: [Task]Moving To Next Task
+[28.225454]: [Visual]Spawn pointing targets
+[28.225454]: [Pointing]Start Pressed
+[31.660837]: [Rating]Made a Rating with the value: 0
+[33.337399]: [Rating]Made a Rating with the value: 8
+[34.51355]: [Rating]Made a Rating with the value: 9
+[34.51355]: [Pointing]Target: 0 hit.
+[34.51355]: [Pointing]Pointed at: Target   ;HMD distance to the object: 257.226685cm. Pointed distance to the object:6.132089 cm
+[36.582981]: [Rating]Made a Rating with the value: 10
+[36.582981]: [Pointing]Target: 1 hit.
+[36.582981]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 439.756348cm. Pointed distance to the object:3.986266 cm
+[38.070793]: [Rating]Made a Rating with the value: 10
+[38.070793]: [Pointing]Target: 2 hit.
+[38.070793]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 354.678955cm. Pointed distance to the object:4.801868 cm
+[39.958893]: [Rating]Made a Rating with the value: 9
+[39.958893]: [Pointing]Target: 3 hit.
+[39.958893]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 441.958984cm. Pointed distance to the object:6.470998 cm
+[41.425789]: [Rating]Made a Rating with the value: 9
+[41.425789]: [Pointing]Target: 4 hit.
+[41.425789]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 565.288696cm. Pointed distance to the object:16.489323 cm
+[42.94656]: [Rating]Made a Rating with the value: 10
+[42.94656]: [Pointing]Target: 5 hit.
+[42.94656]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 555.514648cm. Pointed distance to the object:11.182463 cm
+[42.94656]: [Pointing]All Targets Successfully hit
+[42.94656]: [Task]Completed Task
+[46.958111]: [Visual]Spawn pointing targets
+[46.958111]: [Pointing]Start Pressed
+[49.623959]: [Visual]Spawn pointing targets
+[49.623959]: [Pointing]Start Pressed

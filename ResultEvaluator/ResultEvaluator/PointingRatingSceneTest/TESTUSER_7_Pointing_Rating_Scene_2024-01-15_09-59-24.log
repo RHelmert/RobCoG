@@ -1,0 +1,34 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Visual]Rating Task Display Shown
+[32.533993]: [Task]Rating Task Started
+[33.956741]: [Rating]Made a Rating with the value: 10
+[33.956741]: [Task]Completed Good rating
+[34.623158]: [Rating]Made a Rating with the value: 0
+[34.623158]: [Task]Completed bad rating
+[35.200935]: [Rating]Made a Rating with the value: 5
+[35.200935]: [Task]Completed average rating
+[35.200935]: [Task]Completed Task
+[36.602219]: [Task]Moving To Next Task
+[36.602219]: [Visual]Pointing Task Display Shown
+[43.789719]: [Visual]Spawn pointing targets
+[43.789719]: [Pointing]Start Pressed
+[46.46587]: [Rating]Made a Rating with the value: 10
+[46.46587]: [Pointing]Target: 0 hit.
+[46.46587]: [Pointing]Pointed at: Target   ;HMD distance to the object: 284.138977cm. Pointed distance to the object:8.732911 cm
+[47.990322]: [Rating]Made a Rating with the value: 10
+[47.990322]: [Pointing]Target: 1 hit.
+[47.990322]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 508.31897cm. Pointed distance to the object:16.545069 cm
+[49.424454]: [Rating]Made a Rating with the value: 10
+[49.424454]: [Pointing]Target: 2 hit.
+[49.424454]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 338.880585cm. Pointed distance to the object:9.319231 cm
+[50.990448]: [Rating]Made a Rating with the value: 9
+[50.990448]: [Pointing]Target: 3 hit.
+[50.990448]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 482.11441cm. Pointed distance to the object:10.467378 cm
+[52.61372]: [Rating]Made a Rating with the value: 9
+[52.61372]: [Pointing]Target: 4 hit.
+[52.61372]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 590.971008cm. Pointed distance to the object:8.017372 cm
+[54.368717]: [Rating]Made a Rating with the value: 10
+[54.368717]: [Pointing]Target: 5 hit.
+[54.368717]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 613.345764cm. Pointed distance to the object:5.015096 cm
+[54.368717]: [Pointing]All Targets Successfully hit
+[54.368717]: [Task]Completed Task

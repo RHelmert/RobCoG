@@ -1,0 +1,35 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Visual]Rating Task Display Shown
+[7.89892]: [Task]Rating Task Started
+[8.679474]: [Rating]Made a Rating with the value: 2
+[8.878816]: [Rating]Made a Rating with the value: 9
+[8.878816]: [Task]Completed Good rating
+[9.189317]: [Rating]Made a Rating with the value: 0
+[9.189317]: [Task]Completed bad rating
+[9.667485]: [Rating]Made a Rating with the value: 5
+[9.667485]: [Task]Completed average rating
+[9.667485]: [Task]Completed Task
+[11.011592]: [Task]Moving To Next Task
+[11.011592]: [Visual]Pointing Task Display Shown
+[13.533001]: [Visual]Spawn pointing targets
+[13.533001]: [Pointing]Start Pressed
+[15.900613]: [Rating]Made a Rating with the value: 10
+[15.900613]: [Pointing]Target: 0 hit.
+[15.900613]: [Pointing]Pointed at: Target   ;HMD distance to the object: 272.339294cm. Pointed distance to the object:4.202449 cm
+[17.067272]: [Rating]Made a Rating with the value: 9
+[17.067272]: [Pointing]Target: 1 hit.
+[17.067272]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 482.486206cm. Pointed distance to the object:4.330368 cm
+[18.323219]: [Rating]Made a Rating with the value: 10
+[18.323219]: [Pointing]Target: 2 hit.
+[18.323219]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 343.349731cm. Pointed distance to the object:12.258125 cm
+[19.722178]: [Rating]Made a Rating with the value: 10
+[19.722178]: [Pointing]Target: 3 hit.
+[19.722178]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 465.138092cm. Pointed distance to the object:9.185946 cm
+[21.04653]: [Rating]Made a Rating with the value: 10
+[21.04653]: [Pointing]Target: 4 hit.
+[21.04653]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 577.420776cm. Pointed distance to the object:4.832132 cm
+[23.499809]: [Rating]Made a Rating with the value: 10
+[23.499809]: [Pointing]Target: 5 hit.
+[23.499809]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 581.653381cm. Pointed distance to the object:10.624224 cm
+[23.499809]: [Pointing]All Targets Successfully hit
+[23.499809]: [Task]Completed Task

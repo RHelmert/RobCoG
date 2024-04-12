@@ -1,0 +1,30 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[22.604006]: [Task]Made a Rating with the value: 9
+[22.604006]: [Task]Completed Good rating
+[24.649576]: [Task]Made a Rating with the value: 0
+[24.649576]: [Task]Completed bad rating
+[26.015104]: [Task]Made a Rating with the value: 5
+[26.015104]: [Task]Completed average rating
+[26.015104]: [Task]Completed Task
+[28.41497]: [Task]Moving To Next Task
+[34.703922]: [Pointing]Started Pointing  Target Spawns
+[34.703922]: [Pointing]Start Pressed
+[37.51474]: [Task]Made a Rating with the value: 10
+[37.51474]: [Pointing]Target: 0 hit.
+[37.51474]: [Pointing]Pointed at: Target   ;HMD distance to the object: 265.033752cm. Pointed distance to the object:5.528517 cm
+[40.104118]: [Task]Made a Rating with the value: 10
+[40.104118]: [Pointing]Target: 1 hit.
+[40.104118]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 488.274628cm. Pointed distance to the object:5.531641 cm
+[41.993233]: [Task]Made a Rating with the value: 10
+[41.993233]: [Pointing]Target: 2 hit.
+[41.993233]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 332.546295cm. Pointed distance to the object:3.556593 cm
+[44.314579]: [Task]Made a Rating with the value: 10
+[44.314579]: [Pointing]Target: 3 hit.
+[44.314579]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 464.083527cm. Pointed distance to the object:8.9381 cm
+[45.736755]: [Task]Made a Rating with the value: 10
+[45.736755]: [Pointing]Target: 4 hit.
+[45.736755]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 578.90094cm. Pointed distance to the object:16.601389 cm
+[47.148552]: [Task]Made a Rating with the value: 10
+[47.148552]: [Pointing]Target: 5 hit.
+[47.148552]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 595.262146cm. Pointed distance to the object:8.952897 cm
+[47.148552]: [Pointing]All Targets Successfully hit

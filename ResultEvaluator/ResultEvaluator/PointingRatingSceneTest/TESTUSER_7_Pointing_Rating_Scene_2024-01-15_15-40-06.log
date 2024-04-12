@@ -1,0 +1,42 @@
+[0.0]: [Tutorial]Tutorial Scene started
+[0.0]: [Visual]Rating Task Display Shown
+[2.416004]: [Task]Rating Task Started
+[3.550261]: [Rating]Made a Rating with the value: 9
+[3.550261]: [Task]Completed Good rating
+[4.028648]: [Rating]Made a Rating with the value: 2
+[4.672743]: [Rating]Made a Rating with the value: 2
+[5.652068]: [Rating]Made a Rating with the value: 1
+[5.652068]: [Task]Completed bad rating
+[6.383685]: [Rating]Made a Rating with the value: 6
+[6.383685]: [Task]Completed average rating
+[6.383685]: [Task]Completed Task
+[7.338114]: [Task]Moving To Next Task
+[7.338114]: [Visual]Pointing Task Display Shown
+[9.325803]: [Visual]Spawn pointing targets
+[9.325803]: [Pointing]Start Pressed
+[13.573181]: [Rating]Made a Rating with the value: 10
+[13.573181]: [Pointing]Target: 0 hit.
+[13.573181]: [Pointing]Pointed at: Target   ;HMD distance to the object: 283.265198cm. Pointed distance to the object:5.578604 cm
+[13.774245]: [Rating]Made a Rating with the value: 9
+[13.774245]: [Pointing]Target: 1 hit.
+[13.774245]: [Pointing]Pointed at:    ;HMD distance to the object: 283.39032cm. Pointed distance to the object:291.860107 cm
+[16.550135]: [Rating]Made a Rating with the value: 10
+[16.550135]: [Pointing]Target: 1 hit.
+[16.550135]: [Pointing]Pointed at: Target1   ;HMD distance to the object: 519.31958cm. Pointed distance to the object:7.304554 cm
+[19.28307]: [Rating]Made a Rating with the value: 9
+[19.28307]: [Pointing]Target: 2 hit.
+[19.28307]: [Pointing]Pointed at: Target2   ;HMD distance to the object: 324.530457cm. Pointed distance to the object:7.00228 cm
+[19.327612]: [Rating]Made a Rating with the value: 10
+[19.327612]: [Pointing]Target: 3 hit.
+[19.327612]: [Pointing]Pointed at:    ;HMD distance to the object: 324.530487cm. Pointed distance to the object:306.752472 cm
+[21.905169]: [Rating]Made a Rating with the value: 10
+[21.905169]: [Pointing]Target: 3 hit.
+[21.905169]: [Pointing]Pointed at: Target3   ;HMD distance to the object: 475.378693cm. Pointed distance to the object:9.851496 cm
+[25.162701]: [Rating]Made a Rating with the value: 9
+[25.162701]: [Pointing]Target: 4 hit.
+[25.162701]: [Pointing]Pointed at: Target4   ;HMD distance to the object: 588.163269cm. Pointed distance to the object:4.690246 cm
+[27.651814]: [Rating]Made a Rating with the value: 9
+[27.651814]: [Pointing]Target: 5 hit.
+[27.651814]: [Pointing]Pointed at: Target5   ;HMD distance to the object: 618.694336cm. Pointed distance to the object:5.515356 cm
+[27.651814]: [Pointing]All Targets Successfully hit
+[27.651814]: [Task]Completed Task
