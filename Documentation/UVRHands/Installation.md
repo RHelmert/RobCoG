@@ -6,7 +6,7 @@ To setup the project, place the following Plugins into the Plugins folder of the
 - Manus
 - UCutting-main (is WIP to be integrated and should be optional)
 
-Install all other necessary plugins and build the project as described in the main documentation[RoBCoG](https://github.com/robcog-iai/RobCoG).
+Install all other necessary plugins and build the project as described in the main documentation [RoBCoG](https://github.com/robcog-iai/RobCoG).
 
 Now you should be able to start RobCog in the Unreal environment.
 
