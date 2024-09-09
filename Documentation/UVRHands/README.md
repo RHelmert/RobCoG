@@ -8,7 +8,6 @@ This is the documentation for the new hands. They are still in development and m
     - [Pointing](Interactions/Pointing.md)
     - [Rating](Interactions/Rating.md)
 - [Known Bugs](KnownBugs.md)
-- [Implementation todos](Implementation_todos.md)
 
 
 ## Basic Information
