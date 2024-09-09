@@ -5,7 +5,7 @@ To point, the inputs
 
  ![](PointingInput.png)
 
- are used. At the moment only the Right hand is used for pointing. The left input is currently not used.
+ are used.
 
  For Manus Hands (motion capture hands), pointing is invoked by stretching your index finger while bending all other fingers; like it is done in reality.
 
