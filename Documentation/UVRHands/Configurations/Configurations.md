@@ -38,9 +38,8 @@ In this case you have to manually set the inputs.
     - Finger Proximity  
     Enabling this function only works when animated hands (currently Manus Hands and SteamIndexController) (!Does not work with HTC controller atm) are used. 
     It calculates every frame the distances between the fingers and the thumb and when the distance (which can be Configured inside the VRHand->CollisionObserver Component) falls below the threshold, a grab is triggered.
-    At the moment this works best with the SteamIndexControllers.
-    It is intended to work with the manus hands but at the moment the precision is not satisfactory enough. In the future it should be used for more natural grabbing experiences. 
-    
+    At the moment this works best with the Manus gloves and the SteamIndexControllers.
+
     - Disabled  
     Disables grabbing in general
 
