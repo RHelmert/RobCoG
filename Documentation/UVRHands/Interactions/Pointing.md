@@ -1,11 +1,10 @@
 ## Pointing
 
 With the new hands user can point with their hands.
-To point, the inputs 
+To point, the following inputs are used.
 
  ![](PointingInput.png)
 
- are used.
 
  For Manus Hands (motion capture hands), pointing is invoked by stretching your index finger while bending all other fingers; like it is done in reality.
 
