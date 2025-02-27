@@ -1,0 +1,174 @@
+#usda 1.0
+(
+    defaultPrim = "fork"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "fork" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.0000010006173, 0.000054072745, 0.000054409662)
+    float mujoco:body:inertial:mass = 0.019516708
+    point3f mujoco:body:inertial:pos = (0.010070817, -4.082809e-7, -0.0045463936)
+    quatf mujoco:body:inertial:quat = (0.70721906, 0.70699364, 0.00076202484, -0.00077620137)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (0.010070817, -4.082809e-7, -0.0045463936)
+    float3 physics:diagonalInertia = (0.0000010006173, 0.000054072745, 0.000054409662)
+    float physics:mass = 0.019516708
+    quatf physics:principalAxes = (0.70721906, 0.70699364, 0.00076202484, -0.00077620137)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.0000010006173
+    float urdf:link:inertial:inertia:iyy = 0.000054072745
+    float urdf:link:inertial:inertia:izz = 0.000054409662
+    float urdf:link:inertial:mass = 0.019516708
+    float3 urdf:link:inertial:origin:rpy = (1.5704775, 0.0021753777, -0.000020395437)
+    point3f urdf:link:inertial:origin:xyz = (0.010070817, -4.082809e-7, -0.0045463936)
+
+    def Mesh "Fork" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./fork/meshes/usd/Fork.usda@</Fork>
+    )
+    {
+        rel material:binding = </fork/Fork/Materials/M_Fork>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_Fork>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Fork>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./fork/meshes/obj/Fork.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_Fork" (
+                prepend references = @./fork/materials/usd/M_Fork.usda@</M_Fork>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "Fork_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./fork/meshes/usd/Fork_001.usda@</Fork_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Fork_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./fork/meshes/stl/Fork_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Fork_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./fork/meshes/usd/Fork_002.usda@</Fork_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Fork_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./fork/meshes/stl/Fork_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Fork_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./fork/meshes/usd/Fork_003.usda@</Fork_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Fork_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./fork/meshes/stl/Fork_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "fork"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "fork"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Fork"
+            {
+                asset mujoco:mesh:file = @fork/meshes/stl/Fork.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Fork_001"
+            {
+                asset mujoco:mesh:file = @fork/meshes/stl/Fork_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Fork_002"
+            {
+                asset mujoco:mesh:file = @fork/meshes/stl/Fork_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Fork_003"
+            {
+                asset mujoco:mesh:file = @fork/meshes/stl/Fork_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Fork"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6801, 0.6801, 0.6801, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

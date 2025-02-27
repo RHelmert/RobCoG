@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<robot name="bread_knife" version="1.0">
+  <link name="bread_knife"/>
+  <joint name="bread_knife_blade001_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="bread_knife"/>
+    <child link="bread_knife_blade001"/>
+  </joint>
+  <link name="bread_knife_blade001">
+    <inertial>
+      <origin xyz="0.04096376895904541 -0.002142630284652114 3.977959568146616e-05" rpy="-0.0010761565063148737 -0.00019837553554680198 0.0014100634725764394"/>
+      <mass value="0.10997344553470612"/>
+      <inertia ixx="1.0363974979554769e-05" ixy="0.0" ixz="0.0" iyy="0.0008984170272015035" iyz="0.0" izz="0.0009087389335036278"/>
+    </inertial>
+    <visual name="BreadKnifeBlade001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/obj/BreadKnifeBlade001.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="BreadKnifeBlade001_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeBlade001_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeBlade001_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeBlade001_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="bread_knife_hilt_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="bread_knife"/>
+    <child link="bread_knife_hilt"/>
+  </joint>
+  <link name="bread_knife_hilt">
+    <inertial>
+      <origin xyz="-0.12984220683574677 -0.005874170456081629 9.566288099449594e-07" rpy="-0.00020547844178508967 5.003967089578509e-06 0.03980545327067375"/>
+      <mass value="0.20699134469032288"/>
+      <inertia ixx="1.5195051673799753e-05" ixy="0.0" ixz="0.0" iyy="0.0037243471015244722" iyz="0.0" izz="0.0037363204173743725"/>
+    </inertial>
+    <visual name="BreadKnifeHilt">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/obj/BreadKnifeHilt.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="BreadKnifeHilt_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeHilt_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeHilt_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="bread_knife_blade002_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="bread_knife"/>
+    <child link="bread_knife_blade002"/>
+  </joint>
+  <link name="bread_knife_blade002">
+    <inertial>
+      <origin xyz="-0.1262253224849701 -0.005297889467328787 -2.7605500108052183e-09" rpy="1.0094896424561739e-05 -3.386918745462708e-09 0.03621717542409897"/>
+      <mass value="0.010198382660746574"/>
+      <inertia ixx="2.2392976006813115e-07" ixy="0.0" ixz="0.0" iyy="0.00017526489682495594" iyz="0.0" izz="0.00017531418416183442"/>
+    </inertial>
+    <visual name="BreadKnifeBlade002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/obj/BreadKnifeBlade002.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="BreadKnifeBlade002_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeBlade002_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeBlade002_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeBlade002_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadKnifeBlade002_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_knife/meshes/stl/BreadKnifeBlade002_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

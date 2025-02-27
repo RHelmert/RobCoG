@@ -1,0 +1,438 @@
+#usda 1.0
+(
+    defaultPrim = "pepper_black"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "pepper_black" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (3.1560227e-11, 3.1741682e-11, 3.184511e-11)
+    float mujoco:body:inertial:mass = 0.000019499943
+    point3f mujoco:body:inertial:pos = (-0.000020498883, -0.000021197902, -0.00003067746)
+    quatf mujoco:body:inertial:quat = (0.7049506, -0.25423768, -0.6304734, -0.20226528)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-0.000020498883, -0.000021197902, -0.00003067746)
+    float3 physics:diagonalInertia = (3.1560227e-11, 3.1741682e-11, 3.184511e-11)
+    float physics:mass = 0.000019499943
+    quatf physics:principalAxes = (0.7049506, -0.25423768, -0.6304734, -0.20226528)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 3.1560227e-11
+    float urdf:link:inertial:inertia:iyy = 3.1741682e-11
+    float urdf:link:inertial:inertia:izz = 3.184511e-11
+    float urdf:link:inertial:mass = 0.000019499943
+    float3 urdf:link:inertial:origin:rpy = (-0.938656, -1.4422712, 0.27987993)
+    point3f urdf:link:inertial:origin:xyz = (-0.000020498883, -0.000021197902, -0.00003067746)
+
+    def Mesh "PepperBlack" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack.usda@</PepperBlack>
+    )
+    {
+        rel material:binding = </pepper_black/PepperBlack/Materials/M_PepperBlack>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_PepperBlack>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/obj/PepperBlack.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_PepperBlack" (
+                prepend references = @./pepper_black/materials/usd/M_PepperBlack.usda@</M_PepperBlack>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "PepperBlack_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_001.usda@</PepperBlack_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_002.usda@</PepperBlack_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_003.usda@</PepperBlack_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_004.usda@</PepperBlack_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_005" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_005.usda@</PepperBlack_005>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_005>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_005.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_006" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_006.usda@</PepperBlack_006>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_006>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_006.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_007" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_007.usda@</PepperBlack_007>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_007>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_007.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_008" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_008.usda@</PepperBlack_008>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_008>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_008.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_009" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_009.usda@</PepperBlack_009>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_009>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_009.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_010" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_010.usda@</PepperBlack_010>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_010>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_010.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_011" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_011.usda@</PepperBlack_011>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_011>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_011.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_012" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_012.usda@</PepperBlack_012>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_012>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_012.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PepperBlack_013" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_black/meshes/usd/PepperBlack_013.usda@</PepperBlack_013>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperBlack_013>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_black/meshes/stl/PepperBlack_013.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "pepper_black"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "pepper_black"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "PepperBlack"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/obj/PepperBlack.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_001"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_002"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_003"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_004"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_005"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_006"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_007"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_008"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_009"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_010"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_011"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_012"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperBlack_013"
+            {
+                asset mujoco:mesh:file = @pepper_black/meshes/stl/PepperBlack_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_PepperBlack"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_PepperBlack>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_PepperBlack"
+            {
+                asset mujoco:texture:file = @T_PepperBlack.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

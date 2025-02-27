@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<mujoco model="black_towel">
+	<compiler meshdir="black_towel/meshes" texturedir="black_towel/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BlackTowel002" file="obj/BlackTowel002.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_001" file="stl/BlackTowel002_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_002" file="stl/BlackTowel002_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_003" file="stl/BlackTowel002_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_004" file="stl/BlackTowel002_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_005" file="stl/BlackTowel002_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_006" file="stl/BlackTowel002_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_007" file="stl/BlackTowel002_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_008" file="stl/BlackTowel002_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_009" file="stl/BlackTowel002_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel002_010" file="stl/BlackTowel002_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001" file="obj/BlackTowel001.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_001" file="stl/BlackTowel001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_002" file="stl/BlackTowel001_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_003" file="stl/BlackTowel001_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_004" file="stl/BlackTowel001_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_005" file="stl/BlackTowel001_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlackTowel001_006" file="stl/BlackTowel001_006.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BlackTowel002" texture="T_BlackTowel002"/>
+		<material name="M_BlackTowel001" texture="T_BlackTowel001"/>
+		<texture name="T_BlackTowel002" type="2d" file="T_BlackTowel002.png"/>
+		<texture name="T_BlackTowel001" type="2d" file="T_BlackTowel001.png"/>
+	</asset>
+	<worldbody>
+		<body name="black_towel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="black_towel002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.8067870140075684" pos="-0.09221678227186203 0.010525413788855076 -0.003229085821658373" quat="0.9994341731071472 -0.029559262096881866 0.001972401514649391 0.015926823019981384" diaginertia="0.011557471938431263 0.03699008375406265 0.04691235348582268"/>
+				<geom name="BlackTowel002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002" material="M_BlackTowel002" class="visual"/>
+				<geom name="BlackTowel002_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_001" class="collision"/>
+				<geom name="BlackTowel002_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_002" class="collision"/>
+				<geom name="BlackTowel002_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_003" class="collision"/>
+				<geom name="BlackTowel002_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_004" class="collision"/>
+				<geom name="BlackTowel002_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_005" class="collision"/>
+				<geom name="BlackTowel002_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_006" class="collision"/>
+				<geom name="BlackTowel002_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_007" class="collision"/>
+				<geom name="BlackTowel002_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_008" class="collision"/>
+				<geom name="BlackTowel002_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_009" class="collision"/>
+				<geom name="BlackTowel002_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel002_010" class="collision"/>
+			</body>
+			<body name="black_towel001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="13.021437644958496" pos="0.027078310027718544 -0.005015066359192133 -0.0011904765851795673" quat="0.9997866153717041 0.016430513933300972 0.004260017070919275 -0.011775031685829163" diaginertia="0.061788178980350494 0.11718115955591202 0.17013384401798248"/>
+				<geom name="BlackTowel001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001" material="M_BlackTowel001" class="visual"/>
+				<geom name="BlackTowel001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_001" class="collision"/>
+				<geom name="BlackTowel001_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_002" class="collision"/>
+				<geom name="BlackTowel001_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_003" class="collision"/>
+				<geom name="BlackTowel001_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_004" class="collision"/>
+				<geom name="BlackTowel001_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_005" class="collision"/>
+				<geom name="BlackTowel001_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlackTowel001_006" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

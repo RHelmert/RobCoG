@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<mujoco model="pan">
+	<compiler meshdir="pan/meshes" texturedir="pan/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PanMetal" file="stl/PanMetal.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_001" file="stl/PanMetal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_002" file="stl/PanMetal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_003" file="stl/PanMetal_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_004" file="stl/PanMetal_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_005" file="stl/PanMetal_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_006" file="stl/PanMetal_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_007" file="stl/PanMetal_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_008" file="stl/PanMetal_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_009" file="stl/PanMetal_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_010" file="stl/PanMetal_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_011" file="stl/PanMetal_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_012" file="stl/PanMetal_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_013" file="stl/PanMetal_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_014" file="stl/PanMetal_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_015" file="stl/PanMetal_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_016" file="stl/PanMetal_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_017" file="stl/PanMetal_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_018" file="stl/PanMetal_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_019" file="stl/PanMetal_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_020" file="stl/PanMetal_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_021" file="stl/PanMetal_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_022" file="stl/PanMetal_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_023" file="stl/PanMetal_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_024" file="stl/PanMetal_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_025" file="stl/PanMetal_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_026" file="stl/PanMetal_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_027" file="stl/PanMetal_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_028" file="stl/PanMetal_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_029" file="stl/PanMetal_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_030" file="stl/PanMetal_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_031" file="stl/PanMetal_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_032" file="stl/PanMetal_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_033" file="stl/PanMetal_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PanMetal_034" file="stl/PanMetal_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal" file="stl/HandleMetal.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_001" file="stl/HandleMetal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_002" file="stl/HandleMetal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_003" file="stl/HandleMetal_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_004" file="stl/HandleMetal_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_005" file="stl/HandleMetal_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_006" file="stl/HandleMetal_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_007" file="stl/HandleMetal_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_008" file="stl/HandleMetal_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_009" file="stl/HandleMetal_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_010" file="stl/HandleMetal_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_011" file="stl/HandleMetal_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleMetal_012" file="stl/HandleMetal_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden" file="obj/HandleWooden.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_001" file="stl/HandleWooden_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_002" file="stl/HandleWooden_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_003" file="stl/HandleWooden_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_004" file="stl/HandleWooden_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_005" file="stl/HandleWooden_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_006" file="stl/HandleWooden_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_007" file="stl/HandleWooden_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_008" file="stl/HandleWooden_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_009" file="stl/HandleWooden_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_010" file="stl/HandleWooden_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_011" file="stl/HandleWooden_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_012" file="stl/HandleWooden_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_013" file="stl/HandleWooden_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_014" file="stl/HandleWooden_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_015" file="stl/HandleWooden_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_016" file="stl/HandleWooden_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_017" file="stl/HandleWooden_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_018" file="stl/HandleWooden_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_019" file="stl/HandleWooden_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_020" file="stl/HandleWooden_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_021" file="stl/HandleWooden_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_022" file="stl/HandleWooden_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_023" file="stl/HandleWooden_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HandleWooden_024" file="stl/HandleWooden_024.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PanMetal" rgba="0.35010001063346863 0.3345000147819519 0.2874999940395355 1.0" emission="0.0"/>
+		<material name="M_HandleMetal" rgba="0.35010001063346863 0.3345000147819519 0.2874999940395355 1.0" emission="0.0"/>
+		<material name="M_HandleWooden" texture="T_HandleWooden"/>
+		<texture name="T_HandleWooden" type="2d" file="T_HandleWooden.png"/>
+	</asset>
+	<worldbody>
+		<body name="pan" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="pan_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.6286439895629883" pos="0.08990475535392761 -2.732915334036079e-07 -0.006082954816520214" quat="0.9998741745948792 -2.2729412307853636e-07 0.015862658619880676 -1.6148235317814397e-06" diaginertia="0.02098214253783226 0.04000343754887581 0.05947813764214516"/>
+				<geom name="PanMetal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal" material="M_PanMetal" class="visual"/>
+				<geom name="PanMetal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_001" class="collision"/>
+				<geom name="PanMetal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_002" class="collision"/>
+				<geom name="PanMetal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_003" class="collision"/>
+				<geom name="PanMetal_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_004" class="collision"/>
+				<geom name="PanMetal_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_005" class="collision"/>
+				<geom name="PanMetal_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_006" class="collision"/>
+				<geom name="PanMetal_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_007" class="collision"/>
+				<geom name="PanMetal_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_008" class="collision"/>
+				<geom name="PanMetal_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_009" class="collision"/>
+				<geom name="PanMetal_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_010" class="collision"/>
+				<geom name="PanMetal_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_011" class="collision"/>
+				<geom name="PanMetal_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_012" class="collision"/>
+				<geom name="PanMetal_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_013" class="collision"/>
+				<geom name="PanMetal_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_014" class="collision"/>
+				<geom name="PanMetal_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_015" class="collision"/>
+				<geom name="PanMetal_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_016" class="collision"/>
+				<geom name="PanMetal_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_017" class="collision"/>
+				<geom name="PanMetal_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_018" class="collision"/>
+				<geom name="PanMetal_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_019" class="collision"/>
+				<geom name="PanMetal_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_020" class="collision"/>
+				<geom name="PanMetal_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_021" class="collision"/>
+				<geom name="PanMetal_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_022" class="collision"/>
+				<geom name="PanMetal_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_023" class="collision"/>
+				<geom name="PanMetal_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_024" class="collision"/>
+				<geom name="PanMetal_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_025" class="collision"/>
+				<geom name="PanMetal_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_026" class="collision"/>
+				<geom name="PanMetal_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_027" class="collision"/>
+				<geom name="PanMetal_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_028" class="collision"/>
+				<geom name="PanMetal_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_029" class="collision"/>
+				<geom name="PanMetal_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_030" class="collision"/>
+				<geom name="PanMetal_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_031" class="collision"/>
+				<geom name="PanMetal_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_032" class="collision"/>
+				<geom name="PanMetal_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_033" class="collision"/>
+				<geom name="PanMetal_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PanMetal_034" class="collision"/>
+			</body>
+			<body name="handle_wooden" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.5336440801620483" pos="-0.13276457786560059 0.000123787292977795 0.00931735523045063" quat="0.712058424949646 0.701295793056488 0.023928305134177208 -0.024174852296710014" diaginertia="3.8637517718598247e-05 0.010447471402585506 0.010448549874126911"/>
+				<geom name="HandleWooden" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden" material="M_HandleWooden" class="visual"/>
+				<geom name="HandleWooden_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_001" class="collision"/>
+				<geom name="HandleWooden_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_002" class="collision"/>
+				<geom name="HandleWooden_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_003" class="collision"/>
+				<geom name="HandleWooden_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_004" class="collision"/>
+				<geom name="HandleWooden_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_005" class="collision"/>
+				<geom name="HandleWooden_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_006" class="collision"/>
+				<geom name="HandleWooden_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_007" class="collision"/>
+				<geom name="HandleWooden_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_008" class="collision"/>
+				<geom name="HandleWooden_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_009" class="collision"/>
+				<geom name="HandleWooden_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_010" class="collision"/>
+				<geom name="HandleWooden_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_011" class="collision"/>
+				<geom name="HandleWooden_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_012" class="collision"/>
+				<geom name="HandleWooden_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_013" class="collision"/>
+				<geom name="HandleWooden_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_014" class="collision"/>
+				<geom name="HandleWooden_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_015" class="collision"/>
+				<geom name="HandleWooden_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_016" class="collision"/>
+				<geom name="HandleWooden_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_017" class="collision"/>
+				<geom name="HandleWooden_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_018" class="collision"/>
+				<geom name="HandleWooden_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_019" class="collision"/>
+				<geom name="HandleWooden_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_020" class="collision"/>
+				<geom name="HandleWooden_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_021" class="collision"/>
+				<geom name="HandleWooden_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_022" class="collision"/>
+				<geom name="HandleWooden_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_023" class="collision"/>
+				<geom name="HandleWooden_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleWooden_024" class="collision"/>
+			</body>
+			<body name="handle_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.09857194870710373" pos="-0.09976198524236679 0.00013171879982110113 0.009249822236597538" quat="0.9992324113845825 0.002873531775549054 0.03906231001019478 -0.0006392072536982596" diaginertia="1.0279828529746737e-05 0.0014953159261494875 0.0014964917208999395"/>
+				<geom name="HandleMetal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal" material="M_HandleMetal" class="visual"/>
+				<geom name="HandleMetal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_001" class="collision"/>
+				<geom name="HandleMetal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_002" class="collision"/>
+				<geom name="HandleMetal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_003" class="collision"/>
+				<geom name="HandleMetal_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_004" class="collision"/>
+				<geom name="HandleMetal_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_005" class="collision"/>
+				<geom name="HandleMetal_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_006" class="collision"/>
+				<geom name="HandleMetal_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_007" class="collision"/>
+				<geom name="HandleMetal_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_008" class="collision"/>
+				<geom name="HandleMetal_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_009" class="collision"/>
+				<geom name="HandleMetal_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_010" class="collision"/>
+				<geom name="HandleMetal_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_011" class="collision"/>
+				<geom name="HandleMetal_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HandleMetal_012" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

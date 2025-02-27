@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<mujoco model="blue_vase">
+	<compiler meshdir="blue_vase/meshes" texturedir="blue_vase/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BlueVase" file="stl/BlueVase.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_001" file="stl/BlueVase_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_002" file="stl/BlueVase_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_003" file="stl/BlueVase_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_004" file="stl/BlueVase_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_005" file="stl/BlueVase_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_006" file="stl/BlueVase_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_007" file="stl/BlueVase_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_008" file="stl/BlueVase_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_009" file="stl/BlueVase_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_010" file="stl/BlueVase_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_011" file="stl/BlueVase_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_012" file="stl/BlueVase_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_013" file="stl/BlueVase_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_014" file="stl/BlueVase_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_015" file="stl/BlueVase_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_016" file="stl/BlueVase_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_017" file="stl/BlueVase_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_018" file="stl/BlueVase_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_019" file="stl/BlueVase_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_020" file="stl/BlueVase_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_021" file="stl/BlueVase_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_022" file="stl/BlueVase_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_023" file="stl/BlueVase_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_024" file="stl/BlueVase_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_025" file="stl/BlueVase_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_026" file="stl/BlueVase_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_027" file="stl/BlueVase_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_028" file="stl/BlueVase_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_029" file="stl/BlueVase_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_030" file="stl/BlueVase_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_031" file="stl/BlueVase_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_032" file="stl/BlueVase_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_033" file="stl/BlueVase_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_034" file="stl/BlueVase_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_035" file="stl/BlueVase_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_036" file="stl/BlueVase_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_037" file="stl/BlueVase_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_038" file="stl/BlueVase_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_039" file="stl/BlueVase_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_040" file="stl/BlueVase_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_041" file="stl/BlueVase_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_042" file="stl/BlueVase_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_043" file="stl/BlueVase_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_044" file="stl/BlueVase_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_045" file="stl/BlueVase_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_046" file="stl/BlueVase_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_047" file="stl/BlueVase_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_048" file="stl/BlueVase_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_049" file="stl/BlueVase_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_050" file="stl/BlueVase_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_051" file="stl/BlueVase_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_052" file="stl/BlueVase_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_053" file="stl/BlueVase_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_054" file="stl/BlueVase_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_055" file="stl/BlueVase_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_056" file="stl/BlueVase_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_057" file="stl/BlueVase_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_058" file="stl/BlueVase_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_059" file="stl/BlueVase_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_060" file="stl/BlueVase_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_061" file="stl/BlueVase_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_062" file="stl/BlueVase_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_063" file="stl/BlueVase_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_064" file="stl/BlueVase_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_065" file="stl/BlueVase_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_066" file="stl/BlueVase_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_067" file="stl/BlueVase_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_068" file="stl/BlueVase_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_069" file="stl/BlueVase_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_070" file="stl/BlueVase_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_071" file="stl/BlueVase_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_072" file="stl/BlueVase_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_073" file="stl/BlueVase_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_074" file="stl/BlueVase_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_075" file="stl/BlueVase_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_076" file="stl/BlueVase_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_077" file="stl/BlueVase_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_078" file="stl/BlueVase_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_079" file="stl/BlueVase_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BlueVase_080" file="stl/BlueVase_080.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BlueVase" rgba="0.120899997651577 0.19930000603199005 0.24240000545978546 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="blue_vase" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="1.7368546724319458" pos="-0.00020687341748271137 -0.0005860843230038881 -0.040560945868492126" quat="-0.5001904964447021 -0.4948572516441345 -0.5007036328315735 0.5042039752006531" diaginertia="0.006913658231496811 0.012819013558328152 0.01287089753895998"/>
+			<geom name="BlueVase" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase" material="M_BlueVase" class="visual"/>
+			<geom name="BlueVase_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_001" class="collision"/>
+			<geom name="BlueVase_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_002" class="collision"/>
+			<geom name="BlueVase_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_003" class="collision"/>
+			<geom name="BlueVase_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_004" class="collision"/>
+			<geom name="BlueVase_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_005" class="collision"/>
+			<geom name="BlueVase_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_006" class="collision"/>
+			<geom name="BlueVase_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_007" class="collision"/>
+			<geom name="BlueVase_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_008" class="collision"/>
+			<geom name="BlueVase_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_009" class="collision"/>
+			<geom name="BlueVase_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_010" class="collision"/>
+			<geom name="BlueVase_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_011" class="collision"/>
+			<geom name="BlueVase_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_012" class="collision"/>
+			<geom name="BlueVase_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_013" class="collision"/>
+			<geom name="BlueVase_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_014" class="collision"/>
+			<geom name="BlueVase_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_015" class="collision"/>
+			<geom name="BlueVase_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_016" class="collision"/>
+			<geom name="BlueVase_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_017" class="collision"/>
+			<geom name="BlueVase_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_018" class="collision"/>
+			<geom name="BlueVase_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_019" class="collision"/>
+			<geom name="BlueVase_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_020" class="collision"/>
+			<geom name="BlueVase_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_021" class="collision"/>
+			<geom name="BlueVase_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_022" class="collision"/>
+			<geom name="BlueVase_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_023" class="collision"/>
+			<geom name="BlueVase_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_024" class="collision"/>
+			<geom name="BlueVase_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_025" class="collision"/>
+			<geom name="BlueVase_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_026" class="collision"/>
+			<geom name="BlueVase_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_027" class="collision"/>
+			<geom name="BlueVase_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_028" class="collision"/>
+			<geom name="BlueVase_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_029" class="collision"/>
+			<geom name="BlueVase_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_030" class="collision"/>
+			<geom name="BlueVase_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_031" class="collision"/>
+			<geom name="BlueVase_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_032" class="collision"/>
+			<geom name="BlueVase_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_033" class="collision"/>
+			<geom name="BlueVase_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_034" class="collision"/>
+			<geom name="BlueVase_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_035" class="collision"/>
+			<geom name="BlueVase_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_036" class="collision"/>
+			<geom name="BlueVase_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_037" class="collision"/>
+			<geom name="BlueVase_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_038" class="collision"/>
+			<geom name="BlueVase_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_039" class="collision"/>
+			<geom name="BlueVase_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_040" class="collision"/>
+			<geom name="BlueVase_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_041" class="collision"/>
+			<geom name="BlueVase_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_042" class="collision"/>
+			<geom name="BlueVase_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_043" class="collision"/>
+			<geom name="BlueVase_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_044" class="collision"/>
+			<geom name="BlueVase_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_045" class="collision"/>
+			<geom name="BlueVase_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_046" class="collision"/>
+			<geom name="BlueVase_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_047" class="collision"/>
+			<geom name="BlueVase_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_048" class="collision"/>
+			<geom name="BlueVase_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_049" class="collision"/>
+			<geom name="BlueVase_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_050" class="collision"/>
+			<geom name="BlueVase_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_051" class="collision"/>
+			<geom name="BlueVase_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_052" class="collision"/>
+			<geom name="BlueVase_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_053" class="collision"/>
+			<geom name="BlueVase_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_054" class="collision"/>
+			<geom name="BlueVase_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_055" class="collision"/>
+			<geom name="BlueVase_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_056" class="collision"/>
+			<geom name="BlueVase_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_057" class="collision"/>
+			<geom name="BlueVase_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_058" class="collision"/>
+			<geom name="BlueVase_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_059" class="collision"/>
+			<geom name="BlueVase_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_060" class="collision"/>
+			<geom name="BlueVase_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_061" class="collision"/>
+			<geom name="BlueVase_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_062" class="collision"/>
+			<geom name="BlueVase_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_063" class="collision"/>
+			<geom name="BlueVase_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_064" class="collision"/>
+			<geom name="BlueVase_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_065" class="collision"/>
+			<geom name="BlueVase_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_066" class="collision"/>
+			<geom name="BlueVase_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_067" class="collision"/>
+			<geom name="BlueVase_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_068" class="collision"/>
+			<geom name="BlueVase_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_069" class="collision"/>
+			<geom name="BlueVase_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_070" class="collision"/>
+			<geom name="BlueVase_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_071" class="collision"/>
+			<geom name="BlueVase_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_072" class="collision"/>
+			<geom name="BlueVase_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_073" class="collision"/>
+			<geom name="BlueVase_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_074" class="collision"/>
+			<geom name="BlueVase_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_075" class="collision"/>
+			<geom name="BlueVase_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_076" class="collision"/>
+			<geom name="BlueVase_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_077" class="collision"/>
+			<geom name="BlueVase_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_078" class="collision"/>
+			<geom name="BlueVase_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_079" class="collision"/>
+			<geom name="BlueVase_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BlueVase_080" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

@@ -1,0 +1,1168 @@
+#usda 1.0
+(
+    defaultPrim = "pickled_cucumber"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "pickled_cucumber" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "pickled_cucumber_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (1.632207e-7, 0.0000030060557, 0.00000301512)
+        float mujoco:body:inertial:mass = 0.008180638
+        point3f mujoco:body:inertial:pos = (0.0007146874, -0.00016458447, 0.0001850047)
+        quatf mujoco:body:inertial:quat = (0.9983374, 0.057585455, 0.0006288754, 0.002434139)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0007146874, -0.00016458447, 0.0001850047)
+        float3 physics:diagonalInertia = (1.632207e-7, 0.0000030060557, 0.00000301512)
+        float physics:mass = 0.008180638
+        quatf physics:principalAxes = (0.9983374, 0.057585455, 0.0006288754, 0.002434139)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 1.632207e-7
+        float urdf:link:inertial:inertia:iyy = 0.0000030060557
+        float urdf:link:inertial:inertia:izz = 0.00000301512
+        float urdf:link:inertial:mass = 0.008180638
+        float3 urdf:link:inertial:origin:rpy = (0.11523743, 0.00097531785, 0.0049326345)
+        point3f urdf:link:inertial:origin:xyz = (0.0007146874, -0.00016458447, 0.0001850047)
+
+        def Mesh "PickledCucumberFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberFlesh.usda@</PickledCucumberFlesh>
+        )
+        {
+            rel material:binding = </pickled_cucumber/pickled_cucumber_flesh/PickledCucumberFlesh/Materials/M_PickledCucumberFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_PickledCucumberFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/obj/PickledCucumberFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_PickledCucumberFlesh" (
+                    prepend references = @./pickled_cucumber/materials/usd/M_PickledCucumberFlesh.usda@</M_PickledCucumberFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "PickledCucumberFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberFlesh_001.usda@</PickledCucumberFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberFlesh_002.usda@</PickledCucumberFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "pickled_cucumber_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (3.3809444e-9, 7.695173e-8, 7.745622e-8)
+        float mujoco:body:inertial:mass = 0.00022778375
+        point3f mujoco:body:inertial:pos = (-0.000621117, -0.0004471162, 0.00047694248)
+        quatf mujoco:body:inertial:quat = (0.99932927, -0.036608517, 0.00086997607, -0.00014944636)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.000621117, -0.0004471162, 0.00047694248)
+        float3 physics:diagonalInertia = (3.3809444e-9, 7.695173e-8, 7.745622e-8)
+        float physics:mass = 0.00022778375
+        quatf physics:principalAxes = (0.99932927, -0.036608517, 0.00086997607, -0.00014944636)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 3.3809444e-9
+        float urdf:link:inertial:inertia:iyy = 7.695173e-8
+        float urdf:link:inertial:inertia:izz = 7.745622e-8
+        float urdf:link:inertial:mass = 0.00022778375
+        float3 urdf:link:inertial:origin:rpy = (-0.07323374, 0.001727844, -0.0003623899)
+        point3f urdf:link:inertial:origin:xyz = (-0.000621117, -0.0004471162, 0.00047694248)
+
+        def Mesh "PickledCucumberSeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed.usda@</PickledCucumberSeed>
+        )
+        {
+            rel material:binding = </pickled_cucumber/pickled_cucumber_seed/PickledCucumberSeed/Materials/M_PickledCucumberSeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_PickledCucumberSeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/obj/PickledCucumberSeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_PickledCucumberSeed" (
+                    prepend references = @./pickled_cucumber/materials/usd/M_PickledCucumberSeed.usda@</M_PickledCucumberSeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "PickledCucumberSeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_001.usda@</PickledCucumberSeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_002.usda@</PickledCucumberSeed_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_003.usda@</PickledCucumberSeed_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_004.usda@</PickledCucumberSeed_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_005.usda@</PickledCucumberSeed_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_006.usda@</PickledCucumberSeed_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_007.usda@</PickledCucumberSeed_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_008.usda@</PickledCucumberSeed_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_009.usda@</PickledCucumberSeed_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_010.usda@</PickledCucumberSeed_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_011.usda@</PickledCucumberSeed_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_012.usda@</PickledCucumberSeed_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_013.usda@</PickledCucumberSeed_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_014.usda@</PickledCucumberSeed_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_015.usda@</PickledCucumberSeed_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_016.usda@</PickledCucumberSeed_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_017.usda@</PickledCucumberSeed_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_018.usda@</PickledCucumberSeed_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_019.usda@</PickledCucumberSeed_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_020.usda@</PickledCucumberSeed_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_021.usda@</PickledCucumberSeed_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_022.usda@</PickledCucumberSeed_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_023.usda@</PickledCucumberSeed_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_024.usda@</PickledCucumberSeed_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_025.usda@</PickledCucumberSeed_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_026.usda@</PickledCucumberSeed_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_027.usda@</PickledCucumberSeed_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_028.usda@</PickledCucumberSeed_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_029.usda@</PickledCucumberSeed_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_030.usda@</PickledCucumberSeed_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_031.usda@</PickledCucumberSeed_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberSeed_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberSeed_032.usda@</PickledCucumberSeed_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberSeed_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberSeed_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "pickled_cucumber_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (4.903369e-7, 0.000007811922, 0.0000078392195)
+        float mujoco:body:inertial:mass = 0.020253027
+        point3f mujoco:body:inertial:pos = (0.0007119235, 0.00022078375, -0.00022728989)
+        quatf mujoco:body:inertial:quat = (0.99858975, 0.052986734, 0.0011286938, 0.003108468)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0007119235, 0.00022078375, -0.00022728989)
+        float3 physics:diagonalInertia = (4.903369e-7, 0.000007811922, 0.0000078392195)
+        float physics:mass = 0.020253027
+        quatf physics:principalAxes = (0.99858975, 0.052986734, 0.0011286938, 0.003108468)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 4.903369e-7
+        float urdf:link:inertial:inertia:iyy = 0.000007811922
+        float urdf:link:inertial:inertia:izz = 0.0000078392195
+        float urdf:link:inertial:mass = 0.020253027
+        float3 urdf:link:inertial:origin:rpy = (0.106029786, 0.0019247902, 0.006327834)
+        point3f urdf:link:inertial:origin:xyz = (0.0007119235, 0.00022078375, -0.00022728989)
+
+        def Mesh "PickledCucumberPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberPeel.usda@</PickledCucumberPeel>
+        )
+        {
+            rel material:binding = </pickled_cucumber/pickled_cucumber_peel/PickledCucumberPeel/Materials/M_PickledCucumberPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_PickledCucumberPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/obj/PickledCucumberPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_PickledCucumberPeel" (
+                    prepend references = @./pickled_cucumber/materials/usd/M_PickledCucumberPeel.usda@</M_PickledCucumberPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "PickledCucumberPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberPeel_001.usda@</PickledCucumberPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PickledCucumberPeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./pickled_cucumber/meshes/usd/PickledCucumberPeel_002.usda@</PickledCucumberPeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PickledCucumberPeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./pickled_cucumber/meshes/stl/PickledCucumberPeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "pickled_cucumber"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "pickled_cucumber"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "PickledCucumberFlesh"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberFlesh.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberFlesh_001"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberFlesh_002"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_001"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_002"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_003"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_004"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_005"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_006"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_007"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_008"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_009"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_010"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_011"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_012"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_013"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_014"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_015"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_016"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_017"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_018"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_019"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_020"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_021"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_022"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_023"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_024"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_025"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_026"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_027"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_028"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_029"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_030"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_031"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberSeed_032"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberSeed_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberPeel"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/obj/PickledCucumberPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberPeel_001"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PickledCucumberPeel_002"
+            {
+                asset mujoco:mesh:file = @pickled_cucumber/meshes/stl/PickledCucumberPeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_PickledCucumberFlesh"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6623, 0.6575, 0.5468, 0.9804)
+            }
+
+            def MujocoMaterial "M_PickledCucumberSeed"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.7448, 0.7527, 0.733, 1)
+            }
+
+            def MujocoMaterial "M_PickledCucumberPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_PickledCucumberPeel>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_PickledCucumberPeel"
+            {
+                asset mujoco:texture:file = @T_PickledCucumberPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

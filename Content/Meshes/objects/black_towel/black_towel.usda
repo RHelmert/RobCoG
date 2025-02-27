@@ -1,0 +1,591 @@
+#usda 1.0
+(
+    defaultPrim = "black_towel"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "black_towel" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "black_towel002" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.011557472, 0.036990084, 0.046912353)
+        float mujoco:body:inertial:mass = 2.806787
+        point3f mujoco:body:inertial:pos = (-0.09221678, 0.010525414, -0.0032290858)
+        quatf mujoco:body:inertial:quat = (0.9994342, -0.029559262, 0.0019724015, 0.015926823)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.09221678, 0.010525414, -0.0032290858)
+        float3 physics:diagonalInertia = (0.011557472, 0.036990084, 0.046912353)
+        float physics:mass = 2.806787
+        quatf physics:principalAxes = (0.9994342, -0.029559262, 0.0019724015, 0.015926823)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.011557472
+        float urdf:link:inertial:inertia:iyy = 0.036990084
+        float urdf:link:inertial:inertia:izz = 0.046912353
+        float urdf:link:inertial:mass = 2.806787
+        float3 urdf:link:inertial:origin:rpy = (-0.059057273, 0.0048841606, 0.031724717)
+        point3f urdf:link:inertial:origin:xyz = (-0.09221678, 0.010525414, -0.0032290858)
+
+        def Mesh "BlackTowel002" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002.usda@</BlackTowel002>
+        )
+        {
+            rel material:binding = </black_towel/black_towel002/BlackTowel002/Materials/M_BlackTowel002>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BlackTowel002>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/obj/BlackTowel002.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BlackTowel002" (
+                    prepend references = @./black_towel/materials/usd/M_BlackTowel002.usda@</M_BlackTowel002>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BlackTowel002_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_001.usda@</BlackTowel002_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_002.usda@</BlackTowel002_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_003.usda@</BlackTowel002_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_004.usda@</BlackTowel002_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_005.usda@</BlackTowel002_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_006.usda@</BlackTowel002_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_007.usda@</BlackTowel002_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_008.usda@</BlackTowel002_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_009.usda@</BlackTowel002_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel002_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel002_010.usda@</BlackTowel002_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel002_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel002_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "black_towel001" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.06178818, 0.11718116, 0.17013384)
+        float mujoco:body:inertial:mass = 13.021438
+        point3f mujoco:body:inertial:pos = (0.02707831, -0.0050150664, -0.0011904766)
+        quatf mujoco:body:inertial:quat = (0.9997866, 0.016430514, 0.004260017, -0.011775032)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.02707831, -0.0050150664, -0.0011904766)
+        float3 physics:diagonalInertia = (0.06178818, 0.11718116, 0.17013384)
+        float physics:mass = 13.021438
+        quatf physics:principalAxes = (0.9997866, 0.016430514, 0.004260017, -0.011775032)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.06178818
+        float urdf:link:inertial:inertia:iyy = 0.11718116
+        float urdf:link:inertial:inertia:izz = 0.17013384
+        float urdf:link:inertial:mass = 13.021438
+        float3 urdf:link:inertial:origin:rpy = (0.03276085, 0.008905273, -0.023408115)
+        point3f urdf:link:inertial:origin:xyz = (0.02707831, -0.0050150664, -0.0011904766)
+
+        def Mesh "BlackTowel001" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001.usda@</BlackTowel001>
+        )
+        {
+            rel material:binding = </black_towel/black_towel001/BlackTowel001/Materials/M_BlackTowel001>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BlackTowel001>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/obj/BlackTowel001.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BlackTowel001" (
+                    prepend references = @./black_towel/materials/usd/M_BlackTowel001.usda@</M_BlackTowel001>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BlackTowel001_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_001.usda@</BlackTowel001_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel001_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_002.usda@</BlackTowel001_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel001_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_003.usda@</BlackTowel001_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel001_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_004.usda@</BlackTowel001_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel001_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_005.usda@</BlackTowel001_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BlackTowel001_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./black_towel/meshes/usd/BlackTowel001_006.usda@</BlackTowel001_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BlackTowel001_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./black_towel/meshes/stl/BlackTowel001_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "black_towel"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "black_towel"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "BlackTowel002"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/obj/BlackTowel002.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_001"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_002"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_003"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_004"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_005"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_006"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_007"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_008"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_009"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel002_010"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel002_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/obj/BlackTowel001.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_001"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_002"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_003"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_004"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_005"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BlackTowel001_006"
+            {
+                asset mujoco:mesh:file = @black_towel/meshes/stl/BlackTowel001_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_BlackTowel002"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BlackTowel002>
+            }
+
+            def MujocoMaterial "M_BlackTowel001"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BlackTowel001>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_BlackTowel002"
+            {
+                asset mujoco:texture:file = @T_BlackTowel002.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_BlackTowel001"
+            {
+                asset mujoco:texture:file = @T_BlackTowel001.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

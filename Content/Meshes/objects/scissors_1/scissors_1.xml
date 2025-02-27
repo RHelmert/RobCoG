@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<mujoco model="scissors_1">
+	<compiler meshdir="scissors_1/meshes" texturedir="scissors_1/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Scissors1Plastics" file="stl/Scissors1Plastics.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_001" file="stl/Scissors1Plastics_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_002" file="stl/Scissors1Plastics_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_003" file="stl/Scissors1Plastics_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_004" file="stl/Scissors1Plastics_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_005" file="stl/Scissors1Plastics_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_006" file="stl/Scissors1Plastics_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_007" file="stl/Scissors1Plastics_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_008" file="stl/Scissors1Plastics_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_009" file="stl/Scissors1Plastics_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_010" file="stl/Scissors1Plastics_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_011" file="stl/Scissors1Plastics_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_012" file="stl/Scissors1Plastics_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_013" file="stl/Scissors1Plastics_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_014" file="stl/Scissors1Plastics_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_015" file="stl/Scissors1Plastics_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_016" file="stl/Scissors1Plastics_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_017" file="stl/Scissors1Plastics_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_018" file="stl/Scissors1Plastics_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_019" file="stl/Scissors1Plastics_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Plastics_020" file="stl/Scissors1Plastics_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal" file="stl/Scissors1Metal.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_001" file="stl/Scissors1Metal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_002" file="stl/Scissors1Metal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_003" file="stl/Scissors1Metal_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_004" file="stl/Scissors1Metal_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_005" file="stl/Scissors1Metal_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_006" file="stl/Scissors1Metal_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_007" file="stl/Scissors1Metal_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_008" file="stl/Scissors1Metal_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_009" file="stl/Scissors1Metal_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_010" file="stl/Scissors1Metal_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_011" file="stl/Scissors1Metal_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_012" file="stl/Scissors1Metal_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_013" file="stl/Scissors1Metal_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors1Metal_014" file="stl/Scissors1Metal_014.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Scissors1Plastics" rgba="0.2687999904155731 0.2687999904155731 0.2687999904155731 1.0" emission="0.0"/>
+		<material name="M_Scissors1Metal" rgba="0.6306999921798706 0.6306999921798706 0.6306999921798706 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="scissors_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="scissors1_plastics" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06911789625883102" pos="-0.04632521793246269 -0.0011474678758531809 2.4406856482528383e-06" quat="0.9999600052833557 -0.004458646290004253 -2.660231984918937e-05 0.007751482538878918" diaginertia="2.377882628934458e-05 0.00017969933105632663 0.00020322277850937098"/>
+				<geom name="Scissors1Plastics" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics" material="M_Scissors1Plastics" class="visual"/>
+				<geom name="Scissors1Plastics_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_001" class="collision"/>
+				<geom name="Scissors1Plastics_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_002" class="collision"/>
+				<geom name="Scissors1Plastics_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_003" class="collision"/>
+				<geom name="Scissors1Plastics_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_004" class="collision"/>
+				<geom name="Scissors1Plastics_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_005" class="collision"/>
+				<geom name="Scissors1Plastics_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_006" class="collision"/>
+				<geom name="Scissors1Plastics_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_007" class="collision"/>
+				<geom name="Scissors1Plastics_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_008" class="collision"/>
+				<geom name="Scissors1Plastics_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_009" class="collision"/>
+				<geom name="Scissors1Plastics_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_010" class="collision"/>
+				<geom name="Scissors1Plastics_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_011" class="collision"/>
+				<geom name="Scissors1Plastics_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_012" class="collision"/>
+				<geom name="Scissors1Plastics_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_013" class="collision"/>
+				<geom name="Scissors1Plastics_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_014" class="collision"/>
+				<geom name="Scissors1Plastics_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_015" class="collision"/>
+				<geom name="Scissors1Plastics_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_016" class="collision"/>
+				<geom name="Scissors1Plastics_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_017" class="collision"/>
+				<geom name="Scissors1Plastics_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_018" class="collision"/>
+				<geom name="Scissors1Plastics_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_019" class="collision"/>
+				<geom name="Scissors1Plastics_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Plastics_020" class="collision"/>
+			</body>
+			<body name="scissors1_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.04414314031600952" pos="-0.007116943132132292 -0.0018855701200664043 -0.0001600364048499614" quat="0.9997630715370178 -0.016199924051761627 -0.00011399905633879825 -0.01453721895813942" diaginertia="7.290732810361078e-06 8.119512494886294e-05 8.842754323268309e-05"/>
+				<geom name="Scissors1Metal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal" material="M_Scissors1Metal" class="visual"/>
+				<geom name="Scissors1Metal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_001" class="collision"/>
+				<geom name="Scissors1Metal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_002" class="collision"/>
+				<geom name="Scissors1Metal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_003" class="collision"/>
+				<geom name="Scissors1Metal_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_004" class="collision"/>
+				<geom name="Scissors1Metal_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_005" class="collision"/>
+				<geom name="Scissors1Metal_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_006" class="collision"/>
+				<geom name="Scissors1Metal_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_007" class="collision"/>
+				<geom name="Scissors1Metal_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_008" class="collision"/>
+				<geom name="Scissors1Metal_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_009" class="collision"/>
+				<geom name="Scissors1Metal_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_010" class="collision"/>
+				<geom name="Scissors1Metal_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_011" class="collision"/>
+				<geom name="Scissors1Metal_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_012" class="collision"/>
+				<geom name="Scissors1Metal_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_013" class="collision"/>
+				<geom name="Scissors1Metal_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors1Metal_014" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

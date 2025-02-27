@@ -1,0 +1,2447 @@
+#usda 1.0
+(
+    defaultPrim = "horticultural_scissors"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "horticultural_scissors" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "horticultural_scissors_hilt" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00003018991, 0.00004829596, 0.000076676515)
+        float mujoco:body:inertial:mass = 0.066662334
+        point3f mujoco:body:inertial:pos = (-0.016844401, 0.008649985, -0.0025599864)
+        quatf mujoco:body:inertial:quat = (0.91639054, -0.0035855547, -0.03805565, -0.3984561)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.016844401, 0.008649985, -0.0025599864)
+        float3 physics:diagonalInertia = (0.00003018991, 0.00004829596, 0.000076676515)
+        float physics:mass = 0.066662334
+        quatf physics:principalAxes = (0.91639054, -0.0035855547, -0.03805565, -0.3984561)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00003018991
+        float urdf:link:inertial:inertia:iyy = 0.00004829596
+        float urdf:link:inertial:inertia:izz = 0.000076676515
+        float urdf:link:inertial:mass = 0.066662334
+        float3 urdf:link:inertial:origin:rpy = (0.02382059, -0.07266899, -0.8211673)
+        point3f urdf:link:inertial:origin:xyz = (-0.016844401, 0.008649985, -0.0025599864)
+
+        def Mesh "HorticulturalScissorsHilt" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt.usda@</HorticulturalScissorsHilt>
+        )
+        {
+            rel material:binding = </horticultural_scissors/horticultural_scissors_hilt/HorticulturalScissorsHilt/Materials/M_HorticulturalScissorsHilt>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HorticulturalScissorsHilt>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/obj/HorticulturalScissorsHilt.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HorticulturalScissorsHilt" (
+                    prepend references = @./horticultural_scissors/materials/usd/M_HorticulturalScissorsHilt.usda@</M_HorticulturalScissorsHilt>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HorticulturalScissorsHilt_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_001.usda@</HorticulturalScissorsHilt_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_002.usda@</HorticulturalScissorsHilt_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_003.usda@</HorticulturalScissorsHilt_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_004.usda@</HorticulturalScissorsHilt_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_005.usda@</HorticulturalScissorsHilt_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_006.usda@</HorticulturalScissorsHilt_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_007.usda@</HorticulturalScissorsHilt_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_008.usda@</HorticulturalScissorsHilt_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_009.usda@</HorticulturalScissorsHilt_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_010.usda@</HorticulturalScissorsHilt_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_011.usda@</HorticulturalScissorsHilt_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_012.usda@</HorticulturalScissorsHilt_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_013.usda@</HorticulturalScissorsHilt_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_014.usda@</HorticulturalScissorsHilt_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_015.usda@</HorticulturalScissorsHilt_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_016.usda@</HorticulturalScissorsHilt_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_017.usda@</HorticulturalScissorsHilt_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_018.usda@</HorticulturalScissorsHilt_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_019.usda@</HorticulturalScissorsHilt_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_020.usda@</HorticulturalScissorsHilt_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_021.usda@</HorticulturalScissorsHilt_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_022.usda@</HorticulturalScissorsHilt_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_023.usda@</HorticulturalScissorsHilt_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_024.usda@</HorticulturalScissorsHilt_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_025.usda@</HorticulturalScissorsHilt_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_026.usda@</HorticulturalScissorsHilt_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_027.usda@</HorticulturalScissorsHilt_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_028.usda@</HorticulturalScissorsHilt_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_029.usda@</HorticulturalScissorsHilt_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_030.usda@</HorticulturalScissorsHilt_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_031.usda@</HorticulturalScissorsHilt_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_032.usda@</HorticulturalScissorsHilt_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_033.usda@</HorticulturalScissorsHilt_033>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_033>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_033.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_034.usda@</HorticulturalScissorsHilt_034>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_034>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_034.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_035.usda@</HorticulturalScissorsHilt_035>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_035>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_035.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_036.usda@</HorticulturalScissorsHilt_036>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_036>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_036.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_037.usda@</HorticulturalScissorsHilt_037>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_037>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_037.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHilt_038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHilt_038.usda@</HorticulturalScissorsHilt_038>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHilt_038>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_038.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "horticultural_scissors_handle" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0010753889, 0.0019888377, 0.0030460914)
+        float mujoco:body:inertial:mass = 0.42731437
+        point3f mujoco:body:inertial:pos = (0.061078202, 0.002973422, -0.0030666555)
+        quatf mujoco:body:inertial:quat = (0.9973698, -0.0015068441, 0.02089995, 0.06938541)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.061078202, 0.002973422, -0.0030666555)
+        float3 physics:diagonalInertia = (0.0010753889, 0.0019888377, 0.0030460914)
+        float physics:mass = 0.42731437
+        quatf physics:principalAxes = (0.9973698, -0.0015068441, 0.02089995, 0.06938541)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0010753889
+        float urdf:link:inertial:inertia:iyy = 0.0019888377
+        float urdf:link:inertial:inertia:izz = 0.0030460914
+        float urdf:link:inertial:mass = 0.42731437
+        float3 urdf:link:inertial:origin:rpy = (-0.00010555119, 0.041911334, 0.13891074)
+        point3f urdf:link:inertial:origin:xyz = (0.061078202, 0.002973422, -0.0030666555)
+
+        def Mesh "HorticulturalScissorsHandle" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle.usda@</HorticulturalScissorsHandle>
+        )
+        {
+            rel material:binding = </horticultural_scissors/horticultural_scissors_handle/HorticulturalScissorsHandle/Materials/M_HorticulturalScissorsHandle>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HorticulturalScissorsHandle>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/obj/HorticulturalScissorsHandle.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HorticulturalScissorsHandle" (
+                    prepend references = @./horticultural_scissors/materials/usd/M_HorticulturalScissorsHandle.usda@</M_HorticulturalScissorsHandle>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HorticulturalScissorsHandle_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_001.usda@</HorticulturalScissorsHandle_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_002.usda@</HorticulturalScissorsHandle_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_003.usda@</HorticulturalScissorsHandle_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_004.usda@</HorticulturalScissorsHandle_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_005.usda@</HorticulturalScissorsHandle_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_006.usda@</HorticulturalScissorsHandle_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_007.usda@</HorticulturalScissorsHandle_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_008.usda@</HorticulturalScissorsHandle_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_009.usda@</HorticulturalScissorsHandle_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_010.usda@</HorticulturalScissorsHandle_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_011.usda@</HorticulturalScissorsHandle_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_012.usda@</HorticulturalScissorsHandle_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_013.usda@</HorticulturalScissorsHandle_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_014.usda@</HorticulturalScissorsHandle_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_015.usda@</HorticulturalScissorsHandle_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_016.usda@</HorticulturalScissorsHandle_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_017.usda@</HorticulturalScissorsHandle_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_018.usda@</HorticulturalScissorsHandle_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_019.usda@</HorticulturalScissorsHandle_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_020.usda@</HorticulturalScissorsHandle_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_021.usda@</HorticulturalScissorsHandle_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_022.usda@</HorticulturalScissorsHandle_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_023.usda@</HorticulturalScissorsHandle_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_024.usda@</HorticulturalScissorsHandle_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_025.usda@</HorticulturalScissorsHandle_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_026.usda@</HorticulturalScissorsHandle_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsHandle_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsHandle_027.usda@</HorticulturalScissorsHandle_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsHandle_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "horticultural_scissors_blade" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000020200978, 0.0003948468, 0.0004120948)
+        float mujoco:body:inertial:mass = 0.106972024
+        point3f mujoco:body:inertial:pos = (-0.054136343, 0.007150503, -0.0026331658)
+        quatf mujoco:body:inertial:quat = (0.99777436, -0.005329115, -0.023776585, -0.062068813)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.054136343, 0.007150503, -0.0026331658)
+        float3 physics:diagonalInertia = (0.000020200978, 0.0003948468, 0.0004120948)
+        float physics:mass = 0.106972024
+        quatf physics:principalAxes = (0.99777436, -0.005329115, -0.023776585, -0.062068813)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000020200978
+        float urdf:link:inertial:inertia:iyy = 0.0003948468
+        float urdf:link:inertial:inertia:izz = 0.0004120948
+        float urdf:link:inertial:mass = 0.106972024
+        float3 urdf:link:inertial:origin:rpy = (-0.007691922, -0.048127457, -0.12406928)
+        point3f urdf:link:inertial:origin:xyz = (-0.054136343, 0.007150503, -0.0026331658)
+
+        def Mesh "HorticulturalScissorsBlade" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade.usda@</HorticulturalScissorsBlade>
+        )
+        {
+            rel material:binding = </horticultural_scissors/horticultural_scissors_blade/HorticulturalScissorsBlade/Materials/M_HorticulturalScissorsBlade>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HorticulturalScissorsBlade>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/obj/HorticulturalScissorsBlade.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HorticulturalScissorsBlade" (
+                    prepend references = @./horticultural_scissors/materials/usd/M_HorticulturalScissorsBlade.usda@</M_HorticulturalScissorsBlade>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HorticulturalScissorsBlade_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_001.usda@</HorticulturalScissorsBlade_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_002.usda@</HorticulturalScissorsBlade_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_003.usda@</HorticulturalScissorsBlade_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_004.usda@</HorticulturalScissorsBlade_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_005.usda@</HorticulturalScissorsBlade_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_006.usda@</HorticulturalScissorsBlade_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_007.usda@</HorticulturalScissorsBlade_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_008.usda@</HorticulturalScissorsBlade_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_009.usda@</HorticulturalScissorsBlade_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_010.usda@</HorticulturalScissorsBlade_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_011.usda@</HorticulturalScissorsBlade_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_012.usda@</HorticulturalScissorsBlade_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_013.usda@</HorticulturalScissorsBlade_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_014.usda@</HorticulturalScissorsBlade_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_015.usda@</HorticulturalScissorsBlade_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_016.usda@</HorticulturalScissorsBlade_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_017.usda@</HorticulturalScissorsBlade_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_018.usda@</HorticulturalScissorsBlade_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_019.usda@</HorticulturalScissorsBlade_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HorticulturalScissorsBlade_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./horticultural_scissors/meshes/usd/HorticulturalScissorsBlade_020.usda@</HorticulturalScissorsBlade_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HorticulturalScissorsBlade_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "horticultural_scissors"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "horticultural_scissors"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "HorticulturalScissorsHilt"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_001"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_002"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_003"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_004"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_005"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_006"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_007"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_008"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_009"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_010"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_011"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_012"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_013"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_014"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_015"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_016"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_017"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_018"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_019"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_020"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_021"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_022"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_023"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_024"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_025"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_026"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_027"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_028"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_029"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_030"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_031"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_032"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_033"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_034"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_035"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_036"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_037"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHilt_038"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/obj/HorticulturalScissorsHandle.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_001"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_002"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_003"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_004"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_005"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_006"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_007"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_008"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_009"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_010"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_011"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_012"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_013"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_014"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_015"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_016"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_017"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_018"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_019"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_020"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_021"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_022"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_023"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_024"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_025"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_026"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsHandle_027"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/obj/HorticulturalScissorsBlade.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_001"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_002"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_003"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_004"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_005"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_006"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_007"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_008"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_009"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_010"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_011"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_012"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_013"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_014"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_015"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_016"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_017"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_018"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_019"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HorticulturalScissorsBlade_020"
+            {
+                asset mujoco:mesh:file = @horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_HorticulturalScissorsHilt"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.0902, 0.0902, 0.0902, 1)
+            }
+
+            def MujocoMaterial "M_HorticulturalScissorsHandle"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HorticulturalScissorsHandle>
+            }
+
+            def MujocoMaterial "M_HorticulturalScissorsBlade"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HorticulturalScissorsBlade>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_HorticulturalScissorsHandle"
+            {
+                asset mujoco:texture:file = @T_HorticulturalScissorsHandle.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_HorticulturalScissorsBlade"
+            {
+                asset mujoco:texture:file = @T_HorticulturalScissorsBlade.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

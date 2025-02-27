@@ -1,0 +1,205 @@
+<?xml version="1.0" ?>
+<mujoco model="lemon">
+	<compiler meshdir="lemon/meshes" texturedir="lemon/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="LemonFruitPeduncle" file="obj/LemonFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_001" file="stl/LemonFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_002" file="stl/LemonFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_003" file="stl/LemonFruitPeduncle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_004" file="stl/LemonFruitPeduncle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_005" file="stl/LemonFruitPeduncle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_006" file="stl/LemonFruitPeduncle_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_007" file="stl/LemonFruitPeduncle_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_008" file="stl/LemonFruitPeduncle_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_009" file="stl/LemonFruitPeduncle_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_010" file="stl/LemonFruitPeduncle_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_011" file="stl/LemonFruitPeduncle_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_012" file="stl/LemonFruitPeduncle_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_013" file="stl/LemonFruitPeduncle_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_014" file="stl/LemonFruitPeduncle_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_015" file="stl/LemonFruitPeduncle_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_016" file="stl/LemonFruitPeduncle_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_017" file="stl/LemonFruitPeduncle_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_018" file="stl/LemonFruitPeduncle_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_019" file="stl/LemonFruitPeduncle_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_020" file="stl/LemonFruitPeduncle_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_021" file="stl/LemonFruitPeduncle_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_022" file="stl/LemonFruitPeduncle_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_023" file="stl/LemonFruitPeduncle_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFruitPeduncle_024" file="stl/LemonFruitPeduncle_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonPeel" file="stl/LemonPeel.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonPeel_001" file="stl/LemonPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFascia" file="stl/LemonFascia.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFascia_001" file="stl/LemonFascia_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh" file="obj/LemonFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_001" file="stl/LemonFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_002" file="stl/LemonFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_003" file="stl/LemonFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_004" file="stl/LemonFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_005" file="stl/LemonFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_006" file="stl/LemonFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_007" file="stl/LemonFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_008" file="stl/LemonFlesh_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_009" file="stl/LemonFlesh_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_010" file="stl/LemonFlesh_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_011" file="stl/LemonFlesh_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_012" file="stl/LemonFlesh_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_013" file="stl/LemonFlesh_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_014" file="stl/LemonFlesh_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_015" file="stl/LemonFlesh_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_016" file="stl/LemonFlesh_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_017" file="stl/LemonFlesh_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_018" file="stl/LemonFlesh_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_019" file="stl/LemonFlesh_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_020" file="stl/LemonFlesh_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_021" file="stl/LemonFlesh_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_022" file="stl/LemonFlesh_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_023" file="stl/LemonFlesh_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_024" file="stl/LemonFlesh_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_025" file="stl/LemonFlesh_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_026" file="stl/LemonFlesh_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_027" file="stl/LemonFlesh_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_028" file="stl/LemonFlesh_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_029" file="stl/LemonFlesh_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_030" file="stl/LemonFlesh_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_031" file="stl/LemonFlesh_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_032" file="stl/LemonFlesh_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_033" file="stl/LemonFlesh_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_034" file="stl/LemonFlesh_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_035" file="stl/LemonFlesh_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_036" file="stl/LemonFlesh_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_037" file="stl/LemonFlesh_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_038" file="stl/LemonFlesh_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_039" file="stl/LemonFlesh_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_040" file="stl/LemonFlesh_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_041" file="stl/LemonFlesh_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_042" file="stl/LemonFlesh_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_043" file="stl/LemonFlesh_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_044" file="stl/LemonFlesh_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_045" file="stl/LemonFlesh_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_046" file="stl/LemonFlesh_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_047" file="stl/LemonFlesh_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_048" file="stl/LemonFlesh_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_049" file="stl/LemonFlesh_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_050" file="stl/LemonFlesh_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_051" file="stl/LemonFlesh_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_052" file="stl/LemonFlesh_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_053" file="stl/LemonFlesh_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LemonFlesh_054" file="stl/LemonFlesh_054.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_LemonFruitPeduncle" texture="T_LemonFruitPeduncle"/>
+		<material name="M_LemonPeel" rgba="0.8325999975204468 0.7886999845504761 0.24770000576972961 1.0" emission="0.0"/>
+		<material name="M_LemonFascia" rgba="0.8269000053405762 0.8230999708175659 0.8070999979972839 1.0" emission="0.0"/>
+		<material name="M_LemonFlesh" texture="T_LemonFlesh"/>
+		<texture name="T_LemonFruitPeduncle" type="2d" file="T_LemonFruitPeduncle.png"/>
+		<texture name="T_LemonFlesh" type="2d" file="T_LemonFlesh.png"/>
+	</asset>
+	<worldbody>
+		<body name="lemon" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="lemon_fruit_peduncle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.28502231038874e-05" pos="-0.043652936816215515 -0.0014261022442951798 0.0004136401112191379" quat="0.8878223896026611 -0.45987260341644287 -0.0033818939700722694 0.01664782501757145" diaginertia="7.544097291312113e-11 4.364030559145249e-08 4.364079941865384e-08"/>
+				<geom name="LemonFruitPeduncle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle" material="M_LemonFruitPeduncle" class="visual"/>
+				<geom name="LemonFruitPeduncle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_001" class="collision"/>
+				<geom name="LemonFruitPeduncle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_002" class="collision"/>
+				<geom name="LemonFruitPeduncle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_003" class="collision"/>
+				<geom name="LemonFruitPeduncle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_004" class="collision"/>
+				<geom name="LemonFruitPeduncle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_005" class="collision"/>
+				<geom name="LemonFruitPeduncle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_006" class="collision"/>
+				<geom name="LemonFruitPeduncle_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_007" class="collision"/>
+				<geom name="LemonFruitPeduncle_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_008" class="collision"/>
+				<geom name="LemonFruitPeduncle_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_009" class="collision"/>
+				<geom name="LemonFruitPeduncle_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_010" class="collision"/>
+				<geom name="LemonFruitPeduncle_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_011" class="collision"/>
+				<geom name="LemonFruitPeduncle_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_012" class="collision"/>
+				<geom name="LemonFruitPeduncle_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_013" class="collision"/>
+				<geom name="LemonFruitPeduncle_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_014" class="collision"/>
+				<geom name="LemonFruitPeduncle_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_015" class="collision"/>
+				<geom name="LemonFruitPeduncle_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_016" class="collision"/>
+				<geom name="LemonFruitPeduncle_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_017" class="collision"/>
+				<geom name="LemonFruitPeduncle_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_018" class="collision"/>
+				<geom name="LemonFruitPeduncle_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_019" class="collision"/>
+				<geom name="LemonFruitPeduncle_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_020" class="collision"/>
+				<geom name="LemonFruitPeduncle_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_021" class="collision"/>
+				<geom name="LemonFruitPeduncle_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_022" class="collision"/>
+				<geom name="LemonFruitPeduncle_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_023" class="collision"/>
+				<geom name="LemonFruitPeduncle_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFruitPeduncle_024" class="collision"/>
+			</body>
+			<body name="lemon_fascia" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.07461966574192047" pos="-0.004055655561387539 0.00045510882046073675 8.306115341838449e-05" quat="-0.061713043600320816 0.9974934458732605 -0.017106356099247932 0.03009580634534359" diaginertia="3.352948260726407e-05 4.461341450223699e-05 4.501095463638194e-05"/>
+				<geom name="LemonFascia" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFascia" material="M_LemonFascia" class="visual"/>
+				<geom name="LemonFascia_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFascia_001" class="collision"/>
+			</body>
+			<body name="lemon_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0066876644268631935" pos="-0.0020827518310397863 -0.00036481244023889303 3.410069984965958e-05" quat="0.010744630359113216 0.9998385906219482 -0.0004001232155133039 0.014394496567547321" diaginertia="3.538991677487502e-06 5.962369414191926e-06 6.003923317621229e-06"/>
+				<geom name="LemonPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonPeel" material="M_LemonPeel" class="visual"/>
+				<geom name="LemonPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonPeel_001" class="collision"/>
+			</body>
+			<body name="lemon_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06487783044576645" pos="-0.004311780445277691 -0.0010747106280177832 0.0006292589823715389" quat="0.9650611877441406 -0.26174092292785645 0.003190290881320834 0.011762548238039017" diaginertia="1.2263642929610796e-05 2.6561519916867837e-05 2.665364991116803e-05"/>
+				<geom name="LemonFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh" material="M_LemonFlesh" class="visual"/>
+				<geom name="LemonFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_001" class="collision"/>
+				<geom name="LemonFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_002" class="collision"/>
+				<geom name="LemonFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_003" class="collision"/>
+				<geom name="LemonFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_004" class="collision"/>
+				<geom name="LemonFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_005" class="collision"/>
+				<geom name="LemonFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_006" class="collision"/>
+				<geom name="LemonFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_007" class="collision"/>
+				<geom name="LemonFlesh_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_008" class="collision"/>
+				<geom name="LemonFlesh_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_009" class="collision"/>
+				<geom name="LemonFlesh_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_010" class="collision"/>
+				<geom name="LemonFlesh_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_011" class="collision"/>
+				<geom name="LemonFlesh_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_012" class="collision"/>
+				<geom name="LemonFlesh_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_013" class="collision"/>
+				<geom name="LemonFlesh_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_014" class="collision"/>
+				<geom name="LemonFlesh_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_015" class="collision"/>
+				<geom name="LemonFlesh_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_016" class="collision"/>
+				<geom name="LemonFlesh_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_017" class="collision"/>
+				<geom name="LemonFlesh_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_018" class="collision"/>
+				<geom name="LemonFlesh_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_019" class="collision"/>
+				<geom name="LemonFlesh_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_020" class="collision"/>
+				<geom name="LemonFlesh_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_021" class="collision"/>
+				<geom name="LemonFlesh_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_022" class="collision"/>
+				<geom name="LemonFlesh_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_023" class="collision"/>
+				<geom name="LemonFlesh_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_024" class="collision"/>
+				<geom name="LemonFlesh_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_025" class="collision"/>
+				<geom name="LemonFlesh_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_026" class="collision"/>
+				<geom name="LemonFlesh_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_027" class="collision"/>
+				<geom name="LemonFlesh_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_028" class="collision"/>
+				<geom name="LemonFlesh_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_029" class="collision"/>
+				<geom name="LemonFlesh_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_030" class="collision"/>
+				<geom name="LemonFlesh_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_031" class="collision"/>
+				<geom name="LemonFlesh_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_032" class="collision"/>
+				<geom name="LemonFlesh_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_033" class="collision"/>
+				<geom name="LemonFlesh_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_034" class="collision"/>
+				<geom name="LemonFlesh_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_035" class="collision"/>
+				<geom name="LemonFlesh_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_036" class="collision"/>
+				<geom name="LemonFlesh_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_037" class="collision"/>
+				<geom name="LemonFlesh_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_038" class="collision"/>
+				<geom name="LemonFlesh_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_039" class="collision"/>
+				<geom name="LemonFlesh_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_040" class="collision"/>
+				<geom name="LemonFlesh_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_041" class="collision"/>
+				<geom name="LemonFlesh_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_042" class="collision"/>
+				<geom name="LemonFlesh_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_043" class="collision"/>
+				<geom name="LemonFlesh_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_044" class="collision"/>
+				<geom name="LemonFlesh_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_045" class="collision"/>
+				<geom name="LemonFlesh_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_046" class="collision"/>
+				<geom name="LemonFlesh_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_047" class="collision"/>
+				<geom name="LemonFlesh_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_048" class="collision"/>
+				<geom name="LemonFlesh_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_049" class="collision"/>
+				<geom name="LemonFlesh_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_050" class="collision"/>
+				<geom name="LemonFlesh_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_051" class="collision"/>
+				<geom name="LemonFlesh_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_052" class="collision"/>
+				<geom name="LemonFlesh_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_053" class="collision"/>
+				<geom name="LemonFlesh_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LemonFlesh_054" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

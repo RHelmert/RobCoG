@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<mujoco model="yellow_vase">
+	<compiler meshdir="yellow_vase/meshes" texturedir="yellow_vase/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="YellowVase" file="stl/YellowVase.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_001" file="stl/YellowVase_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_002" file="stl/YellowVase_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_003" file="stl/YellowVase_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_004" file="stl/YellowVase_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_005" file="stl/YellowVase_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_006" file="stl/YellowVase_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_007" file="stl/YellowVase_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_008" file="stl/YellowVase_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_009" file="stl/YellowVase_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_010" file="stl/YellowVase_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_011" file="stl/YellowVase_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_012" file="stl/YellowVase_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_013" file="stl/YellowVase_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_014" file="stl/YellowVase_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_015" file="stl/YellowVase_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_016" file="stl/YellowVase_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_017" file="stl/YellowVase_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_018" file="stl/YellowVase_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_019" file="stl/YellowVase_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_020" file="stl/YellowVase_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_021" file="stl/YellowVase_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_022" file="stl/YellowVase_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_023" file="stl/YellowVase_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_024" file="stl/YellowVase_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_025" file="stl/YellowVase_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_026" file="stl/YellowVase_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_027" file="stl/YellowVase_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_028" file="stl/YellowVase_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_029" file="stl/YellowVase_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_030" file="stl/YellowVase_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_031" file="stl/YellowVase_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_032" file="stl/YellowVase_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_033" file="stl/YellowVase_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_034" file="stl/YellowVase_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_035" file="stl/YellowVase_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_036" file="stl/YellowVase_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_037" file="stl/YellowVase_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_038" file="stl/YellowVase_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_039" file="stl/YellowVase_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_040" file="stl/YellowVase_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_041" file="stl/YellowVase_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_042" file="stl/YellowVase_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_043" file="stl/YellowVase_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_044" file="stl/YellowVase_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_045" file="stl/YellowVase_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_046" file="stl/YellowVase_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_047" file="stl/YellowVase_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_048" file="stl/YellowVase_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_049" file="stl/YellowVase_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_050" file="stl/YellowVase_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_051" file="stl/YellowVase_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_052" file="stl/YellowVase_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_053" file="stl/YellowVase_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_054" file="stl/YellowVase_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_055" file="stl/YellowVase_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_056" file="stl/YellowVase_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_057" file="stl/YellowVase_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_058" file="stl/YellowVase_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_059" file="stl/YellowVase_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_060" file="stl/YellowVase_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_061" file="stl/YellowVase_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_062" file="stl/YellowVase_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_063" file="stl/YellowVase_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_064" file="stl/YellowVase_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_065" file="stl/YellowVase_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_066" file="stl/YellowVase_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_067" file="stl/YellowVase_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_068" file="stl/YellowVase_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_069" file="stl/YellowVase_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_070" file="stl/YellowVase_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_071" file="stl/YellowVase_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_072" file="stl/YellowVase_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_073" file="stl/YellowVase_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_074" file="stl/YellowVase_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_075" file="stl/YellowVase_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_076" file="stl/YellowVase_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_077" file="stl/YellowVase_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_078" file="stl/YellowVase_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_079" file="stl/YellowVase_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_080" file="stl/YellowVase_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_081" file="stl/YellowVase_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_082" file="stl/YellowVase_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_083" file="stl/YellowVase_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_084" file="stl/YellowVase_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_085" file="stl/YellowVase_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_086" file="stl/YellowVase_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_087" file="stl/YellowVase_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_088" file="stl/YellowVase_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_089" file="stl/YellowVase_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowVase_090" file="stl/YellowVase_090.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_YellowVase" rgba="0.26980000734329224 0.23919999599456787 0.1467999964952469 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="yellow_vase" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="1.7265357971191406" pos="0.0003741401305887848 -0.007447044365108013 -0.036509908735752106" quat="-0.6950965523719788 0.03205767646431923 0.7181177139282227 0.010957551188766956" diaginertia="0.006521994713693857 0.012012211605906487 0.012103862129151821"/>
+			<geom name="YellowVase" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase" material="M_YellowVase" class="visual"/>
+			<geom name="YellowVase_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_001" class="collision"/>
+			<geom name="YellowVase_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_002" class="collision"/>
+			<geom name="YellowVase_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_003" class="collision"/>
+			<geom name="YellowVase_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_004" class="collision"/>
+			<geom name="YellowVase_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_005" class="collision"/>
+			<geom name="YellowVase_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_006" class="collision"/>
+			<geom name="YellowVase_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_007" class="collision"/>
+			<geom name="YellowVase_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_008" class="collision"/>
+			<geom name="YellowVase_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_009" class="collision"/>
+			<geom name="YellowVase_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_010" class="collision"/>
+			<geom name="YellowVase_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_011" class="collision"/>
+			<geom name="YellowVase_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_012" class="collision"/>
+			<geom name="YellowVase_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_013" class="collision"/>
+			<geom name="YellowVase_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_014" class="collision"/>
+			<geom name="YellowVase_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_015" class="collision"/>
+			<geom name="YellowVase_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_016" class="collision"/>
+			<geom name="YellowVase_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_017" class="collision"/>
+			<geom name="YellowVase_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_018" class="collision"/>
+			<geom name="YellowVase_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_019" class="collision"/>
+			<geom name="YellowVase_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_020" class="collision"/>
+			<geom name="YellowVase_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_021" class="collision"/>
+			<geom name="YellowVase_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_022" class="collision"/>
+			<geom name="YellowVase_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_023" class="collision"/>
+			<geom name="YellowVase_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_024" class="collision"/>
+			<geom name="YellowVase_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_025" class="collision"/>
+			<geom name="YellowVase_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_026" class="collision"/>
+			<geom name="YellowVase_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_027" class="collision"/>
+			<geom name="YellowVase_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_028" class="collision"/>
+			<geom name="YellowVase_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_029" class="collision"/>
+			<geom name="YellowVase_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_030" class="collision"/>
+			<geom name="YellowVase_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_031" class="collision"/>
+			<geom name="YellowVase_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_032" class="collision"/>
+			<geom name="YellowVase_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_033" class="collision"/>
+			<geom name="YellowVase_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_034" class="collision"/>
+			<geom name="YellowVase_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_035" class="collision"/>
+			<geom name="YellowVase_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_036" class="collision"/>
+			<geom name="YellowVase_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_037" class="collision"/>
+			<geom name="YellowVase_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_038" class="collision"/>
+			<geom name="YellowVase_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_039" class="collision"/>
+			<geom name="YellowVase_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_040" class="collision"/>
+			<geom name="YellowVase_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_041" class="collision"/>
+			<geom name="YellowVase_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_042" class="collision"/>
+			<geom name="YellowVase_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_043" class="collision"/>
+			<geom name="YellowVase_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_044" class="collision"/>
+			<geom name="YellowVase_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_045" class="collision"/>
+			<geom name="YellowVase_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_046" class="collision"/>
+			<geom name="YellowVase_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_047" class="collision"/>
+			<geom name="YellowVase_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_048" class="collision"/>
+			<geom name="YellowVase_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_049" class="collision"/>
+			<geom name="YellowVase_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_050" class="collision"/>
+			<geom name="YellowVase_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_051" class="collision"/>
+			<geom name="YellowVase_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_052" class="collision"/>
+			<geom name="YellowVase_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_053" class="collision"/>
+			<geom name="YellowVase_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_054" class="collision"/>
+			<geom name="YellowVase_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_055" class="collision"/>
+			<geom name="YellowVase_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_056" class="collision"/>
+			<geom name="YellowVase_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_057" class="collision"/>
+			<geom name="YellowVase_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_058" class="collision"/>
+			<geom name="YellowVase_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_059" class="collision"/>
+			<geom name="YellowVase_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_060" class="collision"/>
+			<geom name="YellowVase_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_061" class="collision"/>
+			<geom name="YellowVase_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_062" class="collision"/>
+			<geom name="YellowVase_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_063" class="collision"/>
+			<geom name="YellowVase_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_064" class="collision"/>
+			<geom name="YellowVase_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_065" class="collision"/>
+			<geom name="YellowVase_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_066" class="collision"/>
+			<geom name="YellowVase_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_067" class="collision"/>
+			<geom name="YellowVase_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_068" class="collision"/>
+			<geom name="YellowVase_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_069" class="collision"/>
+			<geom name="YellowVase_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_070" class="collision"/>
+			<geom name="YellowVase_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_071" class="collision"/>
+			<geom name="YellowVase_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_072" class="collision"/>
+			<geom name="YellowVase_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_073" class="collision"/>
+			<geom name="YellowVase_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_074" class="collision"/>
+			<geom name="YellowVase_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_075" class="collision"/>
+			<geom name="YellowVase_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_076" class="collision"/>
+			<geom name="YellowVase_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_077" class="collision"/>
+			<geom name="YellowVase_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_078" class="collision"/>
+			<geom name="YellowVase_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_079" class="collision"/>
+			<geom name="YellowVase_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_080" class="collision"/>
+			<geom name="YellowVase_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_081" class="collision"/>
+			<geom name="YellowVase_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_082" class="collision"/>
+			<geom name="YellowVase_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_083" class="collision"/>
+			<geom name="YellowVase_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_084" class="collision"/>
+			<geom name="YellowVase_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_085" class="collision"/>
+			<geom name="YellowVase_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_086" class="collision"/>
+			<geom name="YellowVase_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_087" class="collision"/>
+			<geom name="YellowVase_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_088" class="collision"/>
+			<geom name="YellowVase_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_089" class="collision"/>
+			<geom name="YellowVase_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowVase_090" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

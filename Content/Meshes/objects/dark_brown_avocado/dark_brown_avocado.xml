@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<mujoco model="dark_brown_avocado">
+	<compiler meshdir="dark_brown_avocado/meshes" texturedir="dark_brown_avocado/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="DarkBrownAvocadoFlesh" file="obj/DarkBrownAvocadoFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="DarkBrownAvocadoFlesh_001" file="stl/DarkBrownAvocadoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="DarkBrownAvocadoPeel" file="obj/DarkBrownAvocadoPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="DarkBrownAvocadoPeel_001" file="stl/DarkBrownAvocadoPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="DarkBrownAvocadoSeed" file="obj/DarkBrownAvocadoSeed.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="DarkBrownAvocadoSeed_001" file="stl/DarkBrownAvocadoSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_DarkBrownAvocadoFlesh" texture="T_DarkBrownAvocadoFlesh"/>
+		<material name="M_DarkBrownAvocadoPeel" texture="T_DarkBrownAvocadoPeel"/>
+		<material name="M_DarkBrownAvocadoSeed" texture="T_DarkBrownAvocadoSeed"/>
+		<texture name="T_DarkBrownAvocadoFlesh" type="2d" file="T_DarkBrownAvocadoFlesh.png"/>
+		<texture name="T_DarkBrownAvocadoPeel" type="2d" file="T_DarkBrownAvocadoPeel.png"/>
+		<texture name="T_DarkBrownAvocadoSeed" type="2d" file="T_DarkBrownAvocadoSeed.png"/>
+	</asset>
+	<worldbody>
+		<body name="dark_brown_avocado" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="dark_brown_avocado_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.286781907081604" pos="-0.005291021894663572 -3.1988158752938034e-06 -0.0023375293239951134" quat="-0.6185842752456665 0.7632954716682434 -0.11316130310297012 -0.14808113873004913" diaginertia="0.00015632178110536188 0.0002422279940219596 0.0002460240793880075"/>
+				<geom name="DarkBrownAvocadoFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoFlesh" material="M_DarkBrownAvocadoFlesh" class="visual"/>
+				<geom name="DarkBrownAvocadoFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoFlesh_001" class="collision"/>
+			</body>
+			<body name="dark_brown_avocado_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.024663496762514114" pos="-0.010412819683551788 -0.0001577374350745231 -0.0002522896393202245" quat="0.09759027510881424 0.9948261976242065 0.00619142409414053 -0.027543192729353905" diaginertia="3.0250164400058566e-06 5.994372713757912e-06 6.129022949608043e-06"/>
+				<geom name="DarkBrownAvocadoSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoSeed" material="M_DarkBrownAvocadoSeed" class="visual"/>
+				<geom name="DarkBrownAvocadoSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoSeed_001" class="collision"/>
+			</body>
+			<body name="dark_brown_avocado_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.6174211502075195" pos="-0.005436281207948923 7.964672477100976e-06 -0.0022861063480377197" quat="-0.6148379445075989 0.7662597894668579 -0.1126529648900032 -0.1487598866224289" diaginertia="0.00035311750252731144 0.0005478958482854068 0.0005560009158216417"/>
+				<geom name="DarkBrownAvocadoPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoPeel" material="M_DarkBrownAvocadoPeel" class="visual"/>
+				<geom name="DarkBrownAvocadoPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="DarkBrownAvocadoPeel_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

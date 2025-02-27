@@ -1,0 +1,508 @@
+<?xml version="1.0" ?>
+<robot name="yellow_apple" version="1.0">
+  <link name="yellow_apple"/>
+  <joint name="yellow_apple_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_apple"/>
+    <child link="yellow_apple_seed"/>
+  </joint>
+  <link name="yellow_apple_seed">
+    <inertial>
+      <origin xyz="1.636753954592507e-09 -1.1745344696834081e-09 -0.00270281033590436" rpy="-8.783234193288081e-07 2.3257929626652185e-07 2.6210780143737793"/>
+      <mass value="0.00022019754396751523"/>
+      <inertia ixx="5.545123471506486e-09" ixy="0.0" ixz="0.0" iyy="5.545128356487794e-09" iyz="0.0" izz="6.824742992961319e-09"/>
+    </inertial>
+    <visual name="YellowAppleSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/obj/YellowAppleSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowAppleSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleSeed_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleSeed_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleSeed_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleSeed_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleSeed_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleSeed_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_apple_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_apple"/>
+    <child link="yellow_apple_peel"/>
+  </joint>
+  <link name="yellow_apple_peel">
+    <inertial>
+      <origin xyz="2.11533304650402e-07 8.632965631250045e-08 -0.0029051832389086485" rpy="-1.5903820991516113 -1.5707120895385742 2.1607093811035156"/>
+      <mass value="0.0015163278440013528"/>
+      <inertia ixx="1.234838805430627e-06" ixy="0.0" ixz="0.0" iyy="1.2760995105054462e-06" iyz="0.0" izz="1.2761043990394683e-06"/>
+    </inertial>
+    <visual name="YellowApplePeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/obj/YellowApplePeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowApplePeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowApplePeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowApplePeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowApplePeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowApplePeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowApplePeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowApplePeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowApplePeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_apple_caylx_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_apple"/>
+    <child link="yellow_apple_caylx"/>
+  </joint>
+  <link name="yellow_apple_caylx">
+    <inertial>
+      <origin xyz="8.114677285675498e-08 1.1141786444568424e-06 -0.035159844905138016" rpy="-1.2714897394180298 -1.5707643032073975 -1.642630934715271"/>
+      <mass value="3.982466125762585e-07"/>
+      <inertia ixx="1.0677496213584714e-12" ixy="0.0" ixz="0.0" iyy="4.929091579342071e-10" iyz="0.0" izz="4.929092689565095e-10"/>
+    </inertial>
+    <visual name="YellowAppleCaylx">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/obj/YellowAppleCaylx.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowAppleCaylx_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleCaylx_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleCaylx_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_apple_stalk_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_apple"/>
+    <child link="yellow_apple_stalk"/>
+  </joint>
+  <link name="yellow_apple_stalk">
+    <inertial>
+      <origin xyz="3.0206952494893358e-09 0.00018739681399893016 0.025003446266055107" rpy="-1.570757269859314 -1.5663326978683472 1.570759892463684"/>
+      <mass value="3.540629768394865e-05"/>
+      <inertia ixx="1.837902052770346e-11" ixy="0.0" ixz="0.0" iyy="2.4994736946837293e-08" iyz="0.0" izz="2.5002570680499048e-08"/>
+    </inertial>
+    <visual name="YellowAppleStalk">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/obj/YellowAppleStalk.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowAppleStalk_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleStalk_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowAppleStalk_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_apple/meshes/stl/YellowAppleStalk_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

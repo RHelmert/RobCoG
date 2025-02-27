@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<mujoco model="cold_cutting_1">
+	<compiler meshdir="cold_cutting_1/meshes" texturedir="cold_cutting_1/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="ColdCuttingMeat" file="obj/ColdCuttingMeat.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingMeat_001" file="stl/ColdCuttingMeat_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis" file="obj/ColdCuttingExodermis.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_001" file="stl/ColdCuttingExodermis_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_002" file="stl/ColdCuttingExodermis_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_003" file="stl/ColdCuttingExodermis_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_004" file="stl/ColdCuttingExodermis_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_005" file="stl/ColdCuttingExodermis_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_006" file="stl/ColdCuttingExodermis_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_007" file="stl/ColdCuttingExodermis_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_008" file="stl/ColdCuttingExodermis_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_009" file="stl/ColdCuttingExodermis_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_010" file="stl/ColdCuttingExodermis_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_011" file="stl/ColdCuttingExodermis_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_012" file="stl/ColdCuttingExodermis_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_013" file="stl/ColdCuttingExodermis_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_014" file="stl/ColdCuttingExodermis_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_015" file="stl/ColdCuttingExodermis_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_016" file="stl/ColdCuttingExodermis_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_017" file="stl/ColdCuttingExodermis_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_018" file="stl/ColdCuttingExodermis_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_019" file="stl/ColdCuttingExodermis_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_020" file="stl/ColdCuttingExodermis_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_021" file="stl/ColdCuttingExodermis_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_022" file="stl/ColdCuttingExodermis_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_023" file="stl/ColdCuttingExodermis_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_024" file="stl/ColdCuttingExodermis_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_025" file="stl/ColdCuttingExodermis_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_026" file="stl/ColdCuttingExodermis_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_027" file="stl/ColdCuttingExodermis_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_028" file="stl/ColdCuttingExodermis_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_029" file="stl/ColdCuttingExodermis_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_030" file="stl/ColdCuttingExodermis_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_031" file="stl/ColdCuttingExodermis_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_032" file="stl/ColdCuttingExodermis_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_033" file="stl/ColdCuttingExodermis_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_034" file="stl/ColdCuttingExodermis_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_035" file="stl/ColdCuttingExodermis_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_036" file="stl/ColdCuttingExodermis_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_037" file="stl/ColdCuttingExodermis_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_038" file="stl/ColdCuttingExodermis_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_039" file="stl/ColdCuttingExodermis_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_040" file="stl/ColdCuttingExodermis_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCuttingExodermis_041" file="stl/ColdCuttingExodermis_041.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_ColdCuttingMeat" texture="T_ColdCuttingMeat"/>
+		<material name="M_ColdCuttingExodermis" texture="T_ColdCuttingExodermis"/>
+		<texture name="T_ColdCuttingMeat" type="2d" file="T_ColdCuttingMeat.png"/>
+		<texture name="T_ColdCuttingExodermis" type="2d" file="T_ColdCuttingExodermis.png"/>
+	</asset>
+	<worldbody>
+		<body name="cold_cutting_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="cold_cutting_meat" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.5316651463508606" pos="-1.3047480251771049e-06 -4.2225066863466054e-05 -4.222921052132733e-05" quat="0.9238739609718323 0.3826969563961029 8.981351129477844e-07 -2.013482117035892e-06" diaginertia="0.00023565333685837686 0.0016169100999832153 0.0016169962473213673"/>
+				<geom name="ColdCuttingMeat" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingMeat" material="M_ColdCuttingMeat" class="visual"/>
+				<geom name="ColdCuttingMeat_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingMeat_001" class="collision"/>
+			</body>
+			<body name="cold_cutting_exodermis" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.029258714988827705" pos="1.9871227152634674e-07 -2.76368828053819e-05 -2.7639065592666157e-05" quat="0.9235755801200867 0.3834163546562195 5.397649260885373e-07 -1.7164622931886697e-06" diaginertia="2.5001927497214638e-05 0.00011326310050208122 0.00011326515959808603"/>
+				<geom name="ColdCuttingExodermis" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis" material="M_ColdCuttingExodermis" class="visual"/>
+				<geom name="ColdCuttingExodermis_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_001" class="collision"/>
+				<geom name="ColdCuttingExodermis_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_002" class="collision"/>
+				<geom name="ColdCuttingExodermis_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_003" class="collision"/>
+				<geom name="ColdCuttingExodermis_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_004" class="collision"/>
+				<geom name="ColdCuttingExodermis_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_005" class="collision"/>
+				<geom name="ColdCuttingExodermis_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_006" class="collision"/>
+				<geom name="ColdCuttingExodermis_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_007" class="collision"/>
+				<geom name="ColdCuttingExodermis_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_008" class="collision"/>
+				<geom name="ColdCuttingExodermis_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_009" class="collision"/>
+				<geom name="ColdCuttingExodermis_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_010" class="collision"/>
+				<geom name="ColdCuttingExodermis_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_011" class="collision"/>
+				<geom name="ColdCuttingExodermis_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_012" class="collision"/>
+				<geom name="ColdCuttingExodermis_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_013" class="collision"/>
+				<geom name="ColdCuttingExodermis_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_014" class="collision"/>
+				<geom name="ColdCuttingExodermis_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_015" class="collision"/>
+				<geom name="ColdCuttingExodermis_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_016" class="collision"/>
+				<geom name="ColdCuttingExodermis_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_017" class="collision"/>
+				<geom name="ColdCuttingExodermis_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_018" class="collision"/>
+				<geom name="ColdCuttingExodermis_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_019" class="collision"/>
+				<geom name="ColdCuttingExodermis_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_020" class="collision"/>
+				<geom name="ColdCuttingExodermis_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_021" class="collision"/>
+				<geom name="ColdCuttingExodermis_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_022" class="collision"/>
+				<geom name="ColdCuttingExodermis_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_023" class="collision"/>
+				<geom name="ColdCuttingExodermis_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_024" class="collision"/>
+				<geom name="ColdCuttingExodermis_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_025" class="collision"/>
+				<geom name="ColdCuttingExodermis_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_026" class="collision"/>
+				<geom name="ColdCuttingExodermis_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_027" class="collision"/>
+				<geom name="ColdCuttingExodermis_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_028" class="collision"/>
+				<geom name="ColdCuttingExodermis_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_029" class="collision"/>
+				<geom name="ColdCuttingExodermis_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_030" class="collision"/>
+				<geom name="ColdCuttingExodermis_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_031" class="collision"/>
+				<geom name="ColdCuttingExodermis_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_032" class="collision"/>
+				<geom name="ColdCuttingExodermis_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_033" class="collision"/>
+				<geom name="ColdCuttingExodermis_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_034" class="collision"/>
+				<geom name="ColdCuttingExodermis_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_035" class="collision"/>
+				<geom name="ColdCuttingExodermis_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_036" class="collision"/>
+				<geom name="ColdCuttingExodermis_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_037" class="collision"/>
+				<geom name="ColdCuttingExodermis_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_038" class="collision"/>
+				<geom name="ColdCuttingExodermis_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_039" class="collision"/>
+				<geom name="ColdCuttingExodermis_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_040" class="collision"/>
+				<geom name="ColdCuttingExodermis_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCuttingExodermis_041" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

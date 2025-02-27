@@ -1,0 +1,777 @@
+#usda 1.0
+(
+    defaultPrim = "cherry"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "cherry" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "cherry_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (3.39445e-7, 7.7054847e-7, 8.1481977e-7)
+        float mujoco:body:inertial:mass = 0.0016458273
+        point3f mujoco:body:inertial:pos = (-0.00014955217, -0.00023928728, -0.017217983)
+        quatf mujoco:body:inertial:quat = (0.5100764, 0.4872206, 0.50256383, -0.4998678)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.00014955217, -0.00023928728, -0.017217983)
+        float3 physics:diagonalInertia = (3.39445e-7, 7.7054847e-7, 8.1481977e-7)
+        float physics:mass = 0.0016458273
+        quatf physics:principalAxes = (0.5100764, 0.4872206, 0.50256383, -0.4998678)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 3.39445e-7
+        float urdf:link:inertial:inertia:iyy = 7.7054847e-7
+        float urdf:link:inertial:inertia:izz = 8.1481977e-7
+        float urdf:link:inertial:mass = 0.0016458273
+        float3 urdf:link:inertial:origin:rpy = (-0.26217172, 1.5499926, -1.8074142)
+        point3f urdf:link:inertial:origin:xyz = (-0.00014955217, -0.00023928728, -0.017217983)
+
+        def Mesh "CherryPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel.usda@</CherryPeel>
+        )
+        {
+            rel material:binding = </cherry/cherry_peel/CherryPeel/Materials/M_CherryPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CherryPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/obj/CherryPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CherryPeel" (
+                    prepend references = @./cherry/materials/usd/M_CherryPeel.usda@</M_CherryPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CherryPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_001.usda@</CherryPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_002.usda@</CherryPeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_003.usda@</CherryPeel_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_004.usda@</CherryPeel_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_005.usda@</CherryPeel_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_006.usda@</CherryPeel_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryPeel_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryPeel_007.usda@</CherryPeel_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryPeel_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryPeel_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cherry_stalk" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (3.3862613e-10, 7.39203e-8, 7.4009904e-8)
+        float mujoco:body:inertial:mass = 0.00019579461
+        point3f mujoco:body:inertial:pos = (0.0012943166, -0.0011308129, 0.014164259)
+        quatf mujoco:body:inertial:quat = (0.6543992, -0.18188, 0.6978279, 0.22741501)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0012943166, -0.0011308129, 0.014164259)
+        float3 physics:diagonalInertia = (3.3862613e-10, 7.39203e-8, 7.4009904e-8)
+        float physics:mass = 0.00019579461
+        quatf physics:principalAxes = (0.6543992, -0.18188, 0.6978279, 0.22741501)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 3.3862613e-10
+        float urdf:link:inertial:inertia:iyy = 7.39203e-8
+        float urdf:link:inertial:inertia:izz = 7.4009904e-8
+        float urdf:link:inertial:mass = 0.00019579461
+        float3 urdf:link:inertial:origin:rpy = (2.0386066, 1.4817784, 2.626438)
+        point3f urdf:link:inertial:origin:xyz = (0.0012943166, -0.0011308129, 0.014164259)
+
+        def Mesh "CherryStalk" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryStalk.usda@</CherryStalk>
+        )
+        {
+            rel material:binding = </cherry/cherry_stalk/CherryStalk/Materials/M_CherryStalk>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CherryStalk>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryStalk>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/obj/CherryStalk.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CherryStalk" (
+                    prepend references = @./cherry/materials/usd/M_CherryStalk.usda@</M_CherryStalk>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CherryStalk_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryStalk_001.usda@</CherryStalk_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryStalk_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryStalk_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryStalk_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryStalk_002.usda@</CherryStalk_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryStalk_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryStalk_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cherry_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000021147387, 0.0000071242384, 0.0000074589325)
+        float mujoco:body:inertial:mass = 0.017631855
+        point3f mujoco:body:inertial:pos = (0.00008694358, -0.00020917726, -0.017621482)
+        quatf mujoco:body:inertial:quat = (0.51277095, 0.49135426, 0.50024974, -0.49536565)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.00008694358, -0.00020917726, -0.017621482)
+        float3 physics:diagonalInertia = (0.0000021147387, 0.0000071242384, 0.0000074589325)
+        float physics:mass = 0.017631855
+        quatf physics:principalAxes = (0.51277095, 0.49135426, 0.50024974, -0.49536565)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000021147387
+        float urdf:link:inertial:inertia:iyy = 0.0000071242384
+        float urdf:link:inertial:inertia:izz = 0.0000074589325
+        float urdf:link:inertial:mass = 0.017631855
+        float3 urdf:link:inertial:origin:rpy = (0.4622102, 1.5522019, -1.0822834)
+        point3f urdf:link:inertial:origin:xyz = (0.00008694358, -0.00020917726, -0.017621482)
+
+        def Mesh "CherryFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh.usda@</CherryFlesh>
+        )
+        {
+            rel material:binding = </cherry/cherry_flesh/CherryFlesh/Materials/M_CherryFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CherryFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/obj/CherryFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CherryFlesh" (
+                    prepend references = @./cherry/materials/usd/M_CherryFlesh.usda@</M_CherryFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CherryFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_001.usda@</CherryFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_002.usda@</CherryFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_003.usda@</CherryFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_004.usda@</CherryFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_005.usda@</CherryFlesh_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_006.usda@</CherryFlesh_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_007.usda@</CherryFlesh_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CherryFlesh_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherryFlesh_008.usda@</CherryFlesh_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherryFlesh_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherryFlesh_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cherry_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (1.5963078e-8, 4.1877536e-7, 4.2156753e-7)
+        float mujoco:body:inertial:mass = 0.0011327199
+        point3f mujoco:body:inertial:pos = (0.000080196034, -0.00043826175, -0.01874846)
+        quatf mujoco:body:inertial:quat = (0.6526949, 0.2687729, -0.6485553, 0.28482717)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.000080196034, -0.00043826175, -0.01874846)
+        float3 physics:diagonalInertia = (1.5963078e-8, 4.1877536e-7, 4.2156753e-7)
+        float physics:mass = 0.0011327199
+        quatf physics:principalAxes = (0.6526949, 0.2687729, -0.6485553, 0.28482717)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 1.5963078e-8
+        float urdf:link:inertial:inertia:iyy = 4.1877536e-7
+        float urdf:link:inertial:inertia:izz = 4.2156753e-7
+        float urdf:link:inertial:mass = 0.0011327199
+        float3 urdf:link:inertial:origin:rpy = (-0.9162019, -1.547349, 1.7206836)
+        point3f urdf:link:inertial:origin:xyz = (0.000080196034, -0.00043826175, -0.01874846)
+
+        def Mesh "CherrySeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherrySeed.usda@</CherrySeed>
+        )
+        {
+            rel material:binding = </cherry/cherry_seed/CherrySeed/Materials/M_CherrySeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CherrySeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherrySeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/obj/CherrySeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CherrySeed" (
+                    prepend references = @./cherry/materials/usd/M_CherrySeed.usda@</M_CherrySeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CherrySeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cherry/meshes/usd/CherrySeed_001.usda@</CherrySeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CherrySeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cherry/meshes/stl/CherrySeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "cherry"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "cherry"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "CherryPeel"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/obj/CherryPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_001"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_002"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_003"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_004"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_005"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_006"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryPeel_007"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryPeel_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryStalk"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/obj/CherryStalk.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryStalk_001"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryStalk_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryStalk_002"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryStalk_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/obj/CherryFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_001"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_002"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_003"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_004"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_005"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_006"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_007"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherryFlesh_008"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherryFlesh_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherrySeed"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/obj/CherrySeed.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CherrySeed_001"
+            {
+                asset mujoco:mesh:file = @cherry/meshes/stl/CherrySeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_CherryPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_CherryPeel>
+            }
+
+            def MujocoMaterial "M_CherryStalk"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_CherryStalk>
+            }
+
+            def MujocoMaterial "M_CherryFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_CherryFlesh>
+            }
+
+            def MujocoMaterial "M_CherrySeed"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_CherrySeed>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_CherryPeel"
+            {
+                asset mujoco:texture:file = @T_CherryPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_CherryStalk"
+            {
+                asset mujoco:texture:file = @T_CherryStalk.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_CherryFlesh"
+            {
+                asset mujoco:texture:file = @T_CherryFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_CherrySeed"
+            {
+                asset mujoco:texture:file = @T_CherrySeed.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

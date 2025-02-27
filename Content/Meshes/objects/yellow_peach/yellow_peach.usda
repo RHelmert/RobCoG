@@ -1,0 +1,471 @@
+#usda 1.0
+(
+    defaultPrim = "yellow_peach"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "yellow_peach" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "yellow_peach_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000012242737, 0.0000028836348, 0.0000035530068)
+        float mujoco:body:inertial:mass = 0.016849905
+        point3f mujoco:body:inertial:pos = (-0.0009083405, 0.00046362693, -0.0017745679)
+        quatf mujoco:body:inertial:quat = (-0.011581604, -0.69229174, 0.06513764, 0.7185785)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0009083405, 0.00046362693, -0.0017745679)
+        float3 physics:diagonalInertia = (0.0000012242737, 0.0000028836348, 0.0000035530068)
+        float physics:mass = 0.016849905
+        quatf physics:principalAxes = (-0.011581604, -0.69229174, 0.06513764, 0.7185785)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000012242737
+        float urdf:link:inertial:inertia:iyy = 0.0000028836348
+        float urdf:link:inertial:inertia:izz = 0.0000035530068
+        float urdf:link:inertial:mass = 0.016849905
+        float3 urdf:link:inertial:origin:rpy = (1.2786381, 1.456044, -1.9388372)
+        point3f urdf:link:inertial:origin:xyz = (-0.0009083405, 0.00046362693, -0.0017745679)
+
+        def Mesh "YellowPeachSeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachSeed.usda@</YellowPeachSeed>
+        )
+        {
+            rel material:binding = </yellow_peach/yellow_peach_seed/YellowPeachSeed/Materials/M_YellowPeachSeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_YellowPeachSeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachSeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/obj/YellowPeachSeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_YellowPeachSeed" (
+                    prepend references = @./yellow_peach/materials/usd/M_YellowPeachSeed.usda@</M_YellowPeachSeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "YellowPeachSeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachSeed_001.usda@</YellowPeachSeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachSeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachSeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "yellow_peach_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0011600251, 0.0012588778, 0.0012848626)
+        float mujoco:body:inertial:mass = 1.1494361
+        point3f mujoco:body:inertial:pos = (-0.000058752168, -0.00047914818, -0.0023714062)
+        quatf mujoco:body:inertial:quat = (0.7192743, -0.019662583, -0.6679709, 0.18992835)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.000058752168, -0.00047914818, -0.0023714062)
+        float3 physics:diagonalInertia = (0.0011600251, 0.0012588778, 0.0012848626)
+        float physics:mass = 1.1494361
+        quatf physics:principalAxes = (0.7192743, -0.019662583, -0.6679709, 0.18992835)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0011600251
+        float urdf:link:inertial:inertia:iyy = 0.0012588778
+        float urdf:link:inertial:inertia:izz = 0.0012848626
+        float urdf:link:inertial:mass = 1.1494361
+        float3 urdf:link:inertial:origin:rpy = (-1.2086121, -1.2644427, 1.4528637)
+        point3f urdf:link:inertial:origin:xyz = (-0.000058752168, -0.00047914818, -0.0023714062)
+
+        def Mesh "YellowPeachPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachPeel.usda@</YellowPeachPeel>
+        )
+        {
+            rel material:binding = </yellow_peach/yellow_peach_peel/YellowPeachPeel/Materials/M_YellowPeachPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_YellowPeachPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/obj/YellowPeachPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_YellowPeachPeel" (
+                    prepend references = @./yellow_peach/materials/usd/M_YellowPeachPeel.usda@</M_YellowPeachPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "YellowPeachPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachPeel_001.usda@</YellowPeachPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachPeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachPeel_002.usda@</YellowPeachPeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachPeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachPeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachPeel_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachPeel_003.usda@</YellowPeachPeel_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachPeel_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachPeel_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachPeel_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachPeel_004.usda@</YellowPeachPeel_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachPeel_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachPeel_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "yellow_peach_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0005184099, 0.0005625914, 0.0005742051)
+        float mujoco:body:inertial:mass = 0.53733903
+        point3f mujoco:body:inertial:pos = (-0.0000553674, -0.00045907183, -0.0023244899)
+        quatf mujoco:body:inertial:quat = (0.71926445, -0.019579645, -0.6680206, 0.18979919)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0000553674, -0.00045907183, -0.0023244899)
+        float3 physics:diagonalInertia = (0.0005184099, 0.0005625914, 0.0005742051)
+        float physics:mass = 0.53733903
+        quatf physics:principalAxes = (0.71926445, -0.019579645, -0.6680206, 0.18979919)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0005184099
+        float urdf:link:inertial:inertia:iyy = 0.0005625914
+        float urdf:link:inertial:inertia:izz = 0.0005742051
+        float urdf:link:inertial:mass = 0.53733903
+        float3 urdf:link:inertial:origin:rpy = (-1.2086828, -1.2647578, 1.4528618)
+        point3f urdf:link:inertial:origin:xyz = (-0.0000553674, -0.00045907183, -0.0023244899)
+
+        def Mesh "YellowPeachFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachFlesh.usda@</YellowPeachFlesh>
+        )
+        {
+            rel material:binding = </yellow_peach/yellow_peach_flesh/YellowPeachFlesh/Materials/M_YellowPeachFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_YellowPeachFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/obj/YellowPeachFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_YellowPeachFlesh" (
+                    prepend references = @./yellow_peach/materials/usd/M_YellowPeachFlesh.usda@</M_YellowPeachFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "YellowPeachFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachFlesh_001.usda@</YellowPeachFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachFlesh_002.usda@</YellowPeachFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachFlesh_003.usda@</YellowPeachFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "YellowPeachFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_peach/meshes/usd/YellowPeachFlesh_004.usda@</YellowPeachFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/YellowPeachFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_peach/meshes/stl/YellowPeachFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "yellow_peach"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "yellow_peach"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "YellowPeachSeed"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/obj/YellowPeachSeed.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachSeed_001"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachSeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachPeel"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/obj/YellowPeachPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachPeel_001"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachPeel_002"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachPeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachPeel_003"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachPeel_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachPeel_004"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachPeel_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachFlesh"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachFlesh.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachFlesh_001"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachFlesh_002"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachFlesh_003"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "YellowPeachFlesh_004"
+            {
+                asset mujoco:mesh:file = @yellow_peach/meshes/stl/YellowPeachFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_YellowPeachSeed"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_YellowPeachSeed>
+            }
+
+            def MujocoMaterial "M_YellowPeachPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_YellowPeachPeel>
+            }
+
+            def MujocoMaterial "M_YellowPeachFlesh"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8204, 0.6921, 0.3259, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_YellowPeachSeed"
+            {
+                asset mujoco:texture:file = @T_YellowPeachSeed.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_YellowPeachPeel"
+            {
+                asset mujoco:texture:file = @T_YellowPeachPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

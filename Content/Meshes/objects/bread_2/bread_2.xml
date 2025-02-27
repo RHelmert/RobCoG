@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<mujoco model="bread_2">
+	<compiler meshdir="bread_2/meshes" texturedir="bread_2/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Bread2" file="obj/Bread2.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_001" file="stl/Bread2_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_002" file="stl/Bread2_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_003" file="stl/Bread2_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_004" file="stl/Bread2_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_005" file="stl/Bread2_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_006" file="stl/Bread2_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_007" file="stl/Bread2_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_008" file="stl/Bread2_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Bread2_009" file="stl/Bread2_009.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Bread2" texture="T_Bread2"/>
+		<texture name="T_Bread2" type="2d" file="T_Bread2.png"/>
+	</asset>
+	<worldbody>
+		<body name="bread_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.5353232622146606" pos="-0.00147146952804178 0.00020550422777887434 0.0021984002087265253" quat="-0.6976628303527832 0.7162574529647827 0.0017305989749729633 0.015454406850039959" diaginertia="0.0013766310876235366 0.0013999816728755832 0.0019342820160090923"/>
+			<geom name="Bread2" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2" material="M_Bread2" class="visual"/>
+			<geom name="Bread2_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_001" class="collision"/>
+			<geom name="Bread2_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_002" class="collision"/>
+			<geom name="Bread2_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_003" class="collision"/>
+			<geom name="Bread2_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_004" class="collision"/>
+			<geom name="Bread2_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_005" class="collision"/>
+			<geom name="Bread2_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_006" class="collision"/>
+			<geom name="Bread2_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_007" class="collision"/>
+			<geom name="Bread2_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_008" class="collision"/>
+			<geom name="Bread2_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Bread2_009" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

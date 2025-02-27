@@ -1,0 +1,3445 @@
+#usda 1.0
+(
+    defaultPrim = "yellow_orange"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "yellow_orange" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "orange_fruit_peduncle" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (2.14124e-11, 1.1261387e-8, 1.1262767e-8)
+        float mujoco:body:inertial:mass = 0.000012277001
+        point3f mujoco:body:inertial:pos = (0.0000022144186, -0.0000025775923, 0.030269327)
+        quatf mujoco:body:inertial:quat = (0.0863935, -0.70178163, 0.086348586, 0.7018423)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0000022144186, -0.0000025775923, 0.030269327)
+        float3 physics:diagonalInertia = (2.14124e-11, 1.1261387e-8, 1.1262767e-8)
+        float physics:mass = 0.000012277001
+        quatf physics:principalAxes = (0.0863935, -0.70178163, 0.086348586, 0.7018423)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 2.14124e-11
+        float urdf:link:inertial:inertia:iyy = 1.1261387e-8
+        float urdf:link:inertial:inertia:izz = 1.1262767e-8
+        float urdf:link:inertial:mass = 0.000012277001
+        float3 urdf:link:inertial:origin:rpy = (-0.5147317, 1.5706896, 2.3819551)
+        point3f urdf:link:inertial:origin:xyz = (0.0000022144186, -0.0000025775923, 0.030269327)
+
+        def Mesh "OrangeFruitPeduncle" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle.usda@</OrangeFruitPeduncle>
+        )
+        {
+            rel material:binding = </yellow_orange/orange_fruit_peduncle/OrangeFruitPeduncle/Materials/M_OrangeFruitPeduncle>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OrangeFruitPeduncle>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/obj/OrangeFruitPeduncle.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OrangeFruitPeduncle" (
+                    prepend references = @./yellow_orange/materials/usd/M_OrangeFruitPeduncle.usda@</M_OrangeFruitPeduncle>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OrangeFruitPeduncle_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_001.usda@</OrangeFruitPeduncle_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_002.usda@</OrangeFruitPeduncle_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_003.usda@</OrangeFruitPeduncle_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_004.usda@</OrangeFruitPeduncle_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_005.usda@</OrangeFruitPeduncle_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_006.usda@</OrangeFruitPeduncle_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_007.usda@</OrangeFruitPeduncle_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_008.usda@</OrangeFruitPeduncle_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_009.usda@</OrangeFruitPeduncle_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_010.usda@</OrangeFruitPeduncle_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_011.usda@</OrangeFruitPeduncle_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_012.usda@</OrangeFruitPeduncle_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_013.usda@</OrangeFruitPeduncle_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_014.usda@</OrangeFruitPeduncle_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_015.usda@</OrangeFruitPeduncle_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_016.usda@</OrangeFruitPeduncle_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_017.usda@</OrangeFruitPeduncle_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_018.usda@</OrangeFruitPeduncle_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_019.usda@</OrangeFruitPeduncle_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_020.usda@</OrangeFruitPeduncle_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_021.usda@</OrangeFruitPeduncle_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_022.usda@</OrangeFruitPeduncle_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_023.usda@</OrangeFruitPeduncle_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_024.usda@</OrangeFruitPeduncle_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_025.usda@</OrangeFruitPeduncle_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_026.usda@</OrangeFruitPeduncle_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_027.usda@</OrangeFruitPeduncle_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_028.usda@</OrangeFruitPeduncle_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_029.usda@</OrangeFruitPeduncle_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_030.usda@</OrangeFruitPeduncle_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_031.usda@</OrangeFruitPeduncle_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_032.usda@</OrangeFruitPeduncle_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_033.usda@</OrangeFruitPeduncle_033>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_033>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_033.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_034.usda@</OrangeFruitPeduncle_034>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_034>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_034.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_035.usda@</OrangeFruitPeduncle_035>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_035>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_035.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_036.usda@</OrangeFruitPeduncle_036>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_036>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_036.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_037.usda@</OrangeFruitPeduncle_037>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_037>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_037.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_038.usda@</OrangeFruitPeduncle_038>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_038>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_038.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_039" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_039.usda@</OrangeFruitPeduncle_039>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_039>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_039.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_040" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_040.usda@</OrangeFruitPeduncle_040>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_040>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_040.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_041" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_041.usda@</OrangeFruitPeduncle_041>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_041>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_041.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_042" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_042.usda@</OrangeFruitPeduncle_042>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_042>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_042.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_043" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_043.usda@</OrangeFruitPeduncle_043>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_043>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_043.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_044" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_044.usda@</OrangeFruitPeduncle_044>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_044>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_044.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_045" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_045.usda@</OrangeFruitPeduncle_045>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_045>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_045.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_046" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_046.usda@</OrangeFruitPeduncle_046>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_046>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_046.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_047" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_047.usda@</OrangeFruitPeduncle_047>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_047>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_047.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_048" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_048.usda@</OrangeFruitPeduncle_048>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_048>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_048.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_049" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_049.usda@</OrangeFruitPeduncle_049>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_049>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_049.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_050" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_050.usda@</OrangeFruitPeduncle_050>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_050>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_050.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_051" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_051.usda@</OrangeFruitPeduncle_051>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_051>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_051.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_052" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_052.usda@</OrangeFruitPeduncle_052>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_052>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_052.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_053" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_053.usda@</OrangeFruitPeduncle_053>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_053>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_053.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_054" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_054.usda@</OrangeFruitPeduncle_054>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_054>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_054.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_055" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_055.usda@</OrangeFruitPeduncle_055>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_055>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_055.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_056" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_056.usda@</OrangeFruitPeduncle_056>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_056>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_056.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_057" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_057.usda@</OrangeFruitPeduncle_057>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_057>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_057.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_058" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_058.usda@</OrangeFruitPeduncle_058>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_058>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_058.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFruitPeduncle_059" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFruitPeduncle_059.usda@</OrangeFruitPeduncle_059>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFruitPeduncle_059>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFruitPeduncle_059.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "orange_fascia" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000035091554, 0.000039701266, 0.000039701412)
+        float mujoco:body:inertial:mass = 0.13064808
+        point3f mujoco:body:inertial:pos = (-1.6686213e-8, 4.2889887e-8, -0.0018351618)
+        quatf mujoco:body:inertial:quat = (0.40776655, 0.5776909, -0.40776697, 0.57769006)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-1.6686213e-8, 4.2889887e-8, -0.0018351618)
+        float3 physics:diagonalInertia = (0.000035091554, 0.000039701266, 0.000039701412)
+        float physics:mass = 0.13064808
+        quatf physics:principalAxes = (0.40776655, 0.5776909, -0.40776697, 0.57769006)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000035091554
+        float urdf:link:inertial:inertia:iyy = 0.000039701266
+        float urdf:link:inertial:inertia:izz = 0.000039701412
+        float urdf:link:inertial:mass = 0.13064808
+        float3 urdf:link:inertial:origin:rpy = (2.9905944, -1.570795, -1.0782936)
+        point3f urdf:link:inertial:origin:xyz = (-1.6686213e-8, 4.2889887e-8, -0.0018351618)
+
+        def Mesh "OrangeFascia" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFascia.usda@</OrangeFascia>
+        )
+        {
+            rel material:binding = </yellow_orange/orange_fascia/OrangeFascia/Materials/M_OrangeFascia>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OrangeFascia>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFascia>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/obj/OrangeFascia.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OrangeFascia" (
+                    prepend references = @./yellow_orange/materials/usd/M_OrangeFascia.usda@</M_OrangeFascia>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OrangeFascia_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFascia_001.usda@</OrangeFascia_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFascia_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFascia_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFascia_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFascia_002.usda@</OrangeFascia_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFascia_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFascia_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFascia_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFascia_003.usda@</OrangeFascia_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFascia_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFascia_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFascia_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFascia_004.usda@</OrangeFascia_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFascia_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFascia_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "orange_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000098309265, 0.00001297201, 0.000012972019)
+        float mujoco:body:inertial:mass = 0.047751546
+        point3f mujoco:body:inertial:pos = (-7.663245e-9, -6.8429036e-9, -0.001835146)
+        quatf mujoco:body:inertial:quat = (0.008982862, -0.70704967, 0.008983013, 0.7070498)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-7.663245e-9, -6.8429036e-9, -0.001835146)
+        float3 physics:diagonalInertia = (0.0000098309265, 0.00001297201, 0.000012972019)
+        float physics:mass = 0.047751546
+        quatf physics:principalAxes = (0.008982862, -0.70704967, 0.008983013, 0.7070498)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000098309265
+        float urdf:link:inertial:inertia:iyy = 0.00001297201
+        float urdf:link:inertial:inertia:izz = 0.000012972019
+        float urdf:link:inertial:mass = 0.047751546
+        float3 urdf:link:inertial:origin:rpy = (0.9148109, 1.570796, -2.25219)
+        point3f urdf:link:inertial:origin:xyz = (-7.663245e-9, -6.8429036e-9, -0.001835146)
+
+        def Mesh "OrangeFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh.usda@</OrangeFlesh>
+        )
+        {
+            rel material:binding = </yellow_orange/orange_flesh/OrangeFlesh/Materials/M_OrangeFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OrangeFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/obj/OrangeFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OrangeFlesh" (
+                    prepend references = @./yellow_orange/materials/usd/M_OrangeFlesh.usda@</M_OrangeFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OrangeFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_001.usda@</OrangeFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_002.usda@</OrangeFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_003.usda@</OrangeFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_004.usda@</OrangeFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_005.usda@</OrangeFlesh_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_006.usda@</OrangeFlesh_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_007.usda@</OrangeFlesh_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_008.usda@</OrangeFlesh_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_009.usda@</OrangeFlesh_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_010.usda@</OrangeFlesh_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_011.usda@</OrangeFlesh_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_012.usda@</OrangeFlesh_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_013.usda@</OrangeFlesh_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_014.usda@</OrangeFlesh_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_015.usda@</OrangeFlesh_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_016.usda@</OrangeFlesh_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_017.usda@</OrangeFlesh_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_018.usda@</OrangeFlesh_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_019.usda@</OrangeFlesh_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_020.usda@</OrangeFlesh_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_021.usda@</OrangeFlesh_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_022.usda@</OrangeFlesh_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_023.usda@</OrangeFlesh_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_024.usda@</OrangeFlesh_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_025.usda@</OrangeFlesh_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_026.usda@</OrangeFlesh_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_027.usda@</OrangeFlesh_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_028.usda@</OrangeFlesh_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_029.usda@</OrangeFlesh_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_030.usda@</OrangeFlesh_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_031.usda@</OrangeFlesh_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_032.usda@</OrangeFlesh_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_033.usda@</OrangeFlesh_033>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_033>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_033.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_034.usda@</OrangeFlesh_034>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_034>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_034.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_035.usda@</OrangeFlesh_035>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_035>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_035.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_036.usda@</OrangeFlesh_036>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_036>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_036.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_037.usda@</OrangeFlesh_037>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_037>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_037.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_038.usda@</OrangeFlesh_038>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_038>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_038.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_039" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_039.usda@</OrangeFlesh_039>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_039>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_039.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_040" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_040.usda@</OrangeFlesh_040>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_040>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_040.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_041" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_041.usda@</OrangeFlesh_041>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_041>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_041.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_042" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_042.usda@</OrangeFlesh_042>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_042>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_042.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_043" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_043.usda@</OrangeFlesh_043>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_043>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_043.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_044" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_044.usda@</OrangeFlesh_044>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_044>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_044.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_045" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_045.usda@</OrangeFlesh_045>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_045>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_045.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_046" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_046.usda@</OrangeFlesh_046>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_046>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_046.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_047" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_047.usda@</OrangeFlesh_047>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_047>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_047.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_048" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_048.usda@</OrangeFlesh_048>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_048>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_048.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_049" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_049.usda@</OrangeFlesh_049>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_049>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_049.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_050" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_050.usda@</OrangeFlesh_050>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_050>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_050.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_051" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_051.usda@</OrangeFlesh_051>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_051>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_051.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_052" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_052.usda@</OrangeFlesh_052>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_052>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_052.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_053" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_053.usda@</OrangeFlesh_053>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_053>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_053.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_054" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_054.usda@</OrangeFlesh_054>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_054>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_054.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_055" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_055.usda@</OrangeFlesh_055>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_055>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_055.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_056" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_056.usda@</OrangeFlesh_056>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_056>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_056.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OrangeFlesh_057" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangeFlesh_057.usda@</OrangeFlesh_057>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangeFlesh_057>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangeFlesh_057.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "orange_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000055408755, 0.000005925657, 0.0000059264353)
+        float mujoco:body:inertial:mass = 0.010437833
+        point3f mujoco:body:inertial:pos = (-0.0000023840794, 4.579954e-7, -0.0008680091)
+        quatf mujoco:body:inertial:quat = (-0.1136139, 0.6972451, 0.11425962, 0.69848824)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0000023840794, 4.579954e-7, -0.0008680091)
+        float3 physics:diagonalInertia = (0.0000055408755, 0.000005925657, 0.0000059264353)
+        float physics:mass = 0.010437833
+        quatf physics:principalAxes = (-0.1136139, 0.6972451, 0.11425962, 0.69848824)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000055408755
+        float urdf:link:inertial:inertia:iyy = 0.000005925657
+        float urdf:link:inertial:inertia:izz = 0.0000059264353
+        float urdf:link:inertial:mass = 0.010437833
+        float3 urdf:link:inertial:origin:rpy = (0.6409124, -1.5688152, 2.8243532)
+        point3f urdf:link:inertial:origin:xyz = (-0.0000023840794, 4.579954e-7, -0.0008680091)
+
+        def Mesh "OrangePeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangePeel.usda@</OrangePeel>
+        )
+        {
+            rel material:binding = </yellow_orange/orange_peel/OrangePeel/Materials/M_OrangePeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OrangePeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangePeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/obj/OrangePeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OrangePeel" (
+                    prepend references = @./yellow_orange/materials/usd/M_OrangePeel.usda@</M_OrangePeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OrangePeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./yellow_orange/meshes/usd/OrangePeel_001.usda@</OrangePeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OrangePeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./yellow_orange/meshes/stl/OrangePeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "yellow_orange"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "yellow_orange"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "OrangeFruitPeduncle"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/obj/OrangeFruitPeduncle.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_001"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_002"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_003"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_004"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_005"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_006"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_007"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_008"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_009"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_010"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_011"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_012"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_013"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_014"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_015"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_016"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_017"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_018"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_019"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_020"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_021"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_022"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_023"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_024"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_025"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_026"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_027"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_028"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_029"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_030"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_031"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_032"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_033"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_034"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_035"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_036"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_037"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_038"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_039"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_039.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_040"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_040.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_041"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_041.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_042"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_042.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_043"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_043.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_044"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_044.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_045"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_045.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_046"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_046.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_047"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_047.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_048"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_048.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_049"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_049.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_050"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_050.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_051"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_051.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_052"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_052.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_053"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_053.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_054"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_054.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_055"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_055.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_056"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_056.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_057"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_057.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_058"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_058.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFruitPeduncle_059"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFruitPeduncle_059.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFascia"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFascia.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFascia_001"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFascia_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFascia_002"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFascia_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFascia_003"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFascia_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFascia_004"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFascia_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/obj/OrangeFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_001"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_002"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_003"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_004"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_005"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_006"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_007"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_008"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_009"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_010"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_011"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_012"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_013"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_014"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_015"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_016"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_017"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_018"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_019"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_020"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_021"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_022"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_023"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_024"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_025"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_026"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_027"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_028"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_029"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_030"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_031"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_032"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_033"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_034"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_035"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_036"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_037"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_038"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_039"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_039.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_040"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_040.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_041"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_041.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_042"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_042.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_043"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_043.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_044"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_044.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_045"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_045.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_046"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_046.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_047"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_047.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_048"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_048.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_049"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_049.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_050"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_050.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_051"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_051.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_052"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_052.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_053"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_053.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_054"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_054.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_055"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_055.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_056"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_056.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangeFlesh_057"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangeFlesh_057.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangePeel"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangePeel.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OrangePeel_001"
+            {
+                asset mujoco:mesh:file = @yellow_orange/meshes/stl/OrangePeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_OrangeFruitPeduncle"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_OrangeFruitPeduncle>
+            }
+
+            def MujocoMaterial "M_OrangeFascia"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8298, 0.826, 0.8091, 1)
+            }
+
+            def MujocoMaterial "M_OrangeFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_OrangeFlesh>
+            }
+
+            def MujocoMaterial "M_OrangePeel"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.7993, 0.571, 0.1057, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_OrangeFruitPeduncle"
+            {
+                asset mujoco:texture:file = @T_OrangeFruitPeduncle.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_OrangeFlesh"
+            {
+                asset mujoco:texture:file = @T_OrangeFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

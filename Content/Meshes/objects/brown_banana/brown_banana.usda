@@ -1,0 +1,580 @@
+#usda 1.0
+(
+    defaultPrim = "brown_banana"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "brown_banana" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "brown_banana_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00010785556, 0.00039420056, 0.00047402075)
+        float mujoco:body:inertial:mass = 0.16765241
+        point3f mujoco:body:inertial:pos = (-0.011827803, 0.016141618, -0.00058335485)
+        quatf mujoco:body:inertial:quat = (0.99974036, 0.013819505, -0.0035526874, 0.017765857)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.011827803, 0.016141618, -0.00058335485)
+        float3 physics:diagonalInertia = (0.00010785556, 0.00039420056, 0.00047402075)
+        float physics:mass = 0.16765241
+        quatf physics:principalAxes = (0.99974036, 0.013819505, -0.0035526874, 0.017765857)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00010785556
+        float urdf:link:inertial:inertia:iyy = 0.00039420056
+        float urdf:link:inertial:inertia:izz = 0.00047402075
+        float urdf:link:inertial:mass = 0.16765241
+        float3 urdf:link:inertial:origin:rpy = (0.027509864, -0.0075946334, 0.03543273)
+        point3f urdf:link:inertial:origin:xyz = (-0.011827803, 0.016141618, -0.00058335485)
+
+        def Mesh "BrownBananaFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaFlesh.usda@</BrownBananaFlesh>
+        )
+        {
+            rel material:binding = </brown_banana/brown_banana_flesh/BrownBananaFlesh/Materials/M_BrownBananaFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BrownBananaFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/obj/BrownBananaFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BrownBananaFlesh" (
+                    prepend references = @./brown_banana/materials/usd/M_BrownBananaFlesh.usda@</M_BrownBananaFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BrownBananaFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaFlesh_001.usda@</BrownBananaFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaFlesh_002.usda@</BrownBananaFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaFlesh_003.usda@</BrownBananaFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaFlesh_004.usda@</BrownBananaFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "brown_banana_endocarp" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00000312931, 0.000011444139, 0.000013238074)
+        float mujoco:body:inertial:mass = 0.0038660634
+        point3f mujoco:body:inertial:pos = (-0.012372994, 0.013134109, -0.00094017125)
+        quatf mujoco:body:inertial:quat = (0.9992811, 0.0200623, -0.0038647563, 0.031934816)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.012372994, 0.013134109, -0.00094017125)
+        float3 physics:diagonalInertia = (0.00000312931, 0.000011444139, 0.000013238074)
+        float physics:mass = 0.0038660634
+        quatf physics:principalAxes = (0.9992811, 0.0200623, -0.0038647563, 0.031934816)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00000312931
+        float urdf:link:inertial:inertia:iyy = 0.000011444139
+        float urdf:link:inertial:inertia:izz = 0.000013238074
+        float urdf:link:inertial:mass = 0.0038660634
+        float3 urdf:link:inertial:origin:rpy = (0.039861083, -0.00900545, 0.063714325)
+        point3f urdf:link:inertial:origin:xyz = (-0.012372994, 0.013134109, -0.00094017125)
+
+        def Mesh "BrownBananaEndocarp" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaEndocarp.usda@</BrownBananaEndocarp>
+        )
+        {
+            rel material:binding = </brown_banana/brown_banana_endocarp/BrownBananaEndocarp/Materials/M_BrownBananaEndocarp>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BrownBananaEndocarp>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaEndocarp>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/obj/BrownBananaEndocarp.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BrownBananaEndocarp" (
+                    prepend references = @./brown_banana/materials/usd/M_BrownBananaEndocarp.usda@</M_BrownBananaEndocarp>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BrownBananaEndocarp_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaEndocarp_001.usda@</BrownBananaEndocarp_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaEndocarp_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaEndocarp_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaEndocarp_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaEndocarp_002.usda@</BrownBananaEndocarp_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaEndocarp_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaEndocarp_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaEndocarp_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaEndocarp_003.usda@</BrownBananaEndocarp_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaEndocarp_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaEndocarp_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaEndocarp_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaEndocarp_004.usda@</BrownBananaEndocarp_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaEndocarp_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaEndocarp_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "brown_banana_exocarp" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00001326976, 0.00004837107, 0.000056319703)
+        float mujoco:body:inertial:mass = 0.014691445
+        point3f mujoco:body:inertial:pos = (-0.0066515496, 0.0097798295, -0.0013910779)
+        quatf mujoco:body:inertial:quat = (0.99926496, 0.035584364, 0.0030219336, -0.013936192)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0066515496, 0.0097798295, -0.0013910779)
+        float3 physics:diagonalInertia = (0.00001326976, 0.00004837107, 0.000056319703)
+        float physics:mass = 0.014691445
+        quatf physics:principalAxes = (0.99926496, 0.035584364, 0.0030219336, -0.013936192)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00001326976
+        float urdf:link:inertial:inertia:iyy = 0.00004837107
+        float urdf:link:inertial:inertia:izz = 0.000056319703
+        float urdf:link:inertial:mass = 0.014691445
+        float3 urdf:link:inertial:origin:rpy = (0.07109381, 0.0070313034, -0.02764103)
+        point3f urdf:link:inertial:origin:xyz = (-0.0066515496, 0.0097798295, -0.0013910779)
+
+        def Mesh "BrownBananaExocarp" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp.usda@</BrownBananaExocarp>
+        )
+        {
+            rel material:binding = </brown_banana/brown_banana_exocarp/BrownBananaExocarp/Materials/M_BrownBananaExocarp>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BrownBananaExocarp>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/obj/BrownBananaExocarp.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BrownBananaExocarp" (
+                    prepend references = @./brown_banana/materials/usd/M_BrownBananaExocarp.usda@</M_BrownBananaExocarp>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BrownBananaExocarp_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp_001.usda@</BrownBananaExocarp_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaExocarp_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaExocarp_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp_002.usda@</BrownBananaExocarp_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaExocarp_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaExocarp_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp_003.usda@</BrownBananaExocarp_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaExocarp_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaExocarp_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp_004.usda@</BrownBananaExocarp_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaExocarp_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BrownBananaExocarp_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./brown_banana/meshes/usd/BrownBananaExocarp_005.usda@</BrownBananaExocarp_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BrownBananaExocarp_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./brown_banana/meshes/stl/BrownBananaExocarp_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "brown_banana"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "brown_banana"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "BrownBananaFlesh"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/obj/BrownBananaFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaFlesh_001"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaFlesh_002"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaFlesh_003"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaFlesh_004"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaEndocarp"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/obj/BrownBananaEndocarp.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaEndocarp_001"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaEndocarp_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaEndocarp_002"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaEndocarp_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaEndocarp_003"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaEndocarp_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaEndocarp_004"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaEndocarp_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/obj/BrownBananaExocarp.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp_001"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaExocarp_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp_002"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaExocarp_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp_003"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaExocarp_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp_004"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaExocarp_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BrownBananaExocarp_005"
+            {
+                asset mujoco:mesh:file = @brown_banana/meshes/stl/BrownBananaExocarp_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_BrownBananaFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BrownBananaFlesh>
+            }
+
+            def MujocoMaterial "M_BrownBananaEndocarp"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BrownBananaEndocarp>
+            }
+
+            def MujocoMaterial "M_BrownBananaExocarp"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BrownBananaExocarp>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_BrownBananaFlesh"
+            {
+                asset mujoco:texture:file = @T_BrownBananaFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_BrownBananaEndocarp"
+            {
+                asset mujoco:texture:file = @T_BrownBananaEndocarp.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_BrownBananaExocarp"
+            {
+                asset mujoco:texture:file = @T_BrownBananaExocarp.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<mujoco model="beer_bottle">
+	<compiler meshdir="beer_bottle/meshes" texturedir="beer_bottle/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BeerBottleCap" file="obj/BeerBottleCap.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_001" file="stl/BeerBottleCap_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_002" file="stl/BeerBottleCap_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_003" file="stl/BeerBottleCap_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_004" file="stl/BeerBottleCap_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_005" file="stl/BeerBottleCap_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_006" file="stl/BeerBottleCap_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_007" file="stl/BeerBottleCap_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_008" file="stl/BeerBottleCap_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_009" file="stl/BeerBottleCap_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_010" file="stl/BeerBottleCap_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_011" file="stl/BeerBottleCap_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_012" file="stl/BeerBottleCap_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_013" file="stl/BeerBottleCap_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_014" file="stl/BeerBottleCap_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_015" file="stl/BeerBottleCap_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_016" file="stl/BeerBottleCap_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_017" file="stl/BeerBottleCap_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_018" file="stl/BeerBottleCap_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_019" file="stl/BeerBottleCap_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_020" file="stl/BeerBottleCap_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_021" file="stl/BeerBottleCap_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_022" file="stl/BeerBottleCap_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_023" file="stl/BeerBottleCap_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_024" file="stl/BeerBottleCap_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_025" file="stl/BeerBottleCap_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_026" file="stl/BeerBottleCap_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_027" file="stl/BeerBottleCap_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_028" file="stl/BeerBottleCap_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_029" file="stl/BeerBottleCap_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_030" file="stl/BeerBottleCap_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_031" file="stl/BeerBottleCap_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_032" file="stl/BeerBottleCap_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_033" file="stl/BeerBottleCap_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_034" file="stl/BeerBottleCap_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_035" file="stl/BeerBottleCap_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_036" file="stl/BeerBottleCap_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_037" file="stl/BeerBottleCap_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_038" file="stl/BeerBottleCap_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_039" file="stl/BeerBottleCap_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleCap_040" file="stl/BeerBottleCap_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody" file="obj/BeerBottleBody.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_001" file="stl/BeerBottleBody_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_002" file="stl/BeerBottleBody_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_003" file="stl/BeerBottleBody_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_004" file="stl/BeerBottleBody_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_005" file="stl/BeerBottleBody_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_006" file="stl/BeerBottleBody_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_007" file="stl/BeerBottleBody_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_008" file="stl/BeerBottleBody_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_009" file="stl/BeerBottleBody_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_010" file="stl/BeerBottleBody_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_011" file="stl/BeerBottleBody_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_012" file="stl/BeerBottleBody_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_013" file="stl/BeerBottleBody_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_014" file="stl/BeerBottleBody_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_015" file="stl/BeerBottleBody_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_016" file="stl/BeerBottleBody_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_017" file="stl/BeerBottleBody_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_018" file="stl/BeerBottleBody_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_019" file="stl/BeerBottleBody_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_020" file="stl/BeerBottleBody_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_021" file="stl/BeerBottleBody_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_022" file="stl/BeerBottleBody_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_023" file="stl/BeerBottleBody_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_024" file="stl/BeerBottleBody_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_025" file="stl/BeerBottleBody_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_026" file="stl/BeerBottleBody_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_027" file="stl/BeerBottleBody_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_028" file="stl/BeerBottleBody_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BeerBottleBody_029" file="stl/BeerBottleBody_029.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BeerBottleCap" texture="T_BeerBottleCap"/>
+		<material name="M_BeerBottleBody" texture="T_BeerBottleBody"/>
+		<texture name="T_BeerBottleCap" type="2d" file="T_BeerBottleCap.png"/>
+		<texture name="T_BeerBottleBody" type="2d" file="T_BeerBottleBody.png"/>
+	</asset>
+	<worldbody>
+		<body name="beer_bottle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="beer_bottle_cap" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0009343861602246761" pos="8.08560725999996e-05 -9.398388101544697e-06 0.13437895476818085" quat="0.09276032447814941 -0.7008114457130432 0.09276954084634781 0.7011794447898865" diaginertia="1.7288907372403628e-07 1.6953479644143954e-05 1.695373430266045e-05"/>
+				<geom name="BeerBottleCap" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap" material="M_BeerBottleCap" class="visual"/>
+				<geom name="BeerBottleCap_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_001" class="collision"/>
+				<geom name="BeerBottleCap_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_002" class="collision"/>
+				<geom name="BeerBottleCap_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_003" class="collision"/>
+				<geom name="BeerBottleCap_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_004" class="collision"/>
+				<geom name="BeerBottleCap_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_005" class="collision"/>
+				<geom name="BeerBottleCap_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_006" class="collision"/>
+				<geom name="BeerBottleCap_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_007" class="collision"/>
+				<geom name="BeerBottleCap_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_008" class="collision"/>
+				<geom name="BeerBottleCap_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_009" class="collision"/>
+				<geom name="BeerBottleCap_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_010" class="collision"/>
+				<geom name="BeerBottleCap_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_011" class="collision"/>
+				<geom name="BeerBottleCap_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_012" class="collision"/>
+				<geom name="BeerBottleCap_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_013" class="collision"/>
+				<geom name="BeerBottleCap_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_014" class="collision"/>
+				<geom name="BeerBottleCap_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_015" class="collision"/>
+				<geom name="BeerBottleCap_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_016" class="collision"/>
+				<geom name="BeerBottleCap_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_017" class="collision"/>
+				<geom name="BeerBottleCap_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_018" class="collision"/>
+				<geom name="BeerBottleCap_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_019" class="collision"/>
+				<geom name="BeerBottleCap_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_020" class="collision"/>
+				<geom name="BeerBottleCap_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_021" class="collision"/>
+				<geom name="BeerBottleCap_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_022" class="collision"/>
+				<geom name="BeerBottleCap_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_023" class="collision"/>
+				<geom name="BeerBottleCap_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_024" class="collision"/>
+				<geom name="BeerBottleCap_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_025" class="collision"/>
+				<geom name="BeerBottleCap_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_026" class="collision"/>
+				<geom name="BeerBottleCap_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_027" class="collision"/>
+				<geom name="BeerBottleCap_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_028" class="collision"/>
+				<geom name="BeerBottleCap_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_029" class="collision"/>
+				<geom name="BeerBottleCap_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_030" class="collision"/>
+				<geom name="BeerBottleCap_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_031" class="collision"/>
+				<geom name="BeerBottleCap_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_032" class="collision"/>
+				<geom name="BeerBottleCap_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_033" class="collision"/>
+				<geom name="BeerBottleCap_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_034" class="collision"/>
+				<geom name="BeerBottleCap_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_035" class="collision"/>
+				<geom name="BeerBottleCap_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_036" class="collision"/>
+				<geom name="BeerBottleCap_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_037" class="collision"/>
+				<geom name="BeerBottleCap_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_038" class="collision"/>
+				<geom name="BeerBottleCap_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_039" class="collision"/>
+				<geom name="BeerBottleCap_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleCap_040" class="collision"/>
+			</body>
+			<body name="beer_bottle_body" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.3444143831729889" pos="-6.751268699645152e-08 5.987622131442549e-08 -0.029478183016180992" quat="0.5080596208572388 -0.4918077886104584 0.5080597996711731 0.49180868268013" diaginertia="0.0002992546942550689 0.0022604945115745068 0.00226049916818738"/>
+				<geom name="BeerBottleBody" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody" material="M_BeerBottleBody" class="visual"/>
+				<geom name="BeerBottleBody_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_001" class="collision"/>
+				<geom name="BeerBottleBody_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_002" class="collision"/>
+				<geom name="BeerBottleBody_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_003" class="collision"/>
+				<geom name="BeerBottleBody_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_004" class="collision"/>
+				<geom name="BeerBottleBody_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_005" class="collision"/>
+				<geom name="BeerBottleBody_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_006" class="collision"/>
+				<geom name="BeerBottleBody_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_007" class="collision"/>
+				<geom name="BeerBottleBody_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_008" class="collision"/>
+				<geom name="BeerBottleBody_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_009" class="collision"/>
+				<geom name="BeerBottleBody_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_010" class="collision"/>
+				<geom name="BeerBottleBody_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_011" class="collision"/>
+				<geom name="BeerBottleBody_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_012" class="collision"/>
+				<geom name="BeerBottleBody_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_013" class="collision"/>
+				<geom name="BeerBottleBody_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_014" class="collision"/>
+				<geom name="BeerBottleBody_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_015" class="collision"/>
+				<geom name="BeerBottleBody_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_016" class="collision"/>
+				<geom name="BeerBottleBody_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_017" class="collision"/>
+				<geom name="BeerBottleBody_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_018" class="collision"/>
+				<geom name="BeerBottleBody_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_019" class="collision"/>
+				<geom name="BeerBottleBody_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_020" class="collision"/>
+				<geom name="BeerBottleBody_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_021" class="collision"/>
+				<geom name="BeerBottleBody_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_022" class="collision"/>
+				<geom name="BeerBottleBody_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_023" class="collision"/>
+				<geom name="BeerBottleBody_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_024" class="collision"/>
+				<geom name="BeerBottleBody_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_025" class="collision"/>
+				<geom name="BeerBottleBody_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_026" class="collision"/>
+				<geom name="BeerBottleBody_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_027" class="collision"/>
+				<geom name="BeerBottleBody_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_028" class="collision"/>
+				<geom name="BeerBottleBody_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BeerBottleBody_029" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

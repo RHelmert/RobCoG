@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<mujoco model="brown_banana">
+	<compiler meshdir="brown_banana/meshes" texturedir="brown_banana/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BrownBananaFlesh" file="obj/BrownBananaFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaFlesh_001" file="stl/BrownBananaFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaFlesh_002" file="stl/BrownBananaFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaFlesh_003" file="stl/BrownBananaFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaFlesh_004" file="stl/BrownBananaFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaEndocarp" file="obj/BrownBananaEndocarp.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaEndocarp_001" file="stl/BrownBananaEndocarp_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaEndocarp_002" file="stl/BrownBananaEndocarp_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaEndocarp_003" file="stl/BrownBananaEndocarp_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaEndocarp_004" file="stl/BrownBananaEndocarp_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp" file="obj/BrownBananaExocarp.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp_001" file="stl/BrownBananaExocarp_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp_002" file="stl/BrownBananaExocarp_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp_003" file="stl/BrownBananaExocarp_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp_004" file="stl/BrownBananaExocarp_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrownBananaExocarp_005" file="stl/BrownBananaExocarp_005.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BrownBananaFlesh" texture="T_BrownBananaFlesh"/>
+		<material name="M_BrownBananaEndocarp" texture="T_BrownBananaEndocarp"/>
+		<material name="M_BrownBananaExocarp" texture="T_BrownBananaExocarp"/>
+		<texture name="T_BrownBananaFlesh" type="2d" file="T_BrownBananaFlesh.png"/>
+		<texture name="T_BrownBananaEndocarp" type="2d" file="T_BrownBananaEndocarp.png"/>
+		<texture name="T_BrownBananaExocarp" type="2d" file="T_BrownBananaExocarp.png"/>
+	</asset>
+	<worldbody>
+		<body name="brown_banana" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="brown_banana_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.1676524132490158" pos="-0.0118278032168746 0.01614161767065525 -0.0005833548493683338" quat="0.9997403621673584 0.013819505460560322 -0.003552687354385853 0.01776585727930069" diaginertia="0.0001078555578715168 0.0003942005569115281 0.0004740207514259964"/>
+				<geom name="BrownBananaFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaFlesh" material="M_BrownBananaFlesh" class="visual"/>
+				<geom name="BrownBananaFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaFlesh_001" class="collision"/>
+				<geom name="BrownBananaFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaFlesh_002" class="collision"/>
+				<geom name="BrownBananaFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaFlesh_003" class="collision"/>
+				<geom name="BrownBananaFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaFlesh_004" class="collision"/>
+			</body>
+			<body name="brown_banana_exocarp" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.014691445045173168" pos="-0.0066515496000647545 0.009779829531908035 -0.0013910778798162937" quat="0.9992649555206299 0.03558436408638954 0.0030219336040318012 -0.01393619179725647" diaginertia="1.3269759620015975e-05 4.8371068260166794e-05 5.6319702707696706e-05"/>
+				<geom name="BrownBananaExocarp" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp" material="M_BrownBananaExocarp" class="visual"/>
+				<geom name="BrownBananaExocarp_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp_001" class="collision"/>
+				<geom name="BrownBananaExocarp_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp_002" class="collision"/>
+				<geom name="BrownBananaExocarp_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp_003" class="collision"/>
+				<geom name="BrownBananaExocarp_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp_004" class="collision"/>
+				<geom name="BrownBananaExocarp_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaExocarp_005" class="collision"/>
+			</body>
+			<body name="brown_banana_endocarp" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.003866063430905342" pos="-0.012372993864119053 0.013134108856320381 -0.0009401712450198829" quat="0.999281108379364 0.020062299445271492 -0.0038647563196718693 0.031934816390275955" diaginertia="3.129310016447562e-06 1.1444139090599492e-05 1.3238073734100908e-05"/>
+				<geom name="BrownBananaEndocarp" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaEndocarp" material="M_BrownBananaEndocarp" class="visual"/>
+				<geom name="BrownBananaEndocarp_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaEndocarp_001" class="collision"/>
+				<geom name="BrownBananaEndocarp_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaEndocarp_002" class="collision"/>
+				<geom name="BrownBananaEndocarp_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaEndocarp_003" class="collision"/>
+				<geom name="BrownBananaEndocarp_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrownBananaEndocarp_004" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<mujoco model="brush">
+	<compiler meshdir="brush/meshes" texturedir="brush/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BrushHead" file="stl/BrushHead.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHead_001" file="stl/BrushHead_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHead_002" file="stl/BrushHead_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHead_003" file="stl/BrushHead_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHead_004" file="stl/BrushHead_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle" file="stl/BrushHandle.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_001" file="stl/BrushHandle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_002" file="stl/BrushHandle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_003" file="stl/BrushHandle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_004" file="stl/BrushHandle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_005" file="stl/BrushHandle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_006" file="stl/BrushHandle_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_007" file="stl/BrushHandle_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_008" file="stl/BrushHandle_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_009" file="stl/BrushHandle_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_010" file="stl/BrushHandle_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_011" file="stl/BrushHandle_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_012" file="stl/BrushHandle_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_013" file="stl/BrushHandle_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_014" file="stl/BrushHandle_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_015" file="stl/BrushHandle_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_016" file="stl/BrushHandle_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_017" file="stl/BrushHandle_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_018" file="stl/BrushHandle_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_019" file="stl/BrushHandle_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_020" file="stl/BrushHandle_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_021" file="stl/BrushHandle_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_022" file="stl/BrushHandle_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_023" file="stl/BrushHandle_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_024" file="stl/BrushHandle_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_025" file="stl/BrushHandle_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_026" file="stl/BrushHandle_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_027" file="stl/BrushHandle_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_028" file="stl/BrushHandle_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_029" file="stl/BrushHandle_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_030" file="stl/BrushHandle_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_031" file="stl/BrushHandle_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_032" file="stl/BrushHandle_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_033" file="stl/BrushHandle_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_034" file="stl/BrushHandle_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_035" file="stl/BrushHandle_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_036" file="stl/BrushHandle_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_037" file="stl/BrushHandle_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_038" file="stl/BrushHandle_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_039" file="stl/BrushHandle_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_040" file="stl/BrushHandle_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_041" file="stl/BrushHandle_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_042" file="stl/BrushHandle_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_043" file="stl/BrushHandle_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_044" file="stl/BrushHandle_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_045" file="stl/BrushHandle_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_046" file="stl/BrushHandle_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_047" file="stl/BrushHandle_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_048" file="stl/BrushHandle_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_049" file="stl/BrushHandle_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_050" file="stl/BrushHandle_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_051" file="stl/BrushHandle_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_052" file="stl/BrushHandle_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_053" file="stl/BrushHandle_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_054" file="stl/BrushHandle_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_055" file="stl/BrushHandle_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_056" file="stl/BrushHandle_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_057" file="stl/BrushHandle_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_058" file="stl/BrushHandle_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_059" file="stl/BrushHandle_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_060" file="stl/BrushHandle_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_061" file="stl/BrushHandle_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_062" file="stl/BrushHandle_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BrushHandle_063" file="stl/BrushHandle_063.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BrushHead" rgba="0.8353999853134155 0.7947999835014343 0.7699999809265137 1.0" emission="0.0"/>
+		<material name="M_BrushHandle" rgba="0.8537999987602234 0.8537999987602234 0.8537999987602234 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="brush" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="brush_head" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.14380942285060883" pos="-0.012227881699800491 -0.013956385664641857 -0.013627697713673115" quat="0.9206263422966003 0.37479618191719055 0.003168086986988783 0.10938429087400436" diaginertia="8.549939229851589e-05 0.002847365103662014 0.0028882231563329697"/>
+				<geom name="BrushHead" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHead" material="M_BrushHead" class="visual"/>
+				<geom name="BrushHead_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHead_001" class="collision"/>
+				<geom name="BrushHead_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHead_002" class="collision"/>
+				<geom name="BrushHead_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHead_003" class="collision"/>
+				<geom name="BrushHead_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHead_004" class="collision"/>
+			</body>
+			<body name="brush_handle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.024592626839876175" pos="0.1408890038728714 0.0217297300696373 -0.0002752738946583122" quat="0.7412041425704956 -0.6672812104225159 -0.04818421229720116 0.0550500750541687" diaginertia="9.212667464453261e-06 0.0005393718020059168 0.0005434915074147284"/>
+				<geom name="BrushHandle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle" material="M_BrushHandle" class="visual"/>
+				<geom name="BrushHandle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_001" class="collision"/>
+				<geom name="BrushHandle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_002" class="collision"/>
+				<geom name="BrushHandle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_003" class="collision"/>
+				<geom name="BrushHandle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_004" class="collision"/>
+				<geom name="BrushHandle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_005" class="collision"/>
+				<geom name="BrushHandle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_006" class="collision"/>
+				<geom name="BrushHandle_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_007" class="collision"/>
+				<geom name="BrushHandle_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_008" class="collision"/>
+				<geom name="BrushHandle_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_009" class="collision"/>
+				<geom name="BrushHandle_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_010" class="collision"/>
+				<geom name="BrushHandle_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_011" class="collision"/>
+				<geom name="BrushHandle_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_012" class="collision"/>
+				<geom name="BrushHandle_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_013" class="collision"/>
+				<geom name="BrushHandle_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_014" class="collision"/>
+				<geom name="BrushHandle_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_015" class="collision"/>
+				<geom name="BrushHandle_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_016" class="collision"/>
+				<geom name="BrushHandle_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_017" class="collision"/>
+				<geom name="BrushHandle_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_018" class="collision"/>
+				<geom name="BrushHandle_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_019" class="collision"/>
+				<geom name="BrushHandle_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_020" class="collision"/>
+				<geom name="BrushHandle_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_021" class="collision"/>
+				<geom name="BrushHandle_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_022" class="collision"/>
+				<geom name="BrushHandle_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_023" class="collision"/>
+				<geom name="BrushHandle_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_024" class="collision"/>
+				<geom name="BrushHandle_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_025" class="collision"/>
+				<geom name="BrushHandle_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_026" class="collision"/>
+				<geom name="BrushHandle_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_027" class="collision"/>
+				<geom name="BrushHandle_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_028" class="collision"/>
+				<geom name="BrushHandle_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_029" class="collision"/>
+				<geom name="BrushHandle_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_030" class="collision"/>
+				<geom name="BrushHandle_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_031" class="collision"/>
+				<geom name="BrushHandle_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_032" class="collision"/>
+				<geom name="BrushHandle_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_033" class="collision"/>
+				<geom name="BrushHandle_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_034" class="collision"/>
+				<geom name="BrushHandle_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_035" class="collision"/>
+				<geom name="BrushHandle_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_036" class="collision"/>
+				<geom name="BrushHandle_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_037" class="collision"/>
+				<geom name="BrushHandle_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_038" class="collision"/>
+				<geom name="BrushHandle_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_039" class="collision"/>
+				<geom name="BrushHandle_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_040" class="collision"/>
+				<geom name="BrushHandle_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_041" class="collision"/>
+				<geom name="BrushHandle_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_042" class="collision"/>
+				<geom name="BrushHandle_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_043" class="collision"/>
+				<geom name="BrushHandle_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_044" class="collision"/>
+				<geom name="BrushHandle_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_045" class="collision"/>
+				<geom name="BrushHandle_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_046" class="collision"/>
+				<geom name="BrushHandle_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_047" class="collision"/>
+				<geom name="BrushHandle_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_048" class="collision"/>
+				<geom name="BrushHandle_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_049" class="collision"/>
+				<geom name="BrushHandle_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_050" class="collision"/>
+				<geom name="BrushHandle_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_051" class="collision"/>
+				<geom name="BrushHandle_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_052" class="collision"/>
+				<geom name="BrushHandle_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_053" class="collision"/>
+				<geom name="BrushHandle_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_054" class="collision"/>
+				<geom name="BrushHandle_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_055" class="collision"/>
+				<geom name="BrushHandle_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_056" class="collision"/>
+				<geom name="BrushHandle_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_057" class="collision"/>
+				<geom name="BrushHandle_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_058" class="collision"/>
+				<geom name="BrushHandle_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_059" class="collision"/>
+				<geom name="BrushHandle_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_060" class="collision"/>
+				<geom name="BrushHandle_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_061" class="collision"/>
+				<geom name="BrushHandle_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_062" class="collision"/>
+				<geom name="BrushHandle_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BrushHandle_063" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

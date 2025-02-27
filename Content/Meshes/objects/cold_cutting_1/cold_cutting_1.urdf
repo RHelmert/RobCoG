@@ -1,0 +1,292 @@
+<?xml version="1.0" ?>
+<robot name="cold_cutting_1" version="1.0">
+  <link name="cold_cutting_1"/>
+  <joint name="cold_cutting_meat_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cold_cutting_1"/>
+    <child link="cold_cutting_meat"/>
+  </joint>
+  <link name="cold_cutting_meat">
+    <inertial>
+      <origin xyz="-1.3047480251771049e-06 -4.2225066863466054e-05 -4.222921052132733e-05" rpy="0.7854273915290833 3.2006339552026475e-06 -3.0329799756145803e-06"/>
+      <mass value="0.5316651463508606"/>
+      <inertia ixx="0.00023565333685837686" ixy="0.0" ixz="0.0" iyy="0.0016169100999832153" iyz="0.0" izz="0.0016169962473213673"/>
+    </inertial>
+    <visual name="ColdCuttingMeat">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/obj/ColdCuttingMeat.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="ColdCuttingMeat_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingMeat_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cold_cutting_exodermis_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cold_cutting_1"/>
+    <child link="cold_cutting_exodermis"/>
+  </joint>
+  <link name="cold_cutting_exodermis">
+    <inertial>
+      <origin xyz="1.9871227152634674e-07 -2.76368828053819e-05 -2.7639065592666157e-05" rpy="0.7869850397109985 2.313267032150179e-06 -2.7566559310798766e-06"/>
+      <mass value="0.029258714988827705"/>
+      <inertia ixx="2.5001927497214638e-05" ixy="0.0" ixz="0.0" iyy="0.00011326310050208122" iyz="0.0" izz="0.00011326515959808603"/>
+    </inertial>
+    <visual name="ColdCuttingExodermis">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/obj/ColdCuttingExodermis.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="ColdCuttingExodermis_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ColdCuttingExodermis_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_1/meshes/stl/ColdCuttingExodermis_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,1344 @@
+#usda 1.0
+(
+    defaultPrim = "small_bowl"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "small_bowl" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.00088847784, 0.00088847947, 0.0013993769)
+    float mujoco:body:inertial:mass = 0.34290352
+    point3f mujoco:body:inertial:pos = (-4.544924e-8, 4.0742478e-8, -0.008956565)
+    quatf mujoco:body:inertial:quat = (0.997567, 2.0511568e-8, -3.3411285e-7, -0.069714114)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-4.544924e-8, 4.0742478e-8, -0.008956565)
+    float3 physics:diagonalInertia = (0.00088847784, 0.00088847947, 0.0013993769)
+    float physics:mass = 0.34290352
+    quatf physics:principalAxes = (0.997567, 2.0511568e-8, -3.3411285e-7, -0.069714114)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.00088847784
+    float urdf:link:inertial:inertia:iyy = 0.00088847947
+    float urdf:link:inertial:inertia:izz = 0.0013993769
+    float urdf:link:inertial:mass = 0.34290352
+    float3 urdf:link:inertial:origin:rpy = (8.750809e-8, -6.6374e-7, -0.13954142)
+    point3f urdf:link:inertial:origin:xyz = (-4.544924e-8, 4.0742478e-8, -0.008956565)
+
+    def Mesh "BowlSmallSize" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize.usda@</BowlSmallSize>
+    )
+    {
+        rel material:binding = </small_bowl/BowlSmallSize/Materials/M_BowlSmallSize>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_BowlSmallSize>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/obj/BowlSmallSize.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_BowlSmallSize" (
+                prepend references = @./small_bowl/materials/usd/M_BowlSmallSize.usda@</M_BowlSmallSize>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "BowlSmallSize_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_001.usda@</BowlSmallSize_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_002.usda@</BowlSmallSize_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_003.usda@</BowlSmallSize_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_004.usda@</BowlSmallSize_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_005" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_005.usda@</BowlSmallSize_005>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_005>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_005.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_006" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_006.usda@</BowlSmallSize_006>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_006>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_006.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_007" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_007.usda@</BowlSmallSize_007>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_007>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_007.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_008" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_008.usda@</BowlSmallSize_008>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_008>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_008.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_009" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_009.usda@</BowlSmallSize_009>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_009>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_009.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_010" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_010.usda@</BowlSmallSize_010>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_010>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_010.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_011" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_011.usda@</BowlSmallSize_011>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_011>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_011.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_012" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_012.usda@</BowlSmallSize_012>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_012>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_012.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_013" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_013.usda@</BowlSmallSize_013>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_013>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_013.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_014" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_014.usda@</BowlSmallSize_014>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_014>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_014.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_015" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_015.usda@</BowlSmallSize_015>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_015>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_015.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_016" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_016.usda@</BowlSmallSize_016>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_016>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_016.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_017" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_017.usda@</BowlSmallSize_017>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_017>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_017.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_018" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_018.usda@</BowlSmallSize_018>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_018>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_018.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_019" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_019.usda@</BowlSmallSize_019>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_019>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_019.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_020" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_020.usda@</BowlSmallSize_020>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_020>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_020.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_021" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_021.usda@</BowlSmallSize_021>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_021>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_021.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_022" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_022.usda@</BowlSmallSize_022>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_022>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_022.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_023" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_023.usda@</BowlSmallSize_023>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_023>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_023.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_024" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_024.usda@</BowlSmallSize_024>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_024>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_024.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_025" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_025.usda@</BowlSmallSize_025>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_025>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_025.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_026" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_026.usda@</BowlSmallSize_026>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_026>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_026.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_027" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_027.usda@</BowlSmallSize_027>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_027>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_027.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_028" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_028.usda@</BowlSmallSize_028>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_028>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_028.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_029" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_029.usda@</BowlSmallSize_029>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_029>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_029.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_030" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_030.usda@</BowlSmallSize_030>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_030>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_030.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_031" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_031.usda@</BowlSmallSize_031>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_031>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_031.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_032" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_032.usda@</BowlSmallSize_032>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_032>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_032.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_033" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_033.usda@</BowlSmallSize_033>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_033>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_033.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_034" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_034.usda@</BowlSmallSize_034>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_034>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_034.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_035" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_035.usda@</BowlSmallSize_035>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_035>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_035.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_036" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_036.usda@</BowlSmallSize_036>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_036>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_036.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_037" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_037.usda@</BowlSmallSize_037>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_037>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_037.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_038" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_038.usda@</BowlSmallSize_038>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_038>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_038.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_039" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_039.usda@</BowlSmallSize_039>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_039>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_039.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_040" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_040.usda@</BowlSmallSize_040>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_040>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_040.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_041" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_041.usda@</BowlSmallSize_041>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_041>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_041.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_042" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_042.usda@</BowlSmallSize_042>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_042>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_042.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_043" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_043.usda@</BowlSmallSize_043>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_043>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_043.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_044" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_044.usda@</BowlSmallSize_044>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_044>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_044.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_045" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_045.usda@</BowlSmallSize_045>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_045>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_045.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_046" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_046.usda@</BowlSmallSize_046>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_046>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_046.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_047" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_047.usda@</BowlSmallSize_047>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_047>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_047.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BowlSmallSize_048" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./small_bowl/meshes/usd/BowlSmallSize_048.usda@</BowlSmallSize_048>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BowlSmallSize_048>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./small_bowl/meshes/stl/BowlSmallSize_048.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "small_bowl"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "small_bowl"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "BowlSmallSize"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_001"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_002"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_003"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_004"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_005"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_006"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_007"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_008"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_009"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_010"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_011"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_012"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_013"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_014"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_015"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_016"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_017"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_018"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_019"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_020"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_021"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_022"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_023"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_024"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_025"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_026"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_027"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_028"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_029"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_030"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_031"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_032"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_033"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_034"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_035"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_036"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_037"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_038"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_039"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_039.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_040"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_040.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_041"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_041.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_042"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_042.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_043"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_043.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_044"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_044.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_045"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_045.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_046"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_046.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_047"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_047.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BowlSmallSize_048"
+            {
+                asset mujoco:mesh:file = @small_bowl/meshes/stl/BowlSmallSize_048.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_BowlSmallSize"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8435, 0.8435, 0.8435, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

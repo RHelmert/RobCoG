@@ -1,0 +1,1138 @@
+<?xml version="1.0" ?>
+<robot name="coke_can" version="1.0">
+  <link name="coke_can"/>
+  <joint name="coke_can_snap_lids_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="coke_can"/>
+    <child link="coke_can_snap_lids"/>
+  </joint>
+  <link name="coke_can_snap_lids">
+    <inertial>
+      <origin xyz="-5.552585935220122e-05 4.7487924348388333e-07 0.04825707897543907" rpy="1.5684541463851929 1.5693485736846924 -0.005685955286026001"/>
+      <mass value="0.0007786403875797987"/>
+      <inertia ixx="2.893337693876674e-07" ixy="0.0" ixz="0.0" iyy="1.958926759471069e-06" iyz="0.0" izz="1.959535666173906e-06"/>
+    </inertial>
+    <visual name="CokeCanSnapLids">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/obj/CokeCanSnapLids.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CokeCanSnapLids_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanSnapLids_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanSnapLids_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="coke_can_bottom_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="coke_can"/>
+    <child link="coke_can_bottom"/>
+  </joint>
+  <link name="coke_can_bottom">
+    <inertial>
+      <origin xyz="4.945118234900292e-07 -2.1482298606656514e-08 -0.04641607403755188" rpy="0.19180409610271454 -1.5707852840423584 3.0894219875335693"/>
+      <mass value="0.0010213014902547002"/>
+      <inertia ixx="4.580786878705112e-07" ixy="0.0" ixz="0.0" iyy="2.4387959456362296e-06" iyz="0.0" izz="2.438797764625633e-06"/>
+    </inertial>
+    <visual name="CokeCanBottom">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/obj/CokeCanBottom.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CokeCanBottom_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanBottom_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanBottom_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="coke_can_pull_ring_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="coke_can"/>
+    <child link="coke_can_pull_ring"/>
+  </joint>
+  <link name="coke_can_pull_ring">
+    <inertial>
+      <origin xyz="0.0027700657956302166 5.7589797819446176e-08 0.048945553600788116" rpy="-1.5708060264587402 1.5136611461639404 -3.141580820083618"/>
+      <mass value="6.472300447057933e-05"/>
+      <inertia ixx="2.840848889462677e-09" ixy="0.0" ixz="0.0" iyy="1.5642727646536514e-07" iyz="0.0" izz="1.5753661841699795e-07"/>
+    </inertial>
+    <visual name="CokeCanPullRing">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/obj/CokeCanPullRing.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CokeCanPullRing_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanPullRing_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanPullRing_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="coke_can_trademark_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="coke_can"/>
+    <child link="coke_can_trademark"/>
+  </joint>
+  <link name="coke_can_trademark">
+    <inertial>
+      <origin xyz="5.346417992768693e-07 4.568726978959603e-07 0.0027659458573907614" rpy="-0.9416787028312683 -1.5707907676696777 3.045621871948242"/>
+      <mass value="0.004100507590919733"/>
+      <inertia ixx="3.4531994970166124e-06" ixy="0.0" ixz="0.0" iyy="4.712011104857083e-06" iyz="0.0" izz="4.71208613816998e-06"/>
+    </inertial>
+    <visual name="CokeCanTrademark">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/obj/CokeCanTrademark.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CokeCanTrademark_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CokeCanTrademark_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://coke_can/meshes/stl/CokeCanTrademark_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

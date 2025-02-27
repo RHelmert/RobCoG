@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<mujoco model="cherry">
+	<compiler meshdir="cherry/meshes" texturedir="cherry/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="CherryPeel" file="obj/CherryPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_001" file="stl/CherryPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_002" file="stl/CherryPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_003" file="stl/CherryPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_004" file="stl/CherryPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_005" file="stl/CherryPeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_006" file="stl/CherryPeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryPeel_007" file="stl/CherryPeel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryStalk" file="obj/CherryStalk.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryStalk_001" file="stl/CherryStalk_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryStalk_002" file="stl/CherryStalk_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh" file="obj/CherryFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_001" file="stl/CherryFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_002" file="stl/CherryFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_003" file="stl/CherryFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_004" file="stl/CherryFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_005" file="stl/CherryFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_006" file="stl/CherryFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_007" file="stl/CherryFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherryFlesh_008" file="stl/CherryFlesh_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CherrySeed" file="obj/CherrySeed.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CherrySeed_001" file="stl/CherrySeed_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_CherryPeel" texture="T_CherryPeel"/>
+		<material name="M_CherryStalk" texture="T_CherryStalk"/>
+		<material name="M_CherryFlesh" texture="T_CherryFlesh"/>
+		<material name="M_CherrySeed" texture="T_CherrySeed"/>
+		<texture name="T_CherryPeel" type="2d" file="T_CherryPeel.png"/>
+		<texture name="T_CherryStalk" type="2d" file="T_CherryStalk.png"/>
+		<texture name="T_CherryFlesh" type="2d" file="T_CherryFlesh.png"/>
+		<texture name="T_CherrySeed" type="2d" file="T_CherrySeed.png"/>
+	</asset>
+	<worldbody>
+		<body name="cherry" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="cherry_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0016458273166790605" pos="-0.0001495521719334647 -0.00023928728478495032 -0.017217982560396194" quat="0.5100764036178589 0.4872205853462219 0.5025638341903687 -0.4998677968978882" diaginertia="3.394449947791145e-07 7.705484676989727e-07 8.148197707669169e-07"/>
+				<geom name="CherryPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel" material="M_CherryPeel" class="visual"/>
+				<geom name="CherryPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_001" class="collision"/>
+				<geom name="CherryPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_002" class="collision"/>
+				<geom name="CherryPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_003" class="collision"/>
+				<geom name="CherryPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_004" class="collision"/>
+				<geom name="CherryPeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_005" class="collision"/>
+				<geom name="CherryPeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_006" class="collision"/>
+				<geom name="CherryPeel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryPeel_007" class="collision"/>
+			</body>
+			<body name="cherry_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.017631854861974716" pos="8.694358257343993e-05 -0.00020917726214975119 -0.01762148179113865" quat="0.51277095079422 0.4913542568683624 0.5002497434616089 -0.4953656494617462" diaginertia="2.114738663294702e-06 7.124238436517771e-06 7.458932486770209e-06"/>
+				<geom name="CherryFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh" material="M_CherryFlesh" class="visual"/>
+				<geom name="CherryFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_001" class="collision"/>
+				<geom name="CherryFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_002" class="collision"/>
+				<geom name="CherryFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_003" class="collision"/>
+				<geom name="CherryFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_004" class="collision"/>
+				<geom name="CherryFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_005" class="collision"/>
+				<geom name="CherryFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_006" class="collision"/>
+				<geom name="CherryFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_007" class="collision"/>
+				<geom name="CherryFlesh_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryFlesh_008" class="collision"/>
+			</body>
+			<body name="cherry_stalk" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00019579460786189884" pos="0.0012943166075274348 -0.0011308129178360105 0.014164258725941181" quat="0.6543992161750793 -0.18187999725341797 0.6978278756141663 0.22741501033306122" diaginertia="3.386261271387525e-10 7.392029743868989e-08 7.400990398309659e-08"/>
+				<geom name="CherryStalk" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryStalk" material="M_CherryStalk" class="visual"/>
+				<geom name="CherryStalk_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryStalk_001" class="collision"/>
+				<geom name="CherryStalk_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherryStalk_002" class="collision"/>
+			</body>
+			<body name="cherry_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0011327199172228575" pos="8.019603410502896e-05 -0.0004382617480587214 -0.018748460337519646" quat="0.6526948809623718 0.2687729001045227 -0.6485552787780762 0.28482717275619507" diaginertia="1.5963077970582162e-08 4.187753575024544e-07 4.2156753465860675e-07"/>
+				<geom name="CherrySeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherrySeed" material="M_CherrySeed" class="visual"/>
+				<geom name="CherrySeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CherrySeed_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

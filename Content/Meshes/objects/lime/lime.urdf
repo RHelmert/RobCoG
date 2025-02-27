@@ -1,0 +1,592 @@
+<?xml version="1.0" ?>
+<robot name="lime" version="1.0">
+  <link name="lime"/>
+  <joint name="lime_fascia_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="lime"/>
+    <child link="lime_fascia"/>
+  </joint>
+  <link name="lime_fascia">
+    <inertial>
+      <origin xyz="-0.004055655561387539 0.00045510882046073675 8.306115341838449e-05" rpy="-3.0169146060943604 -0.05796181410551071 -0.037914298474788666"/>
+      <mass value="0.07461966574192047"/>
+      <inertia ixx="3.352948260726407e-05" ixy="0.0" ixz="0.0" iyy="4.461341450223699e-05" iyz="0.0" izz="4.501095463638194e-05"/>
+    </inertial>
+    <visual name="LimeFascia">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/obj/LimeFascia.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="LimeFascia_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFascia_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lime_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="lime"/>
+    <child link="lime_flesh"/>
+  </joint>
+  <link name="lime_flesh">
+    <inertial>
+      <origin xyz="-0.004311780445277691 -0.0010747106280177832 0.0006292589823715389" rpy="-0.5295618772506714 0.012315444648265839 0.021036246791481972"/>
+      <mass value="0.06487783044576645"/>
+      <inertia ixx="1.2263642929610796e-05" ixy="0.0" ixz="0.0" iyy="2.6561519916867837e-05" iyz="0.0" izz="2.665364991116803e-05"/>
+    </inertial>
+    <visual name="LimeFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/obj/LimeFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="LimeFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFlesh_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFlesh_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lime_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="lime"/>
+    <child link="lime_peel"/>
+  </joint>
+  <link name="lime_peel">
+    <inertial>
+      <origin xyz="-0.0020827518310397863 -0.00036481244023889303 3.410069984965958e-05" rpy="3.120107889175415 -0.028796924278140068 -0.0004909937269985676"/>
+      <mass value="0.0066876644268631935"/>
+      <inertia ixx="3.538991677487502e-06" ixy="0.0" ixz="0.0" iyy="5.962369414191926e-06" iyz="0.0" izz="6.003923317621229e-06"/>
+    </inertial>
+    <visual name="LimePeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/obj/LimePeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="LimePeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimePeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="lime_fruit_peduncle_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="lime"/>
+    <child link="lime_fruit_peduncle"/>
+  </joint>
+  <link name="lime_fruit_peduncle">
+    <inertial>
+      <origin xyz="-0.043652936816215515 -0.0014261020114645362 0.00041363973286934197" rpy="-0.9557055830955505 0.009306839667260647 0.032678328454494476"/>
+      <mass value="2.285023765580263e-05"/>
+      <inertia ixx="7.544106311874188e-11" ixy="0.0" ixz="0.0" iyy="4.364033401316192e-08" iyz="0.0" izz="4.364082784036327e-08"/>
+    </inertial>
+    <visual name="LimeFruitPeduncle">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/obj/LimeFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="LimeFruitPeduncle_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="LimeFruitPeduncle_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://lime/meshes/stl/LimeFruitPeduncle_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

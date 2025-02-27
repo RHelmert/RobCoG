@@ -1,0 +1,397 @@
+<?xml version="1.0" ?>
+<mujoco model="coke_can">
+	<compiler meshdir="coke_can/meshes" texturedir="coke_can/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="CokeCanSnapLids" file="stl/CokeCanSnapLids.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_001" file="stl/CokeCanSnapLids_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_002" file="stl/CokeCanSnapLids_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_003" file="stl/CokeCanSnapLids_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_004" file="stl/CokeCanSnapLids_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_005" file="stl/CokeCanSnapLids_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_006" file="stl/CokeCanSnapLids_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_007" file="stl/CokeCanSnapLids_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_008" file="stl/CokeCanSnapLids_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_009" file="stl/CokeCanSnapLids_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_010" file="stl/CokeCanSnapLids_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_011" file="stl/CokeCanSnapLids_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_012" file="stl/CokeCanSnapLids_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_013" file="stl/CokeCanSnapLids_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_014" file="stl/CokeCanSnapLids_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_015" file="stl/CokeCanSnapLids_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_016" file="stl/CokeCanSnapLids_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_017" file="stl/CokeCanSnapLids_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_018" file="stl/CokeCanSnapLids_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_019" file="stl/CokeCanSnapLids_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_020" file="stl/CokeCanSnapLids_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_021" file="stl/CokeCanSnapLids_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_022" file="stl/CokeCanSnapLids_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_023" file="stl/CokeCanSnapLids_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_024" file="stl/CokeCanSnapLids_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_025" file="stl/CokeCanSnapLids_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_026" file="stl/CokeCanSnapLids_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_027" file="stl/CokeCanSnapLids_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_028" file="stl/CokeCanSnapLids_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_029" file="stl/CokeCanSnapLids_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_030" file="stl/CokeCanSnapLids_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_031" file="stl/CokeCanSnapLids_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_032" file="stl/CokeCanSnapLids_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_033" file="stl/CokeCanSnapLids_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanSnapLids_034" file="stl/CokeCanSnapLids_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom" file="stl/CokeCanBottom.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_001" file="stl/CokeCanBottom_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_002" file="stl/CokeCanBottom_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_003" file="stl/CokeCanBottom_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_004" file="stl/CokeCanBottom_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_005" file="stl/CokeCanBottom_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_006" file="stl/CokeCanBottom_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_007" file="stl/CokeCanBottom_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_008" file="stl/CokeCanBottom_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_009" file="stl/CokeCanBottom_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_010" file="stl/CokeCanBottom_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_011" file="stl/CokeCanBottom_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_012" file="stl/CokeCanBottom_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_013" file="stl/CokeCanBottom_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_014" file="stl/CokeCanBottom_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_015" file="stl/CokeCanBottom_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_016" file="stl/CokeCanBottom_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_017" file="stl/CokeCanBottom_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_018" file="stl/CokeCanBottom_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_019" file="stl/CokeCanBottom_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_020" file="stl/CokeCanBottom_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_021" file="stl/CokeCanBottom_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_022" file="stl/CokeCanBottom_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_023" file="stl/CokeCanBottom_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_024" file="stl/CokeCanBottom_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_025" file="stl/CokeCanBottom_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_026" file="stl/CokeCanBottom_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_027" file="stl/CokeCanBottom_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_028" file="stl/CokeCanBottom_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_029" file="stl/CokeCanBottom_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_030" file="stl/CokeCanBottom_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_031" file="stl/CokeCanBottom_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_032" file="stl/CokeCanBottom_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_033" file="stl/CokeCanBottom_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_034" file="stl/CokeCanBottom_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_035" file="stl/CokeCanBottom_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_036" file="stl/CokeCanBottom_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_037" file="stl/CokeCanBottom_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_038" file="stl/CokeCanBottom_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_039" file="stl/CokeCanBottom_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_040" file="stl/CokeCanBottom_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_041" file="stl/CokeCanBottom_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_042" file="stl/CokeCanBottom_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_043" file="stl/CokeCanBottom_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_044" file="stl/CokeCanBottom_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_045" file="stl/CokeCanBottom_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_046" file="stl/CokeCanBottom_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_047" file="stl/CokeCanBottom_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_048" file="stl/CokeCanBottom_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_049" file="stl/CokeCanBottom_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_050" file="stl/CokeCanBottom_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_051" file="stl/CokeCanBottom_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_052" file="stl/CokeCanBottom_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_053" file="stl/CokeCanBottom_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_054" file="stl/CokeCanBottom_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_055" file="stl/CokeCanBottom_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_056" file="stl/CokeCanBottom_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_057" file="stl/CokeCanBottom_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_058" file="stl/CokeCanBottom_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_059" file="stl/CokeCanBottom_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_060" file="stl/CokeCanBottom_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_061" file="stl/CokeCanBottom_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_062" file="stl/CokeCanBottom_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_063" file="stl/CokeCanBottom_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_064" file="stl/CokeCanBottom_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_065" file="stl/CokeCanBottom_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_066" file="stl/CokeCanBottom_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_067" file="stl/CokeCanBottom_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_068" file="stl/CokeCanBottom_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_069" file="stl/CokeCanBottom_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_070" file="stl/CokeCanBottom_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_071" file="stl/CokeCanBottom_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_072" file="stl/CokeCanBottom_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_073" file="stl/CokeCanBottom_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_074" file="stl/CokeCanBottom_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_075" file="stl/CokeCanBottom_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_076" file="stl/CokeCanBottom_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_077" file="stl/CokeCanBottom_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanBottom_078" file="stl/CokeCanBottom_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing" file="stl/CokeCanPullRing.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_001" file="stl/CokeCanPullRing_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_002" file="stl/CokeCanPullRing_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_003" file="stl/CokeCanPullRing_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_004" file="stl/CokeCanPullRing_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_005" file="stl/CokeCanPullRing_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_006" file="stl/CokeCanPullRing_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_007" file="stl/CokeCanPullRing_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_008" file="stl/CokeCanPullRing_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_009" file="stl/CokeCanPullRing_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_010" file="stl/CokeCanPullRing_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_011" file="stl/CokeCanPullRing_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_012" file="stl/CokeCanPullRing_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_013" file="stl/CokeCanPullRing_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_014" file="stl/CokeCanPullRing_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_015" file="stl/CokeCanPullRing_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_016" file="stl/CokeCanPullRing_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_017" file="stl/CokeCanPullRing_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_018" file="stl/CokeCanPullRing_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_019" file="stl/CokeCanPullRing_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_020" file="stl/CokeCanPullRing_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_021" file="stl/CokeCanPullRing_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_022" file="stl/CokeCanPullRing_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_023" file="stl/CokeCanPullRing_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_024" file="stl/CokeCanPullRing_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_025" file="stl/CokeCanPullRing_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_026" file="stl/CokeCanPullRing_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_027" file="stl/CokeCanPullRing_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_028" file="stl/CokeCanPullRing_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_029" file="stl/CokeCanPullRing_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_030" file="stl/CokeCanPullRing_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_031" file="stl/CokeCanPullRing_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_032" file="stl/CokeCanPullRing_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_033" file="stl/CokeCanPullRing_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_034" file="stl/CokeCanPullRing_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_035" file="stl/CokeCanPullRing_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_036" file="stl/CokeCanPullRing_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanPullRing_037" file="stl/CokeCanPullRing_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark" file="stl/CokeCanTrademark.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_001" file="stl/CokeCanTrademark_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_002" file="stl/CokeCanTrademark_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_003" file="stl/CokeCanTrademark_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_004" file="stl/CokeCanTrademark_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_005" file="stl/CokeCanTrademark_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_006" file="stl/CokeCanTrademark_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_007" file="stl/CokeCanTrademark_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_008" file="stl/CokeCanTrademark_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_009" file="stl/CokeCanTrademark_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_010" file="stl/CokeCanTrademark_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_011" file="stl/CokeCanTrademark_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_012" file="stl/CokeCanTrademark_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_013" file="stl/CokeCanTrademark_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_014" file="stl/CokeCanTrademark_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_015" file="stl/CokeCanTrademark_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_016" file="stl/CokeCanTrademark_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_017" file="stl/CokeCanTrademark_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_018" file="stl/CokeCanTrademark_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_019" file="stl/CokeCanTrademark_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_020" file="stl/CokeCanTrademark_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_021" file="stl/CokeCanTrademark_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_022" file="stl/CokeCanTrademark_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_023" file="stl/CokeCanTrademark_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_024" file="stl/CokeCanTrademark_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_025" file="stl/CokeCanTrademark_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_026" file="stl/CokeCanTrademark_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_027" file="stl/CokeCanTrademark_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CokeCanTrademark_028" file="stl/CokeCanTrademark_028.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_CokeCanSnapLids" rgba="0.6744999885559082 0.6744999885559082 0.6744999885559082 1.0" emission="0.0"/>
+		<material name="M_CokeCanBottom" rgba="0.6744999885559082 0.6744999885559082 0.6744999885559082 1.0" emission="0.0"/>
+		<material name="M_CokeCanPullRing" rgba="0.6744999885559082 0.6744999885559082 0.6744999885559082 1.0" emission="0.0"/>
+		<material name="M_CokeCanTrademark" rgba="0.6744999885559082 0.6744999885559082 0.6744999885559082 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="coke_can" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="coke_can_snap_lids" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0007786403875797987" pos="-5.552585935220122e-05 4.7487924348388333e-07 0.04825707897543907" quat="0.49952661991119385 0.5011956095695496 0.4987998306751251 -0.5004746317863464" diaginertia="2.893337693876674e-07 1.958926759471069e-06 1.959535666173906e-06"/>
+				<geom name="CokeCanSnapLids" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids" material="M_CokeCanSnapLids" class="visual"/>
+				<geom name="CokeCanSnapLids_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_001" class="collision"/>
+				<geom name="CokeCanSnapLids_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_002" class="collision"/>
+				<geom name="CokeCanSnapLids_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_003" class="collision"/>
+				<geom name="CokeCanSnapLids_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_004" class="collision"/>
+				<geom name="CokeCanSnapLids_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_005" class="collision"/>
+				<geom name="CokeCanSnapLids_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_006" class="collision"/>
+				<geom name="CokeCanSnapLids_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_007" class="collision"/>
+				<geom name="CokeCanSnapLids_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_008" class="collision"/>
+				<geom name="CokeCanSnapLids_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_009" class="collision"/>
+				<geom name="CokeCanSnapLids_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_010" class="collision"/>
+				<geom name="CokeCanSnapLids_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_011" class="collision"/>
+				<geom name="CokeCanSnapLids_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_012" class="collision"/>
+				<geom name="CokeCanSnapLids_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_013" class="collision"/>
+				<geom name="CokeCanSnapLids_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_014" class="collision"/>
+				<geom name="CokeCanSnapLids_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_015" class="collision"/>
+				<geom name="CokeCanSnapLids_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_016" class="collision"/>
+				<geom name="CokeCanSnapLids_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_017" class="collision"/>
+				<geom name="CokeCanSnapLids_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_018" class="collision"/>
+				<geom name="CokeCanSnapLids_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_019" class="collision"/>
+				<geom name="CokeCanSnapLids_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_020" class="collision"/>
+				<geom name="CokeCanSnapLids_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_021" class="collision"/>
+				<geom name="CokeCanSnapLids_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_022" class="collision"/>
+				<geom name="CokeCanSnapLids_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_023" class="collision"/>
+				<geom name="CokeCanSnapLids_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_024" class="collision"/>
+				<geom name="CokeCanSnapLids_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_025" class="collision"/>
+				<geom name="CokeCanSnapLids_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_026" class="collision"/>
+				<geom name="CokeCanSnapLids_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_027" class="collision"/>
+				<geom name="CokeCanSnapLids_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_028" class="collision"/>
+				<geom name="CokeCanSnapLids_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_029" class="collision"/>
+				<geom name="CokeCanSnapLids_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_030" class="collision"/>
+				<geom name="CokeCanSnapLids_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_031" class="collision"/>
+				<geom name="CokeCanSnapLids_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_032" class="collision"/>
+				<geom name="CokeCanSnapLids_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_033" class="collision"/>
+				<geom name="CokeCanSnapLids_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanSnapLids_034" class="collision"/>
+			</body>
+			<body name="coke_can_pull_ring" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="6.472300447057933e-05" pos="0.0027700657956302166 5.7589797819446176e-08 0.048945553600788116" quat="0.48551955819129944 0.4855087697505951 0.514083206653595 -0.5140724778175354" diaginertia="2.840848889462677e-09 1.5642727646536514e-07 1.5753661841699795e-07"/>
+				<geom name="CokeCanPullRing" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing" material="M_CokeCanPullRing" class="visual"/>
+				<geom name="CokeCanPullRing_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_001" class="collision"/>
+				<geom name="CokeCanPullRing_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_002" class="collision"/>
+				<geom name="CokeCanPullRing_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_003" class="collision"/>
+				<geom name="CokeCanPullRing_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_004" class="collision"/>
+				<geom name="CokeCanPullRing_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_005" class="collision"/>
+				<geom name="CokeCanPullRing_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_006" class="collision"/>
+				<geom name="CokeCanPullRing_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_007" class="collision"/>
+				<geom name="CokeCanPullRing_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_008" class="collision"/>
+				<geom name="CokeCanPullRing_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_009" class="collision"/>
+				<geom name="CokeCanPullRing_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_010" class="collision"/>
+				<geom name="CokeCanPullRing_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_011" class="collision"/>
+				<geom name="CokeCanPullRing_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_012" class="collision"/>
+				<geom name="CokeCanPullRing_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_013" class="collision"/>
+				<geom name="CokeCanPullRing_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_014" class="collision"/>
+				<geom name="CokeCanPullRing_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_015" class="collision"/>
+				<geom name="CokeCanPullRing_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_016" class="collision"/>
+				<geom name="CokeCanPullRing_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_017" class="collision"/>
+				<geom name="CokeCanPullRing_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_018" class="collision"/>
+				<geom name="CokeCanPullRing_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_019" class="collision"/>
+				<geom name="CokeCanPullRing_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_020" class="collision"/>
+				<geom name="CokeCanPullRing_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_021" class="collision"/>
+				<geom name="CokeCanPullRing_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_022" class="collision"/>
+				<geom name="CokeCanPullRing_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_023" class="collision"/>
+				<geom name="CokeCanPullRing_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_024" class="collision"/>
+				<geom name="CokeCanPullRing_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_025" class="collision"/>
+				<geom name="CokeCanPullRing_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_026" class="collision"/>
+				<geom name="CokeCanPullRing_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_027" class="collision"/>
+				<geom name="CokeCanPullRing_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_028" class="collision"/>
+				<geom name="CokeCanPullRing_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_029" class="collision"/>
+				<geom name="CokeCanPullRing_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_030" class="collision"/>
+				<geom name="CokeCanPullRing_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_031" class="collision"/>
+				<geom name="CokeCanPullRing_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_032" class="collision"/>
+				<geom name="CokeCanPullRing_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_033" class="collision"/>
+				<geom name="CokeCanPullRing_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_034" class="collision"/>
+				<geom name="CokeCanPullRing_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_035" class="collision"/>
+				<geom name="CokeCanPullRing_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_036" class="collision"/>
+				<geom name="CokeCanPullRing_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanPullRing_037" class="collision"/>
+			</body>
+			<body name="coke_can_bottom" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0010213014902547002" pos="4.945118234900292e-07 -2.1482298606656514e-08 -0.04641607403755188" quat="-0.049327265471220016 0.7053802609443665 0.049328215420246124 0.7053880095481873" diaginertia="4.580786878705112e-07 2.4387959456362296e-06 2.438797764625633e-06"/>
+				<geom name="CokeCanBottom" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom" material="M_CokeCanBottom" class="visual"/>
+				<geom name="CokeCanBottom_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_001" class="collision"/>
+				<geom name="CokeCanBottom_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_002" class="collision"/>
+				<geom name="CokeCanBottom_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_003" class="collision"/>
+				<geom name="CokeCanBottom_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_004" class="collision"/>
+				<geom name="CokeCanBottom_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_005" class="collision"/>
+				<geom name="CokeCanBottom_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_006" class="collision"/>
+				<geom name="CokeCanBottom_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_007" class="collision"/>
+				<geom name="CokeCanBottom_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_008" class="collision"/>
+				<geom name="CokeCanBottom_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_009" class="collision"/>
+				<geom name="CokeCanBottom_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_010" class="collision"/>
+				<geom name="CokeCanBottom_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_011" class="collision"/>
+				<geom name="CokeCanBottom_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_012" class="collision"/>
+				<geom name="CokeCanBottom_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_013" class="collision"/>
+				<geom name="CokeCanBottom_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_014" class="collision"/>
+				<geom name="CokeCanBottom_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_015" class="collision"/>
+				<geom name="CokeCanBottom_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_016" class="collision"/>
+				<geom name="CokeCanBottom_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_017" class="collision"/>
+				<geom name="CokeCanBottom_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_018" class="collision"/>
+				<geom name="CokeCanBottom_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_019" class="collision"/>
+				<geom name="CokeCanBottom_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_020" class="collision"/>
+				<geom name="CokeCanBottom_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_021" class="collision"/>
+				<geom name="CokeCanBottom_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_022" class="collision"/>
+				<geom name="CokeCanBottom_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_023" class="collision"/>
+				<geom name="CokeCanBottom_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_024" class="collision"/>
+				<geom name="CokeCanBottom_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_025" class="collision"/>
+				<geom name="CokeCanBottom_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_026" class="collision"/>
+				<geom name="CokeCanBottom_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_027" class="collision"/>
+				<geom name="CokeCanBottom_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_028" class="collision"/>
+				<geom name="CokeCanBottom_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_029" class="collision"/>
+				<geom name="CokeCanBottom_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_030" class="collision"/>
+				<geom name="CokeCanBottom_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_031" class="collision"/>
+				<geom name="CokeCanBottom_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_032" class="collision"/>
+				<geom name="CokeCanBottom_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_033" class="collision"/>
+				<geom name="CokeCanBottom_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_034" class="collision"/>
+				<geom name="CokeCanBottom_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_035" class="collision"/>
+				<geom name="CokeCanBottom_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_036" class="collision"/>
+				<geom name="CokeCanBottom_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_037" class="collision"/>
+				<geom name="CokeCanBottom_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_038" class="collision"/>
+				<geom name="CokeCanBottom_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_039" class="collision"/>
+				<geom name="CokeCanBottom_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_040" class="collision"/>
+				<geom name="CokeCanBottom_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_041" class="collision"/>
+				<geom name="CokeCanBottom_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_042" class="collision"/>
+				<geom name="CokeCanBottom_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_043" class="collision"/>
+				<geom name="CokeCanBottom_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_044" class="collision"/>
+				<geom name="CokeCanBottom_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_045" class="collision"/>
+				<geom name="CokeCanBottom_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_046" class="collision"/>
+				<geom name="CokeCanBottom_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_047" class="collision"/>
+				<geom name="CokeCanBottom_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_048" class="collision"/>
+				<geom name="CokeCanBottom_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_049" class="collision"/>
+				<geom name="CokeCanBottom_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_050" class="collision"/>
+				<geom name="CokeCanBottom_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_051" class="collision"/>
+				<geom name="CokeCanBottom_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_052" class="collision"/>
+				<geom name="CokeCanBottom_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_053" class="collision"/>
+				<geom name="CokeCanBottom_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_054" class="collision"/>
+				<geom name="CokeCanBottom_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_055" class="collision"/>
+				<geom name="CokeCanBottom_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_056" class="collision"/>
+				<geom name="CokeCanBottom_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_057" class="collision"/>
+				<geom name="CokeCanBottom_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_058" class="collision"/>
+				<geom name="CokeCanBottom_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_059" class="collision"/>
+				<geom name="CokeCanBottom_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_060" class="collision"/>
+				<geom name="CokeCanBottom_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_061" class="collision"/>
+				<geom name="CokeCanBottom_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_062" class="collision"/>
+				<geom name="CokeCanBottom_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_063" class="collision"/>
+				<geom name="CokeCanBottom_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_064" class="collision"/>
+				<geom name="CokeCanBottom_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_065" class="collision"/>
+				<geom name="CokeCanBottom_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_066" class="collision"/>
+				<geom name="CokeCanBottom_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_067" class="collision"/>
+				<geom name="CokeCanBottom_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_068" class="collision"/>
+				<geom name="CokeCanBottom_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_069" class="collision"/>
+				<geom name="CokeCanBottom_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_070" class="collision"/>
+				<geom name="CokeCanBottom_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_071" class="collision"/>
+				<geom name="CokeCanBottom_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_072" class="collision"/>
+				<geom name="CokeCanBottom_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_073" class="collision"/>
+				<geom name="CokeCanBottom_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_074" class="collision"/>
+				<geom name="CokeCanBottom_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_075" class="collision"/>
+				<geom name="CokeCanBottom_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_076" class="collision"/>
+				<geom name="CokeCanBottom_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_077" class="collision"/>
+				<geom name="CokeCanBottom_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanBottom_078" class="collision"/>
+			</body>
+			<body name="coke_can_trademark" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.004100507590919733" pos="5.346417992768693e-07 4.568726978959603e-07 0.0027659458573907614" quat="0.35062509775161743 0.6140515208244324 -0.35062670707702637 0.6140550971031189" diaginertia="3.4531994970166124e-06 4.712011104857083e-06 4.71208613816998e-06"/>
+				<geom name="CokeCanTrademark" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark" material="M_CokeCanTrademark" class="visual"/>
+				<geom name="CokeCanTrademark_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_001" class="collision"/>
+				<geom name="CokeCanTrademark_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_002" class="collision"/>
+				<geom name="CokeCanTrademark_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_003" class="collision"/>
+				<geom name="CokeCanTrademark_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_004" class="collision"/>
+				<geom name="CokeCanTrademark_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_005" class="collision"/>
+				<geom name="CokeCanTrademark_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_006" class="collision"/>
+				<geom name="CokeCanTrademark_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_007" class="collision"/>
+				<geom name="CokeCanTrademark_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_008" class="collision"/>
+				<geom name="CokeCanTrademark_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_009" class="collision"/>
+				<geom name="CokeCanTrademark_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_010" class="collision"/>
+				<geom name="CokeCanTrademark_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_011" class="collision"/>
+				<geom name="CokeCanTrademark_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_012" class="collision"/>
+				<geom name="CokeCanTrademark_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_013" class="collision"/>
+				<geom name="CokeCanTrademark_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_014" class="collision"/>
+				<geom name="CokeCanTrademark_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_015" class="collision"/>
+				<geom name="CokeCanTrademark_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_016" class="collision"/>
+				<geom name="CokeCanTrademark_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_017" class="collision"/>
+				<geom name="CokeCanTrademark_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_018" class="collision"/>
+				<geom name="CokeCanTrademark_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_019" class="collision"/>
+				<geom name="CokeCanTrademark_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_020" class="collision"/>
+				<geom name="CokeCanTrademark_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_021" class="collision"/>
+				<geom name="CokeCanTrademark_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_022" class="collision"/>
+				<geom name="CokeCanTrademark_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_023" class="collision"/>
+				<geom name="CokeCanTrademark_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_024" class="collision"/>
+				<geom name="CokeCanTrademark_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_025" class="collision"/>
+				<geom name="CokeCanTrademark_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_026" class="collision"/>
+				<geom name="CokeCanTrademark_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_027" class="collision"/>
+				<geom name="CokeCanTrademark_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CokeCanTrademark_028" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

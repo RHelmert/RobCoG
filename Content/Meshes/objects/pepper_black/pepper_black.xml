@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<mujoco model="pepper_black">
+	<compiler meshdir="pepper_black/meshes" texturedir="pepper_black/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PepperBlack" file="obj/PepperBlack.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_001" file="stl/PepperBlack_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_002" file="stl/PepperBlack_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_003" file="stl/PepperBlack_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_004" file="stl/PepperBlack_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_005" file="stl/PepperBlack_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_006" file="stl/PepperBlack_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_007" file="stl/PepperBlack_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_008" file="stl/PepperBlack_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_009" file="stl/PepperBlack_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_010" file="stl/PepperBlack_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_011" file="stl/PepperBlack_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_012" file="stl/PepperBlack_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBlack_013" file="stl/PepperBlack_013.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PepperBlack" texture="T_PepperBlack"/>
+		<texture name="T_PepperBlack" type="2d" file="T_PepperBlack.png"/>
+	</asset>
+	<worldbody>
+		<body name="pepper_black" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="1.9499942936818115e-05" pos="-2.0498882804531604e-05 -2.119790224242024e-05 -3.0677460017614067e-05" quat="0.7049505710601807 -0.25423768162727356 -0.6304733753204346 -0.20226527750492096" diaginertia="3.156022665429248e-11 3.1741682199326604e-11 3.1845109882411293e-11"/>
+			<geom name="PepperBlack" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack" material="M_PepperBlack" class="visual"/>
+			<geom name="PepperBlack_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_001" class="collision"/>
+			<geom name="PepperBlack_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_002" class="collision"/>
+			<geom name="PepperBlack_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_003" class="collision"/>
+			<geom name="PepperBlack_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_004" class="collision"/>
+			<geom name="PepperBlack_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_005" class="collision"/>
+			<geom name="PepperBlack_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_006" class="collision"/>
+			<geom name="PepperBlack_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_007" class="collision"/>
+			<geom name="PepperBlack_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_008" class="collision"/>
+			<geom name="PepperBlack_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_009" class="collision"/>
+			<geom name="PepperBlack_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_010" class="collision"/>
+			<geom name="PepperBlack_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_011" class="collision"/>
+			<geom name="PepperBlack_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_012" class="collision"/>
+			<geom name="PepperBlack_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBlack_013" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

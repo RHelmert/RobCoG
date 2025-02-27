@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="butter" version="1.0">
+  <link name="butter">
+    <inertial>
+      <origin xyz="1.0195357891262802e-09 -8.063334000496525e-09 -9.647163824411109e-05" rpy="-7.973879405653861e-07 2.35040498175465e-09 3.087711419880179e-09"/>
+      <mass value="0.2880476415157318"/>
+      <inertia ixx="0.00013884958752896637" ixy="0.0" ixz="0.0" iyy="0.0003888639039359987" iyz="0.0" izz="0.00045151100493967533"/>
+    </inertial>
+    <visual name="Butter">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://butter/meshes/obj/Butter.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Butter_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://butter/meshes/stl/Butter_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

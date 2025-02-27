@@ -1,0 +1,2560 @@
+<?xml version="1.0" ?>
+<robot name="kiwi_2" version="1.0">
+  <link name="kiwi_2"/>
+  <joint name="kiwi_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kiwi_2"/>
+    <child link="kiwi_flesh"/>
+  </joint>
+  <link name="kiwi_flesh">
+    <inertial>
+      <origin xyz="-0.00038892109296284616 -1.0651107600068155e-11 3.010903171229984e-08" rpy="-3.141592502593994 -7.701795766479336e-06 -2.0996877569956496e-09"/>
+      <mass value="0.08314007520675659"/>
+      <inertia ixx="2.0737761587952264e-05" ixy="0.0" ixz="0.0" iyy="2.7000365662388504e-05" iyz="0.0" izz="2.772077095869463e-05"/>
+    </inertial>
+    <visual name="KiwiFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/obj/KiwiFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KiwiFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kiwi_fruit_peduncle_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kiwi_2"/>
+    <child link="kiwi_fruit_peduncle"/>
+  </joint>
+  <link name="kiwi_fruit_peduncle">
+    <inertial>
+      <origin xyz="-0.029956404119729996 -0.00012686582340393215 0.0010822552721947432" rpy="-0.7036501169204712 0.0363675020635128 0.004290868993848562"/>
+      <mass value="0.00013182336988393217"/>
+      <inertia ixx="1.8265839951681073e-09" ixy="0.0" ixz="0.0" iyy="1.1928806031846761e-07" iyz="0.0" izz="1.194996031017581e-07"/>
+    </inertial>
+    <visual name="KiwiFruitPeduncle">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/obj/KiwiFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KiwiFruitPeduncle_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiFruitPeduncle_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kiwi_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kiwi_2"/>
+    <child link="kiwi_seed"/>
+  </joint>
+  <link name="kiwi_seed">
+    <inertial>
+      <origin xyz="0.0007604426937177777 -0.00036013885983265936 0.00028313585789874196" rpy="-0.7010049819946289 -0.005666319280862808 -0.005676405504345894"/>
+      <mass value="0.0002721677010413259"/>
+      <inertia ixx="3.017362004698043e-08" ixy="0.0" ixz="0.0" iyy="5.332877961450322e-08" iyz="0.0" izz="5.463513019776656e-08"/>
+    </inertial>
+    <visual name="KiwiSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/obj/KiwiSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KiwiSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_097">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_097.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_098">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_098.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_099">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_099.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_100">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_100.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_101">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_101.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_102">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_102.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_103">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_103.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_104">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_104.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_105">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_105.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_106">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_106.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_107">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_107.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_108">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_108.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_109">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_109.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_110">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_110.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_111">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_111.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_112">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_112.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_113">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_113.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_114">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_114.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_115">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_115.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_116">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_116.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_117">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_117.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_118">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_118.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_119">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_119.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_120">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_120.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_121">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_121.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_122">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_122.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_123">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_123.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_124">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_124.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_125">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_125.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_126">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_126.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_127">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_127.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_128">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_128.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_129">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_129.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_130">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_130.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_131">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_131.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_132">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_132.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_133">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_133.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_134">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_134.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_135">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_135.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_136">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_136.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_137">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_137.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_138">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_138.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_139">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_139.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_140">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_140.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_141">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_141.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_142">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_142.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_143">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_143.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_144">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_144.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_145">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_145.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_146">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_146.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_147">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_147.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_148">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_148.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_149">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_149.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_150">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_150.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_151">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_151.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_152">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_152.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_153">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_153.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_154">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_154.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_155">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_155.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_156">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_156.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_157">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_157.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_158">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_158.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_159">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_159.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_160">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_160.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_161">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_161.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_162">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_162.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_163">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_163.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_164">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_164.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_165">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_165.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_166">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_166.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_167">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_167.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_168">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_168.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_169">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_169.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_170">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_170.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_171">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_171.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_172">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_172.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_173">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_173.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_174">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_174.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_175">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_175.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_176">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_176.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_177">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_177.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_178">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_178.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_179">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_179.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_180">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_180.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_181">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_181.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_182">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_182.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_183">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_183.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_184">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_184.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_185">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_185.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_186">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_186.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_187">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_187.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_188">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_188.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_189">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_189.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_190">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_190.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_191">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_191.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_192">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_192.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_193">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_193.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_194">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_194.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_195">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_195.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_196">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_196.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_197">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_197.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_198">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_198.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_199">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_199.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_200">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_200.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_201">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_201.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_202">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_202.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_203">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_203.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_204">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_204.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_205">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_205.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_206">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_206.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_207">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_207.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_208">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_208.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_209">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_209.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_210">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_210.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_211">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_211.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_212">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_212.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_213">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_213.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_214">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_214.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_215">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_215.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_216">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_216.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_217">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_217.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_218">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_218.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_219">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_219.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_220">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_220.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_221">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_221.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_222">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_222.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_223">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_223.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_224">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_224.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_225">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_225.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_226">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_226.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_227">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_227.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_228">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_228.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_229">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_229.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_230">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_230.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_231">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_231.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_232">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_232.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_233">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_233.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_234">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_234.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_235">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_235.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_236">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_236.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_237">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_237.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_238">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_238.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_239">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_239.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_240">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_240.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_241">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_241.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_242">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_242.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_243">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_243.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_244">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_244.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_245">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_245.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_246">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_246.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_247">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_247.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_248">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_248.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_249">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_249.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_250">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_250.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_251">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_251.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_252">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_252.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_253">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_253.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_254">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_254.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_255">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_255.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_256">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_256.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_257">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_257.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_258">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_258.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_259">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_259.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_260">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_260.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_261">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_261.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_262">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_262.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_263">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_263.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_264">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_264.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_265">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_265.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_266">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_266.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_267">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_267.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_268">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_268.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_269">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_269.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_270">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_270.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_271">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_271.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_272">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_272.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_273">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_273.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_274">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_274.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_275">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_275.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_276">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_276.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_277">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_277.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_278">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_278.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_279">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_279.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_280">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_280.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_281">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_281.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_282">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_282.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_283">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_283.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_284">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_284.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_285">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_285.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_286">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_286.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_287">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_287.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_288">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_288.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_289">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_289.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_290">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_290.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_291">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_291.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_292">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_292.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_293">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_293.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_294">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_294.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_295">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_295.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_296">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_296.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_297">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_297.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_298">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_298.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_299">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_299.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_300">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_300.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_301">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_301.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_302">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_302.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_303">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_303.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_304">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_304.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_305">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_305.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_306">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_306.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_307">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_307.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_308">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_308.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_309">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_309.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_310">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_310.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_311">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_311.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_312">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_312.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_313">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_313.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_314">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_314.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_315">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_315.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_316">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_316.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_317">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_317.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_318">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_318.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_319">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_319.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_320">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_320.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_321">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_321.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_322">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_322.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_323">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_323.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_324">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_324.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_325">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_325.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_326">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_326.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_327">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_327.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_328">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_328.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_329">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_329.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_330">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_330.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_331">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_331.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_332">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_332.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_333">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_333.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_334">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_334.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_335">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_335.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_336">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_336.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_337">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_337.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_338">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_338.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_339">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_339.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_340">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_340.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_341">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_341.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_342">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_342.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_343">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_343.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_344">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_344.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_345">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_345.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_346">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_346.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_347">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_347.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_348">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_348.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_349">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_349.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_350">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_350.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_351">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_351.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_352">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_352.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_353">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_353.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_354">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_354.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_355">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_355.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_356">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_356.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_357">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_357.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_358">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_358.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_359">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_359.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_360">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_360.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_361">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_361.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_362">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_362.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_363">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_363.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_364">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_364.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_365">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_365.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_366">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_366.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_367">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_367.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_368">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_368.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_369">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_369.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_370">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_370.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_371">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_371.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_372">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_372.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_373">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_373.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_374">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_374.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_375">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_375.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_376">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_376.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_377">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_377.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_378">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_378.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_379">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_379.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_380">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_380.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_381">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_381.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_382">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_382.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_383">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_383.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_384">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_384.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_385">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_385.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_386">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_386.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_387">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_387.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_388">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_388.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_389">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_389.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_390">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_390.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_391">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_391.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_392">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_392.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_393">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_393.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_394">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_394.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_395">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_395.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_396">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_396.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_397">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_397.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_398">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_398.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_399">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_399.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_400">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_400.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_401">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_401.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_402">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_402.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_403">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_403.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_404">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_404.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_405">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_405.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_406">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_406.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_407">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_407.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_408">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_408.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_409">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_409.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KiwiSeed_410">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiSeed_410.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kiwi_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kiwi_2"/>
+    <child link="kiwi_peel"/>
+  </joint>
+  <link name="kiwi_peel">
+    <inertial>
+      <origin xyz="-0.00030321485246531665 -4.686118160179831e-11 7.477483876527913e-08" rpy="-3.719406374688358e-15 6.340795516734943e-05 -5.024563020695778e-15"/>
+      <mass value="0.005380913149565458"/>
+      <inertia ixx="2.360362486797385e-06" ixy="0.0" ixz="0.0" iyy="2.8907818432344357e-06" iyz="0.0" izz="2.951815986307338e-06"/>
+    </inertial>
+    <visual name="KiwiPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/obj/KiwiPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KiwiPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kiwi_2/meshes/stl/KiwiPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,327 @@
+<?xml version="1.0" ?>
+<mujoco model="mixer">
+	<compiler meshdir="mixer/meshes" texturedir="mixer/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="MixerCover" file="stl/MixerCover.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_001" file="stl/MixerCover_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_002" file="stl/MixerCover_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_003" file="stl/MixerCover_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_004" file="stl/MixerCover_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_005" file="stl/MixerCover_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_006" file="stl/MixerCover_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_007" file="stl/MixerCover_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_008" file="stl/MixerCover_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_009" file="stl/MixerCover_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_010" file="stl/MixerCover_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_011" file="stl/MixerCover_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_012" file="stl/MixerCover_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_013" file="stl/MixerCover_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_014" file="stl/MixerCover_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_015" file="stl/MixerCover_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_016" file="stl/MixerCover_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_017" file="stl/MixerCover_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_018" file="stl/MixerCover_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_019" file="stl/MixerCover_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_020" file="stl/MixerCover_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_021" file="stl/MixerCover_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_022" file="stl/MixerCover_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_023" file="stl/MixerCover_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_024" file="stl/MixerCover_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_025" file="stl/MixerCover_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_026" file="stl/MixerCover_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_027" file="stl/MixerCover_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_028" file="stl/MixerCover_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_029" file="stl/MixerCover_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_030" file="stl/MixerCover_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_031" file="stl/MixerCover_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_032" file="stl/MixerCover_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_033" file="stl/MixerCover_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_034" file="stl/MixerCover_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_035" file="stl/MixerCover_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_036" file="stl/MixerCover_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_037" file="stl/MixerCover_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_038" file="stl/MixerCover_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_039" file="stl/MixerCover_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_040" file="stl/MixerCover_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_041" file="stl/MixerCover_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_042" file="stl/MixerCover_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_043" file="stl/MixerCover_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_044" file="stl/MixerCover_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_045" file="stl/MixerCover_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_046" file="stl/MixerCover_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_047" file="stl/MixerCover_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_048" file="stl/MixerCover_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_049" file="stl/MixerCover_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_050" file="stl/MixerCover_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_051" file="stl/MixerCover_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_052" file="stl/MixerCover_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_053" file="stl/MixerCover_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_054" file="stl/MixerCover_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_055" file="stl/MixerCover_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_056" file="stl/MixerCover_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_057" file="stl/MixerCover_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_058" file="stl/MixerCover_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_059" file="stl/MixerCover_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_060" file="stl/MixerCover_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_061" file="stl/MixerCover_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_062" file="stl/MixerCover_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_063" file="stl/MixerCover_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_064" file="stl/MixerCover_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_065" file="stl/MixerCover_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_066" file="stl/MixerCover_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_067" file="stl/MixerCover_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_068" file="stl/MixerCover_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_069" file="stl/MixerCover_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_070" file="stl/MixerCover_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_071" file="stl/MixerCover_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_072" file="stl/MixerCover_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_073" file="stl/MixerCover_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_074" file="stl/MixerCover_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_075" file="stl/MixerCover_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_076" file="stl/MixerCover_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_077" file="stl/MixerCover_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_078" file="stl/MixerCover_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_079" file="stl/MixerCover_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_080" file="stl/MixerCover_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_081" file="stl/MixerCover_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_082" file="stl/MixerCover_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_083" file="stl/MixerCover_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_084" file="stl/MixerCover_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_085" file="stl/MixerCover_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_086" file="stl/MixerCover_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_087" file="stl/MixerCover_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_088" file="stl/MixerCover_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_089" file="stl/MixerCover_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_090" file="stl/MixerCover_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_091" file="stl/MixerCover_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_092" file="stl/MixerCover_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_093" file="stl/MixerCover_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_094" file="stl/MixerCover_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_095" file="stl/MixerCover_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_096" file="stl/MixerCover_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_097" file="stl/MixerCover_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_098" file="stl/MixerCover_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_099" file="stl/MixerCover_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_100" file="stl/MixerCover_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_101" file="stl/MixerCover_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_102" file="stl/MixerCover_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_103" file="stl/MixerCover_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_104" file="stl/MixerCover_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_105" file="stl/MixerCover_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_106" file="stl/MixerCover_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_107" file="stl/MixerCover_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_108" file="stl/MixerCover_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_109" file="stl/MixerCover_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_110" file="stl/MixerCover_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCover_111" file="stl/MixerCover_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup" file="stl/MixerCup.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_001" file="stl/MixerCup_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_002" file="stl/MixerCup_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_003" file="stl/MixerCup_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_004" file="stl/MixerCup_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_005" file="stl/MixerCup_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_006" file="stl/MixerCup_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_007" file="stl/MixerCup_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_008" file="stl/MixerCup_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_009" file="stl/MixerCup_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_010" file="stl/MixerCup_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_011" file="stl/MixerCup_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_012" file="stl/MixerCup_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_013" file="stl/MixerCup_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_014" file="stl/MixerCup_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_015" file="stl/MixerCup_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_016" file="stl/MixerCup_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_017" file="stl/MixerCup_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_018" file="stl/MixerCup_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_019" file="stl/MixerCup_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_020" file="stl/MixerCup_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_021" file="stl/MixerCup_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_022" file="stl/MixerCup_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_023" file="stl/MixerCup_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_024" file="stl/MixerCup_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_025" file="stl/MixerCup_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_026" file="stl/MixerCup_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_027" file="stl/MixerCup_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_028" file="stl/MixerCup_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_029" file="stl/MixerCup_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_030" file="stl/MixerCup_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_031" file="stl/MixerCup_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_032" file="stl/MixerCup_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_033" file="stl/MixerCup_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_034" file="stl/MixerCup_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_035" file="stl/MixerCup_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_036" file="stl/MixerCup_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="MixerCup_037" file="stl/MixerCup_037.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_MixerCover" rgba="0.5254999995231628 0.5293999910354614 0.5450999736785889 1.0" emission="0.0"/>
+		<material name="M_MixerCup" rgba="0.5254999995231628 0.5293999910354614 0.5450999736785889 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="mixer" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="mixer_cover" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="6.394794940948486" pos="-1.0711189588619163e-06 -4.780318931807415e-07 0.06360410153865814" quat="-0.017323601990938187 0.706890344619751 0.01731915958225727 0.7068988084793091" diaginertia="0.007464394439011812 0.03619295731186867 0.036193035542964935"/>
+				<geom name="MixerCover" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover" material="M_MixerCover" class="visual"/>
+				<geom name="MixerCover_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_001" class="collision"/>
+				<geom name="MixerCover_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_002" class="collision"/>
+				<geom name="MixerCover_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_003" class="collision"/>
+				<geom name="MixerCover_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_004" class="collision"/>
+				<geom name="MixerCover_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_005" class="collision"/>
+				<geom name="MixerCover_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_006" class="collision"/>
+				<geom name="MixerCover_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_007" class="collision"/>
+				<geom name="MixerCover_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_008" class="collision"/>
+				<geom name="MixerCover_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_009" class="collision"/>
+				<geom name="MixerCover_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_010" class="collision"/>
+				<geom name="MixerCover_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_011" class="collision"/>
+				<geom name="MixerCover_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_012" class="collision"/>
+				<geom name="MixerCover_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_013" class="collision"/>
+				<geom name="MixerCover_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_014" class="collision"/>
+				<geom name="MixerCover_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_015" class="collision"/>
+				<geom name="MixerCover_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_016" class="collision"/>
+				<geom name="MixerCover_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_017" class="collision"/>
+				<geom name="MixerCover_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_018" class="collision"/>
+				<geom name="MixerCover_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_019" class="collision"/>
+				<geom name="MixerCover_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_020" class="collision"/>
+				<geom name="MixerCover_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_021" class="collision"/>
+				<geom name="MixerCover_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_022" class="collision"/>
+				<geom name="MixerCover_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_023" class="collision"/>
+				<geom name="MixerCover_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_024" class="collision"/>
+				<geom name="MixerCover_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_025" class="collision"/>
+				<geom name="MixerCover_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_026" class="collision"/>
+				<geom name="MixerCover_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_027" class="collision"/>
+				<geom name="MixerCover_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_028" class="collision"/>
+				<geom name="MixerCover_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_029" class="collision"/>
+				<geom name="MixerCover_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_030" class="collision"/>
+				<geom name="MixerCover_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_031" class="collision"/>
+				<geom name="MixerCover_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_032" class="collision"/>
+				<geom name="MixerCover_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_033" class="collision"/>
+				<geom name="MixerCover_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_034" class="collision"/>
+				<geom name="MixerCover_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_035" class="collision"/>
+				<geom name="MixerCover_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_036" class="collision"/>
+				<geom name="MixerCover_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_037" class="collision"/>
+				<geom name="MixerCover_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_038" class="collision"/>
+				<geom name="MixerCover_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_039" class="collision"/>
+				<geom name="MixerCover_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_040" class="collision"/>
+				<geom name="MixerCover_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_041" class="collision"/>
+				<geom name="MixerCover_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_042" class="collision"/>
+				<geom name="MixerCover_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_043" class="collision"/>
+				<geom name="MixerCover_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_044" class="collision"/>
+				<geom name="MixerCover_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_045" class="collision"/>
+				<geom name="MixerCover_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_046" class="collision"/>
+				<geom name="MixerCover_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_047" class="collision"/>
+				<geom name="MixerCover_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_048" class="collision"/>
+				<geom name="MixerCover_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_049" class="collision"/>
+				<geom name="MixerCover_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_050" class="collision"/>
+				<geom name="MixerCover_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_051" class="collision"/>
+				<geom name="MixerCover_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_052" class="collision"/>
+				<geom name="MixerCover_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_053" class="collision"/>
+				<geom name="MixerCover_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_054" class="collision"/>
+				<geom name="MixerCover_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_055" class="collision"/>
+				<geom name="MixerCover_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_056" class="collision"/>
+				<geom name="MixerCover_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_057" class="collision"/>
+				<geom name="MixerCover_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_058" class="collision"/>
+				<geom name="MixerCover_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_059" class="collision"/>
+				<geom name="MixerCover_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_060" class="collision"/>
+				<geom name="MixerCover_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_061" class="collision"/>
+				<geom name="MixerCover_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_062" class="collision"/>
+				<geom name="MixerCover_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_063" class="collision"/>
+				<geom name="MixerCover_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_064" class="collision"/>
+				<geom name="MixerCover_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_065" class="collision"/>
+				<geom name="MixerCover_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_066" class="collision"/>
+				<geom name="MixerCover_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_067" class="collision"/>
+				<geom name="MixerCover_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_068" class="collision"/>
+				<geom name="MixerCover_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_069" class="collision"/>
+				<geom name="MixerCover_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_070" class="collision"/>
+				<geom name="MixerCover_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_071" class="collision"/>
+				<geom name="MixerCover_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_072" class="collision"/>
+				<geom name="MixerCover_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_073" class="collision"/>
+				<geom name="MixerCover_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_074" class="collision"/>
+				<geom name="MixerCover_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_075" class="collision"/>
+				<geom name="MixerCover_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_076" class="collision"/>
+				<geom name="MixerCover_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_077" class="collision"/>
+				<geom name="MixerCover_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_078" class="collision"/>
+				<geom name="MixerCover_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_079" class="collision"/>
+				<geom name="MixerCover_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_080" class="collision"/>
+				<geom name="MixerCover_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_081" class="collision"/>
+				<geom name="MixerCover_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_082" class="collision"/>
+				<geom name="MixerCover_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_083" class="collision"/>
+				<geom name="MixerCover_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_084" class="collision"/>
+				<geom name="MixerCover_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_085" class="collision"/>
+				<geom name="MixerCover_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_086" class="collision"/>
+				<geom name="MixerCover_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_087" class="collision"/>
+				<geom name="MixerCover_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_088" class="collision"/>
+				<geom name="MixerCover_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_089" class="collision"/>
+				<geom name="MixerCover_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_090" class="collision"/>
+				<geom name="MixerCover_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_091" class="collision"/>
+				<geom name="MixerCover_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_092" class="collision"/>
+				<geom name="MixerCover_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_093" class="collision"/>
+				<geom name="MixerCover_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_094" class="collision"/>
+				<geom name="MixerCover_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_095" class="collision"/>
+				<geom name="MixerCover_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_096" class="collision"/>
+				<geom name="MixerCover_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_097" class="collision"/>
+				<geom name="MixerCover_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_098" class="collision"/>
+				<geom name="MixerCover_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_099" class="collision"/>
+				<geom name="MixerCover_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_100" class="collision"/>
+				<geom name="MixerCover_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_101" class="collision"/>
+				<geom name="MixerCover_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_102" class="collision"/>
+				<geom name="MixerCover_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_103" class="collision"/>
+				<geom name="MixerCover_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_104" class="collision"/>
+				<geom name="MixerCover_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_105" class="collision"/>
+				<geom name="MixerCover_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_106" class="collision"/>
+				<geom name="MixerCover_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_107" class="collision"/>
+				<geom name="MixerCover_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_108" class="collision"/>
+				<geom name="MixerCover_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_109" class="collision"/>
+				<geom name="MixerCover_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_110" class="collision"/>
+				<geom name="MixerCover_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCover_111" class="collision"/>
+			</body>
+			<body name="mixer_cup" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="8.871996879577637" pos="-1.7645579646341503e-06 -5.248667207524704e-07 -0.042765483260154724" quat="0.5020855069160461 0.4978981912136078 0.5020849704742432 -0.4979139268398285" diaginertia="0.01072021946310997 0.040611784905195236 0.040611863136291504"/>
+				<geom name="MixerCup" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup" material="M_MixerCup" class="visual"/>
+				<geom name="MixerCup_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_001" class="collision"/>
+				<geom name="MixerCup_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_002" class="collision"/>
+				<geom name="MixerCup_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_003" class="collision"/>
+				<geom name="MixerCup_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_004" class="collision"/>
+				<geom name="MixerCup_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_005" class="collision"/>
+				<geom name="MixerCup_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_006" class="collision"/>
+				<geom name="MixerCup_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_007" class="collision"/>
+				<geom name="MixerCup_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_008" class="collision"/>
+				<geom name="MixerCup_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_009" class="collision"/>
+				<geom name="MixerCup_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_010" class="collision"/>
+				<geom name="MixerCup_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_011" class="collision"/>
+				<geom name="MixerCup_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_012" class="collision"/>
+				<geom name="MixerCup_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_013" class="collision"/>
+				<geom name="MixerCup_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_014" class="collision"/>
+				<geom name="MixerCup_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_015" class="collision"/>
+				<geom name="MixerCup_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_016" class="collision"/>
+				<geom name="MixerCup_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_017" class="collision"/>
+				<geom name="MixerCup_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_018" class="collision"/>
+				<geom name="MixerCup_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_019" class="collision"/>
+				<geom name="MixerCup_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_020" class="collision"/>
+				<geom name="MixerCup_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_021" class="collision"/>
+				<geom name="MixerCup_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_022" class="collision"/>
+				<geom name="MixerCup_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_023" class="collision"/>
+				<geom name="MixerCup_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_024" class="collision"/>
+				<geom name="MixerCup_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_025" class="collision"/>
+				<geom name="MixerCup_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_026" class="collision"/>
+				<geom name="MixerCup_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_027" class="collision"/>
+				<geom name="MixerCup_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_028" class="collision"/>
+				<geom name="MixerCup_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_029" class="collision"/>
+				<geom name="MixerCup_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_030" class="collision"/>
+				<geom name="MixerCup_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_031" class="collision"/>
+				<geom name="MixerCup_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_032" class="collision"/>
+				<geom name="MixerCup_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_033" class="collision"/>
+				<geom name="MixerCup_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_034" class="collision"/>
+				<geom name="MixerCup_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_035" class="collision"/>
+				<geom name="MixerCup_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_036" class="collision"/>
+				<geom name="MixerCup_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="MixerCup_037" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

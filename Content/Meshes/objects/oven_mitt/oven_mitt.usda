@@ -1,0 +1,950 @@
+#usda 1.0
+(
+    defaultPrim = "oven_mitt"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "oven_mitt" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "oven_mitt_cloth" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.015979763, 0.047919743, 0.06246848)
+        float mujoco:body:inertial:mass = 3.2964334
+        point3f mujoco:body:inertial:pos = (0.0082666455, 0.0063115503, -0.025265185)
+        quatf mujoco:body:inertial:quat = (0.4658694, 0.44449264, 0.5485216, -0.5334005)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0082666455, 0.0063115503, -0.025265185)
+        float3 physics:diagonalInertia = (0.015979763, 0.047919743, 0.06246848)
+        float physics:mass = 3.2964334
+        quatf physics:principalAxes = (0.4658694, 0.44449264, 0.5485216, -0.5334005)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.015979763
+        float urdf:link:inertial:inertia:iyy = 0.047919743
+        float urdf:link:inertial:inertia:izz = 0.06246848
+        float urdf:link:inertial:mass = 3.2964334
+        float3 urdf:link:inertial:origin:rpy = (-1.5526667, 1.3989108, -3.0868278)
+        point3f urdf:link:inertial:origin:xyz = (0.0082666455, 0.0063115503, -0.025265185)
+
+        def Mesh "OvenMittCloth" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth.usda@</OvenMittCloth>
+        )
+        {
+            rel material:binding = </oven_mitt/oven_mitt_cloth/OvenMittCloth/Materials/M_OvenMittCloth>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OvenMittCloth>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/obj/OvenMittCloth.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OvenMittCloth" (
+                    prepend references = @./oven_mitt/materials/usd/M_OvenMittCloth.usda@</M_OvenMittCloth>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OvenMittCloth_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_001.usda@</OvenMittCloth_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_002.usda@</OvenMittCloth_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_003.usda@</OvenMittCloth_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_004.usda@</OvenMittCloth_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_005.usda@</OvenMittCloth_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_006.usda@</OvenMittCloth_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_007.usda@</OvenMittCloth_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_008.usda@</OvenMittCloth_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_009.usda@</OvenMittCloth_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_010.usda@</OvenMittCloth_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_011.usda@</OvenMittCloth_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_012.usda@</OvenMittCloth_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_013.usda@</OvenMittCloth_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_014.usda@</OvenMittCloth_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_015.usda@</OvenMittCloth_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_016.usda@</OvenMittCloth_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_017.usda@</OvenMittCloth_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_018.usda@</OvenMittCloth_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_019.usda@</OvenMittCloth_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_020.usda@</OvenMittCloth_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_021.usda@</OvenMittCloth_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_022.usda@</OvenMittCloth_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_023.usda@</OvenMittCloth_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_024.usda@</OvenMittCloth_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_025.usda@</OvenMittCloth_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_026.usda@</OvenMittCloth_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittCloth_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittCloth_027.usda@</OvenMittCloth_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittCloth_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittCloth_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "oven_mitt_skin" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0035743455, 0.01040833, 0.013392816)
+        float mujoco:body:inertial:mass = 1.1743172
+        point3f mujoco:body:inertial:pos = (0.018886399, -0.016218305, 0.02312811)
+        quatf mujoco:body:inertial:quat = (-0.59711355, 0.609945, 0.34125194, 0.39366183)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.018886399, -0.016218305, 0.02312811)
+        float3 physics:diagonalInertia = (0.0035743455, 0.01040833, 0.013392816)
+        float physics:mass = 1.1743172
+        quatf physics:principalAxes = (-0.59711355, 0.609945, 0.34125194, 0.39366183)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0035743455
+        float urdf:link:inertial:inertia:iyy = 0.01040833
+        float urdf:link:inertial:inertia:izz = 0.013392816
+        float urdf:link:inertial:mass = 1.1743172
+        float3 urdf:link:inertial:origin:rpy = (-1.5207477, -1.092448, -0.11721415)
+        point3f urdf:link:inertial:origin:xyz = (0.018886399, -0.016218305, 0.02312811)
+
+        def Mesh "OvenMittSkin" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittSkin.usda@</OvenMittSkin>
+        )
+        {
+            rel material:binding = </oven_mitt/oven_mitt_skin/OvenMittSkin/Materials/M_OvenMittSkin>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_OvenMittSkin>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittSkin>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/obj/OvenMittSkin.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_OvenMittSkin" (
+                    prepend references = @./oven_mitt/materials/usd/M_OvenMittSkin.usda@</M_OvenMittSkin>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "OvenMittSkin_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittSkin_001.usda@</OvenMittSkin_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittSkin_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittSkin_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittSkin_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittSkin_002.usda@</OvenMittSkin_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittSkin_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittSkin_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "OvenMittSkin_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./oven_mitt/meshes/usd/OvenMittSkin_003.usda@</OvenMittSkin_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/OvenMittSkin_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./oven_mitt/meshes/stl/OvenMittSkin_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "oven_mitt"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "oven_mitt"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "OvenMittCloth"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/obj/OvenMittCloth.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_001"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_002"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_003"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_004"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_005"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_006"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_007"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_008"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_009"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_010"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_011"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_012"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_013"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_014"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_015"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_016"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_017"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_018"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_019"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_020"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_021"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_022"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_023"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_024"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_025"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_026"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittCloth_027"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittCloth_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittSkin"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittSkin.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittSkin_001"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittSkin_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittSkin_002"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittSkin_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "OvenMittSkin_003"
+            {
+                asset mujoco:mesh:file = @oven_mitt/meshes/stl/OvenMittSkin_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_OvenMittCloth"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_OvenMittCloth>
+            }
+
+            def MujocoMaterial "M_OvenMittSkin"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.5894, 0.6274, 0.6368, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_OvenMittCloth"
+            {
+                asset mujoco:texture:file = @T_OvenMittCloth.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

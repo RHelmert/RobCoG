@@ -1,0 +1,476 @@
+#usda 1.0
+(
+    defaultPrim = "honey_peach"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "honey_peach" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "honey_peach_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0013328578, 0.0014087659, 0.0014269621)
+        float mujoco:body:inertial:mass = 1.2212931
+        point3f mujoco:body:inertial:pos = (-0.00080106175, -0.0005311282, -0.0054094847)
+        quatf mujoco:body:inertial:quat = (-0.32978958, 0.41349122, 0.38312045, 0.7572863)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.00080106175, -0.0005311282, -0.0054094847)
+        float3 physics:diagonalInertia = (0.0013328578, 0.0014087659, 0.0014269621)
+        float physics:mass = 1.2212931
+        quatf physics:principalAxes = (-0.32978958, 0.41349122, 0.38312045, 0.7572863)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0013328578
+        float urdf:link:inertial:inertia:iyy = 0.0014087659
+        float urdf:link:inertial:inertia:izz = 0.0014269621
+        float urdf:link:inertial:mass = 1.2212931
+        float3 urdf:link:inertial:origin:rpy = (0.70085, -1.0736786, -2.7485373)
+        point3f urdf:link:inertial:origin:xyz = (-0.00080106175, -0.0005311282, -0.0054094847)
+
+        def Mesh "HoneyPeachPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachPeel.usda@</HoneyPeachPeel>
+        )
+        {
+            rel material:binding = </honey_peach/honey_peach_peel/HoneyPeachPeel/Materials/M_HoneyPeachPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HoneyPeachPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/obj/HoneyPeachPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HoneyPeachPeel" (
+                    prepend references = @./honey_peach/materials/usd/M_HoneyPeachPeel.usda@</M_HoneyPeachPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HoneyPeachPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachPeel_001.usda@</HoneyPeachPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachPeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachPeel_002.usda@</HoneyPeachPeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachPeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachPeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachPeel_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachPeel_003.usda@</HoneyPeachPeel_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachPeel_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachPeel_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachPeel_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachPeel_004.usda@</HoneyPeachPeel_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachPeel_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachPeel_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "honey_peach_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0005711667, 0.00060249306, 0.0006104847)
+        float mujoco:body:inertial:mass = 0.557209
+        point3f mujoco:body:inertial:pos = (-0.0007829375, -0.00051351177, -0.004864257)
+        quatf mujoco:body:inertial:quat = (-0.3180388, 0.40867487, 0.3682441, 0.7721609)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0007829375, -0.00051351177, -0.004864257)
+        float3 physics:diagonalInertia = (0.0005711667, 0.00060249306, 0.0006104847)
+        float physics:mass = 0.557209
+        quatf physics:principalAxes = (-0.3180388, 0.40867487, 0.3682441, 0.7721609)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0005711667
+        float urdf:link:inertial:inertia:iyy = 0.00060249306
+        float urdf:link:inertial:inertia:izz = 0.0006104847
+        float urdf:link:inertial:mass = 0.557209
+        float3 urdf:link:inertial:origin:rpy = (0.66372263, -1.0458629, -2.7523766)
+        point3f urdf:link:inertial:origin:xyz = (-0.0007829375, -0.00051351177, -0.004864257)
+
+        def Mesh "HoneyPeachFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachFlesh.usda@</HoneyPeachFlesh>
+        )
+        {
+            rel material:binding = </honey_peach/honey_peach_flesh/HoneyPeachFlesh/Materials/M_HoneyPeachFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HoneyPeachFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/obj/HoneyPeachFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HoneyPeachFlesh" (
+                    prepend references = @./honey_peach/materials/usd/M_HoneyPeachFlesh.usda@</M_HoneyPeachFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HoneyPeachFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachFlesh_001.usda@</HoneyPeachFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachFlesh_002.usda@</HoneyPeachFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachFlesh_003.usda@</HoneyPeachFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HoneyPeachFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachFlesh_004.usda@</HoneyPeachFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "honey_peach_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000002889517, 0.0000051444354, 0.000005932068)
+        float mujoco:body:inertial:mass = 0.026742203
+        point3f mujoco:body:inertial:pos = (-0.0030022545, -0.0019738565, -0.00056450744)
+        quatf mujoco:body:inertial:quat = (0.4645628, 0.559399, -0.42824656, 0.53652495)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0030022545, -0.0019738565, -0.00056450744)
+        float3 physics:diagonalInertia = (0.000002889517, 0.0000051444354, 0.000005932068)
+        float physics:mass = 0.026742203
+        quatf physics:principalAxes = (0.4645628, 0.559399, -0.42824656, 0.53652495)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000002889517
+        float urdf:link:inertial:inertia:iyy = 0.0000051444354
+        float urdf:link:inertial:inertia:izz = 0.000005932068
+        float urdf:link:inertial:mass = 0.026742203
+        float3 urdf:link:inertial:origin:rpy = (1.4492626, -1.5100895, 0.3250932)
+        point3f urdf:link:inertial:origin:xyz = (-0.0030022545, -0.0019738565, -0.00056450744)
+
+        def Mesh "HoneyPeachSeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachSeed.usda@</HoneyPeachSeed>
+        )
+        {
+            rel material:binding = </honey_peach/honey_peach_seed/HoneyPeachSeed/Materials/M_HoneyPeachSeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HoneyPeachSeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachSeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/obj/HoneyPeachSeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HoneyPeachSeed" (
+                    prepend references = @./honey_peach/materials/usd/M_HoneyPeachSeed.usda@</M_HoneyPeachSeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HoneyPeachSeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./honey_peach/meshes/usd/HoneyPeachSeed_001.usda@</HoneyPeachSeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HoneyPeachSeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./honey_peach/meshes/stl/HoneyPeachSeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "honey_peach"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "honey_peach"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "HoneyPeachPeel"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/obj/HoneyPeachPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachPeel_001"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachPeel_002"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachPeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachPeel_003"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachPeel_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachPeel_004"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachPeel_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachFlesh"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/obj/HoneyPeachFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachFlesh_001"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachFlesh_002"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachFlesh_003"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachFlesh_004"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachSeed"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/obj/HoneyPeachSeed.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HoneyPeachSeed_001"
+            {
+                asset mujoco:mesh:file = @honey_peach/meshes/stl/HoneyPeachSeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_HoneyPeachPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HoneyPeachPeel>
+            }
+
+            def MujocoMaterial "M_HoneyPeachFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HoneyPeachFlesh>
+            }
+
+            def MujocoMaterial "M_HoneyPeachSeed"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HoneyPeachSeed>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_HoneyPeachPeel"
+            {
+                asset mujoco:texture:file = @T_HoneyPeachPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_HoneyPeachFlesh"
+            {
+                asset mujoco:texture:file = @T_HoneyPeachFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_HoneyPeachSeed"
+            {
+                asset mujoco:texture:file = @T_HoneyPeachSeed.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<robot name="yellow_peach" version="1.0">
+  <link name="yellow_peach"/>
+  <joint name="yellow_peach_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_peach"/>
+    <child link="yellow_peach_seed"/>
+  </joint>
+  <link name="yellow_peach_seed">
+    <inertial>
+      <origin xyz="-0.0009083405020646751 0.00046362692955881357 -0.0017745678778737783" rpy="1.2786381244659424 1.4560439586639404 -1.9388371706008911"/>
+      <mass value="0.016849905252456665"/>
+      <inertia ixx="1.2242736602274817e-06" ixy="0.0" ixz="0.0" iyy="2.8836348064942285e-06" iyz="0.0" izz="3.5530067634681473e-06"/>
+    </inertial>
+    <visual name="YellowPeachSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/obj/YellowPeachSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowPeachSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_peach_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_peach"/>
+    <child link="yellow_peach_peel"/>
+  </joint>
+  <link name="yellow_peach_peel">
+    <inertial>
+      <origin xyz="-5.8752168115461245e-05 -0.0004791481769643724 -0.0023714061826467514" rpy="-1.208612084388733 -1.2644426822662354 1.4528636932373047"/>
+      <mass value="1.149436116218567"/>
+      <inertia ixx="0.001160025130957365" ixy="0.0" ixz="0.0" iyy="0.0012588778045028448" iyz="0.0" izz="0.0012848626356571913"/>
+    </inertial>
+    <visual name="YellowPeachPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/obj/YellowPeachPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowPeachPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachPeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachPeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachPeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachPeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_peach_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_peach"/>
+    <child link="yellow_peach_flesh"/>
+  </joint>
+  <link name="yellow_peach_flesh">
+    <inertial>
+      <origin xyz="-5.536739990930073e-05 -0.00045907183084636927 -0.002324489876627922" rpy="-1.2086827754974365 -1.264757752418518 1.4528617858886719"/>
+      <mass value="0.5373390316963196"/>
+      <inertia ixx="0.0005184098845347762" ixy="0.0" ixz="0.0" iyy="0.0005625914200209081" iyz="0.0" izz="0.000574205128941685"/>
+    </inertial>
+    <visual name="YellowPeachFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/obj/YellowPeachFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowPeachFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowPeachFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_peach/meshes/stl/YellowPeachFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<mujoco model="fork">
+	<compiler meshdir="fork/meshes" texturedir="fork/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Fork" file="stl/Fork.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Fork_001" file="stl/Fork_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Fork_002" file="stl/Fork_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Fork_003" file="stl/Fork_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Fork" rgba="0.6801000237464905 0.6801000237464905 0.6801000237464905 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="fork" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.019516708329319954" pos="0.010070816613733768 -4.082808970906626e-07 -0.0045463936403393745" quat="0.7072190642356873 0.7069936394691467 0.0007620248361490667 -0.0007762013701722026" diaginertia="1.000617317004071e-06 5.407274511526339e-05 5.440966197056696e-05"/>
+			<geom name="Fork" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Fork" material="M_Fork" class="visual"/>
+			<geom name="Fork_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Fork_001" class="collision"/>
+			<geom name="Fork_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Fork_002" class="collision"/>
+			<geom name="Fork_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Fork_003" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

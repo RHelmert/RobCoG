@@ -1,0 +1,426 @@
+<?xml version="1.0" ?>
+<mujoco model="garlic">
+	<compiler meshdir="garlic/meshes" texturedir="garlic/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GarlicSeed" file="stl/GarlicSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_001" file="stl/GarlicSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_002" file="stl/GarlicSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_003" file="stl/GarlicSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_004" file="stl/GarlicSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_005" file="stl/GarlicSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_006" file="stl/GarlicSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_007" file="stl/GarlicSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_008" file="stl/GarlicSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_009" file="stl/GarlicSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_010" file="stl/GarlicSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_011" file="stl/GarlicSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_012" file="stl/GarlicSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_013" file="stl/GarlicSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_014" file="stl/GarlicSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_015" file="stl/GarlicSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_016" file="stl/GarlicSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_017" file="stl/GarlicSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_018" file="stl/GarlicSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_019" file="stl/GarlicSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_020" file="stl/GarlicSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_021" file="stl/GarlicSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_022" file="stl/GarlicSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_023" file="stl/GarlicSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_024" file="stl/GarlicSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_025" file="stl/GarlicSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_026" file="stl/GarlicSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_027" file="stl/GarlicSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_028" file="stl/GarlicSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_029" file="stl/GarlicSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_030" file="stl/GarlicSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_031" file="stl/GarlicSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_032" file="stl/GarlicSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_033" file="stl/GarlicSeed_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_034" file="stl/GarlicSeed_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_035" file="stl/GarlicSeed_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_036" file="stl/GarlicSeed_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_037" file="stl/GarlicSeed_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_038" file="stl/GarlicSeed_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_039" file="stl/GarlicSeed_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeed_040" file="stl/GarlicSeed_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel" file="obj/GarlicPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_001" file="stl/GarlicPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_002" file="stl/GarlicPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_003" file="stl/GarlicPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_004" file="stl/GarlicPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_005" file="stl/GarlicPeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_006" file="stl/GarlicPeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_007" file="stl/GarlicPeel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_008" file="stl/GarlicPeel_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_009" file="stl/GarlicPeel_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_010" file="stl/GarlicPeel_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_011" file="stl/GarlicPeel_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_012" file="stl/GarlicPeel_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_013" file="stl/GarlicPeel_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_014" file="stl/GarlicPeel_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_015" file="stl/GarlicPeel_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_016" file="stl/GarlicPeel_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_017" file="stl/GarlicPeel_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_018" file="stl/GarlicPeel_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_019" file="stl/GarlicPeel_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_020" file="stl/GarlicPeel_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_021" file="stl/GarlicPeel_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_022" file="stl/GarlicPeel_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_023" file="stl/GarlicPeel_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_024" file="stl/GarlicPeel_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_025" file="stl/GarlicPeel_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_026" file="stl/GarlicPeel_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_027" file="stl/GarlicPeel_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_028" file="stl/GarlicPeel_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_029" file="stl/GarlicPeel_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_030" file="stl/GarlicPeel_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_031" file="stl/GarlicPeel_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_032" file="stl/GarlicPeel_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_033" file="stl/GarlicPeel_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_034" file="stl/GarlicPeel_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_035" file="stl/GarlicPeel_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_036" file="stl/GarlicPeel_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_037" file="stl/GarlicPeel_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_038" file="stl/GarlicPeel_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_039" file="stl/GarlicPeel_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_040" file="stl/GarlicPeel_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_041" file="stl/GarlicPeel_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_042" file="stl/GarlicPeel_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_043" file="stl/GarlicPeel_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_044" file="stl/GarlicPeel_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_045" file="stl/GarlicPeel_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_046" file="stl/GarlicPeel_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_047" file="stl/GarlicPeel_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_048" file="stl/GarlicPeel_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_049" file="stl/GarlicPeel_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_050" file="stl/GarlicPeel_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_051" file="stl/GarlicPeel_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_052" file="stl/GarlicPeel_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_053" file="stl/GarlicPeel_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_054" file="stl/GarlicPeel_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_055" file="stl/GarlicPeel_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_056" file="stl/GarlicPeel_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_057" file="stl/GarlicPeel_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_058" file="stl/GarlicPeel_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_059" file="stl/GarlicPeel_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_060" file="stl/GarlicPeel_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_061" file="stl/GarlicPeel_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_062" file="stl/GarlicPeel_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_063" file="stl/GarlicPeel_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_064" file="stl/GarlicPeel_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_065" file="stl/GarlicPeel_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_066" file="stl/GarlicPeel_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_067" file="stl/GarlicPeel_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_068" file="stl/GarlicPeel_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_069" file="stl/GarlicPeel_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_070" file="stl/GarlicPeel_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_071" file="stl/GarlicPeel_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_072" file="stl/GarlicPeel_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_073" file="stl/GarlicPeel_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_074" file="stl/GarlicPeel_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_075" file="stl/GarlicPeel_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_076" file="stl/GarlicPeel_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_077" file="stl/GarlicPeel_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_078" file="stl/GarlicPeel_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_079" file="stl/GarlicPeel_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_080" file="stl/GarlicPeel_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_081" file="stl/GarlicPeel_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_082" file="stl/GarlicPeel_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_083" file="stl/GarlicPeel_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_084" file="stl/GarlicPeel_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_085" file="stl/GarlicPeel_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_086" file="stl/GarlicPeel_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_087" file="stl/GarlicPeel_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_088" file="stl/GarlicPeel_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_089" file="stl/GarlicPeel_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_090" file="stl/GarlicPeel_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_091" file="stl/GarlicPeel_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_092" file="stl/GarlicPeel_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_093" file="stl/GarlicPeel_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_094" file="stl/GarlicPeel_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_095" file="stl/GarlicPeel_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_096" file="stl/GarlicPeel_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_097" file="stl/GarlicPeel_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_098" file="stl/GarlicPeel_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_099" file="stl/GarlicPeel_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_100" file="stl/GarlicPeel_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_101" file="stl/GarlicPeel_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_102" file="stl/GarlicPeel_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_103" file="stl/GarlicPeel_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_104" file="stl/GarlicPeel_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_105" file="stl/GarlicPeel_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_106" file="stl/GarlicPeel_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_107" file="stl/GarlicPeel_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_108" file="stl/GarlicPeel_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_109" file="stl/GarlicPeel_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_110" file="stl/GarlicPeel_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_111" file="stl/GarlicPeel_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicPeel_112" file="stl/GarlicPeel_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel" file="obj/GarlicSeedPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_001" file="stl/GarlicSeedPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_002" file="stl/GarlicSeedPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_003" file="stl/GarlicSeedPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_004" file="stl/GarlicSeedPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_005" file="stl/GarlicSeedPeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_006" file="stl/GarlicSeedPeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_007" file="stl/GarlicSeedPeel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_008" file="stl/GarlicSeedPeel_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_009" file="stl/GarlicSeedPeel_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_010" file="stl/GarlicSeedPeel_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_011" file="stl/GarlicSeedPeel_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_012" file="stl/GarlicSeedPeel_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_013" file="stl/GarlicSeedPeel_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_014" file="stl/GarlicSeedPeel_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_015" file="stl/GarlicSeedPeel_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_016" file="stl/GarlicSeedPeel_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_017" file="stl/GarlicSeedPeel_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_018" file="stl/GarlicSeedPeel_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_019" file="stl/GarlicSeedPeel_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_020" file="stl/GarlicSeedPeel_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_021" file="stl/GarlicSeedPeel_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_022" file="stl/GarlicSeedPeel_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_023" file="stl/GarlicSeedPeel_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_024" file="stl/GarlicSeedPeel_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_025" file="stl/GarlicSeedPeel_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_026" file="stl/GarlicSeedPeel_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_027" file="stl/GarlicSeedPeel_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_028" file="stl/GarlicSeedPeel_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_029" file="stl/GarlicSeedPeel_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_030" file="stl/GarlicSeedPeel_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_031" file="stl/GarlicSeedPeel_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_032" file="stl/GarlicSeedPeel_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_033" file="stl/GarlicSeedPeel_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_034" file="stl/GarlicSeedPeel_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_035" file="stl/GarlicSeedPeel_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_036" file="stl/GarlicSeedPeel_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicSeedPeel_037" file="stl/GarlicSeedPeel_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicStalk" file="obj/GarlicStalk.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GarlicStalk_001" file="stl/GarlicStalk_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GarlicSeed" rgba="0.8479999899864197 0.8479999899864197 0.8137000203132629 1.0" emission="0.0"/>
+		<material name="M_GarlicPeel" texture="T_GarlicPeel"/>
+		<material name="M_GarlicSeedPeel" texture="T_GarlicSeedPeel"/>
+		<material name="M_GarlicStalk" texture="T_GarlicStalk"/>
+		<texture name="T_GarlicPeel" type="2d" file="T_GarlicPeel.png"/>
+		<texture name="T_GarlicSeedPeel" type="2d" file="T_GarlicSeedPeel.png"/>
+		<texture name="T_GarlicStalk" type="2d" file="T_GarlicStalk.png"/>
+	</asset>
+	<worldbody>
+		<body name="garlic" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="garlic_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.11003942787647247" pos="0.00016286807658616453 -0.00037139811320230365 -0.010158407501876354" quat="0.9881376028060913 -0.047557588666677475 0.004373230971395969 0.14595632255077362" diaginertia="5.135387254995294e-05 5.62453169550281e-05 5.8395486121298745e-05"/>
+				<geom name="GarlicSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed" material="M_GarlicSeed" class="visual"/>
+				<geom name="GarlicSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_001" class="collision"/>
+				<geom name="GarlicSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_002" class="collision"/>
+				<geom name="GarlicSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_003" class="collision"/>
+				<geom name="GarlicSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_004" class="collision"/>
+				<geom name="GarlicSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_005" class="collision"/>
+				<geom name="GarlicSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_006" class="collision"/>
+				<geom name="GarlicSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_007" class="collision"/>
+				<geom name="GarlicSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_008" class="collision"/>
+				<geom name="GarlicSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_009" class="collision"/>
+				<geom name="GarlicSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_010" class="collision"/>
+				<geom name="GarlicSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_011" class="collision"/>
+				<geom name="GarlicSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_012" class="collision"/>
+				<geom name="GarlicSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_013" class="collision"/>
+				<geom name="GarlicSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_014" class="collision"/>
+				<geom name="GarlicSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_015" class="collision"/>
+				<geom name="GarlicSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_016" class="collision"/>
+				<geom name="GarlicSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_017" class="collision"/>
+				<geom name="GarlicSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_018" class="collision"/>
+				<geom name="GarlicSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_019" class="collision"/>
+				<geom name="GarlicSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_020" class="collision"/>
+				<geom name="GarlicSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_021" class="collision"/>
+				<geom name="GarlicSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_022" class="collision"/>
+				<geom name="GarlicSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_023" class="collision"/>
+				<geom name="GarlicSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_024" class="collision"/>
+				<geom name="GarlicSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_025" class="collision"/>
+				<geom name="GarlicSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_026" class="collision"/>
+				<geom name="GarlicSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_027" class="collision"/>
+				<geom name="GarlicSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_028" class="collision"/>
+				<geom name="GarlicSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_029" class="collision"/>
+				<geom name="GarlicSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_030" class="collision"/>
+				<geom name="GarlicSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_031" class="collision"/>
+				<geom name="GarlicSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_032" class="collision"/>
+				<geom name="GarlicSeed_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_033" class="collision"/>
+				<geom name="GarlicSeed_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_034" class="collision"/>
+				<geom name="GarlicSeed_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_035" class="collision"/>
+				<geom name="GarlicSeed_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_036" class="collision"/>
+				<geom name="GarlicSeed_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_037" class="collision"/>
+				<geom name="GarlicSeed_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_038" class="collision"/>
+				<geom name="GarlicSeed_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_039" class="collision"/>
+				<geom name="GarlicSeed_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeed_040" class="collision"/>
+			</body>
+			<body name="garlic_seed_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0014131235657259822" pos="-0.0002961294667329639 -2.602349695735029e-06 -0.010346611961722374" quat="0.31368759274482727 0.2644985020160675 0.7063313722610474 -0.5768332481384277" diaginertia="6.986143716858351e-07 7.086428581715154e-07 7.728647233307129e-07"/>
+				<geom name="GarlicSeedPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel" material="M_GarlicSeedPeel" class="visual"/>
+				<geom name="GarlicSeedPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_001" class="collision"/>
+				<geom name="GarlicSeedPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_002" class="collision"/>
+				<geom name="GarlicSeedPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_003" class="collision"/>
+				<geom name="GarlicSeedPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_004" class="collision"/>
+				<geom name="GarlicSeedPeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_005" class="collision"/>
+				<geom name="GarlicSeedPeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_006" class="collision"/>
+				<geom name="GarlicSeedPeel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_007" class="collision"/>
+				<geom name="GarlicSeedPeel_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_008" class="collision"/>
+				<geom name="GarlicSeedPeel_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_009" class="collision"/>
+				<geom name="GarlicSeedPeel_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_010" class="collision"/>
+				<geom name="GarlicSeedPeel_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_011" class="collision"/>
+				<geom name="GarlicSeedPeel_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_012" class="collision"/>
+				<geom name="GarlicSeedPeel_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_013" class="collision"/>
+				<geom name="GarlicSeedPeel_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_014" class="collision"/>
+				<geom name="GarlicSeedPeel_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_015" class="collision"/>
+				<geom name="GarlicSeedPeel_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_016" class="collision"/>
+				<geom name="GarlicSeedPeel_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_017" class="collision"/>
+				<geom name="GarlicSeedPeel_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_018" class="collision"/>
+				<geom name="GarlicSeedPeel_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_019" class="collision"/>
+				<geom name="GarlicSeedPeel_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_020" class="collision"/>
+				<geom name="GarlicSeedPeel_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_021" class="collision"/>
+				<geom name="GarlicSeedPeel_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_022" class="collision"/>
+				<geom name="GarlicSeedPeel_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_023" class="collision"/>
+				<geom name="GarlicSeedPeel_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_024" class="collision"/>
+				<geom name="GarlicSeedPeel_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_025" class="collision"/>
+				<geom name="GarlicSeedPeel_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_026" class="collision"/>
+				<geom name="GarlicSeedPeel_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_027" class="collision"/>
+				<geom name="GarlicSeedPeel_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_028" class="collision"/>
+				<geom name="GarlicSeedPeel_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_029" class="collision"/>
+				<geom name="GarlicSeedPeel_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_030" class="collision"/>
+				<geom name="GarlicSeedPeel_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_031" class="collision"/>
+				<geom name="GarlicSeedPeel_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_032" class="collision"/>
+				<geom name="GarlicSeedPeel_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_033" class="collision"/>
+				<geom name="GarlicSeedPeel_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_034" class="collision"/>
+				<geom name="GarlicSeedPeel_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_035" class="collision"/>
+				<geom name="GarlicSeedPeel_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_036" class="collision"/>
+				<geom name="GarlicSeedPeel_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicSeedPeel_037" class="collision"/>
+			</body>
+			<body name="garlic_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0013882721541449428" pos="0.00017951619520317763 -0.0004656114033423364 -0.011801262386143208" quat="0.4150336980819702 0.5723989009857178 -0.43470215797424316 0.557799756526947" diaginertia="1.0030482826550724e-06 1.0785203130581067e-06 1.1394455441404716e-06"/>
+				<geom name="GarlicPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel" material="M_GarlicPeel" class="visual"/>
+				<geom name="GarlicPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_001" class="collision"/>
+				<geom name="GarlicPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_002" class="collision"/>
+				<geom name="GarlicPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_003" class="collision"/>
+				<geom name="GarlicPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_004" class="collision"/>
+				<geom name="GarlicPeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_005" class="collision"/>
+				<geom name="GarlicPeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_006" class="collision"/>
+				<geom name="GarlicPeel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_007" class="collision"/>
+				<geom name="GarlicPeel_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_008" class="collision"/>
+				<geom name="GarlicPeel_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_009" class="collision"/>
+				<geom name="GarlicPeel_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_010" class="collision"/>
+				<geom name="GarlicPeel_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_011" class="collision"/>
+				<geom name="GarlicPeel_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_012" class="collision"/>
+				<geom name="GarlicPeel_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_013" class="collision"/>
+				<geom name="GarlicPeel_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_014" class="collision"/>
+				<geom name="GarlicPeel_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_015" class="collision"/>
+				<geom name="GarlicPeel_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_016" class="collision"/>
+				<geom name="GarlicPeel_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_017" class="collision"/>
+				<geom name="GarlicPeel_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_018" class="collision"/>
+				<geom name="GarlicPeel_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_019" class="collision"/>
+				<geom name="GarlicPeel_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_020" class="collision"/>
+				<geom name="GarlicPeel_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_021" class="collision"/>
+				<geom name="GarlicPeel_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_022" class="collision"/>
+				<geom name="GarlicPeel_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_023" class="collision"/>
+				<geom name="GarlicPeel_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_024" class="collision"/>
+				<geom name="GarlicPeel_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_025" class="collision"/>
+				<geom name="GarlicPeel_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_026" class="collision"/>
+				<geom name="GarlicPeel_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_027" class="collision"/>
+				<geom name="GarlicPeel_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_028" class="collision"/>
+				<geom name="GarlicPeel_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_029" class="collision"/>
+				<geom name="GarlicPeel_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_030" class="collision"/>
+				<geom name="GarlicPeel_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_031" class="collision"/>
+				<geom name="GarlicPeel_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_032" class="collision"/>
+				<geom name="GarlicPeel_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_033" class="collision"/>
+				<geom name="GarlicPeel_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_034" class="collision"/>
+				<geom name="GarlicPeel_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_035" class="collision"/>
+				<geom name="GarlicPeel_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_036" class="collision"/>
+				<geom name="GarlicPeel_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_037" class="collision"/>
+				<geom name="GarlicPeel_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_038" class="collision"/>
+				<geom name="GarlicPeel_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_039" class="collision"/>
+				<geom name="GarlicPeel_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_040" class="collision"/>
+				<geom name="GarlicPeel_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_041" class="collision"/>
+				<geom name="GarlicPeel_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_042" class="collision"/>
+				<geom name="GarlicPeel_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_043" class="collision"/>
+				<geom name="GarlicPeel_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_044" class="collision"/>
+				<geom name="GarlicPeel_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_045" class="collision"/>
+				<geom name="GarlicPeel_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_046" class="collision"/>
+				<geom name="GarlicPeel_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_047" class="collision"/>
+				<geom name="GarlicPeel_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_048" class="collision"/>
+				<geom name="GarlicPeel_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_049" class="collision"/>
+				<geom name="GarlicPeel_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_050" class="collision"/>
+				<geom name="GarlicPeel_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_051" class="collision"/>
+				<geom name="GarlicPeel_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_052" class="collision"/>
+				<geom name="GarlicPeel_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_053" class="collision"/>
+				<geom name="GarlicPeel_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_054" class="collision"/>
+				<geom name="GarlicPeel_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_055" class="collision"/>
+				<geom name="GarlicPeel_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_056" class="collision"/>
+				<geom name="GarlicPeel_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_057" class="collision"/>
+				<geom name="GarlicPeel_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_058" class="collision"/>
+				<geom name="GarlicPeel_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_059" class="collision"/>
+				<geom name="GarlicPeel_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_060" class="collision"/>
+				<geom name="GarlicPeel_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_061" class="collision"/>
+				<geom name="GarlicPeel_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_062" class="collision"/>
+				<geom name="GarlicPeel_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_063" class="collision"/>
+				<geom name="GarlicPeel_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_064" class="collision"/>
+				<geom name="GarlicPeel_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_065" class="collision"/>
+				<geom name="GarlicPeel_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_066" class="collision"/>
+				<geom name="GarlicPeel_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_067" class="collision"/>
+				<geom name="GarlicPeel_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_068" class="collision"/>
+				<geom name="GarlicPeel_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_069" class="collision"/>
+				<geom name="GarlicPeel_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_070" class="collision"/>
+				<geom name="GarlicPeel_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_071" class="collision"/>
+				<geom name="GarlicPeel_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_072" class="collision"/>
+				<geom name="GarlicPeel_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_073" class="collision"/>
+				<geom name="GarlicPeel_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_074" class="collision"/>
+				<geom name="GarlicPeel_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_075" class="collision"/>
+				<geom name="GarlicPeel_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_076" class="collision"/>
+				<geom name="GarlicPeel_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_077" class="collision"/>
+				<geom name="GarlicPeel_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_078" class="collision"/>
+				<geom name="GarlicPeel_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_079" class="collision"/>
+				<geom name="GarlicPeel_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_080" class="collision"/>
+				<geom name="GarlicPeel_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_081" class="collision"/>
+				<geom name="GarlicPeel_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_082" class="collision"/>
+				<geom name="GarlicPeel_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_083" class="collision"/>
+				<geom name="GarlicPeel_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_084" class="collision"/>
+				<geom name="GarlicPeel_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_085" class="collision"/>
+				<geom name="GarlicPeel_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_086" class="collision"/>
+				<geom name="GarlicPeel_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_087" class="collision"/>
+				<geom name="GarlicPeel_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_088" class="collision"/>
+				<geom name="GarlicPeel_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_089" class="collision"/>
+				<geom name="GarlicPeel_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_090" class="collision"/>
+				<geom name="GarlicPeel_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_091" class="collision"/>
+				<geom name="GarlicPeel_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_092" class="collision"/>
+				<geom name="GarlicPeel_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_093" class="collision"/>
+				<geom name="GarlicPeel_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_094" class="collision"/>
+				<geom name="GarlicPeel_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_095" class="collision"/>
+				<geom name="GarlicPeel_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_096" class="collision"/>
+				<geom name="GarlicPeel_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_097" class="collision"/>
+				<geom name="GarlicPeel_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_098" class="collision"/>
+				<geom name="GarlicPeel_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_099" class="collision"/>
+				<geom name="GarlicPeel_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_100" class="collision"/>
+				<geom name="GarlicPeel_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_101" class="collision"/>
+				<geom name="GarlicPeel_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_102" class="collision"/>
+				<geom name="GarlicPeel_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_103" class="collision"/>
+				<geom name="GarlicPeel_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_104" class="collision"/>
+				<geom name="GarlicPeel_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_105" class="collision"/>
+				<geom name="GarlicPeel_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_106" class="collision"/>
+				<geom name="GarlicPeel_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_107" class="collision"/>
+				<geom name="GarlicPeel_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_108" class="collision"/>
+				<geom name="GarlicPeel_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_109" class="collision"/>
+				<geom name="GarlicPeel_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_110" class="collision"/>
+				<geom name="GarlicPeel_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_111" class="collision"/>
+				<geom name="GarlicPeel_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicPeel_112" class="collision"/>
+			</body>
+			<body name="garlic_stalk" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.001281948876567185" pos="0.0003087967343162745 -0.00254641892388463 0.00015946367057040334" quat="0.7052202820777893 -0.016807176172733307 0.7057297825813293 0.06578265130519867" diaginertia="1.2382610492522872e-08 4.866985818807734e-07 4.947117417941627e-07"/>
+				<geom name="GarlicStalk" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicStalk" material="M_GarlicStalk" class="visual"/>
+				<geom name="GarlicStalk_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GarlicStalk_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

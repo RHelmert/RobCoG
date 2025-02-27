@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<robot name="peeler" version="1.0">
+  <link name="peeler"/>
+  <joint name="hilt_wood_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="peeler"/>
+    <child link="hilt_wood"/>
+  </joint>
+  <link name="hilt_wood">
+    <inertial>
+      <origin xyz="-0.050066988915205 0.0036353906616568565 9.754562597663607e-07" rpy="0.00021329695300664753 3.6770402402908076e-06 -0.03626338392496109"/>
+      <mass value="0.21962310373783112"/>
+      <inertia ixx="1.723994137137197e-05" ixy="0.0" ixz="0.0" iyy="0.0008041122346185148" iyz="0.0" izz="0.0008177962736226618"/>
+    </inertial>
+    <visual name="HiltWood">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/obj/HiltWood.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HiltWood_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltWood_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="peeler_blade_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="peeler"/>
+    <child link="peeler_blade"/>
+  </joint>
+  <link name="peeler_blade">
+    <inertial>
+      <origin xyz="0.016638213768601418 0.005272947251796722 -6.809246055894391e-09" rpy="-8.639639759167039e-07 1.5326749291943997e-07 0.0844663754105568"/>
+      <mass value="0.02406381256878376"/>
+      <inertia ixx="1.3092379731460824e-06" ixy="0.0" ixz="0.0" iyy="3.123350325040519e-05" iyz="0.0" izz="3.2535001082578674e-05"/>
+    </inertial>
+    <visual name="PeelerBlade">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/obj/PeelerBlade.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="PeelerBlade_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/PeelerBlade_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PeelerBlade_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/PeelerBlade_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="hilt_metal_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="peeler"/>
+    <child link="hilt_metal"/>
+  </joint>
+  <link name="hilt_metal">
+    <inertial>
+      <origin xyz="-0.04637749865651131 0.003047635778784752 -1.3348119054512608e-08" rpy="-2.4484765162924305e-05 2.3469225141070638e-07 -0.02693091332912445"/>
+      <mass value="0.010820739902555943"/>
+      <inertia ixx="2.58284899246064e-07" ixy="0.0" ixz="0.0" iyy="3.714871854754165e-05" iyz="0.0" izz="3.721423854585737e-05"/>
+    </inertial>
+    <visual name="HiltMetal">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/obj/HiltMetal.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HiltMetal_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltMetal_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltMetal_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltMetal_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltMetal_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://peeler/meshes/stl/HiltMetal_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

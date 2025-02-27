@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<mujoco model="bread_roll_3">
+	<compiler meshdir="bread_roll_3/meshes" texturedir="bread_roll_3/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BreadRoll3" file="obj/BreadRoll3.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll3_001" file="stl/BreadRoll3_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll3_002" file="stl/BreadRoll3_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll3_003" file="stl/BreadRoll3_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll3_004" file="stl/BreadRoll3_004.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BreadRoll3" texture="T_BreadRoll3"/>
+		<texture name="T_BreadRoll3" type="2d" file="T_BreadRoll3.png"/>
+	</asset>
+	<worldbody>
+		<body name="bread_roll_3" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.09935532510280609" pos="-0.0012706357520073652 3.2755782740423456e-05 -0.0035513173788785934" quat="0.737831711769104 0.001328349462710321 -0.010624047368764877 -0.6748998165130615" diaginertia="9.150032565230504e-05 9.983621566789225e-05 0.00016606596182100475"/>
+			<geom name="BreadRoll3" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll3" material="M_BreadRoll3" class="visual"/>
+			<geom name="BreadRoll3_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll3_001" class="collision"/>
+			<geom name="BreadRoll3_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll3_002" class="collision"/>
+			<geom name="BreadRoll3_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll3_003" class="collision"/>
+			<geom name="BreadRoll3_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll3_004" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

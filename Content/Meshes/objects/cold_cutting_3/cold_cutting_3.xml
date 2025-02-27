@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<mujoco model="cold_cutting_3">
+	<compiler meshdir="cold_cutting_3/meshes" texturedir="cold_cutting_3/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="ColdCutting3" file="obj/ColdCutting3.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCutting3_001" file="stl/ColdCutting3_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ColdCutting3_002" file="stl/ColdCutting3_002.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_ColdCutting3" texture="T_ColdCutting3"/>
+		<texture name="T_ColdCutting3" type="2d" file="T_ColdCutting3.png"/>
+	</asset>
+	<worldbody>
+		<body name="cold_cutting_3" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.6953639984130859" pos="-0.006212994456291199 0.0002467286540195346 0.0018410570919513702" quat="0.0924251526594162 0.9946800470352173 -0.007563811726868153 0.04485451430082321" diaginertia="0.00043925424688495696 0.002285430207848549 0.002342988969758153"/>
+			<geom name="ColdCutting3" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCutting3" material="M_ColdCutting3" class="visual"/>
+			<geom name="ColdCutting3_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCutting3_001" class="collision"/>
+			<geom name="ColdCutting3_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ColdCutting3_002" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

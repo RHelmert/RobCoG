@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="cold_cutting_2" version="1.0">
+  <link name="cold_cutting_2">
+    <inertial>
+      <origin xyz="0.00012570281978696585 -0.0003600839409045875 0.0007660798728466034" rpy="0.004814115818589926 -6.394462252501398e-05 0.004693961702287197"/>
+      <mass value="0.8349259495735168"/>
+      <inertia ixx="0.0007858055760152638" ixy="0.0" ixz="0.0" iyy="0.0024277539923787117" iyz="0.0" izz="0.0029123076237738132"/>
+    </inertial>
+    <visual name="ColdCutting2">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_2/meshes/obj/ColdCutting2.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="ColdCutting2_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cold_cutting_2/meshes/stl/ColdCutting2_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

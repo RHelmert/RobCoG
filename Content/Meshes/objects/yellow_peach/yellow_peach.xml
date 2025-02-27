@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<mujoco model="yellow_peach">
+	<compiler meshdir="yellow_peach/meshes" texturedir="yellow_peach/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="YellowPeachSeed" file="obj/YellowPeachSeed.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachSeed_001" file="stl/YellowPeachSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachPeel" file="obj/YellowPeachPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachPeel_001" file="stl/YellowPeachPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachPeel_002" file="stl/YellowPeachPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachPeel_003" file="stl/YellowPeachPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachPeel_004" file="stl/YellowPeachPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachFlesh" file="stl/YellowPeachFlesh.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachFlesh_001" file="stl/YellowPeachFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachFlesh_002" file="stl/YellowPeachFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachFlesh_003" file="stl/YellowPeachFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowPeachFlesh_004" file="stl/YellowPeachFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_YellowPeachSeed" texture="T_YellowPeachSeed"/>
+		<material name="M_YellowPeachPeel" texture="T_YellowPeachPeel"/>
+		<material name="M_YellowPeachFlesh" rgba="0.8203999996185303 0.6920999884605408 0.32589998841285706 1.0" emission="0.0"/>
+		<texture name="T_YellowPeachSeed" type="2d" file="T_YellowPeachSeed.png"/>
+		<texture name="T_YellowPeachPeel" type="2d" file="T_YellowPeachPeel.png"/>
+	</asset>
+	<worldbody>
+		<body name="yellow_peach" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="yellow_peach_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.016849905252456665" pos="-0.0009083405020646751 0.00046362692955881357 -0.0017745678778737783" quat="-0.0115816043689847 -0.6922917366027832 0.06513763964176178 0.7185785174369812" diaginertia="1.2242736602274817e-06 2.8836348064942285e-06 3.5530067634681473e-06"/>
+				<geom name="YellowPeachSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachSeed" material="M_YellowPeachSeed" class="visual"/>
+				<geom name="YellowPeachSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachSeed_001" class="collision"/>
+			</body>
+			<body name="yellow_peach_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.5373390316963196" pos="-5.536739990930073e-05 -0.00045907183084636927 -0.002324489876627922" quat="0.7192644476890564 -0.01957964524626732 -0.6680206060409546 0.18979918956756592" diaginertia="0.0005184098845347762 0.0005625914200209081 0.000574205128941685"/>
+				<geom name="YellowPeachFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachFlesh" material="M_YellowPeachFlesh" class="visual"/>
+				<geom name="YellowPeachFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachFlesh_001" class="collision"/>
+				<geom name="YellowPeachFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachFlesh_002" class="collision"/>
+				<geom name="YellowPeachFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachFlesh_003" class="collision"/>
+				<geom name="YellowPeachFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachFlesh_004" class="collision"/>
+			</body>
+			<body name="yellow_peach_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="1.149436116218567" pos="-5.8752168115461245e-05 -0.0004791481769643724 -0.0023714061826467514" quat="0.7192742824554443 -0.019662583246827126 -0.6679708957672119 0.1899283528327942" diaginertia="0.001160025130957365 0.0012588778045028448 0.0012848626356571913"/>
+				<geom name="YellowPeachPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachPeel" material="M_YellowPeachPeel" class="visual"/>
+				<geom name="YellowPeachPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachPeel_001" class="collision"/>
+				<geom name="YellowPeachPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachPeel_002" class="collision"/>
+				<geom name="YellowPeachPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachPeel_003" class="collision"/>
+				<geom name="YellowPeachPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowPeachPeel_004" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

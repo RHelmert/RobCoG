@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<mujoco model="kitchen_knife_2">
+	<compiler meshdir="kitchen_knife_2/meshes" texturedir="kitchen_knife_2/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="HiltWood" file="obj/HiltWood.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_001" file="stl/HiltWood_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_002" file="stl/HiltWood_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_003" file="stl/HiltWood_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_004" file="stl/HiltWood_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_005" file="stl/HiltWood_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_006" file="stl/HiltWood_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_007" file="stl/HiltWood_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal" file="obj/HiltMetal.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_001" file="stl/HiltMetal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_002" file="stl/HiltMetal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_003" file="stl/HiltMetal_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenKnifeBlade" file="stl/KitchenKnifeBlade.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenKnifeBlade_001" file="stl/KitchenKnifeBlade_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenKnifeBlade_002" file="stl/KitchenKnifeBlade_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenKnifeBlade_003" file="stl/KitchenKnifeBlade_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenKnifeBlade_004" file="stl/KitchenKnifeBlade_004.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_HiltWood" texture="T_HiltWood"/>
+		<material name="M_HiltMetal" texture="T_HiltMetal"/>
+		<material name="M_KitchenKnifeBlade" rgba="0.5181000232696533 0.5181000232696533 0.5181000232696533 1.0" emission="0.0"/>
+		<texture name="T_HiltWood" type="2d" file="T_HiltWood.png"/>
+		<texture name="T_HiltMetal" type="2d" file="T_HiltMetal.png"/>
+	</asset>
+	<worldbody>
+		<body name="kitchen_knife_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="hilt_wood" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.2210218608379364" pos="-0.09236938506364822 0.01583183743059635 9.759287422639318e-07" quat="0.9973252415657043 9.049318759934977e-05 -3.7194793094386114e-06 -0.07309133559465408" diaginertia="2.4937024136306718e-05 0.0021858687978237867 0.002207227284088731"/>
+				<geom name="HiltWood" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood" material="M_HiltWood" class="visual"/>
+				<geom name="HiltWood_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_001" class="collision"/>
+				<geom name="HiltWood_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_002" class="collision"/>
+				<geom name="HiltWood_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_003" class="collision"/>
+				<geom name="HiltWood_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_004" class="collision"/>
+				<geom name="HiltWood_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_005" class="collision"/>
+				<geom name="HiltWood_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_006" class="collision"/>
+				<geom name="HiltWood_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_007" class="collision"/>
+			</body>
+			<body name="kitchen_knife_blade" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.14702057838439941" pos="0.054740142077207565 0.0008429145091213286 5.54048847334343e-06" quat="0.9999810457229614 1.075580803444609e-05 -2.4127502911142074e-05 -0.006152814254164696" diaginertia="5.567731932387687e-05 0.0009264085674658418 0.0009820343693718314"/>
+				<geom name="KitchenKnifeBlade" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenKnifeBlade" material="M_KitchenKnifeBlade" class="visual"/>
+				<geom name="KitchenKnifeBlade_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenKnifeBlade_001" class="collision"/>
+				<geom name="KitchenKnifeBlade_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenKnifeBlade_002" class="collision"/>
+				<geom name="KitchenKnifeBlade_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenKnifeBlade_003" class="collision"/>
+				<geom name="KitchenKnifeBlade_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenKnifeBlade_004" class="collision"/>
+			</body>
+			<body name="hilt_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.010889730416238308" pos="-0.08868006616830826 0.015244059264659882 -7.033761573183028e-09" quat="0.9974652528762817 -3.4555778256617486e-06 2.848265125976468e-07 -0.0711556151509285" diaginertia="6.82629547554825e-07 0.00010160838428419083 0.00010209702304564416"/>
+				<geom name="HiltMetal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal" material="M_HiltMetal" class="visual"/>
+				<geom name="HiltMetal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_001" class="collision"/>
+				<geom name="HiltMetal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_002" class="collision"/>
+				<geom name="HiltMetal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_003" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

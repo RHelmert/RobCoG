@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<mujoco model="butter">
+	<compiler meshdir="butter/meshes" texturedir="butter/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Butter" file="stl/Butter.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Butter_001" file="stl/Butter_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Butter" rgba="0.7989000082015991 0.7612000107765198 0.6330999732017517 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="butter" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.2880476415157318" pos="1.0195357891262802e-09 -8.063334000496525e-09 -9.647163824411109e-05" quat="1.0 -3.9869397028269304e-07 1.1752018247435103e-09 1.5438561540292994e-09" diaginertia="0.00013884958752896637 0.0003888639039359987 0.00045151100493967533"/>
+			<geom name="Butter" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Butter" material="M_Butter" class="visual"/>
+			<geom name="Butter_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Butter_001" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

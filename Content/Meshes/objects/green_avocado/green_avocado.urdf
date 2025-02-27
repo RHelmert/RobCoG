@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<robot name="green_avocado" version="1.0">
+  <link name="green_avocado"/>
+  <joint name="green_avocado_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_avocado"/>
+    <child link="green_avocado_flesh"/>
+  </joint>
+  <link name="green_avocado_flesh">
+    <inertial>
+      <origin xyz="-0.005291017238050699 -3.196139459760161e-06 -0.002337536308914423" rpy="-1.7773470878601074 0.3747706711292267 0.011230114847421646"/>
+      <mass value="0.28678184747695923"/>
+      <inertia ixx="0.00015632176655344665" ixy="0.0" ixz="0.0" iyy="0.00024222787760663778" iyz="0.0" izz="0.0002460239629726857"/>
+    </inertial>
+    <visual name="GreenAvocadoFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/obj/GreenAvocadoFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenAvocadoFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/stl/GreenAvocadoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_avocado_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_avocado"/>
+    <child link="green_avocado_peel"/>
+  </joint>
+  <link name="green_avocado_peel">
+    <inertial>
+      <origin xyz="-0.005436278879642487 7.965296390466392e-06 -0.002286098198965192" rpy="-1.7871055603027344 0.37524890899658203 0.011052830144762993"/>
+      <mass value="0.61742103099823"/>
+      <inertia ixx="0.00035311735700815916" ixy="0.0" ixz="0.0" iyy="0.000547895731870085" iyz="0.0" izz="0.000556000682990998"/>
+    </inertial>
+    <visual name="GreenAvocadoPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/obj/GreenAvocadoPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenAvocadoPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/stl/GreenAvocadoPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_avocado_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_avocado"/>
+    <child link="green_avocado_seed"/>
+  </joint>
+  <link name="green_avocado_seed">
+    <inertial>
+      <origin xyz="-0.010412807576358318 -0.00015772173355799168 -0.00025228719459846616" rpy="2.946214199066162 0.056039486080408096 0.006952275056391954"/>
+      <mass value="0.024663489311933517"/>
+      <inertia ixx="3.0250148483901285e-06" ixy="0.0" ixz="0.0" iyy="5.994363618810894e-06" iyz="0.0" izz="6.129013854661025e-06"/>
+    </inertial>
+    <visual name="GreenAvocadoSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/obj/GreenAvocadoSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenAvocadoSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_avocado/meshes/stl/GreenAvocadoSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

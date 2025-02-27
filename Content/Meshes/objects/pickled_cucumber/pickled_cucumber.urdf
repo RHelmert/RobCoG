@@ -1,0 +1,274 @@
+<?xml version="1.0" ?>
+<robot name="pickled_cucumber" version="1.0">
+  <link name="pickled_cucumber"/>
+  <joint name="pickled_cucumber_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="pickled_cucumber"/>
+    <child link="pickled_cucumber_flesh"/>
+  </joint>
+  <link name="pickled_cucumber_flesh">
+    <inertial>
+      <origin xyz="0.0007146873977035284 -0.0001645844749873504 0.00018500469741411507" rpy="0.11523742973804474 0.0009753178455866873 0.00493263453245163"/>
+      <mass value="0.00818063784390688"/>
+      <inertia ixx="1.6322070450769388e-07" ixy="0.0" ixz="0.0" iyy="3.0060557492106454e-06" iyz="0.0" izz="3.01512000078219e-06"/>
+    </inertial>
+    <visual name="PickledCucumberFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/obj/PickledCucumberFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="PickledCucumberFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="pickled_cucumber_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="pickled_cucumber"/>
+    <child link="pickled_cucumber_seed"/>
+  </joint>
+  <link name="pickled_cucumber_seed">
+    <inertial>
+      <origin xyz="-0.0006211170111782849 -0.0004471162101253867 0.0004769424849655479" rpy="-0.07323373854160309 0.001727844006381929 -0.00036238989559933543"/>
+      <mass value="0.00022778374841436744"/>
+      <inertia ixx="3.3809444133225952e-09" ixy="0.0" ixz="0.0" iyy="7.695172854482735e-08" iyz="0.0" izz="7.745622099264438e-08"/>
+    </inertial>
+    <visual name="PickledCucumberSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/obj/PickledCucumberSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="PickledCucumberSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberSeed_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberSeed_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="pickled_cucumber_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="pickled_cucumber"/>
+    <child link="pickled_cucumber_peel"/>
+  </joint>
+  <link name="pickled_cucumber_peel">
+    <inertial>
+      <origin xyz="0.0007119235233403742 0.00022078375332057476 -0.00022728988551534712" rpy="0.10602978616952896 0.001924790209159255 0.006327833980321884"/>
+      <mass value="0.020253026857972145"/>
+      <inertia ixx="4.903369017483783e-07" ixy="0.0" ixz="0.0" iyy="7.81192193244351e-06" iyz="0.0" izz="7.839219506422523e-06"/>
+    </inertial>
+    <visual name="PickledCucumberPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/obj/PickledCucumberPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="PickledCucumberPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="PickledCucumberPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pickled_cucumber/meshes/stl/PickledCucumberPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

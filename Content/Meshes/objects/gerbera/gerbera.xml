@@ -1,0 +1,606 @@
+<?xml version="1.0" ?>
+<mujoco model="gerbera">
+	<compiler meshdir="gerbera/meshes" texturedir="gerbera/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GerberaFlower" file="obj/GerberaFlower.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_001" file="stl/GerberaFlower_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_002" file="stl/GerberaFlower_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_003" file="stl/GerberaFlower_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_004" file="stl/GerberaFlower_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_005" file="stl/GerberaFlower_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_006" file="stl/GerberaFlower_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_007" file="stl/GerberaFlower_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_008" file="stl/GerberaFlower_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_009" file="stl/GerberaFlower_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_010" file="stl/GerberaFlower_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_011" file="stl/GerberaFlower_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_012" file="stl/GerberaFlower_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_013" file="stl/GerberaFlower_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_014" file="stl/GerberaFlower_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_015" file="stl/GerberaFlower_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_016" file="stl/GerberaFlower_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_017" file="stl/GerberaFlower_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_018" file="stl/GerberaFlower_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_019" file="stl/GerberaFlower_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_020" file="stl/GerberaFlower_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_021" file="stl/GerberaFlower_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_022" file="stl/GerberaFlower_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_023" file="stl/GerberaFlower_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_024" file="stl/GerberaFlower_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_025" file="stl/GerberaFlower_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_026" file="stl/GerberaFlower_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_027" file="stl/GerberaFlower_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_028" file="stl/GerberaFlower_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_029" file="stl/GerberaFlower_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_030" file="stl/GerberaFlower_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_031" file="stl/GerberaFlower_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_032" file="stl/GerberaFlower_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_033" file="stl/GerberaFlower_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_034" file="stl/GerberaFlower_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_035" file="stl/GerberaFlower_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_036" file="stl/GerberaFlower_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_037" file="stl/GerberaFlower_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_038" file="stl/GerberaFlower_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_039" file="stl/GerberaFlower_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_040" file="stl/GerberaFlower_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_041" file="stl/GerberaFlower_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_042" file="stl/GerberaFlower_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_043" file="stl/GerberaFlower_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_044" file="stl/GerberaFlower_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_045" file="stl/GerberaFlower_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_046" file="stl/GerberaFlower_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_047" file="stl/GerberaFlower_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_048" file="stl/GerberaFlower_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_049" file="stl/GerberaFlower_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_050" file="stl/GerberaFlower_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_051" file="stl/GerberaFlower_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_052" file="stl/GerberaFlower_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_053" file="stl/GerberaFlower_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_054" file="stl/GerberaFlower_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_055" file="stl/GerberaFlower_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_056" file="stl/GerberaFlower_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_057" file="stl/GerberaFlower_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_058" file="stl/GerberaFlower_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_059" file="stl/GerberaFlower_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_060" file="stl/GerberaFlower_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_061" file="stl/GerberaFlower_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_062" file="stl/GerberaFlower_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_063" file="stl/GerberaFlower_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_064" file="stl/GerberaFlower_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_065" file="stl/GerberaFlower_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_066" file="stl/GerberaFlower_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_067" file="stl/GerberaFlower_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_068" file="stl/GerberaFlower_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_069" file="stl/GerberaFlower_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_070" file="stl/GerberaFlower_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_071" file="stl/GerberaFlower_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_072" file="stl/GerberaFlower_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_073" file="stl/GerberaFlower_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_074" file="stl/GerberaFlower_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_075" file="stl/GerberaFlower_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_076" file="stl/GerberaFlower_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_077" file="stl/GerberaFlower_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_078" file="stl/GerberaFlower_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_079" file="stl/GerberaFlower_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_080" file="stl/GerberaFlower_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_081" file="stl/GerberaFlower_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_082" file="stl/GerberaFlower_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_083" file="stl/GerberaFlower_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_084" file="stl/GerberaFlower_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_085" file="stl/GerberaFlower_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_086" file="stl/GerberaFlower_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_087" file="stl/GerberaFlower_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_088" file="stl/GerberaFlower_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_089" file="stl/GerberaFlower_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_090" file="stl/GerberaFlower_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_091" file="stl/GerberaFlower_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_092" file="stl/GerberaFlower_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_093" file="stl/GerberaFlower_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_094" file="stl/GerberaFlower_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_095" file="stl/GerberaFlower_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_096" file="stl/GerberaFlower_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_097" file="stl/GerberaFlower_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_098" file="stl/GerberaFlower_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_099" file="stl/GerberaFlower_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_100" file="stl/GerberaFlower_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_101" file="stl/GerberaFlower_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_102" file="stl/GerberaFlower_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_103" file="stl/GerberaFlower_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_104" file="stl/GerberaFlower_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_105" file="stl/GerberaFlower_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_106" file="stl/GerberaFlower_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_107" file="stl/GerberaFlower_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_108" file="stl/GerberaFlower_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_109" file="stl/GerberaFlower_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_110" file="stl/GerberaFlower_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_111" file="stl/GerberaFlower_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_112" file="stl/GerberaFlower_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_113" file="stl/GerberaFlower_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_114" file="stl/GerberaFlower_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_115" file="stl/GerberaFlower_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_116" file="stl/GerberaFlower_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_117" file="stl/GerberaFlower_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_118" file="stl/GerberaFlower_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_119" file="stl/GerberaFlower_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_120" file="stl/GerberaFlower_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_121" file="stl/GerberaFlower_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_122" file="stl/GerberaFlower_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_123" file="stl/GerberaFlower_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_124" file="stl/GerberaFlower_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_125" file="stl/GerberaFlower_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_126" file="stl/GerberaFlower_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_127" file="stl/GerberaFlower_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_128" file="stl/GerberaFlower_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_129" file="stl/GerberaFlower_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_130" file="stl/GerberaFlower_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_131" file="stl/GerberaFlower_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_132" file="stl/GerberaFlower_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_133" file="stl/GerberaFlower_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_134" file="stl/GerberaFlower_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_135" file="stl/GerberaFlower_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_136" file="stl/GerberaFlower_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_137" file="stl/GerberaFlower_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_138" file="stl/GerberaFlower_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_139" file="stl/GerberaFlower_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_140" file="stl/GerberaFlower_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_141" file="stl/GerberaFlower_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_142" file="stl/GerberaFlower_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_143" file="stl/GerberaFlower_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_144" file="stl/GerberaFlower_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_145" file="stl/GerberaFlower_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_146" file="stl/GerberaFlower_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_147" file="stl/GerberaFlower_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_148" file="stl/GerberaFlower_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_149" file="stl/GerberaFlower_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_150" file="stl/GerberaFlower_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_151" file="stl/GerberaFlower_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_152" file="stl/GerberaFlower_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_153" file="stl/GerberaFlower_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_154" file="stl/GerberaFlower_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_155" file="stl/GerberaFlower_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_156" file="stl/GerberaFlower_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_157" file="stl/GerberaFlower_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_158" file="stl/GerberaFlower_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_159" file="stl/GerberaFlower_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_160" file="stl/GerberaFlower_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_161" file="stl/GerberaFlower_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_162" file="stl/GerberaFlower_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_163" file="stl/GerberaFlower_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_164" file="stl/GerberaFlower_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_165" file="stl/GerberaFlower_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_166" file="stl/GerberaFlower_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_167" file="stl/GerberaFlower_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_168" file="stl/GerberaFlower_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_169" file="stl/GerberaFlower_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_170" file="stl/GerberaFlower_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_171" file="stl/GerberaFlower_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_172" file="stl/GerberaFlower_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_173" file="stl/GerberaFlower_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_174" file="stl/GerberaFlower_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_175" file="stl/GerberaFlower_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_176" file="stl/GerberaFlower_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_177" file="stl/GerberaFlower_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_178" file="stl/GerberaFlower_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_179" file="stl/GerberaFlower_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_180" file="stl/GerberaFlower_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_181" file="stl/GerberaFlower_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_182" file="stl/GerberaFlower_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_183" file="stl/GerberaFlower_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_184" file="stl/GerberaFlower_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_185" file="stl/GerberaFlower_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_186" file="stl/GerberaFlower_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_187" file="stl/GerberaFlower_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_188" file="stl/GerberaFlower_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_189" file="stl/GerberaFlower_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_190" file="stl/GerberaFlower_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_191" file="stl/GerberaFlower_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_192" file="stl/GerberaFlower_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_193" file="stl/GerberaFlower_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_194" file="stl/GerberaFlower_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_195" file="stl/GerberaFlower_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_196" file="stl/GerberaFlower_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_197" file="stl/GerberaFlower_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_198" file="stl/GerberaFlower_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_199" file="stl/GerberaFlower_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_200" file="stl/GerberaFlower_200.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_201" file="stl/GerberaFlower_201.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_202" file="stl/GerberaFlower_202.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_203" file="stl/GerberaFlower_203.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_204" file="stl/GerberaFlower_204.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_205" file="stl/GerberaFlower_205.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_206" file="stl/GerberaFlower_206.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_207" file="stl/GerberaFlower_207.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_208" file="stl/GerberaFlower_208.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_209" file="stl/GerberaFlower_209.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_210" file="stl/GerberaFlower_210.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_211" file="stl/GerberaFlower_211.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_212" file="stl/GerberaFlower_212.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_213" file="stl/GerberaFlower_213.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_214" file="stl/GerberaFlower_214.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_215" file="stl/GerberaFlower_215.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_216" file="stl/GerberaFlower_216.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_217" file="stl/GerberaFlower_217.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_218" file="stl/GerberaFlower_218.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_219" file="stl/GerberaFlower_219.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_220" file="stl/GerberaFlower_220.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_221" file="stl/GerberaFlower_221.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_222" file="stl/GerberaFlower_222.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_223" file="stl/GerberaFlower_223.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_224" file="stl/GerberaFlower_224.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_225" file="stl/GerberaFlower_225.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_226" file="stl/GerberaFlower_226.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_227" file="stl/GerberaFlower_227.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_228" file="stl/GerberaFlower_228.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_229" file="stl/GerberaFlower_229.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_230" file="stl/GerberaFlower_230.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_231" file="stl/GerberaFlower_231.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_232" file="stl/GerberaFlower_232.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_233" file="stl/GerberaFlower_233.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_234" file="stl/GerberaFlower_234.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_235" file="stl/GerberaFlower_235.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_236" file="stl/GerberaFlower_236.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_237" file="stl/GerberaFlower_237.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_238" file="stl/GerberaFlower_238.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_239" file="stl/GerberaFlower_239.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_240" file="stl/GerberaFlower_240.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_241" file="stl/GerberaFlower_241.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_242" file="stl/GerberaFlower_242.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_243" file="stl/GerberaFlower_243.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_244" file="stl/GerberaFlower_244.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_245" file="stl/GerberaFlower_245.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_246" file="stl/GerberaFlower_246.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_247" file="stl/GerberaFlower_247.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_248" file="stl/GerberaFlower_248.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_249" file="stl/GerberaFlower_249.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_250" file="stl/GerberaFlower_250.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_251" file="stl/GerberaFlower_251.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_252" file="stl/GerberaFlower_252.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_253" file="stl/GerberaFlower_253.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_254" file="stl/GerberaFlower_254.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_255" file="stl/GerberaFlower_255.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_256" file="stl/GerberaFlower_256.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_257" file="stl/GerberaFlower_257.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_258" file="stl/GerberaFlower_258.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_259" file="stl/GerberaFlower_259.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_260" file="stl/GerberaFlower_260.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_261" file="stl/GerberaFlower_261.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_262" file="stl/GerberaFlower_262.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_263" file="stl/GerberaFlower_263.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_264" file="stl/GerberaFlower_264.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_265" file="stl/GerberaFlower_265.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_266" file="stl/GerberaFlower_266.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_267" file="stl/GerberaFlower_267.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_268" file="stl/GerberaFlower_268.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_269" file="stl/GerberaFlower_269.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_270" file="stl/GerberaFlower_270.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_271" file="stl/GerberaFlower_271.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_272" file="stl/GerberaFlower_272.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_273" file="stl/GerberaFlower_273.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_274" file="stl/GerberaFlower_274.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_275" file="stl/GerberaFlower_275.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_276" file="stl/GerberaFlower_276.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_277" file="stl/GerberaFlower_277.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_278" file="stl/GerberaFlower_278.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_279" file="stl/GerberaFlower_279.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_280" file="stl/GerberaFlower_280.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_281" file="stl/GerberaFlower_281.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_282" file="stl/GerberaFlower_282.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_283" file="stl/GerberaFlower_283.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_284" file="stl/GerberaFlower_284.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaFlower_285" file="stl/GerberaFlower_285.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaStem" file="stl/GerberaStem.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaStem_001" file="stl/GerberaStem_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GerberaStem_002" file="stl/GerberaStem_002.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GerberaFlower" texture="T_GerberaFlower"/>
+		<material name="M_GerberaStem" rgba="0.7084000110626221 0.645799994468689 0.5512999892234802 1.0" emission="0.0"/>
+		<texture name="T_GerberaFlower" type="2d" file="T_GerberaFlower.png"/>
+	</asset>
+	<worldbody>
+		<body name="gerbera" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="gerbera_flower" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.09047257900238037" pos="-0.08962087333202362 0.0009095700806938112 0.0007607468869537115" quat="0.9760990738868713 -0.21722924709320068 0.005017853807657957 -0.004111574962735176" diaginertia="1.063222316588508e-05 0.0007808240479789674 0.000781349663157016"/>
+				<geom name="GerberaFlower" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower" material="M_GerberaFlower" class="visual"/>
+				<geom name="GerberaFlower_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_001" class="collision"/>
+				<geom name="GerberaFlower_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_002" class="collision"/>
+				<geom name="GerberaFlower_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_003" class="collision"/>
+				<geom name="GerberaFlower_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_004" class="collision"/>
+				<geom name="GerberaFlower_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_005" class="collision"/>
+				<geom name="GerberaFlower_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_006" class="collision"/>
+				<geom name="GerberaFlower_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_007" class="collision"/>
+				<geom name="GerberaFlower_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_008" class="collision"/>
+				<geom name="GerberaFlower_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_009" class="collision"/>
+				<geom name="GerberaFlower_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_010" class="collision"/>
+				<geom name="GerberaFlower_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_011" class="collision"/>
+				<geom name="GerberaFlower_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_012" class="collision"/>
+				<geom name="GerberaFlower_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_013" class="collision"/>
+				<geom name="GerberaFlower_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_014" class="collision"/>
+				<geom name="GerberaFlower_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_015" class="collision"/>
+				<geom name="GerberaFlower_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_016" class="collision"/>
+				<geom name="GerberaFlower_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_017" class="collision"/>
+				<geom name="GerberaFlower_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_018" class="collision"/>
+				<geom name="GerberaFlower_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_019" class="collision"/>
+				<geom name="GerberaFlower_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_020" class="collision"/>
+				<geom name="GerberaFlower_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_021" class="collision"/>
+				<geom name="GerberaFlower_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_022" class="collision"/>
+				<geom name="GerberaFlower_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_023" class="collision"/>
+				<geom name="GerberaFlower_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_024" class="collision"/>
+				<geom name="GerberaFlower_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_025" class="collision"/>
+				<geom name="GerberaFlower_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_026" class="collision"/>
+				<geom name="GerberaFlower_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_027" class="collision"/>
+				<geom name="GerberaFlower_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_028" class="collision"/>
+				<geom name="GerberaFlower_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_029" class="collision"/>
+				<geom name="GerberaFlower_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_030" class="collision"/>
+				<geom name="GerberaFlower_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_031" class="collision"/>
+				<geom name="GerberaFlower_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_032" class="collision"/>
+				<geom name="GerberaFlower_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_033" class="collision"/>
+				<geom name="GerberaFlower_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_034" class="collision"/>
+				<geom name="GerberaFlower_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_035" class="collision"/>
+				<geom name="GerberaFlower_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_036" class="collision"/>
+				<geom name="GerberaFlower_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_037" class="collision"/>
+				<geom name="GerberaFlower_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_038" class="collision"/>
+				<geom name="GerberaFlower_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_039" class="collision"/>
+				<geom name="GerberaFlower_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_040" class="collision"/>
+				<geom name="GerberaFlower_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_041" class="collision"/>
+				<geom name="GerberaFlower_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_042" class="collision"/>
+				<geom name="GerberaFlower_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_043" class="collision"/>
+				<geom name="GerberaFlower_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_044" class="collision"/>
+				<geom name="GerberaFlower_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_045" class="collision"/>
+				<geom name="GerberaFlower_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_046" class="collision"/>
+				<geom name="GerberaFlower_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_047" class="collision"/>
+				<geom name="GerberaFlower_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_048" class="collision"/>
+				<geom name="GerberaFlower_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_049" class="collision"/>
+				<geom name="GerberaFlower_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_050" class="collision"/>
+				<geom name="GerberaFlower_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_051" class="collision"/>
+				<geom name="GerberaFlower_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_052" class="collision"/>
+				<geom name="GerberaFlower_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_053" class="collision"/>
+				<geom name="GerberaFlower_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_054" class="collision"/>
+				<geom name="GerberaFlower_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_055" class="collision"/>
+				<geom name="GerberaFlower_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_056" class="collision"/>
+				<geom name="GerberaFlower_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_057" class="collision"/>
+				<geom name="GerberaFlower_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_058" class="collision"/>
+				<geom name="GerberaFlower_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_059" class="collision"/>
+				<geom name="GerberaFlower_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_060" class="collision"/>
+				<geom name="GerberaFlower_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_061" class="collision"/>
+				<geom name="GerberaFlower_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_062" class="collision"/>
+				<geom name="GerberaFlower_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_063" class="collision"/>
+				<geom name="GerberaFlower_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_064" class="collision"/>
+				<geom name="GerberaFlower_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_065" class="collision"/>
+				<geom name="GerberaFlower_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_066" class="collision"/>
+				<geom name="GerberaFlower_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_067" class="collision"/>
+				<geom name="GerberaFlower_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_068" class="collision"/>
+				<geom name="GerberaFlower_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_069" class="collision"/>
+				<geom name="GerberaFlower_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_070" class="collision"/>
+				<geom name="GerberaFlower_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_071" class="collision"/>
+				<geom name="GerberaFlower_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_072" class="collision"/>
+				<geom name="GerberaFlower_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_073" class="collision"/>
+				<geom name="GerberaFlower_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_074" class="collision"/>
+				<geom name="GerberaFlower_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_075" class="collision"/>
+				<geom name="GerberaFlower_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_076" class="collision"/>
+				<geom name="GerberaFlower_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_077" class="collision"/>
+				<geom name="GerberaFlower_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_078" class="collision"/>
+				<geom name="GerberaFlower_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_079" class="collision"/>
+				<geom name="GerberaFlower_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_080" class="collision"/>
+				<geom name="GerberaFlower_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_081" class="collision"/>
+				<geom name="GerberaFlower_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_082" class="collision"/>
+				<geom name="GerberaFlower_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_083" class="collision"/>
+				<geom name="GerberaFlower_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_084" class="collision"/>
+				<geom name="GerberaFlower_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_085" class="collision"/>
+				<geom name="GerberaFlower_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_086" class="collision"/>
+				<geom name="GerberaFlower_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_087" class="collision"/>
+				<geom name="GerberaFlower_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_088" class="collision"/>
+				<geom name="GerberaFlower_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_089" class="collision"/>
+				<geom name="GerberaFlower_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_090" class="collision"/>
+				<geom name="GerberaFlower_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_091" class="collision"/>
+				<geom name="GerberaFlower_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_092" class="collision"/>
+				<geom name="GerberaFlower_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_093" class="collision"/>
+				<geom name="GerberaFlower_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_094" class="collision"/>
+				<geom name="GerberaFlower_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_095" class="collision"/>
+				<geom name="GerberaFlower_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_096" class="collision"/>
+				<geom name="GerberaFlower_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_097" class="collision"/>
+				<geom name="GerberaFlower_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_098" class="collision"/>
+				<geom name="GerberaFlower_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_099" class="collision"/>
+				<geom name="GerberaFlower_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_100" class="collision"/>
+				<geom name="GerberaFlower_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_101" class="collision"/>
+				<geom name="GerberaFlower_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_102" class="collision"/>
+				<geom name="GerberaFlower_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_103" class="collision"/>
+				<geom name="GerberaFlower_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_104" class="collision"/>
+				<geom name="GerberaFlower_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_105" class="collision"/>
+				<geom name="GerberaFlower_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_106" class="collision"/>
+				<geom name="GerberaFlower_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_107" class="collision"/>
+				<geom name="GerberaFlower_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_108" class="collision"/>
+				<geom name="GerberaFlower_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_109" class="collision"/>
+				<geom name="GerberaFlower_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_110" class="collision"/>
+				<geom name="GerberaFlower_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_111" class="collision"/>
+				<geom name="GerberaFlower_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_112" class="collision"/>
+				<geom name="GerberaFlower_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_113" class="collision"/>
+				<geom name="GerberaFlower_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_114" class="collision"/>
+				<geom name="GerberaFlower_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_115" class="collision"/>
+				<geom name="GerberaFlower_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_116" class="collision"/>
+				<geom name="GerberaFlower_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_117" class="collision"/>
+				<geom name="GerberaFlower_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_118" class="collision"/>
+				<geom name="GerberaFlower_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_119" class="collision"/>
+				<geom name="GerberaFlower_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_120" class="collision"/>
+				<geom name="GerberaFlower_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_121" class="collision"/>
+				<geom name="GerberaFlower_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_122" class="collision"/>
+				<geom name="GerberaFlower_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_123" class="collision"/>
+				<geom name="GerberaFlower_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_124" class="collision"/>
+				<geom name="GerberaFlower_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_125" class="collision"/>
+				<geom name="GerberaFlower_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_126" class="collision"/>
+				<geom name="GerberaFlower_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_127" class="collision"/>
+				<geom name="GerberaFlower_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_128" class="collision"/>
+				<geom name="GerberaFlower_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_129" class="collision"/>
+				<geom name="GerberaFlower_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_130" class="collision"/>
+				<geom name="GerberaFlower_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_131" class="collision"/>
+				<geom name="GerberaFlower_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_132" class="collision"/>
+				<geom name="GerberaFlower_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_133" class="collision"/>
+				<geom name="GerberaFlower_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_134" class="collision"/>
+				<geom name="GerberaFlower_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_135" class="collision"/>
+				<geom name="GerberaFlower_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_136" class="collision"/>
+				<geom name="GerberaFlower_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_137" class="collision"/>
+				<geom name="GerberaFlower_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_138" class="collision"/>
+				<geom name="GerberaFlower_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_139" class="collision"/>
+				<geom name="GerberaFlower_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_140" class="collision"/>
+				<geom name="GerberaFlower_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_141" class="collision"/>
+				<geom name="GerberaFlower_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_142" class="collision"/>
+				<geom name="GerberaFlower_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_143" class="collision"/>
+				<geom name="GerberaFlower_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_144" class="collision"/>
+				<geom name="GerberaFlower_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_145" class="collision"/>
+				<geom name="GerberaFlower_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_146" class="collision"/>
+				<geom name="GerberaFlower_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_147" class="collision"/>
+				<geom name="GerberaFlower_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_148" class="collision"/>
+				<geom name="GerberaFlower_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_149" class="collision"/>
+				<geom name="GerberaFlower_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_150" class="collision"/>
+				<geom name="GerberaFlower_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_151" class="collision"/>
+				<geom name="GerberaFlower_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_152" class="collision"/>
+				<geom name="GerberaFlower_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_153" class="collision"/>
+				<geom name="GerberaFlower_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_154" class="collision"/>
+				<geom name="GerberaFlower_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_155" class="collision"/>
+				<geom name="GerberaFlower_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_156" class="collision"/>
+				<geom name="GerberaFlower_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_157" class="collision"/>
+				<geom name="GerberaFlower_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_158" class="collision"/>
+				<geom name="GerberaFlower_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_159" class="collision"/>
+				<geom name="GerberaFlower_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_160" class="collision"/>
+				<geom name="GerberaFlower_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_161" class="collision"/>
+				<geom name="GerberaFlower_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_162" class="collision"/>
+				<geom name="GerberaFlower_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_163" class="collision"/>
+				<geom name="GerberaFlower_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_164" class="collision"/>
+				<geom name="GerberaFlower_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_165" class="collision"/>
+				<geom name="GerberaFlower_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_166" class="collision"/>
+				<geom name="GerberaFlower_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_167" class="collision"/>
+				<geom name="GerberaFlower_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_168" class="collision"/>
+				<geom name="GerberaFlower_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_169" class="collision"/>
+				<geom name="GerberaFlower_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_170" class="collision"/>
+				<geom name="GerberaFlower_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_171" class="collision"/>
+				<geom name="GerberaFlower_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_172" class="collision"/>
+				<geom name="GerberaFlower_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_173" class="collision"/>
+				<geom name="GerberaFlower_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_174" class="collision"/>
+				<geom name="GerberaFlower_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_175" class="collision"/>
+				<geom name="GerberaFlower_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_176" class="collision"/>
+				<geom name="GerberaFlower_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_177" class="collision"/>
+				<geom name="GerberaFlower_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_178" class="collision"/>
+				<geom name="GerberaFlower_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_179" class="collision"/>
+				<geom name="GerberaFlower_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_180" class="collision"/>
+				<geom name="GerberaFlower_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_181" class="collision"/>
+				<geom name="GerberaFlower_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_182" class="collision"/>
+				<geom name="GerberaFlower_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_183" class="collision"/>
+				<geom name="GerberaFlower_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_184" class="collision"/>
+				<geom name="GerberaFlower_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_185" class="collision"/>
+				<geom name="GerberaFlower_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_186" class="collision"/>
+				<geom name="GerberaFlower_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_187" class="collision"/>
+				<geom name="GerberaFlower_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_188" class="collision"/>
+				<geom name="GerberaFlower_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_189" class="collision"/>
+				<geom name="GerberaFlower_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_190" class="collision"/>
+				<geom name="GerberaFlower_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_191" class="collision"/>
+				<geom name="GerberaFlower_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_192" class="collision"/>
+				<geom name="GerberaFlower_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_193" class="collision"/>
+				<geom name="GerberaFlower_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_194" class="collision"/>
+				<geom name="GerberaFlower_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_195" class="collision"/>
+				<geom name="GerberaFlower_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_196" class="collision"/>
+				<geom name="GerberaFlower_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_197" class="collision"/>
+				<geom name="GerberaFlower_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_198" class="collision"/>
+				<geom name="GerberaFlower_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_199" class="collision"/>
+				<geom name="GerberaFlower_200" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_200" class="collision"/>
+				<geom name="GerberaFlower_201" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_201" class="collision"/>
+				<geom name="GerberaFlower_202" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_202" class="collision"/>
+				<geom name="GerberaFlower_203" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_203" class="collision"/>
+				<geom name="GerberaFlower_204" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_204" class="collision"/>
+				<geom name="GerberaFlower_205" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_205" class="collision"/>
+				<geom name="GerberaFlower_206" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_206" class="collision"/>
+				<geom name="GerberaFlower_207" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_207" class="collision"/>
+				<geom name="GerberaFlower_208" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_208" class="collision"/>
+				<geom name="GerberaFlower_209" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_209" class="collision"/>
+				<geom name="GerberaFlower_210" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_210" class="collision"/>
+				<geom name="GerberaFlower_211" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_211" class="collision"/>
+				<geom name="GerberaFlower_212" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_212" class="collision"/>
+				<geom name="GerberaFlower_213" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_213" class="collision"/>
+				<geom name="GerberaFlower_214" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_214" class="collision"/>
+				<geom name="GerberaFlower_215" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_215" class="collision"/>
+				<geom name="GerberaFlower_216" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_216" class="collision"/>
+				<geom name="GerberaFlower_217" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_217" class="collision"/>
+				<geom name="GerberaFlower_218" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_218" class="collision"/>
+				<geom name="GerberaFlower_219" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_219" class="collision"/>
+				<geom name="GerberaFlower_220" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_220" class="collision"/>
+				<geom name="GerberaFlower_221" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_221" class="collision"/>
+				<geom name="GerberaFlower_222" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_222" class="collision"/>
+				<geom name="GerberaFlower_223" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_223" class="collision"/>
+				<geom name="GerberaFlower_224" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_224" class="collision"/>
+				<geom name="GerberaFlower_225" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_225" class="collision"/>
+				<geom name="GerberaFlower_226" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_226" class="collision"/>
+				<geom name="GerberaFlower_227" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_227" class="collision"/>
+				<geom name="GerberaFlower_228" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_228" class="collision"/>
+				<geom name="GerberaFlower_229" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_229" class="collision"/>
+				<geom name="GerberaFlower_230" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_230" class="collision"/>
+				<geom name="GerberaFlower_231" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_231" class="collision"/>
+				<geom name="GerberaFlower_232" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_232" class="collision"/>
+				<geom name="GerberaFlower_233" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_233" class="collision"/>
+				<geom name="GerberaFlower_234" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_234" class="collision"/>
+				<geom name="GerberaFlower_235" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_235" class="collision"/>
+				<geom name="GerberaFlower_236" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_236" class="collision"/>
+				<geom name="GerberaFlower_237" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_237" class="collision"/>
+				<geom name="GerberaFlower_238" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_238" class="collision"/>
+				<geom name="GerberaFlower_239" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_239" class="collision"/>
+				<geom name="GerberaFlower_240" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_240" class="collision"/>
+				<geom name="GerberaFlower_241" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_241" class="collision"/>
+				<geom name="GerberaFlower_242" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_242" class="collision"/>
+				<geom name="GerberaFlower_243" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_243" class="collision"/>
+				<geom name="GerberaFlower_244" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_244" class="collision"/>
+				<geom name="GerberaFlower_245" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_245" class="collision"/>
+				<geom name="GerberaFlower_246" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_246" class="collision"/>
+				<geom name="GerberaFlower_247" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_247" class="collision"/>
+				<geom name="GerberaFlower_248" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_248" class="collision"/>
+				<geom name="GerberaFlower_249" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_249" class="collision"/>
+				<geom name="GerberaFlower_250" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_250" class="collision"/>
+				<geom name="GerberaFlower_251" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_251" class="collision"/>
+				<geom name="GerberaFlower_252" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_252" class="collision"/>
+				<geom name="GerberaFlower_253" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_253" class="collision"/>
+				<geom name="GerberaFlower_254" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_254" class="collision"/>
+				<geom name="GerberaFlower_255" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_255" class="collision"/>
+				<geom name="GerberaFlower_256" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_256" class="collision"/>
+				<geom name="GerberaFlower_257" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_257" class="collision"/>
+				<geom name="GerberaFlower_258" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_258" class="collision"/>
+				<geom name="GerberaFlower_259" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_259" class="collision"/>
+				<geom name="GerberaFlower_260" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_260" class="collision"/>
+				<geom name="GerberaFlower_261" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_261" class="collision"/>
+				<geom name="GerberaFlower_262" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_262" class="collision"/>
+				<geom name="GerberaFlower_263" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_263" class="collision"/>
+				<geom name="GerberaFlower_264" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_264" class="collision"/>
+				<geom name="GerberaFlower_265" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_265" class="collision"/>
+				<geom name="GerberaFlower_266" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_266" class="collision"/>
+				<geom name="GerberaFlower_267" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_267" class="collision"/>
+				<geom name="GerberaFlower_268" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_268" class="collision"/>
+				<geom name="GerberaFlower_269" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_269" class="collision"/>
+				<geom name="GerberaFlower_270" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_270" class="collision"/>
+				<geom name="GerberaFlower_271" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_271" class="collision"/>
+				<geom name="GerberaFlower_272" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_272" class="collision"/>
+				<geom name="GerberaFlower_273" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_273" class="collision"/>
+				<geom name="GerberaFlower_274" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_274" class="collision"/>
+				<geom name="GerberaFlower_275" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_275" class="collision"/>
+				<geom name="GerberaFlower_276" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_276" class="collision"/>
+				<geom name="GerberaFlower_277" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_277" class="collision"/>
+				<geom name="GerberaFlower_278" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_278" class="collision"/>
+				<geom name="GerberaFlower_279" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_279" class="collision"/>
+				<geom name="GerberaFlower_280" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_280" class="collision"/>
+				<geom name="GerberaFlower_281" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_281" class="collision"/>
+				<geom name="GerberaFlower_282" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_282" class="collision"/>
+				<geom name="GerberaFlower_283" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_283" class="collision"/>
+				<geom name="GerberaFlower_284" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_284" class="collision"/>
+				<geom name="GerberaFlower_285" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaFlower_285" class="collision"/>
+			</body>
+			<body name="gerbera_stem" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00019628320296760648" pos="0.018044572323560715 -0.00478010717779398 -0.013169475831091404" quat="0.8032151460647583 0.5892225503921509 0.03236085921525955 -0.08133234828710556" diaginertia="2.574574331504209e-08 1.1278949614279554e-06 1.1521226497279713e-06"/>
+				<geom name="GerberaStem" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaStem" material="M_GerberaStem" class="visual"/>
+				<geom name="GerberaStem_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaStem_001" class="collision"/>
+				<geom name="GerberaStem_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GerberaStem_002" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

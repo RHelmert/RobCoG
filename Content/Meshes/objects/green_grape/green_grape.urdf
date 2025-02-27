@@ -1,0 +1,688 @@
+<?xml version="1.0" ?>
+<robot name="green_grape" version="1.0">
+  <link name="green_grape"/>
+  <joint name="green_grape_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_grape"/>
+    <child link="green_grape_flesh"/>
+  </joint>
+  <link name="green_grape_flesh">
+    <inertial>
+      <origin xyz="-3.401461799512617e-05 -3.288120205979794e-05 -0.004133031703531742" rpy="2.812065362930298 -1.5363221168518066 2.6019551753997803"/>
+      <mass value="0.006244463846087456"/>
+      <inertia ixx="2.77418791938544e-07" ixy="0.0" ixz="0.0" iyy="4.677823710608209e-07" iyz="0.0" izz="4.750807818254543e-07"/>
+    </inertial>
+    <visual name="GreenGrapeFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/obj/GreenGrapeFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenGrapeFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_grape_seed002_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_grape"/>
+    <child link="green_grape_seed002"/>
+  </joint>
+  <link name="green_grape_seed002">
+    <inertial>
+      <origin xyz="0.0031396325211972 -5.241620965534821e-05 -0.0044299219734966755" rpy="1.7037771940231323 -0.9625338912010193 3.1213326454162598"/>
+      <mass value="8.96484652912477e-06"/>
+      <inertia ixx="5.300314874501222e-12" ixy="0.0" ixz="0.0" iyy="2.734791004765924e-10" iyz="0.0" izz="2.7555074888496733e-10"/>
+    </inertial>
+    <visual name="GreenGrapeSeed002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/obj/GreenGrapeSeed002.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenGrapeSeed002_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeSeed002_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeSeed002_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeSeed002_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_grape_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_grape"/>
+    <child link="green_grape_peel"/>
+  </joint>
+  <link name="green_grape_peel">
+    <inertial>
+      <origin xyz="-2.9452494345605373e-05 -3.811405258602463e-05 -0.0042781769298017025" rpy="2.772042989730835 -1.5318288803100586 2.65006422996521"/>
+      <mass value="0.00016574017354287207"/>
+      <inertia ixx="1.2907409363549505e-08" ixy="0.0" ixz="0.0" iyy="1.8610123220241803e-08" iyz="0.0" izz="1.8875356389003173e-08"/>
+    </inertial>
+    <visual name="GreenGrapePeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/obj/GreenGrapePeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenGrapePeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapePeel_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapePeel_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_grape_stalk_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_grape"/>
+    <child link="green_grape_stalk"/>
+  </joint>
+  <link name="green_grape_stalk">
+    <inertial>
+      <origin xyz="-9.0691217337735e-05 0.0005510400515049696 0.010631775483489037" rpy="-0.1921951025724411 1.515956997871399 -1.7060697078704834"/>
+      <mass value="4.593765697791241e-05"/>
+      <inertia ixx="1.1328190469006572e-10" ixy="0.0" ixz="0.0" iyy="5.47817347040791e-09" iyz="0.0" izz="5.506998412840858e-09"/>
+    </inertial>
+    <visual name="GreenGrapeStalk">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/obj/GreenGrapeStalk.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenGrapeStalk_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenGrapeStalk_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_grape/meshes/stl/GreenGrapeStalk_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

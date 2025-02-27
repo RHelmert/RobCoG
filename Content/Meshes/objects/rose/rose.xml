@@ -1,0 +1,975 @@
+<?xml version="1.0" ?>
+<mujoco model="rose">
+	<compiler meshdir="rose/meshes" texturedir="rose/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="RosePetals" file="obj/RosePetals.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_001" file="stl/RosePetals_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_002" file="stl/RosePetals_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_003" file="stl/RosePetals_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_004" file="stl/RosePetals_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_005" file="stl/RosePetals_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_006" file="stl/RosePetals_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_007" file="stl/RosePetals_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_008" file="stl/RosePetals_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_009" file="stl/RosePetals_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_010" file="stl/RosePetals_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_011" file="stl/RosePetals_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_012" file="stl/RosePetals_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_013" file="stl/RosePetals_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_014" file="stl/RosePetals_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_015" file="stl/RosePetals_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_016" file="stl/RosePetals_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_017" file="stl/RosePetals_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_018" file="stl/RosePetals_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_019" file="stl/RosePetals_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_020" file="stl/RosePetals_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_021" file="stl/RosePetals_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_022" file="stl/RosePetals_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_023" file="stl/RosePetals_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_024" file="stl/RosePetals_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_025" file="stl/RosePetals_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_026" file="stl/RosePetals_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_027" file="stl/RosePetals_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_028" file="stl/RosePetals_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_029" file="stl/RosePetals_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_030" file="stl/RosePetals_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_031" file="stl/RosePetals_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_032" file="stl/RosePetals_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_033" file="stl/RosePetals_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_034" file="stl/RosePetals_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_035" file="stl/RosePetals_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_036" file="stl/RosePetals_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_037" file="stl/RosePetals_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_038" file="stl/RosePetals_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_039" file="stl/RosePetals_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_040" file="stl/RosePetals_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_041" file="stl/RosePetals_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_042" file="stl/RosePetals_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_043" file="stl/RosePetals_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_044" file="stl/RosePetals_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_045" file="stl/RosePetals_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_046" file="stl/RosePetals_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_047" file="stl/RosePetals_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_048" file="stl/RosePetals_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_049" file="stl/RosePetals_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_050" file="stl/RosePetals_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_051" file="stl/RosePetals_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_052" file="stl/RosePetals_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_053" file="stl/RosePetals_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_054" file="stl/RosePetals_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_055" file="stl/RosePetals_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_056" file="stl/RosePetals_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_057" file="stl/RosePetals_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_058" file="stl/RosePetals_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_059" file="stl/RosePetals_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_060" file="stl/RosePetals_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_061" file="stl/RosePetals_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_062" file="stl/RosePetals_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_063" file="stl/RosePetals_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_064" file="stl/RosePetals_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_065" file="stl/RosePetals_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_066" file="stl/RosePetals_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_067" file="stl/RosePetals_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_068" file="stl/RosePetals_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_069" file="stl/RosePetals_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_070" file="stl/RosePetals_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_071" file="stl/RosePetals_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_072" file="stl/RosePetals_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_073" file="stl/RosePetals_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_074" file="stl/RosePetals_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_075" file="stl/RosePetals_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_076" file="stl/RosePetals_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_077" file="stl/RosePetals_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_078" file="stl/RosePetals_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_079" file="stl/RosePetals_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_080" file="stl/RosePetals_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_081" file="stl/RosePetals_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_082" file="stl/RosePetals_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_083" file="stl/RosePetals_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_084" file="stl/RosePetals_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_085" file="stl/RosePetals_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_086" file="stl/RosePetals_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_087" file="stl/RosePetals_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_088" file="stl/RosePetals_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_089" file="stl/RosePetals_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_090" file="stl/RosePetals_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_091" file="stl/RosePetals_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_092" file="stl/RosePetals_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_093" file="stl/RosePetals_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_094" file="stl/RosePetals_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_095" file="stl/RosePetals_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_096" file="stl/RosePetals_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_097" file="stl/RosePetals_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_098" file="stl/RosePetals_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_099" file="stl/RosePetals_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_100" file="stl/RosePetals_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_101" file="stl/RosePetals_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_102" file="stl/RosePetals_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_103" file="stl/RosePetals_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_104" file="stl/RosePetals_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_105" file="stl/RosePetals_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_106" file="stl/RosePetals_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_107" file="stl/RosePetals_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_108" file="stl/RosePetals_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_109" file="stl/RosePetals_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_110" file="stl/RosePetals_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_111" file="stl/RosePetals_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_112" file="stl/RosePetals_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_113" file="stl/RosePetals_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_114" file="stl/RosePetals_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_115" file="stl/RosePetals_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_116" file="stl/RosePetals_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_117" file="stl/RosePetals_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_118" file="stl/RosePetals_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_119" file="stl/RosePetals_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_120" file="stl/RosePetals_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_121" file="stl/RosePetals_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_122" file="stl/RosePetals_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_123" file="stl/RosePetals_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_124" file="stl/RosePetals_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_125" file="stl/RosePetals_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_126" file="stl/RosePetals_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_127" file="stl/RosePetals_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_128" file="stl/RosePetals_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_129" file="stl/RosePetals_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_130" file="stl/RosePetals_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_131" file="stl/RosePetals_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_132" file="stl/RosePetals_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_133" file="stl/RosePetals_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_134" file="stl/RosePetals_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_135" file="stl/RosePetals_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_136" file="stl/RosePetals_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_137" file="stl/RosePetals_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_138" file="stl/RosePetals_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_139" file="stl/RosePetals_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_140" file="stl/RosePetals_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_141" file="stl/RosePetals_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_142" file="stl/RosePetals_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_143" file="stl/RosePetals_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_144" file="stl/RosePetals_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_145" file="stl/RosePetals_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_146" file="stl/RosePetals_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_147" file="stl/RosePetals_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_148" file="stl/RosePetals_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_149" file="stl/RosePetals_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_150" file="stl/RosePetals_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_151" file="stl/RosePetals_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_152" file="stl/RosePetals_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_153" file="stl/RosePetals_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_154" file="stl/RosePetals_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_155" file="stl/RosePetals_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_156" file="stl/RosePetals_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_157" file="stl/RosePetals_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_158" file="stl/RosePetals_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_159" file="stl/RosePetals_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_160" file="stl/RosePetals_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_161" file="stl/RosePetals_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_162" file="stl/RosePetals_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_163" file="stl/RosePetals_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_164" file="stl/RosePetals_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_165" file="stl/RosePetals_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_166" file="stl/RosePetals_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_167" file="stl/RosePetals_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_168" file="stl/RosePetals_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_169" file="stl/RosePetals_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_170" file="stl/RosePetals_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_171" file="stl/RosePetals_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_172" file="stl/RosePetals_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_173" file="stl/RosePetals_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_174" file="stl/RosePetals_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_175" file="stl/RosePetals_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_176" file="stl/RosePetals_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_177" file="stl/RosePetals_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_178" file="stl/RosePetals_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_179" file="stl/RosePetals_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_180" file="stl/RosePetals_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_181" file="stl/RosePetals_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_182" file="stl/RosePetals_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_183" file="stl/RosePetals_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_184" file="stl/RosePetals_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_185" file="stl/RosePetals_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_186" file="stl/RosePetals_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_187" file="stl/RosePetals_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_188" file="stl/RosePetals_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_189" file="stl/RosePetals_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_190" file="stl/RosePetals_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_191" file="stl/RosePetals_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_192" file="stl/RosePetals_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_193" file="stl/RosePetals_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_194" file="stl/RosePetals_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_195" file="stl/RosePetals_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_196" file="stl/RosePetals_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_197" file="stl/RosePetals_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_198" file="stl/RosePetals_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_199" file="stl/RosePetals_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_200" file="stl/RosePetals_200.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_201" file="stl/RosePetals_201.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_202" file="stl/RosePetals_202.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_203" file="stl/RosePetals_203.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_204" file="stl/RosePetals_204.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_205" file="stl/RosePetals_205.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_206" file="stl/RosePetals_206.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_207" file="stl/RosePetals_207.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_208" file="stl/RosePetals_208.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_209" file="stl/RosePetals_209.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_210" file="stl/RosePetals_210.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_211" file="stl/RosePetals_211.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_212" file="stl/RosePetals_212.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_213" file="stl/RosePetals_213.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_214" file="stl/RosePetals_214.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_215" file="stl/RosePetals_215.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_216" file="stl/RosePetals_216.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_217" file="stl/RosePetals_217.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_218" file="stl/RosePetals_218.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_219" file="stl/RosePetals_219.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_220" file="stl/RosePetals_220.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_221" file="stl/RosePetals_221.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_222" file="stl/RosePetals_222.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_223" file="stl/RosePetals_223.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_224" file="stl/RosePetals_224.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_225" file="stl/RosePetals_225.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_226" file="stl/RosePetals_226.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_227" file="stl/RosePetals_227.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_228" file="stl/RosePetals_228.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_229" file="stl/RosePetals_229.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_230" file="stl/RosePetals_230.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_231" file="stl/RosePetals_231.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_232" file="stl/RosePetals_232.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_233" file="stl/RosePetals_233.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_234" file="stl/RosePetals_234.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_235" file="stl/RosePetals_235.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_236" file="stl/RosePetals_236.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_237" file="stl/RosePetals_237.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_238" file="stl/RosePetals_238.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_239" file="stl/RosePetals_239.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_240" file="stl/RosePetals_240.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_241" file="stl/RosePetals_241.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_242" file="stl/RosePetals_242.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_243" file="stl/RosePetals_243.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_244" file="stl/RosePetals_244.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_245" file="stl/RosePetals_245.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_246" file="stl/RosePetals_246.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_247" file="stl/RosePetals_247.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_248" file="stl/RosePetals_248.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_249" file="stl/RosePetals_249.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_250" file="stl/RosePetals_250.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_251" file="stl/RosePetals_251.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_252" file="stl/RosePetals_252.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_253" file="stl/RosePetals_253.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_254" file="stl/RosePetals_254.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_255" file="stl/RosePetals_255.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_256" file="stl/RosePetals_256.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_257" file="stl/RosePetals_257.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_258" file="stl/RosePetals_258.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_259" file="stl/RosePetals_259.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_260" file="stl/RosePetals_260.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_261" file="stl/RosePetals_261.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_262" file="stl/RosePetals_262.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_263" file="stl/RosePetals_263.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_264" file="stl/RosePetals_264.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_265" file="stl/RosePetals_265.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_266" file="stl/RosePetals_266.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_267" file="stl/RosePetals_267.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_268" file="stl/RosePetals_268.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_269" file="stl/RosePetals_269.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_270" file="stl/RosePetals_270.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_271" file="stl/RosePetals_271.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_272" file="stl/RosePetals_272.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_273" file="stl/RosePetals_273.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_274" file="stl/RosePetals_274.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_275" file="stl/RosePetals_275.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_276" file="stl/RosePetals_276.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_277" file="stl/RosePetals_277.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_278" file="stl/RosePetals_278.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_279" file="stl/RosePetals_279.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_280" file="stl/RosePetals_280.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_281" file="stl/RosePetals_281.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_282" file="stl/RosePetals_282.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_283" file="stl/RosePetals_283.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_284" file="stl/RosePetals_284.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_285" file="stl/RosePetals_285.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_286" file="stl/RosePetals_286.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_287" file="stl/RosePetals_287.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_288" file="stl/RosePetals_288.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_289" file="stl/RosePetals_289.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_290" file="stl/RosePetals_290.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_291" file="stl/RosePetals_291.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_292" file="stl/RosePetals_292.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_293" file="stl/RosePetals_293.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_294" file="stl/RosePetals_294.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_295" file="stl/RosePetals_295.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_296" file="stl/RosePetals_296.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_297" file="stl/RosePetals_297.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_298" file="stl/RosePetals_298.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_299" file="stl/RosePetals_299.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_300" file="stl/RosePetals_300.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_301" file="stl/RosePetals_301.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_302" file="stl/RosePetals_302.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_303" file="stl/RosePetals_303.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_304" file="stl/RosePetals_304.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_305" file="stl/RosePetals_305.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_306" file="stl/RosePetals_306.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_307" file="stl/RosePetals_307.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_308" file="stl/RosePetals_308.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_309" file="stl/RosePetals_309.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_310" file="stl/RosePetals_310.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_311" file="stl/RosePetals_311.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_312" file="stl/RosePetals_312.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_313" file="stl/RosePetals_313.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_314" file="stl/RosePetals_314.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_315" file="stl/RosePetals_315.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_316" file="stl/RosePetals_316.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_317" file="stl/RosePetals_317.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_318" file="stl/RosePetals_318.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_319" file="stl/RosePetals_319.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_320" file="stl/RosePetals_320.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_321" file="stl/RosePetals_321.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_322" file="stl/RosePetals_322.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_323" file="stl/RosePetals_323.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_324" file="stl/RosePetals_324.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_325" file="stl/RosePetals_325.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_326" file="stl/RosePetals_326.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_327" file="stl/RosePetals_327.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_328" file="stl/RosePetals_328.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_329" file="stl/RosePetals_329.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_330" file="stl/RosePetals_330.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_331" file="stl/RosePetals_331.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_332" file="stl/RosePetals_332.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_333" file="stl/RosePetals_333.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_334" file="stl/RosePetals_334.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_335" file="stl/RosePetals_335.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_336" file="stl/RosePetals_336.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_337" file="stl/RosePetals_337.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_338" file="stl/RosePetals_338.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_339" file="stl/RosePetals_339.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_340" file="stl/RosePetals_340.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_341" file="stl/RosePetals_341.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_342" file="stl/RosePetals_342.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_343" file="stl/RosePetals_343.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_344" file="stl/RosePetals_344.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_345" file="stl/RosePetals_345.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_346" file="stl/RosePetals_346.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_347" file="stl/RosePetals_347.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_348" file="stl/RosePetals_348.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_349" file="stl/RosePetals_349.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_350" file="stl/RosePetals_350.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_351" file="stl/RosePetals_351.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_352" file="stl/RosePetals_352.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_353" file="stl/RosePetals_353.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_354" file="stl/RosePetals_354.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_355" file="stl/RosePetals_355.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_356" file="stl/RosePetals_356.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_357" file="stl/RosePetals_357.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_358" file="stl/RosePetals_358.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_359" file="stl/RosePetals_359.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_360" file="stl/RosePetals_360.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_361" file="stl/RosePetals_361.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_362" file="stl/RosePetals_362.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_363" file="stl/RosePetals_363.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_364" file="stl/RosePetals_364.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_365" file="stl/RosePetals_365.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_366" file="stl/RosePetals_366.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_367" file="stl/RosePetals_367.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_368" file="stl/RosePetals_368.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_369" file="stl/RosePetals_369.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_370" file="stl/RosePetals_370.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_371" file="stl/RosePetals_371.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_372" file="stl/RosePetals_372.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_373" file="stl/RosePetals_373.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_374" file="stl/RosePetals_374.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_375" file="stl/RosePetals_375.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_376" file="stl/RosePetals_376.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_377" file="stl/RosePetals_377.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_378" file="stl/RosePetals_378.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_379" file="stl/RosePetals_379.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_380" file="stl/RosePetals_380.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_381" file="stl/RosePetals_381.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_382" file="stl/RosePetals_382.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_383" file="stl/RosePetals_383.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_384" file="stl/RosePetals_384.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_385" file="stl/RosePetals_385.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_386" file="stl/RosePetals_386.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_387" file="stl/RosePetals_387.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_388" file="stl/RosePetals_388.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_389" file="stl/RosePetals_389.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_390" file="stl/RosePetals_390.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_391" file="stl/RosePetals_391.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_392" file="stl/RosePetals_392.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_393" file="stl/RosePetals_393.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_394" file="stl/RosePetals_394.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_395" file="stl/RosePetals_395.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_396" file="stl/RosePetals_396.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_397" file="stl/RosePetals_397.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_398" file="stl/RosePetals_398.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_399" file="stl/RosePetals_399.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_400" file="stl/RosePetals_400.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RosePetals_401" file="stl/RosePetals_401.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot" file="obj/RoseRoot.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_001" file="stl/RoseRoot_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_002" file="stl/RoseRoot_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_003" file="stl/RoseRoot_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_004" file="stl/RoseRoot_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_005" file="stl/RoseRoot_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_006" file="stl/RoseRoot_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseRoot_007" file="stl/RoseRoot_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx" file="obj/RoseCalyx.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_001" file="stl/RoseCalyx_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_002" file="stl/RoseCalyx_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_003" file="stl/RoseCalyx_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_004" file="stl/RoseCalyx_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_005" file="stl/RoseCalyx_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_006" file="stl/RoseCalyx_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_007" file="stl/RoseCalyx_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_008" file="stl/RoseCalyx_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_009" file="stl/RoseCalyx_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_010" file="stl/RoseCalyx_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_011" file="stl/RoseCalyx_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_012" file="stl/RoseCalyx_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_013" file="stl/RoseCalyx_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_014" file="stl/RoseCalyx_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_015" file="stl/RoseCalyx_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_016" file="stl/RoseCalyx_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_017" file="stl/RoseCalyx_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_018" file="stl/RoseCalyx_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_019" file="stl/RoseCalyx_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_020" file="stl/RoseCalyx_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_021" file="stl/RoseCalyx_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseCalyx_022" file="stl/RoseCalyx_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf" file="obj/RoseFloralLeaf.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_001" file="stl/RoseFloralLeaf_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_002" file="stl/RoseFloralLeaf_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_003" file="stl/RoseFloralLeaf_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_004" file="stl/RoseFloralLeaf_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_005" file="stl/RoseFloralLeaf_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_006" file="stl/RoseFloralLeaf_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_007" file="stl/RoseFloralLeaf_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_008" file="stl/RoseFloralLeaf_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_009" file="stl/RoseFloralLeaf_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_010" file="stl/RoseFloralLeaf_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_011" file="stl/RoseFloralLeaf_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_012" file="stl/RoseFloralLeaf_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_013" file="stl/RoseFloralLeaf_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_014" file="stl/RoseFloralLeaf_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_015" file="stl/RoseFloralLeaf_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_016" file="stl/RoseFloralLeaf_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_017" file="stl/RoseFloralLeaf_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_018" file="stl/RoseFloralLeaf_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_019" file="stl/RoseFloralLeaf_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_020" file="stl/RoseFloralLeaf_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_021" file="stl/RoseFloralLeaf_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_022" file="stl/RoseFloralLeaf_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_023" file="stl/RoseFloralLeaf_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_024" file="stl/RoseFloralLeaf_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_025" file="stl/RoseFloralLeaf_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_026" file="stl/RoseFloralLeaf_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_027" file="stl/RoseFloralLeaf_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_028" file="stl/RoseFloralLeaf_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_029" file="stl/RoseFloralLeaf_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_030" file="stl/RoseFloralLeaf_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_031" file="stl/RoseFloralLeaf_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_032" file="stl/RoseFloralLeaf_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_033" file="stl/RoseFloralLeaf_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoseFloralLeaf_034" file="stl/RoseFloralLeaf_034.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_RosePetals" texture="T_RosePetals"/>
+		<material name="M_RoseRoot" texture="T_RoseRoot"/>
+		<material name="M_RoseCalyx" texture="T_RoseCalyx"/>
+		<material name="M_RoseFloralLeaf" texture="T_RoseFloralLeaf"/>
+		<texture name="T_RosePetals" type="2d" file="T_RosePetals.png"/>
+		<texture name="T_RoseRoot" type="2d" file="T_RoseRoot.png"/>
+		<texture name="T_RoseCalyx" type="2d" file="T_RoseCalyx.png"/>
+		<texture name="T_RoseFloralLeaf" type="2d" file="T_RoseFloralLeaf.png"/>
+	</asset>
+	<worldbody>
+		<body name="rose" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="rose_petals" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="-0.16223427653312683" pos="-0.012381861917674541 -0.00024809391470625997 0.00022927651298232377" quat="0.9940401911735535 -0.10821308940649033 0.009218238294124603 0.009437276050448418" diaginertia="9.657635928306263e-06 0.00017099553951993585 0.00017224920156877488"/>
+				<geom name="RosePetals" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals" material="M_RosePetals" class="visual"/>
+				<geom name="RosePetals_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_001" class="collision"/>
+				<geom name="RosePetals_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_002" class="collision"/>
+				<geom name="RosePetals_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_003" class="collision"/>
+				<geom name="RosePetals_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_004" class="collision"/>
+				<geom name="RosePetals_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_005" class="collision"/>
+				<geom name="RosePetals_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_006" class="collision"/>
+				<geom name="RosePetals_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_007" class="collision"/>
+				<geom name="RosePetals_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_008" class="collision"/>
+				<geom name="RosePetals_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_009" class="collision"/>
+				<geom name="RosePetals_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_010" class="collision"/>
+				<geom name="RosePetals_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_011" class="collision"/>
+				<geom name="RosePetals_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_012" class="collision"/>
+				<geom name="RosePetals_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_013" class="collision"/>
+				<geom name="RosePetals_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_014" class="collision"/>
+				<geom name="RosePetals_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_015" class="collision"/>
+				<geom name="RosePetals_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_016" class="collision"/>
+				<geom name="RosePetals_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_017" class="collision"/>
+				<geom name="RosePetals_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_018" class="collision"/>
+				<geom name="RosePetals_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_019" class="collision"/>
+				<geom name="RosePetals_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_020" class="collision"/>
+				<geom name="RosePetals_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_021" class="collision"/>
+				<geom name="RosePetals_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_022" class="collision"/>
+				<geom name="RosePetals_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_023" class="collision"/>
+				<geom name="RosePetals_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_024" class="collision"/>
+				<geom name="RosePetals_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_025" class="collision"/>
+				<geom name="RosePetals_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_026" class="collision"/>
+				<geom name="RosePetals_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_027" class="collision"/>
+				<geom name="RosePetals_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_028" class="collision"/>
+				<geom name="RosePetals_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_029" class="collision"/>
+				<geom name="RosePetals_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_030" class="collision"/>
+				<geom name="RosePetals_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_031" class="collision"/>
+				<geom name="RosePetals_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_032" class="collision"/>
+				<geom name="RosePetals_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_033" class="collision"/>
+				<geom name="RosePetals_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_034" class="collision"/>
+				<geom name="RosePetals_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_035" class="collision"/>
+				<geom name="RosePetals_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_036" class="collision"/>
+				<geom name="RosePetals_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_037" class="collision"/>
+				<geom name="RosePetals_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_038" class="collision"/>
+				<geom name="RosePetals_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_039" class="collision"/>
+				<geom name="RosePetals_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_040" class="collision"/>
+				<geom name="RosePetals_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_041" class="collision"/>
+				<geom name="RosePetals_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_042" class="collision"/>
+				<geom name="RosePetals_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_043" class="collision"/>
+				<geom name="RosePetals_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_044" class="collision"/>
+				<geom name="RosePetals_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_045" class="collision"/>
+				<geom name="RosePetals_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_046" class="collision"/>
+				<geom name="RosePetals_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_047" class="collision"/>
+				<geom name="RosePetals_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_048" class="collision"/>
+				<geom name="RosePetals_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_049" class="collision"/>
+				<geom name="RosePetals_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_050" class="collision"/>
+				<geom name="RosePetals_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_051" class="collision"/>
+				<geom name="RosePetals_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_052" class="collision"/>
+				<geom name="RosePetals_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_053" class="collision"/>
+				<geom name="RosePetals_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_054" class="collision"/>
+				<geom name="RosePetals_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_055" class="collision"/>
+				<geom name="RosePetals_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_056" class="collision"/>
+				<geom name="RosePetals_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_057" class="collision"/>
+				<geom name="RosePetals_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_058" class="collision"/>
+				<geom name="RosePetals_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_059" class="collision"/>
+				<geom name="RosePetals_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_060" class="collision"/>
+				<geom name="RosePetals_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_061" class="collision"/>
+				<geom name="RosePetals_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_062" class="collision"/>
+				<geom name="RosePetals_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_063" class="collision"/>
+				<geom name="RosePetals_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_064" class="collision"/>
+				<geom name="RosePetals_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_065" class="collision"/>
+				<geom name="RosePetals_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_066" class="collision"/>
+				<geom name="RosePetals_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_067" class="collision"/>
+				<geom name="RosePetals_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_068" class="collision"/>
+				<geom name="RosePetals_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_069" class="collision"/>
+				<geom name="RosePetals_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_070" class="collision"/>
+				<geom name="RosePetals_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_071" class="collision"/>
+				<geom name="RosePetals_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_072" class="collision"/>
+				<geom name="RosePetals_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_073" class="collision"/>
+				<geom name="RosePetals_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_074" class="collision"/>
+				<geom name="RosePetals_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_075" class="collision"/>
+				<geom name="RosePetals_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_076" class="collision"/>
+				<geom name="RosePetals_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_077" class="collision"/>
+				<geom name="RosePetals_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_078" class="collision"/>
+				<geom name="RosePetals_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_079" class="collision"/>
+				<geom name="RosePetals_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_080" class="collision"/>
+				<geom name="RosePetals_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_081" class="collision"/>
+				<geom name="RosePetals_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_082" class="collision"/>
+				<geom name="RosePetals_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_083" class="collision"/>
+				<geom name="RosePetals_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_084" class="collision"/>
+				<geom name="RosePetals_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_085" class="collision"/>
+				<geom name="RosePetals_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_086" class="collision"/>
+				<geom name="RosePetals_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_087" class="collision"/>
+				<geom name="RosePetals_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_088" class="collision"/>
+				<geom name="RosePetals_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_089" class="collision"/>
+				<geom name="RosePetals_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_090" class="collision"/>
+				<geom name="RosePetals_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_091" class="collision"/>
+				<geom name="RosePetals_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_092" class="collision"/>
+				<geom name="RosePetals_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_093" class="collision"/>
+				<geom name="RosePetals_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_094" class="collision"/>
+				<geom name="RosePetals_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_095" class="collision"/>
+				<geom name="RosePetals_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_096" class="collision"/>
+				<geom name="RosePetals_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_097" class="collision"/>
+				<geom name="RosePetals_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_098" class="collision"/>
+				<geom name="RosePetals_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_099" class="collision"/>
+				<geom name="RosePetals_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_100" class="collision"/>
+				<geom name="RosePetals_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_101" class="collision"/>
+				<geom name="RosePetals_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_102" class="collision"/>
+				<geom name="RosePetals_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_103" class="collision"/>
+				<geom name="RosePetals_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_104" class="collision"/>
+				<geom name="RosePetals_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_105" class="collision"/>
+				<geom name="RosePetals_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_106" class="collision"/>
+				<geom name="RosePetals_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_107" class="collision"/>
+				<geom name="RosePetals_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_108" class="collision"/>
+				<geom name="RosePetals_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_109" class="collision"/>
+				<geom name="RosePetals_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_110" class="collision"/>
+				<geom name="RosePetals_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_111" class="collision"/>
+				<geom name="RosePetals_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_112" class="collision"/>
+				<geom name="RosePetals_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_113" class="collision"/>
+				<geom name="RosePetals_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_114" class="collision"/>
+				<geom name="RosePetals_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_115" class="collision"/>
+				<geom name="RosePetals_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_116" class="collision"/>
+				<geom name="RosePetals_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_117" class="collision"/>
+				<geom name="RosePetals_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_118" class="collision"/>
+				<geom name="RosePetals_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_119" class="collision"/>
+				<geom name="RosePetals_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_120" class="collision"/>
+				<geom name="RosePetals_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_121" class="collision"/>
+				<geom name="RosePetals_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_122" class="collision"/>
+				<geom name="RosePetals_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_123" class="collision"/>
+				<geom name="RosePetals_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_124" class="collision"/>
+				<geom name="RosePetals_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_125" class="collision"/>
+				<geom name="RosePetals_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_126" class="collision"/>
+				<geom name="RosePetals_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_127" class="collision"/>
+				<geom name="RosePetals_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_128" class="collision"/>
+				<geom name="RosePetals_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_129" class="collision"/>
+				<geom name="RosePetals_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_130" class="collision"/>
+				<geom name="RosePetals_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_131" class="collision"/>
+				<geom name="RosePetals_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_132" class="collision"/>
+				<geom name="RosePetals_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_133" class="collision"/>
+				<geom name="RosePetals_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_134" class="collision"/>
+				<geom name="RosePetals_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_135" class="collision"/>
+				<geom name="RosePetals_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_136" class="collision"/>
+				<geom name="RosePetals_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_137" class="collision"/>
+				<geom name="RosePetals_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_138" class="collision"/>
+				<geom name="RosePetals_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_139" class="collision"/>
+				<geom name="RosePetals_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_140" class="collision"/>
+				<geom name="RosePetals_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_141" class="collision"/>
+				<geom name="RosePetals_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_142" class="collision"/>
+				<geom name="RosePetals_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_143" class="collision"/>
+				<geom name="RosePetals_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_144" class="collision"/>
+				<geom name="RosePetals_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_145" class="collision"/>
+				<geom name="RosePetals_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_146" class="collision"/>
+				<geom name="RosePetals_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_147" class="collision"/>
+				<geom name="RosePetals_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_148" class="collision"/>
+				<geom name="RosePetals_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_149" class="collision"/>
+				<geom name="RosePetals_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_150" class="collision"/>
+				<geom name="RosePetals_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_151" class="collision"/>
+				<geom name="RosePetals_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_152" class="collision"/>
+				<geom name="RosePetals_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_153" class="collision"/>
+				<geom name="RosePetals_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_154" class="collision"/>
+				<geom name="RosePetals_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_155" class="collision"/>
+				<geom name="RosePetals_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_156" class="collision"/>
+				<geom name="RosePetals_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_157" class="collision"/>
+				<geom name="RosePetals_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_158" class="collision"/>
+				<geom name="RosePetals_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_159" class="collision"/>
+				<geom name="RosePetals_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_160" class="collision"/>
+				<geom name="RosePetals_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_161" class="collision"/>
+				<geom name="RosePetals_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_162" class="collision"/>
+				<geom name="RosePetals_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_163" class="collision"/>
+				<geom name="RosePetals_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_164" class="collision"/>
+				<geom name="RosePetals_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_165" class="collision"/>
+				<geom name="RosePetals_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_166" class="collision"/>
+				<geom name="RosePetals_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_167" class="collision"/>
+				<geom name="RosePetals_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_168" class="collision"/>
+				<geom name="RosePetals_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_169" class="collision"/>
+				<geom name="RosePetals_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_170" class="collision"/>
+				<geom name="RosePetals_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_171" class="collision"/>
+				<geom name="RosePetals_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_172" class="collision"/>
+				<geom name="RosePetals_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_173" class="collision"/>
+				<geom name="RosePetals_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_174" class="collision"/>
+				<geom name="RosePetals_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_175" class="collision"/>
+				<geom name="RosePetals_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_176" class="collision"/>
+				<geom name="RosePetals_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_177" class="collision"/>
+				<geom name="RosePetals_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_178" class="collision"/>
+				<geom name="RosePetals_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_179" class="collision"/>
+				<geom name="RosePetals_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_180" class="collision"/>
+				<geom name="RosePetals_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_181" class="collision"/>
+				<geom name="RosePetals_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_182" class="collision"/>
+				<geom name="RosePetals_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_183" class="collision"/>
+				<geom name="RosePetals_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_184" class="collision"/>
+				<geom name="RosePetals_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_185" class="collision"/>
+				<geom name="RosePetals_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_186" class="collision"/>
+				<geom name="RosePetals_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_187" class="collision"/>
+				<geom name="RosePetals_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_188" class="collision"/>
+				<geom name="RosePetals_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_189" class="collision"/>
+				<geom name="RosePetals_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_190" class="collision"/>
+				<geom name="RosePetals_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_191" class="collision"/>
+				<geom name="RosePetals_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_192" class="collision"/>
+				<geom name="RosePetals_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_193" class="collision"/>
+				<geom name="RosePetals_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_194" class="collision"/>
+				<geom name="RosePetals_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_195" class="collision"/>
+				<geom name="RosePetals_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_196" class="collision"/>
+				<geom name="RosePetals_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_197" class="collision"/>
+				<geom name="RosePetals_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_198" class="collision"/>
+				<geom name="RosePetals_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_199" class="collision"/>
+				<geom name="RosePetals_200" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_200" class="collision"/>
+				<geom name="RosePetals_201" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_201" class="collision"/>
+				<geom name="RosePetals_202" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_202" class="collision"/>
+				<geom name="RosePetals_203" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_203" class="collision"/>
+				<geom name="RosePetals_204" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_204" class="collision"/>
+				<geom name="RosePetals_205" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_205" class="collision"/>
+				<geom name="RosePetals_206" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_206" class="collision"/>
+				<geom name="RosePetals_207" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_207" class="collision"/>
+				<geom name="RosePetals_208" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_208" class="collision"/>
+				<geom name="RosePetals_209" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_209" class="collision"/>
+				<geom name="RosePetals_210" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_210" class="collision"/>
+				<geom name="RosePetals_211" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_211" class="collision"/>
+				<geom name="RosePetals_212" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_212" class="collision"/>
+				<geom name="RosePetals_213" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_213" class="collision"/>
+				<geom name="RosePetals_214" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_214" class="collision"/>
+				<geom name="RosePetals_215" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_215" class="collision"/>
+				<geom name="RosePetals_216" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_216" class="collision"/>
+				<geom name="RosePetals_217" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_217" class="collision"/>
+				<geom name="RosePetals_218" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_218" class="collision"/>
+				<geom name="RosePetals_219" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_219" class="collision"/>
+				<geom name="RosePetals_220" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_220" class="collision"/>
+				<geom name="RosePetals_221" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_221" class="collision"/>
+				<geom name="RosePetals_222" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_222" class="collision"/>
+				<geom name="RosePetals_223" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_223" class="collision"/>
+				<geom name="RosePetals_224" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_224" class="collision"/>
+				<geom name="RosePetals_225" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_225" class="collision"/>
+				<geom name="RosePetals_226" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_226" class="collision"/>
+				<geom name="RosePetals_227" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_227" class="collision"/>
+				<geom name="RosePetals_228" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_228" class="collision"/>
+				<geom name="RosePetals_229" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_229" class="collision"/>
+				<geom name="RosePetals_230" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_230" class="collision"/>
+				<geom name="RosePetals_231" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_231" class="collision"/>
+				<geom name="RosePetals_232" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_232" class="collision"/>
+				<geom name="RosePetals_233" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_233" class="collision"/>
+				<geom name="RosePetals_234" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_234" class="collision"/>
+				<geom name="RosePetals_235" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_235" class="collision"/>
+				<geom name="RosePetals_236" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_236" class="collision"/>
+				<geom name="RosePetals_237" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_237" class="collision"/>
+				<geom name="RosePetals_238" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_238" class="collision"/>
+				<geom name="RosePetals_239" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_239" class="collision"/>
+				<geom name="RosePetals_240" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_240" class="collision"/>
+				<geom name="RosePetals_241" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_241" class="collision"/>
+				<geom name="RosePetals_242" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_242" class="collision"/>
+				<geom name="RosePetals_243" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_243" class="collision"/>
+				<geom name="RosePetals_244" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_244" class="collision"/>
+				<geom name="RosePetals_245" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_245" class="collision"/>
+				<geom name="RosePetals_246" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_246" class="collision"/>
+				<geom name="RosePetals_247" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_247" class="collision"/>
+				<geom name="RosePetals_248" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_248" class="collision"/>
+				<geom name="RosePetals_249" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_249" class="collision"/>
+				<geom name="RosePetals_250" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_250" class="collision"/>
+				<geom name="RosePetals_251" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_251" class="collision"/>
+				<geom name="RosePetals_252" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_252" class="collision"/>
+				<geom name="RosePetals_253" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_253" class="collision"/>
+				<geom name="RosePetals_254" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_254" class="collision"/>
+				<geom name="RosePetals_255" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_255" class="collision"/>
+				<geom name="RosePetals_256" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_256" class="collision"/>
+				<geom name="RosePetals_257" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_257" class="collision"/>
+				<geom name="RosePetals_258" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_258" class="collision"/>
+				<geom name="RosePetals_259" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_259" class="collision"/>
+				<geom name="RosePetals_260" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_260" class="collision"/>
+				<geom name="RosePetals_261" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_261" class="collision"/>
+				<geom name="RosePetals_262" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_262" class="collision"/>
+				<geom name="RosePetals_263" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_263" class="collision"/>
+				<geom name="RosePetals_264" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_264" class="collision"/>
+				<geom name="RosePetals_265" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_265" class="collision"/>
+				<geom name="RosePetals_266" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_266" class="collision"/>
+				<geom name="RosePetals_267" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_267" class="collision"/>
+				<geom name="RosePetals_268" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_268" class="collision"/>
+				<geom name="RosePetals_269" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_269" class="collision"/>
+				<geom name="RosePetals_270" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_270" class="collision"/>
+				<geom name="RosePetals_271" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_271" class="collision"/>
+				<geom name="RosePetals_272" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_272" class="collision"/>
+				<geom name="RosePetals_273" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_273" class="collision"/>
+				<geom name="RosePetals_274" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_274" class="collision"/>
+				<geom name="RosePetals_275" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_275" class="collision"/>
+				<geom name="RosePetals_276" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_276" class="collision"/>
+				<geom name="RosePetals_277" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_277" class="collision"/>
+				<geom name="RosePetals_278" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_278" class="collision"/>
+				<geom name="RosePetals_279" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_279" class="collision"/>
+				<geom name="RosePetals_280" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_280" class="collision"/>
+				<geom name="RosePetals_281" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_281" class="collision"/>
+				<geom name="RosePetals_282" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_282" class="collision"/>
+				<geom name="RosePetals_283" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_283" class="collision"/>
+				<geom name="RosePetals_284" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_284" class="collision"/>
+				<geom name="RosePetals_285" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_285" class="collision"/>
+				<geom name="RosePetals_286" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_286" class="collision"/>
+				<geom name="RosePetals_287" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_287" class="collision"/>
+				<geom name="RosePetals_288" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_288" class="collision"/>
+				<geom name="RosePetals_289" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_289" class="collision"/>
+				<geom name="RosePetals_290" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_290" class="collision"/>
+				<geom name="RosePetals_291" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_291" class="collision"/>
+				<geom name="RosePetals_292" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_292" class="collision"/>
+				<geom name="RosePetals_293" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_293" class="collision"/>
+				<geom name="RosePetals_294" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_294" class="collision"/>
+				<geom name="RosePetals_295" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_295" class="collision"/>
+				<geom name="RosePetals_296" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_296" class="collision"/>
+				<geom name="RosePetals_297" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_297" class="collision"/>
+				<geom name="RosePetals_298" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_298" class="collision"/>
+				<geom name="RosePetals_299" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_299" class="collision"/>
+				<geom name="RosePetals_300" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_300" class="collision"/>
+				<geom name="RosePetals_301" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_301" class="collision"/>
+				<geom name="RosePetals_302" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_302" class="collision"/>
+				<geom name="RosePetals_303" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_303" class="collision"/>
+				<geom name="RosePetals_304" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_304" class="collision"/>
+				<geom name="RosePetals_305" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_305" class="collision"/>
+				<geom name="RosePetals_306" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_306" class="collision"/>
+				<geom name="RosePetals_307" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_307" class="collision"/>
+				<geom name="RosePetals_308" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_308" class="collision"/>
+				<geom name="RosePetals_309" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_309" class="collision"/>
+				<geom name="RosePetals_310" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_310" class="collision"/>
+				<geom name="RosePetals_311" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_311" class="collision"/>
+				<geom name="RosePetals_312" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_312" class="collision"/>
+				<geom name="RosePetals_313" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_313" class="collision"/>
+				<geom name="RosePetals_314" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_314" class="collision"/>
+				<geom name="RosePetals_315" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_315" class="collision"/>
+				<geom name="RosePetals_316" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_316" class="collision"/>
+				<geom name="RosePetals_317" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_317" class="collision"/>
+				<geom name="RosePetals_318" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_318" class="collision"/>
+				<geom name="RosePetals_319" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_319" class="collision"/>
+				<geom name="RosePetals_320" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_320" class="collision"/>
+				<geom name="RosePetals_321" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_321" class="collision"/>
+				<geom name="RosePetals_322" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_322" class="collision"/>
+				<geom name="RosePetals_323" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_323" class="collision"/>
+				<geom name="RosePetals_324" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_324" class="collision"/>
+				<geom name="RosePetals_325" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_325" class="collision"/>
+				<geom name="RosePetals_326" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_326" class="collision"/>
+				<geom name="RosePetals_327" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_327" class="collision"/>
+				<geom name="RosePetals_328" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_328" class="collision"/>
+				<geom name="RosePetals_329" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_329" class="collision"/>
+				<geom name="RosePetals_330" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_330" class="collision"/>
+				<geom name="RosePetals_331" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_331" class="collision"/>
+				<geom name="RosePetals_332" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_332" class="collision"/>
+				<geom name="RosePetals_333" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_333" class="collision"/>
+				<geom name="RosePetals_334" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_334" class="collision"/>
+				<geom name="RosePetals_335" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_335" class="collision"/>
+				<geom name="RosePetals_336" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_336" class="collision"/>
+				<geom name="RosePetals_337" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_337" class="collision"/>
+				<geom name="RosePetals_338" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_338" class="collision"/>
+				<geom name="RosePetals_339" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_339" class="collision"/>
+				<geom name="RosePetals_340" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_340" class="collision"/>
+				<geom name="RosePetals_341" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_341" class="collision"/>
+				<geom name="RosePetals_342" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_342" class="collision"/>
+				<geom name="RosePetals_343" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_343" class="collision"/>
+				<geom name="RosePetals_344" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_344" class="collision"/>
+				<geom name="RosePetals_345" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_345" class="collision"/>
+				<geom name="RosePetals_346" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_346" class="collision"/>
+				<geom name="RosePetals_347" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_347" class="collision"/>
+				<geom name="RosePetals_348" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_348" class="collision"/>
+				<geom name="RosePetals_349" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_349" class="collision"/>
+				<geom name="RosePetals_350" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_350" class="collision"/>
+				<geom name="RosePetals_351" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_351" class="collision"/>
+				<geom name="RosePetals_352" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_352" class="collision"/>
+				<geom name="RosePetals_353" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_353" class="collision"/>
+				<geom name="RosePetals_354" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_354" class="collision"/>
+				<geom name="RosePetals_355" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_355" class="collision"/>
+				<geom name="RosePetals_356" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_356" class="collision"/>
+				<geom name="RosePetals_357" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_357" class="collision"/>
+				<geom name="RosePetals_358" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_358" class="collision"/>
+				<geom name="RosePetals_359" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_359" class="collision"/>
+				<geom name="RosePetals_360" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_360" class="collision"/>
+				<geom name="RosePetals_361" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_361" class="collision"/>
+				<geom name="RosePetals_362" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_362" class="collision"/>
+				<geom name="RosePetals_363" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_363" class="collision"/>
+				<geom name="RosePetals_364" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_364" class="collision"/>
+				<geom name="RosePetals_365" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_365" class="collision"/>
+				<geom name="RosePetals_366" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_366" class="collision"/>
+				<geom name="RosePetals_367" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_367" class="collision"/>
+				<geom name="RosePetals_368" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_368" class="collision"/>
+				<geom name="RosePetals_369" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_369" class="collision"/>
+				<geom name="RosePetals_370" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_370" class="collision"/>
+				<geom name="RosePetals_371" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_371" class="collision"/>
+				<geom name="RosePetals_372" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_372" class="collision"/>
+				<geom name="RosePetals_373" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_373" class="collision"/>
+				<geom name="RosePetals_374" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_374" class="collision"/>
+				<geom name="RosePetals_375" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_375" class="collision"/>
+				<geom name="RosePetals_376" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_376" class="collision"/>
+				<geom name="RosePetals_377" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_377" class="collision"/>
+				<geom name="RosePetals_378" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_378" class="collision"/>
+				<geom name="RosePetals_379" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_379" class="collision"/>
+				<geom name="RosePetals_380" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_380" class="collision"/>
+				<geom name="RosePetals_381" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_381" class="collision"/>
+				<geom name="RosePetals_382" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_382" class="collision"/>
+				<geom name="RosePetals_383" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_383" class="collision"/>
+				<geom name="RosePetals_384" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_384" class="collision"/>
+				<geom name="RosePetals_385" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_385" class="collision"/>
+				<geom name="RosePetals_386" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_386" class="collision"/>
+				<geom name="RosePetals_387" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_387" class="collision"/>
+				<geom name="RosePetals_388" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_388" class="collision"/>
+				<geom name="RosePetals_389" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_389" class="collision"/>
+				<geom name="RosePetals_390" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_390" class="collision"/>
+				<geom name="RosePetals_391" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_391" class="collision"/>
+				<geom name="RosePetals_392" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_392" class="collision"/>
+				<geom name="RosePetals_393" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_393" class="collision"/>
+				<geom name="RosePetals_394" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_394" class="collision"/>
+				<geom name="RosePetals_395" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_395" class="collision"/>
+				<geom name="RosePetals_396" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_396" class="collision"/>
+				<geom name="RosePetals_397" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_397" class="collision"/>
+				<geom name="RosePetals_398" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_398" class="collision"/>
+				<geom name="RosePetals_399" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_399" class="collision"/>
+				<geom name="RosePetals_400" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_400" class="collision"/>
+				<geom name="RosePetals_401" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RosePetals_401" class="collision"/>
+			</body>
+			<body name="rose_calyx" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="-0.004718065727502108" pos="-0.00029161220300011337 1.2120858627895359e-05 2.855518459909945e-06" quat="-0.5505514144897461 0.8344906568527222 -0.02088000439107418 0.00908063817769289" diaginertia="2.229966211686474e-09 9.192621064357809e-08 9.23509517747334e-08"/>
+				<geom name="RoseCalyx" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx" material="M_RoseCalyx" class="visual"/>
+				<geom name="RoseCalyx_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_001" class="collision"/>
+				<geom name="RoseCalyx_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_002" class="collision"/>
+				<geom name="RoseCalyx_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_003" class="collision"/>
+				<geom name="RoseCalyx_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_004" class="collision"/>
+				<geom name="RoseCalyx_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_005" class="collision"/>
+				<geom name="RoseCalyx_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_006" class="collision"/>
+				<geom name="RoseCalyx_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_007" class="collision"/>
+				<geom name="RoseCalyx_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_008" class="collision"/>
+				<geom name="RoseCalyx_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_009" class="collision"/>
+				<geom name="RoseCalyx_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_010" class="collision"/>
+				<geom name="RoseCalyx_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_011" class="collision"/>
+				<geom name="RoseCalyx_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_012" class="collision"/>
+				<geom name="RoseCalyx_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_013" class="collision"/>
+				<geom name="RoseCalyx_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_014" class="collision"/>
+				<geom name="RoseCalyx_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_015" class="collision"/>
+				<geom name="RoseCalyx_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_016" class="collision"/>
+				<geom name="RoseCalyx_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_017" class="collision"/>
+				<geom name="RoseCalyx_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_018" class="collision"/>
+				<geom name="RoseCalyx_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_019" class="collision"/>
+				<geom name="RoseCalyx_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_020" class="collision"/>
+				<geom name="RoseCalyx_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_021" class="collision"/>
+				<geom name="RoseCalyx_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseCalyx_022" class="collision"/>
+			</body>
+			<body name="rose_root" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0019441425101831555" pos="-0.035486865788698196 -0.001700622495263815 -0.02400393970310688" quat="-0.6479780673980713 0.7415880560874939 0.10718999803066254 0.13668176531791687" diaginertia="3.747703942735825e-07 1.3944459169579204e-05 1.426479411748005e-05"/>
+				<geom name="RoseRoot" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot" material="M_RoseRoot" class="visual"/>
+				<geom name="RoseRoot_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_001" class="collision"/>
+				<geom name="RoseRoot_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_002" class="collision"/>
+				<geom name="RoseRoot_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_003" class="collision"/>
+				<geom name="RoseRoot_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_004" class="collision"/>
+				<geom name="RoseRoot_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_005" class="collision"/>
+				<geom name="RoseRoot_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_006" class="collision"/>
+				<geom name="RoseRoot_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseRoot_007" class="collision"/>
+			</body>
+			<body name="rose_floral_leaf" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.016094328835606575" pos="0.03602774441242218 0.0038407198153436184 0.013242444954812527" quat="0.8706114888191223 0.4154679477214813 -0.17730379104614258 0.1948983073234558" diaginertia="1.7687734725768678e-05 3.072547769988887e-05 4.581491157296114e-05"/>
+				<geom name="RoseFloralLeaf" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf" material="M_RoseFloralLeaf" class="visual"/>
+				<geom name="RoseFloralLeaf_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_001" class="collision"/>
+				<geom name="RoseFloralLeaf_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_002" class="collision"/>
+				<geom name="RoseFloralLeaf_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_003" class="collision"/>
+				<geom name="RoseFloralLeaf_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_004" class="collision"/>
+				<geom name="RoseFloralLeaf_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_005" class="collision"/>
+				<geom name="RoseFloralLeaf_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_006" class="collision"/>
+				<geom name="RoseFloralLeaf_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_007" class="collision"/>
+				<geom name="RoseFloralLeaf_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_008" class="collision"/>
+				<geom name="RoseFloralLeaf_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_009" class="collision"/>
+				<geom name="RoseFloralLeaf_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_010" class="collision"/>
+				<geom name="RoseFloralLeaf_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_011" class="collision"/>
+				<geom name="RoseFloralLeaf_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_012" class="collision"/>
+				<geom name="RoseFloralLeaf_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_013" class="collision"/>
+				<geom name="RoseFloralLeaf_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_014" class="collision"/>
+				<geom name="RoseFloralLeaf_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_015" class="collision"/>
+				<geom name="RoseFloralLeaf_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_016" class="collision"/>
+				<geom name="RoseFloralLeaf_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_017" class="collision"/>
+				<geom name="RoseFloralLeaf_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_018" class="collision"/>
+				<geom name="RoseFloralLeaf_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_019" class="collision"/>
+				<geom name="RoseFloralLeaf_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_020" class="collision"/>
+				<geom name="RoseFloralLeaf_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_021" class="collision"/>
+				<geom name="RoseFloralLeaf_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_022" class="collision"/>
+				<geom name="RoseFloralLeaf_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_023" class="collision"/>
+				<geom name="RoseFloralLeaf_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_024" class="collision"/>
+				<geom name="RoseFloralLeaf_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_025" class="collision"/>
+				<geom name="RoseFloralLeaf_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_026" class="collision"/>
+				<geom name="RoseFloralLeaf_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_027" class="collision"/>
+				<geom name="RoseFloralLeaf_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_028" class="collision"/>
+				<geom name="RoseFloralLeaf_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_029" class="collision"/>
+				<geom name="RoseFloralLeaf_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_030" class="collision"/>
+				<geom name="RoseFloralLeaf_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_031" class="collision"/>
+				<geom name="RoseFloralLeaf_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_032" class="collision"/>
+				<geom name="RoseFloralLeaf_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_033" class="collision"/>
+				<geom name="RoseFloralLeaf_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoseFloralLeaf_034" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

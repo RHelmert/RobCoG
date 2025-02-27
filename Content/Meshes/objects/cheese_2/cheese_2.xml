@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<mujoco model="cheese_2">
+	<compiler meshdir="cheese_2/meshes" texturedir="cheese_2/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Cheese2" file="obj/Cheese2.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_001" file="stl/Cheese2_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_002" file="stl/Cheese2_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_003" file="stl/Cheese2_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_004" file="stl/Cheese2_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_005" file="stl/Cheese2_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_006" file="stl/Cheese2_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_007" file="stl/Cheese2_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_008" file="stl/Cheese2_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_009" file="stl/Cheese2_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_010" file="stl/Cheese2_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_011" file="stl/Cheese2_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_012" file="stl/Cheese2_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_013" file="stl/Cheese2_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_014" file="stl/Cheese2_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_015" file="stl/Cheese2_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_016" file="stl/Cheese2_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_017" file="stl/Cheese2_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_018" file="stl/Cheese2_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_019" file="stl/Cheese2_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_020" file="stl/Cheese2_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_021" file="stl/Cheese2_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_022" file="stl/Cheese2_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_023" file="stl/Cheese2_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_024" file="stl/Cheese2_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_025" file="stl/Cheese2_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_026" file="stl/Cheese2_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_027" file="stl/Cheese2_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_028" file="stl/Cheese2_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_029" file="stl/Cheese2_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_030" file="stl/Cheese2_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese2_031" file="stl/Cheese2_031.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Cheese2" texture="T_Cheese2"/>
+		<texture name="T_Cheese2" type="2d" file="T_Cheese2.png"/>
+	</asset>
+	<worldbody>
+		<body name="cheese_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.6631571054458618" pos="-1.0164034392801113e-05 0.011534037068486214 -0.001836750889196992" quat="0.9981549382209778 -0.05943622440099716 0.0012923438334837556 0.012344392016530037" diaginertia="0.0007071096915751696 0.0007440028712153435 0.0010691877687349916"/>
+			<geom name="Cheese2" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2" material="M_Cheese2" class="visual"/>
+			<geom name="Cheese2_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_001" class="collision"/>
+			<geom name="Cheese2_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_002" class="collision"/>
+			<geom name="Cheese2_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_003" class="collision"/>
+			<geom name="Cheese2_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_004" class="collision"/>
+			<geom name="Cheese2_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_005" class="collision"/>
+			<geom name="Cheese2_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_006" class="collision"/>
+			<geom name="Cheese2_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_007" class="collision"/>
+			<geom name="Cheese2_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_008" class="collision"/>
+			<geom name="Cheese2_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_009" class="collision"/>
+			<geom name="Cheese2_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_010" class="collision"/>
+			<geom name="Cheese2_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_011" class="collision"/>
+			<geom name="Cheese2_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_012" class="collision"/>
+			<geom name="Cheese2_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_013" class="collision"/>
+			<geom name="Cheese2_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_014" class="collision"/>
+			<geom name="Cheese2_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_015" class="collision"/>
+			<geom name="Cheese2_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_016" class="collision"/>
+			<geom name="Cheese2_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_017" class="collision"/>
+			<geom name="Cheese2_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_018" class="collision"/>
+			<geom name="Cheese2_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_019" class="collision"/>
+			<geom name="Cheese2_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_020" class="collision"/>
+			<geom name="Cheese2_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_021" class="collision"/>
+			<geom name="Cheese2_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_022" class="collision"/>
+			<geom name="Cheese2_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_023" class="collision"/>
+			<geom name="Cheese2_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_024" class="collision"/>
+			<geom name="Cheese2_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_025" class="collision"/>
+			<geom name="Cheese2_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_026" class="collision"/>
+			<geom name="Cheese2_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_027" class="collision"/>
+			<geom name="Cheese2_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_028" class="collision"/>
+			<geom name="Cheese2_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_029" class="collision"/>
+			<geom name="Cheese2_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_030" class="collision"/>
+			<geom name="Cheese2_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese2_031" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

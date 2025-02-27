@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<robot name="honey_peach" version="1.0">
+  <link name="honey_peach"/>
+  <joint name="honey_peach_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="honey_peach"/>
+    <child link="honey_peach_peel"/>
+  </joint>
+  <link name="honey_peach_peel">
+    <inertial>
+      <origin xyz="-0.0008010617457330227 -0.0005311282002367079 -0.005409484729170799" rpy="0.7008500099182129 -1.0736786127090454 -2.748537302017212"/>
+      <mass value="1.2212930917739868"/>
+      <inertia ixx="0.0013328577624633908" ixy="0.0" ixz="0.0" iyy="0.0014087659073993564" iyz="0.0" izz="0.0014269620878621936"/>
+    </inertial>
+    <visual name="HoneyPeachPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/obj/HoneyPeachPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HoneyPeachPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachPeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachPeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachPeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachPeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="honey_peach_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="honey_peach"/>
+    <child link="honey_peach_flesh"/>
+  </joint>
+  <link name="honey_peach_flesh">
+    <inertial>
+      <origin xyz="-0.0007829375099390745 -0.0005135117680765688 -0.004864256829023361" rpy="0.6637226343154907 -1.0458629131317139 -2.7523765563964844"/>
+      <mass value="0.5572090148925781"/>
+      <inertia ixx="0.000571166689042002" ixy="0.0" ixz="0.0" iyy="0.0006024930626153946" iyz="0.0" izz="0.0006104846834205091"/>
+    </inertial>
+    <visual name="HoneyPeachFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/obj/HoneyPeachFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HoneyPeachFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HoneyPeachFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="honey_peach_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="honey_peach"/>
+    <child link="honey_peach_seed"/>
+  </joint>
+  <link name="honey_peach_seed">
+    <inertial>
+      <origin xyz="-0.0030022545251995325 -0.001973856473341584 -0.0005645074415951967" rpy="1.4492626190185547 -1.5100895166397095 0.32509320974349976"/>
+      <mass value="0.026742203161120415"/>
+      <inertia ixx="2.889516963477945e-06" ixy="0.0" ixz="0.0" iyy="5.144435363035882e-06" iyz="0.0" izz="5.932067779212957e-06"/>
+    </inertial>
+    <visual name="HoneyPeachSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/obj/HoneyPeachSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HoneyPeachSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://honey_peach/meshes/stl/HoneyPeachSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,544 @@
+#usda 1.0
+(
+    defaultPrim = "bread_knife"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "bread_knife" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "bread_knife_blade001" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000010363975, 0.000898417, 0.00090873893)
+        float mujoco:body:inertial:mass = 0.109973446
+        point3f mujoco:body:inertial:pos = (0.04096377, -0.0021426303, 0.000039779596)
+        quatf mujoco:body:inertial:quat = (0.9999996, -0.0005380082, -0.00009956709, 0.0007049782)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.04096377, -0.0021426303, 0.000039779596)
+        float3 physics:diagonalInertia = (0.000010363975, 0.000898417, 0.00090873893)
+        float physics:mass = 0.109973446
+        quatf physics:principalAxes = (0.9999996, -0.0005380082, -0.00009956709, 0.0007049782)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000010363975
+        float urdf:link:inertial:inertia:iyy = 0.000898417
+        float urdf:link:inertial:inertia:izz = 0.00090873893
+        float urdf:link:inertial:mass = 0.109973446
+        float3 urdf:link:inertial:origin:rpy = (-0.0010761565, -0.00019837554, 0.0014100635)
+        point3f urdf:link:inertial:origin:xyz = (0.04096377, -0.0021426303, 0.000039779596)
+
+        def Mesh "BreadKnifeBlade001" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade001.usda@</BreadKnifeBlade001>
+        )
+        {
+            rel material:binding = </bread_knife/bread_knife_blade001/BreadKnifeBlade001/Materials/M_BreadKnifeBlade001>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BreadKnifeBlade001>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/obj/BreadKnifeBlade001.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BreadKnifeBlade001" (
+                    prepend references = @./bread_knife/materials/usd/M_BreadKnifeBlade001.usda@</M_BreadKnifeBlade001>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BreadKnifeBlade001_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade001_001.usda@</BreadKnifeBlade001_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade001_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeBlade001_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeBlade001_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade001_002.usda@</BreadKnifeBlade001_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade001_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeBlade001_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "bread_knife_hilt" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000015195052, 0.003724347, 0.0037363204)
+        float mujoco:body:inertial:mass = 0.20699134
+        point3f mujoco:body:inertial:pos = (-0.1298422, -0.0058741705, 9.566288e-7)
+        quatf mujoco:body:inertial:quat = (0.99980193, -0.00010276867, 4.5683223e-7, 0.019901413)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.1298422, -0.0058741705, 9.566288e-7)
+        float3 physics:diagonalInertia = (0.000015195052, 0.003724347, 0.0037363204)
+        float physics:mass = 0.20699134
+        quatf physics:principalAxes = (0.99980193, -0.00010276867, 4.5683223e-7, 0.019901413)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000015195052
+        float urdf:link:inertial:inertia:iyy = 0.003724347
+        float urdf:link:inertial:inertia:izz = 0.0037363204
+        float urdf:link:inertial:mass = 0.20699134
+        float3 urdf:link:inertial:origin:rpy = (-0.00020547844, 0.000005003967, 0.039805453)
+        point3f urdf:link:inertial:origin:xyz = (-0.1298422, -0.0058741705, 9.566288e-7)
+
+        def Mesh "BreadKnifeHilt" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt.usda@</BreadKnifeHilt>
+        )
+        {
+            rel material:binding = </bread_knife/bread_knife_hilt/BreadKnifeHilt/Materials/M_BreadKnifeHilt>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BreadKnifeHilt>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/obj/BreadKnifeHilt.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BreadKnifeHilt" (
+                    prepend references = @./bread_knife/materials/usd/M_BreadKnifeHilt.usda@</M_BreadKnifeHilt>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BreadKnifeHilt_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_001.usda@</BreadKnifeHilt_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_002.usda@</BreadKnifeHilt_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_003.usda@</BreadKnifeHilt_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_004.usda@</BreadKnifeHilt_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_005.usda@</BreadKnifeHilt_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_006.usda@</BreadKnifeHilt_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeHilt_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeHilt_007.usda@</BreadKnifeHilt_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeHilt_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeHilt_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "bread_knife_blade002" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (2.2392976e-7, 0.0001752649, 0.00017531418)
+        float mujoco:body:inertial:mass = 0.010198383
+        point3f mujoco:body:inertial:pos = (-0.12622532, -0.0052978895, -2.76055e-9)
+        quatf mujoco:body:inertial:quat = (0.999836, 0.000005046651, 8.970398e-8, 0.018107599)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.12622532, -0.0052978895, -2.76055e-9)
+        float3 physics:diagonalInertia = (2.2392976e-7, 0.0001752649, 0.00017531418)
+        float physics:mass = 0.010198383
+        quatf physics:principalAxes = (0.999836, 0.000005046651, 8.970398e-8, 0.018107599)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 2.2392976e-7
+        float urdf:link:inertial:inertia:iyy = 0.0001752649
+        float urdf:link:inertial:inertia:izz = 0.00017531418
+        float urdf:link:inertial:mass = 0.010198383
+        float3 urdf:link:inertial:origin:rpy = (0.000010094896, -3.3869187e-9, 0.036217175)
+        point3f urdf:link:inertial:origin:xyz = (-0.12622532, -0.0052978895, -2.76055e-9)
+
+        def Mesh "BreadKnifeBlade002" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade002.usda@</BreadKnifeBlade002>
+        )
+        {
+            rel material:binding = </bread_knife/bread_knife_blade002/BreadKnifeBlade002/Materials/M_BreadKnifeBlade002>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_BreadKnifeBlade002>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/obj/BreadKnifeBlade002.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_BreadKnifeBlade002" (
+                    prepend references = @./bread_knife/materials/usd/M_BreadKnifeBlade002.usda@</M_BreadKnifeBlade002>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "BreadKnifeBlade002_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade002_001.usda@</BreadKnifeBlade002_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade002_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeBlade002_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeBlade002_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade002_002.usda@</BreadKnifeBlade002_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade002_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeBlade002_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "BreadKnifeBlade002_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./bread_knife/meshes/usd/BreadKnifeBlade002_003.usda@</BreadKnifeBlade002_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadKnifeBlade002_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./bread_knife/meshes/stl/BreadKnifeBlade002_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "bread_knife"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "bread_knife"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "BreadKnifeBlade001"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade001_001"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade001_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade001_002"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade001_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/obj/BreadKnifeHilt.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_001"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_002"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_003"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_004"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_005"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_006"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeHilt_007"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeHilt_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade002"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade002_001"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade002_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade002_002"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade002_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadKnifeBlade002_003"
+            {
+                asset mujoco:mesh:file = @bread_knife/meshes/stl/BreadKnifeBlade002_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_BreadKnifeBlade001"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6601, 0.6601, 0.6601, 1)
+            }
+
+            def MujocoMaterial "M_BreadKnifeHilt"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BreadKnifeHilt>
+            }
+
+            def MujocoMaterial "M_BreadKnifeBlade002"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6601, 0.6601, 0.6601, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_BreadKnifeHilt"
+            {
+                asset mujoco:texture:file = @T_BreadKnifeHilt.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

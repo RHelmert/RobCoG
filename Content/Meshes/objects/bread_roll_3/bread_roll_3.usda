@@ -1,0 +1,204 @@
+#usda 1.0
+(
+    defaultPrim = "bread_roll_3"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "bread_roll_3" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.000091500326, 0.000099836216, 0.00016606596)
+    float mujoco:body:inertial:mass = 0.099355325
+    point3f mujoco:body:inertial:pos = (-0.0012706358, 0.000032755783, -0.0035513174)
+    quatf mujoco:body:inertial:quat = (0.7378317, 0.0013283495, -0.010624047, -0.6748998)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-0.0012706358, 0.000032755783, -0.0035513174)
+    float3 physics:diagonalInertia = (0.000091500326, 0.000099836216, 0.00016606596)
+    float physics:mass = 0.099355325
+    quatf physics:principalAxes = (0.7378317, 0.0013283495, -0.010624047, -0.6748998)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.000091500326
+    float urdf:link:inertial:inertia:iyy = 0.000099836216
+    float urdf:link:inertial:inertia:izz = 0.00016606596
+    float urdf:link:inertial:mass = 0.099355325
+    float3 urdf:link:inertial:origin:rpy = (0.016302826, -0.013884958, -1.4818759)
+    point3f urdf:link:inertial:origin:xyz = (-0.0012706358, 0.000032755783, -0.0035513174)
+
+    def Mesh "BreadRoll3" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./bread_roll_3/meshes/usd/BreadRoll3.usda@</BreadRoll3>
+    )
+    {
+        rel material:binding = </bread_roll_3/BreadRoll3/Materials/M_BreadRoll3>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_BreadRoll3>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadRoll3>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./bread_roll_3/meshes/obj/BreadRoll3.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_BreadRoll3" (
+                prepend references = @./bread_roll_3/materials/usd/M_BreadRoll3.usda@</M_BreadRoll3>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "BreadRoll3_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./bread_roll_3/meshes/usd/BreadRoll3_001.usda@</BreadRoll3_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadRoll3_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./bread_roll_3/meshes/stl/BreadRoll3_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BreadRoll3_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./bread_roll_3/meshes/usd/BreadRoll3_002.usda@</BreadRoll3_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadRoll3_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./bread_roll_3/meshes/stl/BreadRoll3_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BreadRoll3_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./bread_roll_3/meshes/usd/BreadRoll3_003.usda@</BreadRoll3_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadRoll3_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./bread_roll_3/meshes/stl/BreadRoll3_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "BreadRoll3_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./bread_roll_3/meshes/usd/BreadRoll3_004.usda@</BreadRoll3_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/BreadRoll3_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./bread_roll_3/meshes/stl/BreadRoll3_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "bread_roll_3"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "bread_roll_3"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "BreadRoll3"
+            {
+                asset mujoco:mesh:file = @bread_roll_3/meshes/obj/BreadRoll3.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadRoll3_001"
+            {
+                asset mujoco:mesh:file = @bread_roll_3/meshes/stl/BreadRoll3_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadRoll3_002"
+            {
+                asset mujoco:mesh:file = @bread_roll_3/meshes/stl/BreadRoll3_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadRoll3_003"
+            {
+                asset mujoco:mesh:file = @bread_roll_3/meshes/stl/BreadRoll3_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "BreadRoll3_004"
+            {
+                asset mujoco:mesh:file = @bread_roll_3/meshes/stl/BreadRoll3_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_BreadRoll3"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_BreadRoll3>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_BreadRoll3"
+            {
+                asset mujoco:texture:file = @T_BreadRoll3.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<mujoco model="peeler">
+	<compiler meshdir="peeler/meshes" texturedir="peeler/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="HiltWood" file="obj/HiltWood.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_001" file="stl/HiltWood_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_002" file="stl/HiltWood_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_003" file="stl/HiltWood_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_004" file="stl/HiltWood_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_005" file="stl/HiltWood_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltWood_006" file="stl/HiltWood_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PeelerBlade" file="stl/PeelerBlade.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PeelerBlade_001" file="stl/PeelerBlade_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PeelerBlade_002" file="stl/PeelerBlade_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal" file="obj/HiltMetal.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_001" file="stl/HiltMetal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_002" file="stl/HiltMetal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HiltMetal_003" file="stl/HiltMetal_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_HiltWood_002" texture="T_HiltWood"/>
+		<material name="M_PeelerBlade" rgba="0.5476999878883362 0.5476999878883362 0.5476999878883362 1.0" emission="0.0"/>
+		<material name="M_HiltMetal_002" texture="T_HiltMetal"/>
+		<texture name="T_HiltWood" type="2d" file="T_HiltWood.png"/>
+		<texture name="T_HiltMetal" type="2d" file="T_HiltMetal.png"/>
+	</asset>
+	<worldbody>
+		<body name="peeler" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="hilt_wood" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.21962310373783112" pos="-0.050066988915205 0.0036353906616568565 9.754562597663607e-07" quat="0.9998356103897095 0.00010666427988326177 -9.539360945609587e-08 -0.018130699172616005" diaginertia="1.723994137137197e-05 0.0008041122346185148 0.0008177962736226618"/>
+				<geom name="HiltWood" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood" material="M_HiltWood_002" class="visual"/>
+				<geom name="HiltWood_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_001" class="collision"/>
+				<geom name="HiltWood_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_002" class="collision"/>
+				<geom name="HiltWood_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_003" class="collision"/>
+				<geom name="HiltWood_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_004" class="collision"/>
+				<geom name="HiltWood_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_005" class="collision"/>
+				<geom name="HiltWood_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltWood_006" class="collision"/>
+			</body>
+			<body name="hilt_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.010820739902555943" pos="-0.04637749865651131 0.003047635778784752 -1.3348119054512608e-08" quat="0.9999093413352966 -1.2239692296134308e-05 2.8217976932864985e-07 -0.013465049676597118" diaginertia="2.58284899246064e-07 3.714871854754165e-05 3.721423854585737e-05"/>
+				<geom name="HiltMetal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal" material="M_HiltMetal_002" class="visual"/>
+				<geom name="HiltMetal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_001" class="collision"/>
+				<geom name="HiltMetal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_002" class="collision"/>
+				<geom name="HiltMetal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HiltMetal_003" class="collision"/>
+			</body>
+			<body name="peeler_blade" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.02406381256878376" pos="0.016638213768601418 0.005272947251796722 -6.809246055894391e-09" quat="0.9991083145141602 -4.348323159319989e-07 5.832686156281852e-08 0.04222063347697258" diaginertia="1.3092379731460824e-06 3.123350325040519e-05 3.2535001082578674e-05"/>
+				<geom name="PeelerBlade" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PeelerBlade" material="M_PeelerBlade" class="visual"/>
+				<geom name="PeelerBlade_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PeelerBlade_001" class="collision"/>
+				<geom name="PeelerBlade_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PeelerBlade_002" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

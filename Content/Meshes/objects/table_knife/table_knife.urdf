@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="table_knife" version="1.0">
+  <link name="table_knife">
+    <inertial>
+      <origin xyz="-0.05178093910217285 0.00212700548581779 3.767759153561201e-06" rpy="0.0011488698655739427 3.4733933716779575e-05 -0.023554116487503052"/>
+      <mass value="0.14500227570533752"/>
+      <inertia ixx="4.212003659631591e-06" ixy="0.0" ixz="0.0" iyy="0.0009561760234646499" iyz="0.0" izz="0.0009594511357136071"/>
+    </inertial>
+    <visual name="TableKnife">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://table_knife/meshes/obj/TableKnife.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="TableKnife_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://table_knife/meshes/stl/TableKnife_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

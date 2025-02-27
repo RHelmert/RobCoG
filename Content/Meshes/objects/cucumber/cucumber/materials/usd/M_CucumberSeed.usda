@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    defaultPrim = "M_CucumberSeed"
+    upAxis = "Z"
+)
+
+def Material "M_CucumberSeed"
+{
+    token outputs:surface.connect = </M_CucumberSeed/PBRShader.outputs:surface>
+
+    def Shader "PBRShader"
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        color3f inputs:diffuseColor = (0.8026, 0.8143, 0.7797)
+        color3f inputs:emissiveColor = (0, 0, 0)
+        float inputs:opacity = 1
+        int inputs:useSpecularWorkflow = 1
+        token outputs:surface
+    }
+}
+

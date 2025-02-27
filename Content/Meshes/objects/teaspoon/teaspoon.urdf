@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<robot name="teaspoon" version="1.0">
+  <link name="teaspoon">
+    <inertial>
+      <origin xyz="0.04338710755109787 -0.00010086490510730073 -0.002390378387644887" rpy="-0.004275813233107328 0.015284801833331585 -0.00222138874232769"/>
+      <mass value="0.03092772699892521"/>
+      <inertia ixx="2.2855149381939555e-06" ixy="0.0" ixz="0.0" iyy="0.0001231631904374808" iyz="0.0" izz="0.0001244646991835907"/>
+    </inertial>
+    <visual name="Teaspoon">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/obj/Teaspoon.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Teaspoon_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Teaspoon_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Teaspoon_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Teaspoon_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Teaspoon_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Teaspoon_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://teaspoon/meshes/stl/Teaspoon_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

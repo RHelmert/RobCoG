@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<mujoco model="bread_knife">
+	<compiler meshdir="bread_knife/meshes" texturedir="bread_knife/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BreadKnifeBlade001" file="stl/BreadKnifeBlade001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade001_001" file="stl/BreadKnifeBlade001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade001_002" file="stl/BreadKnifeBlade001_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt" file="obj/BreadKnifeHilt.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_001" file="stl/BreadKnifeHilt_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_002" file="stl/BreadKnifeHilt_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_003" file="stl/BreadKnifeHilt_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_004" file="stl/BreadKnifeHilt_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_005" file="stl/BreadKnifeHilt_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_006" file="stl/BreadKnifeHilt_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeHilt_007" file="stl/BreadKnifeHilt_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade002" file="stl/BreadKnifeBlade002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade002_001" file="stl/BreadKnifeBlade002_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade002_002" file="stl/BreadKnifeBlade002_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadKnifeBlade002_003" file="stl/BreadKnifeBlade002_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BreadKnifeBlade001" rgba="0.660099983215332 0.660099983215332 0.660099983215332 1.0" emission="0.0"/>
+		<material name="M_BreadKnifeHilt" texture="T_BreadKnifeHilt"/>
+		<material name="M_BreadKnifeBlade002" rgba="0.660099983215332 0.660099983215332 0.660099983215332 1.0" emission="0.0"/>
+		<texture name="T_BreadKnifeHilt" type="2d" file="T_BreadKnifeHilt.png"/>
+	</asset>
+	<worldbody>
+		<body name="bread_knife" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="bread_knife_blade001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.10997344553470612" pos="0.04096376895904541 -0.002142630284652114 3.977959568146616e-05" quat="0.9999995827674866 -0.000538008171133697 -9.956709254765883e-05 0.0007049781852401793" diaginertia="1.0363974979554769e-05 0.0008984170272015035 0.0009087389335036278"/>
+				<geom name="BreadKnifeBlade001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade001" material="M_BreadKnifeBlade001" class="visual"/>
+				<geom name="BreadKnifeBlade001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade001_001" class="collision"/>
+				<geom name="BreadKnifeBlade001_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade001_002" class="collision"/>
+			</body>
+			<body name="bread_knife_blade002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.010198382660746574" pos="-0.1262253224849701 -0.005297889467328787 -2.7605500108052183e-09" quat="0.9998360276222229 5.0466510401747655e-06 8.970398113206102e-08 0.018107598647475243" diaginertia="2.2392976006813115e-07 0.00017526489682495594 0.00017531418416183442"/>
+				<geom name="BreadKnifeBlade002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade002" material="M_BreadKnifeBlade002" class="visual"/>
+				<geom name="BreadKnifeBlade002_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade002_001" class="collision"/>
+				<geom name="BreadKnifeBlade002_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade002_002" class="collision"/>
+				<geom name="BreadKnifeBlade002_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeBlade002_003" class="collision"/>
+			</body>
+			<body name="bread_knife_hilt" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.20699134469032288" pos="-0.12984220683574677 -0.005874170456081629 9.566288099449594e-07" quat="0.9998019337654114 -0.00010276866669300944 4.568322253817314e-07 0.019901413470506668" diaginertia="1.5195051673799753e-05 0.0037243471015244722 0.0037363204173743725"/>
+				<geom name="BreadKnifeHilt" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt" material="M_BreadKnifeHilt" class="visual"/>
+				<geom name="BreadKnifeHilt_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_001" class="collision"/>
+				<geom name="BreadKnifeHilt_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_002" class="collision"/>
+				<geom name="BreadKnifeHilt_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_003" class="collision"/>
+				<geom name="BreadKnifeHilt_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_004" class="collision"/>
+				<geom name="BreadKnifeHilt_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_005" class="collision"/>
+				<geom name="BreadKnifeHilt_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_006" class="collision"/>
+				<geom name="BreadKnifeHilt_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadKnifeHilt_007" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

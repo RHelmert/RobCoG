@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<robot name="yellow_banana" version="1.0">
+  <link name="yellow_banana"/>
+  <joint name="yellow_banana_endocarp_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_banana"/>
+    <child link="yellow_banana_endocarp"/>
+  </joint>
+  <link name="yellow_banana_endocarp">
+    <inertial>
+      <origin xyz="-0.01240614801645279 0.013213612139225006 -0.0007500060019083321" rpy="0.02837972529232502 -0.008041114546358585 0.06345733255147934"/>
+      <mass value="0.003866082290187478"/>
+      <inertia ixx="3.1374904665426584e-06" ixy="0.0" ixz="0.0" iyy="1.1440144589869305e-05" iyz="0.0" izz="1.3253933502710424e-05"/>
+    </inertial>
+    <visual name="YellowBananaEndocarp">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/obj/YellowBananaEndocarp.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowBananaEndocarp_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaEndocarp_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaEndocarp_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaEndocarp_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaEndocarp_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaEndocarp_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaEndocarp_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaEndocarp_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_banana_exocarp_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_banana"/>
+    <child link="yellow_banana_exocarp"/>
+  </joint>
+  <link name="yellow_banana_exocarp">
+    <inertial>
+      <origin xyz="-0.0066825891844928265 0.00984877534210682 -0.001081103808246553" rpy="0.052071619778871536 0.004016693215817213 -0.028051231056451797"/>
+      <mass value="0.014691420830786228"/>
+      <inertia ixx="1.3276352547109127e-05" ixy="0.0" ixz="0.0" iyy="4.834550782106817e-05" iyz="0.0" izz="5.636810965370387e-05"/>
+    </inertial>
+    <visual name="YellowBananaExocarp">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/obj/YellowBananaExocarp.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowBananaExocarp_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaExocarp_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaExocarp_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaExocarp_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaExocarp_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaExocarp_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaExocarp_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaExocarp_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="yellow_banana_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="yellow_banana"/>
+    <child link="yellow_banana_flesh"/>
+  </joint>
+  <link name="yellow_banana_flesh">
+    <inertial>
+      <origin xyz="-0.011863026767969131 0.016230249777436256 -0.00047982129035517573" rpy="0.019261183217167854 -0.007000579498708248 0.034906696528196335"/>
+      <mass value="0.16765236854553223"/>
+      <inertia ixx="0.00010836349247256294" ixy="0.0" ixz="0.0" iyy="0.00039412116166204214" iyz="0.0" izz="0.00047479759086854756"/>
+    </inertial>
+    <visual name="YellowBananaFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/obj/YellowBananaFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="YellowBananaFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="YellowBananaFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://yellow_banana/meshes/stl/YellowBananaFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

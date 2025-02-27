@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<mujoco model="butter_knife">
+	<compiler meshdir="butter_knife/meshes" texturedir="butter_knife/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="ButterKnife" file="stl/ButterKnife.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ButterKnife_001" file="stl/ButterKnife_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="ButterKnife_002" file="stl/ButterKnife_002.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_ButterKnife" rgba="0.6599000096321106 0.6599000096321106 0.6599000096321106 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="butter_knife" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.10201587527990341" pos="-0.039606545120477676 0.00357587868347764 -3.3749101291391526e-09" quat="0.9999185800552368 -7.314565095839498e-07 2.046870264393874e-07 -0.01276087760925293" diaginertia="2.9445216114254436e-06 0.0006860356661491096 0.000688666186761111"/>
+			<geom name="ButterKnife" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ButterKnife" material="M_ButterKnife" class="visual"/>
+			<geom name="ButterKnife_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ButterKnife_001" class="collision"/>
+			<geom name="ButterKnife_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="ButterKnife_002" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

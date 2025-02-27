@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<robot name="kitchen_pliers" version="1.0">
+  <link name="kitchen_pliers"/>
+  <joint name="kitchen_pliers_head_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_pliers"/>
+    <child link="kitchen_pliers_head"/>
+  </joint>
+  <link name="kitchen_pliers_head">
+    <inertial>
+      <origin xyz="-0.09527463465929031 -0.00019158580107614398 -2.0926424895151285e-06" rpy="1.091155468202487e-06 -2.4549699446652085e-05 0.0011994275264441967"/>
+      <mass value="0.06604120135307312"/>
+      <inertia ixx="0.0001320251903962344" ixy="0.0" ixz="0.0" iyy="0.0008560716523788869" iyz="0.0" izz="0.000979700474999845"/>
+    </inertial>
+    <visual name="KitchenPliersHead">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/obj/KitchenPliersHead.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KitchenPliersHead_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHead_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHead_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHead_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHead_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHead_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHead_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHead_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kitchen_pliers_handle_metal_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_pliers"/>
+    <child link="kitchen_pliers_handle_metal"/>
+  </joint>
+  <link name="kitchen_pliers_handle_metal">
+    <inertial>
+      <origin xyz="0.08854242414236069 -0.0005285621155053377 -8.600605951869511e-07" rpy="-6.315890743735508e-08 7.65889672038611e-06 -0.0054069506004452705"/>
+      <mass value="0.9098877906799316"/>
+      <inertia ixx="0.0006158436299301684" ixy="0.0" ixz="0.0" iyy="0.009113099426031113" iyz="0.0" izz="0.009665689431130886"/>
+    </inertial>
+    <visual name="KitchenPliersHandleMetal">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/obj/KitchenPliersHandleMetal.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KitchenPliersHandleMetal_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandleMetal_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandleMetal_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandleMetal_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kitchen_pliers_handle_plastic_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_pliers"/>
+    <child link="kitchen_pliers_handle_plastic"/>
+  </joint>
+  <link name="kitchen_pliers_handle_plastic">
+    <inertial>
+      <origin xyz="0.06831031292676926 -0.0004918914055451751 3.10893824462255e-06" rpy="-6.119939257587248e-07 -1.7410353393643163e-05 -0.0041237445548176765"/>
+      <mass value="0.1916133612394333"/>
+      <inertia ixx="0.00015829596668481827" ixy="0.0" ixz="0.0" iyy="0.0023368890397250652" iyz="0.0" izz="0.0024847143795341253"/>
+    </inertial>
+    <visual name="KitchenPliersHandlePlastic">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/obj/KitchenPliersHandlePlastic.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KitchenPliersHandlePlastic_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandlePlastic_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandlePlastic_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHandlePlastic_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kitchen_pliers_hanging_hole_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_pliers"/>
+    <child link="kitchen_pliers_hanging_hole"/>
+  </joint>
+  <link name="kitchen_pliers_hanging_hole">
+    <inertial>
+      <origin xyz="0.19402135908603668 -0.0007414983701892197 -0.0002257821470266208" rpy="0.00014950578042771667 0.0011632083915174007 -0.003826906206086278"/>
+      <mass value="0.005537407472729683"/>
+      <inertia ixx="8.377042490792519e-07" ixy="0.0" ixz="0.0" iyy="0.00020877506176475435" iyz="0.0" izz="0.0002093532239086926"/>
+    </inertial>
+    <visual name="KitchenPliersHangingHole">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/obj/KitchenPliersHangingHole.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KitchenPliersHangingHole_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenPliersHangingHole_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_pliers/meshes/stl/KitchenPliersHangingHole_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

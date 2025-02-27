@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<mujoco model="bread_roll_1">
+	<compiler meshdir="bread_roll_1/meshes" texturedir="bread_roll_1/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BreadRoll1" file="obj/BreadRoll1.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_001" file="stl/BreadRoll1_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_002" file="stl/BreadRoll1_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_003" file="stl/BreadRoll1_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_004" file="stl/BreadRoll1_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_005" file="stl/BreadRoll1_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_006" file="stl/BreadRoll1_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_007" file="stl/BreadRoll1_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_008" file="stl/BreadRoll1_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_009" file="stl/BreadRoll1_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_010" file="stl/BreadRoll1_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BreadRoll1_011" file="stl/BreadRoll1_011.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BreadRoll1" texture="T_BreadRoll1"/>
+		<texture name="T_BreadRoll1" type="2d" file="T_BreadRoll1.png"/>
+	</asset>
+	<worldbody>
+		<body name="bread_roll_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.13307981193065643" pos="-0.0012862859293818474 -0.0009012651280499995 -0.0064133149571716785" quat="0.9682528972625732 0.006226154509931803 0.0009538548765704036 0.24989326298236847" diaginertia="0.00014642490714322776 0.00015914584218990058 0.00025146518601104617"/>
+			<geom name="BreadRoll1" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1" material="M_BreadRoll1" class="visual"/>
+			<geom name="BreadRoll1_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_001" class="collision"/>
+			<geom name="BreadRoll1_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_002" class="collision"/>
+			<geom name="BreadRoll1_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_003" class="collision"/>
+			<geom name="BreadRoll1_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_004" class="collision"/>
+			<geom name="BreadRoll1_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_005" class="collision"/>
+			<geom name="BreadRoll1_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_006" class="collision"/>
+			<geom name="BreadRoll1_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_007" class="collision"/>
+			<geom name="BreadRoll1_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_008" class="collision"/>
+			<geom name="BreadRoll1_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_009" class="collision"/>
+			<geom name="BreadRoll1_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_010" class="collision"/>
+			<geom name="BreadRoll1_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BreadRoll1_011" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

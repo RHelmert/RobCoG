@@ -1,0 +1,511 @@
+<?xml version="1.0" ?>
+<mujoco model="green_tomato">
+	<compiler meshdir="green_tomato/meshes" texturedir="green_tomato/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GreenTomatoPeel" file="obj/GreenTomatoPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_001" file="stl/GreenTomatoPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_002" file="stl/GreenTomatoPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_003" file="stl/GreenTomatoPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_004" file="stl/GreenTomatoPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_005" file="stl/GreenTomatoPeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPeel_006" file="stl/GreenTomatoPeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPedicel" file="obj/GreenTomatoPedicel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPedicel_001" file="stl/GreenTomatoPedicel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPedicel_002" file="stl/GreenTomatoPedicel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoPedicel_003" file="stl/GreenTomatoPedicel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed" file="stl/GreenTomatoSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_001" file="stl/GreenTomatoSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_002" file="stl/GreenTomatoSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_003" file="stl/GreenTomatoSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_004" file="stl/GreenTomatoSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_005" file="stl/GreenTomatoSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_006" file="stl/GreenTomatoSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_007" file="stl/GreenTomatoSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_008" file="stl/GreenTomatoSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_009" file="stl/GreenTomatoSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_010" file="stl/GreenTomatoSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_011" file="stl/GreenTomatoSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_012" file="stl/GreenTomatoSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_013" file="stl/GreenTomatoSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_014" file="stl/GreenTomatoSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_015" file="stl/GreenTomatoSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_016" file="stl/GreenTomatoSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_017" file="stl/GreenTomatoSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_018" file="stl/GreenTomatoSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_019" file="stl/GreenTomatoSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_020" file="stl/GreenTomatoSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_021" file="stl/GreenTomatoSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_022" file="stl/GreenTomatoSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_023" file="stl/GreenTomatoSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_024" file="stl/GreenTomatoSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_025" file="stl/GreenTomatoSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_026" file="stl/GreenTomatoSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_027" file="stl/GreenTomatoSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_028" file="stl/GreenTomatoSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_029" file="stl/GreenTomatoSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_030" file="stl/GreenTomatoSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_031" file="stl/GreenTomatoSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_032" file="stl/GreenTomatoSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_033" file="stl/GreenTomatoSeed_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_034" file="stl/GreenTomatoSeed_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_035" file="stl/GreenTomatoSeed_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_036" file="stl/GreenTomatoSeed_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_037" file="stl/GreenTomatoSeed_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_038" file="stl/GreenTomatoSeed_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_039" file="stl/GreenTomatoSeed_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_040" file="stl/GreenTomatoSeed_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_041" file="stl/GreenTomatoSeed_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_042" file="stl/GreenTomatoSeed_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_043" file="stl/GreenTomatoSeed_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_044" file="stl/GreenTomatoSeed_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_045" file="stl/GreenTomatoSeed_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_046" file="stl/GreenTomatoSeed_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_047" file="stl/GreenTomatoSeed_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_048" file="stl/GreenTomatoSeed_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_049" file="stl/GreenTomatoSeed_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_050" file="stl/GreenTomatoSeed_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_051" file="stl/GreenTomatoSeed_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_052" file="stl/GreenTomatoSeed_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_053" file="stl/GreenTomatoSeed_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_054" file="stl/GreenTomatoSeed_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_055" file="stl/GreenTomatoSeed_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_056" file="stl/GreenTomatoSeed_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_057" file="stl/GreenTomatoSeed_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_058" file="stl/GreenTomatoSeed_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_059" file="stl/GreenTomatoSeed_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_060" file="stl/GreenTomatoSeed_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_061" file="stl/GreenTomatoSeed_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_062" file="stl/GreenTomatoSeed_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_063" file="stl/GreenTomatoSeed_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_064" file="stl/GreenTomatoSeed_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_065" file="stl/GreenTomatoSeed_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_066" file="stl/GreenTomatoSeed_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_067" file="stl/GreenTomatoSeed_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_068" file="stl/GreenTomatoSeed_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_069" file="stl/GreenTomatoSeed_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_070" file="stl/GreenTomatoSeed_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_071" file="stl/GreenTomatoSeed_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_072" file="stl/GreenTomatoSeed_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_073" file="stl/GreenTomatoSeed_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_074" file="stl/GreenTomatoSeed_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_075" file="stl/GreenTomatoSeed_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_076" file="stl/GreenTomatoSeed_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_077" file="stl/GreenTomatoSeed_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_078" file="stl/GreenTomatoSeed_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_079" file="stl/GreenTomatoSeed_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_080" file="stl/GreenTomatoSeed_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_081" file="stl/GreenTomatoSeed_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_082" file="stl/GreenTomatoSeed_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_083" file="stl/GreenTomatoSeed_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_084" file="stl/GreenTomatoSeed_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_085" file="stl/GreenTomatoSeed_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_086" file="stl/GreenTomatoSeed_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_087" file="stl/GreenTomatoSeed_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_088" file="stl/GreenTomatoSeed_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_089" file="stl/GreenTomatoSeed_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_090" file="stl/GreenTomatoSeed_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_091" file="stl/GreenTomatoSeed_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_092" file="stl/GreenTomatoSeed_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_093" file="stl/GreenTomatoSeed_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_094" file="stl/GreenTomatoSeed_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_095" file="stl/GreenTomatoSeed_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_096" file="stl/GreenTomatoSeed_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_097" file="stl/GreenTomatoSeed_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_098" file="stl/GreenTomatoSeed_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_099" file="stl/GreenTomatoSeed_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_100" file="stl/GreenTomatoSeed_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_101" file="stl/GreenTomatoSeed_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_102" file="stl/GreenTomatoSeed_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_103" file="stl/GreenTomatoSeed_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_104" file="stl/GreenTomatoSeed_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_105" file="stl/GreenTomatoSeed_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_106" file="stl/GreenTomatoSeed_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_107" file="stl/GreenTomatoSeed_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_108" file="stl/GreenTomatoSeed_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_109" file="stl/GreenTomatoSeed_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_110" file="stl/GreenTomatoSeed_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_111" file="stl/GreenTomatoSeed_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_112" file="stl/GreenTomatoSeed_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_113" file="stl/GreenTomatoSeed_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_114" file="stl/GreenTomatoSeed_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_115" file="stl/GreenTomatoSeed_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_116" file="stl/GreenTomatoSeed_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_117" file="stl/GreenTomatoSeed_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_118" file="stl/GreenTomatoSeed_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_119" file="stl/GreenTomatoSeed_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_120" file="stl/GreenTomatoSeed_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_121" file="stl/GreenTomatoSeed_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_122" file="stl/GreenTomatoSeed_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_123" file="stl/GreenTomatoSeed_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_124" file="stl/GreenTomatoSeed_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_125" file="stl/GreenTomatoSeed_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_126" file="stl/GreenTomatoSeed_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_127" file="stl/GreenTomatoSeed_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_128" file="stl/GreenTomatoSeed_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_129" file="stl/GreenTomatoSeed_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_130" file="stl/GreenTomatoSeed_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_131" file="stl/GreenTomatoSeed_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_132" file="stl/GreenTomatoSeed_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_133" file="stl/GreenTomatoSeed_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_134" file="stl/GreenTomatoSeed_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_135" file="stl/GreenTomatoSeed_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_136" file="stl/GreenTomatoSeed_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_137" file="stl/GreenTomatoSeed_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_138" file="stl/GreenTomatoSeed_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_139" file="stl/GreenTomatoSeed_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_140" file="stl/GreenTomatoSeed_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_141" file="stl/GreenTomatoSeed_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_142" file="stl/GreenTomatoSeed_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_143" file="stl/GreenTomatoSeed_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_144" file="stl/GreenTomatoSeed_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_145" file="stl/GreenTomatoSeed_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_146" file="stl/GreenTomatoSeed_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_147" file="stl/GreenTomatoSeed_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_148" file="stl/GreenTomatoSeed_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_149" file="stl/GreenTomatoSeed_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_150" file="stl/GreenTomatoSeed_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_151" file="stl/GreenTomatoSeed_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_152" file="stl/GreenTomatoSeed_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_153" file="stl/GreenTomatoSeed_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_154" file="stl/GreenTomatoSeed_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_155" file="stl/GreenTomatoSeed_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_156" file="stl/GreenTomatoSeed_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_157" file="stl/GreenTomatoSeed_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_158" file="stl/GreenTomatoSeed_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_159" file="stl/GreenTomatoSeed_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_160" file="stl/GreenTomatoSeed_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_161" file="stl/GreenTomatoSeed_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_162" file="stl/GreenTomatoSeed_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_163" file="stl/GreenTomatoSeed_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_164" file="stl/GreenTomatoSeed_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_165" file="stl/GreenTomatoSeed_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_166" file="stl/GreenTomatoSeed_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_167" file="stl/GreenTomatoSeed_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_168" file="stl/GreenTomatoSeed_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_169" file="stl/GreenTomatoSeed_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_170" file="stl/GreenTomatoSeed_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_171" file="stl/GreenTomatoSeed_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_172" file="stl/GreenTomatoSeed_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_173" file="stl/GreenTomatoSeed_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_174" file="stl/GreenTomatoSeed_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_175" file="stl/GreenTomatoSeed_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_176" file="stl/GreenTomatoSeed_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_177" file="stl/GreenTomatoSeed_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_178" file="stl/GreenTomatoSeed_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_179" file="stl/GreenTomatoSeed_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_180" file="stl/GreenTomatoSeed_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_181" file="stl/GreenTomatoSeed_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_182" file="stl/GreenTomatoSeed_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_183" file="stl/GreenTomatoSeed_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_184" file="stl/GreenTomatoSeed_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_185" file="stl/GreenTomatoSeed_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_186" file="stl/GreenTomatoSeed_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_187" file="stl/GreenTomatoSeed_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_188" file="stl/GreenTomatoSeed_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_189" file="stl/GreenTomatoSeed_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_190" file="stl/GreenTomatoSeed_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_191" file="stl/GreenTomatoSeed_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_192" file="stl/GreenTomatoSeed_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_193" file="stl/GreenTomatoSeed_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_194" file="stl/GreenTomatoSeed_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_195" file="stl/GreenTomatoSeed_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_196" file="stl/GreenTomatoSeed_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoSeed_197" file="stl/GreenTomatoSeed_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx" file="obj/GreenTomatoCalyx.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_001" file="stl/GreenTomatoCalyx_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_002" file="stl/GreenTomatoCalyx_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_003" file="stl/GreenTomatoCalyx_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_004" file="stl/GreenTomatoCalyx_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_005" file="stl/GreenTomatoCalyx_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_006" file="stl/GreenTomatoCalyx_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_007" file="stl/GreenTomatoCalyx_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_008" file="stl/GreenTomatoCalyx_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_009" file="stl/GreenTomatoCalyx_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_010" file="stl/GreenTomatoCalyx_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_011" file="stl/GreenTomatoCalyx_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_012" file="stl/GreenTomatoCalyx_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_013" file="stl/GreenTomatoCalyx_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_014" file="stl/GreenTomatoCalyx_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_015" file="stl/GreenTomatoCalyx_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_016" file="stl/GreenTomatoCalyx_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoCalyx_017" file="stl/GreenTomatoCalyx_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh" file="obj/GreenTomatoFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_001" file="stl/GreenTomatoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_002" file="stl/GreenTomatoFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_003" file="stl/GreenTomatoFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_004" file="stl/GreenTomatoFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_005" file="stl/GreenTomatoFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenTomatoFlesh_006" file="stl/GreenTomatoFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GreenTomatoPeel" texture="T_GreenTomatoPeel"/>
+		<material name="M_GreenTomatoPedicel" texture="T_GreenTomatoPedicel"/>
+		<material name="M_GreenTomatoSeed" rgba="0.8216000199317932 0.7545999884605408 0.6920999884605408 1.0" emission="0.0"/>
+		<material name="M_GreenTomatoCalyx" texture="T_GreenTomatoCalyx"/>
+		<material name="M_GreenTomatoFlesh" texture="T_GreenTomatoFlesh"/>
+		<texture name="T_GreenTomatoPeel" type="2d" file="T_GreenTomatoPeel.png"/>
+		<texture name="T_GreenTomatoPedicel" type="2d" file="T_GreenTomatoPedicel.png"/>
+		<texture name="T_GreenTomatoCalyx" type="2d" file="T_GreenTomatoCalyx.png"/>
+		<texture name="T_GreenTomatoFlesh" type="2d" file="T_GreenTomatoFlesh.png"/>
+	</asset>
+	<worldbody>
+		<body name="green_tomato" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="green_tomato_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0043305326253175735" pos="2.3421271180268377e-05 0.0002766043471638113 -0.006722348742187023" quat="0.890908420085907 0.11724110692739487 -0.026406070217490196 -0.4379948079586029" diaginertia="6.3864822550385725e-06 6.440819106501294e-06 6.888409643579507e-06"/>
+				<geom name="GreenTomatoPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel" material="M_GreenTomatoPeel" class="visual"/>
+				<geom name="GreenTomatoPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_001" class="collision"/>
+				<geom name="GreenTomatoPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_002" class="collision"/>
+				<geom name="GreenTomatoPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_003" class="collision"/>
+				<geom name="GreenTomatoPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_004" class="collision"/>
+				<geom name="GreenTomatoPeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_005" class="collision"/>
+				<geom name="GreenTomatoPeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPeel_006" class="collision"/>
+			</body>
+			<body name="green_tomato_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0012272438034415245" pos="-0.00046470543020404875 0.00045744061935693026 -0.0091623580083251" quat="0.9244517683982849 -0.014703772962093353 -0.035964176058769226 -0.3793143033981323" diaginertia="6.235621867745067e-07 6.24654092007404e-07 7.18274293376453e-07"/>
+				<geom name="GreenTomatoSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed" material="M_GreenTomatoSeed" class="visual"/>
+				<geom name="GreenTomatoSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_001" class="collision"/>
+				<geom name="GreenTomatoSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_002" class="collision"/>
+				<geom name="GreenTomatoSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_003" class="collision"/>
+				<geom name="GreenTomatoSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_004" class="collision"/>
+				<geom name="GreenTomatoSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_005" class="collision"/>
+				<geom name="GreenTomatoSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_006" class="collision"/>
+				<geom name="GreenTomatoSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_007" class="collision"/>
+				<geom name="GreenTomatoSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_008" class="collision"/>
+				<geom name="GreenTomatoSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_009" class="collision"/>
+				<geom name="GreenTomatoSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_010" class="collision"/>
+				<geom name="GreenTomatoSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_011" class="collision"/>
+				<geom name="GreenTomatoSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_012" class="collision"/>
+				<geom name="GreenTomatoSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_013" class="collision"/>
+				<geom name="GreenTomatoSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_014" class="collision"/>
+				<geom name="GreenTomatoSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_015" class="collision"/>
+				<geom name="GreenTomatoSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_016" class="collision"/>
+				<geom name="GreenTomatoSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_017" class="collision"/>
+				<geom name="GreenTomatoSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_018" class="collision"/>
+				<geom name="GreenTomatoSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_019" class="collision"/>
+				<geom name="GreenTomatoSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_020" class="collision"/>
+				<geom name="GreenTomatoSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_021" class="collision"/>
+				<geom name="GreenTomatoSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_022" class="collision"/>
+				<geom name="GreenTomatoSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_023" class="collision"/>
+				<geom name="GreenTomatoSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_024" class="collision"/>
+				<geom name="GreenTomatoSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_025" class="collision"/>
+				<geom name="GreenTomatoSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_026" class="collision"/>
+				<geom name="GreenTomatoSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_027" class="collision"/>
+				<geom name="GreenTomatoSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_028" class="collision"/>
+				<geom name="GreenTomatoSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_029" class="collision"/>
+				<geom name="GreenTomatoSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_030" class="collision"/>
+				<geom name="GreenTomatoSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_031" class="collision"/>
+				<geom name="GreenTomatoSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_032" class="collision"/>
+				<geom name="GreenTomatoSeed_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_033" class="collision"/>
+				<geom name="GreenTomatoSeed_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_034" class="collision"/>
+				<geom name="GreenTomatoSeed_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_035" class="collision"/>
+				<geom name="GreenTomatoSeed_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_036" class="collision"/>
+				<geom name="GreenTomatoSeed_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_037" class="collision"/>
+				<geom name="GreenTomatoSeed_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_038" class="collision"/>
+				<geom name="GreenTomatoSeed_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_039" class="collision"/>
+				<geom name="GreenTomatoSeed_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_040" class="collision"/>
+				<geom name="GreenTomatoSeed_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_041" class="collision"/>
+				<geom name="GreenTomatoSeed_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_042" class="collision"/>
+				<geom name="GreenTomatoSeed_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_043" class="collision"/>
+				<geom name="GreenTomatoSeed_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_044" class="collision"/>
+				<geom name="GreenTomatoSeed_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_045" class="collision"/>
+				<geom name="GreenTomatoSeed_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_046" class="collision"/>
+				<geom name="GreenTomatoSeed_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_047" class="collision"/>
+				<geom name="GreenTomatoSeed_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_048" class="collision"/>
+				<geom name="GreenTomatoSeed_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_049" class="collision"/>
+				<geom name="GreenTomatoSeed_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_050" class="collision"/>
+				<geom name="GreenTomatoSeed_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_051" class="collision"/>
+				<geom name="GreenTomatoSeed_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_052" class="collision"/>
+				<geom name="GreenTomatoSeed_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_053" class="collision"/>
+				<geom name="GreenTomatoSeed_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_054" class="collision"/>
+				<geom name="GreenTomatoSeed_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_055" class="collision"/>
+				<geom name="GreenTomatoSeed_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_056" class="collision"/>
+				<geom name="GreenTomatoSeed_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_057" class="collision"/>
+				<geom name="GreenTomatoSeed_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_058" class="collision"/>
+				<geom name="GreenTomatoSeed_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_059" class="collision"/>
+				<geom name="GreenTomatoSeed_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_060" class="collision"/>
+				<geom name="GreenTomatoSeed_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_061" class="collision"/>
+				<geom name="GreenTomatoSeed_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_062" class="collision"/>
+				<geom name="GreenTomatoSeed_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_063" class="collision"/>
+				<geom name="GreenTomatoSeed_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_064" class="collision"/>
+				<geom name="GreenTomatoSeed_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_065" class="collision"/>
+				<geom name="GreenTomatoSeed_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_066" class="collision"/>
+				<geom name="GreenTomatoSeed_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_067" class="collision"/>
+				<geom name="GreenTomatoSeed_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_068" class="collision"/>
+				<geom name="GreenTomatoSeed_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_069" class="collision"/>
+				<geom name="GreenTomatoSeed_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_070" class="collision"/>
+				<geom name="GreenTomatoSeed_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_071" class="collision"/>
+				<geom name="GreenTomatoSeed_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_072" class="collision"/>
+				<geom name="GreenTomatoSeed_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_073" class="collision"/>
+				<geom name="GreenTomatoSeed_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_074" class="collision"/>
+				<geom name="GreenTomatoSeed_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_075" class="collision"/>
+				<geom name="GreenTomatoSeed_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_076" class="collision"/>
+				<geom name="GreenTomatoSeed_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_077" class="collision"/>
+				<geom name="GreenTomatoSeed_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_078" class="collision"/>
+				<geom name="GreenTomatoSeed_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_079" class="collision"/>
+				<geom name="GreenTomatoSeed_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_080" class="collision"/>
+				<geom name="GreenTomatoSeed_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_081" class="collision"/>
+				<geom name="GreenTomatoSeed_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_082" class="collision"/>
+				<geom name="GreenTomatoSeed_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_083" class="collision"/>
+				<geom name="GreenTomatoSeed_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_084" class="collision"/>
+				<geom name="GreenTomatoSeed_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_085" class="collision"/>
+				<geom name="GreenTomatoSeed_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_086" class="collision"/>
+				<geom name="GreenTomatoSeed_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_087" class="collision"/>
+				<geom name="GreenTomatoSeed_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_088" class="collision"/>
+				<geom name="GreenTomatoSeed_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_089" class="collision"/>
+				<geom name="GreenTomatoSeed_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_090" class="collision"/>
+				<geom name="GreenTomatoSeed_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_091" class="collision"/>
+				<geom name="GreenTomatoSeed_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_092" class="collision"/>
+				<geom name="GreenTomatoSeed_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_093" class="collision"/>
+				<geom name="GreenTomatoSeed_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_094" class="collision"/>
+				<geom name="GreenTomatoSeed_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_095" class="collision"/>
+				<geom name="GreenTomatoSeed_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_096" class="collision"/>
+				<geom name="GreenTomatoSeed_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_097" class="collision"/>
+				<geom name="GreenTomatoSeed_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_098" class="collision"/>
+				<geom name="GreenTomatoSeed_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_099" class="collision"/>
+				<geom name="GreenTomatoSeed_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_100" class="collision"/>
+				<geom name="GreenTomatoSeed_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_101" class="collision"/>
+				<geom name="GreenTomatoSeed_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_102" class="collision"/>
+				<geom name="GreenTomatoSeed_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_103" class="collision"/>
+				<geom name="GreenTomatoSeed_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_104" class="collision"/>
+				<geom name="GreenTomatoSeed_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_105" class="collision"/>
+				<geom name="GreenTomatoSeed_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_106" class="collision"/>
+				<geom name="GreenTomatoSeed_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_107" class="collision"/>
+				<geom name="GreenTomatoSeed_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_108" class="collision"/>
+				<geom name="GreenTomatoSeed_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_109" class="collision"/>
+				<geom name="GreenTomatoSeed_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_110" class="collision"/>
+				<geom name="GreenTomatoSeed_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_111" class="collision"/>
+				<geom name="GreenTomatoSeed_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_112" class="collision"/>
+				<geom name="GreenTomatoSeed_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_113" class="collision"/>
+				<geom name="GreenTomatoSeed_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_114" class="collision"/>
+				<geom name="GreenTomatoSeed_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_115" class="collision"/>
+				<geom name="GreenTomatoSeed_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_116" class="collision"/>
+				<geom name="GreenTomatoSeed_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_117" class="collision"/>
+				<geom name="GreenTomatoSeed_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_118" class="collision"/>
+				<geom name="GreenTomatoSeed_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_119" class="collision"/>
+				<geom name="GreenTomatoSeed_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_120" class="collision"/>
+				<geom name="GreenTomatoSeed_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_121" class="collision"/>
+				<geom name="GreenTomatoSeed_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_122" class="collision"/>
+				<geom name="GreenTomatoSeed_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_123" class="collision"/>
+				<geom name="GreenTomatoSeed_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_124" class="collision"/>
+				<geom name="GreenTomatoSeed_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_125" class="collision"/>
+				<geom name="GreenTomatoSeed_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_126" class="collision"/>
+				<geom name="GreenTomatoSeed_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_127" class="collision"/>
+				<geom name="GreenTomatoSeed_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_128" class="collision"/>
+				<geom name="GreenTomatoSeed_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_129" class="collision"/>
+				<geom name="GreenTomatoSeed_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_130" class="collision"/>
+				<geom name="GreenTomatoSeed_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_131" class="collision"/>
+				<geom name="GreenTomatoSeed_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_132" class="collision"/>
+				<geom name="GreenTomatoSeed_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_133" class="collision"/>
+				<geom name="GreenTomatoSeed_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_134" class="collision"/>
+				<geom name="GreenTomatoSeed_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_135" class="collision"/>
+				<geom name="GreenTomatoSeed_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_136" class="collision"/>
+				<geom name="GreenTomatoSeed_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_137" class="collision"/>
+				<geom name="GreenTomatoSeed_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_138" class="collision"/>
+				<geom name="GreenTomatoSeed_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_139" class="collision"/>
+				<geom name="GreenTomatoSeed_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_140" class="collision"/>
+				<geom name="GreenTomatoSeed_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_141" class="collision"/>
+				<geom name="GreenTomatoSeed_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_142" class="collision"/>
+				<geom name="GreenTomatoSeed_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_143" class="collision"/>
+				<geom name="GreenTomatoSeed_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_144" class="collision"/>
+				<geom name="GreenTomatoSeed_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_145" class="collision"/>
+				<geom name="GreenTomatoSeed_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_146" class="collision"/>
+				<geom name="GreenTomatoSeed_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_147" class="collision"/>
+				<geom name="GreenTomatoSeed_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_148" class="collision"/>
+				<geom name="GreenTomatoSeed_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_149" class="collision"/>
+				<geom name="GreenTomatoSeed_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_150" class="collision"/>
+				<geom name="GreenTomatoSeed_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_151" class="collision"/>
+				<geom name="GreenTomatoSeed_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_152" class="collision"/>
+				<geom name="GreenTomatoSeed_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_153" class="collision"/>
+				<geom name="GreenTomatoSeed_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_154" class="collision"/>
+				<geom name="GreenTomatoSeed_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_155" class="collision"/>
+				<geom name="GreenTomatoSeed_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_156" class="collision"/>
+				<geom name="GreenTomatoSeed_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_157" class="collision"/>
+				<geom name="GreenTomatoSeed_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_158" class="collision"/>
+				<geom name="GreenTomatoSeed_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_159" class="collision"/>
+				<geom name="GreenTomatoSeed_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_160" class="collision"/>
+				<geom name="GreenTomatoSeed_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_161" class="collision"/>
+				<geom name="GreenTomatoSeed_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_162" class="collision"/>
+				<geom name="GreenTomatoSeed_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_163" class="collision"/>
+				<geom name="GreenTomatoSeed_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_164" class="collision"/>
+				<geom name="GreenTomatoSeed_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_165" class="collision"/>
+				<geom name="GreenTomatoSeed_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_166" class="collision"/>
+				<geom name="GreenTomatoSeed_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_167" class="collision"/>
+				<geom name="GreenTomatoSeed_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_168" class="collision"/>
+				<geom name="GreenTomatoSeed_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_169" class="collision"/>
+				<geom name="GreenTomatoSeed_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_170" class="collision"/>
+				<geom name="GreenTomatoSeed_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_171" class="collision"/>
+				<geom name="GreenTomatoSeed_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_172" class="collision"/>
+				<geom name="GreenTomatoSeed_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_173" class="collision"/>
+				<geom name="GreenTomatoSeed_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_174" class="collision"/>
+				<geom name="GreenTomatoSeed_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_175" class="collision"/>
+				<geom name="GreenTomatoSeed_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_176" class="collision"/>
+				<geom name="GreenTomatoSeed_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_177" class="collision"/>
+				<geom name="GreenTomatoSeed_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_178" class="collision"/>
+				<geom name="GreenTomatoSeed_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_179" class="collision"/>
+				<geom name="GreenTomatoSeed_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_180" class="collision"/>
+				<geom name="GreenTomatoSeed_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_181" class="collision"/>
+				<geom name="GreenTomatoSeed_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_182" class="collision"/>
+				<geom name="GreenTomatoSeed_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_183" class="collision"/>
+				<geom name="GreenTomatoSeed_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_184" class="collision"/>
+				<geom name="GreenTomatoSeed_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_185" class="collision"/>
+				<geom name="GreenTomatoSeed_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_186" class="collision"/>
+				<geom name="GreenTomatoSeed_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_187" class="collision"/>
+				<geom name="GreenTomatoSeed_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_188" class="collision"/>
+				<geom name="GreenTomatoSeed_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_189" class="collision"/>
+				<geom name="GreenTomatoSeed_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_190" class="collision"/>
+				<geom name="GreenTomatoSeed_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_191" class="collision"/>
+				<geom name="GreenTomatoSeed_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_192" class="collision"/>
+				<geom name="GreenTomatoSeed_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_193" class="collision"/>
+				<geom name="GreenTomatoSeed_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_194" class="collision"/>
+				<geom name="GreenTomatoSeed_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_195" class="collision"/>
+				<geom name="GreenTomatoSeed_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_196" class="collision"/>
+				<geom name="GreenTomatoSeed_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoSeed_197" class="collision"/>
+			</body>
+			<body name="green_tomato_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.4332605004310608" pos="9.203503395838197e-06 0.0002614582481328398 -0.006322771310806274" quat="0.8986177444458008 0.10085650533437729 -0.024877795949578285 -0.4262571632862091" diaginertia="0.0003842420701403171 0.0003887317143380642 0.0004259639244992286"/>
+				<geom name="GreenTomatoFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh" material="M_GreenTomatoFlesh" class="visual"/>
+				<geom name="GreenTomatoFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_001" class="collision"/>
+				<geom name="GreenTomatoFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_002" class="collision"/>
+				<geom name="GreenTomatoFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_003" class="collision"/>
+				<geom name="GreenTomatoFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_004" class="collision"/>
+				<geom name="GreenTomatoFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_005" class="collision"/>
+				<geom name="GreenTomatoFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoFlesh_006" class="collision"/>
+			</body>
+			<body name="green_tomato_pedicel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0002582797023933381" pos="0.0009499540319666266 0.001511098351329565 0.03419901430606842" quat="0.6076580286026001 0.341267466545105 0.6084780693054199 -0.37952956557273865" diaginertia="6.191254176002303e-10 3.153175782699691e-07 3.1542168699161266e-07"/>
+				<geom name="GreenTomatoPedicel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPedicel" material="M_GreenTomatoPedicel" class="visual"/>
+				<geom name="GreenTomatoPedicel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPedicel_001" class="collision"/>
+				<geom name="GreenTomatoPedicel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPedicel_002" class="collision"/>
+				<geom name="GreenTomatoPedicel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoPedicel_003" class="collision"/>
+			</body>
+			<body name="green_tomato_calyx" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0006789519684389234" pos="-0.000531653524376452 0.0005663327174261212 0.02999572642147541" quat="-0.560508131980896 -0.4188559949398041 0.5649407505989075 -0.43730103969573975" diaginertia="1.2735988264012121e-07 6.637141609644459e-07 6.982792797316506e-07"/>
+				<geom name="GreenTomatoCalyx" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx" material="M_GreenTomatoCalyx" class="visual"/>
+				<geom name="GreenTomatoCalyx_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_001" class="collision"/>
+				<geom name="GreenTomatoCalyx_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_002" class="collision"/>
+				<geom name="GreenTomatoCalyx_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_003" class="collision"/>
+				<geom name="GreenTomatoCalyx_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_004" class="collision"/>
+				<geom name="GreenTomatoCalyx_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_005" class="collision"/>
+				<geom name="GreenTomatoCalyx_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_006" class="collision"/>
+				<geom name="GreenTomatoCalyx_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_007" class="collision"/>
+				<geom name="GreenTomatoCalyx_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_008" class="collision"/>
+				<geom name="GreenTomatoCalyx_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_009" class="collision"/>
+				<geom name="GreenTomatoCalyx_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_010" class="collision"/>
+				<geom name="GreenTomatoCalyx_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_011" class="collision"/>
+				<geom name="GreenTomatoCalyx_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_012" class="collision"/>
+				<geom name="GreenTomatoCalyx_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_013" class="collision"/>
+				<geom name="GreenTomatoCalyx_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_014" class="collision"/>
+				<geom name="GreenTomatoCalyx_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_015" class="collision"/>
+				<geom name="GreenTomatoCalyx_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_016" class="collision"/>
+				<geom name="GreenTomatoCalyx_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenTomatoCalyx_017" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

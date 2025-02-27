@@ -1,0 +1,428 @@
+<?xml version="1.0" ?>
+<mujoco model="grain_buckwheat">
+	<compiler meshdir="grain_buckwheat/meshes" texturedir="grain_buckwheat/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GrainBuckwheat036" file="obj/GrainBuckwheat036.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat036_001" file="stl/GrainBuckwheat036_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat040" file="obj/GrainBuckwheat040.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat040_001" file="stl/GrainBuckwheat040_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat041" file="obj/GrainBuckwheat041.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat041_001" file="stl/GrainBuckwheat041_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat017" file="obj/GrainBuckwheat017.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat017_001" file="stl/GrainBuckwheat017_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat049" file="obj/GrainBuckwheat049.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat049_001" file="stl/GrainBuckwheat049_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat024" file="obj/GrainBuckwheat024.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat024_001" file="stl/GrainBuckwheat024_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat051" file="obj/GrainBuckwheat051.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat051_001" file="stl/GrainBuckwheat051_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat019" file="obj/GrainBuckwheat019.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat019_001" file="stl/GrainBuckwheat019_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat042" file="obj/GrainBuckwheat042.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat042_001" file="stl/GrainBuckwheat042_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat021" file="obj/GrainBuckwheat021.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat021_001" file="stl/GrainBuckwheat021_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat032" file="obj/GrainBuckwheat032.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat032_001" file="stl/GrainBuckwheat032_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat014" file="obj/GrainBuckwheat014.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat014_001" file="stl/GrainBuckwheat014_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat035" file="obj/GrainBuckwheat035.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat035_001" file="stl/GrainBuckwheat035_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat004" file="obj/GrainBuckwheat004.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat004_001" file="stl/GrainBuckwheat004_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat001" file="obj/GrainBuckwheat001.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat001_001" file="stl/GrainBuckwheat001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat047" file="obj/GrainBuckwheat047.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat047_001" file="stl/GrainBuckwheat047_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat015" file="obj/GrainBuckwheat015.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat015_001" file="stl/GrainBuckwheat015_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat038" file="obj/GrainBuckwheat038.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat038_001" file="stl/GrainBuckwheat038_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat045" file="obj/GrainBuckwheat045.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat045_001" file="stl/GrainBuckwheat045_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat050" file="obj/GrainBuckwheat050.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat050_001" file="stl/GrainBuckwheat050_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat009" file="obj/GrainBuckwheat009.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat009_001" file="stl/GrainBuckwheat009_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat006" file="obj/GrainBuckwheat006.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat006_001" file="stl/GrainBuckwheat006_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat048" file="obj/GrainBuckwheat048.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat048_001" file="stl/GrainBuckwheat048_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat011" file="obj/GrainBuckwheat011.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat011_001" file="stl/GrainBuckwheat011_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat005" file="obj/GrainBuckwheat005.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat005_001" file="stl/GrainBuckwheat005_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat008" file="obj/GrainBuckwheat008.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat008_001" file="stl/GrainBuckwheat008_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat037" file="obj/GrainBuckwheat037.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat037_001" file="stl/GrainBuckwheat037_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat039" file="obj/GrainBuckwheat039.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat039_001" file="stl/GrainBuckwheat039_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat023" file="obj/GrainBuckwheat023.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat023_001" file="stl/GrainBuckwheat023_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat018" file="obj/GrainBuckwheat018.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat018_001" file="stl/GrainBuckwheat018_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat002" file="obj/GrainBuckwheat002.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat002_001" file="stl/GrainBuckwheat002_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat025" file="obj/GrainBuckwheat025.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat025_001" file="stl/GrainBuckwheat025_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat043" file="obj/GrainBuckwheat043.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat043_001" file="stl/GrainBuckwheat043_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat031" file="obj/GrainBuckwheat031.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat031_001" file="stl/GrainBuckwheat031_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat003" file="obj/GrainBuckwheat003.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat003_001" file="stl/GrainBuckwheat003_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat016" file="obj/GrainBuckwheat016.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat016_001" file="stl/GrainBuckwheat016_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat007" file="obj/GrainBuckwheat007.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat007_001" file="stl/GrainBuckwheat007_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat022" file="obj/GrainBuckwheat022.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat022_001" file="stl/GrainBuckwheat022_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat013" file="obj/GrainBuckwheat013.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat013_001" file="stl/GrainBuckwheat013_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat028" file="obj/GrainBuckwheat028.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat028_001" file="stl/GrainBuckwheat028_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat026" file="obj/GrainBuckwheat026.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat026_001" file="stl/GrainBuckwheat026_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat010" file="obj/GrainBuckwheat010.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat010_001" file="stl/GrainBuckwheat010_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat033" file="obj/GrainBuckwheat033.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat033_001" file="stl/GrainBuckwheat033_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat044" file="obj/GrainBuckwheat044.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat044_001" file="stl/GrainBuckwheat044_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat046" file="obj/GrainBuckwheat046.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat046_001" file="stl/GrainBuckwheat046_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat012" file="obj/GrainBuckwheat012.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat012_001" file="stl/GrainBuckwheat012_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat030" file="obj/GrainBuckwheat030.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat030_001" file="stl/GrainBuckwheat030_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat020" file="obj/GrainBuckwheat020.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat020_001" file="stl/GrainBuckwheat020_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat029" file="obj/GrainBuckwheat029.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat029_001" file="stl/GrainBuckwheat029_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat034" file="obj/GrainBuckwheat034.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat034_001" file="stl/GrainBuckwheat034_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat027" file="obj/GrainBuckwheat027.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GrainBuckwheat027_001" file="stl/GrainBuckwheat027_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GrainBuckwheat051_035" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_039" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_040" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_016" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_048" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_023" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_050" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_018" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_041" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_020" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_031" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_013" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_034" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_003" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_046" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_014" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_037" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_044" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_049" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_008" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_005" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_047" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_010" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_004" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_007" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_036" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_038" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_022" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_017" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_001" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_024" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_042" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_030" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_002" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_015" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_006" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_021" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_012" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_027" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_025" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_009" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_032" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_043" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_045" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_011" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_029" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_019" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_028" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_033" texture="T_GrainBuckwheat051"/>
+		<material name="M_GrainBuckwheat051_026" texture="T_GrainBuckwheat051"/>
+		<texture name="T_GrainBuckwheat051" type="2d" file="T_GrainBuckwheat051.png"/>
+	</asset>
+	<worldbody>
+		<body name="grain_buckwheat" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="grain_buckwheat036" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105949498713017" pos="0.002045366680249572 0.017098860815167427 0.009588130749762058" quat="0.6063151955604553 -0.2742525339126587 0.6036592125892639 -0.43904781341552734" diaginertia="5.207304525356449e-07 3.7398126551124733e-06 3.7558399981207913e-06"/>
+				<geom name="GrainBuckwheat036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat036" material="M_GrainBuckwheat051_035" class="visual"/>
+				<geom name="GrainBuckwheat036_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat036_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat041" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105945773422718" pos="0.016430174931883812 -0.026166731491684914 0.0004604462010320276" quat="-0.15355660021305084 0.4604199528694153 0.822814404964447 -0.29565227031707764" diaginertia="5.648936962643347e-07 8.276318112621084e-06 8.357154911209363e-06"/>
+				<geom name="GrainBuckwheat041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat041" material="M_GrainBuckwheat051_040" class="visual"/>
+				<geom name="GrainBuckwheat041_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat041_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat049" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594018548727" pos="0.043939653784036636 -0.029685627669095993 -0.005284047685563564" quat="0.9296882748603821 -0.2184031456708908 0.11647018045186996 -0.2727901041507721" diaginertia="5.380534275900573e-07 2.359003156016115e-05 2.3629507268196903e-05"/>
+				<geom name="GrainBuckwheat049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat049" material="M_GrainBuckwheat051_048" class="visual"/>
+				<geom name="GrainBuckwheat049_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat049_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat051" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105947636067867" pos="-0.052226465195417404 -0.009263415820896626 -0.004320839885622263" quat="0.9737453460693359 0.20652884244918823 -0.021893210709095 0.09320162236690521" diaginertia="6.010953370605421e-07 2.347497684240807e-05 2.355565629841294e-05"/>
+				<geom name="GrainBuckwheat051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat051" material="M_GrainBuckwheat051_050" class="visual"/>
+				<geom name="GrainBuckwheat051_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat051_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat042" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594018548727" pos="-0.006528912577778101 0.037082236260175705 -0.002959451638162136" quat="0.5814504027366638 0.2770678400993347 0.38417452573776245 0.6614822745323181" diaginertia="5.237760092313692e-07 1.2138609235989861e-05 1.2181763850094285e-05"/>
+				<geom name="GrainBuckwheat042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat042" material="M_GrainBuckwheat051_041" class="visual"/>
+				<geom name="GrainBuckwheat042_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat042_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat032" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594204813242" pos="-0.010173884220421314 -0.06007910519838333 -0.024026038125157356" quat="0.5690904259681702 -0.3139033615589142 0.5873298048973083 -0.48233234882354736" diaginertia="5.687700195267098e-07 3.5309272789163515e-05 3.5393371945247054e-05"/>
+				<geom name="GrainBuckwheat032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat032" material="M_GrainBuckwheat051_031" class="visual"/>
+				<geom name="GrainBuckwheat032_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat032_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat035" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105935528874397" pos="-0.03301561623811722 -0.004829749930649996 -0.004289811477065086" quat="0.7800877690315247 0.6182864904403687 -0.005780127365142107 0.09566345065832138" diaginertia="6.137258310445759e-07 9.679593858891167e-06 9.772891644388437e-06"/>
+				<geom name="GrainBuckwheat035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat035" material="M_GrainBuckwheat051_034" class="visual"/>
+				<geom name="GrainBuckwheat035_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat035_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594018548727" pos="-0.05053158104419708 0.03392508998513222 -0.022955160588026047" quat="0.893017590045929 -0.3008437156677246 -0.08914189785718918 -0.32259324193000793" diaginertia="5.945461225564941e-07 3.482808460830711e-05 3.489282971713692e-05"/>
+				<geom name="GrainBuckwheat001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat001" material="M_GrainBuckwheat051" class="visual"/>
+				<geom name="GrainBuckwheat001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat001_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat015" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594204813242" pos="0.050654370337724686 0.0023094387724995613 -0.02323511615395546" quat="0.8631618618965149 -0.45685744285583496 0.1787554770708084 0.11949623376131058" diaginertia="5.832903866576089e-07 2.5756646209629253e-05 2.5814631953835487e-05"/>
+				<geom name="GrainBuckwheat015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat015" material="M_GrainBuckwheat051_014" class="visual"/>
+				<geom name="GrainBuckwheat015_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat015_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat045" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105941116809845" pos="0.02266024611890316 0.012555936351418495 0.002754347398877144" quat="0.8569220304489136 -0.44810760021209717 -0.1630532145500183 0.19569844007492065" diaginertia="5.934494424764125e-07 6.0074871726101264e-06 6.120737907622242e-06"/>
+				<geom name="GrainBuckwheat045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat045" material="M_GrainBuckwheat051_044" class="visual"/>
+				<geom name="GrainBuckwheat045_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat045_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat009" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105946704745293" pos="-0.02227836102247238 0.03225889801979065 -0.02443511411547661" quat="0.09429944306612015 0.49901145696640015 0.7722570896148682 -0.3817252218723297" diaginertia="5.447193416330265e-07 1.7869906514533795e-05 1.7900420061778277e-05"/>
+				<geom name="GrainBuckwheat009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat009" material="M_GrainBuckwheat051_008" class="visual"/>
+				<geom name="GrainBuckwheat009_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat009_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat048" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594204813242" pos="-0.019858401268720627 -0.05260501429438591 -0.0027104404289275408" quat="-0.5010566711425781 0.26902279257774353 -0.42457982897758484 0.7044863104820251" diaginertia="5.65483276204759e-07 2.6224735847790726e-05 2.630334893183317e-05"/>
+				<geom name="GrainBuckwheat048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat048" material="M_GrainBuckwheat051_047" class="visual"/>
+				<geom name="GrainBuckwheat048_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat048_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat005" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105922490358353" pos="0.030763311311602592 0.06178424134850502 -0.023084290325641632" quat="-0.4309788942337036 0.3210374116897583 -0.2352829873561859 0.8098358511924744" diaginertia="5.940332812315319e-07 4.344043190940283e-05 4.35507608926855e-05"/>
+				<geom name="GrainBuckwheat005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat005" material="M_GrainBuckwheat051_004" class="visual"/>
+				<geom name="GrainBuckwheat005_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat005_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat037" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105939254164696" pos="-0.032763779163360596 -0.03056233748793602 -0.004140632692724466" quat="0.7719375491142273 -0.5172057747840881 -0.24398639798164368 0.27763521671295166" diaginertia="5.498241080204025e-07 1.6984567992039956e-05 1.700752545730211e-05"/>
+				<geom name="GrainBuckwheat037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat037" material="M_GrainBuckwheat051_036" class="visual"/>
+				<geom name="GrainBuckwheat037_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat037_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat023" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105947636067867" pos="-0.04523541033267975 -0.03564969450235367 -0.02306240238249302" quat="0.9207065105438232 -0.13086985051631927 -0.24159544706344604 0.2771357297897339" diaginertia="5.364595949686191e-07 3.176082464051433e-05 3.1820862204767764e-05"/>
+				<geom name="GrainBuckwheat023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat023" material="M_GrainBuckwheat051_022" class="visual"/>
+				<geom name="GrainBuckwheat023_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat023_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105944842100143" pos="-0.03653108328580856 0.0581178292632103 -0.022487230598926544" quat="-0.3808794319629669 0.779645562171936 -0.33736351132392883 0.36506104469299316" diaginertia="5.454248821479268e-07 4.2848652810789645e-05 4.291586083127186e-05"/>
+				<geom name="GrainBuckwheat002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat002" material="M_GrainBuckwheat051_001" class="visual"/>
+				<geom name="GrainBuckwheat002_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat002_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat043" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105941116809845" pos="-0.02209833450615406 0.01766124926507473 0.0019577140919864178" quat="0.9409516453742981 -0.04389763996005058 0.05021475628018379 -0.3319058120250702" diaginertia="5.639479923047475e-07 7.074228960846085e-06 7.115884727681987e-06"/>
+				<geom name="GrainBuckwheat043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat043" material="M_GrainBuckwheat051_042" class="visual"/>
+				<geom name="GrainBuckwheat043_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat043_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat003" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105945773422718" pos="-0.013117169961333275 0.05731106176972389 -0.022242994979023933" quat="-0.17476308345794678 0.7577271461486816 -0.5200868844985962 0.3532945513725281" diaginertia="5.109791914037487e-07 3.261993333580904e-05 3.264652332291007e-05"/>
+				<geom name="GrainBuckwheat003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat003" material="M_GrainBuckwheat051_002" class="visual"/>
+				<geom name="GrainBuckwheat003_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat003_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat007" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105935528874397" pos="0.028174228966236115 0.03923295438289642 -0.022794509306550026" quat="0.7116689085960388 0.5070321559906006 0.44268786907196045 0.20117956399917603" diaginertia="6.006842454553407e-07 2.3632483134861104e-05 2.3731105102342553e-05"/>
+				<geom name="GrainBuckwheat007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat007" material="M_GrainBuckwheat051_006" class="visual"/>
+				<geom name="GrainBuckwheat007_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat007_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat013" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105939254164696" pos="0.03355750814080238 0.015724893659353256 -0.017061349004507065" quat="0.9089505076408386 -0.2932407855987549 0.14590273797512054 0.25793638825416565" diaginertia="6.00940609274403e-07 1.4017438843438867e-05 1.4084047506912611e-05"/>
+				<geom name="GrainBuckwheat013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat013" material="M_GrainBuckwheat051_012" class="visual"/>
+				<geom name="GrainBuckwheat013_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat013_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat026" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105948567390442" pos="0.04998636618256569 -0.040227849036455154 -0.024435097351670265" quat="0.908433735370636 0.1976117491722107 0.11959397047758102 -0.34841784834861755" diaginertia="5.239398319645261e-07 3.879645373672247e-05 3.882061719195917e-05"/>
+				<geom name="GrainBuckwheat026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat026" material="M_GrainBuckwheat051_025" class="visual"/>
+				<geom name="GrainBuckwheat026_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat026_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat033" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105933666229248" pos="-0.034720759838819504 -0.05245469510555267 -0.023245565593242645" quat="0.01208925899118185 0.8707597255706787 0.44674602150917053 0.20505930483341217" diaginertia="5.9566104937403e-07 3.698635191540234e-05 3.7047226214781404e-05"/>
+				<geom name="GrainBuckwheat033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat033" material="M_GrainBuckwheat051_032" class="visual"/>
+				<geom name="GrainBuckwheat033_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat033_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat046" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105946704745293" pos="0.017504576593637466 0.03517335280776024 -0.0018324489938095212" quat="-0.3802824914455414 0.3641248047351837 -0.5570316910743713 0.6422725915908813" diaginertia="5.833539375998953e-07 1.3056818715995178e-05 1.3156811291992199e-05"/>
+				<geom name="GrainBuckwheat046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat046" material="M_GrainBuckwheat051_045" class="visual"/>
+				<geom name="GrainBuckwheat046_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat046_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat030" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105923421680927" pos="0.03629881143569946 -0.05309285968542099 -0.02176724001765251" quat="0.6497764587402344 -0.5874162316322327 0.4348844289779663 -0.20882579684257507" diaginertia="5.858936447111773e-07 3.7886693462496623e-05 3.798663601628505e-05"/>
+				<geom name="GrainBuckwheat030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat030" material="M_GrainBuckwheat051_029" class="visual"/>
+				<geom name="GrainBuckwheat030_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat030_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat029" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105949498713017" pos="0.014344245195388794 -0.047696802765131 -0.015047436580061913" quat="0.3847382366657257 0.46307963132858276 0.4333624541759491 0.6706196665763855" diaginertia="5.716344162465248e-07 2.2472377168014646e-05 2.25625881284941e-05"/>
+				<geom name="GrainBuckwheat029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat029" material="M_GrainBuckwheat051_028" class="visual"/>
+				<geom name="GrainBuckwheat029_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat029_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat027" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105937391519547" pos="-0.004479730501770973 -0.0012996743898838758 -0.005457277409732342" quat="-0.47670912742614746 0.7298496961593628 0.3466566801071167 0.3462614417076111" diaginertia="5.612605491478462e-07 9.708452353152097e-07 1.0217077033303212e-06"/>
+				<geom name="GrainBuckwheat027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat027" material="M_GrainBuckwheat051_026" class="visual"/>
+				<geom name="GrainBuckwheat027_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat027_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat040" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105943910777569" pos="-0.011808747425675392 -0.0011289224494248629 0.017613405361771584" quat="-0.29635703563690186 0.37353256344795227 0.5043588280677795 0.7199084162712097" diaginertia="5.374038209993159e-07 4.230371814628597e-06 4.2612964534782805e-06"/>
+				<geom name="GrainBuckwheat040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat040" material="M_GrainBuckwheat051_039" class="visual"/>
+				<geom name="GrainBuckwheat040_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat040_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat024" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105936460196972" pos="-0.019914189353585243 -0.03749093413352966 -0.02171235904097557" quat="-0.5408251285552979 -0.0069801523350179195 -0.4124540388584137 0.7330355644226074" diaginertia="5.509717198037833e-07 1.9001197870238684e-05 1.902495205285959e-05"/>
+				<geom name="GrainBuckwheat024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat024" material="M_GrainBuckwheat051_023" class="visual"/>
+				<geom name="GrainBuckwheat024_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat024_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat021" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105950430035591" pos="-0.060545746237039566 -0.015275874175131321 -0.02157430723309517" quat="0.9783706068992615 0.03421436995267868 -0.16270382702350616 0.12307616323232651" diaginertia="5.76066497615102e-07 3.592779103200883e-05 3.597272007027641e-05"/>
+				<geom name="GrainBuckwheat021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat021" material="M_GrainBuckwheat051_020" class="visual"/>
+				<geom name="GrainBuckwheat021_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat021_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat004" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105949498713017" pos="0.009392163716256618 0.059688910841941833 -0.024979444220662117" quat="-0.5894582867622375 0.2854754626750946 -0.04142405092716217 0.7545374035835266" diaginertia="5.472948600981908e-07 3.522801125654951e-05 3.5248052881797776e-05"/>
+				<geom name="GrainBuckwheat004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat004" material="M_GrainBuckwheat051_003" class="visual"/>
+				<geom name="GrainBuckwheat004_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat004_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat038" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105949498713017" pos="0.041380494832992554 -0.001247461186721921 0.0028357559349387884" quat="0.07783782482147217 0.9962500333786011 -0.017574379220604897 0.03344082832336426" diaginertia="6.058806434339203e-07 1.4463385014096275e-05 1.4564971934305504e-05"/>
+				<geom name="GrainBuckwheat038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat038" material="M_GrainBuckwheat051_037" class="visual"/>
+				<geom name="GrainBuckwheat038_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat038_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat006" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105956017971039" pos="0.0471704937517643 0.04279233142733574 -0.018219096586108208" quat="-0.5315480828285217 0.7571967244148254 0.2002735733985901 -0.32249072194099426" diaginertia="6.009755679770024e-07 3.6077552067581564e-05 3.6180448660161346e-05"/>
+				<geom name="GrainBuckwheat006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat006" material="M_GrainBuckwheat051_005" class="visual"/>
+				<geom name="GrainBuckwheat006_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat006_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat008" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105945773422718" pos="0.003870690241456032 0.03437522053718567 -0.023000888526439667" quat="-0.48871639370918274 0.4640505611896515 -0.1256100982427597 0.7280353307723999" diaginertia="5.137443963576516e-07 1.4572445252269972e-05 1.4608598576160148e-05"/>
+				<geom name="GrainBuckwheat008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat008" material="M_GrainBuckwheat051_007" class="visual"/>
+				<geom name="GrainBuckwheat008_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat008_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat018" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105943910777569" pos="0.008047490380704403 -0.013144798576831818 -0.02624203823506832" quat="0.18492642045021057 0.5785127282142639 0.12710203230381012 0.7842004299163818" diaginertia="5.589678266915143e-07 8.048713425523601e-06 8.125918611767702e-06"/>
+				<geom name="GrainBuckwheat018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat018" material="M_GrainBuckwheat051_017" class="visual"/>
+				<geom name="GrainBuckwheat018_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat018_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat031" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105949498713017" pos="-0.0012952282559126616 -0.03514724597334862 -0.011418555863201618" quat="0.35615241527557373 0.5960530042648315 -0.4755488336086273 -0.540120005607605" diaginertia="5.482604592543794e-07 1.1632791029114742e-05 1.1705206816259306e-05"/>
+				<geom name="GrainBuckwheat031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat031" material="M_GrainBuckwheat051_030" class="visual"/>
+				<geom name="GrainBuckwheat031_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat031_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat022" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105943910777569" pos="-0.056897737085819244 0.008237425237894058 -0.0225231796503067" quat="0.7835298180580139 -0.5890224575996399 -0.10761016607284546 -0.1659928262233734" diaginertia="6.173976316858898e-07 3.141277193208225e-05 3.149594340356998e-05"/>
+				<geom name="GrainBuckwheat022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat022" material="M_GrainBuckwheat051_021" class="visual"/>
+				<geom name="GrainBuckwheat022_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat022_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat010" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105929009616375" pos="-0.034949179738759995 0.011973243206739426 -0.0205503199249506" quat="0.9228758215904236 -0.2464989274740219 -0.2077254056930542 -0.21068622171878815" diaginertia="5.76684385578119e-07 1.5035779142635874e-05 1.5078328033268917e-05"/>
+				<geom name="GrainBuckwheat010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat010" material="M_GrainBuckwheat051_009" class="visual"/>
+				<geom name="GrainBuckwheat010_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat010_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat012" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105937391519547" pos="0.010799846611917019 0.011104211211204529 -0.023297617211937904" quat="0.7818544507026672 0.2832264304161072 0.5524677634239197 0.05714673548936844" diaginertia="5.232639068708522e-07 6.929135906830197e-06 6.955215212656185e-06"/>
+				<geom name="GrainBuckwheat012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat012" material="M_GrainBuckwheat051_011" class="visual"/>
+				<geom name="GrainBuckwheat012_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat012_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat034" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105936460196972" pos="0.010947249829769135 -0.06272708624601364 -0.026157196611166" quat="-0.12980850040912628 0.635077714920044 0.7473159432411194 0.1460988074541092" diaginertia="6.027063932378951e-07 3.892334279953502e-05 3.901588934240863e-05"/>
+				<geom name="GrainBuckwheat034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat034" material="M_GrainBuckwheat051_033" class="visual"/>
+				<geom name="GrainBuckwheat034_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat034_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat017" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105946704745293" pos="0.02406885102391243 -0.008368724025785923 -0.010140636935830116" quat="0.8793309926986694 0.4041511118412018 0.11004269123077393 -0.22656023502349854" diaginertia="5.527658117898682e-07 6.67053882352775e-06 6.68919119561906e-06"/>
+				<geom name="GrainBuckwheat017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat017" material="M_GrainBuckwheat051_016" class="visual"/>
+				<geom name="GrainBuckwheat017_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat017_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat014" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594018548727" pos="0.06014705449342728 0.027183858677744865 -0.023471787571907043" quat="-0.4766217768192291 0.8380175828933716 0.08926558494567871 -0.2501797378063202" diaginertia="5.20533546932711e-07 4.0361235733143985e-05 4.039719715365209e-05"/>
+				<geom name="GrainBuckwheat014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat014" material="M_GrainBuckwheat051_013" class="visual"/>
+				<geom name="GrainBuckwheat014_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat014_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat050" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810592994093895" pos="0.029673345386981964 -0.044900476932525635 0.0012748483568429947" quat="0.38472336530685425 0.27615344524383545 0.5346928238868713 0.6998791098594666" diaginertia="6.011979962750047e-07 2.4004377337405458e-05 2.4097673303913325e-05"/>
+				<geom name="GrainBuckwheat050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat050" material="M_GrainBuckwheat051_049" class="visual"/>
+				<geom name="GrainBuckwheat050_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat050_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat039" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810592994093895" pos="-0.03256399556994438 0.038393937051296234 -0.008047441020607948" quat="0.8841923475265503 0.19551904499530792 -0.17495876550674438 -0.3864785432815552" diaginertia="5.277694867800165e-07 2.1640502382069826e-05 2.168898754462134e-05"/>
+				<geom name="GrainBuckwheat039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat039" material="M_GrainBuckwheat051_038" class="visual"/>
+				<geom name="GrainBuckwheat039_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat039_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat016" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810594204813242" pos="0.04196881130337715 -0.01663569174706936 -0.02461392432451248" quat="0.6173082590103149 0.7255755662918091 0.034125398844480515 -0.3021690249443054" diaginertia="5.911784910495044e-07 2.196304740209598e-05 2.2027823433745652e-05"/>
+				<geom name="GrainBuckwheat016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat016" material="M_GrainBuckwheat051_015" class="visual"/>
+				<geom name="GrainBuckwheat016_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat016_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat044" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105948567390442" pos="-0.014808080159127712 -0.019873088225722313 0.0014352528378367424" quat="0.3059924840927124 0.8378275632858276 0.43547919392585754 0.1215376928448677" diaginertia="5.631143267237348e-07 5.529467671294697e-06 5.61673914489802e-06"/>
+				<geom name="GrainBuckwheat044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat044" material="M_GrainBuckwheat051_043" class="visual"/>
+				<geom name="GrainBuckwheat044_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat044_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat019" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105953224003315" pos="-0.017469851300120354 -0.013298273086547852 -0.022026002407073975" quat="0.4671676754951477 0.03651132062077522 0.7178202867507935 -0.5149323344230652" diaginertia="6.161754981803824e-07 8.345341484528035e-06 8.436662938038353e-06"/>
+				<geom name="GrainBuckwheat019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat019" material="M_GrainBuckwheat051_018" class="visual"/>
+				<geom name="GrainBuckwheat019_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat019_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat011" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105955086648464" pos="-0.011661279015243053 0.009705019183456898 -0.022288339212536812" quat="0.8079379796981812 -0.2472657710313797 -0.4052053689956665 -0.3491482734680176" diaginertia="5.250573735793296e-07 6.464570560638094e-06 6.51377968097222e-06"/>
+				<geom name="GrainBuckwheat011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat011" material="M_GrainBuckwheat051_010" class="visual"/>
+				<geom name="GrainBuckwheat011_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat011_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat028" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105935528874397" pos="0.060560666024684906 -0.01860790140926838 -0.02188628353178501" quat="0.9595561623573303 -0.17607927322387695 0.19043497741222382 -0.10946506261825562" diaginertia="5.881024662812706e-07 3.692964310175739e-05 3.70381458196789e-05"/>
+				<geom name="GrainBuckwheat028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat028" material="M_GrainBuckwheat051_027" class="visual"/>
+				<geom name="GrainBuckwheat028_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat028_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat047" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00810595229268074" pos="0.01018684171140194 -0.011573433876037598 0.013844856061041355" quat="0.49350130558013916 0.11360975354909897 0.7665191888809204 0.3949652910232544" diaginertia="5.116796160109516e-07 4.070716840942623e-06 4.097207693121163e-06"/>
+				<geom name="GrainBuckwheat047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat047" material="M_GrainBuckwheat051_046" class="visual"/>
+				<geom name="GrainBuckwheat047_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat047_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat020" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105951361358166" pos="-0.03919633850455284 -0.012304223142564297 -0.025363637134432793" quat="0.9513238072395325 0.03685726970434189 -0.27017709612846375 0.14362742006778717" diaginertia="5.947910608483653e-07 1.9412487745285034e-05 1.9501927454257384e-05"/>
+				<geom name="GrainBuckwheat020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat020" material="M_GrainBuckwheat051_019" class="visual"/>
+				<geom name="GrainBuckwheat020_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat020_001" class="collision"/>
+			</body>
+			<body name="grain_buckwheat025" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.008105965331196785" pos="0.02487737126648426 -0.02842203713953495 -0.023642944172024727" quat="0.8045360445976257 0.3616665303707123 0.1260363906621933 -0.4539095163345337" diaginertia="5.317148747963074e-07 1.666427488089539e-05 1.6714066077838652e-05"/>
+				<geom name="GrainBuckwheat025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat025" material="M_GrainBuckwheat051_024" class="visual"/>
+				<geom name="GrainBuckwheat025_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GrainBuckwheat025_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

@@ -1,0 +1,872 @@
+<?xml version="1.0" ?>
+<mujoco model="kiwi_1">
+	<compiler meshdir="kiwi_1/meshes" texturedir="kiwi_1/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="KiwiFlesh" file="obj/KiwiFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiFlesh_001" file="stl/KiwiFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiFruitPeduncle" file="obj/KiwiFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiFruitPeduncle_001" file="stl/KiwiFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiFruitPeduncle_002" file="stl/KiwiFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed" file="stl/KiwiSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_001" file="stl/KiwiSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_002" file="stl/KiwiSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_003" file="stl/KiwiSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_004" file="stl/KiwiSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_005" file="stl/KiwiSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_006" file="stl/KiwiSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_007" file="stl/KiwiSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_008" file="stl/KiwiSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_009" file="stl/KiwiSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_010" file="stl/KiwiSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_011" file="stl/KiwiSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_012" file="stl/KiwiSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_013" file="stl/KiwiSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_014" file="stl/KiwiSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_015" file="stl/KiwiSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_016" file="stl/KiwiSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_017" file="stl/KiwiSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_018" file="stl/KiwiSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_019" file="stl/KiwiSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_020" file="stl/KiwiSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_021" file="stl/KiwiSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_022" file="stl/KiwiSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_023" file="stl/KiwiSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_024" file="stl/KiwiSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_025" file="stl/KiwiSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_026" file="stl/KiwiSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_027" file="stl/KiwiSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_028" file="stl/KiwiSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_029" file="stl/KiwiSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_030" file="stl/KiwiSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_031" file="stl/KiwiSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_032" file="stl/KiwiSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_033" file="stl/KiwiSeed_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_034" file="stl/KiwiSeed_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_035" file="stl/KiwiSeed_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_036" file="stl/KiwiSeed_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_037" file="stl/KiwiSeed_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_038" file="stl/KiwiSeed_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_039" file="stl/KiwiSeed_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_040" file="stl/KiwiSeed_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_041" file="stl/KiwiSeed_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_042" file="stl/KiwiSeed_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_043" file="stl/KiwiSeed_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_044" file="stl/KiwiSeed_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_045" file="stl/KiwiSeed_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_046" file="stl/KiwiSeed_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_047" file="stl/KiwiSeed_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_048" file="stl/KiwiSeed_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_049" file="stl/KiwiSeed_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_050" file="stl/KiwiSeed_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_051" file="stl/KiwiSeed_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_052" file="stl/KiwiSeed_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_053" file="stl/KiwiSeed_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_054" file="stl/KiwiSeed_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_055" file="stl/KiwiSeed_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_056" file="stl/KiwiSeed_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_057" file="stl/KiwiSeed_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_058" file="stl/KiwiSeed_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_059" file="stl/KiwiSeed_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_060" file="stl/KiwiSeed_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_061" file="stl/KiwiSeed_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_062" file="stl/KiwiSeed_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_063" file="stl/KiwiSeed_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_064" file="stl/KiwiSeed_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_065" file="stl/KiwiSeed_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_066" file="stl/KiwiSeed_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_067" file="stl/KiwiSeed_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_068" file="stl/KiwiSeed_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_069" file="stl/KiwiSeed_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_070" file="stl/KiwiSeed_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_071" file="stl/KiwiSeed_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_072" file="stl/KiwiSeed_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_073" file="stl/KiwiSeed_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_074" file="stl/KiwiSeed_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_075" file="stl/KiwiSeed_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_076" file="stl/KiwiSeed_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_077" file="stl/KiwiSeed_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_078" file="stl/KiwiSeed_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_079" file="stl/KiwiSeed_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_080" file="stl/KiwiSeed_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_081" file="stl/KiwiSeed_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_082" file="stl/KiwiSeed_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_083" file="stl/KiwiSeed_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_084" file="stl/KiwiSeed_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_085" file="stl/KiwiSeed_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_086" file="stl/KiwiSeed_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_087" file="stl/KiwiSeed_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_088" file="stl/KiwiSeed_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_089" file="stl/KiwiSeed_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_090" file="stl/KiwiSeed_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_091" file="stl/KiwiSeed_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_092" file="stl/KiwiSeed_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_093" file="stl/KiwiSeed_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_094" file="stl/KiwiSeed_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_095" file="stl/KiwiSeed_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_096" file="stl/KiwiSeed_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_097" file="stl/KiwiSeed_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_098" file="stl/KiwiSeed_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_099" file="stl/KiwiSeed_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_100" file="stl/KiwiSeed_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_101" file="stl/KiwiSeed_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_102" file="stl/KiwiSeed_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_103" file="stl/KiwiSeed_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_104" file="stl/KiwiSeed_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_105" file="stl/KiwiSeed_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_106" file="stl/KiwiSeed_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_107" file="stl/KiwiSeed_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_108" file="stl/KiwiSeed_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_109" file="stl/KiwiSeed_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_110" file="stl/KiwiSeed_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_111" file="stl/KiwiSeed_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_112" file="stl/KiwiSeed_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_113" file="stl/KiwiSeed_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_114" file="stl/KiwiSeed_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_115" file="stl/KiwiSeed_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_116" file="stl/KiwiSeed_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_117" file="stl/KiwiSeed_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_118" file="stl/KiwiSeed_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_119" file="stl/KiwiSeed_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_120" file="stl/KiwiSeed_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_121" file="stl/KiwiSeed_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_122" file="stl/KiwiSeed_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_123" file="stl/KiwiSeed_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_124" file="stl/KiwiSeed_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_125" file="stl/KiwiSeed_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_126" file="stl/KiwiSeed_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_127" file="stl/KiwiSeed_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_128" file="stl/KiwiSeed_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_129" file="stl/KiwiSeed_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_130" file="stl/KiwiSeed_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_131" file="stl/KiwiSeed_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_132" file="stl/KiwiSeed_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_133" file="stl/KiwiSeed_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_134" file="stl/KiwiSeed_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_135" file="stl/KiwiSeed_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_136" file="stl/KiwiSeed_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_137" file="stl/KiwiSeed_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_138" file="stl/KiwiSeed_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_139" file="stl/KiwiSeed_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_140" file="stl/KiwiSeed_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_141" file="stl/KiwiSeed_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_142" file="stl/KiwiSeed_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_143" file="stl/KiwiSeed_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_144" file="stl/KiwiSeed_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_145" file="stl/KiwiSeed_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_146" file="stl/KiwiSeed_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_147" file="stl/KiwiSeed_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_148" file="stl/KiwiSeed_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_149" file="stl/KiwiSeed_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_150" file="stl/KiwiSeed_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_151" file="stl/KiwiSeed_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_152" file="stl/KiwiSeed_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_153" file="stl/KiwiSeed_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_154" file="stl/KiwiSeed_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_155" file="stl/KiwiSeed_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_156" file="stl/KiwiSeed_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_157" file="stl/KiwiSeed_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_158" file="stl/KiwiSeed_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_159" file="stl/KiwiSeed_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_160" file="stl/KiwiSeed_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_161" file="stl/KiwiSeed_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_162" file="stl/KiwiSeed_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_163" file="stl/KiwiSeed_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_164" file="stl/KiwiSeed_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_165" file="stl/KiwiSeed_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_166" file="stl/KiwiSeed_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_167" file="stl/KiwiSeed_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_168" file="stl/KiwiSeed_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_169" file="stl/KiwiSeed_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_170" file="stl/KiwiSeed_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_171" file="stl/KiwiSeed_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_172" file="stl/KiwiSeed_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_173" file="stl/KiwiSeed_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_174" file="stl/KiwiSeed_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_175" file="stl/KiwiSeed_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_176" file="stl/KiwiSeed_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_177" file="stl/KiwiSeed_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_178" file="stl/KiwiSeed_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_179" file="stl/KiwiSeed_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_180" file="stl/KiwiSeed_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_181" file="stl/KiwiSeed_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_182" file="stl/KiwiSeed_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_183" file="stl/KiwiSeed_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_184" file="stl/KiwiSeed_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_185" file="stl/KiwiSeed_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_186" file="stl/KiwiSeed_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_187" file="stl/KiwiSeed_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_188" file="stl/KiwiSeed_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_189" file="stl/KiwiSeed_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_190" file="stl/KiwiSeed_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_191" file="stl/KiwiSeed_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_192" file="stl/KiwiSeed_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_193" file="stl/KiwiSeed_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_194" file="stl/KiwiSeed_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_195" file="stl/KiwiSeed_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_196" file="stl/KiwiSeed_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_197" file="stl/KiwiSeed_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_198" file="stl/KiwiSeed_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_199" file="stl/KiwiSeed_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_200" file="stl/KiwiSeed_200.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_201" file="stl/KiwiSeed_201.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_202" file="stl/KiwiSeed_202.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_203" file="stl/KiwiSeed_203.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_204" file="stl/KiwiSeed_204.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_205" file="stl/KiwiSeed_205.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_206" file="stl/KiwiSeed_206.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_207" file="stl/KiwiSeed_207.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_208" file="stl/KiwiSeed_208.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_209" file="stl/KiwiSeed_209.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_210" file="stl/KiwiSeed_210.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_211" file="stl/KiwiSeed_211.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_212" file="stl/KiwiSeed_212.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_213" file="stl/KiwiSeed_213.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_214" file="stl/KiwiSeed_214.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_215" file="stl/KiwiSeed_215.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_216" file="stl/KiwiSeed_216.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_217" file="stl/KiwiSeed_217.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_218" file="stl/KiwiSeed_218.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_219" file="stl/KiwiSeed_219.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_220" file="stl/KiwiSeed_220.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_221" file="stl/KiwiSeed_221.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_222" file="stl/KiwiSeed_222.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_223" file="stl/KiwiSeed_223.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_224" file="stl/KiwiSeed_224.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_225" file="stl/KiwiSeed_225.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_226" file="stl/KiwiSeed_226.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_227" file="stl/KiwiSeed_227.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_228" file="stl/KiwiSeed_228.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_229" file="stl/KiwiSeed_229.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_230" file="stl/KiwiSeed_230.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_231" file="stl/KiwiSeed_231.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_232" file="stl/KiwiSeed_232.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_233" file="stl/KiwiSeed_233.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_234" file="stl/KiwiSeed_234.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_235" file="stl/KiwiSeed_235.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_236" file="stl/KiwiSeed_236.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_237" file="stl/KiwiSeed_237.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_238" file="stl/KiwiSeed_238.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_239" file="stl/KiwiSeed_239.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_240" file="stl/KiwiSeed_240.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_241" file="stl/KiwiSeed_241.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_242" file="stl/KiwiSeed_242.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_243" file="stl/KiwiSeed_243.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_244" file="stl/KiwiSeed_244.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_245" file="stl/KiwiSeed_245.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_246" file="stl/KiwiSeed_246.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_247" file="stl/KiwiSeed_247.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_248" file="stl/KiwiSeed_248.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_249" file="stl/KiwiSeed_249.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_250" file="stl/KiwiSeed_250.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_251" file="stl/KiwiSeed_251.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_252" file="stl/KiwiSeed_252.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_253" file="stl/KiwiSeed_253.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_254" file="stl/KiwiSeed_254.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_255" file="stl/KiwiSeed_255.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_256" file="stl/KiwiSeed_256.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_257" file="stl/KiwiSeed_257.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_258" file="stl/KiwiSeed_258.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_259" file="stl/KiwiSeed_259.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_260" file="stl/KiwiSeed_260.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_261" file="stl/KiwiSeed_261.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_262" file="stl/KiwiSeed_262.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_263" file="stl/KiwiSeed_263.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_264" file="stl/KiwiSeed_264.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_265" file="stl/KiwiSeed_265.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_266" file="stl/KiwiSeed_266.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_267" file="stl/KiwiSeed_267.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_268" file="stl/KiwiSeed_268.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_269" file="stl/KiwiSeed_269.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_270" file="stl/KiwiSeed_270.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_271" file="stl/KiwiSeed_271.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_272" file="stl/KiwiSeed_272.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_273" file="stl/KiwiSeed_273.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_274" file="stl/KiwiSeed_274.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_275" file="stl/KiwiSeed_275.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_276" file="stl/KiwiSeed_276.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_277" file="stl/KiwiSeed_277.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_278" file="stl/KiwiSeed_278.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_279" file="stl/KiwiSeed_279.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_280" file="stl/KiwiSeed_280.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_281" file="stl/KiwiSeed_281.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_282" file="stl/KiwiSeed_282.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_283" file="stl/KiwiSeed_283.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_284" file="stl/KiwiSeed_284.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_285" file="stl/KiwiSeed_285.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_286" file="stl/KiwiSeed_286.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_287" file="stl/KiwiSeed_287.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_288" file="stl/KiwiSeed_288.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_289" file="stl/KiwiSeed_289.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_290" file="stl/KiwiSeed_290.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_291" file="stl/KiwiSeed_291.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_292" file="stl/KiwiSeed_292.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_293" file="stl/KiwiSeed_293.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_294" file="stl/KiwiSeed_294.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_295" file="stl/KiwiSeed_295.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_296" file="stl/KiwiSeed_296.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_297" file="stl/KiwiSeed_297.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_298" file="stl/KiwiSeed_298.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_299" file="stl/KiwiSeed_299.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_300" file="stl/KiwiSeed_300.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_301" file="stl/KiwiSeed_301.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_302" file="stl/KiwiSeed_302.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_303" file="stl/KiwiSeed_303.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_304" file="stl/KiwiSeed_304.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_305" file="stl/KiwiSeed_305.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_306" file="stl/KiwiSeed_306.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_307" file="stl/KiwiSeed_307.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_308" file="stl/KiwiSeed_308.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_309" file="stl/KiwiSeed_309.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_310" file="stl/KiwiSeed_310.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_311" file="stl/KiwiSeed_311.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_312" file="stl/KiwiSeed_312.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_313" file="stl/KiwiSeed_313.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_314" file="stl/KiwiSeed_314.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_315" file="stl/KiwiSeed_315.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_316" file="stl/KiwiSeed_316.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_317" file="stl/KiwiSeed_317.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_318" file="stl/KiwiSeed_318.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_319" file="stl/KiwiSeed_319.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_320" file="stl/KiwiSeed_320.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_321" file="stl/KiwiSeed_321.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_322" file="stl/KiwiSeed_322.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_323" file="stl/KiwiSeed_323.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_324" file="stl/KiwiSeed_324.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_325" file="stl/KiwiSeed_325.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_326" file="stl/KiwiSeed_326.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_327" file="stl/KiwiSeed_327.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_328" file="stl/KiwiSeed_328.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_329" file="stl/KiwiSeed_329.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_330" file="stl/KiwiSeed_330.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_331" file="stl/KiwiSeed_331.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_332" file="stl/KiwiSeed_332.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_333" file="stl/KiwiSeed_333.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_334" file="stl/KiwiSeed_334.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_335" file="stl/KiwiSeed_335.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_336" file="stl/KiwiSeed_336.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_337" file="stl/KiwiSeed_337.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_338" file="stl/KiwiSeed_338.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_339" file="stl/KiwiSeed_339.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_340" file="stl/KiwiSeed_340.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_341" file="stl/KiwiSeed_341.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_342" file="stl/KiwiSeed_342.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_343" file="stl/KiwiSeed_343.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_344" file="stl/KiwiSeed_344.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_345" file="stl/KiwiSeed_345.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_346" file="stl/KiwiSeed_346.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_347" file="stl/KiwiSeed_347.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_348" file="stl/KiwiSeed_348.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_349" file="stl/KiwiSeed_349.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_350" file="stl/KiwiSeed_350.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_351" file="stl/KiwiSeed_351.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_352" file="stl/KiwiSeed_352.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_353" file="stl/KiwiSeed_353.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_354" file="stl/KiwiSeed_354.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_355" file="stl/KiwiSeed_355.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_356" file="stl/KiwiSeed_356.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_357" file="stl/KiwiSeed_357.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_358" file="stl/KiwiSeed_358.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_359" file="stl/KiwiSeed_359.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_360" file="stl/KiwiSeed_360.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_361" file="stl/KiwiSeed_361.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_362" file="stl/KiwiSeed_362.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_363" file="stl/KiwiSeed_363.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_364" file="stl/KiwiSeed_364.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_365" file="stl/KiwiSeed_365.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_366" file="stl/KiwiSeed_366.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_367" file="stl/KiwiSeed_367.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_368" file="stl/KiwiSeed_368.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_369" file="stl/KiwiSeed_369.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_370" file="stl/KiwiSeed_370.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_371" file="stl/KiwiSeed_371.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_372" file="stl/KiwiSeed_372.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_373" file="stl/KiwiSeed_373.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_374" file="stl/KiwiSeed_374.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_375" file="stl/KiwiSeed_375.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_376" file="stl/KiwiSeed_376.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_377" file="stl/KiwiSeed_377.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_378" file="stl/KiwiSeed_378.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_379" file="stl/KiwiSeed_379.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_380" file="stl/KiwiSeed_380.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_381" file="stl/KiwiSeed_381.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_382" file="stl/KiwiSeed_382.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_383" file="stl/KiwiSeed_383.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_384" file="stl/KiwiSeed_384.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_385" file="stl/KiwiSeed_385.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_386" file="stl/KiwiSeed_386.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_387" file="stl/KiwiSeed_387.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_388" file="stl/KiwiSeed_388.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_389" file="stl/KiwiSeed_389.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_390" file="stl/KiwiSeed_390.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_391" file="stl/KiwiSeed_391.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_392" file="stl/KiwiSeed_392.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_393" file="stl/KiwiSeed_393.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_394" file="stl/KiwiSeed_394.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_395" file="stl/KiwiSeed_395.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_396" file="stl/KiwiSeed_396.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_397" file="stl/KiwiSeed_397.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_398" file="stl/KiwiSeed_398.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_399" file="stl/KiwiSeed_399.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_400" file="stl/KiwiSeed_400.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_401" file="stl/KiwiSeed_401.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_402" file="stl/KiwiSeed_402.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_403" file="stl/KiwiSeed_403.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_404" file="stl/KiwiSeed_404.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_405" file="stl/KiwiSeed_405.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_406" file="stl/KiwiSeed_406.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_407" file="stl/KiwiSeed_407.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_408" file="stl/KiwiSeed_408.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiSeed_409" file="stl/KiwiSeed_409.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiPeel" file="obj/KiwiPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="KiwiPeel_001" file="stl/KiwiPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_KiwiFlesh_001" texture="T_KiwiFlesh"/>
+		<material name="M_KiwiFruitPeduncle_001" texture="T_KiwiFruitPeduncle"/>
+		<material name="M_KiwiSeed_001" rgba="0.13330000638961792 0.13330000638961792 0.13330000638961792 1.0" emission="0.0"/>
+		<material name="M_KiwiPeel_001" texture="T_KiwiPeel"/>
+		<texture name="T_KiwiFlesh" type="2d" file="T_KiwiFlesh.png"/>
+		<texture name="T_KiwiFruitPeduncle" type="2d" file="T_KiwiFruitPeduncle.png"/>
+		<texture name="T_KiwiPeel" type="2d" file="T_KiwiPeel.png"/>
+	</asset>
+	<worldbody>
+		<body name="kiwi_1" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="kiwi_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.08314007520675659" pos="-0.00038892109296284616 -1.0651107600068155e-11 3.010903171229984e-08" quat="-2.1688995488489127e-08 1.0 -1.049760389726373e-09 3.850897883239668e-06" diaginertia="2.0737761587952264e-05 2.7000365662388504e-05 2.772077095869463e-05"/>
+				<geom name="KiwiFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiFlesh" material="M_KiwiFlesh_001" class="visual"/>
+				<geom name="KiwiFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiFlesh_001" class="collision"/>
+			</body>
+			<body name="kiwi_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0002721677010413259" pos="0.0007604426937177777 -0.00036013885983265936 0.00028313585789874196" quat="0.9391899704933167 -0.3433745801448822 -0.0016863422933965921 -0.003638442838564515" diaginertia="3.017362004698043e-08 5.332877961450322e-08 5.463513019776656e-08"/>
+				<geom name="KiwiSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed" material="M_KiwiSeed_001" class="visual"/>
+				<geom name="KiwiSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_001" class="collision"/>
+				<geom name="KiwiSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_002" class="collision"/>
+				<geom name="KiwiSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_003" class="collision"/>
+				<geom name="KiwiSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_004" class="collision"/>
+				<geom name="KiwiSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_005" class="collision"/>
+				<geom name="KiwiSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_006" class="collision"/>
+				<geom name="KiwiSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_007" class="collision"/>
+				<geom name="KiwiSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_008" class="collision"/>
+				<geom name="KiwiSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_009" class="collision"/>
+				<geom name="KiwiSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_010" class="collision"/>
+				<geom name="KiwiSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_011" class="collision"/>
+				<geom name="KiwiSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_012" class="collision"/>
+				<geom name="KiwiSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_013" class="collision"/>
+				<geom name="KiwiSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_014" class="collision"/>
+				<geom name="KiwiSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_015" class="collision"/>
+				<geom name="KiwiSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_016" class="collision"/>
+				<geom name="KiwiSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_017" class="collision"/>
+				<geom name="KiwiSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_018" class="collision"/>
+				<geom name="KiwiSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_019" class="collision"/>
+				<geom name="KiwiSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_020" class="collision"/>
+				<geom name="KiwiSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_021" class="collision"/>
+				<geom name="KiwiSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_022" class="collision"/>
+				<geom name="KiwiSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_023" class="collision"/>
+				<geom name="KiwiSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_024" class="collision"/>
+				<geom name="KiwiSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_025" class="collision"/>
+				<geom name="KiwiSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_026" class="collision"/>
+				<geom name="KiwiSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_027" class="collision"/>
+				<geom name="KiwiSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_028" class="collision"/>
+				<geom name="KiwiSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_029" class="collision"/>
+				<geom name="KiwiSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_030" class="collision"/>
+				<geom name="KiwiSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_031" class="collision"/>
+				<geom name="KiwiSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_032" class="collision"/>
+				<geom name="KiwiSeed_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_033" class="collision"/>
+				<geom name="KiwiSeed_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_034" class="collision"/>
+				<geom name="KiwiSeed_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_035" class="collision"/>
+				<geom name="KiwiSeed_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_036" class="collision"/>
+				<geom name="KiwiSeed_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_037" class="collision"/>
+				<geom name="KiwiSeed_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_038" class="collision"/>
+				<geom name="KiwiSeed_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_039" class="collision"/>
+				<geom name="KiwiSeed_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_040" class="collision"/>
+				<geom name="KiwiSeed_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_041" class="collision"/>
+				<geom name="KiwiSeed_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_042" class="collision"/>
+				<geom name="KiwiSeed_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_043" class="collision"/>
+				<geom name="KiwiSeed_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_044" class="collision"/>
+				<geom name="KiwiSeed_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_045" class="collision"/>
+				<geom name="KiwiSeed_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_046" class="collision"/>
+				<geom name="KiwiSeed_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_047" class="collision"/>
+				<geom name="KiwiSeed_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_048" class="collision"/>
+				<geom name="KiwiSeed_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_049" class="collision"/>
+				<geom name="KiwiSeed_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_050" class="collision"/>
+				<geom name="KiwiSeed_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_051" class="collision"/>
+				<geom name="KiwiSeed_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_052" class="collision"/>
+				<geom name="KiwiSeed_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_053" class="collision"/>
+				<geom name="KiwiSeed_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_054" class="collision"/>
+				<geom name="KiwiSeed_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_055" class="collision"/>
+				<geom name="KiwiSeed_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_056" class="collision"/>
+				<geom name="KiwiSeed_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_057" class="collision"/>
+				<geom name="KiwiSeed_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_058" class="collision"/>
+				<geom name="KiwiSeed_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_059" class="collision"/>
+				<geom name="KiwiSeed_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_060" class="collision"/>
+				<geom name="KiwiSeed_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_061" class="collision"/>
+				<geom name="KiwiSeed_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_062" class="collision"/>
+				<geom name="KiwiSeed_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_063" class="collision"/>
+				<geom name="KiwiSeed_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_064" class="collision"/>
+				<geom name="KiwiSeed_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_065" class="collision"/>
+				<geom name="KiwiSeed_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_066" class="collision"/>
+				<geom name="KiwiSeed_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_067" class="collision"/>
+				<geom name="KiwiSeed_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_068" class="collision"/>
+				<geom name="KiwiSeed_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_069" class="collision"/>
+				<geom name="KiwiSeed_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_070" class="collision"/>
+				<geom name="KiwiSeed_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_071" class="collision"/>
+				<geom name="KiwiSeed_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_072" class="collision"/>
+				<geom name="KiwiSeed_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_073" class="collision"/>
+				<geom name="KiwiSeed_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_074" class="collision"/>
+				<geom name="KiwiSeed_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_075" class="collision"/>
+				<geom name="KiwiSeed_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_076" class="collision"/>
+				<geom name="KiwiSeed_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_077" class="collision"/>
+				<geom name="KiwiSeed_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_078" class="collision"/>
+				<geom name="KiwiSeed_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_079" class="collision"/>
+				<geom name="KiwiSeed_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_080" class="collision"/>
+				<geom name="KiwiSeed_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_081" class="collision"/>
+				<geom name="KiwiSeed_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_082" class="collision"/>
+				<geom name="KiwiSeed_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_083" class="collision"/>
+				<geom name="KiwiSeed_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_084" class="collision"/>
+				<geom name="KiwiSeed_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_085" class="collision"/>
+				<geom name="KiwiSeed_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_086" class="collision"/>
+				<geom name="KiwiSeed_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_087" class="collision"/>
+				<geom name="KiwiSeed_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_088" class="collision"/>
+				<geom name="KiwiSeed_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_089" class="collision"/>
+				<geom name="KiwiSeed_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_090" class="collision"/>
+				<geom name="KiwiSeed_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_091" class="collision"/>
+				<geom name="KiwiSeed_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_092" class="collision"/>
+				<geom name="KiwiSeed_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_093" class="collision"/>
+				<geom name="KiwiSeed_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_094" class="collision"/>
+				<geom name="KiwiSeed_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_095" class="collision"/>
+				<geom name="KiwiSeed_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_096" class="collision"/>
+				<geom name="KiwiSeed_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_097" class="collision"/>
+				<geom name="KiwiSeed_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_098" class="collision"/>
+				<geom name="KiwiSeed_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_099" class="collision"/>
+				<geom name="KiwiSeed_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_100" class="collision"/>
+				<geom name="KiwiSeed_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_101" class="collision"/>
+				<geom name="KiwiSeed_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_102" class="collision"/>
+				<geom name="KiwiSeed_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_103" class="collision"/>
+				<geom name="KiwiSeed_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_104" class="collision"/>
+				<geom name="KiwiSeed_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_105" class="collision"/>
+				<geom name="KiwiSeed_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_106" class="collision"/>
+				<geom name="KiwiSeed_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_107" class="collision"/>
+				<geom name="KiwiSeed_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_108" class="collision"/>
+				<geom name="KiwiSeed_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_109" class="collision"/>
+				<geom name="KiwiSeed_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_110" class="collision"/>
+				<geom name="KiwiSeed_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_111" class="collision"/>
+				<geom name="KiwiSeed_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_112" class="collision"/>
+				<geom name="KiwiSeed_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_113" class="collision"/>
+				<geom name="KiwiSeed_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_114" class="collision"/>
+				<geom name="KiwiSeed_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_115" class="collision"/>
+				<geom name="KiwiSeed_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_116" class="collision"/>
+				<geom name="KiwiSeed_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_117" class="collision"/>
+				<geom name="KiwiSeed_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_118" class="collision"/>
+				<geom name="KiwiSeed_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_119" class="collision"/>
+				<geom name="KiwiSeed_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_120" class="collision"/>
+				<geom name="KiwiSeed_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_121" class="collision"/>
+				<geom name="KiwiSeed_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_122" class="collision"/>
+				<geom name="KiwiSeed_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_123" class="collision"/>
+				<geom name="KiwiSeed_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_124" class="collision"/>
+				<geom name="KiwiSeed_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_125" class="collision"/>
+				<geom name="KiwiSeed_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_126" class="collision"/>
+				<geom name="KiwiSeed_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_127" class="collision"/>
+				<geom name="KiwiSeed_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_128" class="collision"/>
+				<geom name="KiwiSeed_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_129" class="collision"/>
+				<geom name="KiwiSeed_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_130" class="collision"/>
+				<geom name="KiwiSeed_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_131" class="collision"/>
+				<geom name="KiwiSeed_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_132" class="collision"/>
+				<geom name="KiwiSeed_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_133" class="collision"/>
+				<geom name="KiwiSeed_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_134" class="collision"/>
+				<geom name="KiwiSeed_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_135" class="collision"/>
+				<geom name="KiwiSeed_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_136" class="collision"/>
+				<geom name="KiwiSeed_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_137" class="collision"/>
+				<geom name="KiwiSeed_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_138" class="collision"/>
+				<geom name="KiwiSeed_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_139" class="collision"/>
+				<geom name="KiwiSeed_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_140" class="collision"/>
+				<geom name="KiwiSeed_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_141" class="collision"/>
+				<geom name="KiwiSeed_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_142" class="collision"/>
+				<geom name="KiwiSeed_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_143" class="collision"/>
+				<geom name="KiwiSeed_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_144" class="collision"/>
+				<geom name="KiwiSeed_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_145" class="collision"/>
+				<geom name="KiwiSeed_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_146" class="collision"/>
+				<geom name="KiwiSeed_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_147" class="collision"/>
+				<geom name="KiwiSeed_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_148" class="collision"/>
+				<geom name="KiwiSeed_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_149" class="collision"/>
+				<geom name="KiwiSeed_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_150" class="collision"/>
+				<geom name="KiwiSeed_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_151" class="collision"/>
+				<geom name="KiwiSeed_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_152" class="collision"/>
+				<geom name="KiwiSeed_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_153" class="collision"/>
+				<geom name="KiwiSeed_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_154" class="collision"/>
+				<geom name="KiwiSeed_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_155" class="collision"/>
+				<geom name="KiwiSeed_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_156" class="collision"/>
+				<geom name="KiwiSeed_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_157" class="collision"/>
+				<geom name="KiwiSeed_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_158" class="collision"/>
+				<geom name="KiwiSeed_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_159" class="collision"/>
+				<geom name="KiwiSeed_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_160" class="collision"/>
+				<geom name="KiwiSeed_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_161" class="collision"/>
+				<geom name="KiwiSeed_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_162" class="collision"/>
+				<geom name="KiwiSeed_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_163" class="collision"/>
+				<geom name="KiwiSeed_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_164" class="collision"/>
+				<geom name="KiwiSeed_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_165" class="collision"/>
+				<geom name="KiwiSeed_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_166" class="collision"/>
+				<geom name="KiwiSeed_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_167" class="collision"/>
+				<geom name="KiwiSeed_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_168" class="collision"/>
+				<geom name="KiwiSeed_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_169" class="collision"/>
+				<geom name="KiwiSeed_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_170" class="collision"/>
+				<geom name="KiwiSeed_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_171" class="collision"/>
+				<geom name="KiwiSeed_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_172" class="collision"/>
+				<geom name="KiwiSeed_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_173" class="collision"/>
+				<geom name="KiwiSeed_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_174" class="collision"/>
+				<geom name="KiwiSeed_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_175" class="collision"/>
+				<geom name="KiwiSeed_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_176" class="collision"/>
+				<geom name="KiwiSeed_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_177" class="collision"/>
+				<geom name="KiwiSeed_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_178" class="collision"/>
+				<geom name="KiwiSeed_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_179" class="collision"/>
+				<geom name="KiwiSeed_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_180" class="collision"/>
+				<geom name="KiwiSeed_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_181" class="collision"/>
+				<geom name="KiwiSeed_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_182" class="collision"/>
+				<geom name="KiwiSeed_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_183" class="collision"/>
+				<geom name="KiwiSeed_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_184" class="collision"/>
+				<geom name="KiwiSeed_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_185" class="collision"/>
+				<geom name="KiwiSeed_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_186" class="collision"/>
+				<geom name="KiwiSeed_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_187" class="collision"/>
+				<geom name="KiwiSeed_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_188" class="collision"/>
+				<geom name="KiwiSeed_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_189" class="collision"/>
+				<geom name="KiwiSeed_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_190" class="collision"/>
+				<geom name="KiwiSeed_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_191" class="collision"/>
+				<geom name="KiwiSeed_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_192" class="collision"/>
+				<geom name="KiwiSeed_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_193" class="collision"/>
+				<geom name="KiwiSeed_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_194" class="collision"/>
+				<geom name="KiwiSeed_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_195" class="collision"/>
+				<geom name="KiwiSeed_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_196" class="collision"/>
+				<geom name="KiwiSeed_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_197" class="collision"/>
+				<geom name="KiwiSeed_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_198" class="collision"/>
+				<geom name="KiwiSeed_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_199" class="collision"/>
+				<geom name="KiwiSeed_200" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_200" class="collision"/>
+				<geom name="KiwiSeed_201" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_201" class="collision"/>
+				<geom name="KiwiSeed_202" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_202" class="collision"/>
+				<geom name="KiwiSeed_203" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_203" class="collision"/>
+				<geom name="KiwiSeed_204" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_204" class="collision"/>
+				<geom name="KiwiSeed_205" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_205" class="collision"/>
+				<geom name="KiwiSeed_206" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_206" class="collision"/>
+				<geom name="KiwiSeed_207" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_207" class="collision"/>
+				<geom name="KiwiSeed_208" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_208" class="collision"/>
+				<geom name="KiwiSeed_209" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_209" class="collision"/>
+				<geom name="KiwiSeed_210" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_210" class="collision"/>
+				<geom name="KiwiSeed_211" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_211" class="collision"/>
+				<geom name="KiwiSeed_212" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_212" class="collision"/>
+				<geom name="KiwiSeed_213" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_213" class="collision"/>
+				<geom name="KiwiSeed_214" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_214" class="collision"/>
+				<geom name="KiwiSeed_215" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_215" class="collision"/>
+				<geom name="KiwiSeed_216" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_216" class="collision"/>
+				<geom name="KiwiSeed_217" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_217" class="collision"/>
+				<geom name="KiwiSeed_218" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_218" class="collision"/>
+				<geom name="KiwiSeed_219" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_219" class="collision"/>
+				<geom name="KiwiSeed_220" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_220" class="collision"/>
+				<geom name="KiwiSeed_221" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_221" class="collision"/>
+				<geom name="KiwiSeed_222" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_222" class="collision"/>
+				<geom name="KiwiSeed_223" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_223" class="collision"/>
+				<geom name="KiwiSeed_224" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_224" class="collision"/>
+				<geom name="KiwiSeed_225" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_225" class="collision"/>
+				<geom name="KiwiSeed_226" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_226" class="collision"/>
+				<geom name="KiwiSeed_227" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_227" class="collision"/>
+				<geom name="KiwiSeed_228" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_228" class="collision"/>
+				<geom name="KiwiSeed_229" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_229" class="collision"/>
+				<geom name="KiwiSeed_230" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_230" class="collision"/>
+				<geom name="KiwiSeed_231" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_231" class="collision"/>
+				<geom name="KiwiSeed_232" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_232" class="collision"/>
+				<geom name="KiwiSeed_233" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_233" class="collision"/>
+				<geom name="KiwiSeed_234" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_234" class="collision"/>
+				<geom name="KiwiSeed_235" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_235" class="collision"/>
+				<geom name="KiwiSeed_236" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_236" class="collision"/>
+				<geom name="KiwiSeed_237" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_237" class="collision"/>
+				<geom name="KiwiSeed_238" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_238" class="collision"/>
+				<geom name="KiwiSeed_239" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_239" class="collision"/>
+				<geom name="KiwiSeed_240" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_240" class="collision"/>
+				<geom name="KiwiSeed_241" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_241" class="collision"/>
+				<geom name="KiwiSeed_242" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_242" class="collision"/>
+				<geom name="KiwiSeed_243" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_243" class="collision"/>
+				<geom name="KiwiSeed_244" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_244" class="collision"/>
+				<geom name="KiwiSeed_245" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_245" class="collision"/>
+				<geom name="KiwiSeed_246" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_246" class="collision"/>
+				<geom name="KiwiSeed_247" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_247" class="collision"/>
+				<geom name="KiwiSeed_248" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_248" class="collision"/>
+				<geom name="KiwiSeed_249" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_249" class="collision"/>
+				<geom name="KiwiSeed_250" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_250" class="collision"/>
+				<geom name="KiwiSeed_251" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_251" class="collision"/>
+				<geom name="KiwiSeed_252" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_252" class="collision"/>
+				<geom name="KiwiSeed_253" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_253" class="collision"/>
+				<geom name="KiwiSeed_254" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_254" class="collision"/>
+				<geom name="KiwiSeed_255" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_255" class="collision"/>
+				<geom name="KiwiSeed_256" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_256" class="collision"/>
+				<geom name="KiwiSeed_257" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_257" class="collision"/>
+				<geom name="KiwiSeed_258" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_258" class="collision"/>
+				<geom name="KiwiSeed_259" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_259" class="collision"/>
+				<geom name="KiwiSeed_260" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_260" class="collision"/>
+				<geom name="KiwiSeed_261" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_261" class="collision"/>
+				<geom name="KiwiSeed_262" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_262" class="collision"/>
+				<geom name="KiwiSeed_263" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_263" class="collision"/>
+				<geom name="KiwiSeed_264" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_264" class="collision"/>
+				<geom name="KiwiSeed_265" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_265" class="collision"/>
+				<geom name="KiwiSeed_266" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_266" class="collision"/>
+				<geom name="KiwiSeed_267" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_267" class="collision"/>
+				<geom name="KiwiSeed_268" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_268" class="collision"/>
+				<geom name="KiwiSeed_269" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_269" class="collision"/>
+				<geom name="KiwiSeed_270" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_270" class="collision"/>
+				<geom name="KiwiSeed_271" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_271" class="collision"/>
+				<geom name="KiwiSeed_272" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_272" class="collision"/>
+				<geom name="KiwiSeed_273" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_273" class="collision"/>
+				<geom name="KiwiSeed_274" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_274" class="collision"/>
+				<geom name="KiwiSeed_275" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_275" class="collision"/>
+				<geom name="KiwiSeed_276" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_276" class="collision"/>
+				<geom name="KiwiSeed_277" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_277" class="collision"/>
+				<geom name="KiwiSeed_278" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_278" class="collision"/>
+				<geom name="KiwiSeed_279" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_279" class="collision"/>
+				<geom name="KiwiSeed_280" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_280" class="collision"/>
+				<geom name="KiwiSeed_281" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_281" class="collision"/>
+				<geom name="KiwiSeed_282" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_282" class="collision"/>
+				<geom name="KiwiSeed_283" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_283" class="collision"/>
+				<geom name="KiwiSeed_284" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_284" class="collision"/>
+				<geom name="KiwiSeed_285" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_285" class="collision"/>
+				<geom name="KiwiSeed_286" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_286" class="collision"/>
+				<geom name="KiwiSeed_287" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_287" class="collision"/>
+				<geom name="KiwiSeed_288" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_288" class="collision"/>
+				<geom name="KiwiSeed_289" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_289" class="collision"/>
+				<geom name="KiwiSeed_290" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_290" class="collision"/>
+				<geom name="KiwiSeed_291" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_291" class="collision"/>
+				<geom name="KiwiSeed_292" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_292" class="collision"/>
+				<geom name="KiwiSeed_293" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_293" class="collision"/>
+				<geom name="KiwiSeed_294" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_294" class="collision"/>
+				<geom name="KiwiSeed_295" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_295" class="collision"/>
+				<geom name="KiwiSeed_296" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_296" class="collision"/>
+				<geom name="KiwiSeed_297" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_297" class="collision"/>
+				<geom name="KiwiSeed_298" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_298" class="collision"/>
+				<geom name="KiwiSeed_299" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_299" class="collision"/>
+				<geom name="KiwiSeed_300" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_300" class="collision"/>
+				<geom name="KiwiSeed_301" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_301" class="collision"/>
+				<geom name="KiwiSeed_302" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_302" class="collision"/>
+				<geom name="KiwiSeed_303" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_303" class="collision"/>
+				<geom name="KiwiSeed_304" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_304" class="collision"/>
+				<geom name="KiwiSeed_305" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_305" class="collision"/>
+				<geom name="KiwiSeed_306" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_306" class="collision"/>
+				<geom name="KiwiSeed_307" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_307" class="collision"/>
+				<geom name="KiwiSeed_308" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_308" class="collision"/>
+				<geom name="KiwiSeed_309" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_309" class="collision"/>
+				<geom name="KiwiSeed_310" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_310" class="collision"/>
+				<geom name="KiwiSeed_311" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_311" class="collision"/>
+				<geom name="KiwiSeed_312" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_312" class="collision"/>
+				<geom name="KiwiSeed_313" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_313" class="collision"/>
+				<geom name="KiwiSeed_314" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_314" class="collision"/>
+				<geom name="KiwiSeed_315" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_315" class="collision"/>
+				<geom name="KiwiSeed_316" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_316" class="collision"/>
+				<geom name="KiwiSeed_317" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_317" class="collision"/>
+				<geom name="KiwiSeed_318" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_318" class="collision"/>
+				<geom name="KiwiSeed_319" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_319" class="collision"/>
+				<geom name="KiwiSeed_320" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_320" class="collision"/>
+				<geom name="KiwiSeed_321" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_321" class="collision"/>
+				<geom name="KiwiSeed_322" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_322" class="collision"/>
+				<geom name="KiwiSeed_323" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_323" class="collision"/>
+				<geom name="KiwiSeed_324" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_324" class="collision"/>
+				<geom name="KiwiSeed_325" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_325" class="collision"/>
+				<geom name="KiwiSeed_326" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_326" class="collision"/>
+				<geom name="KiwiSeed_327" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_327" class="collision"/>
+				<geom name="KiwiSeed_328" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_328" class="collision"/>
+				<geom name="KiwiSeed_329" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_329" class="collision"/>
+				<geom name="KiwiSeed_330" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_330" class="collision"/>
+				<geom name="KiwiSeed_331" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_331" class="collision"/>
+				<geom name="KiwiSeed_332" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_332" class="collision"/>
+				<geom name="KiwiSeed_333" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_333" class="collision"/>
+				<geom name="KiwiSeed_334" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_334" class="collision"/>
+				<geom name="KiwiSeed_335" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_335" class="collision"/>
+				<geom name="KiwiSeed_336" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_336" class="collision"/>
+				<geom name="KiwiSeed_337" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_337" class="collision"/>
+				<geom name="KiwiSeed_338" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_338" class="collision"/>
+				<geom name="KiwiSeed_339" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_339" class="collision"/>
+				<geom name="KiwiSeed_340" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_340" class="collision"/>
+				<geom name="KiwiSeed_341" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_341" class="collision"/>
+				<geom name="KiwiSeed_342" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_342" class="collision"/>
+				<geom name="KiwiSeed_343" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_343" class="collision"/>
+				<geom name="KiwiSeed_344" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_344" class="collision"/>
+				<geom name="KiwiSeed_345" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_345" class="collision"/>
+				<geom name="KiwiSeed_346" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_346" class="collision"/>
+				<geom name="KiwiSeed_347" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_347" class="collision"/>
+				<geom name="KiwiSeed_348" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_348" class="collision"/>
+				<geom name="KiwiSeed_349" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_349" class="collision"/>
+				<geom name="KiwiSeed_350" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_350" class="collision"/>
+				<geom name="KiwiSeed_351" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_351" class="collision"/>
+				<geom name="KiwiSeed_352" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_352" class="collision"/>
+				<geom name="KiwiSeed_353" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_353" class="collision"/>
+				<geom name="KiwiSeed_354" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_354" class="collision"/>
+				<geom name="KiwiSeed_355" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_355" class="collision"/>
+				<geom name="KiwiSeed_356" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_356" class="collision"/>
+				<geom name="KiwiSeed_357" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_357" class="collision"/>
+				<geom name="KiwiSeed_358" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_358" class="collision"/>
+				<geom name="KiwiSeed_359" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_359" class="collision"/>
+				<geom name="KiwiSeed_360" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_360" class="collision"/>
+				<geom name="KiwiSeed_361" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_361" class="collision"/>
+				<geom name="KiwiSeed_362" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_362" class="collision"/>
+				<geom name="KiwiSeed_363" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_363" class="collision"/>
+				<geom name="KiwiSeed_364" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_364" class="collision"/>
+				<geom name="KiwiSeed_365" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_365" class="collision"/>
+				<geom name="KiwiSeed_366" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_366" class="collision"/>
+				<geom name="KiwiSeed_367" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_367" class="collision"/>
+				<geom name="KiwiSeed_368" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_368" class="collision"/>
+				<geom name="KiwiSeed_369" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_369" class="collision"/>
+				<geom name="KiwiSeed_370" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_370" class="collision"/>
+				<geom name="KiwiSeed_371" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_371" class="collision"/>
+				<geom name="KiwiSeed_372" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_372" class="collision"/>
+				<geom name="KiwiSeed_373" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_373" class="collision"/>
+				<geom name="KiwiSeed_374" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_374" class="collision"/>
+				<geom name="KiwiSeed_375" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_375" class="collision"/>
+				<geom name="KiwiSeed_376" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_376" class="collision"/>
+				<geom name="KiwiSeed_377" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_377" class="collision"/>
+				<geom name="KiwiSeed_378" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_378" class="collision"/>
+				<geom name="KiwiSeed_379" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_379" class="collision"/>
+				<geom name="KiwiSeed_380" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_380" class="collision"/>
+				<geom name="KiwiSeed_381" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_381" class="collision"/>
+				<geom name="KiwiSeed_382" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_382" class="collision"/>
+				<geom name="KiwiSeed_383" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_383" class="collision"/>
+				<geom name="KiwiSeed_384" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_384" class="collision"/>
+				<geom name="KiwiSeed_385" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_385" class="collision"/>
+				<geom name="KiwiSeed_386" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_386" class="collision"/>
+				<geom name="KiwiSeed_387" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_387" class="collision"/>
+				<geom name="KiwiSeed_388" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_388" class="collision"/>
+				<geom name="KiwiSeed_389" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_389" class="collision"/>
+				<geom name="KiwiSeed_390" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_390" class="collision"/>
+				<geom name="KiwiSeed_391" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_391" class="collision"/>
+				<geom name="KiwiSeed_392" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_392" class="collision"/>
+				<geom name="KiwiSeed_393" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_393" class="collision"/>
+				<geom name="KiwiSeed_394" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_394" class="collision"/>
+				<geom name="KiwiSeed_395" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_395" class="collision"/>
+				<geom name="KiwiSeed_396" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_396" class="collision"/>
+				<geom name="KiwiSeed_397" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_397" class="collision"/>
+				<geom name="KiwiSeed_398" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_398" class="collision"/>
+				<geom name="KiwiSeed_399" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_399" class="collision"/>
+				<geom name="KiwiSeed_400" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_400" class="collision"/>
+				<geom name="KiwiSeed_401" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_401" class="collision"/>
+				<geom name="KiwiSeed_402" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_402" class="collision"/>
+				<geom name="KiwiSeed_403" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_403" class="collision"/>
+				<geom name="KiwiSeed_404" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_404" class="collision"/>
+				<geom name="KiwiSeed_405" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_405" class="collision"/>
+				<geom name="KiwiSeed_406" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_406" class="collision"/>
+				<geom name="KiwiSeed_407" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_407" class="collision"/>
+				<geom name="KiwiSeed_408" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_408" class="collision"/>
+				<geom name="KiwiSeed_409" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiSeed_409" class="collision"/>
+			</body>
+			<body name="kiwi_fruit_peduncle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00013182336988393217" pos="-0.029956404119729996 -0.00012686582340393215 0.0010822552721947432" quat="0.9385745525360107 -0.34459051489830017 0.01632971316576004 0.008279655128717422" diaginertia="1.8265839951681073e-09 1.1928806031846761e-07 1.194996031017581e-07"/>
+				<geom name="KiwiFruitPeduncle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiFruitPeduncle" material="M_KiwiFruitPeduncle_001" class="visual"/>
+				<geom name="KiwiFruitPeduncle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiFruitPeduncle_001" class="collision"/>
+				<geom name="KiwiFruitPeduncle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiFruitPeduncle_002" class="collision"/>
+			</body>
+			<body name="kiwi_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.005380913149565458" pos="-0.00030321485246531665 -4.686118160179831e-11 7.477483876527913e-08" quat="1.0 -1.8596235662471372e-15 3.1703977583674714e-05 -2.5122226415580547e-15" diaginertia="2.360362486797385e-06 2.8907818432344357e-06 2.951815986307338e-06"/>
+				<geom name="KiwiPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiPeel" material="M_KiwiPeel_001" class="visual"/>
+				<geom name="KiwiPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KiwiPeel_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

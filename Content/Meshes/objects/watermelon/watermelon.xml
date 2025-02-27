@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<mujoco model="watermelon">
+	<compiler meshdir="watermelon/meshes" texturedir="watermelon/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="WatermelonPeelFlesh" file="obj/WatermelonPeelFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeelFlesh_001" file="stl/WatermelonPeelFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed" file="stl/WatermelonSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_001" file="stl/WatermelonSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_002" file="stl/WatermelonSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_003" file="stl/WatermelonSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_004" file="stl/WatermelonSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_005" file="stl/WatermelonSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_006" file="stl/WatermelonSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_007" file="stl/WatermelonSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_008" file="stl/WatermelonSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_009" file="stl/WatermelonSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_010" file="stl/WatermelonSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_011" file="stl/WatermelonSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_012" file="stl/WatermelonSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_013" file="stl/WatermelonSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_014" file="stl/WatermelonSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_015" file="stl/WatermelonSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_016" file="stl/WatermelonSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_017" file="stl/WatermelonSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_018" file="stl/WatermelonSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_019" file="stl/WatermelonSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_020" file="stl/WatermelonSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_021" file="stl/WatermelonSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_022" file="stl/WatermelonSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_023" file="stl/WatermelonSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_024" file="stl/WatermelonSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_025" file="stl/WatermelonSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_026" file="stl/WatermelonSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_027" file="stl/WatermelonSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_028" file="stl/WatermelonSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_029" file="stl/WatermelonSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_030" file="stl/WatermelonSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_031" file="stl/WatermelonSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_032" file="stl/WatermelonSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_033" file="stl/WatermelonSeed_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_034" file="stl/WatermelonSeed_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_035" file="stl/WatermelonSeed_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_036" file="stl/WatermelonSeed_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_037" file="stl/WatermelonSeed_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_038" file="stl/WatermelonSeed_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_039" file="stl/WatermelonSeed_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_040" file="stl/WatermelonSeed_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_041" file="stl/WatermelonSeed_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonSeed_042" file="stl/WatermelonSeed_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk" file="obj/WatermelonStalk.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_001" file="stl/WatermelonStalk_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_002" file="stl/WatermelonStalk_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_003" file="stl/WatermelonStalk_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_004" file="stl/WatermelonStalk_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_005" file="stl/WatermelonStalk_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonStalk_006" file="stl/WatermelonStalk_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel" file="obj/WatermelonPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_001" file="stl/WatermelonPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_002" file="stl/WatermelonPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_003" file="stl/WatermelonPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_004" file="stl/WatermelonPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_005" file="stl/WatermelonPeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_006" file="stl/WatermelonPeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_007" file="stl/WatermelonPeel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_008" file="stl/WatermelonPeel_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_009" file="stl/WatermelonPeel_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_010" file="stl/WatermelonPeel_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_011" file="stl/WatermelonPeel_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_012" file="stl/WatermelonPeel_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_013" file="stl/WatermelonPeel_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_014" file="stl/WatermelonPeel_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_015" file="stl/WatermelonPeel_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_016" file="stl/WatermelonPeel_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_017" file="stl/WatermelonPeel_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_018" file="stl/WatermelonPeel_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_019" file="stl/WatermelonPeel_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_020" file="stl/WatermelonPeel_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_021" file="stl/WatermelonPeel_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_022" file="stl/WatermelonPeel_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_023" file="stl/WatermelonPeel_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_024" file="stl/WatermelonPeel_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_025" file="stl/WatermelonPeel_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_026" file="stl/WatermelonPeel_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_027" file="stl/WatermelonPeel_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_028" file="stl/WatermelonPeel_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_029" file="stl/WatermelonPeel_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_030" file="stl/WatermelonPeel_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_031" file="stl/WatermelonPeel_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_032" file="stl/WatermelonPeel_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_033" file="stl/WatermelonPeel_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_034" file="stl/WatermelonPeel_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_035" file="stl/WatermelonPeel_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_036" file="stl/WatermelonPeel_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_037" file="stl/WatermelonPeel_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_038" file="stl/WatermelonPeel_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_039" file="stl/WatermelonPeel_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_040" file="stl/WatermelonPeel_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_041" file="stl/WatermelonPeel_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_042" file="stl/WatermelonPeel_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_043" file="stl/WatermelonPeel_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_044" file="stl/WatermelonPeel_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_045" file="stl/WatermelonPeel_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_046" file="stl/WatermelonPeel_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_047" file="stl/WatermelonPeel_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_048" file="stl/WatermelonPeel_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_049" file="stl/WatermelonPeel_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_050" file="stl/WatermelonPeel_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_051" file="stl/WatermelonPeel_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_052" file="stl/WatermelonPeel_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_053" file="stl/WatermelonPeel_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_054" file="stl/WatermelonPeel_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_055" file="stl/WatermelonPeel_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_056" file="stl/WatermelonPeel_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_057" file="stl/WatermelonPeel_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_058" file="stl/WatermelonPeel_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_059" file="stl/WatermelonPeel_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_060" file="stl/WatermelonPeel_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_061" file="stl/WatermelonPeel_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_062" file="stl/WatermelonPeel_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_063" file="stl/WatermelonPeel_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_064" file="stl/WatermelonPeel_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_065" file="stl/WatermelonPeel_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_066" file="stl/WatermelonPeel_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_067" file="stl/WatermelonPeel_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_068" file="stl/WatermelonPeel_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_069" file="stl/WatermelonPeel_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_070" file="stl/WatermelonPeel_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_071" file="stl/WatermelonPeel_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_072" file="stl/WatermelonPeel_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_073" file="stl/WatermelonPeel_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_074" file="stl/WatermelonPeel_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_075" file="stl/WatermelonPeel_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_076" file="stl/WatermelonPeel_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_077" file="stl/WatermelonPeel_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_078" file="stl/WatermelonPeel_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_079" file="stl/WatermelonPeel_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_080" file="stl/WatermelonPeel_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_081" file="stl/WatermelonPeel_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_082" file="stl/WatermelonPeel_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_083" file="stl/WatermelonPeel_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_084" file="stl/WatermelonPeel_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_085" file="stl/WatermelonPeel_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_086" file="stl/WatermelonPeel_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_087" file="stl/WatermelonPeel_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_088" file="stl/WatermelonPeel_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_089" file="stl/WatermelonPeel_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_090" file="stl/WatermelonPeel_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_091" file="stl/WatermelonPeel_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_092" file="stl/WatermelonPeel_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_093" file="stl/WatermelonPeel_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_094" file="stl/WatermelonPeel_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_095" file="stl/WatermelonPeel_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_096" file="stl/WatermelonPeel_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_097" file="stl/WatermelonPeel_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_098" file="stl/WatermelonPeel_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_099" file="stl/WatermelonPeel_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_100" file="stl/WatermelonPeel_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_101" file="stl/WatermelonPeel_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_102" file="stl/WatermelonPeel_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_103" file="stl/WatermelonPeel_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_104" file="stl/WatermelonPeel_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_105" file="stl/WatermelonPeel_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_106" file="stl/WatermelonPeel_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonPeel_107" file="stl/WatermelonPeel_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonFlesh" file="obj/WatermelonFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="WatermelonFlesh_001" file="stl/WatermelonFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_WatermelonPeelFlesh" texture="T_WatermelonPeelFlesh"/>
+		<material name="M_WatermelonSeed" rgba="0.15289999544620514 0.15289999544620514 0.15289999544620514 1.0" emission="0.0"/>
+		<material name="M_WatermelonStalk" texture="T_WatermelonStalk"/>
+		<material name="M_WatermelonPeel" texture="T_WatermelonPeel"/>
+		<material name="M_WatermelonFlesh" texture="T_WatermelonFlesh"/>
+		<texture name="T_WatermelonPeelFlesh" type="2d" file="T_WatermelonPeelFlesh.png"/>
+		<texture name="T_WatermelonStalk" type="2d" file="T_WatermelonStalk.png"/>
+		<texture name="T_WatermelonPeel" type="2d" file="T_WatermelonPeel.png"/>
+		<texture name="T_WatermelonFlesh" type="2d" file="T_WatermelonFlesh.png"/>
+	</asset>
+	<worldbody>
+		<body name="watermelon" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="watermelon_peel_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.361973524093628" pos="0.0013285562163218856 0.0028141560032963753 -0.02688700333237648" quat="-0.0033648305106908083 0.7172689437866211 0.02823023311793804 -0.6962161660194397" diaginertia="0.025050004944205284 0.027744894847273827 0.028111683204770088"/>
+				<geom name="WatermelonPeelFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeelFlesh" material="M_WatermelonPeelFlesh" class="visual"/>
+				<geom name="WatermelonPeelFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeelFlesh_001" class="collision"/>
+			</body>
+			<body name="watermelon_stalk" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.005431091412901878" pos="-0.024732841178774834 -0.006058709695935249 0.12493567168712616" quat="0.6099572777748108 0.47106316685676575 0.5218520760536194 -0.3656802177429199" diaginertia="5.045032480666123e-07 8.944371802499518e-05 8.9774199295789e-05"/>
+				<geom name="WatermelonStalk" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk" material="M_WatermelonStalk" class="visual"/>
+				<geom name="WatermelonStalk_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_001" class="collision"/>
+				<geom name="WatermelonStalk_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_002" class="collision"/>
+				<geom name="WatermelonStalk_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_003" class="collision"/>
+				<geom name="WatermelonStalk_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_004" class="collision"/>
+				<geom name="WatermelonStalk_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_005" class="collision"/>
+				<geom name="WatermelonStalk_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonStalk_006" class="collision"/>
+			</body>
+			<body name="watermelon_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="7.628058910369873" pos="-0.0019877715967595577 0.00044626821181736887 -0.021083831787109375" quat="0.6917186379432678 -0.006363898050040007 0.7220847606658936 0.008857658132910728" diaginertia="0.044156141579151154 0.04939408600330353 0.049983564764261246"/>
+				<geom name="WatermelonFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonFlesh" material="M_WatermelonFlesh" class="visual"/>
+				<geom name="WatermelonFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonFlesh_001" class="collision"/>
+			</body>
+			<body name="watermelon_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.002387964865192771" pos="-0.00105637579690665 -0.002998134819790721 -0.01774233765900135" quat="-0.24863073229789734 -0.5611886978149414 0.1943187415599823 0.7651733756065369" diaginertia="9.095885616261512e-06 9.38795528782066e-06 9.48741399042774e-06"/>
+				<geom name="WatermelonSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed" material="M_WatermelonSeed" class="visual"/>
+				<geom name="WatermelonSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_001" class="collision"/>
+				<geom name="WatermelonSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_002" class="collision"/>
+				<geom name="WatermelonSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_003" class="collision"/>
+				<geom name="WatermelonSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_004" class="collision"/>
+				<geom name="WatermelonSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_005" class="collision"/>
+				<geom name="WatermelonSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_006" class="collision"/>
+				<geom name="WatermelonSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_007" class="collision"/>
+				<geom name="WatermelonSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_008" class="collision"/>
+				<geom name="WatermelonSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_009" class="collision"/>
+				<geom name="WatermelonSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_010" class="collision"/>
+				<geom name="WatermelonSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_011" class="collision"/>
+				<geom name="WatermelonSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_012" class="collision"/>
+				<geom name="WatermelonSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_013" class="collision"/>
+				<geom name="WatermelonSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_014" class="collision"/>
+				<geom name="WatermelonSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_015" class="collision"/>
+				<geom name="WatermelonSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_016" class="collision"/>
+				<geom name="WatermelonSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_017" class="collision"/>
+				<geom name="WatermelonSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_018" class="collision"/>
+				<geom name="WatermelonSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_019" class="collision"/>
+				<geom name="WatermelonSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_020" class="collision"/>
+				<geom name="WatermelonSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_021" class="collision"/>
+				<geom name="WatermelonSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_022" class="collision"/>
+				<geom name="WatermelonSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_023" class="collision"/>
+				<geom name="WatermelonSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_024" class="collision"/>
+				<geom name="WatermelonSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_025" class="collision"/>
+				<geom name="WatermelonSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_026" class="collision"/>
+				<geom name="WatermelonSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_027" class="collision"/>
+				<geom name="WatermelonSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_028" class="collision"/>
+				<geom name="WatermelonSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_029" class="collision"/>
+				<geom name="WatermelonSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_030" class="collision"/>
+				<geom name="WatermelonSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_031" class="collision"/>
+				<geom name="WatermelonSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_032" class="collision"/>
+				<geom name="WatermelonSeed_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_033" class="collision"/>
+				<geom name="WatermelonSeed_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_034" class="collision"/>
+				<geom name="WatermelonSeed_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_035" class="collision"/>
+				<geom name="WatermelonSeed_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_036" class="collision"/>
+				<geom name="WatermelonSeed_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_037" class="collision"/>
+				<geom name="WatermelonSeed_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_038" class="collision"/>
+				<geom name="WatermelonSeed_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_039" class="collision"/>
+				<geom name="WatermelonSeed_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_040" class="collision"/>
+				<geom name="WatermelonSeed_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_041" class="collision"/>
+				<geom name="WatermelonSeed_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonSeed_042" class="collision"/>
+			</body>
+			<body name="watermelon_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.4546205997467041" pos="-0.0011508672032505274 0.0010155318304896355 -0.022771352902054787" quat="0.7141125202178955 0.012353845871984959 -0.6999016404151917 0.005331509746611118" diaginertia="0.005374217871576548 0.00577017804607749 0.0058294907212257385"/>
+				<geom name="WatermelonPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel" material="M_WatermelonPeel" class="visual"/>
+				<geom name="WatermelonPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_001" class="collision"/>
+				<geom name="WatermelonPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_002" class="collision"/>
+				<geom name="WatermelonPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_003" class="collision"/>
+				<geom name="WatermelonPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_004" class="collision"/>
+				<geom name="WatermelonPeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_005" class="collision"/>
+				<geom name="WatermelonPeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_006" class="collision"/>
+				<geom name="WatermelonPeel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_007" class="collision"/>
+				<geom name="WatermelonPeel_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_008" class="collision"/>
+				<geom name="WatermelonPeel_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_009" class="collision"/>
+				<geom name="WatermelonPeel_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_010" class="collision"/>
+				<geom name="WatermelonPeel_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_011" class="collision"/>
+				<geom name="WatermelonPeel_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_012" class="collision"/>
+				<geom name="WatermelonPeel_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_013" class="collision"/>
+				<geom name="WatermelonPeel_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_014" class="collision"/>
+				<geom name="WatermelonPeel_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_015" class="collision"/>
+				<geom name="WatermelonPeel_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_016" class="collision"/>
+				<geom name="WatermelonPeel_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_017" class="collision"/>
+				<geom name="WatermelonPeel_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_018" class="collision"/>
+				<geom name="WatermelonPeel_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_019" class="collision"/>
+				<geom name="WatermelonPeel_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_020" class="collision"/>
+				<geom name="WatermelonPeel_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_021" class="collision"/>
+				<geom name="WatermelonPeel_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_022" class="collision"/>
+				<geom name="WatermelonPeel_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_023" class="collision"/>
+				<geom name="WatermelonPeel_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_024" class="collision"/>
+				<geom name="WatermelonPeel_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_025" class="collision"/>
+				<geom name="WatermelonPeel_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_026" class="collision"/>
+				<geom name="WatermelonPeel_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_027" class="collision"/>
+				<geom name="WatermelonPeel_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_028" class="collision"/>
+				<geom name="WatermelonPeel_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_029" class="collision"/>
+				<geom name="WatermelonPeel_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_030" class="collision"/>
+				<geom name="WatermelonPeel_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_031" class="collision"/>
+				<geom name="WatermelonPeel_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_032" class="collision"/>
+				<geom name="WatermelonPeel_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_033" class="collision"/>
+				<geom name="WatermelonPeel_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_034" class="collision"/>
+				<geom name="WatermelonPeel_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_035" class="collision"/>
+				<geom name="WatermelonPeel_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_036" class="collision"/>
+				<geom name="WatermelonPeel_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_037" class="collision"/>
+				<geom name="WatermelonPeel_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_038" class="collision"/>
+				<geom name="WatermelonPeel_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_039" class="collision"/>
+				<geom name="WatermelonPeel_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_040" class="collision"/>
+				<geom name="WatermelonPeel_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_041" class="collision"/>
+				<geom name="WatermelonPeel_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_042" class="collision"/>
+				<geom name="WatermelonPeel_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_043" class="collision"/>
+				<geom name="WatermelonPeel_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_044" class="collision"/>
+				<geom name="WatermelonPeel_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_045" class="collision"/>
+				<geom name="WatermelonPeel_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_046" class="collision"/>
+				<geom name="WatermelonPeel_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_047" class="collision"/>
+				<geom name="WatermelonPeel_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_048" class="collision"/>
+				<geom name="WatermelonPeel_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_049" class="collision"/>
+				<geom name="WatermelonPeel_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_050" class="collision"/>
+				<geom name="WatermelonPeel_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_051" class="collision"/>
+				<geom name="WatermelonPeel_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_052" class="collision"/>
+				<geom name="WatermelonPeel_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_053" class="collision"/>
+				<geom name="WatermelonPeel_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_054" class="collision"/>
+				<geom name="WatermelonPeel_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_055" class="collision"/>
+				<geom name="WatermelonPeel_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_056" class="collision"/>
+				<geom name="WatermelonPeel_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_057" class="collision"/>
+				<geom name="WatermelonPeel_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_058" class="collision"/>
+				<geom name="WatermelonPeel_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_059" class="collision"/>
+				<geom name="WatermelonPeel_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_060" class="collision"/>
+				<geom name="WatermelonPeel_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_061" class="collision"/>
+				<geom name="WatermelonPeel_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_062" class="collision"/>
+				<geom name="WatermelonPeel_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_063" class="collision"/>
+				<geom name="WatermelonPeel_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_064" class="collision"/>
+				<geom name="WatermelonPeel_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_065" class="collision"/>
+				<geom name="WatermelonPeel_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_066" class="collision"/>
+				<geom name="WatermelonPeel_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_067" class="collision"/>
+				<geom name="WatermelonPeel_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_068" class="collision"/>
+				<geom name="WatermelonPeel_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_069" class="collision"/>
+				<geom name="WatermelonPeel_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_070" class="collision"/>
+				<geom name="WatermelonPeel_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_071" class="collision"/>
+				<geom name="WatermelonPeel_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_072" class="collision"/>
+				<geom name="WatermelonPeel_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_073" class="collision"/>
+				<geom name="WatermelonPeel_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_074" class="collision"/>
+				<geom name="WatermelonPeel_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_075" class="collision"/>
+				<geom name="WatermelonPeel_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_076" class="collision"/>
+				<geom name="WatermelonPeel_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_077" class="collision"/>
+				<geom name="WatermelonPeel_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_078" class="collision"/>
+				<geom name="WatermelonPeel_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_079" class="collision"/>
+				<geom name="WatermelonPeel_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_080" class="collision"/>
+				<geom name="WatermelonPeel_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_081" class="collision"/>
+				<geom name="WatermelonPeel_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_082" class="collision"/>
+				<geom name="WatermelonPeel_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_083" class="collision"/>
+				<geom name="WatermelonPeel_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_084" class="collision"/>
+				<geom name="WatermelonPeel_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_085" class="collision"/>
+				<geom name="WatermelonPeel_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_086" class="collision"/>
+				<geom name="WatermelonPeel_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_087" class="collision"/>
+				<geom name="WatermelonPeel_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_088" class="collision"/>
+				<geom name="WatermelonPeel_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_089" class="collision"/>
+				<geom name="WatermelonPeel_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_090" class="collision"/>
+				<geom name="WatermelonPeel_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_091" class="collision"/>
+				<geom name="WatermelonPeel_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_092" class="collision"/>
+				<geom name="WatermelonPeel_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_093" class="collision"/>
+				<geom name="WatermelonPeel_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_094" class="collision"/>
+				<geom name="WatermelonPeel_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_095" class="collision"/>
+				<geom name="WatermelonPeel_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_096" class="collision"/>
+				<geom name="WatermelonPeel_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_097" class="collision"/>
+				<geom name="WatermelonPeel_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_098" class="collision"/>
+				<geom name="WatermelonPeel_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_099" class="collision"/>
+				<geom name="WatermelonPeel_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_100" class="collision"/>
+				<geom name="WatermelonPeel_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_101" class="collision"/>
+				<geom name="WatermelonPeel_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_102" class="collision"/>
+				<geom name="WatermelonPeel_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_103" class="collision"/>
+				<geom name="WatermelonPeel_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_104" class="collision"/>
+				<geom name="WatermelonPeel_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_105" class="collision"/>
+				<geom name="WatermelonPeel_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_106" class="collision"/>
+				<geom name="WatermelonPeel_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="WatermelonPeel_107" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

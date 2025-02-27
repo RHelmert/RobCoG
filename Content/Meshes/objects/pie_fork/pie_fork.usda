@@ -1,0 +1,174 @@
+#usda 1.0
+(
+    defaultPrim = "pie_fork"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "pie_fork" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (6.571042e-7, 0.000048253358, 0.000048323174)
+    float mujoco:body:inertial:mass = 0.015963025
+    point3f mujoco:body:inertial:pos = (0.017689914, 0.000002957269, -0.0032624179)
+    quatf mujoco:body:inertial:quat = (0.7072783, -0.706914, 0.0038363435, 0.0039027864)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (0.017689914, 0.000002957269, -0.0032624179)
+    float3 physics:diagonalInertia = (6.571042e-7, 0.000048253358, 0.000048323174)
+    float physics:mass = 0.015963025
+    quatf physics:principalAxes = (0.7072783, -0.706914, 0.0038363435, 0.0039027864)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 6.571042e-7
+    float urdf:link:inertial:inertia:iyy = 0.000048253358
+    float urdf:link:inertial:inertia:izz = 0.000048323174
+    float urdf:link:inertial:mass = 0.015963025
+    float3 urdf:link:inertial:origin:rpy = (-1.5702806, 0.010944813, 0.0000967882)
+    point3f urdf:link:inertial:origin:xyz = (0.017689914, 0.000002957269, -0.0032624179)
+
+    def Mesh "PieFork" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pie_fork/meshes/usd/PieFork.usda@</PieFork>
+    )
+    {
+        rel material:binding = </pie_fork/PieFork/Materials/M_PieFork>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_PieFork>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PieFork>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./pie_fork/meshes/obj/PieFork.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_PieFork" (
+                prepend references = @./pie_fork/materials/usd/M_PieFork.usda@</M_PieFork>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "PieFork_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pie_fork/meshes/usd/PieFork_001.usda@</PieFork_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PieFork_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pie_fork/meshes/stl/PieFork_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PieFork_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pie_fork/meshes/usd/PieFork_002.usda@</PieFork_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PieFork_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pie_fork/meshes/stl/PieFork_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PieFork_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pie_fork/meshes/usd/PieFork_003.usda@</PieFork_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PieFork_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pie_fork/meshes/stl/PieFork_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "pie_fork"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "pie_fork"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "PieFork"
+            {
+                asset mujoco:mesh:file = @pie_fork/meshes/stl/PieFork.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PieFork_001"
+            {
+                asset mujoco:mesh:file = @pie_fork/meshes/stl/PieFork_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PieFork_002"
+            {
+                asset mujoco:mesh:file = @pie_fork/meshes/stl/PieFork_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PieFork_003"
+            {
+                asset mujoco:mesh:file = @pie_fork/meshes/stl/PieFork_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_PieFork"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6601, 0.6601, 0.6601, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

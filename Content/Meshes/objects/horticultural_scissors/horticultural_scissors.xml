@@ -1,0 +1,209 @@
+<?xml version="1.0" ?>
+<mujoco model="horticultural_scissors">
+	<compiler meshdir="horticultural_scissors/meshes" texturedir="horticultural_scissors/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="HorticulturalScissorsHilt" file="stl/HorticulturalScissorsHilt.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_001" file="stl/HorticulturalScissorsHilt_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_002" file="stl/HorticulturalScissorsHilt_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_003" file="stl/HorticulturalScissorsHilt_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_004" file="stl/HorticulturalScissorsHilt_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_005" file="stl/HorticulturalScissorsHilt_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_006" file="stl/HorticulturalScissorsHilt_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_007" file="stl/HorticulturalScissorsHilt_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_008" file="stl/HorticulturalScissorsHilt_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_009" file="stl/HorticulturalScissorsHilt_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_010" file="stl/HorticulturalScissorsHilt_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_011" file="stl/HorticulturalScissorsHilt_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_012" file="stl/HorticulturalScissorsHilt_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_013" file="stl/HorticulturalScissorsHilt_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_014" file="stl/HorticulturalScissorsHilt_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_015" file="stl/HorticulturalScissorsHilt_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_016" file="stl/HorticulturalScissorsHilt_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_017" file="stl/HorticulturalScissorsHilt_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_018" file="stl/HorticulturalScissorsHilt_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_019" file="stl/HorticulturalScissorsHilt_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_020" file="stl/HorticulturalScissorsHilt_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_021" file="stl/HorticulturalScissorsHilt_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_022" file="stl/HorticulturalScissorsHilt_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_023" file="stl/HorticulturalScissorsHilt_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_024" file="stl/HorticulturalScissorsHilt_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_025" file="stl/HorticulturalScissorsHilt_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_026" file="stl/HorticulturalScissorsHilt_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_027" file="stl/HorticulturalScissorsHilt_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_028" file="stl/HorticulturalScissorsHilt_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_029" file="stl/HorticulturalScissorsHilt_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_030" file="stl/HorticulturalScissorsHilt_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_031" file="stl/HorticulturalScissorsHilt_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_032" file="stl/HorticulturalScissorsHilt_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_033" file="stl/HorticulturalScissorsHilt_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_034" file="stl/HorticulturalScissorsHilt_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_035" file="stl/HorticulturalScissorsHilt_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_036" file="stl/HorticulturalScissorsHilt_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_037" file="stl/HorticulturalScissorsHilt_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHilt_038" file="stl/HorticulturalScissorsHilt_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle" file="obj/HorticulturalScissorsHandle.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_001" file="stl/HorticulturalScissorsHandle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_002" file="stl/HorticulturalScissorsHandle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_003" file="stl/HorticulturalScissorsHandle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_004" file="stl/HorticulturalScissorsHandle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_005" file="stl/HorticulturalScissorsHandle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_006" file="stl/HorticulturalScissorsHandle_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_007" file="stl/HorticulturalScissorsHandle_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_008" file="stl/HorticulturalScissorsHandle_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_009" file="stl/HorticulturalScissorsHandle_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_010" file="stl/HorticulturalScissorsHandle_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_011" file="stl/HorticulturalScissorsHandle_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_012" file="stl/HorticulturalScissorsHandle_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_013" file="stl/HorticulturalScissorsHandle_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_014" file="stl/HorticulturalScissorsHandle_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_015" file="stl/HorticulturalScissorsHandle_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_016" file="stl/HorticulturalScissorsHandle_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_017" file="stl/HorticulturalScissorsHandle_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_018" file="stl/HorticulturalScissorsHandle_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_019" file="stl/HorticulturalScissorsHandle_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_020" file="stl/HorticulturalScissorsHandle_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_021" file="stl/HorticulturalScissorsHandle_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_022" file="stl/HorticulturalScissorsHandle_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_023" file="stl/HorticulturalScissorsHandle_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_024" file="stl/HorticulturalScissorsHandle_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_025" file="stl/HorticulturalScissorsHandle_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_026" file="stl/HorticulturalScissorsHandle_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsHandle_027" file="stl/HorticulturalScissorsHandle_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade" file="obj/HorticulturalScissorsBlade.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_001" file="stl/HorticulturalScissorsBlade_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_002" file="stl/HorticulturalScissorsBlade_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_003" file="stl/HorticulturalScissorsBlade_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_004" file="stl/HorticulturalScissorsBlade_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_005" file="stl/HorticulturalScissorsBlade_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_006" file="stl/HorticulturalScissorsBlade_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_007" file="stl/HorticulturalScissorsBlade_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_008" file="stl/HorticulturalScissorsBlade_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_009" file="stl/HorticulturalScissorsBlade_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_010" file="stl/HorticulturalScissorsBlade_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_011" file="stl/HorticulturalScissorsBlade_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_012" file="stl/HorticulturalScissorsBlade_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_013" file="stl/HorticulturalScissorsBlade_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_014" file="stl/HorticulturalScissorsBlade_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_015" file="stl/HorticulturalScissorsBlade_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_016" file="stl/HorticulturalScissorsBlade_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_017" file="stl/HorticulturalScissorsBlade_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_018" file="stl/HorticulturalScissorsBlade_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_019" file="stl/HorticulturalScissorsBlade_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HorticulturalScissorsBlade_020" file="stl/HorticulturalScissorsBlade_020.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_HorticulturalScissorsHilt" rgba="0.09019999951124191 0.09019999951124191 0.09019999951124191 1.0" emission="0.0"/>
+		<material name="M_HorticulturalScissorsHandle" texture="T_HorticulturalScissorsHandle"/>
+		<material name="M_HorticulturalScissorsBlade" texture="T_HorticulturalScissorsBlade"/>
+		<texture name="T_HorticulturalScissorsHandle" type="2d" file="T_HorticulturalScissorsHandle.png"/>
+		<texture name="T_HorticulturalScissorsBlade" type="2d" file="T_HorticulturalScissorsBlade.png"/>
+	</asset>
+	<worldbody>
+		<body name="horticultural_scissors" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="horticultural_scissors_hilt" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06666233390569687" pos="-0.016844401136040688 0.008649985305964947 -0.0025599864311516285" quat="0.9163905382156372 -0.0035855546593666077 -0.038055650889873505 -0.3984560966491699" diaginertia="3.018991083081346e-05 4.829595854971558e-05 7.667651516385376e-05"/>
+				<geom name="HorticulturalScissorsHilt" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt" material="M_HorticulturalScissorsHilt" class="visual"/>
+				<geom name="HorticulturalScissorsHilt_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_001" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_002" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_003" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_004" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_005" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_006" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_007" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_008" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_009" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_010" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_011" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_012" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_013" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_014" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_015" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_016" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_017" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_018" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_019" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_020" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_021" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_022" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_023" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_024" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_025" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_026" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_027" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_028" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_029" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_030" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_031" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_032" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_033" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_034" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_035" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_036" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_037" class="collision"/>
+				<geom name="HorticulturalScissorsHilt_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHilt_038" class="collision"/>
+			</body>
+			<body name="horticultural_scissors_blade" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.10697202384471893" pos="-0.05413634330034256 0.007150502875447273 -0.0026331658009439707" quat="0.9977743625640869 -0.005329114850610495 -0.02377658523619175 -0.06206881254911423" diaginertia="2.020097781496588e-05 0.0003948468074668199 0.0004120948142372072"/>
+				<geom name="HorticulturalScissorsBlade" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade" material="M_HorticulturalScissorsBlade" class="visual"/>
+				<geom name="HorticulturalScissorsBlade_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_001" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_002" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_003" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_004" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_005" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_006" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_007" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_008" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_009" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_010" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_011" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_012" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_013" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_014" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_015" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_016" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_017" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_018" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_019" class="collision"/>
+				<geom name="HorticulturalScissorsBlade_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsBlade_020" class="collision"/>
+			</body>
+			<body name="horticultural_scissors_handle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.4273143708705902" pos="0.06107820197939873 0.0029734219424426556 -0.003066655481234193" quat="0.9973698258399963 -0.0015068440698087215 0.020899949595332146 0.06938540935516357" diaginertia="0.0010753888636827469 0.001988837728276849 0.0030460914131253958"/>
+				<geom name="HorticulturalScissorsHandle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle" material="M_HorticulturalScissorsHandle" class="visual"/>
+				<geom name="HorticulturalScissorsHandle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_001" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_002" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_003" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_004" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_005" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_006" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_007" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_008" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_009" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_010" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_011" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_012" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_013" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_014" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_015" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_016" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_017" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_018" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_019" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_020" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_021" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_022" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_023" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_024" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_025" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_026" class="collision"/>
+				<geom name="HorticulturalScissorsHandle_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HorticulturalScissorsHandle_027" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

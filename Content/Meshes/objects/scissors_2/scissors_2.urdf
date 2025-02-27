@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<robot name="scissors_2" version="1.0">
+  <link name="scissors_2"/>
+  <joint name="scissors2_screw_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="scissors_2"/>
+    <child link="scissors2_screw"/>
+  </joint>
+  <link name="scissors2_screw">
+    <inertial>
+      <origin xyz="-0.013648378662765026 -0.01476330030709505 0.0014566575409844518" rpy="1.5687191486358643 0.07481434941291809 0.8244488835334778"/>
+      <mass value="0.0038253292441368103"/>
+      <inertia ixx="8.136823481663669e-08" ixy="0.0" ixz="0.0" iyy="1.582559661983396e-06" iyz="0.0" izz="1.636042043173802e-06"/>
+    </inertial>
+    <visual name="Scissors2Screw">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/obj/Scissors2Screw.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Scissors2Screw_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Screw_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Screw_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Screw_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Screw_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Screw_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Screw_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Screw_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Screw_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Screw_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="scissors2_blade_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="scissors_2"/>
+    <child link="scissors2_blade"/>
+  </joint>
+  <link name="scissors2_blade">
+    <inertial>
+      <origin xyz="0.04773222282528877 -0.015027797780930996 0.00012023688032058999" rpy="-0.03794914856553078 -0.0017516743391752243 -0.21435773372650146"/>
+      <mass value="0.05467967316508293"/>
+      <inertia ixx="5.860484634467866e-06" ixy="0.0" ixz="0.0" iyy="0.00019576605700422078" iyz="0.0" izz="0.0002015319187194109"/>
+    </inertial>
+    <visual name="Scissors2Blade">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/obj/Scissors2Blade.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Scissors2Blade_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Blade_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="scissors2_hilt_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="scissors_2"/>
+    <child link="scissors2_hilt"/>
+  </joint>
+  <link name="scissors2_hilt">
+    <inertial>
+      <origin xyz="-0.061081741005182266 -0.007015101611614227 0.00015865601017139852" rpy="-0.0065324027091264725 0.0024882135912775993 0.06315934658050537"/>
+      <mass value="0.18828648328781128"/>
+      <inertia ixx="6.741139804944396e-05" ixy="0.0" ixz="0.0" iyy="0.0009261170634999871" iyz="0.0" izz="0.0009907563216984272"/>
+    </inertial>
+    <visual name="Scissors2Hilt">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/obj/Scissors2Hilt.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Scissors2Hilt_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Scissors2Hilt_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://scissors_2/meshes/stl/Scissors2Hilt_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

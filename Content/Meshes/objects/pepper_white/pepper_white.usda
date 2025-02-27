@@ -1,0 +1,126 @@
+#usda 1.0
+(
+    defaultPrim = "pepper_white"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "pepper_white" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (4.8912423e-11, 4.9044463e-11, 4.9462375e-11)
+    float mujoco:body:inertial:mass = 0.000025312964
+    point3f mujoco:body:inertial:pos = (7.757629e-8, 1.2328383e-7, -0.000118247954)
+    quatf mujoco:body:inertial:quat = (0.97393626, -0.025069527, -0.016999274, 0.2247904)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (7.757629e-8, 1.2328383e-7, -0.000118247954)
+    float3 physics:diagonalInertia = (4.8912423e-11, 4.9044463e-11, 4.9462375e-11)
+    float physics:mass = 0.000025312964
+    quatf physics:principalAxes = (0.97393626, -0.025069527, -0.016999274, 0.2247904)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 4.8912423e-11
+    float urdf:link:inertial:inertia:iyy = 4.9044463e-11
+    float urdf:link:inertial:inertia:izz = 4.9462375e-11
+    float urdf:link:inertial:mass = 0.000025312964
+    float3 urdf:link:inertial:origin:rpy = (-0.05651835, -0.021843378, 0.45428512)
+    point3f urdf:link:inertial:origin:xyz = (7.757629e-8, 1.2328383e-7, -0.000118247954)
+
+    def Mesh "PepperWhite" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_white/meshes/usd/PepperWhite.usda@</PepperWhite>
+    )
+    {
+        rel material:binding = </pepper_white/PepperWhite/Materials/M_PepperWhite>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_PepperWhite>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperWhite>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./pepper_white/meshes/obj/PepperWhite.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_PepperWhite" (
+                prepend references = @./pepper_white/materials/usd/M_PepperWhite.usda@</M_PepperWhite>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "PepperWhite_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./pepper_white/meshes/usd/PepperWhite_001.usda@</PepperWhite_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PepperWhite_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./pepper_white/meshes/stl/PepperWhite_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "pepper_white"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "pepper_white"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "PepperWhite"
+            {
+                asset mujoco:mesh:file = @pepper_white/meshes/obj/PepperWhite.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PepperWhite_001"
+            {
+                asset mujoco:mesh:file = @pepper_white/meshes/stl/PepperWhite_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_PepperWhite"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_PepperWhite>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_PepperWhite"
+            {
+                asset mujoco:texture:file = @T_PepperWhite.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

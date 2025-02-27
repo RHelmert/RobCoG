@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<mujoco model="cucumber">
+	<compiler meshdir="cucumber/meshes" texturedir="cucumber/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="CucumberSeed" file="stl/CucumberSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberSeed_001" file="stl/CucumberSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberSeed_002" file="stl/CucumberSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberSeed_003" file="stl/CucumberSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberSeed_004" file="stl/CucumberSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberPeel" file="obj/CucumberPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberPeel_001" file="stl/CucumberPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberPeel_002" file="stl/CucumberPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberFlesh" file="stl/CucumberFlesh.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberFlesh_001" file="stl/CucumberFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CucumberFlesh_002" file="stl/CucumberFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_CucumberSeed" rgba="0.8026000261306763 0.814300000667572 0.779699981212616 1.0" emission="0.0"/>
+		<material name="M_CucumberPeel" texture="T_CucumberPeel"/>
+		<material name="M_CucumberFlesh" rgba="0.8371999859809875 0.845300018787384 0.7939000129699707 1.0" emission="0.0"/>
+		<texture name="T_CucumberPeel" type="2d" file="T_CucumberPeel.png"/>
+	</asset>
+	<worldbody>
+		<body name="cucumber" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="cucumber_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00473949545994401" pos="-0.012091939337551594 0.00030309162684716284 -0.0014663522597402334" quat="0.6973711252212524 0.7166472673416138 0.0063811358995735645 -0.007034474052488804" diaginertia="5.006056085221644e-07 2.7045089154853486e-05 2.7084082830697298e-05"/>
+				<geom name="CucumberSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberSeed" material="M_CucumberSeed" class="visual"/>
+				<geom name="CucumberSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberSeed_001" class="collision"/>
+				<geom name="CucumberSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberSeed_002" class="collision"/>
+				<geom name="CucumberSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberSeed_003" class="collision"/>
+				<geom name="CucumberSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberSeed_004" class="collision"/>
+			</body>
+			<body name="cucumber_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.4015066921710968" pos="0.00399218313395977 -0.00027733901515603065 -0.00025371467927470803" quat="0.7123469710350037 -0.7018182873725891 -0.002469181315973401 0.002616745186969638" diaginertia="9.512118413113058e-05 0.002785260323435068 0.002795502543449402"/>
+				<geom name="CucumberFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberFlesh" material="M_CucumberFlesh" class="visual"/>
+				<geom name="CucumberFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberFlesh_001" class="collision"/>
+				<geom name="CucumberFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberFlesh_002" class="collision"/>
+			</body>
+			<body name="cucumber_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.01669645495712757" pos="0.0021707320120185614 -0.0003415114770177752 0.0005959284608252347" quat="0.7114979028701782 -0.7026793360710144 -0.00215158867649734 0.0027909288182854652" diaginertia="7.45302349969279e-06 0.00013717271212954074 0.00013771808880846947"/>
+				<geom name="CucumberPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberPeel" material="M_CucumberPeel" class="visual"/>
+				<geom name="CucumberPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberPeel_001" class="collision"/>
+				<geom name="CucumberPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CucumberPeel_002" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

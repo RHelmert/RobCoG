@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<mujoco model="honey_peach">
+	<compiler meshdir="honey_peach/meshes" texturedir="honey_peach/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="HoneyPeachPeel" file="obj/HoneyPeachPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachPeel_001" file="stl/HoneyPeachPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachPeel_002" file="stl/HoneyPeachPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachPeel_003" file="stl/HoneyPeachPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachPeel_004" file="stl/HoneyPeachPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachFlesh" file="obj/HoneyPeachFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachFlesh_001" file="stl/HoneyPeachFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachFlesh_002" file="stl/HoneyPeachFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachFlesh_003" file="stl/HoneyPeachFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachFlesh_004" file="stl/HoneyPeachFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachSeed" file="obj/HoneyPeachSeed.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="HoneyPeachSeed_001" file="stl/HoneyPeachSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_HoneyPeachPeel" texture="T_HoneyPeachPeel"/>
+		<material name="M_HoneyPeachFlesh" texture="T_HoneyPeachFlesh"/>
+		<material name="M_HoneyPeachSeed" texture="T_HoneyPeachSeed"/>
+		<texture name="T_HoneyPeachPeel" type="2d" file="T_HoneyPeachPeel.png"/>
+		<texture name="T_HoneyPeachFlesh" type="2d" file="T_HoneyPeachFlesh.png"/>
+		<texture name="T_HoneyPeachSeed" type="2d" file="T_HoneyPeachSeed.png"/>
+	</asset>
+	<worldbody>
+		<body name="honey_peach" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="honey_peach_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="1.2212930917739868" pos="-0.0008010617457330227 -0.0005311282002367079 -0.005409484729170799" quat="-0.32978957891464233 0.41349121928215027 0.38312044739723206 0.7572863101959229" diaginertia="0.0013328577624633908 0.0014087659073993564 0.0014269620878621936"/>
+				<geom name="HoneyPeachPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachPeel" material="M_HoneyPeachPeel" class="visual"/>
+				<geom name="HoneyPeachPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachPeel_001" class="collision"/>
+				<geom name="HoneyPeachPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachPeel_002" class="collision"/>
+				<geom name="HoneyPeachPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachPeel_003" class="collision"/>
+				<geom name="HoneyPeachPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachPeel_004" class="collision"/>
+			</body>
+			<body name="honey_peach_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.026742203161120415" pos="-0.0030022545251995325 -0.001973856473341584 -0.0005645074415951967" quat="0.4645628035068512 0.5593990087509155 -0.42824655771255493 0.5365249514579773" diaginertia="2.889516963477945e-06 5.144435363035882e-06 5.932067779212957e-06"/>
+				<geom name="HoneyPeachSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachSeed" material="M_HoneyPeachSeed" class="visual"/>
+				<geom name="HoneyPeachSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachSeed_001" class="collision"/>
+			</body>
+			<body name="honey_peach_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.5572090148925781" pos="-0.0007829375099390745 -0.0005135117680765688 -0.004864256829023361" quat="-0.31803879141807556 0.40867486596107483 0.36824411153793335 0.7721608877182007" diaginertia="0.000571166689042002 0.0006024930626153946 0.0006104846834205091"/>
+				<geom name="HoneyPeachFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachFlesh" material="M_HoneyPeachFlesh" class="visual"/>
+				<geom name="HoneyPeachFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachFlesh_001" class="collision"/>
+				<geom name="HoneyPeachFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachFlesh_002" class="collision"/>
+				<geom name="HoneyPeachFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachFlesh_003" class="collision"/>
+				<geom name="HoneyPeachFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="HoneyPeachFlesh_004" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

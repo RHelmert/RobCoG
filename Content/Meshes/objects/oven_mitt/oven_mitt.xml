@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<mujoco model="oven_mitt">
+	<compiler meshdir="oven_mitt/meshes" texturedir="oven_mitt/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="OvenMittCloth" file="obj/OvenMittCloth.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_001" file="stl/OvenMittCloth_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_002" file="stl/OvenMittCloth_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_003" file="stl/OvenMittCloth_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_004" file="stl/OvenMittCloth_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_005" file="stl/OvenMittCloth_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_006" file="stl/OvenMittCloth_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_007" file="stl/OvenMittCloth_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_008" file="stl/OvenMittCloth_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_009" file="stl/OvenMittCloth_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_010" file="stl/OvenMittCloth_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_011" file="stl/OvenMittCloth_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_012" file="stl/OvenMittCloth_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_013" file="stl/OvenMittCloth_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_014" file="stl/OvenMittCloth_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_015" file="stl/OvenMittCloth_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_016" file="stl/OvenMittCloth_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_017" file="stl/OvenMittCloth_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_018" file="stl/OvenMittCloth_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_019" file="stl/OvenMittCloth_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_020" file="stl/OvenMittCloth_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_021" file="stl/OvenMittCloth_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_022" file="stl/OvenMittCloth_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_023" file="stl/OvenMittCloth_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_024" file="stl/OvenMittCloth_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_025" file="stl/OvenMittCloth_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_026" file="stl/OvenMittCloth_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittCloth_027" file="stl/OvenMittCloth_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittSkin" file="stl/OvenMittSkin.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittSkin_001" file="stl/OvenMittSkin_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittSkin_002" file="stl/OvenMittSkin_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OvenMittSkin_003" file="stl/OvenMittSkin_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_OvenMittCloth" texture="T_OvenMittCloth"/>
+		<material name="M_OvenMittSkin" rgba="0.5893999934196472 0.6273999810218811 0.6367999911308289 1.0" emission="0.0"/>
+		<texture name="T_OvenMittCloth" type="2d" file="T_OvenMittCloth.png"/>
+	</asset>
+	<worldbody>
+		<body name="oven_mitt" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="oven_mitt_cloth" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="3.296433448791504" pos="0.008266645483672619 0.00631155027076602 -0.02526518516242504" quat="0.46586939692497253 0.4444926381111145 0.5485215783119202 -0.5334004759788513" diaginertia="0.015979763120412827 0.04791974276304245 0.062468480318784714"/>
+				<geom name="OvenMittCloth" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth" material="M_OvenMittCloth" class="visual"/>
+				<geom name="OvenMittCloth_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_001" class="collision"/>
+				<geom name="OvenMittCloth_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_002" class="collision"/>
+				<geom name="OvenMittCloth_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_003" class="collision"/>
+				<geom name="OvenMittCloth_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_004" class="collision"/>
+				<geom name="OvenMittCloth_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_005" class="collision"/>
+				<geom name="OvenMittCloth_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_006" class="collision"/>
+				<geom name="OvenMittCloth_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_007" class="collision"/>
+				<geom name="OvenMittCloth_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_008" class="collision"/>
+				<geom name="OvenMittCloth_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_009" class="collision"/>
+				<geom name="OvenMittCloth_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_010" class="collision"/>
+				<geom name="OvenMittCloth_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_011" class="collision"/>
+				<geom name="OvenMittCloth_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_012" class="collision"/>
+				<geom name="OvenMittCloth_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_013" class="collision"/>
+				<geom name="OvenMittCloth_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_014" class="collision"/>
+				<geom name="OvenMittCloth_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_015" class="collision"/>
+				<geom name="OvenMittCloth_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_016" class="collision"/>
+				<geom name="OvenMittCloth_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_017" class="collision"/>
+				<geom name="OvenMittCloth_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_018" class="collision"/>
+				<geom name="OvenMittCloth_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_019" class="collision"/>
+				<geom name="OvenMittCloth_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_020" class="collision"/>
+				<geom name="OvenMittCloth_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_021" class="collision"/>
+				<geom name="OvenMittCloth_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_022" class="collision"/>
+				<geom name="OvenMittCloth_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_023" class="collision"/>
+				<geom name="OvenMittCloth_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_024" class="collision"/>
+				<geom name="OvenMittCloth_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_025" class="collision"/>
+				<geom name="OvenMittCloth_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_026" class="collision"/>
+				<geom name="OvenMittCloth_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittCloth_027" class="collision"/>
+			</body>
+			<body name="oven_mitt_skin" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="1.1743172407150269" pos="0.018886398524045944 -0.01621830463409424 0.02312811091542244" quat="-0.5971135497093201 0.6099449992179871 0.341251939535141 0.39366182684898376" diaginertia="0.0035743454936891794 0.010408329777419567 0.013392816297709942"/>
+				<geom name="OvenMittSkin" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittSkin" material="M_OvenMittSkin" class="visual"/>
+				<geom name="OvenMittSkin_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittSkin_001" class="collision"/>
+				<geom name="OvenMittSkin_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittSkin_002" class="collision"/>
+				<geom name="OvenMittSkin_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OvenMittSkin_003" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

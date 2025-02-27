@@ -1,0 +1,218 @@
+<?xml version="1.0" ?>
+<mujoco model="lime">
+	<compiler meshdir="lime/meshes" texturedir="lime/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="LimeFascia" file="stl/LimeFascia.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFascia_001" file="stl/LimeFascia_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh" file="obj/LimeFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_001" file="stl/LimeFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_002" file="stl/LimeFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_003" file="stl/LimeFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_004" file="stl/LimeFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_005" file="stl/LimeFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_006" file="stl/LimeFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_007" file="stl/LimeFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_008" file="stl/LimeFlesh_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_009" file="stl/LimeFlesh_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_010" file="stl/LimeFlesh_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_011" file="stl/LimeFlesh_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_012" file="stl/LimeFlesh_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_013" file="stl/LimeFlesh_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_014" file="stl/LimeFlesh_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_015" file="stl/LimeFlesh_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_016" file="stl/LimeFlesh_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_017" file="stl/LimeFlesh_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_018" file="stl/LimeFlesh_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_019" file="stl/LimeFlesh_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_020" file="stl/LimeFlesh_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_021" file="stl/LimeFlesh_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_022" file="stl/LimeFlesh_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_023" file="stl/LimeFlesh_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_024" file="stl/LimeFlesh_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_025" file="stl/LimeFlesh_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_026" file="stl/LimeFlesh_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_027" file="stl/LimeFlesh_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_028" file="stl/LimeFlesh_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_029" file="stl/LimeFlesh_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_030" file="stl/LimeFlesh_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_031" file="stl/LimeFlesh_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_032" file="stl/LimeFlesh_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_033" file="stl/LimeFlesh_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_034" file="stl/LimeFlesh_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_035" file="stl/LimeFlesh_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_036" file="stl/LimeFlesh_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_037" file="stl/LimeFlesh_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_038" file="stl/LimeFlesh_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_039" file="stl/LimeFlesh_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_040" file="stl/LimeFlesh_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_041" file="stl/LimeFlesh_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_042" file="stl/LimeFlesh_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_043" file="stl/LimeFlesh_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_044" file="stl/LimeFlesh_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_045" file="stl/LimeFlesh_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_046" file="stl/LimeFlesh_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_047" file="stl/LimeFlesh_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_048" file="stl/LimeFlesh_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_049" file="stl/LimeFlesh_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_050" file="stl/LimeFlesh_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_051" file="stl/LimeFlesh_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_052" file="stl/LimeFlesh_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_053" file="stl/LimeFlesh_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_054" file="stl/LimeFlesh_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_055" file="stl/LimeFlesh_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_056" file="stl/LimeFlesh_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_057" file="stl/LimeFlesh_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_058" file="stl/LimeFlesh_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_059" file="stl/LimeFlesh_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_060" file="stl/LimeFlesh_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFlesh_061" file="stl/LimeFlesh_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimePeel" file="obj/LimePeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="LimePeel_001" file="stl/LimePeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle" file="obj/LimeFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_001" file="stl/LimeFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_002" file="stl/LimeFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_003" file="stl/LimeFruitPeduncle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_004" file="stl/LimeFruitPeduncle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_005" file="stl/LimeFruitPeduncle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_006" file="stl/LimeFruitPeduncle_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_007" file="stl/LimeFruitPeduncle_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_008" file="stl/LimeFruitPeduncle_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_009" file="stl/LimeFruitPeduncle_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_010" file="stl/LimeFruitPeduncle_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_011" file="stl/LimeFruitPeduncle_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_012" file="stl/LimeFruitPeduncle_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_013" file="stl/LimeFruitPeduncle_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_014" file="stl/LimeFruitPeduncle_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_015" file="stl/LimeFruitPeduncle_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_016" file="stl/LimeFruitPeduncle_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_017" file="stl/LimeFruitPeduncle_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_018" file="stl/LimeFruitPeduncle_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_019" file="stl/LimeFruitPeduncle_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_020" file="stl/LimeFruitPeduncle_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_021" file="stl/LimeFruitPeduncle_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_022" file="stl/LimeFruitPeduncle_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="LimeFruitPeduncle_023" file="stl/LimeFruitPeduncle_023.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_LimeFascia" rgba="0.8269000053405762 0.8230999708175659 0.8070999979972839 1.0" emission="0.0"/>
+		<material name="M_LimeFlesh" texture="T_LimeFlesh"/>
+		<material name="M_LimePeel" texture="T_LimePeel"/>
+		<material name="M_LimeFruitPeduncle" texture="T_LimeFruitPeduncle"/>
+		<texture name="T_LimeFlesh" type="2d" file="T_LimeFlesh.png"/>
+		<texture name="T_LimePeel" type="2d" file="T_LimePeel.png"/>
+		<texture name="T_LimeFruitPeduncle" type="2d" file="T_LimeFruitPeduncle.png"/>
+	</asset>
+	<worldbody>
+		<body name="lime" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="lime_fascia" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.07461966574192047" pos="-0.004055655561387539 0.00045510882046073675 8.306115341838449e-05" quat="-0.061713043600320816 0.9974934458732605 -0.017106356099247932 0.03009580634534359" diaginertia="3.352948260726407e-05 4.461341450223699e-05 4.501095463638194e-05"/>
+				<geom name="LimeFascia" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFascia" material="M_LimeFascia" class="visual"/>
+				<geom name="LimeFascia_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFascia_001" class="collision"/>
+			</body>
+			<body name="lime_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0066876644268631935" pos="-0.0020827518310397863 -0.00036481244023889303 3.410069984965958e-05" quat="0.010744630359113216 0.9998385906219482 -0.0004001232155133039 0.014394496567547321" diaginertia="3.538991677487502e-06 5.962369414191926e-06 6.003923317621229e-06"/>
+				<geom name="LimePeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimePeel" material="M_LimePeel" class="visual"/>
+				<geom name="LimePeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimePeel_001" class="collision"/>
+			</body>
+			<body name="lime_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06487783044576645" pos="-0.004311780445277691 -0.0010747106280177832 0.0006292589823715389" quat="0.9650611877441406 -0.26174092292785645 0.003190290881320834 0.011762548238039017" diaginertia="1.2263642929610796e-05 2.6561519916867837e-05 2.665364991116803e-05"/>
+				<geom name="LimeFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh" material="M_LimeFlesh" class="visual"/>
+				<geom name="LimeFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_001" class="collision"/>
+				<geom name="LimeFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_002" class="collision"/>
+				<geom name="LimeFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_003" class="collision"/>
+				<geom name="LimeFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_004" class="collision"/>
+				<geom name="LimeFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_005" class="collision"/>
+				<geom name="LimeFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_006" class="collision"/>
+				<geom name="LimeFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_007" class="collision"/>
+				<geom name="LimeFlesh_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_008" class="collision"/>
+				<geom name="LimeFlesh_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_009" class="collision"/>
+				<geom name="LimeFlesh_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_010" class="collision"/>
+				<geom name="LimeFlesh_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_011" class="collision"/>
+				<geom name="LimeFlesh_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_012" class="collision"/>
+				<geom name="LimeFlesh_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_013" class="collision"/>
+				<geom name="LimeFlesh_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_014" class="collision"/>
+				<geom name="LimeFlesh_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_015" class="collision"/>
+				<geom name="LimeFlesh_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_016" class="collision"/>
+				<geom name="LimeFlesh_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_017" class="collision"/>
+				<geom name="LimeFlesh_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_018" class="collision"/>
+				<geom name="LimeFlesh_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_019" class="collision"/>
+				<geom name="LimeFlesh_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_020" class="collision"/>
+				<geom name="LimeFlesh_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_021" class="collision"/>
+				<geom name="LimeFlesh_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_022" class="collision"/>
+				<geom name="LimeFlesh_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_023" class="collision"/>
+				<geom name="LimeFlesh_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_024" class="collision"/>
+				<geom name="LimeFlesh_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_025" class="collision"/>
+				<geom name="LimeFlesh_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_026" class="collision"/>
+				<geom name="LimeFlesh_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_027" class="collision"/>
+				<geom name="LimeFlesh_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_028" class="collision"/>
+				<geom name="LimeFlesh_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_029" class="collision"/>
+				<geom name="LimeFlesh_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_030" class="collision"/>
+				<geom name="LimeFlesh_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_031" class="collision"/>
+				<geom name="LimeFlesh_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_032" class="collision"/>
+				<geom name="LimeFlesh_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_033" class="collision"/>
+				<geom name="LimeFlesh_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_034" class="collision"/>
+				<geom name="LimeFlesh_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_035" class="collision"/>
+				<geom name="LimeFlesh_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_036" class="collision"/>
+				<geom name="LimeFlesh_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_037" class="collision"/>
+				<geom name="LimeFlesh_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_038" class="collision"/>
+				<geom name="LimeFlesh_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_039" class="collision"/>
+				<geom name="LimeFlesh_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_040" class="collision"/>
+				<geom name="LimeFlesh_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_041" class="collision"/>
+				<geom name="LimeFlesh_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_042" class="collision"/>
+				<geom name="LimeFlesh_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_043" class="collision"/>
+				<geom name="LimeFlesh_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_044" class="collision"/>
+				<geom name="LimeFlesh_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_045" class="collision"/>
+				<geom name="LimeFlesh_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_046" class="collision"/>
+				<geom name="LimeFlesh_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_047" class="collision"/>
+				<geom name="LimeFlesh_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_048" class="collision"/>
+				<geom name="LimeFlesh_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_049" class="collision"/>
+				<geom name="LimeFlesh_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_050" class="collision"/>
+				<geom name="LimeFlesh_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_051" class="collision"/>
+				<geom name="LimeFlesh_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_052" class="collision"/>
+				<geom name="LimeFlesh_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_053" class="collision"/>
+				<geom name="LimeFlesh_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_054" class="collision"/>
+				<geom name="LimeFlesh_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_055" class="collision"/>
+				<geom name="LimeFlesh_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_056" class="collision"/>
+				<geom name="LimeFlesh_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_057" class="collision"/>
+				<geom name="LimeFlesh_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_058" class="collision"/>
+				<geom name="LimeFlesh_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_059" class="collision"/>
+				<geom name="LimeFlesh_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_060" class="collision"/>
+				<geom name="LimeFlesh_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFlesh_061" class="collision"/>
+			</body>
+			<body name="lime_fruit_peduncle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.285023765580263e-05" pos="-0.043652936816215515 -0.0014261020114645362 0.00041363973286934197" quat="0.8878213167190552 -0.45987468957901 -0.003381935879588127 0.016647811979055405" diaginertia="7.544106311874188e-11 4.364033401316192e-08 4.364082784036327e-08"/>
+				<geom name="LimeFruitPeduncle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle" material="M_LimeFruitPeduncle" class="visual"/>
+				<geom name="LimeFruitPeduncle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_001" class="collision"/>
+				<geom name="LimeFruitPeduncle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_002" class="collision"/>
+				<geom name="LimeFruitPeduncle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_003" class="collision"/>
+				<geom name="LimeFruitPeduncle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_004" class="collision"/>
+				<geom name="LimeFruitPeduncle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_005" class="collision"/>
+				<geom name="LimeFruitPeduncle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_006" class="collision"/>
+				<geom name="LimeFruitPeduncle_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_007" class="collision"/>
+				<geom name="LimeFruitPeduncle_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_008" class="collision"/>
+				<geom name="LimeFruitPeduncle_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_009" class="collision"/>
+				<geom name="LimeFruitPeduncle_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_010" class="collision"/>
+				<geom name="LimeFruitPeduncle_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_011" class="collision"/>
+				<geom name="LimeFruitPeduncle_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_012" class="collision"/>
+				<geom name="LimeFruitPeduncle_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_013" class="collision"/>
+				<geom name="LimeFruitPeduncle_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_014" class="collision"/>
+				<geom name="LimeFruitPeduncle_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_015" class="collision"/>
+				<geom name="LimeFruitPeduncle_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_016" class="collision"/>
+				<geom name="LimeFruitPeduncle_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_017" class="collision"/>
+				<geom name="LimeFruitPeduncle_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_018" class="collision"/>
+				<geom name="LimeFruitPeduncle_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_019" class="collision"/>
+				<geom name="LimeFruitPeduncle_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_020" class="collision"/>
+				<geom name="LimeFruitPeduncle_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_021" class="collision"/>
+				<geom name="LimeFruitPeduncle_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_022" class="collision"/>
+				<geom name="LimeFruitPeduncle_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="LimeFruitPeduncle_023" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

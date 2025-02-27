@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<mujoco model="yellow_banana">
+	<compiler meshdir="yellow_banana/meshes" texturedir="yellow_banana/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="YellowBananaEndocarp" file="obj/YellowBananaEndocarp.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaEndocarp_001" file="stl/YellowBananaEndocarp_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaEndocarp_002" file="stl/YellowBananaEndocarp_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaEndocarp_003" file="stl/YellowBananaEndocarp_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaEndocarp_004" file="stl/YellowBananaEndocarp_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaExocarp" file="obj/YellowBananaExocarp.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaExocarp_001" file="stl/YellowBananaExocarp_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaExocarp_002" file="stl/YellowBananaExocarp_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaExocarp_003" file="stl/YellowBananaExocarp_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaExocarp_004" file="stl/YellowBananaExocarp_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaFlesh" file="obj/YellowBananaFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaFlesh_001" file="stl/YellowBananaFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaFlesh_002" file="stl/YellowBananaFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="YellowBananaFlesh_003" file="stl/YellowBananaFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_YellowBananaEndocarp" texture="T_YellowBananaEndocarp"/>
+		<material name="M_YellowBananaExocarp" texture="T_YellowBananaExocarp"/>
+		<material name="M_YellowBananaFlesh" texture="T_YellowBananaFlesh"/>
+		<texture name="T_YellowBananaEndocarp" type="2d" file="T_YellowBananaEndocarp.png"/>
+		<texture name="T_YellowBananaExocarp" type="2d" file="T_YellowBananaExocarp.png"/>
+		<texture name="T_YellowBananaFlesh" type="2d" file="T_YellowBananaFlesh.png"/>
+	</asset>
+	<worldbody>
+		<body name="yellow_banana" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="yellow_banana_endocarp" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.003866082290187478" pos="-0.01240614801645279 0.013213612139225006 -0.0007500060019083321" quat="0.999386191368103 0.014309662394225597 -0.003567987121641636 0.03177691251039505" diaginertia="3.1374904665426584e-06 1.1440144589869305e-05 1.3253933502710424e-05"/>
+				<geom name="YellowBananaEndocarp" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaEndocarp" material="M_YellowBananaEndocarp" class="visual"/>
+				<geom name="YellowBananaEndocarp_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaEndocarp_001" class="collision"/>
+				<geom name="YellowBananaEndocarp_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaEndocarp_002" class="collision"/>
+				<geom name="YellowBananaEndocarp_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaEndocarp_003" class="collision"/>
+				<geom name="YellowBananaEndocarp_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaEndocarp_004" class="collision"/>
+			</body>
+			<body name="yellow_banana_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.16765236854553223" pos="-0.011863026767969131 0.016230249777436256 -0.00047982129035517573" quat="0.999794602394104 0.009690002538263798 -0.0033315131440758705 0.017485249787569046" diaginertia="0.00010836349247256294 0.00039412116166204214 0.00047479759086854756"/>
+				<geom name="YellowBananaFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaFlesh" material="M_YellowBananaFlesh" class="visual"/>
+				<geom name="YellowBananaFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaFlesh_001" class="collision"/>
+				<geom name="YellowBananaFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaFlesh_002" class="collision"/>
+				<geom name="YellowBananaFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaFlesh_003" class="collision"/>
+			</body>
+			<body name="yellow_banana_exocarp" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.014691420830786228" pos="-0.0066825891844928265 0.00984877534210682 -0.001081103808246553" quat="0.9995599985122681 0.026058413088321686 0.0016423529013991356 -0.014072651974856853" diaginertia="1.3276352547109127e-05 4.834550782106817e-05 5.636810965370387e-05"/>
+				<geom name="YellowBananaExocarp" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaExocarp" material="M_YellowBananaExocarp" class="visual"/>
+				<geom name="YellowBananaExocarp_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaExocarp_001" class="collision"/>
+				<geom name="YellowBananaExocarp_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaExocarp_002" class="collision"/>
+				<geom name="YellowBananaExocarp_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaExocarp_003" class="collision"/>
+				<geom name="YellowBananaExocarp_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="YellowBananaExocarp_004" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

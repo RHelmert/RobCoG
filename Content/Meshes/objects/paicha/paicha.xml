@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<mujoco model="paicha">
+	<compiler meshdir="paicha/meshes" texturedir="paicha/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Paicha" file="stl/Paicha.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Paicha_001" file="stl/Paicha_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Paicha_002" file="stl/Paicha_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Paicha_003" file="stl/Paicha_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Paicha_004" file="stl/Paicha_004.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Paicha" rgba="0.660099983215332 0.660099983215332 0.660099983215332 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="paicha" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.015963025391101837" pos="0.017689913511276245 2.957269089165493e-06 -0.003262417856603861" quat="0.707278311252594 -0.7069140076637268 0.0038363435305655003 0.003902786411345005" diaginertia="6.571041808456357e-07 4.8253357817884535e-05 4.832317426917143e-05"/>
+			<geom name="Paicha" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Paicha" material="M_Paicha" class="visual"/>
+			<geom name="Paicha_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Paicha_001" class="collision"/>
+			<geom name="Paicha_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Paicha_002" class="collision"/>
+			<geom name="Paicha_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Paicha_003" class="collision"/>
+			<geom name="Paicha_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Paicha_004" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

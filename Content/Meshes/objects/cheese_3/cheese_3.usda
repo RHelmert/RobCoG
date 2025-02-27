@@ -1,0 +1,126 @@
+#usda 1.0
+(
+    defaultPrim = "cheese_3"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "cheese_3" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.0021207028, 0.0057203136, 0.0068940525)
+    float mujoco:body:inertial:mass = 1.6199937
+    point3f mujoco:body:inertial:pos = (-2.40178e-8, -0.009999449, -0.0020021244)
+    quatf mujoco:body:inertial:quat = (0.999985, -0.005476129, 3.0993114e-8, 1.9889981e-10)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-2.40178e-8, -0.009999449, -0.0020021244)
+    float3 physics:diagonalInertia = (0.0021207028, 0.0057203136, 0.0068940525)
+    float physics:mass = 1.6199937
+    quatf physics:principalAxes = (0.999985, -0.005476129, 3.0993114e-8, 1.9889981e-10)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.0021207028
+    float urdf:link:inertial:inertia:iyy = 0.0057203136
+    float urdf:link:inertial:inertia:izz = 0.0068940525
+    float urdf:link:inertial:mass = 1.6199937
+    float3 urdf:link:inertial:origin:rpy = (-0.0109523125, 6.198748e-8, 5.834909e-11)
+    point3f urdf:link:inertial:origin:xyz = (-2.40178e-8, -0.009999449, -0.0020021244)
+
+    def Mesh "Cheese3" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./cheese_3/meshes/usd/Cheese3.usda@</Cheese3>
+    )
+    {
+        rel material:binding = </cheese_3/Cheese3/Materials/M_Cheese3>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_Cheese3>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Cheese3>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./cheese_3/meshes/obj/Cheese3.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_Cheese3" (
+                prepend references = @./cheese_3/materials/usd/M_Cheese3.usda@</M_Cheese3>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "Cheese3_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./cheese_3/meshes/usd/Cheese3_001.usda@</Cheese3_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Cheese3_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./cheese_3/meshes/stl/Cheese3_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "cheese_3"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "cheese_3"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Cheese3"
+            {
+                asset mujoco:mesh:file = @cheese_3/meshes/obj/Cheese3.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Cheese3_001"
+            {
+                asset mujoco:mesh:file = @cheese_3/meshes/stl/Cheese3_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Cheese3"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_Cheese3>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_Cheese3"
+            {
+                asset mujoco:texture:file = @T_Cheese3.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<mujoco model="large_plate">
+	<compiler meshdir="large_plate/meshes" texturedir="large_plate/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PlateLargeSize" file="stl/PlateLargeSize.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_001" file="stl/PlateLargeSize_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_002" file="stl/PlateLargeSize_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_003" file="stl/PlateLargeSize_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_004" file="stl/PlateLargeSize_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_005" file="stl/PlateLargeSize_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_006" file="stl/PlateLargeSize_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_007" file="stl/PlateLargeSize_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_008" file="stl/PlateLargeSize_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_009" file="stl/PlateLargeSize_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_010" file="stl/PlateLargeSize_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_011" file="stl/PlateLargeSize_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_012" file="stl/PlateLargeSize_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_013" file="stl/PlateLargeSize_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_014" file="stl/PlateLargeSize_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_015" file="stl/PlateLargeSize_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_016" file="stl/PlateLargeSize_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_017" file="stl/PlateLargeSize_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_018" file="stl/PlateLargeSize_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_019" file="stl/PlateLargeSize_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_020" file="stl/PlateLargeSize_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_021" file="stl/PlateLargeSize_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateLargeSize_022" file="stl/PlateLargeSize_022.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PlateLargeSize" rgba="0.8098999857902527 0.8098999857902527 0.8098999857902527 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="large_plate" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.5154173970222473" pos="1.6775587585726726e-09 -8.307424792519669e-08 -0.003178010229021311" quat="-0.5229725241661072 1.5307165313060977e-08 3.7521878937241127e-08 0.8523495197296143" diaginertia="0.002286007860675454 0.0022860087919980288 0.004535621032118797"/>
+			<geom name="PlateLargeSize" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize" material="M_PlateLargeSize" class="visual"/>
+			<geom name="PlateLargeSize_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_001" class="collision"/>
+			<geom name="PlateLargeSize_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_002" class="collision"/>
+			<geom name="PlateLargeSize_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_003" class="collision"/>
+			<geom name="PlateLargeSize_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_004" class="collision"/>
+			<geom name="PlateLargeSize_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_005" class="collision"/>
+			<geom name="PlateLargeSize_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_006" class="collision"/>
+			<geom name="PlateLargeSize_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_007" class="collision"/>
+			<geom name="PlateLargeSize_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_008" class="collision"/>
+			<geom name="PlateLargeSize_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_009" class="collision"/>
+			<geom name="PlateLargeSize_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_010" class="collision"/>
+			<geom name="PlateLargeSize_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_011" class="collision"/>
+			<geom name="PlateLargeSize_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_012" class="collision"/>
+			<geom name="PlateLargeSize_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_013" class="collision"/>
+			<geom name="PlateLargeSize_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_014" class="collision"/>
+			<geom name="PlateLargeSize_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_015" class="collision"/>
+			<geom name="PlateLargeSize_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_016" class="collision"/>
+			<geom name="PlateLargeSize_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_017" class="collision"/>
+			<geom name="PlateLargeSize_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_018" class="collision"/>
+			<geom name="PlateLargeSize_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_019" class="collision"/>
+			<geom name="PlateLargeSize_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_020" class="collision"/>
+			<geom name="PlateLargeSize_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_021" class="collision"/>
+			<geom name="PlateLargeSize_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateLargeSize_022" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

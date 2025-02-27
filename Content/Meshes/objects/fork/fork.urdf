@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<robot name="fork" version="1.0">
+  <link name="fork">
+    <inertial>
+      <origin xyz="0.010070816613733768 -4.082808970906626e-07 -0.0045463936403393745" rpy="1.5704774856567383 0.002175377681851387 -2.039543687715195e-05"/>
+      <mass value="0.019516708329319954"/>
+      <inertia ixx="1.000617317004071e-06" ixy="0.0" ixz="0.0" iyy="5.407274511526339e-05" iyz="0.0" izz="5.440966197056696e-05"/>
+    </inertial>
+    <visual name="Fork">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://fork/meshes/obj/Fork.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Fork_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://fork/meshes/stl/Fork_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Fork_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://fork/meshes/stl/Fork_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Fork_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://fork/meshes/stl/Fork_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

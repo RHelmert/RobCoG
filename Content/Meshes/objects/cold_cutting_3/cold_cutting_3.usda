@@ -1,0 +1,152 @@
+#usda 1.0
+(
+    defaultPrim = "cold_cutting_3"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "cold_cutting_3" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.00043925425, 0.0022854302, 0.002342989)
+    float mujoco:body:inertial:mass = 0.695364
+    point3f mujoco:body:inertial:pos = (-0.0062129945, 0.00024672865, 0.0018410571)
+    quatf mujoco:body:inertial:quat = (0.09242515, 0.99468005, -0.0075638117, 0.044854514)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-0.0062129945, 0.00024672865, 0.0018410571)
+    float3 physics:diagonalInertia = (0.00043925425, 0.0022854302, 0.002342989)
+    float physics:mass = 0.695364
+    quatf physics:principalAxes = (0.09242515, 0.99468005, -0.0075638117, 0.044854514)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.00043925425
+    float urdf:link:inertial:inertia:iyy = 0.0022854302
+    float urdf:link:inertial:inertia:izz = 0.002342989
+    float urdf:link:inertial:mass = 0.695364
+    float3 urdf:link:inertial:origin:rpy = (2.9565938, -0.09075449, -0.0067837443)
+    point3f urdf:link:inertial:origin:xyz = (-0.0062129945, 0.00024672865, 0.0018410571)
+
+    def Mesh "ColdCutting3" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./cold_cutting_3/meshes/usd/ColdCutting3.usda@</ColdCutting3>
+    )
+    {
+        rel material:binding = </cold_cutting_3/ColdCutting3/Materials/M_ColdCutting3>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_ColdCutting3>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCutting3>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./cold_cutting_3/meshes/obj/ColdCutting3.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_ColdCutting3" (
+                prepend references = @./cold_cutting_3/materials/usd/M_ColdCutting3.usda@</M_ColdCutting3>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "ColdCutting3_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./cold_cutting_3/meshes/usd/ColdCutting3_001.usda@</ColdCutting3_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCutting3_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./cold_cutting_3/meshes/stl/ColdCutting3_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "ColdCutting3_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./cold_cutting_3/meshes/usd/ColdCutting3_002.usda@</ColdCutting3_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCutting3_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./cold_cutting_3/meshes/stl/ColdCutting3_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "cold_cutting_3"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "cold_cutting_3"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "ColdCutting3"
+            {
+                asset mujoco:mesh:file = @cold_cutting_3/meshes/obj/ColdCutting3.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCutting3_001"
+            {
+                asset mujoco:mesh:file = @cold_cutting_3/meshes/stl/ColdCutting3_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCutting3_002"
+            {
+                asset mujoco:mesh:file = @cold_cutting_3/meshes/stl/ColdCutting3_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_ColdCutting3"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_ColdCutting3>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_ColdCutting3"
+            {
+                asset mujoco:texture:file = @T_ColdCutting3.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

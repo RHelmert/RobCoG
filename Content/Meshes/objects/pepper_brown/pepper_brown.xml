@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<mujoco model="pepper_brown">
+	<compiler meshdir="pepper_brown/meshes" texturedir="pepper_brown/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PepperBrown" file="obj/PepperBrown.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_001" file="stl/PepperBrown_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_002" file="stl/PepperBrown_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_003" file="stl/PepperBrown_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_004" file="stl/PepperBrown_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_005" file="stl/PepperBrown_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_006" file="stl/PepperBrown_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_007" file="stl/PepperBrown_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_008" file="stl/PepperBrown_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_009" file="stl/PepperBrown_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_010" file="stl/PepperBrown_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_011" file="stl/PepperBrown_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PepperBrown_012" file="stl/PepperBrown_012.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PepperBrown" texture="T_PepperBrown"/>
+		<texture name="T_PepperBrown" type="2d" file="T_PepperBrown.png"/>
+	</asset>
+	<worldbody>
+		<body name="pepper_brown" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="1.883025652205106e-05" pos="2.0011988453916274e-05 3.485151319182478e-05 -5.9768586652353406e-05" quat="-0.36709529161453247 -0.6220515370368958 0.6530370712280273 -0.22767412662506104" diaginertia="2.9328914297188646e-11 3.026827052887704e-11 3.056271555279544e-11"/>
+			<geom name="PepperBrown" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown" material="M_PepperBrown" class="visual"/>
+			<geom name="PepperBrown_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_001" class="collision"/>
+			<geom name="PepperBrown_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_002" class="collision"/>
+			<geom name="PepperBrown_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_003" class="collision"/>
+			<geom name="PepperBrown_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_004" class="collision"/>
+			<geom name="PepperBrown_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_005" class="collision"/>
+			<geom name="PepperBrown_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_006" class="collision"/>
+			<geom name="PepperBrown_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_007" class="collision"/>
+			<geom name="PepperBrown_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_008" class="collision"/>
+			<geom name="PepperBrown_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_009" class="collision"/>
+			<geom name="PepperBrown_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_010" class="collision"/>
+			<geom name="PepperBrown_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_011" class="collision"/>
+			<geom name="PepperBrown_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PepperBrown_012" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

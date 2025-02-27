@@ -1,0 +1,122 @@
+#usda 1.0
+(
+    defaultPrim = "butter"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "butter" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.00013884959, 0.0003888639, 0.000451511)
+    float mujoco:body:inertial:mass = 0.28804764
+    point3f mujoco:body:inertial:pos = (1.0195358e-9, -8.063334e-9, -0.00009647164)
+    quatf mujoco:body:inertial:quat = (1, -3.9869397e-7, 1.1752018e-9, 1.5438562e-9)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (1.0195358e-9, -8.063334e-9, -0.00009647164)
+    float3 physics:diagonalInertia = (0.00013884959, 0.0003888639, 0.000451511)
+    float physics:mass = 0.28804764
+    quatf physics:principalAxes = (1, -3.9869397e-7, 1.1752018e-9, 1.5438562e-9)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.00013884959
+    float urdf:link:inertial:inertia:iyy = 0.0003888639
+    float urdf:link:inertial:inertia:izz = 0.000451511
+    float urdf:link:inertial:mass = 0.28804764
+    float3 urdf:link:inertial:origin:rpy = (-7.9738794e-7, 2.350405e-9, 3.0877114e-9)
+    point3f urdf:link:inertial:origin:xyz = (1.0195358e-9, -8.063334e-9, -0.00009647164)
+
+    def Mesh "Butter" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./butter/meshes/usd/Butter.usda@</Butter>
+    )
+    {
+        rel material:binding = </butter/Butter/Materials/M_Butter>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_Butter>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Butter>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./butter/meshes/obj/Butter.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_Butter" (
+                prepend references = @./butter/materials/usd/M_Butter.usda@</M_Butter>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "Butter_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./butter/meshes/usd/Butter_001.usda@</Butter_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Butter_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./butter/meshes/stl/Butter_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "butter"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "butter"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Butter"
+            {
+                asset mujoco:mesh:file = @butter/meshes/stl/Butter.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Butter_001"
+            {
+                asset mujoco:mesh:file = @butter/meshes/stl/Butter_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Butter"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.7989, 0.7612, 0.6331, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

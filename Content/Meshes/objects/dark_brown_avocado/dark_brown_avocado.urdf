@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<robot name="dark_brown_avocado" version="1.0">
+  <link name="dark_brown_avocado"/>
+  <joint name="dark_brown_avocado_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="dark_brown_avocado"/>
+    <child link="dark_brown_avocado_flesh"/>
+  </joint>
+  <link name="dark_brown_avocado_flesh">
+    <inertial>
+      <origin xyz="-0.005291021894663572 -3.1988158752938034e-06 -0.0023375293239951134" rpy="-1.777347445487976 0.37477046251296997 0.011229981668293476"/>
+      <mass value="0.286781907081604"/>
+      <inertia ixx="0.00015632178110536188" ixy="0.0" ixz="0.0" iyy="0.0002422279940219596" iyz="0.0" izz="0.0002460240793880075"/>
+    </inertial>
+    <visual name="DarkBrownAvocadoFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/obj/DarkBrownAvocadoFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="DarkBrownAvocadoFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/stl/DarkBrownAvocadoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="dark_brown_avocado_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="dark_brown_avocado"/>
+    <child link="dark_brown_avocado_peel"/>
+  </joint>
+  <link name="dark_brown_avocado_peel">
+    <inertial>
+      <origin xyz="-0.005436281207948923 7.964672477100976e-06 -0.0022861063480377197" rpy="-1.7871030569076538 0.37524887919425964 0.011052880436182022"/>
+      <mass value="0.6174211502075195"/>
+      <inertia ixx="0.00035311750252731144" ixy="0.0" ixz="0.0" iyy="0.0005478958482854068" iyz="0.0" izz="0.0005560009158216417"/>
+    </inertial>
+    <visual name="DarkBrownAvocadoPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/obj/DarkBrownAvocadoPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="DarkBrownAvocadoPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/stl/DarkBrownAvocadoPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="dark_brown_avocado_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="dark_brown_avocado"/>
+    <child link="dark_brown_avocado_seed"/>
+  </joint>
+  <link name="dark_brown_avocado_seed">
+    <inertial>
+      <origin xyz="-0.010412819683551788 -0.0001577374350745231 -0.0002522896393202245" rpy="2.9462175369262695 0.056039150804281235 0.006953858304768801"/>
+      <mass value="0.024663496762514114"/>
+      <inertia ixx="3.0250164400058566e-06" ixy="0.0" ixz="0.0" iyy="5.994372713757912e-06" iyz="0.0" izz="6.129022949608043e-06"/>
+    </inertial>
+    <visual name="DarkBrownAvocadoSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/obj/DarkBrownAvocadoSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="DarkBrownAvocadoSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://dark_brown_avocado/meshes/stl/DarkBrownAvocadoSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

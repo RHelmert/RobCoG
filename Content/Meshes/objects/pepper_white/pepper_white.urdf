@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="pepper_white" version="1.0">
+  <link name="pepper_white">
+    <inertial>
+      <origin xyz="7.757628850413312e-08 1.2328382581472397e-07 -0.00011824795365100726" rpy="-0.056518349796533585 -0.021843377500772476 0.4542851150035858"/>
+      <mass value="2.5312963771284558e-05"/>
+      <inertia ixx="4.891242272320184e-11" ixy="0.0" ixz="0.0" iyy="4.9044462935299293e-11" iyz="0.0" izz="4.9462375167896866e-11"/>
+    </inertial>
+    <visual name="PepperWhite">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pepper_white/meshes/obj/PepperWhite.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="PepperWhite_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://pepper_white/meshes/stl/PepperWhite_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,866 @@
+#usda 1.0
+(
+    defaultPrim = "scissors_2"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "scissors_2" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "scissors2_screw" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (8.1368235e-8, 0.0000015825597, 0.000001636042)
+        float mujoco:body:inertial:mass = 0.0038253292
+        point3f mujoco:body:inertial:pos = (-0.013648379, -0.0147633, 0.0014566575)
+        quatf mujoco:body:inertial:quat = (0.6586766, 0.6361418, 0.3070635, 0.25919262)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.013648379, -0.0147633, 0.0014566575)
+        float3 physics:diagonalInertia = (8.1368235e-8, 0.0000015825597, 0.000001636042)
+        float physics:mass = 0.0038253292
+        quatf physics:principalAxes = (0.6586766, 0.6361418, 0.3070635, 0.25919262)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 8.1368235e-8
+        float urdf:link:inertial:inertia:iyy = 0.0000015825597
+        float urdf:link:inertial:inertia:izz = 0.000001636042
+        float urdf:link:inertial:mass = 0.0038253292
+        float3 urdf:link:inertial:origin:rpy = (1.5687191, 0.07481435, 0.8244489)
+        point3f urdf:link:inertial:origin:xyz = (-0.013648379, -0.0147633, 0.0014566575)
+
+        def Mesh "Scissors2Screw" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw.usda@</Scissors2Screw>
+        )
+        {
+            rel material:binding = </scissors_2/scissors2_screw/Scissors2Screw/Materials/M_Scissors2Screw>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_Scissors2Screw>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/obj/Scissors2Screw.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_Scissors2Screw" (
+                    prepend references = @./scissors_2/materials/usd/M_Scissors2Screw.usda@</M_Scissors2Screw>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "Scissors2Screw_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw_001.usda@</Scissors2Screw_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Screw_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Screw_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw_002.usda@</Scissors2Screw_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Screw_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Screw_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw_003.usda@</Scissors2Screw_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Screw_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Screw_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw_004.usda@</Scissors2Screw_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Screw_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Screw_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Screw_005.usda@</Scissors2Screw_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Screw_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Screw_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "scissors2_blade" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000058604846, 0.00019576606, 0.00020153192)
+        float mujoco:body:inertial:mass = 0.054679673
+        point3f mujoco:body:inertial:pos = (0.047732223, -0.015027798, 0.00012023688)
+        quatf mujoco:body:inertial:quat = (0.9940807, -0.018958231, 0.0011590049, -0.10697101)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.047732223, -0.015027798, 0.00012023688)
+        float3 physics:diagonalInertia = (0.0000058604846, 0.00019576606, 0.00020153192)
+        float physics:mass = 0.054679673
+        quatf physics:principalAxes = (0.9940807, -0.018958231, 0.0011590049, -0.10697101)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000058604846
+        float urdf:link:inertial:inertia:iyy = 0.00019576606
+        float urdf:link:inertial:inertia:izz = 0.00020153192
+        float urdf:link:inertial:mass = 0.054679673
+        float3 urdf:link:inertial:origin:rpy = (-0.03794915, -0.0017516743, -0.21435773)
+        point3f urdf:link:inertial:origin:xyz = (0.047732223, -0.015027798, 0.00012023688)
+
+        def Mesh "Scissors2Blade" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Blade.usda@</Scissors2Blade>
+        )
+        {
+            rel material:binding = </scissors_2/scissors2_blade/Scissors2Blade/Materials/M_Scissors2Blade>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_Scissors2Blade>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Blade>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/obj/Scissors2Blade.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_Scissors2Blade" (
+                    prepend references = @./scissors_2/materials/usd/M_Scissors2Blade.usda@</M_Scissors2Blade>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "Scissors2Blade_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Blade_001.usda@</Scissors2Blade_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Blade_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Blade_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "scissors2_hilt" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000674114, 0.00092611706, 0.0009907563)
+        float mujoco:body:inertial:mass = 0.18828648
+        point3f mujoco:body:inertial:pos = (-0.06108174, -0.0070151016, 0.00015865601)
+        quatf mujoco:body:inertial:quat = (0.99949515, -0.003303846, 0.0011403514, 0.03157829)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.06108174, -0.0070151016, 0.00015865601)
+        float3 physics:diagonalInertia = (0.0000674114, 0.00092611706, 0.0009907563)
+        float physics:mass = 0.18828648
+        quatf physics:principalAxes = (0.99949515, -0.003303846, 0.0011403514, 0.03157829)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000674114
+        float urdf:link:inertial:inertia:iyy = 0.00092611706
+        float urdf:link:inertial:inertia:izz = 0.0009907563
+        float urdf:link:inertial:mass = 0.18828648
+        float3 urdf:link:inertial:origin:rpy = (-0.0065324027, 0.0024882136, 0.06315935)
+        point3f urdf:link:inertial:origin:xyz = (-0.06108174, -0.0070151016, 0.00015865601)
+
+        def Mesh "Scissors2Hilt" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt.usda@</Scissors2Hilt>
+        )
+        {
+            rel material:binding = </scissors_2/scissors2_hilt/Scissors2Hilt/Materials/M_Scissors2Hilt>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_Scissors2Hilt>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/obj/Scissors2Hilt.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_Scissors2Hilt" (
+                    prepend references = @./scissors_2/materials/usd/M_Scissors2Hilt.usda@</M_Scissors2Hilt>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "Scissors2Hilt_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_001.usda@</Scissors2Hilt_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_002.usda@</Scissors2Hilt_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_003.usda@</Scissors2Hilt_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_004.usda@</Scissors2Hilt_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_005.usda@</Scissors2Hilt_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_006.usda@</Scissors2Hilt_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_007.usda@</Scissors2Hilt_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_008.usda@</Scissors2Hilt_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_009.usda@</Scissors2Hilt_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_010.usda@</Scissors2Hilt_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_011.usda@</Scissors2Hilt_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_012.usda@</Scissors2Hilt_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_013.usda@</Scissors2Hilt_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_014.usda@</Scissors2Hilt_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_015.usda@</Scissors2Hilt_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_016.usda@</Scissors2Hilt_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_017.usda@</Scissors2Hilt_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "Scissors2Hilt_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./scissors_2/meshes/usd/Scissors2Hilt_018.usda@</Scissors2Hilt_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/Scissors2Hilt_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./scissors_2/meshes/stl/Scissors2Hilt_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "scissors_2"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "scissors_2"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Scissors2Screw"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/obj/Scissors2Screw.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Screw_001"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Screw_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Screw_002"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Screw_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Screw_003"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Screw_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Screw_004"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Screw_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Screw_005"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Screw_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Blade"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/obj/Scissors2Blade.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Blade_001"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Blade_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/obj/Scissors2Hilt.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_001"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_002"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_003"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_004"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_005"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_006"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_007"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_008"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_009"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_010"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_011"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_012"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_013"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_014"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_015"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_016"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_017"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Scissors2Hilt_018"
+            {
+                asset mujoco:mesh:file = @scissors_2/meshes/stl/Scissors2Hilt_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Scissors2Screw"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_Scissors2Screw>
+            }
+
+            def MujocoMaterial "M_Scissors2Blade"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_Scissors2Blade>
+            }
+
+            def MujocoMaterial "M_Scissors2Hilt"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_Scissors2Hilt>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_Scissors2Screw"
+            {
+                asset mujoco:texture:file = @T_Scissors2Screw.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_Scissors2Blade"
+            {
+                asset mujoco:texture:file = @T_Scissors2Blade.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_Scissors2Hilt"
+            {
+                asset mujoco:texture:file = @T_Scissors2Hilt.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

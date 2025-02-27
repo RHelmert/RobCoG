@@ -1,0 +1,542 @@
+<?xml version="1.0" ?>
+<mujoco model="round_red_onion">
+	<compiler meshdir="round_red_onion/meshes" texturedir="round_red_onion/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="RoundRedOnionFlesh" file="stl/RoundRedOnionFlesh.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_001" file="stl/RoundRedOnionFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_002" file="stl/RoundRedOnionFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_003" file="stl/RoundRedOnionFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_004" file="stl/RoundRedOnionFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_005" file="stl/RoundRedOnionFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_006" file="stl/RoundRedOnionFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionFlesh_007" file="stl/RoundRedOnionFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008" file="obj/RoundRedOnionPeel008.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_001" file="stl/RoundRedOnionPeel008_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_002" file="stl/RoundRedOnionPeel008_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_003" file="stl/RoundRedOnionPeel008_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_004" file="stl/RoundRedOnionPeel008_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_005" file="stl/RoundRedOnionPeel008_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_006" file="stl/RoundRedOnionPeel008_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_007" file="stl/RoundRedOnionPeel008_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_008" file="stl/RoundRedOnionPeel008_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_009" file="stl/RoundRedOnionPeel008_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_010" file="stl/RoundRedOnionPeel008_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_011" file="stl/RoundRedOnionPeel008_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_012" file="stl/RoundRedOnionPeel008_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_013" file="stl/RoundRedOnionPeel008_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_014" file="stl/RoundRedOnionPeel008_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_015" file="stl/RoundRedOnionPeel008_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_016" file="stl/RoundRedOnionPeel008_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_017" file="stl/RoundRedOnionPeel008_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_018" file="stl/RoundRedOnionPeel008_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_019" file="stl/RoundRedOnionPeel008_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_020" file="stl/RoundRedOnionPeel008_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_021" file="stl/RoundRedOnionPeel008_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_022" file="stl/RoundRedOnionPeel008_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel008_023" file="stl/RoundRedOnionPeel008_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionRoot" file="obj/RoundRedOnionRoot.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionRoot_001" file="stl/RoundRedOnionRoot_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005" file="obj/RoundRedOnionPeel005.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_001" file="stl/RoundRedOnionPeel005_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_002" file="stl/RoundRedOnionPeel005_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_003" file="stl/RoundRedOnionPeel005_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_004" file="stl/RoundRedOnionPeel005_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_005" file="stl/RoundRedOnionPeel005_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_006" file="stl/RoundRedOnionPeel005_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_007" file="stl/RoundRedOnionPeel005_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_008" file="stl/RoundRedOnionPeel005_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_009" file="stl/RoundRedOnionPeel005_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_010" file="stl/RoundRedOnionPeel005_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_011" file="stl/RoundRedOnionPeel005_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_012" file="stl/RoundRedOnionPeel005_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_013" file="stl/RoundRedOnionPeel005_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_014" file="stl/RoundRedOnionPeel005_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_015" file="stl/RoundRedOnionPeel005_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_016" file="stl/RoundRedOnionPeel005_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_017" file="stl/RoundRedOnionPeel005_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_018" file="stl/RoundRedOnionPeel005_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_019" file="stl/RoundRedOnionPeel005_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_020" file="stl/RoundRedOnionPeel005_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_021" file="stl/RoundRedOnionPeel005_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_022" file="stl/RoundRedOnionPeel005_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_023" file="stl/RoundRedOnionPeel005_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_024" file="stl/RoundRedOnionPeel005_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_025" file="stl/RoundRedOnionPeel005_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_026" file="stl/RoundRedOnionPeel005_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_027" file="stl/RoundRedOnionPeel005_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_028" file="stl/RoundRedOnionPeel005_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_029" file="stl/RoundRedOnionPeel005_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_030" file="stl/RoundRedOnionPeel005_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_031" file="stl/RoundRedOnionPeel005_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_032" file="stl/RoundRedOnionPeel005_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_033" file="stl/RoundRedOnionPeel005_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_034" file="stl/RoundRedOnionPeel005_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_035" file="stl/RoundRedOnionPeel005_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_036" file="stl/RoundRedOnionPeel005_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_037" file="stl/RoundRedOnionPeel005_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_038" file="stl/RoundRedOnionPeel005_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_039" file="stl/RoundRedOnionPeel005_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_040" file="stl/RoundRedOnionPeel005_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_041" file="stl/RoundRedOnionPeel005_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_042" file="stl/RoundRedOnionPeel005_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_043" file="stl/RoundRedOnionPeel005_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_044" file="stl/RoundRedOnionPeel005_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_045" file="stl/RoundRedOnionPeel005_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_046" file="stl/RoundRedOnionPeel005_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_047" file="stl/RoundRedOnionPeel005_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_048" file="stl/RoundRedOnionPeel005_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_049" file="stl/RoundRedOnionPeel005_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_050" file="stl/RoundRedOnionPeel005_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_051" file="stl/RoundRedOnionPeel005_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_052" file="stl/RoundRedOnionPeel005_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_053" file="stl/RoundRedOnionPeel005_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_054" file="stl/RoundRedOnionPeel005_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_055" file="stl/RoundRedOnionPeel005_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_056" file="stl/RoundRedOnionPeel005_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_057" file="stl/RoundRedOnionPeel005_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_058" file="stl/RoundRedOnionPeel005_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_059" file="stl/RoundRedOnionPeel005_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_060" file="stl/RoundRedOnionPeel005_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_061" file="stl/RoundRedOnionPeel005_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_062" file="stl/RoundRedOnionPeel005_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_063" file="stl/RoundRedOnionPeel005_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_064" file="stl/RoundRedOnionPeel005_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_065" file="stl/RoundRedOnionPeel005_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_066" file="stl/RoundRedOnionPeel005_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_067" file="stl/RoundRedOnionPeel005_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_068" file="stl/RoundRedOnionPeel005_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_069" file="stl/RoundRedOnionPeel005_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_070" file="stl/RoundRedOnionPeel005_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel005_071" file="stl/RoundRedOnionPeel005_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionBud" file="stl/RoundRedOnionBud.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionBud_001" file="stl/RoundRedOnionBud_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007" file="obj/RoundRedOnionPeel007.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_001" file="stl/RoundRedOnionPeel007_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_002" file="stl/RoundRedOnionPeel007_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_003" file="stl/RoundRedOnionPeel007_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_004" file="stl/RoundRedOnionPeel007_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_005" file="stl/RoundRedOnionPeel007_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_006" file="stl/RoundRedOnionPeel007_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_007" file="stl/RoundRedOnionPeel007_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_008" file="stl/RoundRedOnionPeel007_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_009" file="stl/RoundRedOnionPeel007_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_010" file="stl/RoundRedOnionPeel007_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_011" file="stl/RoundRedOnionPeel007_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_012" file="stl/RoundRedOnionPeel007_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_013" file="stl/RoundRedOnionPeel007_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_014" file="stl/RoundRedOnionPeel007_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_015" file="stl/RoundRedOnionPeel007_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_016" file="stl/RoundRedOnionPeel007_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_017" file="stl/RoundRedOnionPeel007_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_018" file="stl/RoundRedOnionPeel007_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_019" file="stl/RoundRedOnionPeel007_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_020" file="stl/RoundRedOnionPeel007_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_021" file="stl/RoundRedOnionPeel007_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_022" file="stl/RoundRedOnionPeel007_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_023" file="stl/RoundRedOnionPeel007_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_024" file="stl/RoundRedOnionPeel007_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_025" file="stl/RoundRedOnionPeel007_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_026" file="stl/RoundRedOnionPeel007_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_027" file="stl/RoundRedOnionPeel007_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_028" file="stl/RoundRedOnionPeel007_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_029" file="stl/RoundRedOnionPeel007_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_030" file="stl/RoundRedOnionPeel007_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_031" file="stl/RoundRedOnionPeel007_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_032" file="stl/RoundRedOnionPeel007_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_033" file="stl/RoundRedOnionPeel007_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_034" file="stl/RoundRedOnionPeel007_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_035" file="stl/RoundRedOnionPeel007_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_036" file="stl/RoundRedOnionPeel007_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_037" file="stl/RoundRedOnionPeel007_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_038" file="stl/RoundRedOnionPeel007_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel007_039" file="stl/RoundRedOnionPeel007_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001" file="obj/RoundRedOnionPeel001.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_001" file="stl/RoundRedOnionPeel001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_002" file="stl/RoundRedOnionPeel001_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_003" file="stl/RoundRedOnionPeel001_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_004" file="stl/RoundRedOnionPeel001_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_005" file="stl/RoundRedOnionPeel001_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_006" file="stl/RoundRedOnionPeel001_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_007" file="stl/RoundRedOnionPeel001_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_008" file="stl/RoundRedOnionPeel001_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_009" file="stl/RoundRedOnionPeel001_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_010" file="stl/RoundRedOnionPeel001_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_011" file="stl/RoundRedOnionPeel001_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_012" file="stl/RoundRedOnionPeel001_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_013" file="stl/RoundRedOnionPeel001_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_014" file="stl/RoundRedOnionPeel001_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_015" file="stl/RoundRedOnionPeel001_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_016" file="stl/RoundRedOnionPeel001_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_017" file="stl/RoundRedOnionPeel001_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_018" file="stl/RoundRedOnionPeel001_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_019" file="stl/RoundRedOnionPeel001_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_020" file="stl/RoundRedOnionPeel001_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_021" file="stl/RoundRedOnionPeel001_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_022" file="stl/RoundRedOnionPeel001_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_023" file="stl/RoundRedOnionPeel001_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_024" file="stl/RoundRedOnionPeel001_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_025" file="stl/RoundRedOnionPeel001_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_026" file="stl/RoundRedOnionPeel001_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_027" file="stl/RoundRedOnionPeel001_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_028" file="stl/RoundRedOnionPeel001_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_029" file="stl/RoundRedOnionPeel001_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_030" file="stl/RoundRedOnionPeel001_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_031" file="stl/RoundRedOnionPeel001_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_032" file="stl/RoundRedOnionPeel001_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_033" file="stl/RoundRedOnionPeel001_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_034" file="stl/RoundRedOnionPeel001_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_035" file="stl/RoundRedOnionPeel001_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_036" file="stl/RoundRedOnionPeel001_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_037" file="stl/RoundRedOnionPeel001_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_038" file="stl/RoundRedOnionPeel001_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_039" file="stl/RoundRedOnionPeel001_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_040" file="stl/RoundRedOnionPeel001_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_041" file="stl/RoundRedOnionPeel001_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_042" file="stl/RoundRedOnionPeel001_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_043" file="stl/RoundRedOnionPeel001_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_044" file="stl/RoundRedOnionPeel001_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_045" file="stl/RoundRedOnionPeel001_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_046" file="stl/RoundRedOnionPeel001_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_047" file="stl/RoundRedOnionPeel001_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_048" file="stl/RoundRedOnionPeel001_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_049" file="stl/RoundRedOnionPeel001_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_050" file="stl/RoundRedOnionPeel001_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_051" file="stl/RoundRedOnionPeel001_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_052" file="stl/RoundRedOnionPeel001_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_053" file="stl/RoundRedOnionPeel001_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_054" file="stl/RoundRedOnionPeel001_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_055" file="stl/RoundRedOnionPeel001_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_056" file="stl/RoundRedOnionPeel001_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_057" file="stl/RoundRedOnionPeel001_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_058" file="stl/RoundRedOnionPeel001_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_059" file="stl/RoundRedOnionPeel001_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_060" file="stl/RoundRedOnionPeel001_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_061" file="stl/RoundRedOnionPeel001_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_062" file="stl/RoundRedOnionPeel001_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_063" file="stl/RoundRedOnionPeel001_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_064" file="stl/RoundRedOnionPeel001_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_065" file="stl/RoundRedOnionPeel001_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_066" file="stl/RoundRedOnionPeel001_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_067" file="stl/RoundRedOnionPeel001_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_068" file="stl/RoundRedOnionPeel001_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_069" file="stl/RoundRedOnionPeel001_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_070" file="stl/RoundRedOnionPeel001_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_071" file="stl/RoundRedOnionPeel001_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_072" file="stl/RoundRedOnionPeel001_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_073" file="stl/RoundRedOnionPeel001_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_074" file="stl/RoundRedOnionPeel001_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_075" file="stl/RoundRedOnionPeel001_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_076" file="stl/RoundRedOnionPeel001_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_077" file="stl/RoundRedOnionPeel001_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_078" file="stl/RoundRedOnionPeel001_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_079" file="stl/RoundRedOnionPeel001_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_080" file="stl/RoundRedOnionPeel001_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_081" file="stl/RoundRedOnionPeel001_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_082" file="stl/RoundRedOnionPeel001_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_083" file="stl/RoundRedOnionPeel001_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_084" file="stl/RoundRedOnionPeel001_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_085" file="stl/RoundRedOnionPeel001_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_086" file="stl/RoundRedOnionPeel001_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_087" file="stl/RoundRedOnionPeel001_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_088" file="stl/RoundRedOnionPeel001_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_089" file="stl/RoundRedOnionPeel001_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_090" file="stl/RoundRedOnionPeel001_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_091" file="stl/RoundRedOnionPeel001_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_092" file="stl/RoundRedOnionPeel001_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_093" file="stl/RoundRedOnionPeel001_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_094" file="stl/RoundRedOnionPeel001_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_095" file="stl/RoundRedOnionPeel001_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="RoundRedOnionPeel001_096" file="stl/RoundRedOnionPeel001_096.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_RoundRedOnionFlesh" rgba="0.8551999926567078 0.8472999930381775 0.8590999841690063 1.0" emission="0.0"/>
+		<material name="M_RoundRedOnionPeel008" texture="T_RoundRedOnionPeel008"/>
+		<material name="M_RoundRedOnionRoot" texture="T_RoundRedOnionRoot"/>
+		<material name="M_RoundRedOnionPeel005" texture="T_RoundRedOnionPeel005"/>
+		<material name="M_RoundRedOnionBud" rgba="0.8551999926567078 0.8472999930381775 0.8590999841690063 1.0" emission="0.0"/>
+		<material name="M_RoundRedOnionPeel007" texture="T_RoundRedOnionPeel007"/>
+		<material name="M_RoundRedOnionPeel001" texture="T_RoundRedOnionPeel001"/>
+		<texture name="T_RoundRedOnionPeel008" type="2d" file="T_RoundRedOnionPeel008.png"/>
+		<texture name="T_RoundRedOnionRoot" type="2d" file="T_RoundRedOnionRoot.png"/>
+		<texture name="T_RoundRedOnionPeel005" type="2d" file="T_RoundRedOnionPeel005.png"/>
+		<texture name="T_RoundRedOnionPeel007" type="2d" file="T_RoundRedOnionPeel007.png"/>
+		<texture name="T_RoundRedOnionPeel001" type="2d" file="T_RoundRedOnionPeel001.png"/>
+	</asset>
+	<worldbody>
+		<body name="round_red_onion" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="round_red_onion_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.19978392124176025" pos="-9.430224379158858e-10 -3.4406981708201556e-09 -0.004282635636627674" quat="0.873585045337677 -1.053520645655226e-05 8.304062930619693e-07 -0.4866715669631958" diaginertia="0.00016624940326437354 0.00016624940326437354 0.00016790968948043883"/>
+				<geom name="RoundRedOnionFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh" material="M_RoundRedOnionFlesh" class="visual"/>
+				<geom name="RoundRedOnionFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_001" class="collision"/>
+				<geom name="RoundRedOnionFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_002" class="collision"/>
+				<geom name="RoundRedOnionFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_003" class="collision"/>
+				<geom name="RoundRedOnionFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_004" class="collision"/>
+				<geom name="RoundRedOnionFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_005" class="collision"/>
+				<geom name="RoundRedOnionFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_006" class="collision"/>
+				<geom name="RoundRedOnionFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionFlesh_007" class="collision"/>
+			</body>
+			<body name="round_red_onion_root" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0006522976909764111" pos="1.8428591985752973e-09 3.0256359639935226e-09 -0.04717503860592842" quat="-0.6350803971290588 -0.31092265248298645 0.6350803971290588 -0.31092262268066406" diaginertia="5.194587515688909e-08 1.4779852790525183e-06 1.4779852790525183e-06"/>
+				<geom name="RoundRedOnionRoot" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionRoot" material="M_RoundRedOnionRoot" class="visual"/>
+				<geom name="RoundRedOnionRoot_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionRoot_001" class="collision"/>
+			</body>
+			<body name="round_red_onion_bud" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="9.744115959620103e-05" pos="1.7110287631183496e-09 -1.235531010834734e-09 -0.04156900942325592" quat="-0.5870749354362488 0.3941357731819153 0.5870749354362488 0.3941357731819153" diaginertia="3.098941936396926e-10 1.692219626647784e-07 1.692219626647784e-07"/>
+				<geom name="RoundRedOnionBud" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionBud" material="M_RoundRedOnionBud" class="visual"/>
+				<geom name="RoundRedOnionBud_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionBud_001" class="collision"/>
+			</body>
+			<body name="round_red_onion_peel001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00025876789004541934" pos="5.563019271903613e-07 3.2689945328456815e-07 -0.0031442027539014816" quat="-0.4994051158428192 -0.00034171860897913575 -0.0002612409880384803 0.8663684725761414" diaginertia="3.524933447351941e-07 3.5249618690613715e-07 3.672545858535159e-07"/>
+				<geom name="RoundRedOnionPeel001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001" material="M_RoundRedOnionPeel001" class="visual"/>
+				<geom name="RoundRedOnionPeel001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_001" class="collision"/>
+				<geom name="RoundRedOnionPeel001_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_002" class="collision"/>
+				<geom name="RoundRedOnionPeel001_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_003" class="collision"/>
+				<geom name="RoundRedOnionPeel001_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_004" class="collision"/>
+				<geom name="RoundRedOnionPeel001_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_005" class="collision"/>
+				<geom name="RoundRedOnionPeel001_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_006" class="collision"/>
+				<geom name="RoundRedOnionPeel001_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_007" class="collision"/>
+				<geom name="RoundRedOnionPeel001_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_008" class="collision"/>
+				<geom name="RoundRedOnionPeel001_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_009" class="collision"/>
+				<geom name="RoundRedOnionPeel001_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_010" class="collision"/>
+				<geom name="RoundRedOnionPeel001_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_011" class="collision"/>
+				<geom name="RoundRedOnionPeel001_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_012" class="collision"/>
+				<geom name="RoundRedOnionPeel001_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_013" class="collision"/>
+				<geom name="RoundRedOnionPeel001_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_014" class="collision"/>
+				<geom name="RoundRedOnionPeel001_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_015" class="collision"/>
+				<geom name="RoundRedOnionPeel001_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_016" class="collision"/>
+				<geom name="RoundRedOnionPeel001_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_017" class="collision"/>
+				<geom name="RoundRedOnionPeel001_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_018" class="collision"/>
+				<geom name="RoundRedOnionPeel001_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_019" class="collision"/>
+				<geom name="RoundRedOnionPeel001_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_020" class="collision"/>
+				<geom name="RoundRedOnionPeel001_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_021" class="collision"/>
+				<geom name="RoundRedOnionPeel001_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_022" class="collision"/>
+				<geom name="RoundRedOnionPeel001_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_023" class="collision"/>
+				<geom name="RoundRedOnionPeel001_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_024" class="collision"/>
+				<geom name="RoundRedOnionPeel001_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_025" class="collision"/>
+				<geom name="RoundRedOnionPeel001_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_026" class="collision"/>
+				<geom name="RoundRedOnionPeel001_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_027" class="collision"/>
+				<geom name="RoundRedOnionPeel001_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_028" class="collision"/>
+				<geom name="RoundRedOnionPeel001_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_029" class="collision"/>
+				<geom name="RoundRedOnionPeel001_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_030" class="collision"/>
+				<geom name="RoundRedOnionPeel001_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_031" class="collision"/>
+				<geom name="RoundRedOnionPeel001_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_032" class="collision"/>
+				<geom name="RoundRedOnionPeel001_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_033" class="collision"/>
+				<geom name="RoundRedOnionPeel001_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_034" class="collision"/>
+				<geom name="RoundRedOnionPeel001_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_035" class="collision"/>
+				<geom name="RoundRedOnionPeel001_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_036" class="collision"/>
+				<geom name="RoundRedOnionPeel001_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_037" class="collision"/>
+				<geom name="RoundRedOnionPeel001_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_038" class="collision"/>
+				<geom name="RoundRedOnionPeel001_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_039" class="collision"/>
+				<geom name="RoundRedOnionPeel001_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_040" class="collision"/>
+				<geom name="RoundRedOnionPeel001_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_041" class="collision"/>
+				<geom name="RoundRedOnionPeel001_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_042" class="collision"/>
+				<geom name="RoundRedOnionPeel001_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_043" class="collision"/>
+				<geom name="RoundRedOnionPeel001_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_044" class="collision"/>
+				<geom name="RoundRedOnionPeel001_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_045" class="collision"/>
+				<geom name="RoundRedOnionPeel001_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_046" class="collision"/>
+				<geom name="RoundRedOnionPeel001_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_047" class="collision"/>
+				<geom name="RoundRedOnionPeel001_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_048" class="collision"/>
+				<geom name="RoundRedOnionPeel001_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_049" class="collision"/>
+				<geom name="RoundRedOnionPeel001_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_050" class="collision"/>
+				<geom name="RoundRedOnionPeel001_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_051" class="collision"/>
+				<geom name="RoundRedOnionPeel001_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_052" class="collision"/>
+				<geom name="RoundRedOnionPeel001_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_053" class="collision"/>
+				<geom name="RoundRedOnionPeel001_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_054" class="collision"/>
+				<geom name="RoundRedOnionPeel001_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_055" class="collision"/>
+				<geom name="RoundRedOnionPeel001_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_056" class="collision"/>
+				<geom name="RoundRedOnionPeel001_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_057" class="collision"/>
+				<geom name="RoundRedOnionPeel001_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_058" class="collision"/>
+				<geom name="RoundRedOnionPeel001_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_059" class="collision"/>
+				<geom name="RoundRedOnionPeel001_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_060" class="collision"/>
+				<geom name="RoundRedOnionPeel001_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_061" class="collision"/>
+				<geom name="RoundRedOnionPeel001_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_062" class="collision"/>
+				<geom name="RoundRedOnionPeel001_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_063" class="collision"/>
+				<geom name="RoundRedOnionPeel001_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_064" class="collision"/>
+				<geom name="RoundRedOnionPeel001_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_065" class="collision"/>
+				<geom name="RoundRedOnionPeel001_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_066" class="collision"/>
+				<geom name="RoundRedOnionPeel001_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_067" class="collision"/>
+				<geom name="RoundRedOnionPeel001_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_068" class="collision"/>
+				<geom name="RoundRedOnionPeel001_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_069" class="collision"/>
+				<geom name="RoundRedOnionPeel001_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_070" class="collision"/>
+				<geom name="RoundRedOnionPeel001_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_071" class="collision"/>
+				<geom name="RoundRedOnionPeel001_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_072" class="collision"/>
+				<geom name="RoundRedOnionPeel001_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_073" class="collision"/>
+				<geom name="RoundRedOnionPeel001_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_074" class="collision"/>
+				<geom name="RoundRedOnionPeel001_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_075" class="collision"/>
+				<geom name="RoundRedOnionPeel001_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_076" class="collision"/>
+				<geom name="RoundRedOnionPeel001_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_077" class="collision"/>
+				<geom name="RoundRedOnionPeel001_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_078" class="collision"/>
+				<geom name="RoundRedOnionPeel001_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_079" class="collision"/>
+				<geom name="RoundRedOnionPeel001_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_080" class="collision"/>
+				<geom name="RoundRedOnionPeel001_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_081" class="collision"/>
+				<geom name="RoundRedOnionPeel001_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_082" class="collision"/>
+				<geom name="RoundRedOnionPeel001_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_083" class="collision"/>
+				<geom name="RoundRedOnionPeel001_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_084" class="collision"/>
+				<geom name="RoundRedOnionPeel001_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_085" class="collision"/>
+				<geom name="RoundRedOnionPeel001_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_086" class="collision"/>
+				<geom name="RoundRedOnionPeel001_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_087" class="collision"/>
+				<geom name="RoundRedOnionPeel001_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_088" class="collision"/>
+				<geom name="RoundRedOnionPeel001_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_089" class="collision"/>
+				<geom name="RoundRedOnionPeel001_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_090" class="collision"/>
+				<geom name="RoundRedOnionPeel001_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_091" class="collision"/>
+				<geom name="RoundRedOnionPeel001_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_092" class="collision"/>
+				<geom name="RoundRedOnionPeel001_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_093" class="collision"/>
+				<geom name="RoundRedOnionPeel001_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_094" class="collision"/>
+				<geom name="RoundRedOnionPeel001_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_095" class="collision"/>
+				<geom name="RoundRedOnionPeel001_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel001_096" class="collision"/>
+			</body>
+			<body name="round_red_onion_peel008" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.9334103601286188e-05" pos="1.1130955357430139e-07 -1.8372327303950442e-07 -0.014978798106312752" quat="-0.5667394399642944 0.4228491485118866 0.5667487978935242 0.4228483736515045" diaginertia="1.561483387035878e-09 1.5972901223904046e-08 1.597291543475876e-08"/>
+				<geom name="RoundRedOnionPeel008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008" material="M_RoundRedOnionPeel008" class="visual"/>
+				<geom name="RoundRedOnionPeel008_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_001" class="collision"/>
+				<geom name="RoundRedOnionPeel008_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_002" class="collision"/>
+				<geom name="RoundRedOnionPeel008_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_003" class="collision"/>
+				<geom name="RoundRedOnionPeel008_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_004" class="collision"/>
+				<geom name="RoundRedOnionPeel008_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_005" class="collision"/>
+				<geom name="RoundRedOnionPeel008_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_006" class="collision"/>
+				<geom name="RoundRedOnionPeel008_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_007" class="collision"/>
+				<geom name="RoundRedOnionPeel008_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_008" class="collision"/>
+				<geom name="RoundRedOnionPeel008_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_009" class="collision"/>
+				<geom name="RoundRedOnionPeel008_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_010" class="collision"/>
+				<geom name="RoundRedOnionPeel008_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_011" class="collision"/>
+				<geom name="RoundRedOnionPeel008_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_012" class="collision"/>
+				<geom name="RoundRedOnionPeel008_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_013" class="collision"/>
+				<geom name="RoundRedOnionPeel008_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_014" class="collision"/>
+				<geom name="RoundRedOnionPeel008_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_015" class="collision"/>
+				<geom name="RoundRedOnionPeel008_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_016" class="collision"/>
+				<geom name="RoundRedOnionPeel008_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_017" class="collision"/>
+				<geom name="RoundRedOnionPeel008_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_018" class="collision"/>
+				<geom name="RoundRedOnionPeel008_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_019" class="collision"/>
+				<geom name="RoundRedOnionPeel008_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_020" class="collision"/>
+				<geom name="RoundRedOnionPeel008_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_021" class="collision"/>
+				<geom name="RoundRedOnionPeel008_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_022" class="collision"/>
+				<geom name="RoundRedOnionPeel008_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel008_023" class="collision"/>
+			</body>
+			<body name="round_red_onion_peel007" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="6.332781777018681e-05" pos="-1.3379947461089614e-07 -2.1877561096061982e-07 -0.006625298876315355" quat="0.7031221389770508 -0.07496370375156403 -0.7031220197677612 -0.07496073096990585" diaginertia="9.836437442345414e-09 3.659147296275478e-08 3.6591600860447215e-08"/>
+				<geom name="RoundRedOnionPeel007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007" material="M_RoundRedOnionPeel007" class="visual"/>
+				<geom name="RoundRedOnionPeel007_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_001" class="collision"/>
+				<geom name="RoundRedOnionPeel007_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_002" class="collision"/>
+				<geom name="RoundRedOnionPeel007_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_003" class="collision"/>
+				<geom name="RoundRedOnionPeel007_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_004" class="collision"/>
+				<geom name="RoundRedOnionPeel007_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_005" class="collision"/>
+				<geom name="RoundRedOnionPeel007_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_006" class="collision"/>
+				<geom name="RoundRedOnionPeel007_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_007" class="collision"/>
+				<geom name="RoundRedOnionPeel007_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_008" class="collision"/>
+				<geom name="RoundRedOnionPeel007_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_009" class="collision"/>
+				<geom name="RoundRedOnionPeel007_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_010" class="collision"/>
+				<geom name="RoundRedOnionPeel007_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_011" class="collision"/>
+				<geom name="RoundRedOnionPeel007_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_012" class="collision"/>
+				<geom name="RoundRedOnionPeel007_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_013" class="collision"/>
+				<geom name="RoundRedOnionPeel007_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_014" class="collision"/>
+				<geom name="RoundRedOnionPeel007_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_015" class="collision"/>
+				<geom name="RoundRedOnionPeel007_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_016" class="collision"/>
+				<geom name="RoundRedOnionPeel007_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_017" class="collision"/>
+				<geom name="RoundRedOnionPeel007_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_018" class="collision"/>
+				<geom name="RoundRedOnionPeel007_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_019" class="collision"/>
+				<geom name="RoundRedOnionPeel007_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_020" class="collision"/>
+				<geom name="RoundRedOnionPeel007_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_021" class="collision"/>
+				<geom name="RoundRedOnionPeel007_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_022" class="collision"/>
+				<geom name="RoundRedOnionPeel007_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_023" class="collision"/>
+				<geom name="RoundRedOnionPeel007_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_024" class="collision"/>
+				<geom name="RoundRedOnionPeel007_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_025" class="collision"/>
+				<geom name="RoundRedOnionPeel007_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_026" class="collision"/>
+				<geom name="RoundRedOnionPeel007_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_027" class="collision"/>
+				<geom name="RoundRedOnionPeel007_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_028" class="collision"/>
+				<geom name="RoundRedOnionPeel007_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_029" class="collision"/>
+				<geom name="RoundRedOnionPeel007_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_030" class="collision"/>
+				<geom name="RoundRedOnionPeel007_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_031" class="collision"/>
+				<geom name="RoundRedOnionPeel007_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_032" class="collision"/>
+				<geom name="RoundRedOnionPeel007_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_033" class="collision"/>
+				<geom name="RoundRedOnionPeel007_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_034" class="collision"/>
+				<geom name="RoundRedOnionPeel007_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_035" class="collision"/>
+				<geom name="RoundRedOnionPeel007_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_036" class="collision"/>
+				<geom name="RoundRedOnionPeel007_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_037" class="collision"/>
+				<geom name="RoundRedOnionPeel007_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_038" class="collision"/>
+				<geom name="RoundRedOnionPeel007_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel007_039" class="collision"/>
+			</body>
+			<body name="round_red_onion_peel005" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00011828869901364669" pos="-2.582613092272368e-07 -3.9575655819135136e-07 -0.004626859445124865" quat="0.08456247299909592 -0.702026903629303 0.08457522839307785 0.7020359039306641" diaginertia="5.2994845844978045e-08 9.033563941329703e-08 9.033576731098947e-08"/>
+				<geom name="RoundRedOnionPeel005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005" material="M_RoundRedOnionPeel005" class="visual"/>
+				<geom name="RoundRedOnionPeel005_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_001" class="collision"/>
+				<geom name="RoundRedOnionPeel005_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_002" class="collision"/>
+				<geom name="RoundRedOnionPeel005_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_003" class="collision"/>
+				<geom name="RoundRedOnionPeel005_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_004" class="collision"/>
+				<geom name="RoundRedOnionPeel005_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_005" class="collision"/>
+				<geom name="RoundRedOnionPeel005_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_006" class="collision"/>
+				<geom name="RoundRedOnionPeel005_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_007" class="collision"/>
+				<geom name="RoundRedOnionPeel005_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_008" class="collision"/>
+				<geom name="RoundRedOnionPeel005_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_009" class="collision"/>
+				<geom name="RoundRedOnionPeel005_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_010" class="collision"/>
+				<geom name="RoundRedOnionPeel005_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_011" class="collision"/>
+				<geom name="RoundRedOnionPeel005_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_012" class="collision"/>
+				<geom name="RoundRedOnionPeel005_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_013" class="collision"/>
+				<geom name="RoundRedOnionPeel005_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_014" class="collision"/>
+				<geom name="RoundRedOnionPeel005_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_015" class="collision"/>
+				<geom name="RoundRedOnionPeel005_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_016" class="collision"/>
+				<geom name="RoundRedOnionPeel005_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_017" class="collision"/>
+				<geom name="RoundRedOnionPeel005_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_018" class="collision"/>
+				<geom name="RoundRedOnionPeel005_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_019" class="collision"/>
+				<geom name="RoundRedOnionPeel005_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_020" class="collision"/>
+				<geom name="RoundRedOnionPeel005_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_021" class="collision"/>
+				<geom name="RoundRedOnionPeel005_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_022" class="collision"/>
+				<geom name="RoundRedOnionPeel005_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_023" class="collision"/>
+				<geom name="RoundRedOnionPeel005_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_024" class="collision"/>
+				<geom name="RoundRedOnionPeel005_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_025" class="collision"/>
+				<geom name="RoundRedOnionPeel005_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_026" class="collision"/>
+				<geom name="RoundRedOnionPeel005_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_027" class="collision"/>
+				<geom name="RoundRedOnionPeel005_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_028" class="collision"/>
+				<geom name="RoundRedOnionPeel005_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_029" class="collision"/>
+				<geom name="RoundRedOnionPeel005_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_030" class="collision"/>
+				<geom name="RoundRedOnionPeel005_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_031" class="collision"/>
+				<geom name="RoundRedOnionPeel005_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_032" class="collision"/>
+				<geom name="RoundRedOnionPeel005_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_033" class="collision"/>
+				<geom name="RoundRedOnionPeel005_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_034" class="collision"/>
+				<geom name="RoundRedOnionPeel005_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_035" class="collision"/>
+				<geom name="RoundRedOnionPeel005_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_036" class="collision"/>
+				<geom name="RoundRedOnionPeel005_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_037" class="collision"/>
+				<geom name="RoundRedOnionPeel005_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_038" class="collision"/>
+				<geom name="RoundRedOnionPeel005_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_039" class="collision"/>
+				<geom name="RoundRedOnionPeel005_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_040" class="collision"/>
+				<geom name="RoundRedOnionPeel005_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_041" class="collision"/>
+				<geom name="RoundRedOnionPeel005_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_042" class="collision"/>
+				<geom name="RoundRedOnionPeel005_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_043" class="collision"/>
+				<geom name="RoundRedOnionPeel005_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_044" class="collision"/>
+				<geom name="RoundRedOnionPeel005_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_045" class="collision"/>
+				<geom name="RoundRedOnionPeel005_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_046" class="collision"/>
+				<geom name="RoundRedOnionPeel005_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_047" class="collision"/>
+				<geom name="RoundRedOnionPeel005_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_048" class="collision"/>
+				<geom name="RoundRedOnionPeel005_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_049" class="collision"/>
+				<geom name="RoundRedOnionPeel005_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_050" class="collision"/>
+				<geom name="RoundRedOnionPeel005_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_051" class="collision"/>
+				<geom name="RoundRedOnionPeel005_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_052" class="collision"/>
+				<geom name="RoundRedOnionPeel005_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_053" class="collision"/>
+				<geom name="RoundRedOnionPeel005_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_054" class="collision"/>
+				<geom name="RoundRedOnionPeel005_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_055" class="collision"/>
+				<geom name="RoundRedOnionPeel005_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_056" class="collision"/>
+				<geom name="RoundRedOnionPeel005_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_057" class="collision"/>
+				<geom name="RoundRedOnionPeel005_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_058" class="collision"/>
+				<geom name="RoundRedOnionPeel005_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_059" class="collision"/>
+				<geom name="RoundRedOnionPeel005_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_060" class="collision"/>
+				<geom name="RoundRedOnionPeel005_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_061" class="collision"/>
+				<geom name="RoundRedOnionPeel005_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_062" class="collision"/>
+				<geom name="RoundRedOnionPeel005_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_063" class="collision"/>
+				<geom name="RoundRedOnionPeel005_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_064" class="collision"/>
+				<geom name="RoundRedOnionPeel005_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_065" class="collision"/>
+				<geom name="RoundRedOnionPeel005_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_066" class="collision"/>
+				<geom name="RoundRedOnionPeel005_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_067" class="collision"/>
+				<geom name="RoundRedOnionPeel005_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_068" class="collision"/>
+				<geom name="RoundRedOnionPeel005_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_069" class="collision"/>
+				<geom name="RoundRedOnionPeel005_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_070" class="collision"/>
+				<geom name="RoundRedOnionPeel005_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="RoundRedOnionPeel005_071" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

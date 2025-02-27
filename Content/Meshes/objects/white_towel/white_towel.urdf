@@ -1,0 +1,136 @@
+<?xml version="1.0" ?>
+<robot name="white_towel" version="1.0">
+  <link name="white_towel"/>
+  <joint name="white_towel002_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="white_towel"/>
+    <child link="white_towel002"/>
+  </joint>
+  <link name="white_towel002">
+    <inertial>
+      <origin xyz="-0.09221678227186203 0.010525413788855076 -0.003229085821658373" rpy="-0.05905727297067642 0.004884160589426756 0.0317247174680233"/>
+      <mass value="2.8067870140075684"/>
+      <inertia ixx="0.011557471938431263" ixy="0.0" ixz="0.0" iyy="0.03699008375406265" iyz="0.0" izz="0.04691235348582268"/>
+    </inertial>
+    <visual name="WhiteTowel002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/obj/WhiteTowel002.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="WhiteTowel002_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel002_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel002_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="white_towel001_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="white_towel"/>
+    <child link="white_towel001"/>
+  </joint>
+  <link name="white_towel001">
+    <inertial>
+      <origin xyz="0.027078310027718544 -0.005015066359192133 -0.0011904765851795673" rpy="0.032760851085186005 0.00890527293086052 -0.023408114910125732"/>
+      <mass value="13.021437644958496"/>
+      <inertia ixx="0.061788178980350494" ixy="0.0" ixz="0.0" iyy="0.11718115955591202" iyz="0.0" izz="0.17013384401798248"/>
+    </inertial>
+    <visual name="WhiteTowel001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/obj/WhiteTowel001.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="WhiteTowel001_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel001_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel001_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel001_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel001_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="WhiteTowel001_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://white_towel/meshes/stl/WhiteTowel001_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

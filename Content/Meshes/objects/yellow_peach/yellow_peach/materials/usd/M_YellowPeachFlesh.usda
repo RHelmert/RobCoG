@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    defaultPrim = "M_YellowPeachFlesh"
+    upAxis = "Z"
+)
+
+def Material "M_YellowPeachFlesh"
+{
+    token outputs:surface.connect = </M_YellowPeachFlesh/PBRShader.outputs:surface>
+
+    def Shader "PBRShader"
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        color3f inputs:diffuseColor = (0.8204, 0.6921, 0.3259)
+        color3f inputs:emissiveColor = (0, 0, 0)
+        float inputs:opacity = 1
+        int inputs:useSpecularWorkflow = 1
+        token outputs:surface
+    }
+}
+

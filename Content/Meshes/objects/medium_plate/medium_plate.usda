@@ -1,0 +1,616 @@
+#usda 1.0
+(
+    defaultPrim = "medium_plate"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "medium_plate" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.00094195834, 0.00094196066, 0.0018639644)
+    float mujoco:body:inertial:mass = 0.3162785
+    point3f mujoco:body:inertial:pos = (-2.3997455e-9, -1.3384331e-8, -0.0028866432)
+    quatf mujoco:body:inertial:quat = (0.99993265, -9.101981e-8, -6.3419596e-11, -0.011604331)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (-2.3997455e-9, -1.3384331e-8, -0.0028866432)
+    float3 physics:diagonalInertia = (0.00094195834, 0.00094196066, 0.0018639644)
+    float physics:mass = 0.3162785
+    quatf physics:principalAxes = (0.99993265, -9.101981e-8, -6.3419596e-11, -0.011604331)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.00094195834
+    float urdf:link:inertial:inertia:iyy = 0.00094196066
+    float urdf:link:inertial:inertia:izz = 0.0018639644
+    float urdf:link:inertial:mass = 0.3162785
+    float3 urdf:link:inertial:origin:rpy = (-1.8202589e-7, -2.2392788e-9, -0.023209184)
+    point3f urdf:link:inertial:origin:xyz = (-2.3997455e-9, -1.3384331e-8, -0.0028866432)
+
+    def Mesh "PlateMediumSize" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize.usda@</PlateMediumSize>
+    )
+    {
+        rel material:binding = </medium_plate/PlateMediumSize/Materials/M_PlateMediumSize>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_PlateMediumSize>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/obj/PlateMediumSize.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_PlateMediumSize" (
+                prepend references = @./medium_plate/materials/usd/M_PlateMediumSize.usda@</M_PlateMediumSize>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "PlateMediumSize_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_001.usda@</PlateMediumSize_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_002.usda@</PlateMediumSize_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_003.usda@</PlateMediumSize_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_004.usda@</PlateMediumSize_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_005" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_005.usda@</PlateMediumSize_005>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_005>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_005.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_006" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_006.usda@</PlateMediumSize_006>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_006>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_006.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_007" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_007.usda@</PlateMediumSize_007>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_007>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_007.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_008" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_008.usda@</PlateMediumSize_008>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_008>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_008.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_009" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_009.usda@</PlateMediumSize_009>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_009>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_009.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_010" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_010.usda@</PlateMediumSize_010>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_010>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_010.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_011" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_011.usda@</PlateMediumSize_011>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_011>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_011.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_012" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_012.usda@</PlateMediumSize_012>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_012>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_012.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_013" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_013.usda@</PlateMediumSize_013>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_013>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_013.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_014" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_014.usda@</PlateMediumSize_014>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_014>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_014.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_015" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_015.usda@</PlateMediumSize_015>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_015>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_015.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_016" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_016.usda@</PlateMediumSize_016>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_016>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_016.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_017" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_017.usda@</PlateMediumSize_017>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_017>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_017.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_018" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_018.usda@</PlateMediumSize_018>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_018>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_018.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_019" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_019.usda@</PlateMediumSize_019>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_019>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_019.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "PlateMediumSize_020" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./medium_plate/meshes/usd/PlateMediumSize_020.usda@</PlateMediumSize_020>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/PlateMediumSize_020>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./medium_plate/meshes/stl/PlateMediumSize_020.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "medium_plate"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "medium_plate"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "PlateMediumSize"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_001"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_002"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_003"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_004"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_005"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_006"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_007"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_008"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_009"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_010"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_011"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_012"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_013"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_014"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_015"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_016"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_017"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_018"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_019"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PlateMediumSize_020"
+            {
+                asset mujoco:mesh:file = @medium_plate/meshes/stl/PlateMediumSize_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_PlateMediumSize"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8099, 0.8099, 0.8099, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

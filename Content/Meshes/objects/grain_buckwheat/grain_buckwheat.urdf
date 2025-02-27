@@ -1,0 +1,1228 @@
+<?xml version="1.0" ?>
+<robot name="grain_buckwheat" version="1.0">
+  <link name="grain_buckwheat"/>
+  <joint name="grain_buckwheat036_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat036"/>
+  </joint>
+  <link name="grain_buckwheat036">
+    <inertial>
+      <origin xyz="0.002045366680249572 0.017098860815167427 0.009588130749762058" rpy="-1.4317083358764648 0.5134617686271667 -1.7024372816085815"/>
+      <mass value="0.008105949498713017"/>
+      <inertia ixx="5.207304525356449e-07" ixy="0.0" ixz="0.0" iyy="3.7398126551124733e-06" iyz="0.0" izz="3.7558399981207913e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat036.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat036_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat036_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat040_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat040"/>
+  </joint>
+  <link name="grain_buckwheat040">
+    <inertial>
+      <origin xyz="-0.011808747425675392 -0.0011289224494248629 0.017613405361771584" rpy="1.1728636026382446 -0.9913373589515686 -3.050316333770752"/>
+      <mass value="0.008105943910777569"/>
+      <inertia ixx="5.374038209993159e-07" ixy="0.0" ixz="0.0" iyy="4.230371814628597e-06" iyz="0.0" izz="4.2612964534782805e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat040.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat040_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat040_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat041_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat041"/>
+  </joint>
+  <link name="grain_buckwheat041">
+    <inertial>
+      <origin xyz="0.016430174931883812 -0.026166731491684914 0.0004604462010320276" rpy="-2.462541341781616 0.01955248974263668 2.128181219100952"/>
+      <mass value="0.008105945773422718"/>
+      <inertia ixx="5.648936962643347e-07" ixy="0.0" ixz="0.0" iyy="8.276318112621084e-06" iyz="0.0" izz="8.357154911209363e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat041.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat041_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat041_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat017_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat017"/>
+  </joint>
+  <link name="grain_buckwheat017">
+    <inertial>
+      <origin xyz="0.02406885102391243 -0.008368724025785923 -0.010140636935830116" rpy="0.7944036722183228 0.3861848711967468 -0.34065091609954834"/>
+      <mass value="0.008105946704745293"/>
+      <inertia ixx="5.527658117898682e-07" ixy="0.0" ixz="0.0" iyy="6.67053882352775e-06" iyz="0.0" izz="6.68919119561906e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat017.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat017_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat017_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat049_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat049"/>
+  </joint>
+  <link name="grain_buckwheat049">
+    <inertial>
+      <origin xyz="0.043939653784036636 -0.029685627669095993 -0.005284047685563564" rpy="-0.49142351746559143 0.09756018221378326 -0.5953046083450317"/>
+      <mass value="0.00810594018548727"/>
+      <inertia ixx="5.380534275900573e-07" ixy="0.0" ixz="0.0" iyy="2.359003156016115e-05" iyz="0.0" izz="2.3629507268196903e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat049.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat049_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat049_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat024_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat024"/>
+  </joint>
+  <link name="grain_buckwheat024">
+    <inertial>
+      <origin xyz="-0.019914189353585243 -0.03749093413352966 -0.02171235904097557" rpy="-0.735686719417572 0.4739050269126892 -2.055910587310791"/>
+      <mass value="0.008105936460196972"/>
+      <inertia ixx="5.509717198037833e-07" ixy="0.0" ixz="0.0" iyy="1.9001197870238684e-05" iyz="0.0" izz="1.902495205285959e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat024.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat024_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat024_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat051_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat051"/>
+  </joint>
+  <link name="grain_buckwheat051">
+    <inertial>
+      <origin xyz="-0.052226465195417404 -0.009263415820896626 -0.004320839885622263" rpy="0.41091567277908325 -0.0812237486243248 0.1739119440317154"/>
+      <mass value="0.008105947636067867"/>
+      <inertia ixx="6.010953370605421e-07" ixy="0.0" ixz="0.0" iyy="2.347497684240807e-05" iyz="0.0" izz="2.355565629841294e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat051.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat051_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat051_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat019_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat019"/>
+  </joint>
+  <link name="grain_buckwheat019">
+    <inertial>
+      <origin xyz="-0.017469851300120354 -0.013298273086547852 -0.022026002407073975" rpy="-1.6178414821624756 0.7870680689811707 -2.488945484161377"/>
+      <mass value="0.008105953224003315"/>
+      <inertia ixx="6.161754981803824e-07" ixy="0.0" ixz="0.0" iyy="8.345341484528035e-06" iyz="0.0" izz="8.436662938038353e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat019.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat019_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat019_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat042_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat042"/>
+  </joint>
+  <link name="grain_buckwheat042">
+    <inertial>
+      <origin xyz="-0.006528912577778101 0.037082236260175705 -0.002959451638162136" rpy="0.9847534894943237 0.08029218018054962 1.7424867153167725"/>
+      <mass value="0.00810594018548727"/>
+      <inertia ixx="5.237760092313692e-07" ixy="0.0" ixz="0.0" iyy="1.2138609235989861e-05" iyz="0.0" izz="1.2181763850094285e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat042.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat042_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat042_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat021_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat021"/>
+  </joint>
+  <link name="grain_buckwheat021">
+    <inertial>
+      <origin xyz="-0.060545746237039566 -0.015275874175131321 -0.02157430723309517" rpy="0.028465215116739273 -0.33290642499923706 0.24549677968025208"/>
+      <mass value="0.008105950430035591"/>
+      <inertia ixx="5.76066497615102e-07" ixy="0.0" ixz="0.0" iyy="3.592779103200883e-05" iyz="0.0" izz="3.597272007027641e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat021.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat021_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat021_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat032_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat032"/>
+  </joint>
+  <link name="grain_buckwheat032">
+    <inertial>
+      <origin xyz="-0.010173884220421314 -0.06007910519838333 -0.024026038125157356" rpy="-1.4490693807601929 0.37435904145240784 -1.738329291343689"/>
+      <mass value="0.00810594204813242"/>
+      <inertia ixx="5.687700195267098e-07" ixy="0.0" ixz="0.0" iyy="3.5309272789163515e-05" iyz="0.0" izz="3.5393371945247054e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat032.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat032_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat032_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat014_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat014"/>
+  </joint>
+  <link name="grain_buckwheat014">
+    <inertial>
+      <origin xyz="0.06014705449342728 0.027183858677744865 -0.023471787571907043" rpy="-2.0332422256469727 0.34077557921409607 0.4243990182876587"/>
+      <mass value="0.00810594018548727"/>
+      <inertia ixx="5.20533546932711e-07" ixy="0.0" ixz="0.0" iyy="4.0361235733143985e-05" iyz="0.0" izz="4.039719715365209e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat014.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat014_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat014_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat035_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat035"/>
+  </joint>
+  <link name="grain_buckwheat035">
+    <inertial>
+      <origin xyz="-0.03301561623811722 -0.004829749930649996 -0.004289811477065086" rpy="1.331202745437622 -0.12765930593013763 0.14376477897167206"/>
+      <mass value="0.008105935528874397"/>
+      <inertia ixx="6.137258310445759e-07" ixy="0.0" ixz="0.0" iyy="9.679593858891167e-06" iyz="0.0" izz="9.772891644388437e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat035.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat035_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat035_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat004_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat004"/>
+  </joint>
+  <link name="grain_buckwheat004">
+    <inertial>
+      <origin xyz="0.009392163716256618 0.059688910841941833 -0.024979444220662117" rpy="-0.4464932382106781 -0.391925185918808 -1.7251513004302979"/>
+      <mass value="0.008105949498713017"/>
+      <inertia ixx="5.472948600981908e-07" ixy="0.0" ixz="0.0" iyy="3.522801125654951e-05" iyz="0.0" izz="3.5248052881797776e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat004.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat004_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat004_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat001_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat001"/>
+  </joint>
+  <link name="grain_buckwheat001">
+    <inertial>
+      <origin xyz="-0.05053158104419708 0.03392508998513222 -0.022955160588026047" rpy="-0.5385387539863586 -0.36110785603523254 -0.5926372408866882"/>
+      <mass value="0.00810594018548727"/>
+      <inertia ixx="5.945461225564941e-07" ixy="0.0" ixz="0.0" iyy="3.482808460830711e-05" iyz="0.0" izz="3.489282971713692e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat001.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat001_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat001_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat047_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat047"/>
+  </joint>
+  <link name="grain_buckwheat047">
+    <inertial>
+      <origin xyz="0.01018684171140194 -0.011573433876037598 0.013844856061041355" rpy="1.8437808752059937 0.7299235463142395 2.2831618785858154"/>
+      <mass value="0.00810595229268074"/>
+      <inertia ixx="5.116796160109516e-07" ixy="0.0" ixz="0.0" iyy="4.070716840942623e-06" iyz="0.0" izz="4.097207693121163e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat047.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat047_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat047_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat015_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat015"/>
+  </joint>
+  <link name="grain_buckwheat015">
+    <inertial>
+      <origin xyz="0.050654370337724686 0.0023094387724995613 -0.02323511615395546" rpy="-0.9632428288459778 0.43099531531333923 0.04729915410280228"/>
+      <mass value="0.00810594204813242"/>
+      <inertia ixx="5.832903866576089e-07" ixy="0.0" ixz="0.0" iyy="2.5756646209629253e-05" iyz="0.0" izz="2.5814631953835487e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat015.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat015_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat015_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat038_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat038"/>
+  </joint>
+  <link name="grain_buckwheat038">
+    <inertial>
+      <origin xyz="0.041380494832992554 -0.001247461186721921 0.0028357559349387884" rpy="2.9866857528686523 -0.06942250579595566 -0.02988746017217636"/>
+      <mass value="0.008105949498713017"/>
+      <inertia ixx="6.058806434339203e-07" ixy="0.0" ixz="0.0" iyy="1.4463385014096275e-05" iyz="0.0" izz="1.4564971934305504e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat038.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat038_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat038_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat045_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat045"/>
+  </joint>
+  <link name="grain_buckwheat045">
+    <inertial>
+      <origin xyz="0.02266024611890316 0.012555936351418495 0.002754347398877144" rpy="-0.9905826449394226 -0.10424859076738358 0.505398154258728"/>
+      <mass value="0.008105941116809845"/>
+      <inertia ixx="5.934494424764125e-07" ixy="0.0" ixz="0.0" iyy="6.0074871726101264e-06" iyz="0.0" izz="6.120737907622242e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat045.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat045_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat045_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat050_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat050"/>
+  </joint>
+  <link name="grain_buckwheat050">
+    <inertial>
+      <origin xyz="0.029673345386981964 -0.044900476932525635 0.0012748483568429947" rpy="1.2914046049118042 0.024872155860066414 2.1551074981689453"/>
+      <mass value="0.00810592994093895"/>
+      <inertia ixx="6.011979962750047e-07" ixy="0.0" ixz="0.0" iyy="2.4004377337405458e-05" iyz="0.0" izz="2.4097673303913325e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat050.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat050_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat050_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat009_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat009"/>
+  </joint>
+  <link name="grain_buckwheat009">
+    <inertial>
+      <origin xyz="-0.02227836102247238 0.03225889801979065 -0.02443511411547661" rpy="-2.519382953643799 0.5546165108680725 2.1767754554748535"/>
+      <mass value="0.008105946704745293"/>
+      <inertia ixx="5.447193416330265e-07" ixy="0.0" ixz="0.0" iyy="1.7869906514533795e-05" iyz="0.0" izz="1.7900420061778277e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat009.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat009_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat009_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat006_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat006"/>
+  </joint>
+  <link name="grain_buckwheat006">
+    <inertial>
+      <origin xyz="0.0471704937517643 0.04279233142733574 -0.018219096586108208" rpy="-1.8090903759002686 0.2790762484073639 0.7370903491973877"/>
+      <mass value="0.008105956017971039"/>
+      <inertia ixx="6.009755679770024e-07" ixy="0.0" ixz="0.0" iyy="3.6077552067581564e-05" iyz="0.0" izz="3.6180448660161346e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat006.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat006_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat006_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat048_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat048"/>
+  </joint>
+  <link name="grain_buckwheat048">
+    <inertial>
+      <origin xyz="-0.019858401268720627 -0.05260501429438591 -0.0027104404289275408" rpy="-1.0526719093322754 0.046448059380054474 -1.9321268796920776"/>
+      <mass value="0.00810594204813242"/>
+      <inertia ixx="5.65483276204759e-07" ixy="0.0" ixz="0.0" iyy="2.6224735847790726e-05" iyz="0.0" izz="2.630334893183317e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat048.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat048_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat048_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat011_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat011"/>
+  </joint>
+  <link name="grain_buckwheat011">
+    <inertial>
+      <origin xyz="-0.011661279015243053 0.009705019183456898 -0.022288339212536812" rpy="-0.20914727449417114 -0.9745092988014221 -0.7047063708305359"/>
+      <mass value="0.008105955086648464"/>
+      <inertia ixx="5.250573735793296e-07" ixy="0.0" ixz="0.0" iyy="6.464570560638094e-06" iyz="0.0" izz="6.51377968097222e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat011.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat011_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat011_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat005_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat005"/>
+  </joint>
+  <link name="grain_buckwheat005">
+    <inertial>
+      <origin xyz="0.030763311311602592 0.06178424134850502 -0.023084290325641632" rpy="-0.7664945721626282 -0.3227451741695404 -2.032395124435425"/>
+      <mass value="0.008105922490358353"/>
+      <inertia ixx="5.940332812315319e-07" ixy="0.0" ixz="0.0" iyy="4.344043190940283e-05" iyz="0.0" izz="4.35507608926855e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat005.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat005_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat005_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat008_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat008"/>
+  </joint>
+  <link name="grain_buckwheat008">
+    <inertial>
+      <origin xyz="0.003870690241456032 0.03437522053718567 -0.023000888526439667" rpy="-0.8692703247070312 -0.5858585834503174 -1.6809837818145752"/>
+      <mass value="0.008105945773422718"/>
+      <inertia ixx="5.137443963576516e-07" ixy="0.0" ixz="0.0" iyy="1.4572445252269972e-05" iyz="0.0" izz="1.4608598576160148e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat008.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat008_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat008_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat037_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat037"/>
+  </joint>
+  <link name="grain_buckwheat037">
+    <inertial>
+      <origin xyz="-0.032763779163360596 -0.03056233748793602 -0.004140632692724466" rpy="-1.2160724401474 -0.0896153450012207 0.7529032826423645"/>
+      <mass value="0.008105939254164696"/>
+      <inertia ixx="5.498241080204025e-07" ixy="0.0" ixz="0.0" iyy="1.6984567992039956e-05" iyz="0.0" izz="1.700752545730211e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat037.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat037_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat037_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat039_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat039"/>
+  </joint>
+  <link name="grain_buckwheat039">
+    <inertial>
+      <origin xyz="-0.03256399556994438 0.038393937051296234 -0.008047441020607948" rpy="0.5087982416152954 -0.1589348465204239 -0.8655552864074707"/>
+      <mass value="0.00810592994093895"/>
+      <inertia ixx="5.277694867800165e-07" ixy="0.0" ixz="0.0" iyy="2.1640502382069826e-05" iyz="0.0" izz="2.168898754462134e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat039.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat039_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat039_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat023_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat023"/>
+  </joint>
+  <link name="grain_buckwheat023">
+    <inertial>
+      <origin xyz="-0.04523541033267975 -0.03564969450235367 -0.02306240238249302" rpy="-0.41581931710243225 -0.3815285861492157 0.6661863327026367"/>
+      <mass value="0.008105947636067867"/>
+      <inertia ixx="5.364595949686191e-07" ixy="0.0" ixz="0.0" iyy="3.176082464051433e-05" iyz="0.0" izz="3.1820862204767764e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat023.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat023_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat023_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat018_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat018"/>
+  </joint>
+  <link name="grain_buckwheat018">
+    <inertial>
+      <origin xyz="0.008047490380704403 -0.013144798576831818 -0.02624203823506832" rpy="0.9455761909484863 -1.0359183549880981 2.1112008094787598"/>
+      <mass value="0.008105943910777569"/>
+      <inertia ixx="5.589678266915143e-07" ixy="0.0" ixz="0.0" iyy="8.048713425523601e-06" iyz="0.0" izz="8.125918611767702e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat018.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat018_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat018_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat002_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat002"/>
+  </joint>
+  <link name="grain_buckwheat002">
+    <inertial>
+      <origin xyz="-0.03653108328580856 0.0581178292632103 -0.022487230598926544" rpy="-2.0563011169433594 -0.317557156085968 -1.009298324584961"/>
+      <mass value="0.008105944842100143"/>
+      <inertia ixx="5.454248821479268e-07" ixy="0.0" ixz="0.0" iyy="4.2848652810789645e-05" iyz="0.0" izz="4.291586083127186e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat002.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat002_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat002_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat025_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat025"/>
+  </joint>
+  <link name="grain_buckwheat025">
+    <inertial>
+      <origin xyz="0.02487737126648426 -0.02842203713953495 -0.023642944172024727" rpy="0.5845129489898682 0.5599330067634583 -0.8547589778900146"/>
+      <mass value="0.008105965331196785"/>
+      <inertia ixx="5.317148747963074e-07" ixy="0.0" ixz="0.0" iyy="1.666427488089539e-05" iyz="0.0" izz="1.6714066077838652e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat025.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat025_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat025_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat043_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat043"/>
+  </joint>
+  <link name="grain_buckwheat043">
+    <inertial>
+      <origin xyz="-0.02209833450615406 0.01766124926507473 0.0019577140919864178" rpy="-0.11645574867725372 0.06540617346763611 -0.6820312142372131"/>
+      <mass value="0.008105941116809845"/>
+      <inertia ixx="5.639479923047475e-07" ixy="0.0" ixz="0.0" iyy="7.074228960846085e-06" iyz="0.0" izz="7.115884727681987e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat043.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat043_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat043_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat031_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat031"/>
+  </joint>
+  <link name="grain_buckwheat031">
+    <inertial>
+      <origin xyz="-0.0012952282559126616 -0.03514724597334862 -0.011418555863201618" rpy="1.742648720741272 0.31009021401405334 -1.6083483695983887"/>
+      <mass value="0.008105949498713017"/>
+      <inertia ixx="5.482604592543794e-07" ixy="0.0" ixz="0.0" iyy="1.1632791029114742e-05" iyz="0.0" izz="1.1705206816259306e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat031.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat031_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat031_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat003_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat003"/>
+  </joint>
+  <link name="grain_buckwheat003">
+    <inertial>
+      <origin xyz="-0.013117169961333275 0.05731106176972389 -0.022242994979023933" rpy="-2.3992578983306885 -0.3614359498023987 -1.345035433769226"/>
+      <mass value="0.008105945773422718"/>
+      <inertia ixx="5.109791914037487e-07" ixy="0.0" ixz="0.0" iyy="3.261993333580904e-05" iyz="0.0" izz="3.264652332291007e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat003.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat003_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat003_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat016_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat016"/>
+  </joint>
+  <link name="grain_buckwheat016">
+    <inertial>
+      <origin xyz="0.04196881130337715 -0.01663569174706936 -0.02461392432451248" rpy="1.6338409185409546 0.501366913318634 -0.37787875533103943"/>
+      <mass value="0.00810594204813242"/>
+      <inertia ixx="5.911784910495044e-07" ixy="0.0" ixz="0.0" iyy="2.196304740209598e-05" iyz="0.0" izz="2.2027823433745652e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat016.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat016_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat016_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat007_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat007"/>
+  </joint>
+  <link name="grain_buckwheat007">
+    <inertial>
+      <origin xyz="0.028174228966236115 0.03923295438289642 -0.022794509306550026" rpy="1.466825008392334 0.44016125798225403 0.9488176703453064"/>
+      <mass value="0.008105935528874397"/>
+      <inertia ixx="6.006842454553407e-07" ixy="0.0" ixz="0.0" iyy="2.3632483134861104e-05" iyz="0.0" izz="2.3731105102342553e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat007.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat007_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat007_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat022_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat022"/>
+  </joint>
+  <link name="grain_buckwheat022">
+    <inertial>
+      <origin xyz="-0.056897737085819244 0.008237425237894058 -0.0225231796503067" rpy="-1.262109398841858 -0.3727506399154663 -0.14367739856243134"/>
+      <mass value="0.008105943910777569"/>
+      <inertia ixx="6.173976316858898e-07" ixy="0.0" ixz="0.0" iyy="3.141277193208225e-05" iyz="0.0" izz="3.149594340356998e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat022.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat022_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat022_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat013_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat013"/>
+  </joint>
+  <link name="grain_buckwheat013">
+    <inertial>
+      <origin xyz="0.03355750814080238 0.015724893659353256 -0.017061349004507065" rpy="-0.5277319550514221 0.4296049475669861 0.4352627098560333"/>
+      <mass value="0.008105939254164696"/>
+      <inertia ixx="6.00940609274403e-07" ixy="0.0" ixz="0.0" iyy="1.4017438843438867e-05" iyz="0.0" izz="1.4084047506912611e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat013.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat013_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat013_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat028_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat028"/>
+  </joint>
+  <link name="grain_buckwheat028">
+    <inertial>
+      <origin xyz="0.060560666024684906 -0.01860790140926838 -0.02188628353178501" rpy="-0.4133493900299072 0.3330395221710205 -0.2976270020008087"/>
+      <mass value="0.008105935528874397"/>
+      <inertia ixx="5.881024662812706e-07" ixy="0.0" ixz="0.0" iyy="3.692964310175739e-05" iyz="0.0" izz="3.70381458196789e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat028.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat028_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat028_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat026_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat026"/>
+  </joint>
+  <link name="grain_buckwheat026">
+    <inertial>
+      <origin xyz="0.04998636618256569 -0.040227849036455154 -0.024435097351670265" rpy="0.29935505986213684 0.3629026412963867 -0.6771457195281982"/>
+      <mass value="0.008105948567390442"/>
+      <inertia ixx="5.239398319645261e-07" ixy="0.0" ixz="0.0" iyy="3.879645373672247e-05" iyz="0.0" izz="3.882061719195917e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat026.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat026_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat026_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat010_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat010"/>
+  </joint>
+  <link name="grain_buckwheat010">
+    <inertial>
+      <origin xyz="-0.034949179738759995 0.011973243206739426 -0.0205503199249506" rpy="-0.4343062937259674 -0.5089691877365112 -0.3342355489730835"/>
+      <mass value="0.008105929009616375"/>
+      <inertia ixx="5.76684385578119e-07" ixy="0.0" ixz="0.0" iyy="1.5035779142635874e-05" iyz="0.0" izz="1.5078328033268917e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat010.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat010_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat010_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat033_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat033"/>
+  </joint>
+  <link name="grain_buckwheat033">
+    <inertial>
+      <origin xyz="-0.034720759838819504 -0.05245469510555267 -0.023245565593242645" rpy="2.9220871925354004 -0.3536381721496582 0.9874465465545654"/>
+      <mass value="0.008105933666229248"/>
+      <inertia ixx="5.9566104937403e-07" ixy="0.0" ixz="0.0" iyy="3.698635191540234e-05" iyz="0.0" izz="3.7047226214781404e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat033.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat033_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat033_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat044_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat044"/>
+  </joint>
+  <link name="grain_buckwheat044">
+    <inertial>
+      <origin xyz="-0.014808080159127712 -0.019873088225722313 0.0014352528378367424" rpy="2.4730823040008545 0.06289292126893997 0.9368312358856201"/>
+      <mass value="0.008105948567390442"/>
+      <inertia ixx="5.631143267237348e-07" ixy="0.0" ixz="0.0" iyy="5.529467671294697e-06" iyz="0.0" izz="5.61673914489802e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat044.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat044_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat044_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat046_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat046"/>
+  </joint>
+  <link name="grain_buckwheat046">
+    <inertial>
+      <origin xyz="0.017504576593637466 0.03517335280776024 -0.0018324489938095212" rpy="-1.4561767578125 -0.04409024864435196 -2.033121347427368"/>
+      <mass value="0.008105946704745293"/>
+      <inertia ixx="5.833539375998953e-07" ixy="0.0" ixz="0.0" iyy="1.3056818715995178e-05" iyz="0.0" izz="1.3156811291992199e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat046.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat046_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat046_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat012_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat012"/>
+  </joint>
+  <link name="grain_buckwheat012">
+    <inertial>
+      <origin xyz="0.010799846611917019 0.011104211211204529 -0.023297617211937904" rpy="1.1456242799758911 0.9818525314331055 0.8099440336227417"/>
+      <mass value="0.008105937391519547"/>
+      <inertia ixx="5.232639068708522e-07" ixy="0.0" ixz="0.0" iyy="6.929135906830197e-06" iyz="0.0" izz="6.955215212656185e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat012.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat012_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat012_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat030_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat030"/>
+  </joint>
+  <link name="grain_buckwheat030">
+    <inertial>
+      <origin xyz="0.03629881143569946 -0.05309285968542099 -0.02176724001765251" rpy="-1.64301335811615 0.3255395293235779 -0.9713740944862366"/>
+      <mass value="0.008105923421680927"/>
+      <inertia ixx="5.858936447111773e-07" ixy="0.0" ixz="0.0" iyy="3.7886693462496623e-05" iyz="0.0" izz="3.798663601628505e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat030.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat030_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat030_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat020_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat020"/>
+  </joint>
+  <link name="grain_buckwheat020">
+    <inertial>
+      <origin xyz="-0.03919633850455284 -0.012304223142564297 -0.025363637134432793" rpy="-0.008790276944637299 -0.5522913336753845 0.3021804690361023"/>
+      <mass value="0.008105951361358166"/>
+      <inertia ixx="5.947910608483653e-07" ixy="0.0" ixz="0.0" iyy="1.9412487745285034e-05" iyz="0.0" izz="1.9501927454257384e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat020.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat020_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat020_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat029_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat029"/>
+  </joint>
+  <link name="grain_buckwheat029">
+    <inertial>
+      <origin xyz="0.014344245195388794 -0.047696802765131 -0.015047436580061913" rpy="1.3652158975601196 -0.291760116815567 1.8621039390563965"/>
+      <mass value="0.008105949498713017"/>
+      <inertia ixx="5.716344162465248e-07" ixy="0.0" ixz="0.0" iyy="2.2472377168014646e-05" iyz="0.0" izz="2.25625881284941e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat029.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat029_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat029_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat034_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat034"/>
+  </joint>
+  <link name="grain_buckwheat034">
+    <inertial>
+      <origin xyz="0.010947249829769135 -0.06272708624601364 -0.026157196611166" rpy="3.0837464332580566 -0.38934674859046936 1.744231939315796"/>
+      <mass value="0.008105936460196972"/>
+      <inertia ixx="6.027063932378951e-07" ixy="0.0" ixz="0.0" iyy="3.892334279953502e-05" iyz="0.0" izz="3.901588934240863e-05"/>
+    </inertial>
+    <visual name="GrainBuckwheat034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat034.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat034_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat034_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="grain_buckwheat027_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="grain_buckwheat"/>
+    <child link="grain_buckwheat027"/>
+  </joint>
+  <link name="grain_buckwheat027">
+    <inertial>
+      <origin xyz="-0.004479730501770973 -0.0012996743898838758 -0.005457277409732342" rpy="-2.1615986824035645 -0.9898549914360046 0.3262353837490082"/>
+      <mass value="0.008105937391519547"/>
+      <inertia ixx="5.612605491478462e-07" ixy="0.0" ixz="0.0" iyy="9.708452353152097e-07" iyz="0.0" izz="1.0217077033303212e-06"/>
+    </inertial>
+    <visual name="GrainBuckwheat027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/obj/GrainBuckwheat027.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GrainBuckwheat027_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://grain_buckwheat/meshes/stl/GrainBuckwheat027_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

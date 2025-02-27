@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<mujoco model="small_plate">
+	<compiler meshdir="small_plate/meshes" texturedir="small_plate/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PlateSmallSize" file="stl/PlateSmallSize.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_001" file="stl/PlateSmallSize_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_002" file="stl/PlateSmallSize_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_003" file="stl/PlateSmallSize_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_004" file="stl/PlateSmallSize_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_005" file="stl/PlateSmallSize_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_006" file="stl/PlateSmallSize_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_007" file="stl/PlateSmallSize_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_008" file="stl/PlateSmallSize_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_009" file="stl/PlateSmallSize_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_010" file="stl/PlateSmallSize_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_011" file="stl/PlateSmallSize_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_012" file="stl/PlateSmallSize_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_013" file="stl/PlateSmallSize_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_014" file="stl/PlateSmallSize_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_015" file="stl/PlateSmallSize_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_016" file="stl/PlateSmallSize_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_017" file="stl/PlateSmallSize_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_018" file="stl/PlateSmallSize_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_019" file="stl/PlateSmallSize_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateSmallSize_020" file="stl/PlateSmallSize_020.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PlateSmallSize" rgba="0.8098999857902527 0.8098999857902527 0.8098999857902527 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="small_plate" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.1863880604505539" pos="-4.1153627727830155e-10 -3.449789431897443e-08 -0.0026295173447579145" quat="-0.48509088158607483 5.5061754267171636e-08 9.390260657937688e-08 0.8744637370109558" diaginertia="0.0003315449575893581 0.000331545015797019 0.0006525356438942254"/>
+			<geom name="PlateSmallSize" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize" material="M_PlateSmallSize" class="visual"/>
+			<geom name="PlateSmallSize_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_001" class="collision"/>
+			<geom name="PlateSmallSize_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_002" class="collision"/>
+			<geom name="PlateSmallSize_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_003" class="collision"/>
+			<geom name="PlateSmallSize_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_004" class="collision"/>
+			<geom name="PlateSmallSize_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_005" class="collision"/>
+			<geom name="PlateSmallSize_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_006" class="collision"/>
+			<geom name="PlateSmallSize_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_007" class="collision"/>
+			<geom name="PlateSmallSize_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_008" class="collision"/>
+			<geom name="PlateSmallSize_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_009" class="collision"/>
+			<geom name="PlateSmallSize_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_010" class="collision"/>
+			<geom name="PlateSmallSize_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_011" class="collision"/>
+			<geom name="PlateSmallSize_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_012" class="collision"/>
+			<geom name="PlateSmallSize_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_013" class="collision"/>
+			<geom name="PlateSmallSize_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_014" class="collision"/>
+			<geom name="PlateSmallSize_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_015" class="collision"/>
+			<geom name="PlateSmallSize_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_016" class="collision"/>
+			<geom name="PlateSmallSize_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_017" class="collision"/>
+			<geom name="PlateSmallSize_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_018" class="collision"/>
+			<geom name="PlateSmallSize_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_019" class="collision"/>
+			<geom name="PlateSmallSize_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateSmallSize_020" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

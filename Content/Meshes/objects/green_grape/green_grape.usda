@@ -1,0 +1,2956 @@
+#usda 1.0
+(
+    defaultPrim = "green_grape"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "green_grape" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "green_grape_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (2.774188e-7, 4.6778237e-7, 4.7508078e-7)
+        float mujoco:body:inertial:mass = 0.006244464
+        point3f mujoco:body:inertial:pos = (-0.000034014618, -0.000032881202, -0.0041330317)
+        quatf mujoco:body:inertial:quat = (-0.62916243, 0.29894808, 0.65340376, 0.296392)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.000034014618, -0.000032881202, -0.0041330317)
+        float3 physics:diagonalInertia = (2.774188e-7, 4.6778237e-7, 4.7508078e-7)
+        float physics:mass = 0.006244464
+        quatf physics:principalAxes = (-0.62916243, 0.29894808, 0.65340376, 0.296392)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 2.774188e-7
+        float urdf:link:inertial:inertia:iyy = 4.6778237e-7
+        float urdf:link:inertial:inertia:izz = 4.7508078e-7
+        float urdf:link:inertial:mass = 0.006244464
+        float3 urdf:link:inertial:origin:rpy = (2.8120654, -1.5363221, 2.6019552)
+        point3f urdf:link:inertial:origin:xyz = (-0.000034014618, -0.000032881202, -0.0041330317)
+
+        def Mesh "GreenGrapeFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeFlesh.usda@</GreenGrapeFlesh>
+        )
+        {
+            rel material:binding = </green_grape/green_grape_flesh/GreenGrapeFlesh/Materials/M_GreenGrapeFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenGrapeFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/obj/GreenGrapeFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenGrapeFlesh" (
+                    prepend references = @./green_grape/materials/usd/M_GreenGrapeFlesh.usda@</M_GreenGrapeFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenGrapeFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeFlesh_001.usda@</GreenGrapeFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "green_grape_seed002" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (5.300315e-12, 2.734791e-10, 2.7555075e-10)
+        float mujoco:body:inertial:mass = 0.0000089648465
+        point3f mujoco:body:inertial:pos = (0.0031396325, -0.00005241621, -0.004429922)
+        quatf mujoco:body:inertial:quat = (-0.3424148, 0.31159192, 0.6639232, 0.58725506)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.0031396325, -0.00005241621, -0.004429922)
+        float3 physics:diagonalInertia = (5.300315e-12, 2.734791e-10, 2.7555075e-10)
+        float physics:mass = 0.0000089648465
+        quatf physics:principalAxes = (-0.3424148, 0.31159192, 0.6639232, 0.58725506)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 5.300315e-12
+        float urdf:link:inertial:inertia:iyy = 2.734791e-10
+        float urdf:link:inertial:inertia:izz = 2.7555075e-10
+        float urdf:link:inertial:mass = 0.0000089648465
+        float3 urdf:link:inertial:origin:rpy = (1.7037772, -0.9625339, 3.1213326)
+        point3f urdf:link:inertial:origin:xyz = (0.0031396325, -0.00005241621, -0.004429922)
+
+        def Mesh "GreenGrapeSeed002" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeSeed002.usda@</GreenGrapeSeed002>
+        )
+        {
+            rel material:binding = </green_grape/green_grape_seed002/GreenGrapeSeed002/Materials/M_GreenGrapeSeed002>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenGrapeSeed002>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeSeed002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/obj/GreenGrapeSeed002.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenGrapeSeed002" (
+                    prepend references = @./green_grape/materials/usd/M_GreenGrapeSeed002.usda@</M_GreenGrapeSeed002>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenGrapeSeed002_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeSeed002_001.usda@</GreenGrapeSeed002_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeSeed002_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeSeed002_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeSeed002_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeSeed002_002.usda@</GreenGrapeSeed002_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeSeed002_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeSeed002_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "green_grape_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (1.2907409e-8, 1.8610123e-8, 1.8875356e-8)
+        float mujoco:body:inertial:mass = 0.00016574017
+        point3f mujoco:body:inertial:pos = (-0.000029452494, -0.000038114053, -0.004278177)
+        quatf mujoco:body:inertial:quat = (-0.6287043, 0.29590225, 0.6562055, 0.2942229)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.000029452494, -0.000038114053, -0.004278177)
+        float3 physics:diagonalInertia = (1.2907409e-8, 1.8610123e-8, 1.8875356e-8)
+        float physics:mass = 0.00016574017
+        quatf physics:principalAxes = (-0.6287043, 0.29590225, 0.6562055, 0.2942229)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 1.2907409e-8
+        float urdf:link:inertial:inertia:iyy = 1.8610123e-8
+        float urdf:link:inertial:inertia:izz = 1.8875356e-8
+        float urdf:link:inertial:mass = 0.00016574017
+        float3 urdf:link:inertial:origin:rpy = (2.772043, -1.5318289, 2.6500642)
+        point3f urdf:link:inertial:origin:xyz = (-0.000029452494, -0.000038114053, -0.004278177)
+
+        def Mesh "GreenGrapePeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel.usda@</GreenGrapePeel>
+        )
+        {
+            rel material:binding = </green_grape/green_grape_peel/GreenGrapePeel/Materials/M_GreenGrapePeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenGrapePeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/obj/GreenGrapePeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenGrapePeel" (
+                    prepend references = @./green_grape/materials/usd/M_GreenGrapePeel.usda@</M_GreenGrapePeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenGrapePeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_001.usda@</GreenGrapePeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_002.usda@</GreenGrapePeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_003.usda@</GreenGrapePeel_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_004.usda@</GreenGrapePeel_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_005.usda@</GreenGrapePeel_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_006.usda@</GreenGrapePeel_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_007.usda@</GreenGrapePeel_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_008.usda@</GreenGrapePeel_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_009.usda@</GreenGrapePeel_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_010.usda@</GreenGrapePeel_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_011.usda@</GreenGrapePeel_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_012.usda@</GreenGrapePeel_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_013.usda@</GreenGrapePeel_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_014.usda@</GreenGrapePeel_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_015.usda@</GreenGrapePeel_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_016.usda@</GreenGrapePeel_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_017.usda@</GreenGrapePeel_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_018.usda@</GreenGrapePeel_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_019.usda@</GreenGrapePeel_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_020.usda@</GreenGrapePeel_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_021.usda@</GreenGrapePeel_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_022.usda@</GreenGrapePeel_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_023.usda@</GreenGrapePeel_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_024.usda@</GreenGrapePeel_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_025.usda@</GreenGrapePeel_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_026.usda@</GreenGrapePeel_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_027.usda@</GreenGrapePeel_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_028.usda@</GreenGrapePeel_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_029.usda@</GreenGrapePeel_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_030.usda@</GreenGrapePeel_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_031.usda@</GreenGrapePeel_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_032.usda@</GreenGrapePeel_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_033.usda@</GreenGrapePeel_033>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_033>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_033.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_034.usda@</GreenGrapePeel_034>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_034>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_034.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_035.usda@</GreenGrapePeel_035>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_035>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_035.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_036.usda@</GreenGrapePeel_036>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_036>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_036.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_037.usda@</GreenGrapePeel_037>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_037>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_037.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_038.usda@</GreenGrapePeel_038>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_038>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_038.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_039" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_039.usda@</GreenGrapePeel_039>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_039>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_039.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_040" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_040.usda@</GreenGrapePeel_040>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_040>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_040.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_041" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_041.usda@</GreenGrapePeel_041>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_041>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_041.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_042" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_042.usda@</GreenGrapePeel_042>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_042>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_042.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_043" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_043.usda@</GreenGrapePeel_043>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_043>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_043.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_044" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_044.usda@</GreenGrapePeel_044>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_044>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_044.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_045" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_045.usda@</GreenGrapePeel_045>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_045>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_045.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_046" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_046.usda@</GreenGrapePeel_046>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_046>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_046.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_047" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_047.usda@</GreenGrapePeel_047>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_047>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_047.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_048" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_048.usda@</GreenGrapePeel_048>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_048>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_048.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_049" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_049.usda@</GreenGrapePeel_049>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_049>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_049.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_050" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_050.usda@</GreenGrapePeel_050>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_050>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_050.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_051" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_051.usda@</GreenGrapePeel_051>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_051>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_051.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_052" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_052.usda@</GreenGrapePeel_052>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_052>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_052.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_053" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_053.usda@</GreenGrapePeel_053>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_053>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_053.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_054" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_054.usda@</GreenGrapePeel_054>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_054>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_054.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_055" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_055.usda@</GreenGrapePeel_055>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_055>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_055.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_056" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_056.usda@</GreenGrapePeel_056>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_056>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_056.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_057" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_057.usda@</GreenGrapePeel_057>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_057>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_057.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_058" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_058.usda@</GreenGrapePeel_058>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_058>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_058.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_059" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_059.usda@</GreenGrapePeel_059>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_059>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_059.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_060" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_060.usda@</GreenGrapePeel_060>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_060>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_060.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_061" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_061.usda@</GreenGrapePeel_061>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_061>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_061.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_062" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_062.usda@</GreenGrapePeel_062>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_062>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_062.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_063" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_063.usda@</GreenGrapePeel_063>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_063>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_063.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_064" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_064.usda@</GreenGrapePeel_064>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_064>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_064.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_065" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_065.usda@</GreenGrapePeel_065>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_065>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_065.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_066" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_066.usda@</GreenGrapePeel_066>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_066>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_066.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_067" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_067.usda@</GreenGrapePeel_067>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_067>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_067.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_068" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_068.usda@</GreenGrapePeel_068>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_068>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_068.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_069" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_069.usda@</GreenGrapePeel_069>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_069>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_069.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_070" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_070.usda@</GreenGrapePeel_070>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_070>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_070.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_071" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_071.usda@</GreenGrapePeel_071>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_071>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_071.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_072" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_072.usda@</GreenGrapePeel_072>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_072>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_072.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_073" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_073.usda@</GreenGrapePeel_073>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_073>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_073.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_074" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_074.usda@</GreenGrapePeel_074>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_074>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_074.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_075" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_075.usda@</GreenGrapePeel_075>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_075>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_075.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_076" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_076.usda@</GreenGrapePeel_076>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_076>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_076.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_077" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_077.usda@</GreenGrapePeel_077>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_077>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_077.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_078" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_078.usda@</GreenGrapePeel_078>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_078>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_078.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_079" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_079.usda@</GreenGrapePeel_079>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_079>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_079.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_080" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_080.usda@</GreenGrapePeel_080>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_080>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_080.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_081" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_081.usda@</GreenGrapePeel_081>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_081>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_081.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_082" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_082.usda@</GreenGrapePeel_082>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_082>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_082.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_083" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_083.usda@</GreenGrapePeel_083>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_083>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_083.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_084" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_084.usda@</GreenGrapePeel_084>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_084>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_084.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_085" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_085.usda@</GreenGrapePeel_085>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_085>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_085.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_086" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_086.usda@</GreenGrapePeel_086>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_086>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_086.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_087" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_087.usda@</GreenGrapePeel_087>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_087>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_087.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_088" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_088.usda@</GreenGrapePeel_088>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_088>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_088.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_089" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_089.usda@</GreenGrapePeel_089>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_089>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_089.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_090" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_090.usda@</GreenGrapePeel_090>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_090>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_090.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_091" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_091.usda@</GreenGrapePeel_091>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_091>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_091.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapePeel_092" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapePeel_092.usda@</GreenGrapePeel_092>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapePeel_092>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapePeel_092.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "green_grape_stalk" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (1.13281905e-10, 5.4781735e-9, 5.5069984e-9)
+        float mujoco:body:inertial:mass = 0.000045937657
+        point3f mujoco:body:inertial:pos = (-0.00009069122, 0.00055104005, 0.0106317755)
+        quatf mujoco:body:inertial:quat = (0.5251231, 0.4696272, 0.5025425, -0.5011457)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.00009069122, 0.00055104005, 0.0106317755)
+        float3 physics:diagonalInertia = (1.13281905e-10, 5.4781735e-9, 5.5069984e-9)
+        float physics:mass = 0.000045937657
+        quatf physics:principalAxes = (0.5251231, 0.4696272, 0.5025425, -0.5011457)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 1.13281905e-10
+        float urdf:link:inertial:inertia:iyy = 5.4781735e-9
+        float urdf:link:inertial:inertia:izz = 5.5069984e-9
+        float urdf:link:inertial:mass = 0.000045937657
+        float3 urdf:link:inertial:origin:rpy = (-0.1921951, 1.515957, -1.7060697)
+        point3f urdf:link:inertial:origin:xyz = (-0.00009069122, 0.00055104005, 0.0106317755)
+
+        def Mesh "GreenGrapeStalk" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk.usda@</GreenGrapeStalk>
+        )
+        {
+            rel material:binding = </green_grape/green_grape_stalk/GreenGrapeStalk/Materials/M_GreenGrapeStalk>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenGrapeStalk>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/obj/GreenGrapeStalk.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenGrapeStalk" (
+                    prepend references = @./green_grape/materials/usd/M_GreenGrapeStalk.usda@</M_GreenGrapeStalk>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenGrapeStalk_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_001.usda@</GreenGrapeStalk_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_002.usda@</GreenGrapeStalk_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_003.usda@</GreenGrapeStalk_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_004.usda@</GreenGrapeStalk_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_005.usda@</GreenGrapeStalk_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_006.usda@</GreenGrapeStalk_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenGrapeStalk_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_grape/meshes/usd/GreenGrapeStalk_007.usda@</GreenGrapeStalk_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenGrapeStalk_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_grape/meshes/stl/GreenGrapeStalk_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "green_grape"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "green_grape"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "GreenGrapeFlesh"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/obj/GreenGrapeFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeFlesh_001"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeSeed002"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeSeed002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeSeed002_001"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeSeed002_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeSeed002_002"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeSeed002_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/obj/GreenGrapePeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_001"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_002"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_003"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_004"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_005"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_006"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_007"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_008"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_009"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_010"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_011"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_012"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_013"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_014"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_015"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_016"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_017"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_018"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_019"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_020"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_021"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_022"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_023"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_024"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_025"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_026"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_027"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_028"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_029"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_030"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_031"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_032"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_033"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_034"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_035"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_036"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_037"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_038"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_039"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_039.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_040"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_040.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_041"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_041.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_042"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_042.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_043"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_043.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_044"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_044.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_045"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_045.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_046"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_046.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_047"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_047.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_048"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_048.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_049"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_049.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_050"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_050.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_051"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_051.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_052"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_052.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_053"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_053.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_054"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_054.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_055"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_055.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_056"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_056.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_057"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_057.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_058"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_058.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_059"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_059.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_060"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_060.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_061"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_061.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_062"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_062.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_063"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_063.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_064"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_064.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_065"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_065.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_066"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_066.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_067"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_067.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_068"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_068.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_069"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_069.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_070"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_070.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_071"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_071.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_072"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_072.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_073"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_073.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_074"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_074.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_075"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_075.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_076"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_076.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_077"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_077.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_078"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_078.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_079"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_079.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_080"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_080.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_081"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_081.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_082"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_082.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_083"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_083.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_084"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_084.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_085"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_085.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_086"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_086.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_087"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_087.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_088"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_088.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_089"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_089.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_090"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_090.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_091"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_091.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapePeel_092"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapePeel_092.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/obj/GreenGrapeStalk.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_001"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_002"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_003"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_004"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_005"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_006"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenGrapeStalk_007"
+            {
+                asset mujoco:mesh:file = @green_grape/meshes/stl/GreenGrapeStalk_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_GreenGrapeFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenGrapeFlesh>
+            }
+
+            def MujocoMaterial "M_GreenGrapeSeed002"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.688, 0.7155, 0.5458, 1)
+            }
+
+            def MujocoMaterial "M_GreenGrapePeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenGrapePeel>
+            }
+
+            def MujocoMaterial "M_GreenGrapeStalk"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenGrapeStalk>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_GreenGrapeFlesh"
+            {
+                asset mujoco:texture:file = @T_GreenGrapeFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_GreenGrapePeel"
+            {
+                asset mujoco:texture:file = @T_GreenGrapePeel.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_GreenGrapeStalk"
+            {
+                asset mujoco:texture:file = @T_GreenGrapeStalk.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

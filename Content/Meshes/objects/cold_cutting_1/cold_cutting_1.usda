@@ -1,0 +1,1267 @@
+#usda 1.0
+(
+    defaultPrim = "cold_cutting_1"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "cold_cutting_1" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "cold_cutting_meat" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00023565334, 0.0016169101, 0.0016169962)
+        float mujoco:body:inertial:mass = 0.53166515
+        point3f mujoco:body:inertial:pos = (-0.000001304748, -0.000042225067, -0.00004222921)
+        quatf mujoco:body:inertial:quat = (0.92387396, 0.38269696, 8.981351e-7, -0.0000020134821)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.000001304748, -0.000042225067, -0.00004222921)
+        float3 physics:diagonalInertia = (0.00023565334, 0.0016169101, 0.0016169962)
+        float physics:mass = 0.53166515
+        quatf physics:principalAxes = (0.92387396, 0.38269696, 8.981351e-7, -0.0000020134821)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00023565334
+        float urdf:link:inertial:inertia:iyy = 0.0016169101
+        float urdf:link:inertial:inertia:izz = 0.0016169962
+        float urdf:link:inertial:mass = 0.53166515
+        float3 urdf:link:inertial:origin:rpy = (0.7854274, 0.000003200634, -0.00000303298)
+        point3f urdf:link:inertial:origin:xyz = (-0.000001304748, -0.000042225067, -0.00004222921)
+
+        def Mesh "ColdCuttingMeat" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingMeat.usda@</ColdCuttingMeat>
+        )
+        {
+            rel material:binding = </cold_cutting_1/cold_cutting_meat/ColdCuttingMeat/Materials/M_ColdCuttingMeat>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_ColdCuttingMeat>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingMeat>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/obj/ColdCuttingMeat.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_ColdCuttingMeat" (
+                    prepend references = @./cold_cutting_1/materials/usd/M_ColdCuttingMeat.usda@</M_ColdCuttingMeat>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "ColdCuttingMeat_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingMeat_001.usda@</ColdCuttingMeat_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingMeat_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingMeat_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cold_cutting_exodermis" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000025001927, 0.0001132631, 0.00011326516)
+        float mujoco:body:inertial:mass = 0.029258715
+        point3f mujoco:body:inertial:pos = (1.9871227e-7, -0.000027636883, -0.000027639066)
+        quatf mujoco:body:inertial:quat = (0.9235756, 0.38341635, 5.397649e-7, -0.0000017164623)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (1.9871227e-7, -0.000027636883, -0.000027639066)
+        float3 physics:diagonalInertia = (0.000025001927, 0.0001132631, 0.00011326516)
+        float physics:mass = 0.029258715
+        quatf physics:principalAxes = (0.9235756, 0.38341635, 5.397649e-7, -0.0000017164623)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000025001927
+        float urdf:link:inertial:inertia:iyy = 0.0001132631
+        float urdf:link:inertial:inertia:izz = 0.00011326516
+        float urdf:link:inertial:mass = 0.029258715
+        float3 urdf:link:inertial:origin:rpy = (0.78698504, 0.000002313267, -0.000002756656)
+        point3f urdf:link:inertial:origin:xyz = (1.9871227e-7, -0.000027636883, -0.000027639066)
+
+        def Mesh "ColdCuttingExodermis" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis.usda@</ColdCuttingExodermis>
+        )
+        {
+            rel material:binding = </cold_cutting_1/cold_cutting_exodermis/ColdCuttingExodermis/Materials/M_ColdCuttingExodermis>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_ColdCuttingExodermis>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/obj/ColdCuttingExodermis.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_ColdCuttingExodermis" (
+                    prepend references = @./cold_cutting_1/materials/usd/M_ColdCuttingExodermis.usda@</M_ColdCuttingExodermis>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "ColdCuttingExodermis_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_001.usda@</ColdCuttingExodermis_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_002.usda@</ColdCuttingExodermis_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_003.usda@</ColdCuttingExodermis_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_004.usda@</ColdCuttingExodermis_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_005.usda@</ColdCuttingExodermis_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_006.usda@</ColdCuttingExodermis_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_007.usda@</ColdCuttingExodermis_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_008" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_008.usda@</ColdCuttingExodermis_008>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_008>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_008.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_009" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_009.usda@</ColdCuttingExodermis_009>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_009>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_009.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_010" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_010.usda@</ColdCuttingExodermis_010>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_010>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_010.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_011" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_011.usda@</ColdCuttingExodermis_011>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_011>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_011.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_012" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_012.usda@</ColdCuttingExodermis_012>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_012>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_012.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_013" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_013.usda@</ColdCuttingExodermis_013>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_013>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_013.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_014" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_014.usda@</ColdCuttingExodermis_014>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_014>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_014.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_015" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_015.usda@</ColdCuttingExodermis_015>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_015>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_015.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_016" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_016.usda@</ColdCuttingExodermis_016>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_016>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_016.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_017" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_017.usda@</ColdCuttingExodermis_017>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_017>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_017.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_018" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_018.usda@</ColdCuttingExodermis_018>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_018>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_018.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_019" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_019.usda@</ColdCuttingExodermis_019>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_019>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_019.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_020" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_020.usda@</ColdCuttingExodermis_020>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_020>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_020.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_021" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_021.usda@</ColdCuttingExodermis_021>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_021>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_021.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_022" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_022.usda@</ColdCuttingExodermis_022>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_022>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_022.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_023" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_023.usda@</ColdCuttingExodermis_023>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_023>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_023.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_024" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_024.usda@</ColdCuttingExodermis_024>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_024>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_024.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_025" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_025.usda@</ColdCuttingExodermis_025>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_025>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_025.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_026" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_026.usda@</ColdCuttingExodermis_026>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_026>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_026.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_027" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_027.usda@</ColdCuttingExodermis_027>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_027>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_027.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_028" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_028.usda@</ColdCuttingExodermis_028>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_028>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_028.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_029" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_029.usda@</ColdCuttingExodermis_029>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_029>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_029.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_030" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_030.usda@</ColdCuttingExodermis_030>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_030>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_030.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_031" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_031.usda@</ColdCuttingExodermis_031>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_031>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_031.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_032" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_032.usda@</ColdCuttingExodermis_032>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_032>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_032.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_033" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_033.usda@</ColdCuttingExodermis_033>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_033>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_033.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_034" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_034.usda@</ColdCuttingExodermis_034>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_034>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_034.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_035" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_035.usda@</ColdCuttingExodermis_035>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_035>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_035.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_036" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_036.usda@</ColdCuttingExodermis_036>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_036>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_036.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_037" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_037.usda@</ColdCuttingExodermis_037>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_037>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_037.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_038" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_038.usda@</ColdCuttingExodermis_038>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_038>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_038.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_039" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_039.usda@</ColdCuttingExodermis_039>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_039>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_039.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_040" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_040.usda@</ColdCuttingExodermis_040>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_040>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_040.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "ColdCuttingExodermis_041" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cold_cutting_1/meshes/usd/ColdCuttingExodermis_041.usda@</ColdCuttingExodermis_041>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/ColdCuttingExodermis_041>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cold_cutting_1/meshes/stl/ColdCuttingExodermis_041.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "cold_cutting_1"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "cold_cutting_1"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "ColdCuttingMeat"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/obj/ColdCuttingMeat.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingMeat_001"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingMeat_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/obj/ColdCuttingExodermis.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_001"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_002"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_003"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_004"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_005"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_006"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_007"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_008"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_008.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_009"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_009.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_010"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_010.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_011"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_011.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_012"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_012.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_013"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_013.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_014"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_014.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_015"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_015.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_016"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_016.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_017"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_017.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_018"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_018.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_019"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_019.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_020"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_020.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_021"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_021.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_022"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_022.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_023"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_023.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_024"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_024.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_025"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_025.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_026"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_026.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_027"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_027.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_028"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_028.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_029"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_029.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_030"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_030.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_031"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_031.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_032"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_032.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_033"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_033.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_034"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_034.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_035"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_035.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_036"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_036.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_037"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_037.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_038"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_038.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_039"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_039.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_040"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_040.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "ColdCuttingExodermis_041"
+            {
+                asset mujoco:mesh:file = @cold_cutting_1/meshes/stl/ColdCuttingExodermis_041.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_ColdCuttingMeat"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_ColdCuttingMeat>
+            }
+
+            def MujocoMaterial "M_ColdCuttingExodermis"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_ColdCuttingExodermis>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_ColdCuttingMeat"
+            {
+                asset mujoco:texture:file = @T_ColdCuttingMeat.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_ColdCuttingExodermis"
+            {
+                asset mujoco:texture:file = @T_ColdCuttingExodermis.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

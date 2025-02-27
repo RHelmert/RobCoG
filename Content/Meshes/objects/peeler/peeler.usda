@@ -1,0 +1,523 @@
+#usda 1.0
+(
+    defaultPrim = "peeler"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "peeler" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "hilt_wood" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000017239941, 0.00080411223, 0.0008177963)
+        float mujoco:body:inertial:mass = 0.2196231
+        point3f mujoco:body:inertial:pos = (-0.05006699, 0.0036353907, 9.754563e-7)
+        quatf mujoco:body:inertial:quat = (0.9998356, 0.00010666428, -9.539361e-8, -0.0181307)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.05006699, 0.0036353907, 9.754563e-7)
+        float3 physics:diagonalInertia = (0.000017239941, 0.00080411223, 0.0008177963)
+        float physics:mass = 0.2196231
+        quatf physics:principalAxes = (0.9998356, 0.00010666428, -9.539361e-8, -0.0181307)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000017239941
+        float urdf:link:inertial:inertia:iyy = 0.00080411223
+        float urdf:link:inertial:inertia:izz = 0.0008177963
+        float urdf:link:inertial:mass = 0.2196231
+        float3 urdf:link:inertial:origin:rpy = (0.00021329695, 0.0000036770402, -0.036263384)
+        point3f urdf:link:inertial:origin:xyz = (-0.05006699, 0.0036353907, 9.754563e-7)
+
+        def Mesh "HiltWood" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood.usda@</HiltWood>
+        )
+        {
+            rel material:binding = </peeler/hilt_wood/HiltWood/Materials/M_HiltWood_002>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HiltWood_002>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/obj/HiltWood.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HiltWood_002" (
+                    prepend references = @./peeler/materials/usd/M_HiltWood_002.usda@</M_HiltWood_002>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HiltWood_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_001.usda@</HiltWood_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_002.usda@</HiltWood_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_003.usda@</HiltWood_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_004.usda@</HiltWood_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_005.usda@</HiltWood_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltWood_006.usda@</HiltWood_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltWood_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "peeler_blade" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000001309238, 0.000031233503, 0.000032535)
+        float mujoco:body:inertial:mass = 0.024063813
+        point3f mujoco:body:inertial:pos = (0.016638214, 0.0052729473, -6.809246e-9)
+        quatf mujoco:body:inertial:quat = (0.9991083, -4.3483232e-7, 5.832686e-8, 0.042220633)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.016638214, 0.0052729473, -6.809246e-9)
+        float3 physics:diagonalInertia = (0.000001309238, 0.000031233503, 0.000032535)
+        float physics:mass = 0.024063813
+        quatf physics:principalAxes = (0.9991083, -4.3483232e-7, 5.832686e-8, 0.042220633)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000001309238
+        float urdf:link:inertial:inertia:iyy = 0.000031233503
+        float urdf:link:inertial:inertia:izz = 0.000032535
+        float urdf:link:inertial:mass = 0.024063813
+        float3 urdf:link:inertial:origin:rpy = (-8.63964e-7, 1.532675e-7, 0.084466375)
+        point3f urdf:link:inertial:origin:xyz = (0.016638214, 0.0052729473, -6.809246e-9)
+
+        def Mesh "PeelerBlade" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/PeelerBlade.usda@</PeelerBlade>
+        )
+        {
+            rel material:binding = </peeler/peeler_blade/PeelerBlade/Materials/M_PeelerBlade>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_PeelerBlade>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PeelerBlade>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/obj/PeelerBlade.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_PeelerBlade" (
+                    prepend references = @./peeler/materials/usd/M_PeelerBlade.usda@</M_PeelerBlade>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "PeelerBlade_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/PeelerBlade_001.usda@</PeelerBlade_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PeelerBlade_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/PeelerBlade_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "PeelerBlade_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/PeelerBlade_002.usda@</PeelerBlade_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/PeelerBlade_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/PeelerBlade_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "hilt_metal" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (2.582849e-7, 0.00003714872, 0.00003721424)
+        float mujoco:body:inertial:mass = 0.01082074
+        point3f mujoco:body:inertial:pos = (-0.0463775, 0.0030476358, -1.3348119e-8)
+        quatf mujoco:body:inertial:quat = (0.99990934, -0.000012239692, 2.8217977e-7, -0.01346505)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.0463775, 0.0030476358, -1.3348119e-8)
+        float3 physics:diagonalInertia = (2.582849e-7, 0.00003714872, 0.00003721424)
+        float physics:mass = 0.01082074
+        quatf physics:principalAxes = (0.99990934, -0.000012239692, 2.8217977e-7, -0.01346505)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 2.582849e-7
+        float urdf:link:inertial:inertia:iyy = 0.00003714872
+        float urdf:link:inertial:inertia:izz = 0.00003721424
+        float urdf:link:inertial:mass = 0.01082074
+        float3 urdf:link:inertial:origin:rpy = (-0.000024484765, 2.3469225e-7, -0.026930913)
+        point3f urdf:link:inertial:origin:xyz = (-0.0463775, 0.0030476358, -1.3348119e-8)
+
+        def Mesh "HiltMetal" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltMetal.usda@</HiltMetal>
+        )
+        {
+            rel material:binding = </peeler/hilt_metal/HiltMetal/Materials/M_HiltMetal_002>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HiltMetal_002>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/obj/HiltMetal.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HiltMetal_002" (
+                    prepend references = @./peeler/materials/usd/M_HiltMetal_002.usda@</M_HiltMetal_002>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HiltMetal_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltMetal_001.usda@</HiltMetal_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltMetal_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltMetal_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltMetal_002.usda@</HiltMetal_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltMetal_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltMetal_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./peeler/meshes/usd/HiltMetal_003.usda@</HiltMetal_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./peeler/meshes/stl/HiltMetal_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "peeler"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "peeler"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "HiltWood"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/obj/HiltWood.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_001"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_002"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_003"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_004"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_005"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_006"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltWood_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PeelerBlade"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/PeelerBlade.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PeelerBlade_001"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/PeelerBlade_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "PeelerBlade_002"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/PeelerBlade_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/obj/HiltMetal.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_001"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltMetal_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_002"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltMetal_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_003"
+            {
+                asset mujoco:mesh:file = @peeler/meshes/stl/HiltMetal_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_HiltWood_002"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HiltWood>
+            }
+
+            def MujocoMaterial "M_PeelerBlade"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.5477, 0.5477, 0.5477, 1)
+            }
+
+            def MujocoMaterial "M_HiltMetal_002"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_HiltMetal>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_HiltWood"
+            {
+                asset mujoco:texture:file = @T_HiltWood.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_HiltMetal"
+            {
+                asset mujoco:texture:file = @T_HiltMetal.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

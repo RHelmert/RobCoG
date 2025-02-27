@@ -1,0 +1,788 @@
+#usda 1.0
+(
+    defaultPrim = "kitchen_pliers"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "kitchen_pliers" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "kitchen_pliers_head" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00013202519, 0.00085607165, 0.0009797005)
+        float mujoco:body:inertial:mass = 0.0660412
+        point3f mujoco:body:inertial:pos = (-0.095274635, -0.0001915858, -0.0000020926425)
+        quatf mujoco:body:inertial:quat = (0.9999998, 5.52939e-7, -0.0000122745205, 0.00059971376)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.095274635, -0.0001915858, -0.0000020926425)
+        float3 physics:diagonalInertia = (0.00013202519, 0.00085607165, 0.0009797005)
+        float physics:mass = 0.0660412
+        quatf physics:principalAxes = (0.9999998, 5.52939e-7, -0.0000122745205, 0.00059971376)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00013202519
+        float urdf:link:inertial:inertia:iyy = 0.00085607165
+        float urdf:link:inertial:inertia:izz = 0.0009797005
+        float urdf:link:inertial:mass = 0.0660412
+        float3 urdf:link:inertial:origin:rpy = (0.0000010911555, -0.0000245497, 0.0011994275)
+        point3f urdf:link:inertial:origin:xyz = (-0.095274635, -0.0001915858, -0.0000020926425)
+
+        def Mesh "KitchenPliersHead" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHead.usda@</KitchenPliersHead>
+        )
+        {
+            rel material:binding = </kitchen_pliers/kitchen_pliers_head/KitchenPliersHead/Materials/M_KitchenPliersHead>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_KitchenPliersHead>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHead>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/obj/KitchenPliersHead.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_KitchenPliersHead" (
+                    prepend references = @./kitchen_pliers/materials/usd/M_KitchenPliersHead.usda@</M_KitchenPliersHead>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "KitchenPliersHead_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHead_001.usda@</KitchenPliersHead_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHead_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHead_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHead_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHead_002.usda@</KitchenPliersHead_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHead_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHead_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHead_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHead_003.usda@</KitchenPliersHead_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHead_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHead_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHead_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHead_004.usda@</KitchenPliersHead_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHead_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHead_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "kitchen_pliers_handle_metal" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00061584363, 0.009113099, 0.009665689)
+        float mujoco:body:inertial:mass = 0.9098878
+        point3f mujoco:body:inertial:pos = (0.088542424, -0.0005285621, -8.600606e-7)
+        quatf mujoco:body:inertial:quat = (0.99999636, -2.1226532e-8, 0.0000038295198, -0.002703472)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.088542424, -0.0005285621, -8.600606e-7)
+        float3 physics:diagonalInertia = (0.00061584363, 0.009113099, 0.009665689)
+        float physics:mass = 0.9098878
+        quatf physics:principalAxes = (0.99999636, -2.1226532e-8, 0.0000038295198, -0.002703472)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00061584363
+        float urdf:link:inertial:inertia:iyy = 0.009113099
+        float urdf:link:inertial:inertia:izz = 0.009665689
+        float urdf:link:inertial:mass = 0.9098878
+        float3 urdf:link:inertial:origin:rpy = (-6.315891e-8, 0.000007658897, -0.0054069506)
+        point3f urdf:link:inertial:origin:xyz = (0.088542424, -0.0005285621, -8.600606e-7)
+
+        def Mesh "KitchenPliersHandleMetal" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandleMetal.usda@</KitchenPliersHandleMetal>
+        )
+        {
+            rel material:binding = </kitchen_pliers/kitchen_pliers_handle_metal/KitchenPliersHandleMetal/Materials/M_KitchenPliersHandleMetal>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_KitchenPliersHandleMetal>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandleMetal>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/obj/KitchenPliersHandleMetal.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_KitchenPliersHandleMetal" (
+                    prepend references = @./kitchen_pliers/materials/usd/M_KitchenPliersHandleMetal.usda@</M_KitchenPliersHandleMetal>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "KitchenPliersHandleMetal_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandleMetal_001.usda@</KitchenPliersHandleMetal_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandleMetal_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandleMetal_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandleMetal_002.usda@</KitchenPliersHandleMetal_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandleMetal_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandleMetal_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandleMetal_003.usda@</KitchenPliersHandleMetal_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandleMetal_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandleMetal_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandleMetal_004.usda@</KitchenPliersHandleMetal_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandleMetal_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "kitchen_pliers_handle_plastic" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00015829597, 0.002336889, 0.0024847144)
+        float mujoco:body:inertial:mass = 0.19161336
+        point3f mujoco:body:inertial:pos = (0.06831031, -0.0004918914, 0.0000031089382)
+        quatf mujoco:body:inertial:quat = (0.99999785, -3.2394524e-7, -0.000008704527, -0.0020618709)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.06831031, -0.0004918914, 0.0000031089382)
+        float3 physics:diagonalInertia = (0.00015829597, 0.002336889, 0.0024847144)
+        float physics:mass = 0.19161336
+        quatf physics:principalAxes = (0.99999785, -3.2394524e-7, -0.000008704527, -0.0020618709)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00015829597
+        float urdf:link:inertial:inertia:iyy = 0.002336889
+        float urdf:link:inertial:inertia:izz = 0.0024847144
+        float urdf:link:inertial:mass = 0.19161336
+        float3 urdf:link:inertial:origin:rpy = (-6.119939e-7, -0.000017410353, -0.0041237446)
+        point3f urdf:link:inertial:origin:xyz = (0.06831031, -0.0004918914, 0.0000031089382)
+
+        def Mesh "KitchenPliersHandlePlastic" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandlePlastic.usda@</KitchenPliersHandlePlastic>
+        )
+        {
+            rel material:binding = </kitchen_pliers/kitchen_pliers_handle_plastic/KitchenPliersHandlePlastic/Materials/M_KitchenPliersHandlePlastic>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_KitchenPliersHandlePlastic>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandlePlastic>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/obj/KitchenPliersHandlePlastic.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_KitchenPliersHandlePlastic" (
+                    prepend references = @./kitchen_pliers/materials/usd/M_KitchenPliersHandlePlastic.usda@</M_KitchenPliersHandlePlastic>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "KitchenPliersHandlePlastic_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandlePlastic_001.usda@</KitchenPliersHandlePlastic_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandlePlastic_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandlePlastic_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandlePlastic_002.usda@</KitchenPliersHandlePlastic_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandlePlastic_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandlePlastic_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandlePlastic_003.usda@</KitchenPliersHandlePlastic_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandlePlastic_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHandlePlastic_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHandlePlastic_004.usda@</KitchenPliersHandlePlastic_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHandlePlastic_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "kitchen_pliers_hanging_hole" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (8.3770425e-7, 0.00020877506, 0.00020935322)
+        float mujoco:body:inertial:mass = 0.0055374075
+        point3f mujoco:body:inertial:pos = (0.19402136, -0.00074149837, -0.00022578215)
+        quatf mujoco:body:inertial:quat = (0.999998, 0.00007586561, 0.0005814601, -0.001913495)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.19402136, -0.00074149837, -0.00022578215)
+        float3 physics:diagonalInertia = (8.3770425e-7, 0.00020877506, 0.00020935322)
+        float physics:mass = 0.0055374075
+        quatf physics:principalAxes = (0.999998, 0.00007586561, 0.0005814601, -0.001913495)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 8.3770425e-7
+        float urdf:link:inertial:inertia:iyy = 0.00020877506
+        float urdf:link:inertial:inertia:izz = 0.00020935322
+        float urdf:link:inertial:mass = 0.0055374075
+        float3 urdf:link:inertial:origin:rpy = (0.00014950578, 0.0011632084, -0.0038269062)
+        point3f urdf:link:inertial:origin:xyz = (0.19402136, -0.00074149837, -0.00022578215)
+
+        def Mesh "KitchenPliersHangingHole" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole.usda@</KitchenPliersHangingHole>
+        )
+        {
+            rel material:binding = </kitchen_pliers/kitchen_pliers_hanging_hole/KitchenPliersHangingHole/Materials/M_KitchenPliersHangingHole>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_KitchenPliersHangingHole>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/obj/KitchenPliersHangingHole.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_KitchenPliersHangingHole" (
+                    prepend references = @./kitchen_pliers/materials/usd/M_KitchenPliersHangingHole.usda@</M_KitchenPliersHangingHole>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "KitchenPliersHangingHole_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_001.usda@</KitchenPliersHangingHole_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_002.usda@</KitchenPliersHangingHole_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_003.usda@</KitchenPliersHangingHole_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_004.usda@</KitchenPliersHangingHole_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_005.usda@</KitchenPliersHangingHole_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_006.usda@</KitchenPliersHangingHole_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenPliersHangingHole_007" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_pliers/meshes/usd/KitchenPliersHangingHole_007.usda@</KitchenPliersHangingHole_007>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenPliersHangingHole_007>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_pliers/meshes/stl/KitchenPliersHangingHole_007.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "kitchen_pliers"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "kitchen_pliers"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "KitchenPliersHead"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHead.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHead_001"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHead_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHead_002"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHead_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHead_003"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHead_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHead_004"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHead_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandleMetal"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandleMetal.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandleMetal_001"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandleMetal_002"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandleMetal_003"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandleMetal_004"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandleMetal_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandlePlastic"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/obj/KitchenPliersHandlePlastic.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandlePlastic_001"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandlePlastic_002"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandlePlastic_003"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHandlePlastic_004"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHandlePlastic_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_001"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_002"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_003"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_004"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_005"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_006"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenPliersHangingHole_007"
+            {
+                asset mujoco:mesh:file = @kitchen_pliers/meshes/stl/KitchenPliersHangingHole_007.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_KitchenPliersHead"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6471, 0.6471, 0.6471, 1)
+            }
+
+            def MujocoMaterial "M_KitchenPliersHandleMetal"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6471, 0.6471, 0.6471, 1)
+            }
+
+            def MujocoMaterial "M_KitchenPliersHandlePlastic"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_KitchenPliersHandlePlastic>
+            }
+
+            def MujocoMaterial "M_KitchenPliersHangingHole"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6471, 0.6471, 0.6471, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_KitchenPliersHandlePlastic"
+            {
+                asset mujoco:texture:file = @T_KitchenPliersHandlePlastic.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

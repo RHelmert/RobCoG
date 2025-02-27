@@ -1,0 +1,566 @@
+#usda 1.0
+(
+    defaultPrim = "kitchen_knife_1"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "kitchen_knife_1" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "hilt_wood" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000024937024, 0.0021858688, 0.0022072273)
+        float mujoco:body:inertial:mass = 0.22102186
+        point3f mujoco:body:inertial:pos = (-0.092369385, 0.015831837, 9.759287e-7)
+        quatf mujoco:body:inertial:quat = (0.99732524, 0.00009049319, -0.0000037194793, -0.073091336)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.092369385, 0.015831837, 9.759287e-7)
+        float3 physics:diagonalInertia = (0.000024937024, 0.0021858688, 0.0022072273)
+        float physics:mass = 0.22102186
+        quatf physics:principalAxes = (0.99732524, 0.00009049319, -0.0000037194793, -0.073091336)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000024937024
+        float urdf:link:inertial:inertia:iyy = 0.0021858688
+        float urdf:link:inertial:inertia:izz = 0.0022072273
+        float urdf:link:inertial:mass = 0.22102186
+        float3 urdf:link:inertial:origin:rpy = (0.00018104601, 0.0000058094747, -0.14631315)
+        point3f urdf:link:inertial:origin:xyz = (-0.092369385, 0.015831837, 9.759287e-7)
+
+        def Mesh "HiltWood" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood.usda@</HiltWood>
+        )
+        {
+            rel material:binding = </kitchen_knife_1/hilt_wood/HiltWood/Materials/M_HiltWood_001>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HiltWood_001>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/obj/HiltWood.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HiltWood_001" (
+                    prepend references = @./kitchen_knife_1/materials/usd/M_HiltWood_001.usda@</M_HiltWood_001>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HiltWood_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_001.usda@</HiltWood_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_002.usda@</HiltWood_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_003.usda@</HiltWood_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_004.usda@</HiltWood_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_005.usda@</HiltWood_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltWood_006" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltWood_006.usda@</HiltWood_006>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltWood_006>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltWood_006.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "hilt_metal" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (6.8262955e-7, 0.00010160838, 0.000102097016)
+        float mujoco:body:inertial:mass = 0.010889728
+        point3f mujoco:body:inertial:pos = (-0.08868007, 0.015244059, -7.359192e-9)
+        quatf mujoco:body:inertial:quat = (0.99746525, -0.0000034630334, 2.8398904e-7, -0.07115561)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.08868007, 0.015244059, -7.359192e-9)
+        float3 physics:diagonalInertia = (6.8262955e-7, 0.00010160838, 0.000102097016)
+        float physics:mass = 0.010889728
+        quatf physics:principalAxes = (0.99746525, -0.0000034630334, 2.8398904e-7, -0.07115561)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 6.8262955e-7
+        float urdf:link:inertial:inertia:iyy = 0.00010160838
+        float urdf:link:inertial:inertia:izz = 0.000102097016
+        float urdf:link:inertial:mass = 0.010889728
+        float3 urdf:link:inertial:origin:rpy = (-0.0000069489256, 7.37099e-8, -0.14243157)
+        point3f urdf:link:inertial:origin:xyz = (-0.08868007, 0.015244059, -7.359192e-9)
+
+        def Mesh "HiltMetal" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltMetal.usda@</HiltMetal>
+        )
+        {
+            rel material:binding = </kitchen_knife_1/hilt_metal/HiltMetal/Materials/M_HiltMetal_001>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_HiltMetal_001>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/obj/HiltMetal.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_HiltMetal_001" (
+                    prepend references = @./kitchen_knife_1/materials/usd/M_HiltMetal_001.usda@</M_HiltMetal_001>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "HiltMetal_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltMetal_001.usda@</HiltMetal_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltMetal_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltMetal_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltMetal_002.usda@</HiltMetal_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltMetal_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "HiltMetal_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/HiltMetal_003.usda@</HiltMetal_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/HiltMetal_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/HiltMetal_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "kitchen_knife_blade" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00005567732, 0.00092640857, 0.0009820344)
+        float mujoco:body:inertial:mass = 0.14702058
+        point3f mujoco:body:inertial:pos = (0.054740142, 0.0008429145, 0.0000055404885)
+        quatf mujoco:body:inertial:quat = (0.99998105, 0.000010755808, -0.000024127503, -0.0061528143)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.054740142, 0.0008429145, 0.0000055404885)
+        float3 physics:diagonalInertia = (0.00005567732, 0.00092640857, 0.0009820344)
+        float physics:mass = 0.14702058
+        quatf physics:principalAxes = (0.99998105, 0.000010755808, -0.000024127503, -0.0061528143)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00005567732
+        float urdf:link:inertial:inertia:iyy = 0.00092640857
+        float urdf:link:inertial:inertia:izz = 0.0009820344
+        float urdf:link:inertial:mass = 0.14702058
+        float3 urdf:link:inertial:origin:rpy = (0.000021808113, -0.000048121736, -0.012305707)
+        point3f urdf:link:inertial:origin:xyz = (0.054740142, 0.0008429145, 0.0000055404885)
+
+        def Mesh "KitchenKnifeBlade" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/KitchenKnifeBlade.usda@</KitchenKnifeBlade>
+        )
+        {
+            rel material:binding = </kitchen_knife_1/kitchen_knife_blade/KitchenKnifeBlade/Materials/M_KitchenKnifeBlade_001>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_KitchenKnifeBlade_001>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenKnifeBlade>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/obj/KitchenKnifeBlade.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_KitchenKnifeBlade_001" (
+                    prepend references = @./kitchen_knife_1/materials/usd/M_KitchenKnifeBlade_001.usda@</M_KitchenKnifeBlade_001>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "KitchenKnifeBlade_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/KitchenKnifeBlade_001.usda@</KitchenKnifeBlade_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenKnifeBlade_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/KitchenKnifeBlade_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenKnifeBlade_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/KitchenKnifeBlade_002.usda@</KitchenKnifeBlade_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenKnifeBlade_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/KitchenKnifeBlade_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenKnifeBlade_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/KitchenKnifeBlade_003.usda@</KitchenKnifeBlade_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenKnifeBlade_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/KitchenKnifeBlade_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "KitchenKnifeBlade_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./kitchen_knife_1/meshes/usd/KitchenKnifeBlade_004.usda@</KitchenKnifeBlade_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/KitchenKnifeBlade_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./kitchen_knife_1/meshes/stl/KitchenKnifeBlade_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "kitchen_knife_1"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "kitchen_knife_1"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "HiltWood"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_001"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_002"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_003"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_004"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_005"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltWood_006"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltWood_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltMetal.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_001"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltMetal_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_002"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltMetal_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "HiltMetal_003"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/HiltMetal_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenKnifeBlade"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/KitchenKnifeBlade.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenKnifeBlade_001"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/KitchenKnifeBlade_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenKnifeBlade_002"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/KitchenKnifeBlade_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenKnifeBlade_003"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/KitchenKnifeBlade_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "KitchenKnifeBlade_004"
+            {
+                asset mujoco:mesh:file = @kitchen_knife_1/meshes/stl/KitchenKnifeBlade_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_HiltWood_001"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.2, 0.2, 0.2, 1)
+            }
+
+            def MujocoMaterial "M_HiltMetal_001"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6196, 0.6157, 0.6, 1)
+            }
+
+            def MujocoMaterial "M_KitchenKnifeBlade_001"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.5181, 0.5181, 0.5181, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

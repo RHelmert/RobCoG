@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<mujoco model="green_grape">
+	<compiler meshdir="green_grape/meshes" texturedir="green_grape/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GreenGrapeFlesh" file="obj/GreenGrapeFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeFlesh_001" file="stl/GreenGrapeFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeSeed002" file="stl/GreenGrapeSeed002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeSeed002_001" file="stl/GreenGrapeSeed002_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeSeed002_002" file="stl/GreenGrapeSeed002_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel" file="obj/GreenGrapePeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_001" file="stl/GreenGrapePeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_002" file="stl/GreenGrapePeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_003" file="stl/GreenGrapePeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_004" file="stl/GreenGrapePeel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_005" file="stl/GreenGrapePeel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_006" file="stl/GreenGrapePeel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_007" file="stl/GreenGrapePeel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_008" file="stl/GreenGrapePeel_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_009" file="stl/GreenGrapePeel_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_010" file="stl/GreenGrapePeel_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_011" file="stl/GreenGrapePeel_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_012" file="stl/GreenGrapePeel_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_013" file="stl/GreenGrapePeel_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_014" file="stl/GreenGrapePeel_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_015" file="stl/GreenGrapePeel_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_016" file="stl/GreenGrapePeel_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_017" file="stl/GreenGrapePeel_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_018" file="stl/GreenGrapePeel_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_019" file="stl/GreenGrapePeel_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_020" file="stl/GreenGrapePeel_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_021" file="stl/GreenGrapePeel_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_022" file="stl/GreenGrapePeel_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_023" file="stl/GreenGrapePeel_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_024" file="stl/GreenGrapePeel_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_025" file="stl/GreenGrapePeel_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_026" file="stl/GreenGrapePeel_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_027" file="stl/GreenGrapePeel_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_028" file="stl/GreenGrapePeel_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_029" file="stl/GreenGrapePeel_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_030" file="stl/GreenGrapePeel_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_031" file="stl/GreenGrapePeel_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_032" file="stl/GreenGrapePeel_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_033" file="stl/GreenGrapePeel_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_034" file="stl/GreenGrapePeel_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_035" file="stl/GreenGrapePeel_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_036" file="stl/GreenGrapePeel_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_037" file="stl/GreenGrapePeel_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_038" file="stl/GreenGrapePeel_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_039" file="stl/GreenGrapePeel_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_040" file="stl/GreenGrapePeel_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_041" file="stl/GreenGrapePeel_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_042" file="stl/GreenGrapePeel_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_043" file="stl/GreenGrapePeel_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_044" file="stl/GreenGrapePeel_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_045" file="stl/GreenGrapePeel_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_046" file="stl/GreenGrapePeel_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_047" file="stl/GreenGrapePeel_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_048" file="stl/GreenGrapePeel_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_049" file="stl/GreenGrapePeel_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_050" file="stl/GreenGrapePeel_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_051" file="stl/GreenGrapePeel_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_052" file="stl/GreenGrapePeel_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_053" file="stl/GreenGrapePeel_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_054" file="stl/GreenGrapePeel_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_055" file="stl/GreenGrapePeel_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_056" file="stl/GreenGrapePeel_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_057" file="stl/GreenGrapePeel_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_058" file="stl/GreenGrapePeel_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_059" file="stl/GreenGrapePeel_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_060" file="stl/GreenGrapePeel_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_061" file="stl/GreenGrapePeel_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_062" file="stl/GreenGrapePeel_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_063" file="stl/GreenGrapePeel_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_064" file="stl/GreenGrapePeel_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_065" file="stl/GreenGrapePeel_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_066" file="stl/GreenGrapePeel_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_067" file="stl/GreenGrapePeel_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_068" file="stl/GreenGrapePeel_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_069" file="stl/GreenGrapePeel_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_070" file="stl/GreenGrapePeel_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_071" file="stl/GreenGrapePeel_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_072" file="stl/GreenGrapePeel_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_073" file="stl/GreenGrapePeel_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_074" file="stl/GreenGrapePeel_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_075" file="stl/GreenGrapePeel_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_076" file="stl/GreenGrapePeel_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_077" file="stl/GreenGrapePeel_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_078" file="stl/GreenGrapePeel_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_079" file="stl/GreenGrapePeel_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_080" file="stl/GreenGrapePeel_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_081" file="stl/GreenGrapePeel_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_082" file="stl/GreenGrapePeel_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_083" file="stl/GreenGrapePeel_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_084" file="stl/GreenGrapePeel_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_085" file="stl/GreenGrapePeel_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_086" file="stl/GreenGrapePeel_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_087" file="stl/GreenGrapePeel_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_088" file="stl/GreenGrapePeel_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_089" file="stl/GreenGrapePeel_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_090" file="stl/GreenGrapePeel_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_091" file="stl/GreenGrapePeel_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapePeel_092" file="stl/GreenGrapePeel_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk" file="obj/GreenGrapeStalk.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_001" file="stl/GreenGrapeStalk_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_002" file="stl/GreenGrapeStalk_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_003" file="stl/GreenGrapeStalk_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_004" file="stl/GreenGrapeStalk_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_005" file="stl/GreenGrapeStalk_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_006" file="stl/GreenGrapeStalk_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenGrapeStalk_007" file="stl/GreenGrapeStalk_007.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GreenGrapeFlesh" texture="T_GreenGrapeFlesh"/>
+		<material name="M_GreenGrapeSeed002" rgba="0.6880000233650208 0.715499997138977 0.545799970626831 1.0" emission="0.0"/>
+		<material name="M_GreenGrapePeel" texture="T_GreenGrapePeel"/>
+		<material name="M_GreenGrapeStalk" texture="T_GreenGrapeStalk"/>
+		<texture name="T_GreenGrapeFlesh" type="2d" file="T_GreenGrapeFlesh.png"/>
+		<texture name="T_GreenGrapePeel" type="2d" file="T_GreenGrapePeel.png"/>
+		<texture name="T_GreenGrapeStalk" type="2d" file="T_GreenGrapeStalk.png"/>
+	</asset>
+	<worldbody>
+		<body name="green_grape" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="green_grape_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.006244463846087456" pos="-3.401461799512617e-05 -3.288120205979794e-05 -0.004133031703531742" quat="-0.6291624307632446 0.2989480793476105 0.6534037590026855 0.2963919937610626" diaginertia="2.77418791938544e-07 4.677823710608209e-07 4.750807818254543e-07"/>
+				<geom name="GreenGrapeFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeFlesh" material="M_GreenGrapeFlesh" class="visual"/>
+				<geom name="GreenGrapeFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeFlesh_001" class="collision"/>
+			</body>
+			<body name="green_grape_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00016574017354287207" pos="-2.9452494345605373e-05 -3.811405258602463e-05 -0.0042781769298017025" quat="-0.628704309463501 0.2959022521972656 0.6562054753303528 0.294222891330719" diaginertia="1.2907409363549505e-08 1.8610123220241803e-08 1.8875356389003173e-08"/>
+				<geom name="GreenGrapePeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel" material="M_GreenGrapePeel" class="visual"/>
+				<geom name="GreenGrapePeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_001" class="collision"/>
+				<geom name="GreenGrapePeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_002" class="collision"/>
+				<geom name="GreenGrapePeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_003" class="collision"/>
+				<geom name="GreenGrapePeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_004" class="collision"/>
+				<geom name="GreenGrapePeel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_005" class="collision"/>
+				<geom name="GreenGrapePeel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_006" class="collision"/>
+				<geom name="GreenGrapePeel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_007" class="collision"/>
+				<geom name="GreenGrapePeel_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_008" class="collision"/>
+				<geom name="GreenGrapePeel_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_009" class="collision"/>
+				<geom name="GreenGrapePeel_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_010" class="collision"/>
+				<geom name="GreenGrapePeel_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_011" class="collision"/>
+				<geom name="GreenGrapePeel_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_012" class="collision"/>
+				<geom name="GreenGrapePeel_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_013" class="collision"/>
+				<geom name="GreenGrapePeel_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_014" class="collision"/>
+				<geom name="GreenGrapePeel_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_015" class="collision"/>
+				<geom name="GreenGrapePeel_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_016" class="collision"/>
+				<geom name="GreenGrapePeel_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_017" class="collision"/>
+				<geom name="GreenGrapePeel_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_018" class="collision"/>
+				<geom name="GreenGrapePeel_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_019" class="collision"/>
+				<geom name="GreenGrapePeel_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_020" class="collision"/>
+				<geom name="GreenGrapePeel_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_021" class="collision"/>
+				<geom name="GreenGrapePeel_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_022" class="collision"/>
+				<geom name="GreenGrapePeel_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_023" class="collision"/>
+				<geom name="GreenGrapePeel_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_024" class="collision"/>
+				<geom name="GreenGrapePeel_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_025" class="collision"/>
+				<geom name="GreenGrapePeel_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_026" class="collision"/>
+				<geom name="GreenGrapePeel_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_027" class="collision"/>
+				<geom name="GreenGrapePeel_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_028" class="collision"/>
+				<geom name="GreenGrapePeel_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_029" class="collision"/>
+				<geom name="GreenGrapePeel_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_030" class="collision"/>
+				<geom name="GreenGrapePeel_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_031" class="collision"/>
+				<geom name="GreenGrapePeel_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_032" class="collision"/>
+				<geom name="GreenGrapePeel_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_033" class="collision"/>
+				<geom name="GreenGrapePeel_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_034" class="collision"/>
+				<geom name="GreenGrapePeel_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_035" class="collision"/>
+				<geom name="GreenGrapePeel_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_036" class="collision"/>
+				<geom name="GreenGrapePeel_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_037" class="collision"/>
+				<geom name="GreenGrapePeel_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_038" class="collision"/>
+				<geom name="GreenGrapePeel_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_039" class="collision"/>
+				<geom name="GreenGrapePeel_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_040" class="collision"/>
+				<geom name="GreenGrapePeel_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_041" class="collision"/>
+				<geom name="GreenGrapePeel_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_042" class="collision"/>
+				<geom name="GreenGrapePeel_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_043" class="collision"/>
+				<geom name="GreenGrapePeel_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_044" class="collision"/>
+				<geom name="GreenGrapePeel_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_045" class="collision"/>
+				<geom name="GreenGrapePeel_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_046" class="collision"/>
+				<geom name="GreenGrapePeel_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_047" class="collision"/>
+				<geom name="GreenGrapePeel_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_048" class="collision"/>
+				<geom name="GreenGrapePeel_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_049" class="collision"/>
+				<geom name="GreenGrapePeel_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_050" class="collision"/>
+				<geom name="GreenGrapePeel_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_051" class="collision"/>
+				<geom name="GreenGrapePeel_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_052" class="collision"/>
+				<geom name="GreenGrapePeel_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_053" class="collision"/>
+				<geom name="GreenGrapePeel_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_054" class="collision"/>
+				<geom name="GreenGrapePeel_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_055" class="collision"/>
+				<geom name="GreenGrapePeel_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_056" class="collision"/>
+				<geom name="GreenGrapePeel_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_057" class="collision"/>
+				<geom name="GreenGrapePeel_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_058" class="collision"/>
+				<geom name="GreenGrapePeel_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_059" class="collision"/>
+				<geom name="GreenGrapePeel_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_060" class="collision"/>
+				<geom name="GreenGrapePeel_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_061" class="collision"/>
+				<geom name="GreenGrapePeel_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_062" class="collision"/>
+				<geom name="GreenGrapePeel_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_063" class="collision"/>
+				<geom name="GreenGrapePeel_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_064" class="collision"/>
+				<geom name="GreenGrapePeel_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_065" class="collision"/>
+				<geom name="GreenGrapePeel_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_066" class="collision"/>
+				<geom name="GreenGrapePeel_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_067" class="collision"/>
+				<geom name="GreenGrapePeel_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_068" class="collision"/>
+				<geom name="GreenGrapePeel_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_069" class="collision"/>
+				<geom name="GreenGrapePeel_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_070" class="collision"/>
+				<geom name="GreenGrapePeel_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_071" class="collision"/>
+				<geom name="GreenGrapePeel_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_072" class="collision"/>
+				<geom name="GreenGrapePeel_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_073" class="collision"/>
+				<geom name="GreenGrapePeel_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_074" class="collision"/>
+				<geom name="GreenGrapePeel_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_075" class="collision"/>
+				<geom name="GreenGrapePeel_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_076" class="collision"/>
+				<geom name="GreenGrapePeel_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_077" class="collision"/>
+				<geom name="GreenGrapePeel_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_078" class="collision"/>
+				<geom name="GreenGrapePeel_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_079" class="collision"/>
+				<geom name="GreenGrapePeel_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_080" class="collision"/>
+				<geom name="GreenGrapePeel_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_081" class="collision"/>
+				<geom name="GreenGrapePeel_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_082" class="collision"/>
+				<geom name="GreenGrapePeel_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_083" class="collision"/>
+				<geom name="GreenGrapePeel_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_084" class="collision"/>
+				<geom name="GreenGrapePeel_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_085" class="collision"/>
+				<geom name="GreenGrapePeel_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_086" class="collision"/>
+				<geom name="GreenGrapePeel_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_087" class="collision"/>
+				<geom name="GreenGrapePeel_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_088" class="collision"/>
+				<geom name="GreenGrapePeel_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_089" class="collision"/>
+				<geom name="GreenGrapePeel_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_090" class="collision"/>
+				<geom name="GreenGrapePeel_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_091" class="collision"/>
+				<geom name="GreenGrapePeel_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapePeel_092" class="collision"/>
+			</body>
+			<body name="green_grape_seed002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="8.96484652912477e-06" pos="0.0031396325211972 -5.241620965534821e-05 -0.0044299219734966755" quat="-0.3424147963523865 0.3115919232368469 0.6639232039451599 0.58725506067276" diaginertia="5.300314874501222e-12 2.734791004765924e-10 2.7555074888496733e-10"/>
+				<geom name="GreenGrapeSeed002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeSeed002" material="M_GreenGrapeSeed002" class="visual"/>
+				<geom name="GreenGrapeSeed002_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeSeed002_001" class="collision"/>
+				<geom name="GreenGrapeSeed002_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeSeed002_002" class="collision"/>
+			</body>
+			<body name="green_grape_stalk" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="4.593765697791241e-05" pos="-9.0691217337735e-05 0.0005510400515049696 0.010631775483489037" quat="0.525123119354248 0.4696272015571594 0.5025424957275391 -0.5011457204818726" diaginertia="1.1328190469006572e-10 5.47817347040791e-09 5.506998412840858e-09"/>
+				<geom name="GreenGrapeStalk" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk" material="M_GreenGrapeStalk" class="visual"/>
+				<geom name="GreenGrapeStalk_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_001" class="collision"/>
+				<geom name="GreenGrapeStalk_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_002" class="collision"/>
+				<geom name="GreenGrapeStalk_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_003" class="collision"/>
+				<geom name="GreenGrapeStalk_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_004" class="collision"/>
+				<geom name="GreenGrapeStalk_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_005" class="collision"/>
+				<geom name="GreenGrapeStalk_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_006" class="collision"/>
+				<geom name="GreenGrapeStalk_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenGrapeStalk_007" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

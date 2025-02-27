@@ -1,0 +1,1558 @@
+<?xml version="1.0" ?>
+<robot name="round_red_onion" version="1.0">
+  <link name="round_red_onion"/>
+  <joint name="round_red_onion_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_flesh"/>
+  </joint>
+  <link name="round_red_onion_flesh">
+    <inertial>
+      <origin xyz="-9.430224379158858e-10 -3.4406981708201556e-09 -0.004282635636627674" rpy="-1.9215067368349992e-05 -8.803509444987867e-06 -1.01655113697052"/>
+      <mass value="0.19978392124176025"/>
+      <inertia ixx="0.00016624940326437354" ixy="0.0" ixz="0.0" iyy="0.00016624940326437354" iyz="0.0" izz="0.00016790968948043883"/>
+    </inertial>
+    <visual name="RoundRedOnionFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionFlesh_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionFlesh_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_peel008_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_peel008"/>
+  </joint>
+  <link name="round_red_onion_peel008">
+    <inertial>
+      <origin xyz="1.1130955357430139e-07 -1.8372327303950442e-07 -0.014978798106312752" rpy="2.583205223083496 -1.570783019065857 2.4179770946502686"/>
+      <mass value="2.9334103601286188e-05"/>
+      <inertia ixx="1.561483387035878e-09" ixy="0.0" ixz="0.0" iyy="1.5972901223904046e-08" iyz="0.0" izz="1.597291543475876e-08"/>
+    </inertial>
+    <visual name="RoundRedOnionPeel008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionPeel008.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionPeel008_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel008_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel008_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_root_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_root"/>
+  </joint>
+  <link name="round_red_onion_root">
+    <inertial>
+      <origin xyz="1.8428591985752973e-09 3.0256359639935226e-09 -0.04717503860592842" rpy="0.9105537533760071 -1.570796251296997 0.0"/>
+      <mass value="0.0006522976909764111"/>
+      <inertia ixx="5.194587515688909e-08" ixy="0.0" ixz="0.0" iyy="1.4779852790525183e-06" iyz="0.0" izz="1.4779852790525183e-06"/>
+    </inertial>
+    <visual name="RoundRedOnionRoot">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionRoot.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionRoot_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionRoot_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_peel005_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_peel005"/>
+  </joint>
+  <link name="round_red_onion_peel005">
+    <inertial>
+      <origin xyz="-2.582613092272368e-07 -3.9575655819135136e-07 -0.004626859445124865" rpy="1.0762022733688354 1.5707741975784302 -2.305161237716675"/>
+      <mass value="0.00011828869901364669"/>
+      <inertia ixx="5.2994845844978045e-08" ixy="0.0" ixz="0.0" iyy="9.033563941329703e-08" iyz="0.0" izz="9.033576731098947e-08"/>
+    </inertial>
+    <visual name="RoundRedOnionPeel005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionPeel005.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionPeel005_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel005_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel005_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_bud_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_bud"/>
+  </joint>
+  <link name="round_red_onion_bud">
+    <inertial>
+      <origin xyz="1.7110287631183496e-09 -1.235531010834734e-09 -0.04156900942325592" rpy="-1.1824828386306763 -1.5707963705062866 0.0"/>
+      <mass value="9.744115959620103e-05"/>
+      <inertia ixx="3.098941936396926e-10" ixy="0.0" ixz="0.0" iyy="1.692219626647784e-07" iyz="0.0" izz="1.692219626647784e-07"/>
+    </inertial>
+    <visual name="RoundRedOnionBud">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionBud.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionBud_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionBud_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_peel007_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_peel007"/>
+  </joint>
+  <link name="round_red_onion_peel007">
+    <inertial>
+      <origin xyz="-1.3379947461089614e-07 -2.1877561096061982e-07 -0.006625298876315355" rpy="-1.6369297504425049 -1.5707920789718628 1.424505352973938"/>
+      <mass value="6.332781777018681e-05"/>
+      <inertia ixx="9.836437442345414e-09" ixy="0.0" ixz="0.0" iyy="3.659147296275478e-08" iyz="0.0" izz="3.6591600860447215e-08"/>
+    </inertial>
+    <visual name="RoundRedOnionPeel007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionPeel007.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionPeel007_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel007_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel007_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="round_red_onion_peel001_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="round_red_onion"/>
+    <child link="round_red_onion_peel001"/>
+  </joint>
+  <link name="round_red_onion_peel001">
+    <inertial>
+      <origin xyz="5.563019271903613e-07 3.2689945328456815e-07 -0.0031442027539014816" rpy="-0.00011134990927530453 0.0008530387422069907 -2.095768690109253"/>
+      <mass value="0.00025876789004541934"/>
+      <inertia ixx="3.524933447351941e-07" ixy="0.0" ixz="0.0" iyy="3.5249618690613715e-07" iyz="0.0" izz="3.672545858535159e-07"/>
+    </inertial>
+    <visual name="RoundRedOnionPeel001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/obj/RoundRedOnionPeel001.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoundRedOnionPeel001_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoundRedOnionPeel001_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://round_red_onion/meshes/stl/RoundRedOnionPeel001_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

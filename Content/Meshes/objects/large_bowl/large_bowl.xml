@@ -1,0 +1,117 @@
+<?xml version="1.0" ?>
+<mujoco model="large_bowl">
+	<compiler meshdir="large_bowl/meshes" texturedir="large_bowl/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="BowlLargeSize" file="stl/BowlLargeSize.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_001" file="stl/BowlLargeSize_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_002" file="stl/BowlLargeSize_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_003" file="stl/BowlLargeSize_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_004" file="stl/BowlLargeSize_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_005" file="stl/BowlLargeSize_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_006" file="stl/BowlLargeSize_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_007" file="stl/BowlLargeSize_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_008" file="stl/BowlLargeSize_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_009" file="stl/BowlLargeSize_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_010" file="stl/BowlLargeSize_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_011" file="stl/BowlLargeSize_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_012" file="stl/BowlLargeSize_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_013" file="stl/BowlLargeSize_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_014" file="stl/BowlLargeSize_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_015" file="stl/BowlLargeSize_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_016" file="stl/BowlLargeSize_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_017" file="stl/BowlLargeSize_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_018" file="stl/BowlLargeSize_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_019" file="stl/BowlLargeSize_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_020" file="stl/BowlLargeSize_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_021" file="stl/BowlLargeSize_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_022" file="stl/BowlLargeSize_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_023" file="stl/BowlLargeSize_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_024" file="stl/BowlLargeSize_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_025" file="stl/BowlLargeSize_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_026" file="stl/BowlLargeSize_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_027" file="stl/BowlLargeSize_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_028" file="stl/BowlLargeSize_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_029" file="stl/BowlLargeSize_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_030" file="stl/BowlLargeSize_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_031" file="stl/BowlLargeSize_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_032" file="stl/BowlLargeSize_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_033" file="stl/BowlLargeSize_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_034" file="stl/BowlLargeSize_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_035" file="stl/BowlLargeSize_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_036" file="stl/BowlLargeSize_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_037" file="stl/BowlLargeSize_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_038" file="stl/BowlLargeSize_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_039" file="stl/BowlLargeSize_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_040" file="stl/BowlLargeSize_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_041" file="stl/BowlLargeSize_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_042" file="stl/BowlLargeSize_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_043" file="stl/BowlLargeSize_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_044" file="stl/BowlLargeSize_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_045" file="stl/BowlLargeSize_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_046" file="stl/BowlLargeSize_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="BowlLargeSize_047" file="stl/BowlLargeSize_047.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_BowlLargeSize" rgba="0.843500018119812 0.843500018119812 0.843500018119812 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="large_bowl" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.7227948904037476" pos="-4.625593987839238e-07 -2.708555868480289e-08 -0.01416116114705801" quat="-0.6723506450653076 8.016248216335953e-07 -7.032417101981991e-07 0.7402328252792358" diaginertia="0.003389970865100622 0.003389986464753747 0.0052571543492376804"/>
+			<geom name="BowlLargeSize" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize" material="M_BowlLargeSize" class="visual"/>
+			<geom name="BowlLargeSize_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_001" class="collision"/>
+			<geom name="BowlLargeSize_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_002" class="collision"/>
+			<geom name="BowlLargeSize_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_003" class="collision"/>
+			<geom name="BowlLargeSize_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_004" class="collision"/>
+			<geom name="BowlLargeSize_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_005" class="collision"/>
+			<geom name="BowlLargeSize_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_006" class="collision"/>
+			<geom name="BowlLargeSize_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_007" class="collision"/>
+			<geom name="BowlLargeSize_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_008" class="collision"/>
+			<geom name="BowlLargeSize_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_009" class="collision"/>
+			<geom name="BowlLargeSize_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_010" class="collision"/>
+			<geom name="BowlLargeSize_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_011" class="collision"/>
+			<geom name="BowlLargeSize_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_012" class="collision"/>
+			<geom name="BowlLargeSize_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_013" class="collision"/>
+			<geom name="BowlLargeSize_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_014" class="collision"/>
+			<geom name="BowlLargeSize_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_015" class="collision"/>
+			<geom name="BowlLargeSize_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_016" class="collision"/>
+			<geom name="BowlLargeSize_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_017" class="collision"/>
+			<geom name="BowlLargeSize_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_018" class="collision"/>
+			<geom name="BowlLargeSize_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_019" class="collision"/>
+			<geom name="BowlLargeSize_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_020" class="collision"/>
+			<geom name="BowlLargeSize_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_021" class="collision"/>
+			<geom name="BowlLargeSize_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_022" class="collision"/>
+			<geom name="BowlLargeSize_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_023" class="collision"/>
+			<geom name="BowlLargeSize_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_024" class="collision"/>
+			<geom name="BowlLargeSize_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_025" class="collision"/>
+			<geom name="BowlLargeSize_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_026" class="collision"/>
+			<geom name="BowlLargeSize_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_027" class="collision"/>
+			<geom name="BowlLargeSize_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_028" class="collision"/>
+			<geom name="BowlLargeSize_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_029" class="collision"/>
+			<geom name="BowlLargeSize_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_030" class="collision"/>
+			<geom name="BowlLargeSize_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_031" class="collision"/>
+			<geom name="BowlLargeSize_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_032" class="collision"/>
+			<geom name="BowlLargeSize_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_033" class="collision"/>
+			<geom name="BowlLargeSize_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_034" class="collision"/>
+			<geom name="BowlLargeSize_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_035" class="collision"/>
+			<geom name="BowlLargeSize_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_036" class="collision"/>
+			<geom name="BowlLargeSize_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_037" class="collision"/>
+			<geom name="BowlLargeSize_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_038" class="collision"/>
+			<geom name="BowlLargeSize_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_039" class="collision"/>
+			<geom name="BowlLargeSize_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_040" class="collision"/>
+			<geom name="BowlLargeSize_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_041" class="collision"/>
+			<geom name="BowlLargeSize_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_042" class="collision"/>
+			<geom name="BowlLargeSize_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_043" class="collision"/>
+			<geom name="BowlLargeSize_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_044" class="collision"/>
+			<geom name="BowlLargeSize_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_045" class="collision"/>
+			<geom name="BowlLargeSize_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_046" class="collision"/>
+			<geom name="BowlLargeSize_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="BowlLargeSize_047" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

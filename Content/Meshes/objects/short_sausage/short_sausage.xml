@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<mujoco model="short_sausage">
+	<compiler meshdir="short_sausage/meshes" texturedir="short_sausage/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="SausageShort" file="obj/SausageShort.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="SausageShort_001" file="stl/SausageShort_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_SausageShort" texture="T_SausageShort"/>
+		<texture name="T_SausageShort" type="2d" file="T_SausageShort.png"/>
+	</asset>
+	<worldbody>
+		<body name="short_sausage" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.1019214615225792" pos="-0.001037427457049489 -0.00032028325949795544 -0.00020861737721133977" quat="0.02437715418636799 0.9997003078460693 0.000674586626701057 -0.002155631547793746" diaginertia="9.97260030999314e-06 0.00022951721621211618 0.00022983380767982453"/>
+			<geom name="SausageShort" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="SausageShort" material="M_SausageShort" class="visual"/>
+			<geom name="SausageShort_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="SausageShort_001" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

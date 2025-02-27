@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<mujoco model="green_avocado">
+	<compiler meshdir="green_avocado/meshes" texturedir="green_avocado/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="GreenAvocadoFlesh" file="obj/GreenAvocadoFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenAvocadoFlesh_001" file="stl/GreenAvocadoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenAvocadoPeel" file="obj/GreenAvocadoPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenAvocadoPeel_001" file="stl/GreenAvocadoPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenAvocadoSeed" file="obj/GreenAvocadoSeed.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="GreenAvocadoSeed_001" file="stl/GreenAvocadoSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_GreenAvocadoFlesh" texture="T_GreenAvocadoFlesh"/>
+		<material name="M_GreenAvocadoPeel" texture="T_GreenAvocadoPeel"/>
+		<material name="M_GreenAvocadoSeed" texture="T_GreenAvocadoSeed"/>
+		<texture name="T_GreenAvocadoFlesh" type="2d" file="T_GreenAvocadoFlesh.png"/>
+		<texture name="T_GreenAvocadoPeel" type="2d" file="T_GreenAvocadoPeel.png"/>
+		<texture name="T_GreenAvocadoSeed" type="2d" file="T_GreenAvocadoSeed.png"/>
+	</asset>
+	<worldbody>
+		<body name="green_avocado" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="green_avocado_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.28678184747695923" pos="-0.005291017238050699 -3.196139459760161e-06 -0.002337536308914423" quat="-0.618584394454956 0.7632953524589539 -0.1131613478064537 -0.1480812430381775" diaginertia="0.00015632176655344665 0.00024222787760663778 0.0002460239629726857"/>
+				<geom name="GreenAvocadoFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoFlesh" material="M_GreenAvocadoFlesh" class="visual"/>
+				<geom name="GreenAvocadoFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoFlesh_001" class="collision"/>
+			</body>
+			<body name="green_avocado_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.024663489311933517" pos="-0.010412807576358318 -0.00015772173355799168 -0.00025228719459846616" quat="0.09759202599525452 0.9948260188102722 0.006190701853483915 -0.02754342555999756" diaginertia="3.0250148483901285e-06 5.994363618810894e-06 6.129013854661025e-06"/>
+				<geom name="GreenAvocadoSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoSeed" material="M_GreenAvocadoSeed" class="visual"/>
+				<geom name="GreenAvocadoSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoSeed_001" class="collision"/>
+			</body>
+			<body name="green_avocado_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.61742103099823" pos="-0.005436278879642487 7.965296390466392e-06 -0.002286098198965192" quat="-0.6148369908332825 0.76626056432724 -0.11265281587839127 -0.14876003563404083" diaginertia="0.00035311735700815916 0.000547895731870085 0.000556000682990998"/>
+				<geom name="GreenAvocadoPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoPeel" material="M_GreenAvocadoPeel" class="visual"/>
+				<geom name="GreenAvocadoPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="GreenAvocadoPeel_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

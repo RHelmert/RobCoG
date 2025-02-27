@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<mujoco model="table_knife">
+	<compiler meshdir="table_knife/meshes" texturedir="table_knife/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="TableKnife" file="obj/TableKnife.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TableKnife_001" file="stl/TableKnife_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_TableKnife" texture="T_TableKnife"/>
+		<texture name="T_TableKnife" type="2d" file="T_TableKnife.png"/>
+	</asset>
+	<worldbody>
+		<body name="table_knife" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.14500227570533752" pos="-0.05178093910217285 0.00212700548581779 3.767759153561201e-06" quat="0.9999305009841919 0.0005745996022596955 1.0600762834656052e-05 -0.011776793748140335" diaginertia="4.212003659631591e-06 0.0009561760234646499 0.0009594511357136071"/>
+			<geom name="TableKnife" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TableKnife" material="M_TableKnife" class="visual"/>
+			<geom name="TableKnife_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TableKnife_001" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

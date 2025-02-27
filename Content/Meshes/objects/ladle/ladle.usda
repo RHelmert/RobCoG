@@ -1,0 +1,252 @@
+#usda 1.0
+(
+    defaultPrim = "ladle"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "ladle" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.000001614781, 0.00009447766, 0.00009537346)
+    float mujoco:body:inertial:mass = 0.02745803
+    point3f mujoco:body:inertial:pos = (0.030248638, -0.000015719872, -0.0021121476)
+    quatf mujoco:body:inertial:quat = (0.99999243, 0.0013719808, 0.003645502, -0.00012974154)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (0.030248638, -0.000015719872, -0.0021121476)
+    float3 physics:diagonalInertia = (0.000001614781, 0.00009447766, 0.00009537346)
+    float physics:mass = 0.02745803
+    quatf physics:principalAxes = (0.99999243, 0.0013719808, 0.003645502, -0.00012974154)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.000001614781
+    float urdf:link:inertial:inertia:iyy = 0.00009447766
+    float urdf:link:inertial:inertia:izz = 0.00009537346
+    float urdf:link:inertial:mass = 0.02745803
+    float3 urdf:link:inertial:origin:rpy = (0.002743071, 0.007291369, -0.00024948464)
+    point3f urdf:link:inertial:origin:xyz = (0.030248638, -0.000015719872, -0.0021121476)
+
+    def Mesh "Ladle" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle.usda@</Ladle>
+    )
+    {
+        rel material:binding = </ladle/Ladle/Materials/M_Ladle>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_Ladle>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/obj/Ladle.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_Ladle" (
+                prepend references = @./ladle/materials/usd/M_Ladle.usda@</M_Ladle>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "Ladle_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_001.usda@</Ladle_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Ladle_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_002.usda@</Ladle_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Ladle_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_003.usda@</Ladle_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Ladle_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_004.usda@</Ladle_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Ladle_005" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_005.usda@</Ladle_005>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_005>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_005.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Ladle_006" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./ladle/meshes/usd/Ladle_006.usda@</Ladle_006>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Ladle_006>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./ladle/meshes/stl/Ladle_006.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "ladle"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "ladle"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Ladle"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_001"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_002"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_003"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_004"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_005"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Ladle_006"
+            {
+                asset mujoco:mesh:file = @ladle/meshes/stl/Ladle_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Ladle"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6601, 0.6601, 0.6601, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

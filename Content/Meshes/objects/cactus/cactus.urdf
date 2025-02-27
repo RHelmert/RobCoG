@@ -1,0 +1,3304 @@
+<?xml version="1.0" ?>
+<robot name="cactus" version="1.0">
+  <link name="cactus"/>
+  <joint name="cactus_stones_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cactus"/>
+    <child link="cactus_stones"/>
+  </joint>
+  <link name="cactus_stones">
+    <inertial>
+      <origin xyz="-0.0054919603280723095 0.0009596306481398642 -0.0023847485426813364" rpy="0.00404219888150692 0.003603392979130149 -1.9186514616012573"/>
+      <mass value="0.06659089773893356"/>
+      <inertia ixx="0.000215078704059124" ixy="0.0" ixz="0.0" iyy="0.0002482115523889661" iyz="0.0" izz="0.00046175450552254915"/>
+    </inertial>
+    <visual name="CactusStones">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/obj/CactusStones.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CactusStones_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusStones_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusStones_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cactus_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cactus"/>
+    <child link="cactus_flesh"/>
+  </joint>
+  <link name="cactus_flesh">
+    <inertial>
+      <origin xyz="-0.012464677914977074 0.017214708030223846 0.06064481660723686" rpy="1.3507274389266968 -1.006643295288086 1.9946352243423462"/>
+      <mass value="2.8071327209472656"/>
+      <inertia ixx="0.010557295754551888" ixy="0.0" ixz="0.0" iyy="0.02379077859222889" iyz="0.0" izz="0.024638298898935318"/>
+    </inertial>
+    <visual name="CactusFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/obj/CactusFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CactusFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_097">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_097.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_098">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_098.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_099">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_099.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_100">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_100.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_101">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_101.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_102">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_102.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_103">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_103.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_104">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_104.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_105">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_105.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_106">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_106.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_107">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_107.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_108">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_108.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_109">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_109.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_110">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_110.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_111">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_111.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_112">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_112.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_113">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_113.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_114">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_114.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_115">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_115.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_116">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_116.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_117">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_117.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_118">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_118.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_119">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_119.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_120">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_120.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_121">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_121.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_122">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_122.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_123">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_123.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_124">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_124.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_125">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_125.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_126">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_126.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_127">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_127.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_128">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_128.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_129">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_129.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_130">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_130.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_131">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_131.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_132">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_132.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_133">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_133.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_134">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_134.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_135">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_135.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_136">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_136.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_137">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_137.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_138">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_138.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_139">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_139.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_140">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_140.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_141">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_141.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_142">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_142.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_143">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_143.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_144">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_144.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_145">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_145.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_146">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_146.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_147">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_147.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_148">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_148.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_149">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_149.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_150">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_150.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_151">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_151.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_152">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_152.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_153">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_153.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_154">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_154.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_155">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_155.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_156">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_156.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_157">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_157.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_158">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_158.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_159">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_159.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_160">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_160.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_161">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_161.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_162">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_162.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_163">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_163.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_164">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_164.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_165">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_165.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_166">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_166.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_167">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_167.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_168">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_168.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_169">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_169.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_170">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_170.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_171">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_171.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_172">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_172.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_173">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_173.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_174">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_174.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_175">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_175.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_176">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_176.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_177">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_177.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_178">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_178.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_179">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_179.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_180">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_180.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_181">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_181.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_182">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_182.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_183">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_183.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_184">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_184.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_185">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_185.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_186">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_186.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_187">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_187.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_188">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_188.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_189">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_189.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_190">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_190.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_191">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_191.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_192">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_192.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_193">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_193.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_194">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_194.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_195">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_195.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_196">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_196.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_197">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_197.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_198">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_198.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_199">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_199.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_200">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_200.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_201">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_201.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_202">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_202.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_203">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_203.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_204">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_204.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_205">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_205.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_206">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_206.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_207">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_207.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_208">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_208.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_209">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_209.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_210">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_210.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_211">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_211.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_212">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_212.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_213">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_213.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_214">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_214.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_215">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_215.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_216">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_216.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_217">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_217.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_218">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_218.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_219">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_219.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_220">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_220.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_221">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_221.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_222">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_222.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_223">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_223.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_224">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_224.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_225">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_225.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_226">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_226.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_227">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_227.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_228">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_228.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_229">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_229.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_230">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_230.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlesh_231">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlesh_231.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cactus_soil_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cactus"/>
+    <child link="cactus_soil"/>
+  </joint>
+  <link name="cactus_soil">
+    <inertial>
+      <origin xyz="0.006265407893806696 0.012143868952989578 0.00044995840289629996" rpy="0.002744236495345831 0.0035693147219717503 -1.0417490005493164"/>
+      <mass value="0.04591860994696617"/>
+      <inertia ixx="7.019563054200262e-05" ixy="0.0" ixz="0.0" iyy="0.00010270888014929369" iyz="0.0" izz="0.0001728224742691964"/>
+    </inertial>
+    <visual name="CactusSoil">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/obj/CactusSoil.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CactusSoil_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusSoil_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusSoil_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusSoil_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusSoil_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusSoil_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusSoil_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusSoil_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cactus_leaf_thorn_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cactus"/>
+    <child link="cactus_leaf_thorn"/>
+  </joint>
+  <link name="cactus_leaf_thorn">
+    <inertial>
+      <origin xyz="-0.011808937415480614 0.015403669327497482 0.0706799253821373" rpy="1.154046654701233 -1.0629810094833374 2.00465726852417"/>
+      <mass value="0.026943473145365715"/>
+      <inertia ixx="0.0001564681442687288" ixy="0.0" ixz="0.0" iyy="0.00030286808032542467" iyz="0.0" izz="0.0003107073134742677"/>
+    </inertial>
+    <visual name="CactusLeafThorn">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/obj/CactusLeafThorn.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CactusLeafThorn_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_097">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_097.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_098">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_098.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_099">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_099.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_100">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_100.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_101">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_101.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_102">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_102.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_103">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_103.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_104">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_104.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_105">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_105.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_106">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_106.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_107">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_107.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_108">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_108.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_109">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_109.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_110">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_110.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_111">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_111.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_112">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_112.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_113">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_113.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_114">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_114.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_115">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_115.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_116">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_116.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_117">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_117.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_118">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_118.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_119">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_119.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_120">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_120.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_121">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_121.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_122">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_122.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_123">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_123.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_124">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_124.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_125">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_125.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_126">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_126.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_127">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_127.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_128">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_128.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_129">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_129.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_130">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_130.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_131">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_131.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_132">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_132.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_133">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_133.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_134">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_134.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_135">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_135.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_136">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_136.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_137">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_137.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_138">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_138.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_139">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_139.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_140">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_140.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_141">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_141.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_142">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_142.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_143">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_143.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_144">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_144.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_145">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_145.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_146">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_146.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_147">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_147.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_148">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_148.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_149">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_149.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_150">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_150.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_151">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_151.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_152">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_152.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_153">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_153.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_154">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_154.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_155">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_155.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_156">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_156.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_157">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_157.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_158">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_158.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_159">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_159.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_160">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_160.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_161">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_161.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_162">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_162.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_163">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_163.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_164">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_164.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_165">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_165.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_166">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_166.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_167">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_167.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_168">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_168.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_169">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_169.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_170">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_170.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_171">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_171.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_172">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_172.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_173">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_173.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_174">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_174.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_175">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_175.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_176">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_176.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_177">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_177.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_178">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_178.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_179">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_179.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_180">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_180.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_181">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_181.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_182">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_182.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_183">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_183.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_184">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_184.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_185">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_185.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_186">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_186.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_187">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_187.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_188">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_188.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_189">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_189.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_190">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_190.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_191">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_191.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_192">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_192.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_193">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_193.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_194">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_194.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_195">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_195.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_196">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_196.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_197">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_197.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_198">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_198.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_199">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_199.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_200">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_200.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_201">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_201.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_202">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_202.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_203">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_203.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_204">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_204.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_205">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_205.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_206">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_206.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_207">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_207.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusLeafThorn_208">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusLeafThorn_208.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cactus_flowerpot_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cactus"/>
+    <child link="cactus_flowerpot"/>
+  </joint>
+  <link name="cactus_flowerpot">
+    <inertial>
+      <origin xyz="-0.003254964714869857 0.005445556249469519 -0.12148907035589218" rpy="0.012972895987331867 -1.511803150177002 -1.0305936336517334"/>
+      <mass value="0.6012134552001953"/>
+      <inertia ixx="0.006257921922951937" ixy="0.0" ixz="0.0" iyy="0.014134536497294903" iyz="0.0" izz="0.01413770392537117"/>
+    </inertial>
+    <visual name="CactusFlowerpot">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/obj/CactusFlowerpot.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CactusFlowerpot_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CactusFlowerpot_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cactus/meshes/stl/CactusFlowerpot_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

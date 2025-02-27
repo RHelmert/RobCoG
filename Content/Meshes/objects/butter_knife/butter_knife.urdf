@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="butter_knife" version="1.0">
+  <link name="butter_knife">
+    <inertial>
+      <origin xyz="-0.039606545120477676 0.00357587868347764 -3.3749101291391526e-09" rpy="-1.4680178992421133e-06 3.9067265333869727e-07 -0.025522448122501373"/>
+      <mass value="0.10201587527990341"/>
+      <inertia ixx="2.9445216114254436e-06" ixy="0.0" ixz="0.0" iyy="0.0006860356661491096" iyz="0.0" izz="0.000688666186761111"/>
+    </inertial>
+    <visual name="ButterKnife">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://butter_knife/meshes/obj/ButterKnife.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="ButterKnife_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://butter_knife/meshes/stl/ButterKnife_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="ButterKnife_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://butter_knife/meshes/stl/ButterKnife_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

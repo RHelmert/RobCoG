@@ -1,0 +1,1468 @@
+<?xml version="1.0" ?>
+<robot name="green_tomato" version="1.0">
+  <link name="green_tomato"/>
+  <joint name="green_tomato_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_tomato"/>
+    <child link="green_tomato_peel"/>
+  </joint>
+  <link name="green_tomato_peel">
+    <inertial>
+      <origin xyz="2.3421271180268377e-05 0.0002766043471638113 -0.006722348742187023" rpy="0.23453810811042786 0.05567997694015503 -0.9072926044464111"/>
+      <mass value="0.0043305326253175735"/>
+      <inertia ixx="6.3864822550385725e-06" ixy="0.0" ixz="0.0" iyy="6.440819106501294e-06" iyz="0.0" izz="6.888409643579507e-06"/>
+    </inertial>
+    <visual name="GreenTomatoPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/obj/GreenTomatoPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenTomatoPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPeel_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPeel_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPeel_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_tomato_pedicel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_tomato"/>
+    <child link="green_tomato_pedicel"/>
+  </joint>
+  <link name="green_tomato_pedicel">
+    <inertial>
+      <origin xyz="0.0009499540319666266 0.001511098351329565 0.03419901430606842" rpy="-1.0571948289871216 1.5166665315628052 -2.12725567817688"/>
+      <mass value="0.0002582797023933381"/>
+      <inertia ixx="6.191254176002303e-10" ixy="0.0" ixz="0.0" iyy="3.153175782699691e-07" iyz="0.0" izz="3.1542168699161266e-07"/>
+    </inertial>
+    <visual name="GreenTomatoPedicel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/obj/GreenTomatoPedicel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenTomatoPedicel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPedicel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPedicel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPedicel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoPedicel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoPedicel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_tomato_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_tomato"/>
+    <child link="green_tomato_seed"/>
+  </joint>
+  <link name="green_tomato_seed">
+    <inertial>
+      <origin xyz="-0.00046470543020404875 0.00045744061935693026 -0.0091623580083251" rpy="9.789049363462254e-05 -0.07772723585367203 -0.7787336111068726"/>
+      <mass value="0.0012272438034415245"/>
+      <inertia ixx="6.235621867745067e-07" ixy="0.0" ixz="0.0" iyy="6.24654092007404e-07" iyz="0.0" izz="7.18274293376453e-07"/>
+    </inertial>
+    <visual name="GreenTomatoSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/obj/GreenTomatoSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenTomatoSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_097">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_097.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_098">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_098.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_099">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_099.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_100">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_100.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_101">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_101.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_102">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_102.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_103">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_103.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_104">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_104.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_105">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_105.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_106">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_106.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_107">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_107.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_108">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_108.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_109">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_109.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_110">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_110.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_111">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_111.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_112">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_112.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_113">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_113.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_114">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_114.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_115">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_115.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_116">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_116.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_117">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_117.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_118">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_118.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_119">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_119.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_120">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_120.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_121">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_121.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_122">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_122.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_123">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_123.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_124">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_124.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_125">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_125.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_126">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_126.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_127">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_127.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_128">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_128.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_129">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_129.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_130">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_130.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_131">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_131.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_132">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_132.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_133">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_133.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_134">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_134.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_135">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_135.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_136">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_136.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_137">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_137.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_138">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_138.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_139">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_139.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_140">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_140.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_141">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_141.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_142">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_142.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_143">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_143.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_144">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_144.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_145">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_145.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_146">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_146.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_147">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_147.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_148">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_148.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_149">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_149.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_150">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_150.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_151">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_151.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_152">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_152.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_153">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_153.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_154">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_154.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_155">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_155.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_156">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_156.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_157">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_157.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_158">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_158.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_159">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_159.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_160">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_160.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_161">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_161.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_162">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_162.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_163">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_163.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_164">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_164.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_165">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_165.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_166">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_166.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_167">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_167.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_168">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_168.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_169">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_169.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_170">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_170.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_171">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_171.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_172">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_172.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_173">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_173.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_174">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_174.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_175">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_175.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_176">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_176.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_177">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_177.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_178">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_178.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_179">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_179.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_180">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_180.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_181">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_181.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_182">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_182.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_183">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_183.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_184">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_184.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_185">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_185.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_186">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_186.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_187">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_187.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_188">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_188.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_189">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_189.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_190">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_190.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_191">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_191.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_192">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_192.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_193">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_193.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_194">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_194.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_195">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_195.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_196">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_196.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoSeed_197">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoSeed_197.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_tomato_calyx_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_tomato"/>
+    <child link="green_tomato_calyx"/>
+  </joint>
+  <link name="green_tomato_calyx">
+    <inertial>
+      <origin xyz="-0.000531653524376452 0.0005663327174261212 0.02999572642147541" rpy="-1.1563092470169067 -1.543967604637146 2.4569687843322754"/>
+      <mass value="0.0006789519684389234"/>
+      <inertia ixx="1.2735988264012121e-07" ixy="0.0" ixz="0.0" iyy="6.637141609644459e-07" iyz="0.0" izz="6.982792797316506e-07"/>
+    </inertial>
+    <visual name="GreenTomatoCalyx">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/obj/GreenTomatoCalyx.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenTomatoCalyx_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoCalyx_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoCalyx_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="green_tomato_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="green_tomato"/>
+    <child link="green_tomato_flesh"/>
+  </joint>
+  <link name="green_tomato_flesh">
+    <inertial>
+      <origin xyz="9.203503395838197e-06 0.0002614582481328398 -0.006322771310806274" rpy="0.20405742526054382 0.041282083839178085 -0.8816045522689819"/>
+      <mass value="0.4332605004310608"/>
+      <inertia ixx="0.0003842420701403171" ixy="0.0" ixz="0.0" iyy="0.0003887317143380642" iyz="0.0" izz="0.0004259639244992286"/>
+    </inertial>
+    <visual name="GreenTomatoFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/obj/GreenTomatoFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="GreenTomatoFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoFlesh_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="GreenTomatoFlesh_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://green_tomato/meshes/stl/GreenTomatoFlesh_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

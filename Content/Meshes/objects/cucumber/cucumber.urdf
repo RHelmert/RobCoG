@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<robot name="cucumber" version="1.0">
+  <link name="cucumber"/>
+  <joint name="cucumber_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cucumber"/>
+    <child link="cucumber_seed"/>
+  </joint>
+  <link name="cucumber_seed">
+    <inertial>
+      <origin xyz="-0.012091939337551594 0.00030309162684716284 -0.0014663522597402334" rpy="1.5980526208877563 0.01898365281522274 -0.000665350875351578"/>
+      <mass value="0.00473949545994401"/>
+      <inertia ixx="5.006056085221644e-07" ixy="0.0" ixz="0.0" iyy="2.7045089154853486e-05" iyz="0.0" izz="2.7084082830697298e-05"/>
+    </inertial>
+    <visual name="CucumberSeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/obj/CucumberSeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CucumberSeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberSeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CucumberSeed_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberSeed_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CucumberSeed_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberSeed_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CucumberSeed_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberSeed_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cucumber_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cucumber"/>
+    <child link="cucumber_peel"/>
+  </joint>
+  <link name="cucumber_peel">
+    <inertial>
+      <origin xyz="0.0021707320120185614 -0.0003415114770177752 0.0005959284608252347" rpy="-1.5583218336105347 0.0008605545153841376 0.006995293777436018"/>
+      <mass value="0.01669645495712757"/>
+      <inertia ixx="7.45302349969279e-06" ixy="0.0" ixz="0.0" iyy="0.00013717271212954074" iyz="0.0" izz="0.00013771808880846947"/>
+    </inertial>
+    <visual name="CucumberPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/obj/CucumberPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CucumberPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CucumberPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cucumber_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cucumber"/>
+    <child link="cucumber_flesh"/>
+  </joint>
+  <link name="cucumber_flesh">
+    <inertial>
+      <origin xyz="0.00399218313395977 -0.00027733901515603065 -0.00025371467927470803" rpy="-1.5559056997299194 0.00015513157995883375 0.007193956058472395"/>
+      <mass value="0.4015066921710968"/>
+      <inertia ixx="9.512118413113058e-05" ixy="0.0" ixz="0.0" iyy="0.002785260323435068" iyz="0.0" izz="0.002795502543449402"/>
+    </inertial>
+    <visual name="CucumberFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/obj/CucumberFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CucumberFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CucumberFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cucumber/meshes/stl/CucumberFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

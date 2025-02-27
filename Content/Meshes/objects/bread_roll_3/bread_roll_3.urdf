@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot name="bread_roll_3" version="1.0">
+  <link name="bread_roll_3">
+    <inertial>
+      <origin xyz="-0.0012706357520073652 3.2755782740423456e-05 -0.0035513173788785934" rpy="0.01630282588303089 -0.013884957879781723 -1.4818758964538574"/>
+      <mass value="0.09935532510280609"/>
+      <inertia ixx="9.150032565230504e-05" ixy="0.0" ixz="0.0" iyy="9.983621566789225e-05" iyz="0.0" izz="0.00016606596182100475"/>
+    </inertial>
+    <visual name="BreadRoll3">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_3/meshes/obj/BreadRoll3.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="BreadRoll3_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_3/meshes/stl/BreadRoll3_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll3_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_3/meshes/stl/BreadRoll3_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll3_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_3/meshes/stl/BreadRoll3_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll3_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_3/meshes/stl/BreadRoll3_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

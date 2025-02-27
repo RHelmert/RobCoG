@@ -1,0 +1,2860 @@
+<?xml version="1.0" ?>
+<robot name="rose" version="1.0">
+  <link name="rose"/>
+  <joint name="rose_petals_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="rose"/>
+    <child link="rose_petals"/>
+  </joint>
+  <link name="rose_petals">
+    <inertial>
+      <origin xyz="-0.012381861917674541 -0.00024809391470625997 0.00022927651298232377" rpy="-0.21669892966747284 0.02037048153579235 0.016771260648965836"/>
+      <mass value="-0.16223427653312683"/>
+      <inertia ixx="9.657635928306263e-06" ixy="0.0" ixz="0.0" iyy="0.00017099553951993585" iyz="0.0" izz="0.00017224920156877488"/>
+    </inertial>
+    <visual name="RosePetals">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/obj/RosePetals.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RosePetals_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_039">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_039.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_040">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_040.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_041">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_041.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_042">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_042.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_043">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_043.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_044">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_044.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_045">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_045.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_046">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_046.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_047">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_047.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_048">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_048.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_049">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_049.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_050">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_050.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_051">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_051.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_052">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_052.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_053">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_053.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_054">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_054.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_055">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_055.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_056">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_056.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_057">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_057.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_058">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_058.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_059">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_059.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_060">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_060.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_061">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_061.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_062">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_062.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_063">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_063.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_064">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_064.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_065">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_065.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_066">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_066.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_067">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_067.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_068">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_068.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_069">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_069.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_070">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_070.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_071">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_071.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_072">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_072.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_073">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_073.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_074">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_074.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_075">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_075.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_076">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_076.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_077">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_077.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_078">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_078.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_079">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_079.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_080">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_080.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_081">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_081.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_082">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_082.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_083">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_083.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_084">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_084.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_085">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_085.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_086">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_086.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_087">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_087.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_088">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_088.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_089">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_089.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_090">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_090.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_091">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_091.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_092">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_092.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_093">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_093.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_094">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_094.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_095">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_095.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_096">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_096.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_097">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_097.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_098">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_098.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_099">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_099.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_100">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_100.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_101">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_101.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_102">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_102.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_103">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_103.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_104">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_104.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_105">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_105.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_106">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_106.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_107">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_107.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_108">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_108.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_109">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_109.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_110">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_110.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_111">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_111.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_112">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_112.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_113">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_113.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_114">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_114.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_115">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_115.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_116">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_116.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_117">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_117.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_118">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_118.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_119">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_119.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_120">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_120.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_121">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_121.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_122">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_122.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_123">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_123.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_124">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_124.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_125">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_125.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_126">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_126.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_127">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_127.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_128">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_128.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_129">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_129.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_130">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_130.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_131">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_131.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_132">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_132.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_133">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_133.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_134">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_134.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_135">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_135.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_136">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_136.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_137">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_137.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_138">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_138.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_139">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_139.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_140">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_140.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_141">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_141.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_142">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_142.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_143">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_143.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_144">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_144.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_145">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_145.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_146">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_146.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_147">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_147.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_148">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_148.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_149">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_149.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_150">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_150.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_151">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_151.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_152">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_152.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_153">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_153.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_154">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_154.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_155">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_155.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_156">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_156.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_157">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_157.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_158">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_158.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_159">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_159.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_160">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_160.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_161">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_161.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_162">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_162.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_163">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_163.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_164">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_164.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_165">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_165.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_166">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_166.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_167">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_167.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_168">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_168.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_169">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_169.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_170">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_170.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_171">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_171.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_172">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_172.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_173">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_173.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_174">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_174.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_175">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_175.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_176">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_176.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_177">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_177.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_178">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_178.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_179">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_179.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_180">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_180.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_181">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_181.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_182">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_182.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_183">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_183.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_184">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_184.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_185">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_185.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_186">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_186.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_187">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_187.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_188">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_188.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_189">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_189.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_190">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_190.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_191">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_191.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_192">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_192.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_193">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_193.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_194">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_194.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_195">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_195.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_196">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_196.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_197">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_197.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_198">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_198.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_199">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_199.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_200">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_200.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_201">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_201.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_202">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_202.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_203">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_203.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_204">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_204.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_205">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_205.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_206">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_206.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_207">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_207.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_208">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_208.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_209">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_209.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_210">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_210.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_211">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_211.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_212">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_212.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_213">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_213.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_214">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_214.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_215">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_215.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_216">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_216.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_217">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_217.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_218">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_218.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_219">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_219.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_220">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_220.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_221">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_221.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_222">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_222.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_223">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_223.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_224">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_224.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_225">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_225.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_226">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_226.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_227">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_227.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_228">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_228.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_229">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_229.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_230">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_230.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_231">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_231.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_232">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_232.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_233">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_233.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_234">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_234.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_235">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_235.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_236">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_236.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_237">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_237.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_238">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_238.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_239">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_239.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_240">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_240.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_241">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_241.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_242">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_242.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_243">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_243.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_244">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_244.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_245">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_245.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_246">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_246.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_247">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_247.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_248">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_248.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_249">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_249.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_250">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_250.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_251">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_251.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_252">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_252.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_253">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_253.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_254">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_254.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_255">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_255.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_256">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_256.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_257">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_257.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_258">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_258.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_259">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_259.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_260">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_260.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_261">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_261.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_262">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_262.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_263">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_263.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_264">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_264.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_265">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_265.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_266">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_266.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_267">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_267.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_268">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_268.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_269">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_269.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_270">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_270.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_271">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_271.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_272">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_272.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_273">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_273.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_274">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_274.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_275">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_275.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_276">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_276.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_277">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_277.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_278">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_278.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_279">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_279.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_280">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_280.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_281">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_281.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_282">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_282.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_283">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_283.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_284">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_284.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_285">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_285.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_286">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_286.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_287">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_287.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_288">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_288.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_289">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_289.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_290">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_290.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_291">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_291.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_292">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_292.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_293">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_293.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_294">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_294.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_295">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_295.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_296">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_296.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_297">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_297.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_298">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_298.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_299">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_299.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_300">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_300.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_301">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_301.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_302">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_302.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_303">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_303.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_304">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_304.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_305">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_305.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_306">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_306.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_307">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_307.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_308">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_308.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_309">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_309.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_310">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_310.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_311">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_311.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_312">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_312.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_313">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_313.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_314">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_314.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_315">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_315.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_316">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_316.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_317">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_317.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_318">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_318.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_319">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_319.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_320">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_320.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_321">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_321.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_322">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_322.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_323">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_323.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_324">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_324.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_325">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_325.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_326">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_326.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_327">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_327.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_328">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_328.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_329">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_329.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_330">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_330.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_331">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_331.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_332">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_332.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_333">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_333.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_334">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_334.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_335">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_335.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_336">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_336.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_337">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_337.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_338">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_338.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_339">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_339.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_340">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_340.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_341">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_341.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_342">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_342.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_343">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_343.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_344">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_344.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_345">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_345.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_346">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_346.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_347">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_347.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_348">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_348.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_349">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_349.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_350">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_350.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_351">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_351.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_352">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_352.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_353">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_353.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_354">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_354.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_355">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_355.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_356">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_356.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_357">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_357.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_358">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_358.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_359">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_359.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_360">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_360.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_361">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_361.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_362">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_362.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_363">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_363.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_364">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_364.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_365">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_365.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_366">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_366.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_367">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_367.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_368">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_368.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_369">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_369.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_370">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_370.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_371">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_371.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_372">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_372.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_373">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_373.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_374">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_374.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_375">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_375.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_376">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_376.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_377">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_377.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_378">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_378.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_379">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_379.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_380">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_380.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_381">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_381.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_382">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_382.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_383">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_383.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_384">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_384.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_385">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_385.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_386">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_386.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_387">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_387.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_388">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_388.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_389">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_389.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_390">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_390.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_391">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_391.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_392">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_392.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_393">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_393.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_394">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_394.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_395">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_395.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_396">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_396.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_397">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_397.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_398">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_398.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_399">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_399.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_400">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_400.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RosePetals_401">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RosePetals_401.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rose_root_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="rose"/>
+    <child link="rose_root"/>
+  </joint>
+  <link name="rose_root">
+    <inertial>
+      <origin xyz="-0.035486865788698196 -0.001700622495263815 -0.02400393970310688" rpy="-1.7019239664077759 -0.3486577868461609 -0.019315211102366447"/>
+      <mass value="0.0019441425101831555"/>
+      <inertia ixx="3.747703942735825e-07" ixy="0.0" ixz="0.0" iyy="1.3944459169579204e-05" iyz="0.0" izz="1.426479411748005e-05"/>
+    </inertial>
+    <visual name="RoseRoot">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/obj/RoseRoot.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoseRoot_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseRoot_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseRoot_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rose_calyx_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="rose"/>
+    <child link="rose_calyx"/>
+  </joint>
+  <link name="rose_calyx">
+    <inertial>
+      <origin xyz="-0.00029161220300011337 1.2120858627895359e-05 2.855518459909945e-06" rpy="-1.975377082824707 0.007835697382688522 -0.04486348107457161"/>
+      <mass value="-0.004718065727502108"/>
+      <inertia ixx="2.229966211686474e-09" ixy="0.0" ixz="0.0" iyy="9.192621064357809e-08" iyz="0.0" izz="9.23509517747334e-08"/>
+    </inertial>
+    <visual name="RoseCalyx">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/obj/RoseCalyx.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoseCalyx_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseCalyx_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseCalyx_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="rose_floral_leaf_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="rose"/>
+    <child link="rose_floral_leaf"/>
+  </joint>
+  <link name="rose_floral_leaf">
+    <inertial>
+      <origin xyz="0.03602774441242218 0.0038407198153436184 0.013242444954812527" rpy="0.8354365825653076 -0.4900538921356201 0.21940506994724274"/>
+      <mass value="0.016094328835606575"/>
+      <inertia ixx="1.7687734725768678e-05" ixy="0.0" ixz="0.0" iyy="3.072547769988887e-05" iyz="0.0" izz="4.581491157296114e-05"/>
+    </inertial>
+    <visual name="RoseFloralLeaf">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/obj/RoseFloralLeaf.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="RoseFloralLeaf_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="RoseFloralLeaf_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://rose/meshes/stl/RoseFloralLeaf_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

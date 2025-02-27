@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<mujoco model="cheese_3">
+	<compiler meshdir="cheese_3/meshes" texturedir="cheese_3/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Cheese3" file="obj/Cheese3.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Cheese3_001" file="stl/Cheese3_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Cheese3" texture="T_Cheese3"/>
+		<texture name="T_Cheese3" type="2d" file="T_Cheese3.png"/>
+	</asset>
+	<worldbody>
+		<body name="cheese_3" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="1.6199936866760254" pos="-2.4017799304942855e-08 -0.009999449364840984 -0.0020021244417876005" quat="0.9999849796295166 -0.005476128775626421 3.099311385312831e-08 1.9889981328624629e-10" diaginertia="0.0021207027602940798 0.005720313638448715 0.006894052494317293"/>
+			<geom name="Cheese3" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese3" material="M_Cheese3" class="visual"/>
+			<geom name="Cheese3_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Cheese3_001" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

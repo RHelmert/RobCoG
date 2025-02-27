@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<robot name="kitchen_knife_2" version="1.0">
+  <link name="kitchen_knife_2"/>
+  <joint name="hilt_wood_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_knife_2"/>
+    <child link="hilt_wood"/>
+  </joint>
+  <link name="hilt_wood">
+    <inertial>
+      <origin xyz="-0.09236938506364822 0.01583183743059635 9.759287422639318e-07" rpy="0.00018104600894730538 5.80947471462423e-06 -0.1463131457567215"/>
+      <mass value="0.2210218608379364"/>
+      <inertia ixx="2.4937024136306718e-05" ixy="0.0" ixz="0.0" iyy="0.0021858687978237867" iyz="0.0" izz="0.002207227284088731"/>
+    </inertial>
+    <visual name="HiltWood">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/obj/HiltWood.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HiltWood_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltWood_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltWood_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="hilt_metal_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_knife_2"/>
+    <child link="hilt_metal"/>
+  </joint>
+  <link name="hilt_metal">
+    <inertial>
+      <origin xyz="-0.08868006616830826 0.015244059264659882 -7.033761573183028e-09" rpy="-6.934171324246563e-06 7.644156596597895e-08 -0.1424315869808197"/>
+      <mass value="0.010889730416238308"/>
+      <inertia ixx="6.82629547554825e-07" ixy="0.0" ixz="0.0" iyy="0.00010160838428419083" iyz="0.0" izz="0.00010209702304564416"/>
+    </inertial>
+    <visual name="HiltMetal">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/obj/HiltMetal.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HiltMetal_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltMetal_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltMetal_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltMetal_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HiltMetal_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/HiltMetal_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="kitchen_knife_blade_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="kitchen_knife_2"/>
+    <child link="kitchen_knife_blade"/>
+  </joint>
+  <link name="kitchen_knife_blade">
+    <inertial>
+      <origin xyz="0.054740142077207565 0.0008429145091213286 5.54048847334343e-06" rpy="2.180811316065956e-05 -4.8121735744643956e-05 -0.01230570673942566"/>
+      <mass value="0.14702057838439941"/>
+      <inertia ixx="5.567731932387687e-05" ixy="0.0" ixz="0.0" iyy="0.0009264085674658418" iyz="0.0" izz="0.0009820343693718314"/>
+    </inertial>
+    <visual name="KitchenKnifeBlade">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/obj/KitchenKnifeBlade.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="KitchenKnifeBlade_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/KitchenKnifeBlade_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenKnifeBlade_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/KitchenKnifeBlade_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenKnifeBlade_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/KitchenKnifeBlade_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="KitchenKnifeBlade_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://kitchen_knife_2/meshes/stl/KitchenKnifeBlade_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,568 @@
+<?xml version="1.0" ?>
+<robot name="horticultural_scissors" version="1.0">
+  <link name="horticultural_scissors"/>
+  <joint name="horticultural_scissors_hilt_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="horticultural_scissors"/>
+    <child link="horticultural_scissors_hilt"/>
+  </joint>
+  <link name="horticultural_scissors_hilt">
+    <inertial>
+      <origin xyz="-0.016844401136040688 0.008649985305964947 -0.0025599864311516285" rpy="0.02382059022784233 -0.07266899198293686 -0.8211672902107239"/>
+      <mass value="0.06666233390569687"/>
+      <inertia ixx="3.018991083081346e-05" ixy="0.0" ixz="0.0" iyy="4.829595854971558e-05" iyz="0.0" izz="7.667651516385376e-05"/>
+    </inertial>
+    <visual name="HorticulturalScissorsHilt">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/obj/HorticulturalScissorsHilt.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HorticulturalScissorsHilt_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_028">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_028.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_029">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_029.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_030">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_030.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_031">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_031.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_032">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_032.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_033">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_033.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_034">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_034.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_035">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_035.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_036">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_036.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_037">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_037.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHilt_038">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHilt_038.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="horticultural_scissors_handle_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="horticultural_scissors"/>
+    <child link="horticultural_scissors_handle"/>
+  </joint>
+  <link name="horticultural_scissors_handle">
+    <inertial>
+      <origin xyz="0.06107820197939873 0.0029734219424426556 -0.003066655481234193" rpy="-0.00010555118933552876 0.04191133379936218 0.13891074061393738"/>
+      <mass value="0.4273143708705902"/>
+      <inertia ixx="0.0010753888636827469" ixy="0.0" ixz="0.0" iyy="0.001988837728276849" iyz="0.0" izz="0.0030460914131253958"/>
+    </inertial>
+    <visual name="HorticulturalScissorsHandle">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/obj/HorticulturalScissorsHandle.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HorticulturalScissorsHandle_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_021">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_021.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_022">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_022.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_023">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_023.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_024">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_024.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_025">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_025.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_026">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_026.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsHandle_027">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsHandle_027.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="horticultural_scissors_blade_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="horticultural_scissors"/>
+    <child link="horticultural_scissors_blade"/>
+  </joint>
+  <link name="horticultural_scissors_blade">
+    <inertial>
+      <origin xyz="-0.05413634330034256 0.007150502875447273 -0.0026331658009439707" rpy="-0.007691922131925821 -0.04812745749950409 -0.12406928092241287"/>
+      <mass value="0.10697202384471893"/>
+      <inertia ixx="2.020097781496588e-05" ixy="0.0" ixz="0.0" iyy="0.0003948468074668199" iyz="0.0" izz="0.0004120948142372072"/>
+    </inertial>
+    <visual name="HorticulturalScissorsBlade">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/obj/HorticulturalScissorsBlade.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="HorticulturalScissorsBlade_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_011">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_011.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_012">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_012.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_013">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_013.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_014">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_014.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_015">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_015.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_016">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_016.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_017">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_017.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_018">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_018.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_019">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_019.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="HorticulturalScissorsBlade_020">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://horticultural_scissors/meshes/stl/HorticulturalScissorsBlade_020.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

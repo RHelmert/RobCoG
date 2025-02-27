@@ -1,0 +1,252 @@
+#usda 1.0
+(
+    defaultPrim = "teaspoon"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "teaspoon" (
+    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+)
+{
+    float3 mujoco:body:inertial:diaginertia = (0.000002285515, 0.00012316319, 0.0001244647)
+    float mujoco:body:inertial:mass = 0.030927727
+    point3f mujoco:body:inertial:pos = (0.043387108, -0.000100864905, -0.0023903784)
+    quatf mujoco:body:inertial:quat = (0.99996793, -0.0021293531, 0.007644679, -0.0010943207)
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+    point3f physics:centerOfMass = (0.043387108, -0.000100864905, -0.0023903784)
+    float3 physics:diagonalInertia = (0.000002285515, 0.00012316319, 0.0001244647)
+    float physics:mass = 0.030927727
+    quatf physics:principalAxes = (0.99996793, -0.0021293531, 0.007644679, -0.0010943207)
+    bool physics:rigidBodyEnabled = 1
+    float urdf:link:inertial:inertia:ixx = 0.000002285515
+    float urdf:link:inertial:inertia:iyy = 0.00012316319
+    float urdf:link:inertial:inertia:izz = 0.0001244647
+    float urdf:link:inertial:mass = 0.030927727
+    float3 urdf:link:inertial:origin:rpy = (-0.0042758132, 0.015284802, -0.0022213887)
+    point3f urdf:link:inertial:origin:xyz = (0.043387108, -0.000100864905, -0.0023903784)
+
+    def Mesh "Teaspoon" (
+        prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon.usda@</Teaspoon>
+    )
+    {
+        rel material:binding = </teaspoon/Teaspoon/Materials/M_Teaspoon>
+        rel mujoco:geom:material = </mujoco/asset/materials/M_Teaspoon>
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/obj/Teaspoon.obj@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        float3 urdf:visual:origin:rpy = (0, 0, 0)
+        point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+        def Scope "Materials"
+        {
+            def Material "M_Teaspoon" (
+                prepend references = @./teaspoon/materials/usd/M_Teaspoon.usda@</M_Teaspoon>
+            )
+            {
+            }
+        }
+    }
+
+    def Mesh "Teaspoon_001" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_001.usda@</Teaspoon_001>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_001>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_001.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Teaspoon_002" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_002.usda@</Teaspoon_002>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_002>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_002.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Teaspoon_003" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_003.usda@</Teaspoon_003>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_003>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_003.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Teaspoon_004" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_004.usda@</Teaspoon_004>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_004>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_004.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Teaspoon_005" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_005.usda@</Teaspoon_005>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_005>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_005.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+
+    def Mesh "Teaspoon_006" (
+        prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+        prepend references = @./teaspoon/meshes/usd/Teaspoon_006.usda@</Teaspoon_006>
+    )
+    {
+        rel mujoco:geom:mesh = </mujoco/asset/meshes/Teaspoon_006>
+        point3f mujoco:geom:pos = (0, 0, 0)
+        quatf mujoco:geom:quat = (1, 0, 0, 0)
+        vector3f mujoco:geom:size = (1, 1, 1)
+        uniform token mujoco:geom:type = "mesh"
+        uniform token physics:approximation = "convexHull"
+        bool physics:collisionEnabled = 1
+        float[] primvars:displayOpacity = [0]
+        float3 urdf:collision:origin:rpy = (0, 0, 0)
+        point3f urdf:collision:origin:xyz = (0, 0, 0)
+        asset urdf:geometry:mesh:filename = @./teaspoon/meshes/stl/Teaspoon_006.stl@
+        float3 urdf:geometry:mesh:scale = (1, 1, 1)
+        token visibility = "invisible"
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "teaspoon"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "teaspoon"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "Teaspoon"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_001"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_002"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_003"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_004"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_005"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "Teaspoon_006"
+            {
+                asset mujoco:mesh:file = @teaspoon/meshes/stl/Teaspoon_006.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_Teaspoon"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.6649, 0.6649, 0.6649, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

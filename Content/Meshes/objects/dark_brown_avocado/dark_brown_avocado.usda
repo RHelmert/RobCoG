@@ -1,0 +1,320 @@
+#usda 1.0
+(
+    defaultPrim = "dark_brown_avocado"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "dark_brown_avocado" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "dark_brown_avocado_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00015632178, 0.000242228, 0.00024602408)
+        float mujoco:body:inertial:mass = 0.2867819
+        point3f mujoco:body:inertial:pos = (-0.005291022, -0.0000031988159, -0.0023375293)
+        quatf mujoco:body:inertial:quat = (-0.6185843, 0.7632955, -0.1131613, -0.14808114)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.005291022, -0.0000031988159, -0.0023375293)
+        float3 physics:diagonalInertia = (0.00015632178, 0.000242228, 0.00024602408)
+        float physics:mass = 0.2867819
+        quatf physics:principalAxes = (-0.6185843, 0.7632955, -0.1131613, -0.14808114)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00015632178
+        float urdf:link:inertial:inertia:iyy = 0.000242228
+        float urdf:link:inertial:inertia:izz = 0.00024602408
+        float urdf:link:inertial:mass = 0.2867819
+        float3 urdf:link:inertial:origin:rpy = (-1.7773474, 0.37477046, 0.011229982)
+        point3f urdf:link:inertial:origin:xyz = (-0.005291022, -0.0000031988159, -0.0023375293)
+
+        def Mesh "DarkBrownAvocadoFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoFlesh.usda@</DarkBrownAvocadoFlesh>
+        )
+        {
+            rel material:binding = </dark_brown_avocado/dark_brown_avocado_flesh/DarkBrownAvocadoFlesh/Materials/M_DarkBrownAvocadoFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_DarkBrownAvocadoFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/obj/DarkBrownAvocadoFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_DarkBrownAvocadoFlesh" (
+                    prepend references = @./dark_brown_avocado/materials/usd/M_DarkBrownAvocadoFlesh.usda@</M_DarkBrownAvocadoFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "DarkBrownAvocadoFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoFlesh_001.usda@</DarkBrownAvocadoFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/stl/DarkBrownAvocadoFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "dark_brown_avocado_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0003531175, 0.00054789585, 0.0005560009)
+        float mujoco:body:inertial:mass = 0.61742115
+        point3f mujoco:body:inertial:pos = (-0.005436281, 0.0000079646725, -0.0022861063)
+        quatf mujoco:body:inertial:quat = (-0.61483794, 0.7662598, -0.112652965, -0.14875989)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.005436281, 0.0000079646725, -0.0022861063)
+        float3 physics:diagonalInertia = (0.0003531175, 0.00054789585, 0.0005560009)
+        float physics:mass = 0.61742115
+        quatf physics:principalAxes = (-0.61483794, 0.7662598, -0.112652965, -0.14875989)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0003531175
+        float urdf:link:inertial:inertia:iyy = 0.00054789585
+        float urdf:link:inertial:inertia:izz = 0.0005560009
+        float urdf:link:inertial:mass = 0.61742115
+        float3 urdf:link:inertial:origin:rpy = (-1.787103, 0.37524888, 0.01105288)
+        point3f urdf:link:inertial:origin:xyz = (-0.005436281, 0.0000079646725, -0.0022861063)
+
+        def Mesh "DarkBrownAvocadoPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoPeel.usda@</DarkBrownAvocadoPeel>
+        )
+        {
+            rel material:binding = </dark_brown_avocado/dark_brown_avocado_peel/DarkBrownAvocadoPeel/Materials/M_DarkBrownAvocadoPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_DarkBrownAvocadoPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/obj/DarkBrownAvocadoPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_DarkBrownAvocadoPeel" (
+                    prepend references = @./dark_brown_avocado/materials/usd/M_DarkBrownAvocadoPeel.usda@</M_DarkBrownAvocadoPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "DarkBrownAvocadoPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoPeel_001.usda@</DarkBrownAvocadoPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/stl/DarkBrownAvocadoPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "dark_brown_avocado_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000030250164, 0.0000059943727, 0.000006129023)
+        float mujoco:body:inertial:mass = 0.024663497
+        point3f mujoco:body:inertial:pos = (-0.01041282, -0.00015773744, -0.00025228964)
+        quatf mujoco:body:inertial:quat = (0.097590275, 0.9948262, 0.006191424, -0.027543193)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.01041282, -0.00015773744, -0.00025228964)
+        float3 physics:diagonalInertia = (0.0000030250164, 0.0000059943727, 0.000006129023)
+        float physics:mass = 0.024663497
+        quatf physics:principalAxes = (0.097590275, 0.9948262, 0.006191424, -0.027543193)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000030250164
+        float urdf:link:inertial:inertia:iyy = 0.0000059943727
+        float urdf:link:inertial:inertia:izz = 0.000006129023
+        float urdf:link:inertial:mass = 0.024663497
+        float3 urdf:link:inertial:origin:rpy = (2.9462175, 0.05603915, 0.0069538583)
+        point3f urdf:link:inertial:origin:xyz = (-0.01041282, -0.00015773744, -0.00025228964)
+
+        def Mesh "DarkBrownAvocadoSeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoSeed.usda@</DarkBrownAvocadoSeed>
+        )
+        {
+            rel material:binding = </dark_brown_avocado/dark_brown_avocado_seed/DarkBrownAvocadoSeed/Materials/M_DarkBrownAvocadoSeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_DarkBrownAvocadoSeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoSeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/obj/DarkBrownAvocadoSeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_DarkBrownAvocadoSeed" (
+                    prepend references = @./dark_brown_avocado/materials/usd/M_DarkBrownAvocadoSeed.usda@</M_DarkBrownAvocadoSeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "DarkBrownAvocadoSeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./dark_brown_avocado/meshes/usd/DarkBrownAvocadoSeed_001.usda@</DarkBrownAvocadoSeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/DarkBrownAvocadoSeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./dark_brown_avocado/meshes/stl/DarkBrownAvocadoSeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "dark_brown_avocado"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "dark_brown_avocado"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "DarkBrownAvocadoFlesh"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/obj/DarkBrownAvocadoFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "DarkBrownAvocadoFlesh_001"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/stl/DarkBrownAvocadoFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "DarkBrownAvocadoPeel"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/obj/DarkBrownAvocadoPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "DarkBrownAvocadoPeel_001"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/stl/DarkBrownAvocadoPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "DarkBrownAvocadoSeed"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/obj/DarkBrownAvocadoSeed.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "DarkBrownAvocadoSeed_001"
+            {
+                asset mujoco:mesh:file = @dark_brown_avocado/meshes/stl/DarkBrownAvocadoSeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_DarkBrownAvocadoFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_DarkBrownAvocadoFlesh>
+            }
+
+            def MujocoMaterial "M_DarkBrownAvocadoPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_DarkBrownAvocadoPeel>
+            }
+
+            def MujocoMaterial "M_DarkBrownAvocadoSeed"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_DarkBrownAvocadoSeed>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_DarkBrownAvocadoFlesh"
+            {
+                asset mujoco:texture:file = @T_DarkBrownAvocadoFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_DarkBrownAvocadoPeel"
+            {
+                asset mujoco:texture:file = @T_DarkBrownAvocadoPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_DarkBrownAvocadoSeed"
+            {
+                asset mujoco:texture:file = @T_DarkBrownAvocadoSeed.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

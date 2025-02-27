@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<mujoco model="pickled_cucumber">
+	<compiler meshdir="pickled_cucumber/meshes" texturedir="pickled_cucumber/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PickledCucumberFlesh" file="stl/PickledCucumberFlesh.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberFlesh_001" file="stl/PickledCucumberFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberFlesh_002" file="stl/PickledCucumberFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed" file="stl/PickledCucumberSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_001" file="stl/PickledCucumberSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_002" file="stl/PickledCucumberSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_003" file="stl/PickledCucumberSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_004" file="stl/PickledCucumberSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_005" file="stl/PickledCucumberSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_006" file="stl/PickledCucumberSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_007" file="stl/PickledCucumberSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_008" file="stl/PickledCucumberSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_009" file="stl/PickledCucumberSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_010" file="stl/PickledCucumberSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_011" file="stl/PickledCucumberSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_012" file="stl/PickledCucumberSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_013" file="stl/PickledCucumberSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_014" file="stl/PickledCucumberSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_015" file="stl/PickledCucumberSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_016" file="stl/PickledCucumberSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_017" file="stl/PickledCucumberSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_018" file="stl/PickledCucumberSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_019" file="stl/PickledCucumberSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_020" file="stl/PickledCucumberSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_021" file="stl/PickledCucumberSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_022" file="stl/PickledCucumberSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_023" file="stl/PickledCucumberSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_024" file="stl/PickledCucumberSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_025" file="stl/PickledCucumberSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_026" file="stl/PickledCucumberSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_027" file="stl/PickledCucumberSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_028" file="stl/PickledCucumberSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_029" file="stl/PickledCucumberSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_030" file="stl/PickledCucumberSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_031" file="stl/PickledCucumberSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberSeed_032" file="stl/PickledCucumberSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberPeel" file="obj/PickledCucumberPeel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberPeel_001" file="stl/PickledCucumberPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PickledCucumberPeel_002" file="stl/PickledCucumberPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PickledCucumberFlesh" rgba="0.6622999906539917 0.6575000286102295 0.5468000173568726 0.980400025844574" emission="0.0"/>
+		<material name="M_PickledCucumberSeed" rgba="0.7447999715805054 0.7526999711990356 0.7329999804496765 1.0" emission="0.0"/>
+		<material name="M_PickledCucumberPeel" texture="T_PickledCucumberPeel"/>
+		<texture name="T_PickledCucumberPeel" type="2d" file="T_PickledCucumberPeel.png"/>
+	</asset>
+	<worldbody>
+		<body name="pickled_cucumber" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="pickled_cucumber_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00818063784390688" pos="0.0007146873977035284 -0.0001645844749873504 0.00018500469741411507" quat="0.9983373880386353 0.0575854554772377 0.0006288753938861191 0.0024341389071196318" diaginertia="1.6322070450769388e-07 3.0060557492106454e-06 3.01512000078219e-06"/>
+				<geom name="PickledCucumberFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberFlesh" material="M_PickledCucumberFlesh" class="visual"/>
+				<geom name="PickledCucumberFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberFlesh_001" class="collision"/>
+				<geom name="PickledCucumberFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberFlesh_002" class="collision"/>
+			</body>
+			<body name="pickled_cucumber_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.020253026857972145" pos="0.0007119235233403742 0.00022078375332057476 -0.00022728988551534712" quat="0.9985897541046143 0.05298673361539841 0.0011286938097327948 0.0031084679067134857" diaginertia="4.903369017483783e-07 7.81192193244351e-06 7.839219506422523e-06"/>
+				<geom name="PickledCucumberPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberPeel" material="M_PickledCucumberPeel" class="visual"/>
+				<geom name="PickledCucumberPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberPeel_001" class="collision"/>
+				<geom name="PickledCucumberPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberPeel_002" class="collision"/>
+			</body>
+			<body name="pickled_cucumber_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00022778374841436744" pos="-0.0006211170111782849 -0.0004471162101253867 0.0004769424849655479" quat="0.9993292689323425 -0.03660851716995239 0.0008699760655872524 -0.00014944636495783925" diaginertia="3.3809444133225952e-09 7.695172854482735e-08 7.745622099264438e-08"/>
+				<geom name="PickledCucumberSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed" material="M_PickledCucumberSeed" class="visual"/>
+				<geom name="PickledCucumberSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_001" class="collision"/>
+				<geom name="PickledCucumberSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_002" class="collision"/>
+				<geom name="PickledCucumberSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_003" class="collision"/>
+				<geom name="PickledCucumberSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_004" class="collision"/>
+				<geom name="PickledCucumberSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_005" class="collision"/>
+				<geom name="PickledCucumberSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_006" class="collision"/>
+				<geom name="PickledCucumberSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_007" class="collision"/>
+				<geom name="PickledCucumberSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_008" class="collision"/>
+				<geom name="PickledCucumberSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_009" class="collision"/>
+				<geom name="PickledCucumberSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_010" class="collision"/>
+				<geom name="PickledCucumberSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_011" class="collision"/>
+				<geom name="PickledCucumberSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_012" class="collision"/>
+				<geom name="PickledCucumberSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_013" class="collision"/>
+				<geom name="PickledCucumberSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_014" class="collision"/>
+				<geom name="PickledCucumberSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_015" class="collision"/>
+				<geom name="PickledCucumberSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_016" class="collision"/>
+				<geom name="PickledCucumberSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_017" class="collision"/>
+				<geom name="PickledCucumberSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_018" class="collision"/>
+				<geom name="PickledCucumberSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_019" class="collision"/>
+				<geom name="PickledCucumberSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_020" class="collision"/>
+				<geom name="PickledCucumberSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_021" class="collision"/>
+				<geom name="PickledCucumberSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_022" class="collision"/>
+				<geom name="PickledCucumberSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_023" class="collision"/>
+				<geom name="PickledCucumberSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_024" class="collision"/>
+				<geom name="PickledCucumberSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_025" class="collision"/>
+				<geom name="PickledCucumberSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_026" class="collision"/>
+				<geom name="PickledCucumberSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_027" class="collision"/>
+				<geom name="PickledCucumberSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_028" class="collision"/>
+				<geom name="PickledCucumberSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_029" class="collision"/>
+				<geom name="PickledCucumberSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_030" class="collision"/>
+				<geom name="PickledCucumberSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_031" class="collision"/>
+				<geom name="PickledCucumberSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PickledCucumberSeed_032" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

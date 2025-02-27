@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<mujoco model="teaspoon">
+	<compiler meshdir="teaspoon/meshes" texturedir="teaspoon/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Teaspoon" file="stl/Teaspoon.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_001" file="stl/Teaspoon_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_002" file="stl/Teaspoon_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_003" file="stl/Teaspoon_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_004" file="stl/Teaspoon_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_005" file="stl/Teaspoon_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Teaspoon_006" file="stl/Teaspoon_006.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Teaspoon" rgba="0.664900004863739 0.664900004863739 0.664900004863739 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="teaspoon" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.03092772699892521" pos="0.04338710755109787 -0.00010086490510730073 -0.002390378387644887" quat="0.9999679327011108 -0.002129353117197752 0.007644678931683302 -0.0010943206725642085" diaginertia="2.2855149381939555e-06 0.0001231631904374808 0.0001244646991835907"/>
+			<geom name="Teaspoon" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon" material="M_Teaspoon" class="visual"/>
+			<geom name="Teaspoon_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_001" class="collision"/>
+			<geom name="Teaspoon_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_002" class="collision"/>
+			<geom name="Teaspoon_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_003" class="collision"/>
+			<geom name="Teaspoon_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_004" class="collision"/>
+			<geom name="Teaspoon_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_005" class="collision"/>
+			<geom name="Teaspoon_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Teaspoon_006" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

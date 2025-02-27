@@ -1,0 +1,440 @@
+#usda 1.0
+(
+    defaultPrim = "cucumber"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "cucumber" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "cucumber_seed" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (5.006056e-7, 0.00002704509, 0.000027084083)
+        float mujoco:body:inertial:mass = 0.0047394955
+        point3f mujoco:body:inertial:pos = (-0.012091939, 0.00030309163, -0.0014663523)
+        quatf mujoco:body:inertial:quat = (0.6973711, 0.71664727, 0.006381136, -0.007034474)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.012091939, 0.00030309163, -0.0014663523)
+        float3 physics:diagonalInertia = (5.006056e-7, 0.00002704509, 0.000027084083)
+        float physics:mass = 0.0047394955
+        quatf physics:principalAxes = (0.6973711, 0.71664727, 0.006381136, -0.007034474)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 5.006056e-7
+        float urdf:link:inertial:inertia:iyy = 0.00002704509
+        float urdf:link:inertial:inertia:izz = 0.000027084083
+        float urdf:link:inertial:mass = 0.0047394955
+        float3 urdf:link:inertial:origin:rpy = (1.5980526, 0.018983653, -0.0006653509)
+        point3f urdf:link:inertial:origin:xyz = (-0.012091939, 0.00030309163, -0.0014663523)
+
+        def Mesh "CucumberSeed" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberSeed.usda@</CucumberSeed>
+        )
+        {
+            rel material:binding = </cucumber/cucumber_seed/CucumberSeed/Materials/M_CucumberSeed>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CucumberSeed>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberSeed>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/obj/CucumberSeed.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CucumberSeed" (
+                    prepend references = @./cucumber/materials/usd/M_CucumberSeed.usda@</M_CucumberSeed>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CucumberSeed_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberSeed_001.usda@</CucumberSeed_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberSeed_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberSeed_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CucumberSeed_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberSeed_002.usda@</CucumberSeed_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberSeed_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberSeed_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CucumberSeed_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberSeed_003.usda@</CucumberSeed_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberSeed_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberSeed_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CucumberSeed_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberSeed_004.usda@</CucumberSeed_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberSeed_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberSeed_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cucumber_peel" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000074530235, 0.00013717271, 0.00013771809)
+        float mujoco:body:inertial:mass = 0.016696455
+        point3f mujoco:body:inertial:pos = (0.002170732, -0.00034151148, 0.00059592846)
+        quatf mujoco:body:inertial:quat = (0.7114979, -0.70267934, -0.0021515887, 0.0027909288)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.002170732, -0.00034151148, 0.00059592846)
+        float3 physics:diagonalInertia = (0.0000074530235, 0.00013717271, 0.00013771809)
+        float physics:mass = 0.016696455
+        quatf physics:principalAxes = (0.7114979, -0.70267934, -0.0021515887, 0.0027909288)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000074530235
+        float urdf:link:inertial:inertia:iyy = 0.00013717271
+        float urdf:link:inertial:inertia:izz = 0.00013771809
+        float urdf:link:inertial:mass = 0.016696455
+        float3 urdf:link:inertial:origin:rpy = (-1.5583218, 0.0008605545, 0.006995294)
+        point3f urdf:link:inertial:origin:xyz = (0.002170732, -0.00034151148, 0.00059592846)
+
+        def Mesh "CucumberPeel" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberPeel.usda@</CucumberPeel>
+        )
+        {
+            rel material:binding = </cucumber/cucumber_peel/CucumberPeel/Materials/M_CucumberPeel>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CucumberPeel>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberPeel>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/obj/CucumberPeel.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CucumberPeel" (
+                    prepend references = @./cucumber/materials/usd/M_CucumberPeel.usda@</M_CucumberPeel>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CucumberPeel_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberPeel_001.usda@</CucumberPeel_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberPeel_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberPeel_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CucumberPeel_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberPeel_002.usda@</CucumberPeel_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberPeel_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberPeel_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "cucumber_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000095121184, 0.0027852603, 0.0027955025)
+        float mujoco:body:inertial:mass = 0.4015067
+        point3f mujoco:body:inertial:pos = (0.003992183, -0.00027733902, -0.00025371468)
+        quatf mujoco:body:inertial:quat = (0.712347, -0.7018183, -0.0024691813, 0.0026167452)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (0.003992183, -0.00027733902, -0.00025371468)
+        float3 physics:diagonalInertia = (0.000095121184, 0.0027852603, 0.0027955025)
+        float physics:mass = 0.4015067
+        quatf physics:principalAxes = (0.712347, -0.7018183, -0.0024691813, 0.0026167452)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000095121184
+        float urdf:link:inertial:inertia:iyy = 0.0027852603
+        float urdf:link:inertial:inertia:izz = 0.0027955025
+        float urdf:link:inertial:mass = 0.4015067
+        float3 urdf:link:inertial:origin:rpy = (-1.5559057, 0.00015513158, 0.007193956)
+        point3f urdf:link:inertial:origin:xyz = (0.003992183, -0.00027733902, -0.00025371468)
+
+        def Mesh "CucumberFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberFlesh.usda@</CucumberFlesh>
+        )
+        {
+            rel material:binding = </cucumber/cucumber_flesh/CucumberFlesh/Materials/M_CucumberFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_CucumberFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/obj/CucumberFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_CucumberFlesh" (
+                    prepend references = @./cucumber/materials/usd/M_CucumberFlesh.usda@</M_CucumberFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "CucumberFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberFlesh_001.usda@</CucumberFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "CucumberFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./cucumber/meshes/usd/CucumberFlesh_002.usda@</CucumberFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/CucumberFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./cucumber/meshes/stl/CucumberFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "cucumber"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "cucumber"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "CucumberSeed"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberSeed.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberSeed_001"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberSeed_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberSeed_002"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberSeed_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberSeed_003"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberSeed_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberSeed_004"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberSeed_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberPeel"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/obj/CucumberPeel.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberPeel_001"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberPeel_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberPeel_002"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberPeel_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberFlesh"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberFlesh.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberFlesh_001"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "CucumberFlesh_002"
+            {
+                asset mujoco:mesh:file = @cucumber/meshes/stl/CucumberFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_CucumberSeed"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8026, 0.8143, 0.7797, 1)
+            }
+
+            def MujocoMaterial "M_CucumberPeel"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_CucumberPeel>
+            }
+
+            def MujocoMaterial "M_CucumberFlesh"
+            {
+                float mujoco:material:emission = 0
+                color4f mujoco:material:rgba = (0.8372, 0.8453, 0.7939, 1)
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_CucumberPeel"
+            {
+                asset mujoco:texture:file = @T_CucumberPeel.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

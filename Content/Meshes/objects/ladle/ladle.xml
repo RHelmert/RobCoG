@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<mujoco model="ladle">
+	<compiler meshdir="ladle/meshes" texturedir="ladle/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Ladle" file="stl/Ladle.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_001" file="stl/Ladle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_002" file="stl/Ladle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_003" file="stl/Ladle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_004" file="stl/Ladle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_005" file="stl/Ladle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Ladle_006" file="stl/Ladle_006.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Ladle" rgba="0.660099983215332 0.660099983215332 0.660099983215332 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="ladle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.027458030730485916" pos="0.03024863824248314 -1.5719871953479014e-05 -0.002112147631123662" quat="0.9999924302101135 0.0013719807611778378 0.003645502030849457 -0.00012974154378753155" diaginertia="1.6147810129041318e-06 9.447766205994412e-05 9.537346340948716e-05"/>
+			<geom name="Ladle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle" material="M_Ladle" class="visual"/>
+			<geom name="Ladle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_001" class="collision"/>
+			<geom name="Ladle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_002" class="collision"/>
+			<geom name="Ladle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_003" class="collision"/>
+			<geom name="Ladle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_004" class="collision"/>
+			<geom name="Ladle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_005" class="collision"/>
+			<geom name="Ladle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Ladle_006" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

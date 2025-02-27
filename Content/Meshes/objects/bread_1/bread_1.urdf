@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<robot name="bread_1" version="1.0">
+  <link name="bread_1">
+    <inertial>
+      <origin xyz="-8.59999781823717e-05 -0.0007341864984482527 0.0015975992428138852" rpy="-1.5881240367889404 -0.02091679722070694 -0.0025818964932113886"/>
+      <mass value="0.8408675193786621"/>
+      <inertia ixx="0.0021757064387202263" ixy="0.0" ixz="0.0" iyy="0.004399170633405447" iyz="0.0" izz="0.005231454037129879"/>
+    </inertial>
+    <visual name="Bread1">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/obj/Bread1.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Bread1_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Bread1_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Bread1_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Bread1_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Bread1_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Bread1_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_1/meshes/stl/Bread1_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

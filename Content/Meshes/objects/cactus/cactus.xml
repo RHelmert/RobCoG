@@ -1,0 +1,1123 @@
+<?xml version="1.0" ?>
+<mujoco model="cactus">
+	<compiler meshdir="cactus/meshes" texturedir="cactus/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="CactusStones" file="obj/CactusStones.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_001" file="stl/CactusStones_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_002" file="stl/CactusStones_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_003" file="stl/CactusStones_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_004" file="stl/CactusStones_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_005" file="stl/CactusStones_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_006" file="stl/CactusStones_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_007" file="stl/CactusStones_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_008" file="stl/CactusStones_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_009" file="stl/CactusStones_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_010" file="stl/CactusStones_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_011" file="stl/CactusStones_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_012" file="stl/CactusStones_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_013" file="stl/CactusStones_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_014" file="stl/CactusStones_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_015" file="stl/CactusStones_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_016" file="stl/CactusStones_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_017" file="stl/CactusStones_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_018" file="stl/CactusStones_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_019" file="stl/CactusStones_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_020" file="stl/CactusStones_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_021" file="stl/CactusStones_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_022" file="stl/CactusStones_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_023" file="stl/CactusStones_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_024" file="stl/CactusStones_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_025" file="stl/CactusStones_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_026" file="stl/CactusStones_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_027" file="stl/CactusStones_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_028" file="stl/CactusStones_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_029" file="stl/CactusStones_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_030" file="stl/CactusStones_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_031" file="stl/CactusStones_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_032" file="stl/CactusStones_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_033" file="stl/CactusStones_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_034" file="stl/CactusStones_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_035" file="stl/CactusStones_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_036" file="stl/CactusStones_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_037" file="stl/CactusStones_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_038" file="stl/CactusStones_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_039" file="stl/CactusStones_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_040" file="stl/CactusStones_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_041" file="stl/CactusStones_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_042" file="stl/CactusStones_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_043" file="stl/CactusStones_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_044" file="stl/CactusStones_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_045" file="stl/CactusStones_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_046" file="stl/CactusStones_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_047" file="stl/CactusStones_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_048" file="stl/CactusStones_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_049" file="stl/CactusStones_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_050" file="stl/CactusStones_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_051" file="stl/CactusStones_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_052" file="stl/CactusStones_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_053" file="stl/CactusStones_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_054" file="stl/CactusStones_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_055" file="stl/CactusStones_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_056" file="stl/CactusStones_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusStones_057" file="stl/CactusStones_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh" file="obj/CactusFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_001" file="stl/CactusFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_002" file="stl/CactusFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_003" file="stl/CactusFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_004" file="stl/CactusFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_005" file="stl/CactusFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_006" file="stl/CactusFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_007" file="stl/CactusFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_008" file="stl/CactusFlesh_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_009" file="stl/CactusFlesh_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_010" file="stl/CactusFlesh_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_011" file="stl/CactusFlesh_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_012" file="stl/CactusFlesh_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_013" file="stl/CactusFlesh_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_014" file="stl/CactusFlesh_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_015" file="stl/CactusFlesh_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_016" file="stl/CactusFlesh_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_017" file="stl/CactusFlesh_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_018" file="stl/CactusFlesh_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_019" file="stl/CactusFlesh_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_020" file="stl/CactusFlesh_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_021" file="stl/CactusFlesh_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_022" file="stl/CactusFlesh_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_023" file="stl/CactusFlesh_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_024" file="stl/CactusFlesh_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_025" file="stl/CactusFlesh_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_026" file="stl/CactusFlesh_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_027" file="stl/CactusFlesh_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_028" file="stl/CactusFlesh_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_029" file="stl/CactusFlesh_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_030" file="stl/CactusFlesh_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_031" file="stl/CactusFlesh_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_032" file="stl/CactusFlesh_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_033" file="stl/CactusFlesh_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_034" file="stl/CactusFlesh_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_035" file="stl/CactusFlesh_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_036" file="stl/CactusFlesh_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_037" file="stl/CactusFlesh_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_038" file="stl/CactusFlesh_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_039" file="stl/CactusFlesh_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_040" file="stl/CactusFlesh_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_041" file="stl/CactusFlesh_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_042" file="stl/CactusFlesh_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_043" file="stl/CactusFlesh_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_044" file="stl/CactusFlesh_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_045" file="stl/CactusFlesh_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_046" file="stl/CactusFlesh_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_047" file="stl/CactusFlesh_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_048" file="stl/CactusFlesh_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_049" file="stl/CactusFlesh_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_050" file="stl/CactusFlesh_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_051" file="stl/CactusFlesh_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_052" file="stl/CactusFlesh_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_053" file="stl/CactusFlesh_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_054" file="stl/CactusFlesh_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_055" file="stl/CactusFlesh_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_056" file="stl/CactusFlesh_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_057" file="stl/CactusFlesh_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_058" file="stl/CactusFlesh_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_059" file="stl/CactusFlesh_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_060" file="stl/CactusFlesh_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_061" file="stl/CactusFlesh_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_062" file="stl/CactusFlesh_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_063" file="stl/CactusFlesh_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_064" file="stl/CactusFlesh_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_065" file="stl/CactusFlesh_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_066" file="stl/CactusFlesh_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_067" file="stl/CactusFlesh_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_068" file="stl/CactusFlesh_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_069" file="stl/CactusFlesh_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_070" file="stl/CactusFlesh_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_071" file="stl/CactusFlesh_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_072" file="stl/CactusFlesh_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_073" file="stl/CactusFlesh_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_074" file="stl/CactusFlesh_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_075" file="stl/CactusFlesh_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_076" file="stl/CactusFlesh_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_077" file="stl/CactusFlesh_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_078" file="stl/CactusFlesh_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_079" file="stl/CactusFlesh_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_080" file="stl/CactusFlesh_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_081" file="stl/CactusFlesh_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_082" file="stl/CactusFlesh_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_083" file="stl/CactusFlesh_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_084" file="stl/CactusFlesh_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_085" file="stl/CactusFlesh_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_086" file="stl/CactusFlesh_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_087" file="stl/CactusFlesh_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_088" file="stl/CactusFlesh_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_089" file="stl/CactusFlesh_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_090" file="stl/CactusFlesh_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_091" file="stl/CactusFlesh_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_092" file="stl/CactusFlesh_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_093" file="stl/CactusFlesh_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_094" file="stl/CactusFlesh_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_095" file="stl/CactusFlesh_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_096" file="stl/CactusFlesh_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_097" file="stl/CactusFlesh_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_098" file="stl/CactusFlesh_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_099" file="stl/CactusFlesh_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_100" file="stl/CactusFlesh_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_101" file="stl/CactusFlesh_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_102" file="stl/CactusFlesh_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_103" file="stl/CactusFlesh_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_104" file="stl/CactusFlesh_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_105" file="stl/CactusFlesh_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_106" file="stl/CactusFlesh_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_107" file="stl/CactusFlesh_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_108" file="stl/CactusFlesh_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_109" file="stl/CactusFlesh_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_110" file="stl/CactusFlesh_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_111" file="stl/CactusFlesh_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_112" file="stl/CactusFlesh_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_113" file="stl/CactusFlesh_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_114" file="stl/CactusFlesh_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_115" file="stl/CactusFlesh_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_116" file="stl/CactusFlesh_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_117" file="stl/CactusFlesh_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_118" file="stl/CactusFlesh_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_119" file="stl/CactusFlesh_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_120" file="stl/CactusFlesh_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_121" file="stl/CactusFlesh_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_122" file="stl/CactusFlesh_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_123" file="stl/CactusFlesh_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_124" file="stl/CactusFlesh_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_125" file="stl/CactusFlesh_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_126" file="stl/CactusFlesh_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_127" file="stl/CactusFlesh_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_128" file="stl/CactusFlesh_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_129" file="stl/CactusFlesh_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_130" file="stl/CactusFlesh_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_131" file="stl/CactusFlesh_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_132" file="stl/CactusFlesh_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_133" file="stl/CactusFlesh_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_134" file="stl/CactusFlesh_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_135" file="stl/CactusFlesh_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_136" file="stl/CactusFlesh_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_137" file="stl/CactusFlesh_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_138" file="stl/CactusFlesh_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_139" file="stl/CactusFlesh_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_140" file="stl/CactusFlesh_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_141" file="stl/CactusFlesh_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_142" file="stl/CactusFlesh_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_143" file="stl/CactusFlesh_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_144" file="stl/CactusFlesh_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_145" file="stl/CactusFlesh_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_146" file="stl/CactusFlesh_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_147" file="stl/CactusFlesh_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_148" file="stl/CactusFlesh_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_149" file="stl/CactusFlesh_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_150" file="stl/CactusFlesh_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_151" file="stl/CactusFlesh_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_152" file="stl/CactusFlesh_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_153" file="stl/CactusFlesh_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_154" file="stl/CactusFlesh_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_155" file="stl/CactusFlesh_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_156" file="stl/CactusFlesh_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_157" file="stl/CactusFlesh_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_158" file="stl/CactusFlesh_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_159" file="stl/CactusFlesh_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_160" file="stl/CactusFlesh_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_161" file="stl/CactusFlesh_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_162" file="stl/CactusFlesh_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_163" file="stl/CactusFlesh_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_164" file="stl/CactusFlesh_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_165" file="stl/CactusFlesh_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_166" file="stl/CactusFlesh_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_167" file="stl/CactusFlesh_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_168" file="stl/CactusFlesh_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_169" file="stl/CactusFlesh_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_170" file="stl/CactusFlesh_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_171" file="stl/CactusFlesh_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_172" file="stl/CactusFlesh_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_173" file="stl/CactusFlesh_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_174" file="stl/CactusFlesh_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_175" file="stl/CactusFlesh_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_176" file="stl/CactusFlesh_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_177" file="stl/CactusFlesh_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_178" file="stl/CactusFlesh_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_179" file="stl/CactusFlesh_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_180" file="stl/CactusFlesh_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_181" file="stl/CactusFlesh_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_182" file="stl/CactusFlesh_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_183" file="stl/CactusFlesh_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_184" file="stl/CactusFlesh_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_185" file="stl/CactusFlesh_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_186" file="stl/CactusFlesh_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_187" file="stl/CactusFlesh_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_188" file="stl/CactusFlesh_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_189" file="stl/CactusFlesh_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_190" file="stl/CactusFlesh_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_191" file="stl/CactusFlesh_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_192" file="stl/CactusFlesh_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_193" file="stl/CactusFlesh_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_194" file="stl/CactusFlesh_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_195" file="stl/CactusFlesh_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_196" file="stl/CactusFlesh_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_197" file="stl/CactusFlesh_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_198" file="stl/CactusFlesh_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_199" file="stl/CactusFlesh_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_200" file="stl/CactusFlesh_200.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_201" file="stl/CactusFlesh_201.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_202" file="stl/CactusFlesh_202.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_203" file="stl/CactusFlesh_203.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_204" file="stl/CactusFlesh_204.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_205" file="stl/CactusFlesh_205.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_206" file="stl/CactusFlesh_206.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_207" file="stl/CactusFlesh_207.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_208" file="stl/CactusFlesh_208.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_209" file="stl/CactusFlesh_209.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_210" file="stl/CactusFlesh_210.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_211" file="stl/CactusFlesh_211.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_212" file="stl/CactusFlesh_212.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_213" file="stl/CactusFlesh_213.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_214" file="stl/CactusFlesh_214.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_215" file="stl/CactusFlesh_215.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_216" file="stl/CactusFlesh_216.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_217" file="stl/CactusFlesh_217.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_218" file="stl/CactusFlesh_218.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_219" file="stl/CactusFlesh_219.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_220" file="stl/CactusFlesh_220.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_221" file="stl/CactusFlesh_221.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_222" file="stl/CactusFlesh_222.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_223" file="stl/CactusFlesh_223.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_224" file="stl/CactusFlesh_224.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_225" file="stl/CactusFlesh_225.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_226" file="stl/CactusFlesh_226.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_227" file="stl/CactusFlesh_227.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_228" file="stl/CactusFlesh_228.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_229" file="stl/CactusFlesh_229.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_230" file="stl/CactusFlesh_230.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlesh_231" file="stl/CactusFlesh_231.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusSoil" file="obj/CactusSoil.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusSoil_001" file="stl/CactusSoil_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusSoil_002" file="stl/CactusSoil_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusSoil_003" file="stl/CactusSoil_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusSoil_004" file="stl/CactusSoil_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn" file="stl/CactusLeafThorn.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_001" file="stl/CactusLeafThorn_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_002" file="stl/CactusLeafThorn_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_003" file="stl/CactusLeafThorn_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_004" file="stl/CactusLeafThorn_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_005" file="stl/CactusLeafThorn_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_006" file="stl/CactusLeafThorn_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_007" file="stl/CactusLeafThorn_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_008" file="stl/CactusLeafThorn_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_009" file="stl/CactusLeafThorn_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_010" file="stl/CactusLeafThorn_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_011" file="stl/CactusLeafThorn_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_012" file="stl/CactusLeafThorn_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_013" file="stl/CactusLeafThorn_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_014" file="stl/CactusLeafThorn_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_015" file="stl/CactusLeafThorn_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_016" file="stl/CactusLeafThorn_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_017" file="stl/CactusLeafThorn_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_018" file="stl/CactusLeafThorn_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_019" file="stl/CactusLeafThorn_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_020" file="stl/CactusLeafThorn_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_021" file="stl/CactusLeafThorn_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_022" file="stl/CactusLeafThorn_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_023" file="stl/CactusLeafThorn_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_024" file="stl/CactusLeafThorn_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_025" file="stl/CactusLeafThorn_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_026" file="stl/CactusLeafThorn_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_027" file="stl/CactusLeafThorn_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_028" file="stl/CactusLeafThorn_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_029" file="stl/CactusLeafThorn_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_030" file="stl/CactusLeafThorn_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_031" file="stl/CactusLeafThorn_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_032" file="stl/CactusLeafThorn_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_033" file="stl/CactusLeafThorn_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_034" file="stl/CactusLeafThorn_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_035" file="stl/CactusLeafThorn_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_036" file="stl/CactusLeafThorn_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_037" file="stl/CactusLeafThorn_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_038" file="stl/CactusLeafThorn_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_039" file="stl/CactusLeafThorn_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_040" file="stl/CactusLeafThorn_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_041" file="stl/CactusLeafThorn_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_042" file="stl/CactusLeafThorn_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_043" file="stl/CactusLeafThorn_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_044" file="stl/CactusLeafThorn_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_045" file="stl/CactusLeafThorn_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_046" file="stl/CactusLeafThorn_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_047" file="stl/CactusLeafThorn_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_048" file="stl/CactusLeafThorn_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_049" file="stl/CactusLeafThorn_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_050" file="stl/CactusLeafThorn_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_051" file="stl/CactusLeafThorn_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_052" file="stl/CactusLeafThorn_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_053" file="stl/CactusLeafThorn_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_054" file="stl/CactusLeafThorn_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_055" file="stl/CactusLeafThorn_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_056" file="stl/CactusLeafThorn_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_057" file="stl/CactusLeafThorn_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_058" file="stl/CactusLeafThorn_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_059" file="stl/CactusLeafThorn_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_060" file="stl/CactusLeafThorn_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_061" file="stl/CactusLeafThorn_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_062" file="stl/CactusLeafThorn_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_063" file="stl/CactusLeafThorn_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_064" file="stl/CactusLeafThorn_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_065" file="stl/CactusLeafThorn_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_066" file="stl/CactusLeafThorn_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_067" file="stl/CactusLeafThorn_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_068" file="stl/CactusLeafThorn_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_069" file="stl/CactusLeafThorn_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_070" file="stl/CactusLeafThorn_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_071" file="stl/CactusLeafThorn_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_072" file="stl/CactusLeafThorn_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_073" file="stl/CactusLeafThorn_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_074" file="stl/CactusLeafThorn_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_075" file="stl/CactusLeafThorn_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_076" file="stl/CactusLeafThorn_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_077" file="stl/CactusLeafThorn_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_078" file="stl/CactusLeafThorn_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_079" file="stl/CactusLeafThorn_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_080" file="stl/CactusLeafThorn_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_081" file="stl/CactusLeafThorn_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_082" file="stl/CactusLeafThorn_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_083" file="stl/CactusLeafThorn_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_084" file="stl/CactusLeafThorn_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_085" file="stl/CactusLeafThorn_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_086" file="stl/CactusLeafThorn_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_087" file="stl/CactusLeafThorn_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_088" file="stl/CactusLeafThorn_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_089" file="stl/CactusLeafThorn_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_090" file="stl/CactusLeafThorn_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_091" file="stl/CactusLeafThorn_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_092" file="stl/CactusLeafThorn_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_093" file="stl/CactusLeafThorn_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_094" file="stl/CactusLeafThorn_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_095" file="stl/CactusLeafThorn_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_096" file="stl/CactusLeafThorn_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_097" file="stl/CactusLeafThorn_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_098" file="stl/CactusLeafThorn_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_099" file="stl/CactusLeafThorn_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_100" file="stl/CactusLeafThorn_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_101" file="stl/CactusLeafThorn_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_102" file="stl/CactusLeafThorn_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_103" file="stl/CactusLeafThorn_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_104" file="stl/CactusLeafThorn_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_105" file="stl/CactusLeafThorn_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_106" file="stl/CactusLeafThorn_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_107" file="stl/CactusLeafThorn_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_108" file="stl/CactusLeafThorn_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_109" file="stl/CactusLeafThorn_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_110" file="stl/CactusLeafThorn_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_111" file="stl/CactusLeafThorn_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_112" file="stl/CactusLeafThorn_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_113" file="stl/CactusLeafThorn_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_114" file="stl/CactusLeafThorn_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_115" file="stl/CactusLeafThorn_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_116" file="stl/CactusLeafThorn_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_117" file="stl/CactusLeafThorn_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_118" file="stl/CactusLeafThorn_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_119" file="stl/CactusLeafThorn_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_120" file="stl/CactusLeafThorn_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_121" file="stl/CactusLeafThorn_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_122" file="stl/CactusLeafThorn_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_123" file="stl/CactusLeafThorn_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_124" file="stl/CactusLeafThorn_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_125" file="stl/CactusLeafThorn_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_126" file="stl/CactusLeafThorn_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_127" file="stl/CactusLeafThorn_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_128" file="stl/CactusLeafThorn_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_129" file="stl/CactusLeafThorn_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_130" file="stl/CactusLeafThorn_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_131" file="stl/CactusLeafThorn_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_132" file="stl/CactusLeafThorn_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_133" file="stl/CactusLeafThorn_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_134" file="stl/CactusLeafThorn_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_135" file="stl/CactusLeafThorn_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_136" file="stl/CactusLeafThorn_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_137" file="stl/CactusLeafThorn_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_138" file="stl/CactusLeafThorn_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_139" file="stl/CactusLeafThorn_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_140" file="stl/CactusLeafThorn_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_141" file="stl/CactusLeafThorn_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_142" file="stl/CactusLeafThorn_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_143" file="stl/CactusLeafThorn_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_144" file="stl/CactusLeafThorn_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_145" file="stl/CactusLeafThorn_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_146" file="stl/CactusLeafThorn_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_147" file="stl/CactusLeafThorn_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_148" file="stl/CactusLeafThorn_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_149" file="stl/CactusLeafThorn_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_150" file="stl/CactusLeafThorn_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_151" file="stl/CactusLeafThorn_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_152" file="stl/CactusLeafThorn_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_153" file="stl/CactusLeafThorn_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_154" file="stl/CactusLeafThorn_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_155" file="stl/CactusLeafThorn_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_156" file="stl/CactusLeafThorn_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_157" file="stl/CactusLeafThorn_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_158" file="stl/CactusLeafThorn_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_159" file="stl/CactusLeafThorn_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_160" file="stl/CactusLeafThorn_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_161" file="stl/CactusLeafThorn_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_162" file="stl/CactusLeafThorn_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_163" file="stl/CactusLeafThorn_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_164" file="stl/CactusLeafThorn_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_165" file="stl/CactusLeafThorn_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_166" file="stl/CactusLeafThorn_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_167" file="stl/CactusLeafThorn_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_168" file="stl/CactusLeafThorn_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_169" file="stl/CactusLeafThorn_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_170" file="stl/CactusLeafThorn_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_171" file="stl/CactusLeafThorn_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_172" file="stl/CactusLeafThorn_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_173" file="stl/CactusLeafThorn_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_174" file="stl/CactusLeafThorn_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_175" file="stl/CactusLeafThorn_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_176" file="stl/CactusLeafThorn_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_177" file="stl/CactusLeafThorn_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_178" file="stl/CactusLeafThorn_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_179" file="stl/CactusLeafThorn_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_180" file="stl/CactusLeafThorn_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_181" file="stl/CactusLeafThorn_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_182" file="stl/CactusLeafThorn_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_183" file="stl/CactusLeafThorn_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_184" file="stl/CactusLeafThorn_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_185" file="stl/CactusLeafThorn_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_186" file="stl/CactusLeafThorn_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_187" file="stl/CactusLeafThorn_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_188" file="stl/CactusLeafThorn_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_189" file="stl/CactusLeafThorn_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_190" file="stl/CactusLeafThorn_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_191" file="stl/CactusLeafThorn_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_192" file="stl/CactusLeafThorn_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_193" file="stl/CactusLeafThorn_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_194" file="stl/CactusLeafThorn_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_195" file="stl/CactusLeafThorn_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_196" file="stl/CactusLeafThorn_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_197" file="stl/CactusLeafThorn_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_198" file="stl/CactusLeafThorn_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_199" file="stl/CactusLeafThorn_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_200" file="stl/CactusLeafThorn_200.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_201" file="stl/CactusLeafThorn_201.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_202" file="stl/CactusLeafThorn_202.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_203" file="stl/CactusLeafThorn_203.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_204" file="stl/CactusLeafThorn_204.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_205" file="stl/CactusLeafThorn_205.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_206" file="stl/CactusLeafThorn_206.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_207" file="stl/CactusLeafThorn_207.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusLeafThorn_208" file="stl/CactusLeafThorn_208.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot" file="obj/CactusFlowerpot.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_001" file="stl/CactusFlowerpot_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_002" file="stl/CactusFlowerpot_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_003" file="stl/CactusFlowerpot_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_004" file="stl/CactusFlowerpot_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_005" file="stl/CactusFlowerpot_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_006" file="stl/CactusFlowerpot_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_007" file="stl/CactusFlowerpot_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_008" file="stl/CactusFlowerpot_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_009" file="stl/CactusFlowerpot_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_010" file="stl/CactusFlowerpot_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_011" file="stl/CactusFlowerpot_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_012" file="stl/CactusFlowerpot_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_013" file="stl/CactusFlowerpot_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_014" file="stl/CactusFlowerpot_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_015" file="stl/CactusFlowerpot_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_016" file="stl/CactusFlowerpot_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_017" file="stl/CactusFlowerpot_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_018" file="stl/CactusFlowerpot_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_019" file="stl/CactusFlowerpot_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_020" file="stl/CactusFlowerpot_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_021" file="stl/CactusFlowerpot_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_022" file="stl/CactusFlowerpot_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_023" file="stl/CactusFlowerpot_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_024" file="stl/CactusFlowerpot_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_025" file="stl/CactusFlowerpot_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_026" file="stl/CactusFlowerpot_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_027" file="stl/CactusFlowerpot_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_028" file="stl/CactusFlowerpot_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_029" file="stl/CactusFlowerpot_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_030" file="stl/CactusFlowerpot_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_031" file="stl/CactusFlowerpot_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_032" file="stl/CactusFlowerpot_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_033" file="stl/CactusFlowerpot_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_034" file="stl/CactusFlowerpot_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="CactusFlowerpot_035" file="stl/CactusFlowerpot_035.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_CactusStones" texture="T_CactusStones"/>
+		<material name="M_CactusFlesh" texture="T_CactusFlesh"/>
+		<material name="M_CactusSoil" texture="T_CactusSoil"/>
+		<material name="M_CactusLeafThorn" rgba="0.7738000154495239 0.765999972820282 0.6825000047683716 1.0" emission="0.0"/>
+		<material name="M_CactusFlowerpot" texture="T_CactusFlowerpot"/>
+		<texture name="T_CactusStones" type="2d" file="T_CactusStones.png"/>
+		<texture name="T_CactusFlesh" type="2d" file="T_CactusFlesh.png"/>
+		<texture name="T_CactusSoil" type="2d" file="T_CactusSoil.png"/>
+		<texture name="T_CactusFlowerpot" type="2d" file="T_CactusFlowerpot.png"/>
+	</asset>
+	<worldbody>
+		<body name="cactus" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="cactus_stones" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06659089773893356" pos="-0.0054919603280723095 0.0009596306481398642 -0.0023847485426813364" quat="-0.5740671157836914 -0.0026354880537837744 0.0006205806857906282 0.8188037872314453" diaginertia="0.000215078704059124 0.0002482115523889661 0.00046175450552254915"/>
+				<geom name="CactusStones" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones" material="M_CactusStones" class="visual"/>
+				<geom name="CactusStones_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_001" class="collision"/>
+				<geom name="CactusStones_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_002" class="collision"/>
+				<geom name="CactusStones_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_003" class="collision"/>
+				<geom name="CactusStones_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_004" class="collision"/>
+				<geom name="CactusStones_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_005" class="collision"/>
+				<geom name="CactusStones_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_006" class="collision"/>
+				<geom name="CactusStones_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_007" class="collision"/>
+				<geom name="CactusStones_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_008" class="collision"/>
+				<geom name="CactusStones_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_009" class="collision"/>
+				<geom name="CactusStones_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_010" class="collision"/>
+				<geom name="CactusStones_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_011" class="collision"/>
+				<geom name="CactusStones_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_012" class="collision"/>
+				<geom name="CactusStones_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_013" class="collision"/>
+				<geom name="CactusStones_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_014" class="collision"/>
+				<geom name="CactusStones_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_015" class="collision"/>
+				<geom name="CactusStones_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_016" class="collision"/>
+				<geom name="CactusStones_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_017" class="collision"/>
+				<geom name="CactusStones_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_018" class="collision"/>
+				<geom name="CactusStones_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_019" class="collision"/>
+				<geom name="CactusStones_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_020" class="collision"/>
+				<geom name="CactusStones_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_021" class="collision"/>
+				<geom name="CactusStones_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_022" class="collision"/>
+				<geom name="CactusStones_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_023" class="collision"/>
+				<geom name="CactusStones_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_024" class="collision"/>
+				<geom name="CactusStones_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_025" class="collision"/>
+				<geom name="CactusStones_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_026" class="collision"/>
+				<geom name="CactusStones_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_027" class="collision"/>
+				<geom name="CactusStones_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_028" class="collision"/>
+				<geom name="CactusStones_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_029" class="collision"/>
+				<geom name="CactusStones_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_030" class="collision"/>
+				<geom name="CactusStones_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_031" class="collision"/>
+				<geom name="CactusStones_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_032" class="collision"/>
+				<geom name="CactusStones_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_033" class="collision"/>
+				<geom name="CactusStones_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_034" class="collision"/>
+				<geom name="CactusStones_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_035" class="collision"/>
+				<geom name="CactusStones_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_036" class="collision"/>
+				<geom name="CactusStones_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_037" class="collision"/>
+				<geom name="CactusStones_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_038" class="collision"/>
+				<geom name="CactusStones_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_039" class="collision"/>
+				<geom name="CactusStones_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_040" class="collision"/>
+				<geom name="CactusStones_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_041" class="collision"/>
+				<geom name="CactusStones_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_042" class="collision"/>
+				<geom name="CactusStones_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_043" class="collision"/>
+				<geom name="CactusStones_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_044" class="collision"/>
+				<geom name="CactusStones_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_045" class="collision"/>
+				<geom name="CactusStones_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_046" class="collision"/>
+				<geom name="CactusStones_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_047" class="collision"/>
+				<geom name="CactusStones_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_048" class="collision"/>
+				<geom name="CactusStones_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_049" class="collision"/>
+				<geom name="CactusStones_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_050" class="collision"/>
+				<geom name="CactusStones_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_051" class="collision"/>
+				<geom name="CactusStones_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_052" class="collision"/>
+				<geom name="CactusStones_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_053" class="collision"/>
+				<geom name="CactusStones_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_054" class="collision"/>
+				<geom name="CactusStones_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_055" class="collision"/>
+				<geom name="CactusStones_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_056" class="collision"/>
+				<geom name="CactusStones_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusStones_057" class="collision"/>
+			</body>
+			<body name="cactus_soil" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.04591860994696617" pos="0.006265407893806696 0.012143868952989578 0.00044995840289629996" quat="0.8673809170722961 0.0020782651845365763 0.0008651635143905878 -0.4976397156715393" diaginertia="7.019563054200262e-05 0.00010270888014929369 0.0001728224742691964"/>
+				<geom name="CactusSoil" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusSoil" material="M_CactusSoil" class="visual"/>
+				<geom name="CactusSoil_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusSoil_001" class="collision"/>
+				<geom name="CactusSoil_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusSoil_002" class="collision"/>
+				<geom name="CactusSoil_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusSoil_003" class="collision"/>
+				<geom name="CactusSoil_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusSoil_004" class="collision"/>
+			</body>
+			<body name="cactus_flowerpot" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.6012134552001953" pos="-0.003254964714869857 0.005445556249469519 -0.12148907035589218" quat="0.6353443264961243 -0.3339149057865143 -0.5991860032081604 -0.35470348596572876" diaginertia="0.006257921922951937 0.014134536497294903 0.01413770392537117"/>
+				<geom name="CactusFlowerpot" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot" material="M_CactusFlowerpot" class="visual"/>
+				<geom name="CactusFlowerpot_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_001" class="collision"/>
+				<geom name="CactusFlowerpot_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_002" class="collision"/>
+				<geom name="CactusFlowerpot_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_003" class="collision"/>
+				<geom name="CactusFlowerpot_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_004" class="collision"/>
+				<geom name="CactusFlowerpot_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_005" class="collision"/>
+				<geom name="CactusFlowerpot_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_006" class="collision"/>
+				<geom name="CactusFlowerpot_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_007" class="collision"/>
+				<geom name="CactusFlowerpot_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_008" class="collision"/>
+				<geom name="CactusFlowerpot_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_009" class="collision"/>
+				<geom name="CactusFlowerpot_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_010" class="collision"/>
+				<geom name="CactusFlowerpot_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_011" class="collision"/>
+				<geom name="CactusFlowerpot_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_012" class="collision"/>
+				<geom name="CactusFlowerpot_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_013" class="collision"/>
+				<geom name="CactusFlowerpot_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_014" class="collision"/>
+				<geom name="CactusFlowerpot_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_015" class="collision"/>
+				<geom name="CactusFlowerpot_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_016" class="collision"/>
+				<geom name="CactusFlowerpot_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_017" class="collision"/>
+				<geom name="CactusFlowerpot_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_018" class="collision"/>
+				<geom name="CactusFlowerpot_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_019" class="collision"/>
+				<geom name="CactusFlowerpot_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_020" class="collision"/>
+				<geom name="CactusFlowerpot_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_021" class="collision"/>
+				<geom name="CactusFlowerpot_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_022" class="collision"/>
+				<geom name="CactusFlowerpot_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_023" class="collision"/>
+				<geom name="CactusFlowerpot_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_024" class="collision"/>
+				<geom name="CactusFlowerpot_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_025" class="collision"/>
+				<geom name="CactusFlowerpot_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_026" class="collision"/>
+				<geom name="CactusFlowerpot_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_027" class="collision"/>
+				<geom name="CactusFlowerpot_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_028" class="collision"/>
+				<geom name="CactusFlowerpot_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_029" class="collision"/>
+				<geom name="CactusFlowerpot_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_030" class="collision"/>
+				<geom name="CactusFlowerpot_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_031" class="collision"/>
+				<geom name="CactusFlowerpot_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_032" class="collision"/>
+				<geom name="CactusFlowerpot_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_033" class="collision"/>
+				<geom name="CactusFlowerpot_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_034" class="collision"/>
+				<geom name="CactusFlowerpot_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlowerpot_035" class="collision"/>
+			</body>
+			<body name="cactus_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="2.8071327209472656" pos="-0.012464677914977074 0.017214708030223846 0.06064481660723686" quat="0.11763393133878708 0.6133605241775513 0.2557874023914337 0.7379186749458313" diaginertia="0.010557295754551888 0.02379077859222889 0.024638298898935318"/>
+				<geom name="CactusFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh" material="M_CactusFlesh" class="visual"/>
+				<geom name="CactusFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_001" class="collision"/>
+				<geom name="CactusFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_002" class="collision"/>
+				<geom name="CactusFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_003" class="collision"/>
+				<geom name="CactusFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_004" class="collision"/>
+				<geom name="CactusFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_005" class="collision"/>
+				<geom name="CactusFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_006" class="collision"/>
+				<geom name="CactusFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_007" class="collision"/>
+				<geom name="CactusFlesh_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_008" class="collision"/>
+				<geom name="CactusFlesh_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_009" class="collision"/>
+				<geom name="CactusFlesh_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_010" class="collision"/>
+				<geom name="CactusFlesh_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_011" class="collision"/>
+				<geom name="CactusFlesh_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_012" class="collision"/>
+				<geom name="CactusFlesh_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_013" class="collision"/>
+				<geom name="CactusFlesh_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_014" class="collision"/>
+				<geom name="CactusFlesh_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_015" class="collision"/>
+				<geom name="CactusFlesh_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_016" class="collision"/>
+				<geom name="CactusFlesh_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_017" class="collision"/>
+				<geom name="CactusFlesh_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_018" class="collision"/>
+				<geom name="CactusFlesh_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_019" class="collision"/>
+				<geom name="CactusFlesh_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_020" class="collision"/>
+				<geom name="CactusFlesh_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_021" class="collision"/>
+				<geom name="CactusFlesh_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_022" class="collision"/>
+				<geom name="CactusFlesh_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_023" class="collision"/>
+				<geom name="CactusFlesh_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_024" class="collision"/>
+				<geom name="CactusFlesh_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_025" class="collision"/>
+				<geom name="CactusFlesh_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_026" class="collision"/>
+				<geom name="CactusFlesh_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_027" class="collision"/>
+				<geom name="CactusFlesh_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_028" class="collision"/>
+				<geom name="CactusFlesh_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_029" class="collision"/>
+				<geom name="CactusFlesh_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_030" class="collision"/>
+				<geom name="CactusFlesh_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_031" class="collision"/>
+				<geom name="CactusFlesh_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_032" class="collision"/>
+				<geom name="CactusFlesh_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_033" class="collision"/>
+				<geom name="CactusFlesh_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_034" class="collision"/>
+				<geom name="CactusFlesh_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_035" class="collision"/>
+				<geom name="CactusFlesh_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_036" class="collision"/>
+				<geom name="CactusFlesh_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_037" class="collision"/>
+				<geom name="CactusFlesh_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_038" class="collision"/>
+				<geom name="CactusFlesh_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_039" class="collision"/>
+				<geom name="CactusFlesh_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_040" class="collision"/>
+				<geom name="CactusFlesh_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_041" class="collision"/>
+				<geom name="CactusFlesh_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_042" class="collision"/>
+				<geom name="CactusFlesh_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_043" class="collision"/>
+				<geom name="CactusFlesh_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_044" class="collision"/>
+				<geom name="CactusFlesh_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_045" class="collision"/>
+				<geom name="CactusFlesh_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_046" class="collision"/>
+				<geom name="CactusFlesh_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_047" class="collision"/>
+				<geom name="CactusFlesh_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_048" class="collision"/>
+				<geom name="CactusFlesh_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_049" class="collision"/>
+				<geom name="CactusFlesh_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_050" class="collision"/>
+				<geom name="CactusFlesh_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_051" class="collision"/>
+				<geom name="CactusFlesh_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_052" class="collision"/>
+				<geom name="CactusFlesh_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_053" class="collision"/>
+				<geom name="CactusFlesh_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_054" class="collision"/>
+				<geom name="CactusFlesh_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_055" class="collision"/>
+				<geom name="CactusFlesh_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_056" class="collision"/>
+				<geom name="CactusFlesh_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_057" class="collision"/>
+				<geom name="CactusFlesh_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_058" class="collision"/>
+				<geom name="CactusFlesh_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_059" class="collision"/>
+				<geom name="CactusFlesh_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_060" class="collision"/>
+				<geom name="CactusFlesh_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_061" class="collision"/>
+				<geom name="CactusFlesh_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_062" class="collision"/>
+				<geom name="CactusFlesh_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_063" class="collision"/>
+				<geom name="CactusFlesh_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_064" class="collision"/>
+				<geom name="CactusFlesh_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_065" class="collision"/>
+				<geom name="CactusFlesh_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_066" class="collision"/>
+				<geom name="CactusFlesh_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_067" class="collision"/>
+				<geom name="CactusFlesh_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_068" class="collision"/>
+				<geom name="CactusFlesh_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_069" class="collision"/>
+				<geom name="CactusFlesh_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_070" class="collision"/>
+				<geom name="CactusFlesh_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_071" class="collision"/>
+				<geom name="CactusFlesh_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_072" class="collision"/>
+				<geom name="CactusFlesh_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_073" class="collision"/>
+				<geom name="CactusFlesh_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_074" class="collision"/>
+				<geom name="CactusFlesh_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_075" class="collision"/>
+				<geom name="CactusFlesh_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_076" class="collision"/>
+				<geom name="CactusFlesh_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_077" class="collision"/>
+				<geom name="CactusFlesh_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_078" class="collision"/>
+				<geom name="CactusFlesh_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_079" class="collision"/>
+				<geom name="CactusFlesh_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_080" class="collision"/>
+				<geom name="CactusFlesh_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_081" class="collision"/>
+				<geom name="CactusFlesh_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_082" class="collision"/>
+				<geom name="CactusFlesh_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_083" class="collision"/>
+				<geom name="CactusFlesh_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_084" class="collision"/>
+				<geom name="CactusFlesh_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_085" class="collision"/>
+				<geom name="CactusFlesh_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_086" class="collision"/>
+				<geom name="CactusFlesh_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_087" class="collision"/>
+				<geom name="CactusFlesh_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_088" class="collision"/>
+				<geom name="CactusFlesh_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_089" class="collision"/>
+				<geom name="CactusFlesh_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_090" class="collision"/>
+				<geom name="CactusFlesh_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_091" class="collision"/>
+				<geom name="CactusFlesh_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_092" class="collision"/>
+				<geom name="CactusFlesh_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_093" class="collision"/>
+				<geom name="CactusFlesh_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_094" class="collision"/>
+				<geom name="CactusFlesh_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_095" class="collision"/>
+				<geom name="CactusFlesh_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_096" class="collision"/>
+				<geom name="CactusFlesh_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_097" class="collision"/>
+				<geom name="CactusFlesh_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_098" class="collision"/>
+				<geom name="CactusFlesh_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_099" class="collision"/>
+				<geom name="CactusFlesh_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_100" class="collision"/>
+				<geom name="CactusFlesh_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_101" class="collision"/>
+				<geom name="CactusFlesh_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_102" class="collision"/>
+				<geom name="CactusFlesh_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_103" class="collision"/>
+				<geom name="CactusFlesh_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_104" class="collision"/>
+				<geom name="CactusFlesh_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_105" class="collision"/>
+				<geom name="CactusFlesh_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_106" class="collision"/>
+				<geom name="CactusFlesh_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_107" class="collision"/>
+				<geom name="CactusFlesh_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_108" class="collision"/>
+				<geom name="CactusFlesh_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_109" class="collision"/>
+				<geom name="CactusFlesh_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_110" class="collision"/>
+				<geom name="CactusFlesh_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_111" class="collision"/>
+				<geom name="CactusFlesh_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_112" class="collision"/>
+				<geom name="CactusFlesh_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_113" class="collision"/>
+				<geom name="CactusFlesh_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_114" class="collision"/>
+				<geom name="CactusFlesh_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_115" class="collision"/>
+				<geom name="CactusFlesh_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_116" class="collision"/>
+				<geom name="CactusFlesh_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_117" class="collision"/>
+				<geom name="CactusFlesh_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_118" class="collision"/>
+				<geom name="CactusFlesh_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_119" class="collision"/>
+				<geom name="CactusFlesh_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_120" class="collision"/>
+				<geom name="CactusFlesh_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_121" class="collision"/>
+				<geom name="CactusFlesh_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_122" class="collision"/>
+				<geom name="CactusFlesh_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_123" class="collision"/>
+				<geom name="CactusFlesh_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_124" class="collision"/>
+				<geom name="CactusFlesh_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_125" class="collision"/>
+				<geom name="CactusFlesh_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_126" class="collision"/>
+				<geom name="CactusFlesh_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_127" class="collision"/>
+				<geom name="CactusFlesh_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_128" class="collision"/>
+				<geom name="CactusFlesh_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_129" class="collision"/>
+				<geom name="CactusFlesh_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_130" class="collision"/>
+				<geom name="CactusFlesh_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_131" class="collision"/>
+				<geom name="CactusFlesh_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_132" class="collision"/>
+				<geom name="CactusFlesh_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_133" class="collision"/>
+				<geom name="CactusFlesh_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_134" class="collision"/>
+				<geom name="CactusFlesh_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_135" class="collision"/>
+				<geom name="CactusFlesh_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_136" class="collision"/>
+				<geom name="CactusFlesh_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_137" class="collision"/>
+				<geom name="CactusFlesh_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_138" class="collision"/>
+				<geom name="CactusFlesh_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_139" class="collision"/>
+				<geom name="CactusFlesh_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_140" class="collision"/>
+				<geom name="CactusFlesh_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_141" class="collision"/>
+				<geom name="CactusFlesh_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_142" class="collision"/>
+				<geom name="CactusFlesh_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_143" class="collision"/>
+				<geom name="CactusFlesh_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_144" class="collision"/>
+				<geom name="CactusFlesh_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_145" class="collision"/>
+				<geom name="CactusFlesh_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_146" class="collision"/>
+				<geom name="CactusFlesh_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_147" class="collision"/>
+				<geom name="CactusFlesh_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_148" class="collision"/>
+				<geom name="CactusFlesh_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_149" class="collision"/>
+				<geom name="CactusFlesh_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_150" class="collision"/>
+				<geom name="CactusFlesh_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_151" class="collision"/>
+				<geom name="CactusFlesh_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_152" class="collision"/>
+				<geom name="CactusFlesh_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_153" class="collision"/>
+				<geom name="CactusFlesh_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_154" class="collision"/>
+				<geom name="CactusFlesh_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_155" class="collision"/>
+				<geom name="CactusFlesh_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_156" class="collision"/>
+				<geom name="CactusFlesh_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_157" class="collision"/>
+				<geom name="CactusFlesh_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_158" class="collision"/>
+				<geom name="CactusFlesh_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_159" class="collision"/>
+				<geom name="CactusFlesh_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_160" class="collision"/>
+				<geom name="CactusFlesh_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_161" class="collision"/>
+				<geom name="CactusFlesh_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_162" class="collision"/>
+				<geom name="CactusFlesh_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_163" class="collision"/>
+				<geom name="CactusFlesh_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_164" class="collision"/>
+				<geom name="CactusFlesh_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_165" class="collision"/>
+				<geom name="CactusFlesh_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_166" class="collision"/>
+				<geom name="CactusFlesh_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_167" class="collision"/>
+				<geom name="CactusFlesh_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_168" class="collision"/>
+				<geom name="CactusFlesh_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_169" class="collision"/>
+				<geom name="CactusFlesh_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_170" class="collision"/>
+				<geom name="CactusFlesh_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_171" class="collision"/>
+				<geom name="CactusFlesh_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_172" class="collision"/>
+				<geom name="CactusFlesh_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_173" class="collision"/>
+				<geom name="CactusFlesh_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_174" class="collision"/>
+				<geom name="CactusFlesh_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_175" class="collision"/>
+				<geom name="CactusFlesh_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_176" class="collision"/>
+				<geom name="CactusFlesh_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_177" class="collision"/>
+				<geom name="CactusFlesh_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_178" class="collision"/>
+				<geom name="CactusFlesh_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_179" class="collision"/>
+				<geom name="CactusFlesh_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_180" class="collision"/>
+				<geom name="CactusFlesh_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_181" class="collision"/>
+				<geom name="CactusFlesh_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_182" class="collision"/>
+				<geom name="CactusFlesh_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_183" class="collision"/>
+				<geom name="CactusFlesh_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_184" class="collision"/>
+				<geom name="CactusFlesh_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_185" class="collision"/>
+				<geom name="CactusFlesh_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_186" class="collision"/>
+				<geom name="CactusFlesh_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_187" class="collision"/>
+				<geom name="CactusFlesh_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_188" class="collision"/>
+				<geom name="CactusFlesh_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_189" class="collision"/>
+				<geom name="CactusFlesh_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_190" class="collision"/>
+				<geom name="CactusFlesh_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_191" class="collision"/>
+				<geom name="CactusFlesh_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_192" class="collision"/>
+				<geom name="CactusFlesh_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_193" class="collision"/>
+				<geom name="CactusFlesh_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_194" class="collision"/>
+				<geom name="CactusFlesh_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_195" class="collision"/>
+				<geom name="CactusFlesh_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_196" class="collision"/>
+				<geom name="CactusFlesh_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_197" class="collision"/>
+				<geom name="CactusFlesh_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_198" class="collision"/>
+				<geom name="CactusFlesh_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_199" class="collision"/>
+				<geom name="CactusFlesh_200" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_200" class="collision"/>
+				<geom name="CactusFlesh_201" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_201" class="collision"/>
+				<geom name="CactusFlesh_202" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_202" class="collision"/>
+				<geom name="CactusFlesh_203" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_203" class="collision"/>
+				<geom name="CactusFlesh_204" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_204" class="collision"/>
+				<geom name="CactusFlesh_205" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_205" class="collision"/>
+				<geom name="CactusFlesh_206" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_206" class="collision"/>
+				<geom name="CactusFlesh_207" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_207" class="collision"/>
+				<geom name="CactusFlesh_208" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_208" class="collision"/>
+				<geom name="CactusFlesh_209" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_209" class="collision"/>
+				<geom name="CactusFlesh_210" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_210" class="collision"/>
+				<geom name="CactusFlesh_211" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_211" class="collision"/>
+				<geom name="CactusFlesh_212" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_212" class="collision"/>
+				<geom name="CactusFlesh_213" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_213" class="collision"/>
+				<geom name="CactusFlesh_214" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_214" class="collision"/>
+				<geom name="CactusFlesh_215" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_215" class="collision"/>
+				<geom name="CactusFlesh_216" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_216" class="collision"/>
+				<geom name="CactusFlesh_217" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_217" class="collision"/>
+				<geom name="CactusFlesh_218" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_218" class="collision"/>
+				<geom name="CactusFlesh_219" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_219" class="collision"/>
+				<geom name="CactusFlesh_220" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_220" class="collision"/>
+				<geom name="CactusFlesh_221" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_221" class="collision"/>
+				<geom name="CactusFlesh_222" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_222" class="collision"/>
+				<geom name="CactusFlesh_223" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_223" class="collision"/>
+				<geom name="CactusFlesh_224" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_224" class="collision"/>
+				<geom name="CactusFlesh_225" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_225" class="collision"/>
+				<geom name="CactusFlesh_226" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_226" class="collision"/>
+				<geom name="CactusFlesh_227" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_227" class="collision"/>
+				<geom name="CactusFlesh_228" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_228" class="collision"/>
+				<geom name="CactusFlesh_229" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_229" class="collision"/>
+				<geom name="CactusFlesh_230" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_230" class="collision"/>
+				<geom name="CactusFlesh_231" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusFlesh_231" class="collision"/>
+			</body>
+			<body name="cactus_leaf_thorn" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.026943473145365715" pos="-0.011808937415480614 0.015403669327497482 0.0706799253821373" quat="0.1559377908706665 0.6111261248588562 0.16764922440052032 0.757695198059082" diaginertia="0.0001564681442687288 0.00030286808032542467 0.0003107073134742677"/>
+				<geom name="CactusLeafThorn" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn" material="M_CactusLeafThorn" class="visual"/>
+				<geom name="CactusLeafThorn_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_001" class="collision"/>
+				<geom name="CactusLeafThorn_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_002" class="collision"/>
+				<geom name="CactusLeafThorn_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_003" class="collision"/>
+				<geom name="CactusLeafThorn_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_004" class="collision"/>
+				<geom name="CactusLeafThorn_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_005" class="collision"/>
+				<geom name="CactusLeafThorn_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_006" class="collision"/>
+				<geom name="CactusLeafThorn_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_007" class="collision"/>
+				<geom name="CactusLeafThorn_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_008" class="collision"/>
+				<geom name="CactusLeafThorn_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_009" class="collision"/>
+				<geom name="CactusLeafThorn_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_010" class="collision"/>
+				<geom name="CactusLeafThorn_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_011" class="collision"/>
+				<geom name="CactusLeafThorn_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_012" class="collision"/>
+				<geom name="CactusLeafThorn_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_013" class="collision"/>
+				<geom name="CactusLeafThorn_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_014" class="collision"/>
+				<geom name="CactusLeafThorn_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_015" class="collision"/>
+				<geom name="CactusLeafThorn_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_016" class="collision"/>
+				<geom name="CactusLeafThorn_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_017" class="collision"/>
+				<geom name="CactusLeafThorn_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_018" class="collision"/>
+				<geom name="CactusLeafThorn_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_019" class="collision"/>
+				<geom name="CactusLeafThorn_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_020" class="collision"/>
+				<geom name="CactusLeafThorn_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_021" class="collision"/>
+				<geom name="CactusLeafThorn_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_022" class="collision"/>
+				<geom name="CactusLeafThorn_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_023" class="collision"/>
+				<geom name="CactusLeafThorn_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_024" class="collision"/>
+				<geom name="CactusLeafThorn_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_025" class="collision"/>
+				<geom name="CactusLeafThorn_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_026" class="collision"/>
+				<geom name="CactusLeafThorn_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_027" class="collision"/>
+				<geom name="CactusLeafThorn_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_028" class="collision"/>
+				<geom name="CactusLeafThorn_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_029" class="collision"/>
+				<geom name="CactusLeafThorn_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_030" class="collision"/>
+				<geom name="CactusLeafThorn_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_031" class="collision"/>
+				<geom name="CactusLeafThorn_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_032" class="collision"/>
+				<geom name="CactusLeafThorn_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_033" class="collision"/>
+				<geom name="CactusLeafThorn_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_034" class="collision"/>
+				<geom name="CactusLeafThorn_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_035" class="collision"/>
+				<geom name="CactusLeafThorn_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_036" class="collision"/>
+				<geom name="CactusLeafThorn_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_037" class="collision"/>
+				<geom name="CactusLeafThorn_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_038" class="collision"/>
+				<geom name="CactusLeafThorn_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_039" class="collision"/>
+				<geom name="CactusLeafThorn_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_040" class="collision"/>
+				<geom name="CactusLeafThorn_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_041" class="collision"/>
+				<geom name="CactusLeafThorn_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_042" class="collision"/>
+				<geom name="CactusLeafThorn_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_043" class="collision"/>
+				<geom name="CactusLeafThorn_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_044" class="collision"/>
+				<geom name="CactusLeafThorn_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_045" class="collision"/>
+				<geom name="CactusLeafThorn_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_046" class="collision"/>
+				<geom name="CactusLeafThorn_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_047" class="collision"/>
+				<geom name="CactusLeafThorn_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_048" class="collision"/>
+				<geom name="CactusLeafThorn_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_049" class="collision"/>
+				<geom name="CactusLeafThorn_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_050" class="collision"/>
+				<geom name="CactusLeafThorn_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_051" class="collision"/>
+				<geom name="CactusLeafThorn_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_052" class="collision"/>
+				<geom name="CactusLeafThorn_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_053" class="collision"/>
+				<geom name="CactusLeafThorn_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_054" class="collision"/>
+				<geom name="CactusLeafThorn_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_055" class="collision"/>
+				<geom name="CactusLeafThorn_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_056" class="collision"/>
+				<geom name="CactusLeafThorn_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_057" class="collision"/>
+				<geom name="CactusLeafThorn_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_058" class="collision"/>
+				<geom name="CactusLeafThorn_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_059" class="collision"/>
+				<geom name="CactusLeafThorn_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_060" class="collision"/>
+				<geom name="CactusLeafThorn_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_061" class="collision"/>
+				<geom name="CactusLeafThorn_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_062" class="collision"/>
+				<geom name="CactusLeafThorn_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_063" class="collision"/>
+				<geom name="CactusLeafThorn_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_064" class="collision"/>
+				<geom name="CactusLeafThorn_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_065" class="collision"/>
+				<geom name="CactusLeafThorn_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_066" class="collision"/>
+				<geom name="CactusLeafThorn_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_067" class="collision"/>
+				<geom name="CactusLeafThorn_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_068" class="collision"/>
+				<geom name="CactusLeafThorn_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_069" class="collision"/>
+				<geom name="CactusLeafThorn_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_070" class="collision"/>
+				<geom name="CactusLeafThorn_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_071" class="collision"/>
+				<geom name="CactusLeafThorn_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_072" class="collision"/>
+				<geom name="CactusLeafThorn_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_073" class="collision"/>
+				<geom name="CactusLeafThorn_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_074" class="collision"/>
+				<geom name="CactusLeafThorn_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_075" class="collision"/>
+				<geom name="CactusLeafThorn_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_076" class="collision"/>
+				<geom name="CactusLeafThorn_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_077" class="collision"/>
+				<geom name="CactusLeafThorn_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_078" class="collision"/>
+				<geom name="CactusLeafThorn_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_079" class="collision"/>
+				<geom name="CactusLeafThorn_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_080" class="collision"/>
+				<geom name="CactusLeafThorn_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_081" class="collision"/>
+				<geom name="CactusLeafThorn_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_082" class="collision"/>
+				<geom name="CactusLeafThorn_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_083" class="collision"/>
+				<geom name="CactusLeafThorn_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_084" class="collision"/>
+				<geom name="CactusLeafThorn_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_085" class="collision"/>
+				<geom name="CactusLeafThorn_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_086" class="collision"/>
+				<geom name="CactusLeafThorn_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_087" class="collision"/>
+				<geom name="CactusLeafThorn_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_088" class="collision"/>
+				<geom name="CactusLeafThorn_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_089" class="collision"/>
+				<geom name="CactusLeafThorn_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_090" class="collision"/>
+				<geom name="CactusLeafThorn_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_091" class="collision"/>
+				<geom name="CactusLeafThorn_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_092" class="collision"/>
+				<geom name="CactusLeafThorn_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_093" class="collision"/>
+				<geom name="CactusLeafThorn_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_094" class="collision"/>
+				<geom name="CactusLeafThorn_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_095" class="collision"/>
+				<geom name="CactusLeafThorn_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_096" class="collision"/>
+				<geom name="CactusLeafThorn_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_097" class="collision"/>
+				<geom name="CactusLeafThorn_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_098" class="collision"/>
+				<geom name="CactusLeafThorn_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_099" class="collision"/>
+				<geom name="CactusLeafThorn_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_100" class="collision"/>
+				<geom name="CactusLeafThorn_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_101" class="collision"/>
+				<geom name="CactusLeafThorn_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_102" class="collision"/>
+				<geom name="CactusLeafThorn_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_103" class="collision"/>
+				<geom name="CactusLeafThorn_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_104" class="collision"/>
+				<geom name="CactusLeafThorn_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_105" class="collision"/>
+				<geom name="CactusLeafThorn_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_106" class="collision"/>
+				<geom name="CactusLeafThorn_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_107" class="collision"/>
+				<geom name="CactusLeafThorn_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_108" class="collision"/>
+				<geom name="CactusLeafThorn_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_109" class="collision"/>
+				<geom name="CactusLeafThorn_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_110" class="collision"/>
+				<geom name="CactusLeafThorn_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_111" class="collision"/>
+				<geom name="CactusLeafThorn_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_112" class="collision"/>
+				<geom name="CactusLeafThorn_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_113" class="collision"/>
+				<geom name="CactusLeafThorn_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_114" class="collision"/>
+				<geom name="CactusLeafThorn_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_115" class="collision"/>
+				<geom name="CactusLeafThorn_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_116" class="collision"/>
+				<geom name="CactusLeafThorn_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_117" class="collision"/>
+				<geom name="CactusLeafThorn_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_118" class="collision"/>
+				<geom name="CactusLeafThorn_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_119" class="collision"/>
+				<geom name="CactusLeafThorn_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_120" class="collision"/>
+				<geom name="CactusLeafThorn_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_121" class="collision"/>
+				<geom name="CactusLeafThorn_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_122" class="collision"/>
+				<geom name="CactusLeafThorn_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_123" class="collision"/>
+				<geom name="CactusLeafThorn_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_124" class="collision"/>
+				<geom name="CactusLeafThorn_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_125" class="collision"/>
+				<geom name="CactusLeafThorn_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_126" class="collision"/>
+				<geom name="CactusLeafThorn_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_127" class="collision"/>
+				<geom name="CactusLeafThorn_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_128" class="collision"/>
+				<geom name="CactusLeafThorn_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_129" class="collision"/>
+				<geom name="CactusLeafThorn_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_130" class="collision"/>
+				<geom name="CactusLeafThorn_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_131" class="collision"/>
+				<geom name="CactusLeafThorn_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_132" class="collision"/>
+				<geom name="CactusLeafThorn_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_133" class="collision"/>
+				<geom name="CactusLeafThorn_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_134" class="collision"/>
+				<geom name="CactusLeafThorn_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_135" class="collision"/>
+				<geom name="CactusLeafThorn_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_136" class="collision"/>
+				<geom name="CactusLeafThorn_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_137" class="collision"/>
+				<geom name="CactusLeafThorn_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_138" class="collision"/>
+				<geom name="CactusLeafThorn_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_139" class="collision"/>
+				<geom name="CactusLeafThorn_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_140" class="collision"/>
+				<geom name="CactusLeafThorn_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_141" class="collision"/>
+				<geom name="CactusLeafThorn_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_142" class="collision"/>
+				<geom name="CactusLeafThorn_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_143" class="collision"/>
+				<geom name="CactusLeafThorn_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_144" class="collision"/>
+				<geom name="CactusLeafThorn_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_145" class="collision"/>
+				<geom name="CactusLeafThorn_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_146" class="collision"/>
+				<geom name="CactusLeafThorn_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_147" class="collision"/>
+				<geom name="CactusLeafThorn_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_148" class="collision"/>
+				<geom name="CactusLeafThorn_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_149" class="collision"/>
+				<geom name="CactusLeafThorn_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_150" class="collision"/>
+				<geom name="CactusLeafThorn_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_151" class="collision"/>
+				<geom name="CactusLeafThorn_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_152" class="collision"/>
+				<geom name="CactusLeafThorn_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_153" class="collision"/>
+				<geom name="CactusLeafThorn_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_154" class="collision"/>
+				<geom name="CactusLeafThorn_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_155" class="collision"/>
+				<geom name="CactusLeafThorn_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_156" class="collision"/>
+				<geom name="CactusLeafThorn_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_157" class="collision"/>
+				<geom name="CactusLeafThorn_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_158" class="collision"/>
+				<geom name="CactusLeafThorn_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_159" class="collision"/>
+				<geom name="CactusLeafThorn_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_160" class="collision"/>
+				<geom name="CactusLeafThorn_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_161" class="collision"/>
+				<geom name="CactusLeafThorn_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_162" class="collision"/>
+				<geom name="CactusLeafThorn_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_163" class="collision"/>
+				<geom name="CactusLeafThorn_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_164" class="collision"/>
+				<geom name="CactusLeafThorn_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_165" class="collision"/>
+				<geom name="CactusLeafThorn_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_166" class="collision"/>
+				<geom name="CactusLeafThorn_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_167" class="collision"/>
+				<geom name="CactusLeafThorn_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_168" class="collision"/>
+				<geom name="CactusLeafThorn_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_169" class="collision"/>
+				<geom name="CactusLeafThorn_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_170" class="collision"/>
+				<geom name="CactusLeafThorn_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_171" class="collision"/>
+				<geom name="CactusLeafThorn_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_172" class="collision"/>
+				<geom name="CactusLeafThorn_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_173" class="collision"/>
+				<geom name="CactusLeafThorn_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_174" class="collision"/>
+				<geom name="CactusLeafThorn_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_175" class="collision"/>
+				<geom name="CactusLeafThorn_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_176" class="collision"/>
+				<geom name="CactusLeafThorn_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_177" class="collision"/>
+				<geom name="CactusLeafThorn_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_178" class="collision"/>
+				<geom name="CactusLeafThorn_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_179" class="collision"/>
+				<geom name="CactusLeafThorn_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_180" class="collision"/>
+				<geom name="CactusLeafThorn_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_181" class="collision"/>
+				<geom name="CactusLeafThorn_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_182" class="collision"/>
+				<geom name="CactusLeafThorn_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_183" class="collision"/>
+				<geom name="CactusLeafThorn_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_184" class="collision"/>
+				<geom name="CactusLeafThorn_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_185" class="collision"/>
+				<geom name="CactusLeafThorn_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_186" class="collision"/>
+				<geom name="CactusLeafThorn_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_187" class="collision"/>
+				<geom name="CactusLeafThorn_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_188" class="collision"/>
+				<geom name="CactusLeafThorn_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_189" class="collision"/>
+				<geom name="CactusLeafThorn_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_190" class="collision"/>
+				<geom name="CactusLeafThorn_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_191" class="collision"/>
+				<geom name="CactusLeafThorn_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_192" class="collision"/>
+				<geom name="CactusLeafThorn_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_193" class="collision"/>
+				<geom name="CactusLeafThorn_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_194" class="collision"/>
+				<geom name="CactusLeafThorn_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_195" class="collision"/>
+				<geom name="CactusLeafThorn_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_196" class="collision"/>
+				<geom name="CactusLeafThorn_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_197" class="collision"/>
+				<geom name="CactusLeafThorn_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_198" class="collision"/>
+				<geom name="CactusLeafThorn_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_199" class="collision"/>
+				<geom name="CactusLeafThorn_200" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_200" class="collision"/>
+				<geom name="CactusLeafThorn_201" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_201" class="collision"/>
+				<geom name="CactusLeafThorn_202" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_202" class="collision"/>
+				<geom name="CactusLeafThorn_203" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_203" class="collision"/>
+				<geom name="CactusLeafThorn_204" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_204" class="collision"/>
+				<geom name="CactusLeafThorn_205" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_205" class="collision"/>
+				<geom name="CactusLeafThorn_206" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_206" class="collision"/>
+				<geom name="CactusLeafThorn_207" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_207" class="collision"/>
+				<geom name="CactusLeafThorn_208" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="CactusLeafThorn_208" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    defaultPrim = "M_YellowTomatoSeed"
+    upAxis = "Z"
+)
+
+def Material "M_YellowTomatoSeed"
+{
+    token outputs:surface.connect = </M_YellowTomatoSeed/PBRShader.outputs:surface>
+
+    def Shader "PBRShader"
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        color3f inputs:diffuseColor = (0.8052, 0.7818, 0.7272)
+        color3f inputs:emissiveColor = (0, 0, 0)
+        float inputs:opacity = 1
+        int inputs:useSpecularWorkflow = 1
+        token outputs:surface
+    }
+}
+

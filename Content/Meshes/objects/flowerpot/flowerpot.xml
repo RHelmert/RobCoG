@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<mujoco model="flowerpot">
+	<compiler meshdir="flowerpot/meshes" texturedir="flowerpot/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Flowerpot" file="stl/Flowerpot.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_001" file="stl/Flowerpot_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_002" file="stl/Flowerpot_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_003" file="stl/Flowerpot_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_004" file="stl/Flowerpot_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_005" file="stl/Flowerpot_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_006" file="stl/Flowerpot_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_007" file="stl/Flowerpot_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_008" file="stl/Flowerpot_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_009" file="stl/Flowerpot_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_010" file="stl/Flowerpot_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_011" file="stl/Flowerpot_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_012" file="stl/Flowerpot_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_013" file="stl/Flowerpot_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_014" file="stl/Flowerpot_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_015" file="stl/Flowerpot_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_016" file="stl/Flowerpot_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_017" file="stl/Flowerpot_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_018" file="stl/Flowerpot_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_019" file="stl/Flowerpot_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_020" file="stl/Flowerpot_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_021" file="stl/Flowerpot_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_022" file="stl/Flowerpot_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_023" file="stl/Flowerpot_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_024" file="stl/Flowerpot_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_025" file="stl/Flowerpot_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_026" file="stl/Flowerpot_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_027" file="stl/Flowerpot_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_028" file="stl/Flowerpot_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_029" file="stl/Flowerpot_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_030" file="stl/Flowerpot_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_031" file="stl/Flowerpot_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_032" file="stl/Flowerpot_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_033" file="stl/Flowerpot_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_034" file="stl/Flowerpot_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_035" file="stl/Flowerpot_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_036" file="stl/Flowerpot_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_037" file="stl/Flowerpot_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_038" file="stl/Flowerpot_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_039" file="stl/Flowerpot_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_040" file="stl/Flowerpot_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_041" file="stl/Flowerpot_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_042" file="stl/Flowerpot_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_043" file="stl/Flowerpot_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_044" file="stl/Flowerpot_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_045" file="stl/Flowerpot_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_046" file="stl/Flowerpot_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_047" file="stl/Flowerpot_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_048" file="stl/Flowerpot_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_049" file="stl/Flowerpot_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_050" file="stl/Flowerpot_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_051" file="stl/Flowerpot_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_052" file="stl/Flowerpot_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Flowerpot_053" file="stl/Flowerpot_053.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Flowerpot" rgba="0.7376999855041504 0.7451000213623047 0.7609000205993652 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="flowerpot" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="3.7099127769470215" pos="3.031487949556322e-08 -1.117605652467546e-08 0.0027141293976455927" quat="0.6975465416908264 0.11588457971811295 -0.6975463628768921 0.115882009267807" diaginertia="0.03945529833436012 0.04177573695778847 0.041775744408369064"/>
+			<geom name="Flowerpot" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot" material="M_Flowerpot" class="visual"/>
+			<geom name="Flowerpot_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_001" class="collision"/>
+			<geom name="Flowerpot_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_002" class="collision"/>
+			<geom name="Flowerpot_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_003" class="collision"/>
+			<geom name="Flowerpot_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_004" class="collision"/>
+			<geom name="Flowerpot_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_005" class="collision"/>
+			<geom name="Flowerpot_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_006" class="collision"/>
+			<geom name="Flowerpot_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_007" class="collision"/>
+			<geom name="Flowerpot_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_008" class="collision"/>
+			<geom name="Flowerpot_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_009" class="collision"/>
+			<geom name="Flowerpot_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_010" class="collision"/>
+			<geom name="Flowerpot_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_011" class="collision"/>
+			<geom name="Flowerpot_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_012" class="collision"/>
+			<geom name="Flowerpot_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_013" class="collision"/>
+			<geom name="Flowerpot_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_014" class="collision"/>
+			<geom name="Flowerpot_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_015" class="collision"/>
+			<geom name="Flowerpot_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_016" class="collision"/>
+			<geom name="Flowerpot_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_017" class="collision"/>
+			<geom name="Flowerpot_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_018" class="collision"/>
+			<geom name="Flowerpot_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_019" class="collision"/>
+			<geom name="Flowerpot_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_020" class="collision"/>
+			<geom name="Flowerpot_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_021" class="collision"/>
+			<geom name="Flowerpot_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_022" class="collision"/>
+			<geom name="Flowerpot_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_023" class="collision"/>
+			<geom name="Flowerpot_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_024" class="collision"/>
+			<geom name="Flowerpot_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_025" class="collision"/>
+			<geom name="Flowerpot_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_026" class="collision"/>
+			<geom name="Flowerpot_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_027" class="collision"/>
+			<geom name="Flowerpot_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_028" class="collision"/>
+			<geom name="Flowerpot_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_029" class="collision"/>
+			<geom name="Flowerpot_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_030" class="collision"/>
+			<geom name="Flowerpot_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_031" class="collision"/>
+			<geom name="Flowerpot_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_032" class="collision"/>
+			<geom name="Flowerpot_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_033" class="collision"/>
+			<geom name="Flowerpot_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_034" class="collision"/>
+			<geom name="Flowerpot_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_035" class="collision"/>
+			<geom name="Flowerpot_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_036" class="collision"/>
+			<geom name="Flowerpot_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_037" class="collision"/>
+			<geom name="Flowerpot_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_038" class="collision"/>
+			<geom name="Flowerpot_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_039" class="collision"/>
+			<geom name="Flowerpot_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_040" class="collision"/>
+			<geom name="Flowerpot_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_041" class="collision"/>
+			<geom name="Flowerpot_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_042" class="collision"/>
+			<geom name="Flowerpot_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_043" class="collision"/>
+			<geom name="Flowerpot_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_044" class="collision"/>
+			<geom name="Flowerpot_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_045" class="collision"/>
+			<geom name="Flowerpot_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_046" class="collision"/>
+			<geom name="Flowerpot_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_047" class="collision"/>
+			<geom name="Flowerpot_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_048" class="collision"/>
+			<geom name="Flowerpot_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_049" class="collision"/>
+			<geom name="Flowerpot_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_050" class="collision"/>
+			<geom name="Flowerpot_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_051" class="collision"/>
+			<geom name="Flowerpot_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_052" class="collision"/>
+			<geom name="Flowerpot_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Flowerpot_053" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

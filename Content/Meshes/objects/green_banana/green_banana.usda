@@ -1,0 +1,554 @@
+#usda 1.0
+(
+    defaultPrim = "green_banana"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "green_banana" (
+    prepend apiSchemas = ["MujocoBodyAPI"]
+)
+{
+    point3f mujoco:body:pos = (0, 0, 0)
+    quatf mujoco:body:quat = (1, 0, 0, 0)
+
+    def Xform "green_banana_exocarp" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.000013263611, 0.00004837357, 0.00005629466)
+        float mujoco:body:inertial:mass = 0.014691427
+        point3f mujoco:body:inertial:pos = (-0.006618168, 0.009748806, -0.0014161976)
+        quatf mujoco:body:inertial:quat = (0.9990789, 0.040289864, 0.0049866657, -0.013897596)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.006618168, 0.009748806, -0.0014161976)
+        float3 physics:diagonalInertia = (0.000013263611, 0.00004837357, 0.00005629466)
+        float physics:mass = 0.014691427
+        quatf physics:principalAxes = (0.9990789, 0.040289864, 0.0049866657, -0.013897596)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.000013263611
+        float urdf:link:inertial:inertia:iyy = 0.00004837357
+        float urdf:link:inertial:inertia:izz = 0.00005629466
+        float urdf:link:inertial:mass = 0.014691427
+        float3 urdf:link:inertial:origin:rpy = (0.08045862, 0.011084237, -0.027372867)
+        point3f urdf:link:inertial:origin:xyz = (-0.006618168, 0.009748806, -0.0014161976)
+
+        def Mesh "GreenBananaExocarp" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp.usda@</GreenBananaExocarp>
+        )
+        {
+            rel material:binding = </green_banana/green_banana_exocarp/GreenBananaExocarp/Materials/M_GreenBananaExocarp>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenBananaExocarp>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/obj/GreenBananaExocarp.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenBananaExocarp" (
+                    prepend references = @./green_banana/materials/usd/M_GreenBananaExocarp.usda@</M_GreenBananaExocarp>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenBananaExocarp_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp_001.usda@</GreenBananaExocarp_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaExocarp_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaExocarp_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp_002.usda@</GreenBananaExocarp_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaExocarp_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaExocarp_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp_003.usda@</GreenBananaExocarp_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaExocarp_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaExocarp_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp_004.usda@</GreenBananaExocarp_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaExocarp_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaExocarp_005" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaExocarp_005.usda@</GreenBananaExocarp_005>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaExocarp_005>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaExocarp_005.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "green_banana_endocarp" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.0000031249356, 0.0000114430395, 0.00001322883)
+        float mujoco:body:inertial:mass = 0.003866087
+        point3f mujoco:body:inertial:pos = (-0.012336766, 0.013098366, -0.00090104854)
+        quatf mujoco:body:inertial:quat = (0.9992004, 0.023779312, -0.002455901, 0.032047085)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.012336766, 0.013098366, -0.00090104854)
+        float3 physics:diagonalInertia = (0.0000031249356, 0.0000114430395, 0.00001322883)
+        float physics:mass = 0.003866087
+        quatf physics:principalAxes = (0.9992004, 0.023779312, -0.002455901, 0.032047085)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.0000031249356
+        float urdf:link:inertial:inertia:iyy = 0.0000114430395
+        float urdf:link:inertial:inertia:izz = 0.00001322883
+        float urdf:link:inertial:mass = 0.003866087
+        float3 urdf:link:inertial:origin:rpy = (0.047381897, -0.006432034, 0.06397107)
+        point3f urdf:link:inertial:origin:xyz = (-0.012336766, 0.013098366, -0.00090104854)
+
+        def Mesh "GreenBananaEndocarp" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaEndocarp.usda@</GreenBananaEndocarp>
+        )
+        {
+            rel material:binding = </green_banana/green_banana_endocarp/GreenBananaEndocarp/Materials/M_GreenBananaEndocarp>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenBananaEndocarp>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaEndocarp>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/obj/GreenBananaEndocarp.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenBananaEndocarp" (
+                    prepend references = @./green_banana/materials/usd/M_GreenBananaEndocarp.usda@</M_GreenBananaEndocarp>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenBananaEndocarp_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaEndocarp_001.usda@</GreenBananaEndocarp_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaEndocarp_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaEndocarp_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaEndocarp_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaEndocarp_002.usda@</GreenBananaEndocarp_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaEndocarp_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaEndocarp_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaEndocarp_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaEndocarp_003.usda@</GreenBananaEndocarp_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaEndocarp_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaEndocarp_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+
+    def Xform "green_banana_flesh" (
+        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "UrdfLinkInertialAPI", "MujocoBodyInertialAPI", "MujocoBodyAPI"]
+    )
+    {
+        float3 mujoco:body:inertial:diaginertia = (0.00010760426, 0.0003941256, 0.0004735825)
+        float mujoco:body:inertial:mass = 0.16765253
+        point3f mujoco:body:inertial:pos = (-0.011790089, 0.016100971, -0.000510038)
+        quatf mujoco:body:inertial:quat = (0.99969083, 0.017044697, -0.0020948427, 0.017980397)
+        point3f mujoco:body:pos = (0, 0, 0)
+        quatf mujoco:body:quat = (1, 0, 0, 0)
+        point3f physics:centerOfMass = (-0.011790089, 0.016100971, -0.000510038)
+        float3 physics:diagonalInertia = (0.00010760426, 0.0003941256, 0.0004735825)
+        float physics:mass = 0.16765253
+        quatf physics:principalAxes = (0.99969083, 0.017044697, -0.0020948427, 0.017980397)
+        bool physics:rigidBodyEnabled = 1
+        float urdf:link:inertial:inertia:ixx = 0.00010760426
+        float urdf:link:inertial:inertia:iyy = 0.0003941256
+        float urdf:link:inertial:inertia:izz = 0.0004735825
+        float urdf:link:inertial:mass = 0.16765253
+        float3 urdf:link:inertial:origin:rpy = (0.034010474, -0.0048013497, 0.03588638)
+        point3f urdf:link:inertial:origin:xyz = (-0.011790089, 0.016100971, -0.000510038)
+
+        def Mesh "GreenBananaFlesh" (
+            prepend apiSchemas = ["MaterialBindingAPI", "UrdfLinkVisualAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaFlesh.usda@</GreenBananaFlesh>
+        )
+        {
+            rel material:binding = </green_banana/green_banana_flesh/GreenBananaFlesh/Materials/M_GreenBananaFlesh>
+            rel mujoco:geom:material = </mujoco/asset/materials/M_GreenBananaFlesh>
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaFlesh>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/obj/GreenBananaFlesh.obj@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            float3 urdf:visual:origin:rpy = (0, 0, 0)
+            point3f urdf:visual:origin:xyz = (0, 0, 0)
+
+            def Scope "Materials"
+            {
+                def Material "M_GreenBananaFlesh" (
+                    prepend references = @./green_banana/materials/usd/M_GreenBananaFlesh.usda@</M_GreenBananaFlesh>
+                )
+                {
+                }
+            }
+        }
+
+        def Mesh "GreenBananaFlesh_001" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaFlesh_001.usda@</GreenBananaFlesh_001>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaFlesh_001>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaFlesh_001.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaFlesh_002" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaFlesh_002.usda@</GreenBananaFlesh_002>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaFlesh_002>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaFlesh_002.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaFlesh_003" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaFlesh_003.usda@</GreenBananaFlesh_003>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaFlesh_003>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaFlesh_003.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+
+        def Mesh "GreenBananaFlesh_004" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "PhysicsMeshCollisionAPI", "UrdfLinkCollisionAPI", "UrdfGeometryMeshAPI", "MujocoGeomAPI"]
+            prepend references = @./green_banana/meshes/usd/GreenBananaFlesh_004.usda@</GreenBananaFlesh_004>
+        )
+        {
+            rel mujoco:geom:mesh = </mujoco/asset/meshes/GreenBananaFlesh_004>
+            point3f mujoco:geom:pos = (0, 0, 0)
+            quatf mujoco:geom:quat = (1, 0, 0, 0)
+            vector3f mujoco:geom:size = (1, 1, 1)
+            uniform token mujoco:geom:type = "mesh"
+            uniform token physics:approximation = "convexHull"
+            bool physics:collisionEnabled = 1
+            float[] primvars:displayOpacity = [0]
+            float3 urdf:collision:origin:rpy = (0, 0, 0)
+            point3f urdf:collision:origin:xyz = (0, 0, 0)
+            asset urdf:geometry:mesh:filename = @./green_banana/meshes/stl/GreenBananaFlesh_004.stl@
+            float3 urdf:geometry:mesh:scale = (1, 1, 1)
+            token visibility = "invisible"
+        }
+    }
+}
+
+def Urdf "urdf"
+{
+    string urdf:name = "green_banana"
+}
+
+def Mujoco "mujoco"
+{
+    string mujoco:model = "green_banana"
+
+    def MujocoAsset "asset"
+    {
+        def MujocoMesh "meshes"
+        {
+            def MujocoMesh "GreenBananaExocarp"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/obj/GreenBananaExocarp.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaExocarp_001"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaExocarp_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaExocarp_002"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaExocarp_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaExocarp_003"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaExocarp_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaExocarp_004"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaExocarp_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaExocarp_005"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaExocarp_005.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaEndocarp"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/obj/GreenBananaEndocarp.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaEndocarp_001"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaEndocarp_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaEndocarp_002"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaEndocarp_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaEndocarp_003"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaEndocarp_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaFlesh"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/obj/GreenBananaFlesh.obj@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaFlesh_001"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaFlesh_001.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaFlesh_002"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaFlesh_002.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaFlesh_003"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaFlesh_003.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+
+            def MujocoMesh "GreenBananaFlesh_004"
+            {
+                asset mujoco:mesh:file = @green_banana/meshes/stl/GreenBananaFlesh_004.stl@
+                float3 mujoco:mesh:scale = (1, 1, 1)
+            }
+        }
+
+        def MujocoMaterial "materials"
+        {
+            def MujocoMaterial "M_GreenBananaExocarp"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenBananaExocarp>
+            }
+
+            def MujocoMaterial "M_GreenBananaEndocarp"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenBananaEndocarp>
+            }
+
+            def MujocoMaterial "M_GreenBananaFlesh"
+            {
+                rel mujoco:material:texture = </mujoco/asset/textures/T_GreenBananaFlesh>
+            }
+        }
+
+        def MujocoTexture "textures"
+        {
+            def MujocoTexture "T_GreenBananaExocarp"
+            {
+                asset mujoco:texture:file = @T_GreenBananaExocarp.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_GreenBananaEndocarp"
+            {
+                asset mujoco:texture:file = @T_GreenBananaEndocarp.png@
+                string mujoco:texture:type = "2d"
+            }
+
+            def MujocoTexture "T_GreenBananaFlesh"
+            {
+                asset mujoco:texture:file = @T_GreenBananaFlesh.png@
+                string mujoco:texture:type = "2d"
+            }
+        }
+    }
+
+    def MujocoEquality "equality"
+    {
+    }
+}
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<robot name="bread_roll_2" version="1.0">
+  <link name="bread_roll_2">
+    <inertial>
+      <origin xyz="-0.0008767000399529934 -0.0015069007640704513 -0.006712085567414761" rpy="0.008229832164943218 -0.007965107448399067 -0.02588474377989769"/>
+      <mass value="0.2732691466808319"/>
+      <inertia ixx="0.0003073183761443943" ixy="0.0" ixz="0.0" iyy="0.0008927086018957198" iyz="0.0" izz="0.0010414434364065528"/>
+    </inertial>
+    <visual name="BreadRoll2">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/obj/BreadRoll2.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="BreadRoll2_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_009">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_009.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="BreadRoll2_010">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://bread_roll_2/meshes/stl/BreadRoll2_010.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

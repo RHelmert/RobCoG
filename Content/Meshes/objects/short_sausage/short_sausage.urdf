@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<robot name="short_sausage" version="1.0">
+  <link name="short_sausage">
+    <inertial>
+      <origin xyz="-0.001037427457049489 -0.00032028325949795544 -0.00020861737721133977" rpy="3.0928361415863037 0.004342873580753803 0.0012436845572665334"/>
+      <mass value="0.1019214615225792"/>
+      <inertia ixx="9.97260030999314e-06" ixy="0.0" ixz="0.0" iyy="0.00022951721621211618" iyz="0.0" izz="0.00022983380767982453"/>
+    </inertial>
+    <visual name="SausageShort">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://short_sausage/meshes/obj/SausageShort.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="SausageShort_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://short_sausage/meshes/stl/SausageShort_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

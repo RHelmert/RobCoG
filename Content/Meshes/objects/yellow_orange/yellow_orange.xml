@@ -1,0 +1,287 @@
+<?xml version="1.0" ?>
+<mujoco model="yellow_orange">
+	<compiler meshdir="yellow_orange/meshes" texturedir="yellow_orange/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="OrangeFruitPeduncle" file="obj/OrangeFruitPeduncle.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_001" file="stl/OrangeFruitPeduncle_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_002" file="stl/OrangeFruitPeduncle_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_003" file="stl/OrangeFruitPeduncle_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_004" file="stl/OrangeFruitPeduncle_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_005" file="stl/OrangeFruitPeduncle_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_006" file="stl/OrangeFruitPeduncle_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_007" file="stl/OrangeFruitPeduncle_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_008" file="stl/OrangeFruitPeduncle_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_009" file="stl/OrangeFruitPeduncle_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_010" file="stl/OrangeFruitPeduncle_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_011" file="stl/OrangeFruitPeduncle_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_012" file="stl/OrangeFruitPeduncle_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_013" file="stl/OrangeFruitPeduncle_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_014" file="stl/OrangeFruitPeduncle_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_015" file="stl/OrangeFruitPeduncle_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_016" file="stl/OrangeFruitPeduncle_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_017" file="stl/OrangeFruitPeduncle_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_018" file="stl/OrangeFruitPeduncle_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_019" file="stl/OrangeFruitPeduncle_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_020" file="stl/OrangeFruitPeduncle_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_021" file="stl/OrangeFruitPeduncle_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_022" file="stl/OrangeFruitPeduncle_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_023" file="stl/OrangeFruitPeduncle_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_024" file="stl/OrangeFruitPeduncle_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_025" file="stl/OrangeFruitPeduncle_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_026" file="stl/OrangeFruitPeduncle_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_027" file="stl/OrangeFruitPeduncle_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_028" file="stl/OrangeFruitPeduncle_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_029" file="stl/OrangeFruitPeduncle_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_030" file="stl/OrangeFruitPeduncle_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_031" file="stl/OrangeFruitPeduncle_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_032" file="stl/OrangeFruitPeduncle_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_033" file="stl/OrangeFruitPeduncle_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_034" file="stl/OrangeFruitPeduncle_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_035" file="stl/OrangeFruitPeduncle_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_036" file="stl/OrangeFruitPeduncle_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_037" file="stl/OrangeFruitPeduncle_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_038" file="stl/OrangeFruitPeduncle_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_039" file="stl/OrangeFruitPeduncle_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_040" file="stl/OrangeFruitPeduncle_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_041" file="stl/OrangeFruitPeduncle_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_042" file="stl/OrangeFruitPeduncle_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_043" file="stl/OrangeFruitPeduncle_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_044" file="stl/OrangeFruitPeduncle_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_045" file="stl/OrangeFruitPeduncle_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_046" file="stl/OrangeFruitPeduncle_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_047" file="stl/OrangeFruitPeduncle_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_048" file="stl/OrangeFruitPeduncle_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_049" file="stl/OrangeFruitPeduncle_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_050" file="stl/OrangeFruitPeduncle_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_051" file="stl/OrangeFruitPeduncle_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_052" file="stl/OrangeFruitPeduncle_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_053" file="stl/OrangeFruitPeduncle_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_054" file="stl/OrangeFruitPeduncle_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_055" file="stl/OrangeFruitPeduncle_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_056" file="stl/OrangeFruitPeduncle_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_057" file="stl/OrangeFruitPeduncle_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_058" file="stl/OrangeFruitPeduncle_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFruitPeduncle_059" file="stl/OrangeFruitPeduncle_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFascia" file="stl/OrangeFascia.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFascia_001" file="stl/OrangeFascia_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFascia_002" file="stl/OrangeFascia_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFascia_003" file="stl/OrangeFascia_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFascia_004" file="stl/OrangeFascia_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh" file="obj/OrangeFlesh.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_001" file="stl/OrangeFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_002" file="stl/OrangeFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_003" file="stl/OrangeFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_004" file="stl/OrangeFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_005" file="stl/OrangeFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_006" file="stl/OrangeFlesh_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_007" file="stl/OrangeFlesh_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_008" file="stl/OrangeFlesh_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_009" file="stl/OrangeFlesh_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_010" file="stl/OrangeFlesh_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_011" file="stl/OrangeFlesh_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_012" file="stl/OrangeFlesh_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_013" file="stl/OrangeFlesh_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_014" file="stl/OrangeFlesh_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_015" file="stl/OrangeFlesh_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_016" file="stl/OrangeFlesh_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_017" file="stl/OrangeFlesh_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_018" file="stl/OrangeFlesh_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_019" file="stl/OrangeFlesh_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_020" file="stl/OrangeFlesh_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_021" file="stl/OrangeFlesh_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_022" file="stl/OrangeFlesh_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_023" file="stl/OrangeFlesh_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_024" file="stl/OrangeFlesh_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_025" file="stl/OrangeFlesh_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_026" file="stl/OrangeFlesh_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_027" file="stl/OrangeFlesh_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_028" file="stl/OrangeFlesh_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_029" file="stl/OrangeFlesh_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_030" file="stl/OrangeFlesh_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_031" file="stl/OrangeFlesh_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_032" file="stl/OrangeFlesh_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_033" file="stl/OrangeFlesh_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_034" file="stl/OrangeFlesh_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_035" file="stl/OrangeFlesh_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_036" file="stl/OrangeFlesh_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_037" file="stl/OrangeFlesh_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_038" file="stl/OrangeFlesh_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_039" file="stl/OrangeFlesh_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_040" file="stl/OrangeFlesh_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_041" file="stl/OrangeFlesh_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_042" file="stl/OrangeFlesh_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_043" file="stl/OrangeFlesh_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_044" file="stl/OrangeFlesh_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_045" file="stl/OrangeFlesh_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_046" file="stl/OrangeFlesh_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_047" file="stl/OrangeFlesh_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_048" file="stl/OrangeFlesh_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_049" file="stl/OrangeFlesh_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_050" file="stl/OrangeFlesh_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_051" file="stl/OrangeFlesh_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_052" file="stl/OrangeFlesh_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_053" file="stl/OrangeFlesh_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_054" file="stl/OrangeFlesh_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_055" file="stl/OrangeFlesh_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_056" file="stl/OrangeFlesh_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangeFlesh_057" file="stl/OrangeFlesh_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangePeel" file="stl/OrangePeel.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="OrangePeel_001" file="stl/OrangePeel_001.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_OrangeFruitPeduncle" texture="T_OrangeFruitPeduncle"/>
+		<material name="M_OrangeFascia" rgba="0.829800009727478 0.8259999752044678 0.8090999722480774 1.0" emission="0.0"/>
+		<material name="M_OrangeFlesh" texture="T_OrangeFlesh"/>
+		<material name="M_OrangePeel" rgba="0.7993000149726868 0.5709999799728394 0.10570000112056732 1.0" emission="0.0"/>
+		<texture name="T_OrangeFruitPeduncle" type="2d" file="T_OrangeFruitPeduncle.png"/>
+		<texture name="T_OrangeFlesh" type="2d" file="T_OrangeFlesh.png"/>
+	</asset>
+	<worldbody>
+		<body name="yellow_orange" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="orange_fruit_peduncle" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="1.2277000678295735e-05" pos="2.2144186004879884e-06 -2.577592340458068e-06 0.030269326642155647" quat="0.08639349788427353 -0.7017816305160522 0.08634858578443527 0.7018423080444336" diaginertia="2.141239963115993e-11 1.126138737816973e-08 1.1262766719255524e-08"/>
+				<geom name="OrangeFruitPeduncle" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle" material="M_OrangeFruitPeduncle" class="visual"/>
+				<geom name="OrangeFruitPeduncle_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_001" class="collision"/>
+				<geom name="OrangeFruitPeduncle_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_002" class="collision"/>
+				<geom name="OrangeFruitPeduncle_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_003" class="collision"/>
+				<geom name="OrangeFruitPeduncle_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_004" class="collision"/>
+				<geom name="OrangeFruitPeduncle_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_005" class="collision"/>
+				<geom name="OrangeFruitPeduncle_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_006" class="collision"/>
+				<geom name="OrangeFruitPeduncle_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_007" class="collision"/>
+				<geom name="OrangeFruitPeduncle_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_008" class="collision"/>
+				<geom name="OrangeFruitPeduncle_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_009" class="collision"/>
+				<geom name="OrangeFruitPeduncle_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_010" class="collision"/>
+				<geom name="OrangeFruitPeduncle_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_011" class="collision"/>
+				<geom name="OrangeFruitPeduncle_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_012" class="collision"/>
+				<geom name="OrangeFruitPeduncle_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_013" class="collision"/>
+				<geom name="OrangeFruitPeduncle_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_014" class="collision"/>
+				<geom name="OrangeFruitPeduncle_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_015" class="collision"/>
+				<geom name="OrangeFruitPeduncle_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_016" class="collision"/>
+				<geom name="OrangeFruitPeduncle_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_017" class="collision"/>
+				<geom name="OrangeFruitPeduncle_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_018" class="collision"/>
+				<geom name="OrangeFruitPeduncle_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_019" class="collision"/>
+				<geom name="OrangeFruitPeduncle_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_020" class="collision"/>
+				<geom name="OrangeFruitPeduncle_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_021" class="collision"/>
+				<geom name="OrangeFruitPeduncle_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_022" class="collision"/>
+				<geom name="OrangeFruitPeduncle_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_023" class="collision"/>
+				<geom name="OrangeFruitPeduncle_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_024" class="collision"/>
+				<geom name="OrangeFruitPeduncle_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_025" class="collision"/>
+				<geom name="OrangeFruitPeduncle_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_026" class="collision"/>
+				<geom name="OrangeFruitPeduncle_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_027" class="collision"/>
+				<geom name="OrangeFruitPeduncle_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_028" class="collision"/>
+				<geom name="OrangeFruitPeduncle_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_029" class="collision"/>
+				<geom name="OrangeFruitPeduncle_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_030" class="collision"/>
+				<geom name="OrangeFruitPeduncle_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_031" class="collision"/>
+				<geom name="OrangeFruitPeduncle_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_032" class="collision"/>
+				<geom name="OrangeFruitPeduncle_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_033" class="collision"/>
+				<geom name="OrangeFruitPeduncle_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_034" class="collision"/>
+				<geom name="OrangeFruitPeduncle_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_035" class="collision"/>
+				<geom name="OrangeFruitPeduncle_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_036" class="collision"/>
+				<geom name="OrangeFruitPeduncle_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_037" class="collision"/>
+				<geom name="OrangeFruitPeduncle_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_038" class="collision"/>
+				<geom name="OrangeFruitPeduncle_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_039" class="collision"/>
+				<geom name="OrangeFruitPeduncle_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_040" class="collision"/>
+				<geom name="OrangeFruitPeduncle_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_041" class="collision"/>
+				<geom name="OrangeFruitPeduncle_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_042" class="collision"/>
+				<geom name="OrangeFruitPeduncle_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_043" class="collision"/>
+				<geom name="OrangeFruitPeduncle_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_044" class="collision"/>
+				<geom name="OrangeFruitPeduncle_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_045" class="collision"/>
+				<geom name="OrangeFruitPeduncle_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_046" class="collision"/>
+				<geom name="OrangeFruitPeduncle_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_047" class="collision"/>
+				<geom name="OrangeFruitPeduncle_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_048" class="collision"/>
+				<geom name="OrangeFruitPeduncle_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_049" class="collision"/>
+				<geom name="OrangeFruitPeduncle_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_050" class="collision"/>
+				<geom name="OrangeFruitPeduncle_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_051" class="collision"/>
+				<geom name="OrangeFruitPeduncle_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_052" class="collision"/>
+				<geom name="OrangeFruitPeduncle_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_053" class="collision"/>
+				<geom name="OrangeFruitPeduncle_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_054" class="collision"/>
+				<geom name="OrangeFruitPeduncle_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_055" class="collision"/>
+				<geom name="OrangeFruitPeduncle_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_056" class="collision"/>
+				<geom name="OrangeFruitPeduncle_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_057" class="collision"/>
+				<geom name="OrangeFruitPeduncle_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_058" class="collision"/>
+				<geom name="OrangeFruitPeduncle_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFruitPeduncle_059" class="collision"/>
+			</body>
+			<body name="orange_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.047751545906066895" pos="-7.663245149558406e-09 -6.8429035771089275e-09 -0.0018351459875702858" quat="0.00898286234587431 -0.7070496678352356 0.008983013220131397 0.7070497870445251" diaginertia="9.830926501308568e-06 1.2972010154044256e-05 1.2972019248991273e-05"/>
+				<geom name="OrangeFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh" material="M_OrangeFlesh" class="visual"/>
+				<geom name="OrangeFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_001" class="collision"/>
+				<geom name="OrangeFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_002" class="collision"/>
+				<geom name="OrangeFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_003" class="collision"/>
+				<geom name="OrangeFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_004" class="collision"/>
+				<geom name="OrangeFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_005" class="collision"/>
+				<geom name="OrangeFlesh_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_006" class="collision"/>
+				<geom name="OrangeFlesh_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_007" class="collision"/>
+				<geom name="OrangeFlesh_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_008" class="collision"/>
+				<geom name="OrangeFlesh_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_009" class="collision"/>
+				<geom name="OrangeFlesh_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_010" class="collision"/>
+				<geom name="OrangeFlesh_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_011" class="collision"/>
+				<geom name="OrangeFlesh_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_012" class="collision"/>
+				<geom name="OrangeFlesh_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_013" class="collision"/>
+				<geom name="OrangeFlesh_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_014" class="collision"/>
+				<geom name="OrangeFlesh_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_015" class="collision"/>
+				<geom name="OrangeFlesh_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_016" class="collision"/>
+				<geom name="OrangeFlesh_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_017" class="collision"/>
+				<geom name="OrangeFlesh_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_018" class="collision"/>
+				<geom name="OrangeFlesh_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_019" class="collision"/>
+				<geom name="OrangeFlesh_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_020" class="collision"/>
+				<geom name="OrangeFlesh_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_021" class="collision"/>
+				<geom name="OrangeFlesh_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_022" class="collision"/>
+				<geom name="OrangeFlesh_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_023" class="collision"/>
+				<geom name="OrangeFlesh_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_024" class="collision"/>
+				<geom name="OrangeFlesh_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_025" class="collision"/>
+				<geom name="OrangeFlesh_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_026" class="collision"/>
+				<geom name="OrangeFlesh_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_027" class="collision"/>
+				<geom name="OrangeFlesh_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_028" class="collision"/>
+				<geom name="OrangeFlesh_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_029" class="collision"/>
+				<geom name="OrangeFlesh_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_030" class="collision"/>
+				<geom name="OrangeFlesh_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_031" class="collision"/>
+				<geom name="OrangeFlesh_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_032" class="collision"/>
+				<geom name="OrangeFlesh_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_033" class="collision"/>
+				<geom name="OrangeFlesh_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_034" class="collision"/>
+				<geom name="OrangeFlesh_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_035" class="collision"/>
+				<geom name="OrangeFlesh_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_036" class="collision"/>
+				<geom name="OrangeFlesh_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_037" class="collision"/>
+				<geom name="OrangeFlesh_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_038" class="collision"/>
+				<geom name="OrangeFlesh_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_039" class="collision"/>
+				<geom name="OrangeFlesh_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_040" class="collision"/>
+				<geom name="OrangeFlesh_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_041" class="collision"/>
+				<geom name="OrangeFlesh_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_042" class="collision"/>
+				<geom name="OrangeFlesh_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_043" class="collision"/>
+				<geom name="OrangeFlesh_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_044" class="collision"/>
+				<geom name="OrangeFlesh_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_045" class="collision"/>
+				<geom name="OrangeFlesh_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_046" class="collision"/>
+				<geom name="OrangeFlesh_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_047" class="collision"/>
+				<geom name="OrangeFlesh_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_048" class="collision"/>
+				<geom name="OrangeFlesh_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_049" class="collision"/>
+				<geom name="OrangeFlesh_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_050" class="collision"/>
+				<geom name="OrangeFlesh_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_051" class="collision"/>
+				<geom name="OrangeFlesh_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_052" class="collision"/>
+				<geom name="OrangeFlesh_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_053" class="collision"/>
+				<geom name="OrangeFlesh_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_054" class="collision"/>
+				<geom name="OrangeFlesh_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_055" class="collision"/>
+				<geom name="OrangeFlesh_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_056" class="collision"/>
+				<geom name="OrangeFlesh_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFlesh_057" class="collision"/>
+			</body>
+			<body name="orange_fascia" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.13064807653427124" pos="-1.668621329997677e-08 4.288988719736153e-08 -0.0018351618200540543" quat="0.40776655077934265 0.5776908993721008 -0.4077669680118561 0.577690064907074" diaginertia="3.5091554309474304e-05 3.970126635977067e-05 3.9701411878922954e-05"/>
+				<geom name="OrangeFascia" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFascia" material="M_OrangeFascia" class="visual"/>
+				<geom name="OrangeFascia_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFascia_001" class="collision"/>
+				<geom name="OrangeFascia_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFascia_002" class="collision"/>
+				<geom name="OrangeFascia_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFascia_003" class="collision"/>
+				<geom name="OrangeFascia_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangeFascia_004" class="collision"/>
+			</body>
+			<body name="orange_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.01043783314526081" pos="-2.3840793801355176e-06 4.579954122618801e-07 -0.0008680091123096645" quat="-0.11361390352249146 0.6972451210021973 0.11425962299108505 0.6984882354736328" diaginertia="5.5408754633390345e-06 5.925657205807511e-06 5.9264352785248775e-06"/>
+				<geom name="OrangePeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangePeel" material="M_OrangePeel" class="visual"/>
+				<geom name="OrangePeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="OrangePeel_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

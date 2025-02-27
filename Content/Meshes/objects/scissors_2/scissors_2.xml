@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<mujoco model="scissors_2">
+	<compiler meshdir="scissors_2/meshes" texturedir="scissors_2/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="Scissors2Screw" file="obj/Scissors2Screw.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Screw_001" file="stl/Scissors2Screw_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Screw_002" file="stl/Scissors2Screw_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Screw_003" file="stl/Scissors2Screw_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Screw_004" file="stl/Scissors2Screw_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Screw_005" file="stl/Scissors2Screw_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Blade" file="obj/Scissors2Blade.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Blade_001" file="stl/Scissors2Blade_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt" file="obj/Scissors2Hilt.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_001" file="stl/Scissors2Hilt_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_002" file="stl/Scissors2Hilt_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_003" file="stl/Scissors2Hilt_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_004" file="stl/Scissors2Hilt_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_005" file="stl/Scissors2Hilt_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_006" file="stl/Scissors2Hilt_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_007" file="stl/Scissors2Hilt_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_008" file="stl/Scissors2Hilt_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_009" file="stl/Scissors2Hilt_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_010" file="stl/Scissors2Hilt_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_011" file="stl/Scissors2Hilt_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_012" file="stl/Scissors2Hilt_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_013" file="stl/Scissors2Hilt_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_014" file="stl/Scissors2Hilt_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_015" file="stl/Scissors2Hilt_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_016" file="stl/Scissors2Hilt_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_017" file="stl/Scissors2Hilt_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="Scissors2Hilt_018" file="stl/Scissors2Hilt_018.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_Scissors2Screw" texture="T_Scissors2Screw"/>
+		<material name="M_Scissors2Blade" texture="T_Scissors2Blade"/>
+		<material name="M_Scissors2Hilt" texture="T_Scissors2Hilt"/>
+		<texture name="T_Scissors2Screw" type="2d" file="T_Scissors2Screw.png"/>
+		<texture name="T_Scissors2Blade" type="2d" file="T_Scissors2Blade.png"/>
+		<texture name="T_Scissors2Hilt" type="2d" file="T_Scissors2Hilt.png"/>
+	</asset>
+	<worldbody>
+		<body name="scissors_2" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="scissors2_screw" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0038253292441368103" pos="-0.013648378662765026 -0.01476330030709505 0.0014566575409844518" quat="0.6586766242980957 0.6361417770385742 0.307063490152359 0.2591926157474518" diaginertia="8.136823481663669e-08 1.582559661983396e-06 1.636042043173802e-06"/>
+				<geom name="Scissors2Screw" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw" material="M_Scissors2Screw" class="visual"/>
+				<geom name="Scissors2Screw_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw_001" class="collision"/>
+				<geom name="Scissors2Screw_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw_002" class="collision"/>
+				<geom name="Scissors2Screw_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw_003" class="collision"/>
+				<geom name="Scissors2Screw_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw_004" class="collision"/>
+				<geom name="Scissors2Screw_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Screw_005" class="collision"/>
+			</body>
+			<body name="scissors2_hilt" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.18828648328781128" pos="-0.061081741005182266 -0.007015101611614227 0.00015865601017139852" quat="0.9994951486587524 -0.003303846111521125 0.0011403514072299004 0.031578291207551956" diaginertia="6.741139804944396e-05 0.0009261170634999871 0.0009907563216984272"/>
+				<geom name="Scissors2Hilt" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt" material="M_Scissors2Hilt" class="visual"/>
+				<geom name="Scissors2Hilt_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_001" class="collision"/>
+				<geom name="Scissors2Hilt_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_002" class="collision"/>
+				<geom name="Scissors2Hilt_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_003" class="collision"/>
+				<geom name="Scissors2Hilt_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_004" class="collision"/>
+				<geom name="Scissors2Hilt_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_005" class="collision"/>
+				<geom name="Scissors2Hilt_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_006" class="collision"/>
+				<geom name="Scissors2Hilt_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_007" class="collision"/>
+				<geom name="Scissors2Hilt_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_008" class="collision"/>
+				<geom name="Scissors2Hilt_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_009" class="collision"/>
+				<geom name="Scissors2Hilt_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_010" class="collision"/>
+				<geom name="Scissors2Hilt_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_011" class="collision"/>
+				<geom name="Scissors2Hilt_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_012" class="collision"/>
+				<geom name="Scissors2Hilt_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_013" class="collision"/>
+				<geom name="Scissors2Hilt_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_014" class="collision"/>
+				<geom name="Scissors2Hilt_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_015" class="collision"/>
+				<geom name="Scissors2Hilt_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_016" class="collision"/>
+				<geom name="Scissors2Hilt_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_017" class="collision"/>
+				<geom name="Scissors2Hilt_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Hilt_018" class="collision"/>
+			</body>
+			<body name="scissors2_blade" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.05467967316508293" pos="0.04773222282528877 -0.015027797780930996 0.00012023688032058999" quat="0.9940807223320007 -0.018958231434226036 0.0011590048670768738 -0.10697101056575775" diaginertia="5.860484634467866e-06 0.00019576605700422078 0.0002015319187194109"/>
+				<geom name="Scissors2Blade" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Blade" material="M_Scissors2Blade" class="visual"/>
+				<geom name="Scissors2Blade_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="Scissors2Blade_001" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

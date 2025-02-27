@@ -1,0 +1,313 @@
+<?xml version="1.0" ?>
+<mujoco model="tulip">
+	<compiler meshdir="tulip/meshes" texturedir="tulip/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="TulipFlower002" file="obj/TulipFlower002.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_001" file="stl/TulipFlower002_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_002" file="stl/TulipFlower002_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_003" file="stl/TulipFlower002_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_004" file="stl/TulipFlower002_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_005" file="stl/TulipFlower002_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_006" file="stl/TulipFlower002_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_007" file="stl/TulipFlower002_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_008" file="stl/TulipFlower002_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_009" file="stl/TulipFlower002_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_010" file="stl/TulipFlower002_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_011" file="stl/TulipFlower002_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_012" file="stl/TulipFlower002_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_013" file="stl/TulipFlower002_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_014" file="stl/TulipFlower002_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_015" file="stl/TulipFlower002_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_016" file="stl/TulipFlower002_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_017" file="stl/TulipFlower002_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_018" file="stl/TulipFlower002_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_019" file="stl/TulipFlower002_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_020" file="stl/TulipFlower002_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_021" file="stl/TulipFlower002_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_022" file="stl/TulipFlower002_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_023" file="stl/TulipFlower002_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_024" file="stl/TulipFlower002_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_025" file="stl/TulipFlower002_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_026" file="stl/TulipFlower002_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_027" file="stl/TulipFlower002_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_028" file="stl/TulipFlower002_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_029" file="stl/TulipFlower002_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_030" file="stl/TulipFlower002_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_031" file="stl/TulipFlower002_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_032" file="stl/TulipFlower002_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_033" file="stl/TulipFlower002_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_034" file="stl/TulipFlower002_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_035" file="stl/TulipFlower002_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_036" file="stl/TulipFlower002_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_037" file="stl/TulipFlower002_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_038" file="stl/TulipFlower002_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_039" file="stl/TulipFlower002_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_040" file="stl/TulipFlower002_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_041" file="stl/TulipFlower002_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_042" file="stl/TulipFlower002_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_043" file="stl/TulipFlower002_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_044" file="stl/TulipFlower002_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_045" file="stl/TulipFlower002_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_046" file="stl/TulipFlower002_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_047" file="stl/TulipFlower002_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_048" file="stl/TulipFlower002_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_049" file="stl/TulipFlower002_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_050" file="stl/TulipFlower002_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_051" file="stl/TulipFlower002_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_052" file="stl/TulipFlower002_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_053" file="stl/TulipFlower002_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_054" file="stl/TulipFlower002_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_055" file="stl/TulipFlower002_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_056" file="stl/TulipFlower002_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_057" file="stl/TulipFlower002_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower002_058" file="stl/TulipFlower002_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem" file="obj/TulipStem.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_001" file="stl/TulipStem_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_002" file="stl/TulipStem_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_003" file="stl/TulipStem_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_004" file="stl/TulipStem_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_005" file="stl/TulipStem_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipStem_006" file="stl/TulipStem_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001" file="obj/TulipLeaf001.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001_001" file="stl/TulipLeaf001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001_002" file="stl/TulipLeaf001_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001_003" file="stl/TulipLeaf001_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001_004" file="stl/TulipLeaf001_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipLeaf001_005" file="stl/TulipLeaf001_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001" file="obj/TulipFlower001.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_001" file="stl/TulipFlower001_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_002" file="stl/TulipFlower001_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_003" file="stl/TulipFlower001_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_004" file="stl/TulipFlower001_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_005" file="stl/TulipFlower001_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_006" file="stl/TulipFlower001_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_007" file="stl/TulipFlower001_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_008" file="stl/TulipFlower001_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_009" file="stl/TulipFlower001_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_010" file="stl/TulipFlower001_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_011" file="stl/TulipFlower001_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_012" file="stl/TulipFlower001_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_013" file="stl/TulipFlower001_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_014" file="stl/TulipFlower001_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_015" file="stl/TulipFlower001_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_016" file="stl/TulipFlower001_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_017" file="stl/TulipFlower001_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_018" file="stl/TulipFlower001_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_019" file="stl/TulipFlower001_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_020" file="stl/TulipFlower001_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_021" file="stl/TulipFlower001_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_022" file="stl/TulipFlower001_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_023" file="stl/TulipFlower001_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_024" file="stl/TulipFlower001_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_025" file="stl/TulipFlower001_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_026" file="stl/TulipFlower001_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_027" file="stl/TulipFlower001_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_028" file="stl/TulipFlower001_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_029" file="stl/TulipFlower001_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_030" file="stl/TulipFlower001_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_031" file="stl/TulipFlower001_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_032" file="stl/TulipFlower001_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_033" file="stl/TulipFlower001_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_034" file="stl/TulipFlower001_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_035" file="stl/TulipFlower001_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_036" file="stl/TulipFlower001_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_037" file="stl/TulipFlower001_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_038" file="stl/TulipFlower001_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_039" file="stl/TulipFlower001_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_040" file="stl/TulipFlower001_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_041" file="stl/TulipFlower001_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_042" file="stl/TulipFlower001_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_043" file="stl/TulipFlower001_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_044" file="stl/TulipFlower001_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_045" file="stl/TulipFlower001_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_046" file="stl/TulipFlower001_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_047" file="stl/TulipFlower001_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_048" file="stl/TulipFlower001_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_049" file="stl/TulipFlower001_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_050" file="stl/TulipFlower001_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_051" file="stl/TulipFlower001_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_052" file="stl/TulipFlower001_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_053" file="stl/TulipFlower001_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_054" file="stl/TulipFlower001_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_055" file="stl/TulipFlower001_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_056" file="stl/TulipFlower001_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_057" file="stl/TulipFlower001_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_058" file="stl/TulipFlower001_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_059" file="stl/TulipFlower001_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_060" file="stl/TulipFlower001_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_061" file="stl/TulipFlower001_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_062" file="stl/TulipFlower001_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_063" file="stl/TulipFlower001_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TulipFlower001_064" file="stl/TulipFlower001_064.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_TulipFlower002" texture="T_TulipFlower002"/>
+		<material name="M_TulipStem" texture="T_TulipStem"/>
+		<material name="M_TulipLeaf001" texture="T_TulipLeaf001"/>
+		<material name="M_TulipFlower001" texture="T_TulipFlower001"/>
+		<texture name="T_TulipFlower002" type="2d" file="T_TulipFlower002.png"/>
+		<texture name="T_TulipStem" type="2d" file="T_TulipStem.png"/>
+		<texture name="T_TulipLeaf001" type="2d" file="T_TulipLeaf001.png"/>
+		<texture name="T_TulipFlower001" type="2d" file="T_TulipFlower001.png"/>
+	</asset>
+	<worldbody>
+		<body name="tulip" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="tulip_flower002" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="-0.035850219428539276" pos="-0.0035837735049426556 -0.0010592726757749915 8.421168604400009e-05" quat="0.8195626735687256 -0.5482896566390991 -0.08903547376394272 0.14059945940971375" diaginertia="-1.3038647921348456e-06 1.3964859135739971e-05 1.5146362784435041e-05"/>
+				<geom name="TulipFlower002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002" material="M_TulipFlower002" class="visual"/>
+				<geom name="TulipFlower002_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_001" class="collision"/>
+				<geom name="TulipFlower002_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_002" class="collision"/>
+				<geom name="TulipFlower002_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_003" class="collision"/>
+				<geom name="TulipFlower002_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_004" class="collision"/>
+				<geom name="TulipFlower002_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_005" class="collision"/>
+				<geom name="TulipFlower002_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_006" class="collision"/>
+				<geom name="TulipFlower002_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_007" class="collision"/>
+				<geom name="TulipFlower002_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_008" class="collision"/>
+				<geom name="TulipFlower002_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_009" class="collision"/>
+				<geom name="TulipFlower002_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_010" class="collision"/>
+				<geom name="TulipFlower002_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_011" class="collision"/>
+				<geom name="TulipFlower002_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_012" class="collision"/>
+				<geom name="TulipFlower002_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_013" class="collision"/>
+				<geom name="TulipFlower002_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_014" class="collision"/>
+				<geom name="TulipFlower002_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_015" class="collision"/>
+				<geom name="TulipFlower002_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_016" class="collision"/>
+				<geom name="TulipFlower002_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_017" class="collision"/>
+				<geom name="TulipFlower002_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_018" class="collision"/>
+				<geom name="TulipFlower002_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_019" class="collision"/>
+				<geom name="TulipFlower002_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_020" class="collision"/>
+				<geom name="TulipFlower002_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_021" class="collision"/>
+				<geom name="TulipFlower002_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_022" class="collision"/>
+				<geom name="TulipFlower002_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_023" class="collision"/>
+				<geom name="TulipFlower002_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_024" class="collision"/>
+				<geom name="TulipFlower002_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_025" class="collision"/>
+				<geom name="TulipFlower002_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_026" class="collision"/>
+				<geom name="TulipFlower002_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_027" class="collision"/>
+				<geom name="TulipFlower002_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_028" class="collision"/>
+				<geom name="TulipFlower002_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_029" class="collision"/>
+				<geom name="TulipFlower002_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_030" class="collision"/>
+				<geom name="TulipFlower002_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_031" class="collision"/>
+				<geom name="TulipFlower002_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_032" class="collision"/>
+				<geom name="TulipFlower002_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_033" class="collision"/>
+				<geom name="TulipFlower002_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_034" class="collision"/>
+				<geom name="TulipFlower002_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_035" class="collision"/>
+				<geom name="TulipFlower002_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_036" class="collision"/>
+				<geom name="TulipFlower002_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_037" class="collision"/>
+				<geom name="TulipFlower002_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_038" class="collision"/>
+				<geom name="TulipFlower002_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_039" class="collision"/>
+				<geom name="TulipFlower002_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_040" class="collision"/>
+				<geom name="TulipFlower002_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_041" class="collision"/>
+				<geom name="TulipFlower002_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_042" class="collision"/>
+				<geom name="TulipFlower002_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_043" class="collision"/>
+				<geom name="TulipFlower002_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_044" class="collision"/>
+				<geom name="TulipFlower002_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_045" class="collision"/>
+				<geom name="TulipFlower002_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_046" class="collision"/>
+				<geom name="TulipFlower002_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_047" class="collision"/>
+				<geom name="TulipFlower002_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_048" class="collision"/>
+				<geom name="TulipFlower002_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_049" class="collision"/>
+				<geom name="TulipFlower002_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_050" class="collision"/>
+				<geom name="TulipFlower002_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_051" class="collision"/>
+				<geom name="TulipFlower002_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_052" class="collision"/>
+				<geom name="TulipFlower002_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_053" class="collision"/>
+				<geom name="TulipFlower002_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_054" class="collision"/>
+				<geom name="TulipFlower002_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_055" class="collision"/>
+				<geom name="TulipFlower002_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_056" class="collision"/>
+				<geom name="TulipFlower002_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_057" class="collision"/>
+				<geom name="TulipFlower002_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower002_058" class="collision"/>
+			</body>
+			<body name="tulip_leaf001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="-0.0677194744348526" pos="0.0025559908244758844 -0.001022760639898479 0.002715975744649768" quat="0.8261045217514038 -0.48916566371917725 -0.19893160462379456 -0.19670909643173218" diaginertia="5.152208359504584e-06 2.1266141629894264e-05 2.541234607633669e-05"/>
+				<geom name="TulipLeaf001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001" material="M_TulipLeaf001" class="visual"/>
+				<geom name="TulipLeaf001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001_001" class="collision"/>
+				<geom name="TulipLeaf001_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001_002" class="collision"/>
+				<geom name="TulipLeaf001_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001_003" class="collision"/>
+				<geom name="TulipLeaf001_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001_004" class="collision"/>
+				<geom name="TulipLeaf001_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipLeaf001_005" class="collision"/>
+			</body>
+			<body name="tulip_stem" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00402587465941906" pos="-0.041350290179252625 -0.0015953591791912913 -0.04113459959626198" quat="0.7035735845565796 0.6964631080627441 -0.08602717518806458 0.11190463602542877" diaginertia="6.442447556764819e-06 5.2896000852342695e-05 5.546389002120122e-05"/>
+				<geom name="TulipStem" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem" material="M_TulipStem" class="visual"/>
+				<geom name="TulipStem_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_001" class="collision"/>
+				<geom name="TulipStem_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_002" class="collision"/>
+				<geom name="TulipStem_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_003" class="collision"/>
+				<geom name="TulipStem_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_004" class="collision"/>
+				<geom name="TulipStem_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_005" class="collision"/>
+				<geom name="TulipStem_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipStem_006" class="collision"/>
+			</body>
+			<body name="tulip_flower001" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.006754143163561821" pos="0.2621709406375885 -0.016075752675533295 -0.036139022558927536" quat="0.9944955110549927 -0.08412578701972961 0.062412526458501816 -0.002497471868991852" diaginertia="5.074209184385836e-05 0.00036684409133158624 0.0004044266534037888"/>
+				<geom name="TulipFlower001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001" material="M_TulipFlower001" class="visual"/>
+				<geom name="TulipFlower001_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_001" class="collision"/>
+				<geom name="TulipFlower001_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_002" class="collision"/>
+				<geom name="TulipFlower001_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_003" class="collision"/>
+				<geom name="TulipFlower001_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_004" class="collision"/>
+				<geom name="TulipFlower001_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_005" class="collision"/>
+				<geom name="TulipFlower001_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_006" class="collision"/>
+				<geom name="TulipFlower001_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_007" class="collision"/>
+				<geom name="TulipFlower001_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_008" class="collision"/>
+				<geom name="TulipFlower001_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_009" class="collision"/>
+				<geom name="TulipFlower001_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_010" class="collision"/>
+				<geom name="TulipFlower001_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_011" class="collision"/>
+				<geom name="TulipFlower001_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_012" class="collision"/>
+				<geom name="TulipFlower001_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_013" class="collision"/>
+				<geom name="TulipFlower001_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_014" class="collision"/>
+				<geom name="TulipFlower001_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_015" class="collision"/>
+				<geom name="TulipFlower001_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_016" class="collision"/>
+				<geom name="TulipFlower001_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_017" class="collision"/>
+				<geom name="TulipFlower001_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_018" class="collision"/>
+				<geom name="TulipFlower001_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_019" class="collision"/>
+				<geom name="TulipFlower001_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_020" class="collision"/>
+				<geom name="TulipFlower001_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_021" class="collision"/>
+				<geom name="TulipFlower001_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_022" class="collision"/>
+				<geom name="TulipFlower001_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_023" class="collision"/>
+				<geom name="TulipFlower001_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_024" class="collision"/>
+				<geom name="TulipFlower001_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_025" class="collision"/>
+				<geom name="TulipFlower001_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_026" class="collision"/>
+				<geom name="TulipFlower001_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_027" class="collision"/>
+				<geom name="TulipFlower001_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_028" class="collision"/>
+				<geom name="TulipFlower001_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_029" class="collision"/>
+				<geom name="TulipFlower001_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_030" class="collision"/>
+				<geom name="TulipFlower001_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_031" class="collision"/>
+				<geom name="TulipFlower001_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_032" class="collision"/>
+				<geom name="TulipFlower001_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_033" class="collision"/>
+				<geom name="TulipFlower001_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_034" class="collision"/>
+				<geom name="TulipFlower001_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_035" class="collision"/>
+				<geom name="TulipFlower001_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_036" class="collision"/>
+				<geom name="TulipFlower001_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_037" class="collision"/>
+				<geom name="TulipFlower001_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_038" class="collision"/>
+				<geom name="TulipFlower001_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_039" class="collision"/>
+				<geom name="TulipFlower001_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_040" class="collision"/>
+				<geom name="TulipFlower001_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_041" class="collision"/>
+				<geom name="TulipFlower001_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_042" class="collision"/>
+				<geom name="TulipFlower001_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_043" class="collision"/>
+				<geom name="TulipFlower001_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_044" class="collision"/>
+				<geom name="TulipFlower001_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_045" class="collision"/>
+				<geom name="TulipFlower001_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_046" class="collision"/>
+				<geom name="TulipFlower001_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_047" class="collision"/>
+				<geom name="TulipFlower001_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_048" class="collision"/>
+				<geom name="TulipFlower001_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_049" class="collision"/>
+				<geom name="TulipFlower001_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_050" class="collision"/>
+				<geom name="TulipFlower001_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_051" class="collision"/>
+				<geom name="TulipFlower001_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_052" class="collision"/>
+				<geom name="TulipFlower001_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_053" class="collision"/>
+				<geom name="TulipFlower001_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_054" class="collision"/>
+				<geom name="TulipFlower001_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_055" class="collision"/>
+				<geom name="TulipFlower001_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_056" class="collision"/>
+				<geom name="TulipFlower001_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_057" class="collision"/>
+				<geom name="TulipFlower001_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_058" class="collision"/>
+				<geom name="TulipFlower001_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_059" class="collision"/>
+				<geom name="TulipFlower001_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_060" class="collision"/>
+				<geom name="TulipFlower001_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_061" class="collision"/>
+				<geom name="TulipFlower001_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_062" class="collision"/>
+				<geom name="TulipFlower001_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_063" class="collision"/>
+				<geom name="TulipFlower001_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TulipFlower001_064" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

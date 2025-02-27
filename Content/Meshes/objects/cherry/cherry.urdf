@@ -1,0 +1,184 @@
+<?xml version="1.0" ?>
+<robot name="cherry" version="1.0">
+  <link name="cherry"/>
+  <joint name="cherry_peel_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cherry"/>
+    <child link="cherry_peel"/>
+  </joint>
+  <link name="cherry_peel">
+    <inertial>
+      <origin xyz="-0.0001495521719334647 -0.00023928728478495032 -0.017217982560396194" rpy="-0.2621717154979706 1.549992561340332 -1.807414174079895"/>
+      <mass value="0.0016458273166790605"/>
+      <inertia ixx="3.394449947791145e-07" ixy="0.0" ixz="0.0" iyy="7.705484676989727e-07" iyz="0.0" izz="8.148197707669169e-07"/>
+    </inertial>
+    <visual name="CherryPeel">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/obj/CherryPeel.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CherryPeel_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryPeel_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryPeel_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cherry_stalk_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cherry"/>
+    <child link="cherry_stalk"/>
+  </joint>
+  <link name="cherry_stalk">
+    <inertial>
+      <origin xyz="0.0012943166075274348 -0.0011308129178360105 0.014164258725941181" rpy="2.038606643676758 1.4817783832550049 2.6264379024505615"/>
+      <mass value="0.00019579460786189884"/>
+      <inertia ixx="3.386261271387525e-10" ixy="0.0" ixz="0.0" iyy="7.392029743868989e-08" iyz="0.0" izz="7.400990398309659e-08"/>
+    </inertial>
+    <visual name="CherryStalk">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/obj/CherryStalk.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CherryStalk_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryStalk_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryStalk_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryStalk_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cherry_flesh_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cherry"/>
+    <child link="cherry_flesh"/>
+  </joint>
+  <link name="cherry_flesh">
+    <inertial>
+      <origin xyz="8.694358257343993e-05 -0.00020917726214975119 -0.01762148179113865" rpy="0.46221020817756653 1.5522018671035767 -1.0822833776474"/>
+      <mass value="0.017631854861974716"/>
+      <inertia ixx="2.114738663294702e-06" ixy="0.0" ixz="0.0" iyy="7.124238436517771e-06" iyz="0.0" izz="7.458932486770209e-06"/>
+    </inertial>
+    <visual name="CherryFlesh">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/obj/CherryFlesh.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CherryFlesh_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_007">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_007.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="CherryFlesh_008">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherryFlesh_008.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="cherry_seed_joint" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <parent link="cherry"/>
+    <child link="cherry_seed"/>
+  </joint>
+  <link name="cherry_seed">
+    <inertial>
+      <origin xyz="8.019603410502896e-05 -0.0004382617480587214 -0.018748460337519646" rpy="-0.9162018895149231 -1.547348976135254 1.7206835746765137"/>
+      <mass value="0.0011327199172228575"/>
+      <inertia ixx="1.5963077970582162e-08" ixy="0.0" ixz="0.0" iyy="4.187753575024544e-07" iyz="0.0" izz="4.2156753465860675e-07"/>
+    </inertial>
+    <visual name="CherrySeed">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/obj/CherrySeed.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="CherrySeed_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://cherry/meshes/stl/CherrySeed_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

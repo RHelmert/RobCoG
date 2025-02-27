@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    defaultPrim = "M_PlateMediumSize"
+    upAxis = "Z"
+)
+
+def Material "M_PlateMediumSize"
+{
+    token outputs:surface.connect = </M_PlateMediumSize/PBRShader.outputs:surface>
+
+    def Shader "PBRShader"
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        color3f inputs:diffuseColor = (0.8099, 0.8099, 0.8099)
+        color3f inputs:emissiveColor = (0, 0, 0)
+        float inputs:opacity = 1
+        int inputs:useSpecularWorkflow = 1
+        token outputs:surface
+    }
+}
+

@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<mujoco model="kitchen_pliers">
+	<compiler meshdir="kitchen_pliers/meshes" texturedir="kitchen_pliers/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="KitchenPliersHead" file="stl/KitchenPliersHead.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHead_001" file="stl/KitchenPliersHead_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHead_002" file="stl/KitchenPliersHead_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHead_003" file="stl/KitchenPliersHead_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHead_004" file="stl/KitchenPliersHead_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandleMetal" file="stl/KitchenPliersHandleMetal.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandleMetal_001" file="stl/KitchenPliersHandleMetal_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandleMetal_002" file="stl/KitchenPliersHandleMetal_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandleMetal_003" file="stl/KitchenPliersHandleMetal_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandleMetal_004" file="stl/KitchenPliersHandleMetal_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandlePlastic" file="obj/KitchenPliersHandlePlastic.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandlePlastic_001" file="stl/KitchenPliersHandlePlastic_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandlePlastic_002" file="stl/KitchenPliersHandlePlastic_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandlePlastic_003" file="stl/KitchenPliersHandlePlastic_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHandlePlastic_004" file="stl/KitchenPliersHandlePlastic_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole" file="stl/KitchenPliersHangingHole.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_001" file="stl/KitchenPliersHangingHole_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_002" file="stl/KitchenPliersHangingHole_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_003" file="stl/KitchenPliersHangingHole_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_004" file="stl/KitchenPliersHangingHole_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_005" file="stl/KitchenPliersHangingHole_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_006" file="stl/KitchenPliersHangingHole_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="KitchenPliersHangingHole_007" file="stl/KitchenPliersHangingHole_007.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_KitchenPliersHead" rgba="0.6470999717712402 0.6470999717712402 0.6470999717712402 1.0" emission="0.0"/>
+		<material name="M_KitchenPliersHandleMetal" rgba="0.6470999717712402 0.6470999717712402 0.6470999717712402 1.0" emission="0.0"/>
+		<material name="M_KitchenPliersHandlePlastic" texture="T_KitchenPliersHandlePlastic"/>
+		<material name="M_KitchenPliersHangingHole" rgba="0.6470999717712402 0.6470999717712402 0.6470999717712402 1.0" emission="0.0"/>
+		<texture name="T_KitchenPliersHandlePlastic" type="2d" file="T_KitchenPliersHandlePlastic.png"/>
+	</asset>
+	<worldbody>
+		<body name="kitchen_pliers" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="kitchen_pliers_head" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.06604120135307312" pos="-0.09527463465929031 -0.00019158580107614398 -2.0926424895151285e-06" quat="0.9999998211860657 5.52939013687137e-07 -1.2274520486244e-05 0.0005997137632220984" diaginertia="0.0001320251903962344 0.0008560716523788869 0.000979700474999845"/>
+				<geom name="KitchenPliersHead" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHead" material="M_KitchenPliersHead" class="visual"/>
+				<geom name="KitchenPliersHead_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHead_001" class="collision"/>
+				<geom name="KitchenPliersHead_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHead_002" class="collision"/>
+				<geom name="KitchenPliersHead_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHead_003" class="collision"/>
+				<geom name="KitchenPliersHead_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHead_004" class="collision"/>
+			</body>
+			<body name="kitchen_pliers_handle_plastic" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.1916133612394333" pos="0.06831031292676926 -0.0004918914055451751 3.10893824462255e-06" quat="0.9999978542327881 -3.239452439629531e-07 -8.704527317604516e-06 -0.0020618708804249763" diaginertia="0.00015829596668481827 0.0023368890397250652 0.0024847143795341253"/>
+				<geom name="KitchenPliersHandlePlastic" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandlePlastic" material="M_KitchenPliersHandlePlastic" class="visual"/>
+				<geom name="KitchenPliersHandlePlastic_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandlePlastic_001" class="collision"/>
+				<geom name="KitchenPliersHandlePlastic_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandlePlastic_002" class="collision"/>
+				<geom name="KitchenPliersHandlePlastic_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandlePlastic_003" class="collision"/>
+				<geom name="KitchenPliersHandlePlastic_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandlePlastic_004" class="collision"/>
+			</body>
+			<body name="kitchen_pliers_handle_metal" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.9098877906799316" pos="0.08854242414236069 -0.0005285621155053377 -8.600605951869511e-07" quat="0.9999963641166687 -2.1226531643492308e-08 3.829519755527144e-06 -0.002703472040593624" diaginertia="0.0006158436299301684 0.009113099426031113 0.009665689431130886"/>
+				<geom name="KitchenPliersHandleMetal" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandleMetal" material="M_KitchenPliersHandleMetal" class="visual"/>
+				<geom name="KitchenPliersHandleMetal_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandleMetal_001" class="collision"/>
+				<geom name="KitchenPliersHandleMetal_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandleMetal_002" class="collision"/>
+				<geom name="KitchenPliersHandleMetal_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandleMetal_003" class="collision"/>
+				<geom name="KitchenPliersHandleMetal_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHandleMetal_004" class="collision"/>
+			</body>
+			<body name="kitchen_pliers_hanging_hole" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.005537407472729683" pos="0.19402135908603668 -0.0007414983701892197 -0.0002257821470266208" quat="0.9999979734420776 7.586560968775302e-05 0.0005814600735902786 -0.0019134950125589967" diaginertia="8.377042490792519e-07 0.00020877506176475435 0.0002093532239086926"/>
+				<geom name="KitchenPliersHangingHole" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole" material="M_KitchenPliersHangingHole" class="visual"/>
+				<geom name="KitchenPliersHangingHole_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_001" class="collision"/>
+				<geom name="KitchenPliersHangingHole_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_002" class="collision"/>
+				<geom name="KitchenPliersHangingHole_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_003" class="collision"/>
+				<geom name="KitchenPliersHangingHole_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_004" class="collision"/>
+				<geom name="KitchenPliersHangingHole_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_005" class="collision"/>
+				<geom name="KitchenPliersHangingHole_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_006" class="collision"/>
+				<geom name="KitchenPliersHangingHole_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="KitchenPliersHangingHole_007" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

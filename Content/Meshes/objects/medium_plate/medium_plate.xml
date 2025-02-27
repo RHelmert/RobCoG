@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<mujoco model="medium_plate">
+	<compiler meshdir="medium_plate/meshes" texturedir="medium_plate/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PlateMediumSize" file="stl/PlateMediumSize.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_001" file="stl/PlateMediumSize_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_002" file="stl/PlateMediumSize_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_003" file="stl/PlateMediumSize_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_004" file="stl/PlateMediumSize_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_005" file="stl/PlateMediumSize_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_006" file="stl/PlateMediumSize_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_007" file="stl/PlateMediumSize_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_008" file="stl/PlateMediumSize_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_009" file="stl/PlateMediumSize_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_010" file="stl/PlateMediumSize_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_011" file="stl/PlateMediumSize_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_012" file="stl/PlateMediumSize_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_013" file="stl/PlateMediumSize_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_014" file="stl/PlateMediumSize_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_015" file="stl/PlateMediumSize_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_016" file="stl/PlateMediumSize_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_017" file="stl/PlateMediumSize_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_018" file="stl/PlateMediumSize_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_019" file="stl/PlateMediumSize_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PlateMediumSize_020" file="stl/PlateMediumSize_020.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PlateMediumSize" rgba="0.8098999857902527 0.8098999857902527 0.8098999857902527 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="medium_plate" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.31627848744392395" pos="-2.3997455134150414e-09 -1.3384330976862202e-08 -0.0028866431675851345" quat="0.9999326467514038 -9.101980680270572e-08 -6.34195959636763e-11 -0.01160433143377304" diaginertia="0.0009419583366252482 0.0009419606649316847 0.0018639643676578999"/>
+			<geom name="PlateMediumSize" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize" material="M_PlateMediumSize" class="visual"/>
+			<geom name="PlateMediumSize_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_001" class="collision"/>
+			<geom name="PlateMediumSize_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_002" class="collision"/>
+			<geom name="PlateMediumSize_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_003" class="collision"/>
+			<geom name="PlateMediumSize_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_004" class="collision"/>
+			<geom name="PlateMediumSize_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_005" class="collision"/>
+			<geom name="PlateMediumSize_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_006" class="collision"/>
+			<geom name="PlateMediumSize_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_007" class="collision"/>
+			<geom name="PlateMediumSize_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_008" class="collision"/>
+			<geom name="PlateMediumSize_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_009" class="collision"/>
+			<geom name="PlateMediumSize_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_010" class="collision"/>
+			<geom name="PlateMediumSize_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_011" class="collision"/>
+			<geom name="PlateMediumSize_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_012" class="collision"/>
+			<geom name="PlateMediumSize_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_013" class="collision"/>
+			<geom name="PlateMediumSize_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_014" class="collision"/>
+			<geom name="PlateMediumSize_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_015" class="collision"/>
+			<geom name="PlateMediumSize_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_016" class="collision"/>
+			<geom name="PlateMediumSize_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_017" class="collision"/>
+			<geom name="PlateMediumSize_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_018" class="collision"/>
+			<geom name="PlateMediumSize_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_019" class="collision"/>
+			<geom name="PlateMediumSize_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PlateMediumSize_020" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

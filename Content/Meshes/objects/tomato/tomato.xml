@@ -1,0 +1,543 @@
+<?xml version="1.0" ?>
+<mujoco model="tomato">
+	<compiler meshdir="tomato/meshes" texturedir="tomato/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="TomatoPedicel" file="obj/TomatoPedicel.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_001" file="stl/TomatoPedicel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_002" file="stl/TomatoPedicel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_003" file="stl/TomatoPedicel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_004" file="stl/TomatoPedicel_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_005" file="stl/TomatoPedicel_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_006" file="stl/TomatoPedicel_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_007" file="stl/TomatoPedicel_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_008" file="stl/TomatoPedicel_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_009" file="stl/TomatoPedicel_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_010" file="stl/TomatoPedicel_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_011" file="stl/TomatoPedicel_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_012" file="stl/TomatoPedicel_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_013" file="stl/TomatoPedicel_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPedicel_014" file="stl/TomatoPedicel_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh" file="stl/TomatoFlesh.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh_001" file="stl/TomatoFlesh_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh_002" file="stl/TomatoFlesh_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh_003" file="stl/TomatoFlesh_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh_004" file="stl/TomatoFlesh_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoFlesh_005" file="stl/TomatoFlesh_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx" file="obj/TomatoCalyx.obj" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_001" file="stl/TomatoCalyx_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_002" file="stl/TomatoCalyx_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_003" file="stl/TomatoCalyx_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_004" file="stl/TomatoCalyx_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_005" file="stl/TomatoCalyx_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_006" file="stl/TomatoCalyx_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_007" file="stl/TomatoCalyx_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_008" file="stl/TomatoCalyx_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_009" file="stl/TomatoCalyx_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_010" file="stl/TomatoCalyx_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_011" file="stl/TomatoCalyx_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_012" file="stl/TomatoCalyx_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_013" file="stl/TomatoCalyx_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_014" file="stl/TomatoCalyx_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_015" file="stl/TomatoCalyx_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_016" file="stl/TomatoCalyx_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_017" file="stl/TomatoCalyx_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_018" file="stl/TomatoCalyx_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_019" file="stl/TomatoCalyx_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_020" file="stl/TomatoCalyx_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_021" file="stl/TomatoCalyx_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_022" file="stl/TomatoCalyx_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_023" file="stl/TomatoCalyx_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoCalyx_024" file="stl/TomatoCalyx_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed" file="stl/TomatoSeed.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_001" file="stl/TomatoSeed_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_002" file="stl/TomatoSeed_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_003" file="stl/TomatoSeed_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_004" file="stl/TomatoSeed_004.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_005" file="stl/TomatoSeed_005.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_006" file="stl/TomatoSeed_006.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_007" file="stl/TomatoSeed_007.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_008" file="stl/TomatoSeed_008.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_009" file="stl/TomatoSeed_009.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_010" file="stl/TomatoSeed_010.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_011" file="stl/TomatoSeed_011.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_012" file="stl/TomatoSeed_012.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_013" file="stl/TomatoSeed_013.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_014" file="stl/TomatoSeed_014.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_015" file="stl/TomatoSeed_015.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_016" file="stl/TomatoSeed_016.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_017" file="stl/TomatoSeed_017.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_018" file="stl/TomatoSeed_018.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_019" file="stl/TomatoSeed_019.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_020" file="stl/TomatoSeed_020.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_021" file="stl/TomatoSeed_021.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_022" file="stl/TomatoSeed_022.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_023" file="stl/TomatoSeed_023.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_024" file="stl/TomatoSeed_024.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_025" file="stl/TomatoSeed_025.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_026" file="stl/TomatoSeed_026.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_027" file="stl/TomatoSeed_027.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_028" file="stl/TomatoSeed_028.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_029" file="stl/TomatoSeed_029.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_030" file="stl/TomatoSeed_030.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_031" file="stl/TomatoSeed_031.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_032" file="stl/TomatoSeed_032.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_033" file="stl/TomatoSeed_033.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_034" file="stl/TomatoSeed_034.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_035" file="stl/TomatoSeed_035.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_036" file="stl/TomatoSeed_036.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_037" file="stl/TomatoSeed_037.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_038" file="stl/TomatoSeed_038.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_039" file="stl/TomatoSeed_039.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_040" file="stl/TomatoSeed_040.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_041" file="stl/TomatoSeed_041.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_042" file="stl/TomatoSeed_042.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_043" file="stl/TomatoSeed_043.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_044" file="stl/TomatoSeed_044.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_045" file="stl/TomatoSeed_045.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_046" file="stl/TomatoSeed_046.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_047" file="stl/TomatoSeed_047.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_048" file="stl/TomatoSeed_048.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_049" file="stl/TomatoSeed_049.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_050" file="stl/TomatoSeed_050.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_051" file="stl/TomatoSeed_051.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_052" file="stl/TomatoSeed_052.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_053" file="stl/TomatoSeed_053.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_054" file="stl/TomatoSeed_054.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_055" file="stl/TomatoSeed_055.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_056" file="stl/TomatoSeed_056.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_057" file="stl/TomatoSeed_057.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_058" file="stl/TomatoSeed_058.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_059" file="stl/TomatoSeed_059.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_060" file="stl/TomatoSeed_060.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_061" file="stl/TomatoSeed_061.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_062" file="stl/TomatoSeed_062.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_063" file="stl/TomatoSeed_063.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_064" file="stl/TomatoSeed_064.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_065" file="stl/TomatoSeed_065.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_066" file="stl/TomatoSeed_066.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_067" file="stl/TomatoSeed_067.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_068" file="stl/TomatoSeed_068.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_069" file="stl/TomatoSeed_069.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_070" file="stl/TomatoSeed_070.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_071" file="stl/TomatoSeed_071.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_072" file="stl/TomatoSeed_072.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_073" file="stl/TomatoSeed_073.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_074" file="stl/TomatoSeed_074.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_075" file="stl/TomatoSeed_075.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_076" file="stl/TomatoSeed_076.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_077" file="stl/TomatoSeed_077.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_078" file="stl/TomatoSeed_078.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_079" file="stl/TomatoSeed_079.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_080" file="stl/TomatoSeed_080.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_081" file="stl/TomatoSeed_081.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_082" file="stl/TomatoSeed_082.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_083" file="stl/TomatoSeed_083.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_084" file="stl/TomatoSeed_084.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_085" file="stl/TomatoSeed_085.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_086" file="stl/TomatoSeed_086.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_087" file="stl/TomatoSeed_087.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_088" file="stl/TomatoSeed_088.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_089" file="stl/TomatoSeed_089.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_090" file="stl/TomatoSeed_090.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_091" file="stl/TomatoSeed_091.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_092" file="stl/TomatoSeed_092.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_093" file="stl/TomatoSeed_093.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_094" file="stl/TomatoSeed_094.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_095" file="stl/TomatoSeed_095.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_096" file="stl/TomatoSeed_096.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_097" file="stl/TomatoSeed_097.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_098" file="stl/TomatoSeed_098.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_099" file="stl/TomatoSeed_099.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_100" file="stl/TomatoSeed_100.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_101" file="stl/TomatoSeed_101.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_102" file="stl/TomatoSeed_102.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_103" file="stl/TomatoSeed_103.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_104" file="stl/TomatoSeed_104.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_105" file="stl/TomatoSeed_105.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_106" file="stl/TomatoSeed_106.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_107" file="stl/TomatoSeed_107.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_108" file="stl/TomatoSeed_108.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_109" file="stl/TomatoSeed_109.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_110" file="stl/TomatoSeed_110.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_111" file="stl/TomatoSeed_111.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_112" file="stl/TomatoSeed_112.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_113" file="stl/TomatoSeed_113.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_114" file="stl/TomatoSeed_114.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_115" file="stl/TomatoSeed_115.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_116" file="stl/TomatoSeed_116.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_117" file="stl/TomatoSeed_117.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_118" file="stl/TomatoSeed_118.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_119" file="stl/TomatoSeed_119.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_120" file="stl/TomatoSeed_120.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_121" file="stl/TomatoSeed_121.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_122" file="stl/TomatoSeed_122.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_123" file="stl/TomatoSeed_123.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_124" file="stl/TomatoSeed_124.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_125" file="stl/TomatoSeed_125.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_126" file="stl/TomatoSeed_126.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_127" file="stl/TomatoSeed_127.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_128" file="stl/TomatoSeed_128.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_129" file="stl/TomatoSeed_129.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_130" file="stl/TomatoSeed_130.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_131" file="stl/TomatoSeed_131.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_132" file="stl/TomatoSeed_132.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_133" file="stl/TomatoSeed_133.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_134" file="stl/TomatoSeed_134.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_135" file="stl/TomatoSeed_135.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_136" file="stl/TomatoSeed_136.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_137" file="stl/TomatoSeed_137.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_138" file="stl/TomatoSeed_138.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_139" file="stl/TomatoSeed_139.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_140" file="stl/TomatoSeed_140.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_141" file="stl/TomatoSeed_141.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_142" file="stl/TomatoSeed_142.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_143" file="stl/TomatoSeed_143.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_144" file="stl/TomatoSeed_144.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_145" file="stl/TomatoSeed_145.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_146" file="stl/TomatoSeed_146.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_147" file="stl/TomatoSeed_147.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_148" file="stl/TomatoSeed_148.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_149" file="stl/TomatoSeed_149.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_150" file="stl/TomatoSeed_150.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_151" file="stl/TomatoSeed_151.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_152" file="stl/TomatoSeed_152.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_153" file="stl/TomatoSeed_153.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_154" file="stl/TomatoSeed_154.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_155" file="stl/TomatoSeed_155.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_156" file="stl/TomatoSeed_156.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_157" file="stl/TomatoSeed_157.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_158" file="stl/TomatoSeed_158.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_159" file="stl/TomatoSeed_159.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_160" file="stl/TomatoSeed_160.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_161" file="stl/TomatoSeed_161.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_162" file="stl/TomatoSeed_162.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_163" file="stl/TomatoSeed_163.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_164" file="stl/TomatoSeed_164.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_165" file="stl/TomatoSeed_165.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_166" file="stl/TomatoSeed_166.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_167" file="stl/TomatoSeed_167.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_168" file="stl/TomatoSeed_168.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_169" file="stl/TomatoSeed_169.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_170" file="stl/TomatoSeed_170.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_171" file="stl/TomatoSeed_171.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_172" file="stl/TomatoSeed_172.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_173" file="stl/TomatoSeed_173.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_174" file="stl/TomatoSeed_174.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_175" file="stl/TomatoSeed_175.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_176" file="stl/TomatoSeed_176.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_177" file="stl/TomatoSeed_177.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_178" file="stl/TomatoSeed_178.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_179" file="stl/TomatoSeed_179.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_180" file="stl/TomatoSeed_180.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_181" file="stl/TomatoSeed_181.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_182" file="stl/TomatoSeed_182.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_183" file="stl/TomatoSeed_183.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_184" file="stl/TomatoSeed_184.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_185" file="stl/TomatoSeed_185.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_186" file="stl/TomatoSeed_186.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_187" file="stl/TomatoSeed_187.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_188" file="stl/TomatoSeed_188.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_189" file="stl/TomatoSeed_189.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_190" file="stl/TomatoSeed_190.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_191" file="stl/TomatoSeed_191.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_192" file="stl/TomatoSeed_192.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_193" file="stl/TomatoSeed_193.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_194" file="stl/TomatoSeed_194.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_195" file="stl/TomatoSeed_195.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_196" file="stl/TomatoSeed_196.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_197" file="stl/TomatoSeed_197.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_198" file="stl/TomatoSeed_198.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoSeed_199" file="stl/TomatoSeed_199.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPeel" file="stl/TomatoPeel.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPeel_001" file="stl/TomatoPeel_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPeel_002" file="stl/TomatoPeel_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPeel_003" file="stl/TomatoPeel_003.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="TomatoPeel_004" file="stl/TomatoPeel_004.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_TomatoPedicel" texture="T_TomatoPedicel"/>
+		<material name="M_TomatoFlesh" rgba="0.8665000200271606 0.2978000044822693 0.23119999468326569 1.0" emission="0.0"/>
+		<material name="M_TomatoCalyx" texture="T_TomatoCalyx"/>
+		<material name="M_TomatoSeed" rgba="0.86080002784729 0.7745000123977661 0.684499979019165 1.0" emission="0.0"/>
+		<material name="M_TomatoPeel" rgba="0.8449000120162964 0.19789999723434448 0.07240000367164612 1.0" emission="0.0"/>
+		<texture name="T_TomatoPedicel" type="2d" file="T_TomatoPedicel.png"/>
+		<texture name="T_TomatoCalyx" type="2d" file="T_TomatoCalyx.png"/>
+	</asset>
+	<worldbody>
+		<body name="tomato" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<body name="tomato_pedicel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.00014329703117255121" pos="0.00026330031687393785 -0.00013139753718860447 0.016167672351002693" quat="0.6862107515335083 -0.14370399713516235 0.6966263651847839 0.15223540365695953" diaginertia="4.782930163038657e-10 3.835738127122568e-08 3.838394846411575e-08"/>
+				<geom name="TomatoPedicel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel" material="M_TomatoPedicel" class="visual"/>
+				<geom name="TomatoPedicel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_001" class="collision"/>
+				<geom name="TomatoPedicel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_002" class="collision"/>
+				<geom name="TomatoPedicel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_003" class="collision"/>
+				<geom name="TomatoPedicel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_004" class="collision"/>
+				<geom name="TomatoPedicel_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_005" class="collision"/>
+				<geom name="TomatoPedicel_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_006" class="collision"/>
+				<geom name="TomatoPedicel_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_007" class="collision"/>
+				<geom name="TomatoPedicel_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_008" class="collision"/>
+				<geom name="TomatoPedicel_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_009" class="collision"/>
+				<geom name="TomatoPedicel_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_010" class="collision"/>
+				<geom name="TomatoPedicel_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_011" class="collision"/>
+				<geom name="TomatoPedicel_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_012" class="collision"/>
+				<geom name="TomatoPedicel_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_013" class="collision"/>
+				<geom name="TomatoPedicel_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPedicel_014" class="collision"/>
+			</body>
+			<body name="tomato_calyx" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0002501066483091563" pos="0.001313988002948463 0.00014837739581707865 0.015728451311588287" quat="0.6307257413864136 0.36313483119010925 -0.5692865252494812 0.38240161538124084" diaginertia="3.3170184821074145e-08 7.845379457194213e-08 8.743262469579349e-08"/>
+				<geom name="TomatoCalyx" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx" material="M_TomatoCalyx" class="visual"/>
+				<geom name="TomatoCalyx_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_001" class="collision"/>
+				<geom name="TomatoCalyx_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_002" class="collision"/>
+				<geom name="TomatoCalyx_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_003" class="collision"/>
+				<geom name="TomatoCalyx_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_004" class="collision"/>
+				<geom name="TomatoCalyx_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_005" class="collision"/>
+				<geom name="TomatoCalyx_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_006" class="collision"/>
+				<geom name="TomatoCalyx_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_007" class="collision"/>
+				<geom name="TomatoCalyx_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_008" class="collision"/>
+				<geom name="TomatoCalyx_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_009" class="collision"/>
+				<geom name="TomatoCalyx_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_010" class="collision"/>
+				<geom name="TomatoCalyx_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_011" class="collision"/>
+				<geom name="TomatoCalyx_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_012" class="collision"/>
+				<geom name="TomatoCalyx_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_013" class="collision"/>
+				<geom name="TomatoCalyx_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_014" class="collision"/>
+				<geom name="TomatoCalyx_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_015" class="collision"/>
+				<geom name="TomatoCalyx_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_016" class="collision"/>
+				<geom name="TomatoCalyx_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_017" class="collision"/>
+				<geom name="TomatoCalyx_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_018" class="collision"/>
+				<geom name="TomatoCalyx_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_019" class="collision"/>
+				<geom name="TomatoCalyx_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_020" class="collision"/>
+				<geom name="TomatoCalyx_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_021" class="collision"/>
+				<geom name="TomatoCalyx_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_022" class="collision"/>
+				<geom name="TomatoCalyx_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_023" class="collision"/>
+				<geom name="TomatoCalyx_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoCalyx_024" class="collision"/>
+			</body>
+			<body name="tomato_peel" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.006833116989582777" pos="-9.936194146575872e-06 -1.4847561942588072e-05 -0.008848462253808975" quat="0.9972437024116516 0.0018155128927901387 0.013694662600755692 0.07289832085371017" diaginertia="5.4498386816703714e-06 5.4934162108111195e-06 5.754579433414619e-06"/>
+				<geom name="TomatoPeel" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPeel" material="M_TomatoPeel" class="visual"/>
+				<geom name="TomatoPeel_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPeel_001" class="collision"/>
+				<geom name="TomatoPeel_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPeel_002" class="collision"/>
+				<geom name="TomatoPeel_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPeel_003" class="collision"/>
+				<geom name="TomatoPeel_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoPeel_004" class="collision"/>
+			</body>
+			<body name="tomato_flesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.15569724142551422" pos="-6.88637464918429e-06 -2.2405390609492315e-06 -0.009020064026117325" quat="0.9966468214988708 0.009596576914191246 0.018626198172569275 0.07909566909074783" diaginertia="7.860644109314308e-05 7.938929775264114e-05 8.199702278943732e-05"/>
+				<geom name="TomatoFlesh" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh" material="M_TomatoFlesh" class="visual"/>
+				<geom name="TomatoFlesh_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh_001" class="collision"/>
+				<geom name="TomatoFlesh_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh_002" class="collision"/>
+				<geom name="TomatoFlesh_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh_003" class="collision"/>
+				<geom name="TomatoFlesh_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh_004" class="collision"/>
+				<geom name="TomatoFlesh_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoFlesh_005" class="collision"/>
+			</body>
+			<body name="tomato_seed" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+				<inertial mass="0.0003348476311657578" pos="-0.00010655407095327973 0.00010840128379641101 -0.01239299401640892" quat="0.6596830487251282 -0.2691793143749237 -0.6454788446426392 -0.2751687169075012" diaginertia="8.231094028587904e-08 1.112475445097516e-07 1.1125360543928764e-07"/>
+				<geom name="TomatoSeed" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed" material="M_TomatoSeed" class="visual"/>
+				<geom name="TomatoSeed_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_001" class="collision"/>
+				<geom name="TomatoSeed_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_002" class="collision"/>
+				<geom name="TomatoSeed_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_003" class="collision"/>
+				<geom name="TomatoSeed_004" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_004" class="collision"/>
+				<geom name="TomatoSeed_005" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_005" class="collision"/>
+				<geom name="TomatoSeed_006" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_006" class="collision"/>
+				<geom name="TomatoSeed_007" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_007" class="collision"/>
+				<geom name="TomatoSeed_008" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_008" class="collision"/>
+				<geom name="TomatoSeed_009" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_009" class="collision"/>
+				<geom name="TomatoSeed_010" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_010" class="collision"/>
+				<geom name="TomatoSeed_011" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_011" class="collision"/>
+				<geom name="TomatoSeed_012" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_012" class="collision"/>
+				<geom name="TomatoSeed_013" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_013" class="collision"/>
+				<geom name="TomatoSeed_014" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_014" class="collision"/>
+				<geom name="TomatoSeed_015" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_015" class="collision"/>
+				<geom name="TomatoSeed_016" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_016" class="collision"/>
+				<geom name="TomatoSeed_017" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_017" class="collision"/>
+				<geom name="TomatoSeed_018" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_018" class="collision"/>
+				<geom name="TomatoSeed_019" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_019" class="collision"/>
+				<geom name="TomatoSeed_020" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_020" class="collision"/>
+				<geom name="TomatoSeed_021" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_021" class="collision"/>
+				<geom name="TomatoSeed_022" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_022" class="collision"/>
+				<geom name="TomatoSeed_023" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_023" class="collision"/>
+				<geom name="TomatoSeed_024" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_024" class="collision"/>
+				<geom name="TomatoSeed_025" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_025" class="collision"/>
+				<geom name="TomatoSeed_026" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_026" class="collision"/>
+				<geom name="TomatoSeed_027" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_027" class="collision"/>
+				<geom name="TomatoSeed_028" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_028" class="collision"/>
+				<geom name="TomatoSeed_029" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_029" class="collision"/>
+				<geom name="TomatoSeed_030" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_030" class="collision"/>
+				<geom name="TomatoSeed_031" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_031" class="collision"/>
+				<geom name="TomatoSeed_032" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_032" class="collision"/>
+				<geom name="TomatoSeed_033" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_033" class="collision"/>
+				<geom name="TomatoSeed_034" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_034" class="collision"/>
+				<geom name="TomatoSeed_035" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_035" class="collision"/>
+				<geom name="TomatoSeed_036" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_036" class="collision"/>
+				<geom name="TomatoSeed_037" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_037" class="collision"/>
+				<geom name="TomatoSeed_038" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_038" class="collision"/>
+				<geom name="TomatoSeed_039" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_039" class="collision"/>
+				<geom name="TomatoSeed_040" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_040" class="collision"/>
+				<geom name="TomatoSeed_041" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_041" class="collision"/>
+				<geom name="TomatoSeed_042" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_042" class="collision"/>
+				<geom name="TomatoSeed_043" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_043" class="collision"/>
+				<geom name="TomatoSeed_044" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_044" class="collision"/>
+				<geom name="TomatoSeed_045" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_045" class="collision"/>
+				<geom name="TomatoSeed_046" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_046" class="collision"/>
+				<geom name="TomatoSeed_047" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_047" class="collision"/>
+				<geom name="TomatoSeed_048" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_048" class="collision"/>
+				<geom name="TomatoSeed_049" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_049" class="collision"/>
+				<geom name="TomatoSeed_050" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_050" class="collision"/>
+				<geom name="TomatoSeed_051" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_051" class="collision"/>
+				<geom name="TomatoSeed_052" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_052" class="collision"/>
+				<geom name="TomatoSeed_053" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_053" class="collision"/>
+				<geom name="TomatoSeed_054" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_054" class="collision"/>
+				<geom name="TomatoSeed_055" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_055" class="collision"/>
+				<geom name="TomatoSeed_056" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_056" class="collision"/>
+				<geom name="TomatoSeed_057" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_057" class="collision"/>
+				<geom name="TomatoSeed_058" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_058" class="collision"/>
+				<geom name="TomatoSeed_059" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_059" class="collision"/>
+				<geom name="TomatoSeed_060" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_060" class="collision"/>
+				<geom name="TomatoSeed_061" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_061" class="collision"/>
+				<geom name="TomatoSeed_062" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_062" class="collision"/>
+				<geom name="TomatoSeed_063" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_063" class="collision"/>
+				<geom name="TomatoSeed_064" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_064" class="collision"/>
+				<geom name="TomatoSeed_065" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_065" class="collision"/>
+				<geom name="TomatoSeed_066" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_066" class="collision"/>
+				<geom name="TomatoSeed_067" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_067" class="collision"/>
+				<geom name="TomatoSeed_068" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_068" class="collision"/>
+				<geom name="TomatoSeed_069" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_069" class="collision"/>
+				<geom name="TomatoSeed_070" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_070" class="collision"/>
+				<geom name="TomatoSeed_071" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_071" class="collision"/>
+				<geom name="TomatoSeed_072" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_072" class="collision"/>
+				<geom name="TomatoSeed_073" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_073" class="collision"/>
+				<geom name="TomatoSeed_074" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_074" class="collision"/>
+				<geom name="TomatoSeed_075" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_075" class="collision"/>
+				<geom name="TomatoSeed_076" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_076" class="collision"/>
+				<geom name="TomatoSeed_077" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_077" class="collision"/>
+				<geom name="TomatoSeed_078" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_078" class="collision"/>
+				<geom name="TomatoSeed_079" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_079" class="collision"/>
+				<geom name="TomatoSeed_080" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_080" class="collision"/>
+				<geom name="TomatoSeed_081" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_081" class="collision"/>
+				<geom name="TomatoSeed_082" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_082" class="collision"/>
+				<geom name="TomatoSeed_083" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_083" class="collision"/>
+				<geom name="TomatoSeed_084" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_084" class="collision"/>
+				<geom name="TomatoSeed_085" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_085" class="collision"/>
+				<geom name="TomatoSeed_086" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_086" class="collision"/>
+				<geom name="TomatoSeed_087" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_087" class="collision"/>
+				<geom name="TomatoSeed_088" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_088" class="collision"/>
+				<geom name="TomatoSeed_089" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_089" class="collision"/>
+				<geom name="TomatoSeed_090" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_090" class="collision"/>
+				<geom name="TomatoSeed_091" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_091" class="collision"/>
+				<geom name="TomatoSeed_092" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_092" class="collision"/>
+				<geom name="TomatoSeed_093" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_093" class="collision"/>
+				<geom name="TomatoSeed_094" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_094" class="collision"/>
+				<geom name="TomatoSeed_095" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_095" class="collision"/>
+				<geom name="TomatoSeed_096" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_096" class="collision"/>
+				<geom name="TomatoSeed_097" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_097" class="collision"/>
+				<geom name="TomatoSeed_098" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_098" class="collision"/>
+				<geom name="TomatoSeed_099" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_099" class="collision"/>
+				<geom name="TomatoSeed_100" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_100" class="collision"/>
+				<geom name="TomatoSeed_101" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_101" class="collision"/>
+				<geom name="TomatoSeed_102" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_102" class="collision"/>
+				<geom name="TomatoSeed_103" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_103" class="collision"/>
+				<geom name="TomatoSeed_104" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_104" class="collision"/>
+				<geom name="TomatoSeed_105" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_105" class="collision"/>
+				<geom name="TomatoSeed_106" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_106" class="collision"/>
+				<geom name="TomatoSeed_107" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_107" class="collision"/>
+				<geom name="TomatoSeed_108" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_108" class="collision"/>
+				<geom name="TomatoSeed_109" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_109" class="collision"/>
+				<geom name="TomatoSeed_110" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_110" class="collision"/>
+				<geom name="TomatoSeed_111" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_111" class="collision"/>
+				<geom name="TomatoSeed_112" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_112" class="collision"/>
+				<geom name="TomatoSeed_113" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_113" class="collision"/>
+				<geom name="TomatoSeed_114" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_114" class="collision"/>
+				<geom name="TomatoSeed_115" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_115" class="collision"/>
+				<geom name="TomatoSeed_116" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_116" class="collision"/>
+				<geom name="TomatoSeed_117" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_117" class="collision"/>
+				<geom name="TomatoSeed_118" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_118" class="collision"/>
+				<geom name="TomatoSeed_119" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_119" class="collision"/>
+				<geom name="TomatoSeed_120" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_120" class="collision"/>
+				<geom name="TomatoSeed_121" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_121" class="collision"/>
+				<geom name="TomatoSeed_122" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_122" class="collision"/>
+				<geom name="TomatoSeed_123" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_123" class="collision"/>
+				<geom name="TomatoSeed_124" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_124" class="collision"/>
+				<geom name="TomatoSeed_125" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_125" class="collision"/>
+				<geom name="TomatoSeed_126" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_126" class="collision"/>
+				<geom name="TomatoSeed_127" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_127" class="collision"/>
+				<geom name="TomatoSeed_128" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_128" class="collision"/>
+				<geom name="TomatoSeed_129" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_129" class="collision"/>
+				<geom name="TomatoSeed_130" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_130" class="collision"/>
+				<geom name="TomatoSeed_131" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_131" class="collision"/>
+				<geom name="TomatoSeed_132" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_132" class="collision"/>
+				<geom name="TomatoSeed_133" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_133" class="collision"/>
+				<geom name="TomatoSeed_134" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_134" class="collision"/>
+				<geom name="TomatoSeed_135" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_135" class="collision"/>
+				<geom name="TomatoSeed_136" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_136" class="collision"/>
+				<geom name="TomatoSeed_137" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_137" class="collision"/>
+				<geom name="TomatoSeed_138" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_138" class="collision"/>
+				<geom name="TomatoSeed_139" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_139" class="collision"/>
+				<geom name="TomatoSeed_140" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_140" class="collision"/>
+				<geom name="TomatoSeed_141" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_141" class="collision"/>
+				<geom name="TomatoSeed_142" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_142" class="collision"/>
+				<geom name="TomatoSeed_143" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_143" class="collision"/>
+				<geom name="TomatoSeed_144" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_144" class="collision"/>
+				<geom name="TomatoSeed_145" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_145" class="collision"/>
+				<geom name="TomatoSeed_146" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_146" class="collision"/>
+				<geom name="TomatoSeed_147" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_147" class="collision"/>
+				<geom name="TomatoSeed_148" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_148" class="collision"/>
+				<geom name="TomatoSeed_149" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_149" class="collision"/>
+				<geom name="TomatoSeed_150" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_150" class="collision"/>
+				<geom name="TomatoSeed_151" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_151" class="collision"/>
+				<geom name="TomatoSeed_152" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_152" class="collision"/>
+				<geom name="TomatoSeed_153" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_153" class="collision"/>
+				<geom name="TomatoSeed_154" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_154" class="collision"/>
+				<geom name="TomatoSeed_155" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_155" class="collision"/>
+				<geom name="TomatoSeed_156" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_156" class="collision"/>
+				<geom name="TomatoSeed_157" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_157" class="collision"/>
+				<geom name="TomatoSeed_158" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_158" class="collision"/>
+				<geom name="TomatoSeed_159" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_159" class="collision"/>
+				<geom name="TomatoSeed_160" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_160" class="collision"/>
+				<geom name="TomatoSeed_161" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_161" class="collision"/>
+				<geom name="TomatoSeed_162" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_162" class="collision"/>
+				<geom name="TomatoSeed_163" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_163" class="collision"/>
+				<geom name="TomatoSeed_164" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_164" class="collision"/>
+				<geom name="TomatoSeed_165" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_165" class="collision"/>
+				<geom name="TomatoSeed_166" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_166" class="collision"/>
+				<geom name="TomatoSeed_167" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_167" class="collision"/>
+				<geom name="TomatoSeed_168" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_168" class="collision"/>
+				<geom name="TomatoSeed_169" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_169" class="collision"/>
+				<geom name="TomatoSeed_170" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_170" class="collision"/>
+				<geom name="TomatoSeed_171" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_171" class="collision"/>
+				<geom name="TomatoSeed_172" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_172" class="collision"/>
+				<geom name="TomatoSeed_173" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_173" class="collision"/>
+				<geom name="TomatoSeed_174" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_174" class="collision"/>
+				<geom name="TomatoSeed_175" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_175" class="collision"/>
+				<geom name="TomatoSeed_176" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_176" class="collision"/>
+				<geom name="TomatoSeed_177" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_177" class="collision"/>
+				<geom name="TomatoSeed_178" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_178" class="collision"/>
+				<geom name="TomatoSeed_179" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_179" class="collision"/>
+				<geom name="TomatoSeed_180" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_180" class="collision"/>
+				<geom name="TomatoSeed_181" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_181" class="collision"/>
+				<geom name="TomatoSeed_182" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_182" class="collision"/>
+				<geom name="TomatoSeed_183" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_183" class="collision"/>
+				<geom name="TomatoSeed_184" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_184" class="collision"/>
+				<geom name="TomatoSeed_185" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_185" class="collision"/>
+				<geom name="TomatoSeed_186" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_186" class="collision"/>
+				<geom name="TomatoSeed_187" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_187" class="collision"/>
+				<geom name="TomatoSeed_188" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_188" class="collision"/>
+				<geom name="TomatoSeed_189" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_189" class="collision"/>
+				<geom name="TomatoSeed_190" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_190" class="collision"/>
+				<geom name="TomatoSeed_191" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_191" class="collision"/>
+				<geom name="TomatoSeed_192" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_192" class="collision"/>
+				<geom name="TomatoSeed_193" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_193" class="collision"/>
+				<geom name="TomatoSeed_194" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_194" class="collision"/>
+				<geom name="TomatoSeed_195" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_195" class="collision"/>
+				<geom name="TomatoSeed_196" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_196" class="collision"/>
+				<geom name="TomatoSeed_197" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_197" class="collision"/>
+				<geom name="TomatoSeed_198" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_198" class="collision"/>
+				<geom name="TomatoSeed_199" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="TomatoSeed_199" class="collision"/>
+			</body>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>

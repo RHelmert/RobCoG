@@ -1,0 +1,21 @@
+#usda 1.0
+(
+    defaultPrim = "M_GerberaStem"
+    upAxis = "Z"
+)
+
+def Material "M_GerberaStem"
+{
+    token outputs:surface.connect = </M_GerberaStem/PBRShader.outputs:surface>
+
+    def Shader "PBRShader"
+    {
+        uniform token info:id = "UsdPreviewSurface"
+        color3f inputs:diffuseColor = (0.7084, 0.6458, 0.5513)
+        color3f inputs:emissiveColor = (0, 0, 0)
+        float inputs:opacity = 1
+        int inputs:useSpecularWorkflow = 1
+        token outputs:surface
+    }
+}
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<robot name="ladle" version="1.0">
+  <link name="ladle">
+    <inertial>
+      <origin xyz="0.03024863824248314 -1.5719871953479014e-05 -0.002112147631123662" rpy="0.0027430709451436996 0.007291369140148163 -0.000249484641244635"/>
+      <mass value="0.027458030730485916"/>
+      <inertia ixx="1.6147810129041318e-06" ixy="0.0" ixz="0.0" iyy="9.447766205994412e-05" iyz="0.0" izz="9.537346340948716e-05"/>
+    </inertial>
+    <visual name="Ladle">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/obj/Ladle.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision name="Ladle_001">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_001.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Ladle_002">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_002.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Ladle_003">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_003.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Ladle_004">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_004.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Ladle_005">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_005.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <collision name="Ladle_006">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="file://ladle/meshes/stl/Ladle_006.stl" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

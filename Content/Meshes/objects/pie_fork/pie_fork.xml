@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<mujoco model="pie_fork">
+	<compiler meshdir="pie_fork/meshes" texturedir="pie_fork/textures" angle="radian" autolimits="true" balanceinertia="true" boundmass="0.000001" boundinertia="0.000001"/>
+	<default>
+		<default class="visual">
+			<geom contype="0" conaffinity="0"/>
+		</default>
+		<default class="collision">
+			<geom rgba="1.0 0.0 0.0 0.0"/>
+		</default>
+	</default>
+	<asset>
+		<mesh name="PieFork" file="stl/PieFork.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PieFork_001" file="stl/PieFork_001.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PieFork_002" file="stl/PieFork_002.stl" scale="1.0 1.0 1.0"/>
+		<mesh name="PieFork_003" file="stl/PieFork_003.stl" scale="1.0 1.0 1.0"/>
+		<material name="M_PieFork" rgba="0.660099983215332 0.660099983215332 0.660099983215332 1.0" emission="0.0"/>
+	</asset>
+	<worldbody>
+		<body name="pie_fork" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+			<inertial mass="0.015963025391101837" pos="0.017689913511276245 2.957269089165493e-06 -0.003262417856603861" quat="0.707278311252594 -0.7069140076637268 0.0038363435305655003 0.003902786411345005" diaginertia="6.571041808456357e-07 4.8253357817884535e-05 4.832317426917143e-05"/>
+			<geom name="PieFork" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PieFork" material="M_PieFork" class="visual"/>
+			<geom name="PieFork_001" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PieFork_001" class="collision"/>
+			<geom name="PieFork_002" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PieFork_002" class="collision"/>
+			<geom name="PieFork_003" type="mesh" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0" mesh="PieFork_003" class="collision"/>
+		</body>
+	</worldbody>
+	<equality/>
+</mujoco>
